@@ -16,7 +16,7 @@ Last updated: 2026-09-20
 
 | Phase | Status |
 |---|---|
-| 1 Foundation | Adapter / routing-lab-2v wiring — NOT STARTED |
+| 1 Foundation | Adapter / routing-lab-2v wiring — **DONE (2026-09-20)** |
 | 2 Coordinator | Backend persistence (hub_map_geometry, road_closures, /map API) — **DONE (2026-09-20)** |
 | 3 Responder | Live GPS, Navigate to Mission — NOT STARTED |
 | 4 Citizen | GPS, SOS, evacuation routing — NOT STARTED |
@@ -34,6 +34,10 @@ Not yet tracked per-item. Will populate when Phase 1 frontend wiring begins.
 
 | Date | Decision |
 |---|---|
+| 2026-09-20 | routing-lab-2v pulls hazards, hubs, and closures dynamically from GET /map/state; removed hardcoded seed data from initial production state |
+| 2026-09-20 | State polling runs every ~4s and on tab focus; active route re-evaluates only when `version` changes (event-driven, never per GPS fix) |
+| 2026-09-20 | Token handoff captures #token=... on mount, persists to sessionStorage['resqnet_token'], and strips fragment via history.replaceState |
+| 2026-09-20 | Hub eligibility maps: active=(status!='closed'), capacity=max_capacity, occupancy=current_occupancy, verified=(is_verified!==false), entrance=entrance_geom ?? location |
 | 2026-09-20 | hub_map_geometry endpoint does NOT touch safety_hubs columns — only writes to the new extension table |
 | 2026-09-20 | CORS: added localhost:5174 (Map Engine V2 Vite port) — no other origins removed |
 | 2026-09-20 | Road closures use soft-delete (is_active=False), not hard DELETE |
@@ -59,6 +63,19 @@ Not yet tracked per-item. Will populate when Phase 1 frontend wiring begins.
 ---
 
 ## §6 Session log
+
+### 2026-09-20 — V2 Adapter & Live API Synchronization
+**Files changed:**
+- `routing-lab-2v/src/services/resqnetAdapter.ts` — NEW adapter handling token handoff, [lng, lat] coordinate conversions, hub eligibility mapping, and REST methods
+- `routing-lab-2v/src/services/mapSyncService.ts` — NEW polling service (~4s and focus event) with version diff detection
+- `routing-lab-2v/src/App.tsx` — removed hardcoded seed data from initial production state; connected useMapSync; wired coordinator confirm actions to backend REST endpoints
+- `routing-lab-2v/test_map_sync_adapter.ts` — NEW test suite verifying coordinate order, hub eligibility rules, and closure save/load round-trip
+
+**Completed:**
+- Verified token extraction from URL hash `#token=...`, persistence into `sessionStorage['resqnet_token']`, and `history.replaceState` hash cleanup
+- Verified hub eligibility mapping rules with `checkSafetyHubEligibility`
+- Verified live closure creation, retrieval from `/map/state`, and soft deactivation round-trip
+- Verified production build (`npm run build`) passes cleanly with zero errors
 
 ### 2026-09-20 — Backend map persistence (Phase 2 backend)
 **Files changed:**
