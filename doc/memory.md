@@ -1,4 +1,4 @@
-﻿# ResQnet × Map Engine V2 — Project Memory
+# ResQnet × Map Engine V2 — Project Memory
 
 Last updated: 2026-09-20
 
@@ -69,9 +69,14 @@ Not yet tracked per-item. Will populate when Phase 1 frontend wiring begins.
 - `app/modules/map/schemas.py` — NEW (MapStateResponse, RoadClosureCreate/Update/Out, HubMapGeometryUpsert/Out)
 - `app/modules/map/service.py` — NEW (get_map_state, CRUD road closures, upsert hub geometry)
 - `app/modules/map/router.py` — NEW (GET /map/state, CRUD /map/road-closures, PATCH /map/hubs/{id}/map-geometry)
-- `app/api/v1/router.py` — added map_router import + include_router
-- `doc/memory.md` — NEW (this file)
+- `backend/tests/test_map_sync.py` — NEW test suite verifying RBAC, GeoJSON coordinates [lng, lat], audit logs, and hub geometry upserts
 
-**Pending:**
-- Run `alembic upgrade head` once Python 3.11 venv or pg_config is available
-- Frontend wiring (Phase 1 adapter — separate task)
+**Completed:**
+- `alembic upgrade head` executed — DB upgraded to revision `a1b2c3d4e5f6`
+- Verified DB relations: `hub_map_geometry` and `road_closures` created; all original 17 application tables intact
+- Rebuilt and restarted backend container (`resqnet_backend`)
+- Verified live endpoints: `GET /api/v1/map/state`, `POST /api/v1/map/road-closures`, `PATCH /api/v1/map/hubs/{id}/map-geometry`
+- Verified RBAC enforcement: 403 Forbidden for Citizen/Responder on closure & geometry authoring
+- Verified AuditLog generation for road closures
+- Pytest suite `tests/test_map_sync.py` (4/4 passed)
+- Branch `feat/map-sync` clean and up-to-date
