@@ -1,0 +1,670 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "surface": "#f8f9ff",
+          "tertiary": "#000000",
+          "secondary": "#006398",
+          "on-tertiary-container": "#f63a35",
+          "on-surface-variant": "#45464d",
+          "inverse-on-surface": "#eaf1ff",
+          "primary-fixed-dim": "#bec6e0",
+          "inverse-surface": "#213145",
+          "background": "#f8f9ff",
+          "error-container": "#ffdad6",
+          "surface-tint": "#565e74",
+          "on-primary-container": "#7c839b",
+          "inverse-primary": "#bec6e0",
+          "surface-container": "#e5eeff",
+          "tertiary-container": "#410002",
+          "primary": "#000000",
+          "tertiary-fixed-dim": "#ffb4ab",
+          "on-tertiary-fixed": "#410002",
+          "surface-dim": "#cbdbf5",
+          "on-secondary-container": "#00476e",
+          "on-error-container": "#93000a",
+          "primary-container": "#131b2e",
+          "on-primary-fixed": "#131b2e",
+          "secondary-fixed-dim": "#93ccff",
+          "tertiary-fixed": "#ffdad6",
+          "on-error": "#ffffff",
+          "on-background": "#0b1c30",
+          "on-primary": "#ffffff",
+          "primary-fixed": "#dae2fd",
+          "on-secondary-fixed-variant": "#004b73",
+          "on-surface": "#0b1c30",
+          "on-secondary": "#ffffff",
+          "on-tertiary": "#ffffff",
+          "on-tertiary-fixed-variant": "#93000b",
+          "surface-container-lowest": "#ffffff",
+          "surface-container-high": "#dce9ff",
+          "surface-bright": "#f8f9ff",
+          "surface-variant": "#d3e4fe",
+          "outline-variant": "#c6c6cd",
+          "surface-container-highest": "#d3e4fe",
+          "on-secondary-fixed": "#001d31",
+          "surface-container-low": "#eff4ff",
+          "error": "#ba1a1a",
+          "secondary-container": "#5bb8fe",
+          "outline": "#76777d",
+          "on-primary-fixed-variant": "#3f465c",
+          "secondary-fixed": "#cce5ff"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "space-8": "32px",
+          "space-12": "48px",
+          "space-3": "12px",
+          "space-2": "8px",
+          "space-16": "64px",
+          "gutter-dense": "8px",
+          "margin-mobile": "16px",
+          "space-10": "40px",
+          "space-1": "4px",
+          "space-4": "16px",
+          "margin-desktop": "32px",
+          "margin-tablet": "24px",
+          "space-5": "20px",
+          "gutter-standard": "16px",
+          "gutter-expanded": "24px",
+          "space-6": "24px",
+          "space-0": "0px"
+        },
+        "fontFamily": {
+          "body-lg": [
+            "Public Sans"
+          ],
+          "display-hud": [
+            "JetBrains Mono"
+          ],
+          "display-hud-mobile": [
+            "JetBrains Mono"
+          ],
+          "data-mono-md": [
+            "JetBrains Mono"
+          ],
+          "label-telemetry": [
+            "JetBrains Mono"
+          ],
+          "body-md": [
+            "Public Sans"
+          ],
+          "body-sm": [
+            "Public Sans"
+          ],
+          "headline-md": [
+            "Public Sans"
+          ],
+          "headline-xl": [
+            "Public Sans"
+          ],
+          "headline-lg": [
+            "Public Sans"
+          ],
+          "headline-xl-mobile": [
+            "Public Sans"
+          ],
+          "headline-sm": [
+            "Public Sans"
+          ],
+          "data-mono-lg": [
+            "JetBrains Mono"
+          ],
+          "label-badge": [
+            "Public Sans"
+          ]
+        },
+        "fontSize": {
+          "body-lg": [
+            "16px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "display-hud": [
+            "48px",
+            {
+              "lineHeight": "52px",
+              "letterSpacing": "-0.04em",
+              "fontWeight": "700"
+            }
+          ],
+          "display-hud-mobile": [
+            "32px",
+            {
+              "lineHeight": "36px",
+              "letterSpacing": "-0.03em",
+              "fontWeight": "700"
+            }
+          ],
+          "data-mono-md": [
+            "13px",
+            {
+              "lineHeight": "18px",
+              "letterSpacing": "0em",
+              "fontWeight": "500"
+            }
+          ],
+          "label-telemetry": [
+            "10px",
+            {
+              "lineHeight": "12px",
+              "letterSpacing": "0.08em",
+              "fontWeight": "500"
+            }
+          ],
+          "body-md": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "body-sm": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-md": [
+            "20px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-xl": [
+            "36px",
+            {
+              "lineHeight": "44px",
+              "letterSpacing": "-0.025em",
+              "fontWeight": "700"
+            }
+          ],
+          "headline-lg": [
+            "28px",
+            {
+              "lineHeight": "36px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "700"
+            }
+          ],
+          "headline-xl-mobile": [
+            "26px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "700"
+            }
+          ],
+          "headline-sm": [
+            "16px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "0em",
+              "fontWeight": "600"
+            }
+          ],
+          "data-mono-lg": [
+            "18px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-badge": [
+            "11px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.06em",
+              "fontWeight": "700"
+            }
+          ]
+        }
+      },
+    },
+  }</script></head><body class="bg-surface font-body-md text-body-md text-on-surface min-h-screen flex flex-col"><header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 w-full px-space-8 flex items-center justify-between gap-space-4"><div class="flex items-center gap-space-4"><img alt="Modern, clean, minimalist brand logo for ResQnet - disaster management and emergency response network. Featuring a protective shield icon interwoven with a tactical pulse/network node symbol in dependable deep navy (#0f172a) and calm primary blue (#2563eb).. Brand logo. - Primary color: #0f172a
+- Font: publicSans
+- Mode: light
+- Roundness: rounded-sm
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VsV9gXTDOnr-Yeh2GepA-NCV-WAWdtb13-PgkjkzewZFtXFguX04w3UircQbz6DNih-kzVSvLBqRcsdTQr6ioXPxQJWE5h0Va08zzcBbdOkaG7GjnNxioNY0NkNeyRaa7L6gCWu5xSADkhe-2j4Qu4jMRJEPWb8NwsNGElwyPueuNFVCLIMGyPg-gl57h-xE2WJ5Z4jGiUSm-imSfyUrhYwqKegEvQ1DXBbMWxnOeyUWffkgIACji02wYM"><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface font-bold">ResQnet</span><span class="hidden xl:inline text-on-surface-variant font-body-sm text-body-sm">Connecting people, responders and communities when help matters most</span></div></div><div class="flex items-center gap-space-4"><div class="hidden md:flex items-center gap-space-2 px-space-3 py-space-1 bg-surface-container rounded"><span class="material-symbols-outlined text-secondary text-[16px]">emergency</span><span class="font-label-telemetry text-label-telemetry text-on-surface font-medium uppercase tracking-wider">Emergency: 112 | Disaster: 1078</span></div><div class="hidden lg:flex items-center gap-space-1 px-space-3 py-space-1 bg-surface-container-low rounded"><span class="material-symbols-outlined text-secondary text-[15px]">verified_user</span><span class="font-label-badge text-label-badge text-on-surface-variant font-bold uppercase tracking-wider">256-Bit Encrypted</span></div><div class="flex items-center bg-surface-container-low rounded p-space-1"><button class="px-space-2 py-space-1 rounded font-label-badge text-label-badge bg-surface-container-lowest text-on-surface font-semibold shadow-[0_1px_4px_rgba(0,0,0,0.04)]" type="button">English</button><button class="px-space-2 py-space-1 rounded font-label-badge text-label-badge text-on-surface-variant hover:text-on-surface" type="button">हिन्दी</button></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 flex-1 flex flex-col justify-center"><div class="flex flex-col w-full">
+<section class="w-full px-space-4 sm:px-space-8 lg:px-space-12 py-space-8 lg:py-space-12 max-w-[1360px] mx-auto">
+<!-- Breadcrumb & Tactical Status Bar -->
+<div class="flex flex-wrap items-center justify-between gap-space-4 mb-space-8">
+<div class="flex items-center gap-space-2 text-on-surface-variant">
+<a class="font-body-sm text-body-sm hover:text-on-surface transition-colors flex items-center gap-space-1" href="#">
+<span class="material-symbols-outlined text-[16px]">domain</span>
+<span>EOC Command Portal</span>
+</a>
+<span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span>
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">Coordinator Enrollment</span>
+</div>
+<div class="flex items-center gap-space-3 bg-surface-container px-space-3 py-space-1 rounded-xl">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span>
+</span>
+<span class="font-label-telemetry text-label-telemetry text-on-surface uppercase tracking-wider font-semibold">
+          SECURE PROTOCOL: DMA-SEC-2026-V3
+        </span>
+</div>
+</div>
+<!-- Main Grid: Form Column + Verification Protocol Rail -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-8 items-start">
+<!-- Primary Form Area (8 cols on desktop) -->
+<div class="lg:col-span-8 flex flex-col gap-space-6">
+<!-- Header Banner Block -->
+<div class="bg-surface-container-lowest p-space-6 sm:p-space-8 rounded-xl shadow-sm">
+<div class="flex items-start gap-space-4">
+<div class="p-space-3 rounded-xl bg-surface-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary text-[32px]">verified_user</span>
+</div>
+<div class="space-y-space-1">
+<div class="inline-flex items-center gap-space-2 px-space-2 py-0.5 rounded bg-surface-container-high text-on-secondary-container font-label-badge text-label-badge uppercase tracking-wider">
+<span class="material-symbols-outlined text-[12px]">security</span>
+                Authorized Personnel Only
+              </div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface font-bold tracking-tight">
+                Register as a Coordinator
+              </h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl leading-relaxed">
+                Coordinator accounts are for authorized emergency officials and disaster response authorities. Accounts require official verification before operational EOC tools are activated.
+              </p>
+</div>
+</div>
+</div>
+<!-- Form Shell -->
+<form class="flex flex-col gap-space-6" id="coordinatorForm" onsubmit="event.preventDefault(); triggerSubmitFeedback();">
+<!-- SECTION 1: Personal Information -->
+<div class="bg-surface-container-lowest p-space-6 sm:p-space-8 rounded-xl shadow-sm space-y-space-5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-3">
+<span class="w-6 h-6 rounded-full bg-primary text-on-primary font-label-badge text-label-badge flex items-center justify-center font-bold">1</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">Personal Information</h2>
+</div>
+<span class="font-label-telemetry text-label-telemetry text-on-surface-variant uppercase">EOC Primary Contact</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-5">
+<!-- Full Name -->
+<div class="space-y-space-2 md:col-span-2">
+<label class="block font-label-badge text-label-badge text-on-surface uppercase tracking-wider" for="fullName">
+                  Full Name <span class="text-error">*</span>
+</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-space-3 flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined text-[20px]">badge</span>
+</div>
+<input class="w-full pl-10 pr-space-4 py-space-3 bg-surface-container-low text-on-surface font-body-md text-body-md rounded-lg focus:outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#006398] transition-all" id="fullName" placeholder="e.g., Dr. Arjun Mehta" required="" type="text" value="Dr. Arjun Mehta">
+</div>
+</div>
+<!-- Official Email -->
+<div class="space-y-space-2">
+<label class="block font-label-badge text-label-badge text-on-surface uppercase tracking-wider" for="officialEmail">
+                  Official Email <span class="text-error">*</span>
+</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-space-3 flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+</div>
+<input class="w-full pl-10 pr-space-4 py-space-3 bg-surface-container-low text-on-surface font-body-md text-body-md rounded-lg focus:outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#006398] transition-all" id="officialEmail" placeholder="e.g., arjun.mehta@punjabdisaster.gov.in" required="" type="email" value="arjun.mehta@punjabdisaster.gov.in">
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-space-1">
+<span class="material-symbols-outlined text-secondary text-[14px]">info</span>
+                  Must be an official government or recognized department email
+                </p>
+</div>
+<!-- Mobile Number -->
+<div class="space-y-space-2">
+<label class="block font-label-badge text-label-badge text-on-surface uppercase tracking-wider" for="mobileNumber">
+                  Mobile Number <span class="text-error">*</span>
+</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-space-3 flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined text-[20px]">call</span>
+</div>
+<input class="w-full pl-10 pr-space-4 py-space-3 bg-surface-container-low text-on-surface font-data-mono-md text-data-mono-md rounded-lg focus:outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#006398] transition-all" id="mobileNumber" placeholder="+91 98765 12099" required="" type="tel" value="+91 98765 12099">
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Duty phone for EOC operational dispatch alerts
+                </p>
+</div>
+</div>
+</div>
+<!-- SECTION 2: Organization & Operational Scope -->
+<div class="bg-surface-container-lowest p-space-6 sm:p-space-8 rounded-xl shadow-sm space-y-space-5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-3">
+<span class="w-6 h-6 rounded-full bg-primary text-on-primary font-label-badge text-label-badge flex items-center justify-center font-bold">2</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">Organization &amp; Operational Scope</h2>
+</div>
+<span class="font-label-telemetry text-label-telemetry text-on-surface-variant uppercase">Command Jurisdiction</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-5">
+<!-- Department / Organization -->
+<div class="space-y-space-2 md:col-span-2">
+<label class="block font-label-badge text-label-badge text-on-surface uppercase tracking-wider" for="department">
+                  Department / Organization <span class="text-error">*</span>
+</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-space-3 flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined text-[20px]">apartment</span>
+</div>
+<select class="w-full pl-10 pr-space-8 py-space-3 bg-surface-container-low text-on-surface font-body-md text-body-md rounded-lg focus:outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#006398] transition-all appearance-none cursor-pointer" id="department" required="">
+<option selected="" value="SDMA">State Disaster Management Authority (SDMA)</option>
+<option value="DDMA">District Disaster Management Authority (DDMA)</option>
+<option value="NDRF">NDRF Battalion (National Disaster Response Force)</option>
+<option value="CIVIL_DEFENSE">Civil Defense Corps</option>
+<option value="FIRE_RESCUE">Municipal Fire &amp; Rescue Services</option>
+<option value="HEALTH_DEPT">State Directorate of Health &amp; Emergency Care</option>
+</select>
+<div class="absolute inset-y-0 right-0 pr-space-3 flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined text-[20px]">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Designation -->
+<div class="space-y-space-2 md:col-span-2">
+<label class="block font-label-badge text-label-badge text-on-surface uppercase tracking-wider" for="designation">
+                  Designation <span class="text-error">*</span>
+</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-space-3 flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined text-[20px]">military_tech</span>
+</div>
+<input class="w-full pl-10 pr-space-4 py-space-3 bg-surface-container-low text-on-surface font-body-md text-body-md rounded-lg focus:outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#006398] transition-all" id="designation" placeholder="e.g., District Disaster Management Officer" required="" type="text" value="District Disaster Management Officer">
+</div>
+</div>
+<!-- State -->
+<div class="space-y-space-2">
+<label class="block font-label-badge text-label-badge text-on-surface uppercase tracking-wider" for="stateSelect">
+                  State / Territory <span class="text-error">*</span>
+</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-space-3 flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined text-[20px]">map</span>
+</div>
+<input class="w-full pl-10 pr-space-4 py-space-3 bg-surface-container-low text-on-surface font-body-md text-body-md rounded-lg focus:outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#006398] transition-all" id="stateSelect" required="" type="text" value="Punjab">
+</div>
+</div>
+<!-- District -->
+<div class="space-y-space-2">
+<label class="block font-label-badge text-label-badge text-on-surface uppercase tracking-wider" for="districtSelect">
+                  District / Sector <span class="text-error">*</span>
+</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-space-3 flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined text-[20px]">location_on</span>
+</div>
+<input class="w-full pl-10 pr-space-4 py-space-3 bg-surface-container-low text-on-surface font-body-md text-body-md rounded-lg focus:outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#006398] transition-all" id="districtSelect" required="" type="text" value="Mohali (SAS Nagar)">
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION 3: Identity & Warrant Verification -->
+<div class="bg-surface-container-lowest p-space-6 sm:p-space-8 rounded-xl shadow-sm space-y-space-5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-3">
+<span class="w-6 h-6 rounded-full bg-primary text-on-primary font-label-badge text-label-badge flex items-center justify-center font-bold">3</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">Identity &amp; Warrant Verification</h2>
+</div>
+<span class="font-label-telemetry text-label-telemetry text-secondary font-semibold uppercase">Mandatory Validation</span>
+</div>
+<!-- ID Number -->
+<div class="space-y-space-2">
+<label class="block font-label-badge text-label-badge text-on-surface uppercase tracking-wider" for="govIdNumber">
+                Government / Organization ID Number <span class="text-error">*</span>
+</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-space-3 flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined text-[20px]">fingerprint</span>
+</div>
+<input class="w-full pl-10 pr-space-4 py-space-3 bg-surface-container-low text-on-surface font-data-mono-md text-data-mono-md uppercase rounded-lg focus:outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#006398] transition-all" id="govIdNumber" placeholder="e.g., PB-SDMA-2024-8841" required="" type="text" value="PB-SDMA-2024-8841">
+</div>
+</div>
+<!-- Upload Zone -->
+<div class="space-y-space-2">
+<label class="block font-label-badge text-label-badge text-on-surface uppercase tracking-wider">
+                Supporting Identification or Deputation Order <span class="text-error">*</span>
+</label>
+<div class="relative p-space-6 bg-surface-container-low hover:bg-surface-container rounded-xl flex flex-col items-center justify-center text-center cursor-pointer transition-colors group">
+<input accept=".pdf,.png,.jpg,.jpeg" class="absolute inset-0 opacity-0 cursor-pointer w-full h-full" id="fileUpload" type="file">
+<div class="w-12 h-12 rounded-full bg-surface-container-lowest flex items-center justify-center text-secondary shadow-sm mb-space-3 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[24px]">cloud_upload</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface font-semibold">
+                  Click to browse or drag official document here
+                </p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-1">
+                  Upload official gazetted letter, EOC service ID, or department warrant. PDF, PNG, JPG up to 10MB
+                </p>
+</div>
+<!-- Uploaded Chip Preview -->
+<div class="flex items-center justify-between p-space-3 bg-surface-container-high rounded-xl">
+<div class="flex items-center gap-space-3 min-w-0">
+<div class="w-9 h-9 rounded-lg bg-surface-container-lowest flex items-center justify-center text-secondary shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[20px]">description</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-space-2">
+<span class="font-body-md text-body-md text-on-surface font-semibold truncate">arjun_mehta_sdma_id_warrant.pdf</span>
+<span class="inline-flex items-center px-space-2 py-0.5 rounded bg-surface-container-lowest text-secondary font-label-telemetry text-label-telemetry uppercase font-bold">Verified Hash</span>
+</div>
+<span class="font-data-mono-md text-data-mono-md text-on-surface-variant">2.4 MB • Attached &amp; Digitally Signed</span>
+</div>
+</div>
+<div class="flex items-center gap-space-2">
+<button class="p-space-2 rounded-lg bg-surface-container-lowest text-on-surface-variant hover:text-on-surface shadow-sm transition-colors" title="View Document" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-space-2 rounded-lg bg-surface-container-lowest text-error hover:text-on-error-container shadow-sm transition-colors" title="Remove File" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION 4: Account Security -->
+<div class="bg-surface-container-lowest p-space-6 sm:p-space-8 rounded-xl shadow-sm space-y-space-5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-3">
+<span class="w-6 h-6 rounded-full bg-primary text-on-primary font-label-badge text-label-badge flex items-center justify-center font-bold">4</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">Account Security</h2>
+</div>
+<span class="font-label-telemetry text-label-telemetry text-on-surface-variant uppercase">EOC Access Credentials</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-5">
+<!-- Password -->
+<div class="space-y-space-2">
+<label class="block font-label-badge text-label-badge text-on-surface uppercase tracking-wider" for="password">
+                  Password <span class="text-error">*</span>
+</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-space-3 flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined text-[20px]">lock</span>
+</div>
+<input class="w-full pl-10 pr-space-4 py-space-3 bg-surface-container-low text-on-surface font-data-mono-md text-data-mono-md rounded-lg focus:outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#006398] transition-all" id="password" required="" type="password" value="SecureCommand@2026#">
+</div>
+<!-- Strength Indicator -->
+<div class="space-y-1">
+<div class="flex items-center justify-between font-label-telemetry text-label-telemetry">
+<span class="text-on-surface-variant">Complexity: Strong</span>
+<span class="text-secondary font-bold">4/4 Criteria</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-high rounded-full overflow-hidden flex gap-0.5">
+<div class="h-full w-1/4 bg-secondary"></div>
+<div class="h-full w-1/4 bg-secondary"></div>
+<div class="h-full w-1/4 bg-secondary"></div>
+<div class="h-full w-1/4 bg-secondary"></div>
+</div>
+</div>
+</div>
+<!-- Confirm Password -->
+<div class="space-y-space-2">
+<label class="block font-label-badge text-label-badge text-on-surface uppercase tracking-wider" for="confirmPassword">
+                  Confirm Password <span class="text-error">*</span>
+</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-space-3 flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined text-[20px]">lock_reset</span>
+</div>
+<input class="w-full pl-10 pr-space-4 py-space-3 bg-surface-container-low text-on-surface font-data-mono-md text-data-mono-md rounded-lg focus:outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#006398] transition-all" id="confirmPassword" required="" type="password" value="SecureCommand@2026#">
+</div>
+<p class="font-body-sm text-body-sm text-secondary flex items-center gap-space-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+                  Passwords match perfectly
+                </p>
+</div>
+</div>
+</div>
+<!-- SECTION 5: Statutory Authorization Checkbox -->
+<div class="bg-surface-container-lowest p-space-6 rounded-xl shadow-sm">
+<label class="flex items-start gap-space-3 cursor-pointer group">
+<input checked="" class="mt-1 w-4 h-4 rounded text-secondary focus:ring-0 cursor-pointer accent-secondary" id="statutoryConsent" required="" type="checkbox">
+<span class="font-body-sm text-body-sm text-on-surface leading-relaxed">
+                I confirm that the information provided is accurate and that I am authorized to request coordinator operational access under the Disaster Management Act, 2005. I acknowledge that misuse or falsification of emergency response accounts is subject to legal sanction.
+              </span>
+</label>
+</div>
+<!-- SECTION 6: Action Buttons -->
+<div class="flex flex-col-reverse sm:flex-row items-center justify-between gap-space-4 py-space-2">
+<button class="w-full sm:w-auto px-space-6 py-space-3 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-body-md text-body-md font-semibold flex items-center justify-center gap-space-2 transition-colors" onclick="history.back()" type="button">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+<span>Back</span>
+</button>
+<button class="w-full sm:w-auto px-space-8 py-space-3 rounded-lg bg-secondary hover:bg-on-secondary-container text-on-secondary font-headline-sm text-headline-sm font-bold flex items-center justify-center gap-space-3 shadow-md transition-all active:scale-[0.99]" id="submitBtn" type="submit">
+<span class="material-symbols-outlined text-[20px]">how_to_reg</span>
+<span>Submit for Verification</span>
+</button>
+</div>
+<div class="hidden p-space-4 bg-surface-container-high rounded-xl text-on-surface font-body-md text-body-md flex items-center gap-space-3" id="submitNotice">
+<span class="material-symbols-outlined text-secondary text-[24px]">task_alt</span>
+<span>Registration submitted successfully. Reference ID: <strong class="font-data-mono-md">REQ-2026-PB-8841</strong> has been dispatched to your official email.</span>
+</div>
+</form>
+</div>
+<!-- Right Column: Verification Protocol & Status Rail (4 cols on desktop) -->
+<aside class="lg:col-span-4 flex flex-col gap-space-6">
+<!-- Callout: What happens after submission? -->
+<div class="bg-surface-container-lowest p-space-6 sm:p-space-8 rounded-xl shadow-sm space-y-space-6">
+<div class="flex items-center gap-space-3">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">help_center</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold">
+              What happens after submission?
+            </h3>
+</div>
+<!-- Protocol Timeline Cards -->
+<div class="space-y-space-4">
+<!-- Step 1 -->
+<div class="flex items-start gap-space-3 p-space-3 rounded-xl bg-surface-container-low">
+<div class="w-7 h-7 rounded-full bg-surface-container-highest text-secondary flex items-center justify-center shrink-0 font-label-badge text-label-badge font-bold">
+                1
+              </div>
+<div class="space-y-0.5">
+<h4 class="font-body-md text-body-md text-on-surface font-bold">Review Window</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-normal">
+                  Submissions are reviewed by State/Central Admins within 2–6 hours during alert states.
+                </p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="flex items-start gap-space-3 p-space-3 rounded-xl bg-surface-container-low">
+<div class="w-7 h-7 rounded-full bg-surface-container-highest text-secondary flex items-center justify-center shrink-0 font-label-badge text-label-badge font-bold">
+                2
+              </div>
+<div class="space-y-0.5">
+<h4 class="font-body-md text-body-md text-on-surface font-bold">Reference ID Generated</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-normal">
+                  Track review status at any time using your encrypted tracking sequence.
+                </p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="flex items-start gap-space-3 p-space-3 rounded-xl bg-surface-container-low">
+<div class="w-7 h-7 rounded-full bg-surface-container-highest text-secondary flex items-center justify-center shrink-0 font-label-badge text-label-badge font-bold">
+                3
+              </div>
+<div class="space-y-0.5">
+<h4 class="font-body-md text-body-md text-on-surface font-bold">Activation</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-normal">
+                  You will receive an SMS and email token once verified to calibrate your hardware 2FA token.
+                </p>
+</div>
+</div>
+</div>
+<!-- Operational Readiness Telemetry Box -->
+<div class="p-space-4 rounded-xl bg-surface-container space-y-space-3">
+<div class="flex items-center justify-between font-label-telemetry text-label-telemetry text-on-surface-variant">
+<span class="uppercase font-semibold">Central EOC Verification Queue</span>
+<span class="text-secondary font-bold">OPTIMAL</span>
+</div>
+<!-- Mini Progress Bar Visual -->
+<div class="space-y-1">
+<div class="w-full h-2 bg-surface-container-lowest rounded-full overflow-hidden flex">
+<div class="h-full bg-secondary w-3/4 rounded-full"></div>
+</div>
+<div class="flex justify-between font-data-mono-md text-data-mono-md text-on-surface">
+<span>Avg. Response Time</span>
+<span class="font-semibold">3.4 hrs</span>
+</div>
+</div>
+<div class="text-[11px] font-body-sm text-body-sm text-on-surface-variant">
+              High-priority verification is granted immediately to officers responding to active Level-2 or Level-3 disaster zones.
+            </div>
+</div>
+</div>
+<!-- Emergency Support Contact Desk Card -->
+<div class="bg-surface-container-lowest p-space-6 rounded-xl shadow-sm space-y-space-4">
+<div class="flex items-center gap-space-2 text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[20px]">support_agent</span>
+<span class="font-headline-sm text-headline-sm font-bold">Urgent Verification Help</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            If your operational deployment is imminent within the next 60 minutes, bypass regular intake by calling the duty officer hotline.
+          </p>
+<div class="flex items-center justify-between p-space-3 rounded-lg bg-surface-container-low font-data-mono-md text-data-mono-md text-on-surface">
+<span>Direct Line:</span>
+<span class="font-bold text-secondary">011-2670-1700</span>
+</div>
+</div>
+</aside>
+</div>
+</section>
+</div>
+<script>
+  function triggerSubmitFeedback() {
+    const btn = document.getElementById('submitBtn');
+    const notice = document.getElementById('submitNotice');
+    
+    if (btn) {
+      btn.disabled = true;
+      btn.classList.add('opacity-80');
+      btn.innerHTML = '<span class="material-symbols-outlined text-[20px] animate-spin">progress_activity</span><span>Encrypting & Dispatching...</span>';
+    }
+
+    setTimeout(() => {
+      if (btn) {
+        btn.innerHTML = '<span class="material-symbols-outlined text-[20px]">done_all</span><span>Submitted for Verification</span>';
+      }
+      if (notice) {
+        notice.classList.remove('hidden');
+        notice.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    }, 1200);
+  }
+</script></main><footer class="w-full bg-surface-container-low py-space-6 shadow-[0_-1px_8px_rgba(0,0,0,0.02)]"><div class="w-full px-space-8 flex flex-col md:flex-row items-center justify-between gap-space-4"><div class="flex items-center gap-space-2 text-on-surface-variant font-body-sm text-body-sm"><span class="material-symbols-outlined text-secondary text-[18px]">shield</span><span>© 2026 ResQnet. Centralized Disaster Management &amp; Emergency Response Network</span></div><nav class="flex items-center gap-space-6" data-active-classes="text-on-surface font-semibold"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="disaster-guidelines" href="#">Disaster Guidelines</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="terms-of-service" href="#">Terms of Service</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="support-desk" href="#">Support Desk</a></nav></div></footer></body></html>

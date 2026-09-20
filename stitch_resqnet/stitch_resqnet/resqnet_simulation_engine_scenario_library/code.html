@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700&amp;family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"secondary":"#455f87","primary":"#004ac6","border-default":"#E2E8F0","secondary-fixed":"#d5e3ff","error-container":"#ffdad6","on-error-container":"#93000a","success-text":"#16A34A","info-border":"#BFDBFE","critical-bg":"#FEF2F2","on-secondary-container":"#3e5980","on-secondary":"#ffffff","tertiary-fixed-dim":"#bec6e0","surface-bright":"#f8f9ff","surface":"#f8f9ff","on-surface":"#0b1c30","secondary-container":"#b5d0fd","surface-container-highest":"#d3e4fe","warning-bg":"#FFFBEB","text-muted":"#94A3B8","on-error":"#ffffff","blue-soft":"#EFF6FF","success-border":"#BBF7D0","inverse-on-surface":"#eaf1ff","secondary-fixed-dim":"#adc8f5","error":"#ba1a1a","on-secondary-fixed":"#001c3b","surface-container-high":"#dce9ff","warning-border":"#FDE68A","on-primary-container":"#eeefff","on-background":"#0b1c30","on-tertiary-fixed":"#131b2e","background":"#f8f9ff","surface-tint":"#0053db","primary-fixed-dim":"#b4c5ff","surface-container-lowest":"#ffffff","inverse-primary":"#b4c5ff","surface-card":"#FFFFFF","blue-light":"#DBEAFE","warning-text":"#D97706","surface-base":"#F8FAFC","on-tertiary-container":"#eef0ff","surface-container-low":"#eff4ff","on-primary-fixed-variant":"#003ea8","tertiary-container":"#656d84","outline-variant":"#c3c6d7","surface-subtle":"#F1F5F9","tertiary":"#4d556b","inverse-surface":"#213145","critical-border":"#FECACA","tertiary-fixed":"#dae2fd","critical-text":"#DC2626","surface-dim":"#cbdbf5","on-primary-fixed":"#00174b","surface-variant":"#d3e4fe","surface-container":"#e5eeff","success-bg":"#F0FDF4","on-surface-variant":"#434655","primary-fixed":"#dbe1ff","text-secondary":"#64748B","outline":"#737686","primary-container":"#2563eb","on-primary":"#ffffff","on-tertiary":"#ffffff","on-secondary-fixed-variant":"#2d486d","on-tertiary-fixed-variant":"#3f465c","text-primary":"#1E293B"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"space-2":"8px","space-12":"48px","space-5":"20px","gutter-standard":"16px","space-10":"40px","space-3":"12px","space-4":"16px","margin-desktop":"32px","gutter-expanded":"24px","space-0":"0px","gutter-dense":"8px","space-1":"4px","margin-mobile":"16px","space-8":"32px","space-16":"64px","space-6":"24px","margin-tablet":"24px"},fontFamily:{"data-mono-lg":["JetBrains Mono"],"body-md":["Public Sans"],"headline-xl":["Public Sans"],"display-hud-mobile":["JetBrains Mono"],"body-lg":["Public Sans"],"headline-sm":["Public Sans"],"label-telemetry":["JetBrains Mono"],"headline-lg":["Public Sans"],"display-hud":["JetBrains Mono"],"headline-xl-mobile":["Public Sans"],"label-badge":["Public Sans"],"headline-md":["Public Sans"],"data-mono-md":["JetBrains Mono"],"body-sm":["Public Sans"]},fontSize:{"data-mono-lg":["18px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"headline-xl":["36px",{"lineHeight":"44px","letterSpacing":"-0.025em","fontWeight":"700"}],"display-hud-mobile":["32px",{"lineHeight":"36px","letterSpacing":"-0.03em","fontWeight":"700"}],"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"headline-sm":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"600"}],"label-telemetry":["10px",{"lineHeight":"12px","letterSpacing":"0.08em","fontWeight":"500"}],"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"700"}],"display-hud":["48px",{"lineHeight":"52px","letterSpacing":"-0.04em","fontWeight":"700"}],"headline-xl-mobile":["26px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-badge":["11px",{"lineHeight":"14px","letterSpacing":"0.06em","fontWeight":"700"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"data-mono-md":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"500"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"400"}]}}}};</script></head><body class="bg-surface-base font-body-md text-text-primary antialiased"><aside class="fixed left-0 top-0 h-full w-[260px] bg-surface-card z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-space-5 flex items-center gap-space-3 bg-surface-subtle"><div class="w-8 h-8 rounded-xl bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[20px]">hub</span></div><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm text-text-primary tracking-tight leading-none">RESQNET</span><span class="font-label-telemetry text-label-telemetry text-text-secondary tracking-wider mt-space-1 uppercase">Engine Core v2.4</span></div></div><div class="px-space-4 py-space-4 flex flex-col gap-space-6"><div class="flex flex-col"><span class="px-space-3 mb-space-2 font-label-badge text-label-badge text-text-muted uppercase tracking-wider">Simulation Workspaces</span><nav class="flex flex-col gap-space-1" data-active-classes="bg-primary-container text-on-primary font-headline-sm rounded-xl"><a aria-current="page" class="flex items-center px-space-3 py-space-2 transition-colors bg-primary-container text-on-primary font-headline-sm rounded-xl" data-path="scenario-library" href="#"><span class="material-symbols-outlined text-[18px] mr-space-3">schema</span>Scenario Library</a><a class="flex items-center justify-between px-space-3 py-space-2 rounded-xl font-body-md text-body-md text-on-surface-variant hover:bg-surface-subtle hover:text-on-surface transition-colors" data-path="run-console" href="#"><div class="flex items-center"><span class="material-symbols-outlined text-[18px] mr-space-3">terminal</span>Run Console</div><span class="flex h-2 w-2 relative"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-success-text opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-success-text"></span></span></a><a class="flex items-center px-space-3 py-space-2 rounded-xl font-body-md text-body-md text-on-surface-variant hover:bg-surface-subtle hover:text-on-surface transition-colors" data-path="run-history" href="#"><span class="material-symbols-outlined text-[18px] mr-space-3">history</span>Run History</a></nav></div><div class="flex flex-col"><span class="px-space-3 mb-space-2 font-label-badge text-label-badge text-text-muted uppercase tracking-wider">Active Run Inspection</span><nav class="flex flex-col gap-space-1" data-active-classes="bg-primary-container text-on-primary font-headline-sm rounded-xl"><a class="flex items-center px-space-3 py-space-2 rounded-xl font-body-md text-body-md text-on-surface-variant hover:bg-surface-subtle hover:text-on-surface transition-colors" data-path="event-inspector" href="#"><span class="material-symbols-outlined text-[18px] mr-space-3">manage_search</span>Event Inspector</a><a class="flex items-center px-space-3 py-space-2 rounded-xl font-body-md text-body-md text-on-surface-variant hover:bg-surface-subtle hover:text-on-surface transition-colors" data-path="manual-event-injection" href="#"><span class="material-symbols-outlined text-[18px] mr-space-3">send_time_extension</span>Manual Event Injection</a><a class="flex items-center px-space-3 py-space-2 rounded-xl font-body-md text-body-md text-on-surface-variant hover:bg-surface-subtle hover:text-on-surface transition-colors" data-path="run-results" href="#"><span class="material-symbols-outlined text-[18px] mr-space-3">insights</span>Run Results</a></nav></div></div></div><div class="p-space-4 bg-surface-subtle flex flex-col gap-space-3"><div class="flex flex-col gap-space-1"><div class="flex items-center gap-space-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span><span class="font-label-telemetry text-label-telemetry text-text-secondary uppercase">Runtime: Deterministic HTTP</span></div><div class="flex items-center gap-space-2"><span class="w-1.5 h-1.5 rounded-full bg-success-text"></span><span class="font-label-telemetry text-label-telemetry text-text-secondary uppercase">API Link: 100% Healthy</span></div></div><a class="flex items-center justify-between px-space-3 py-space-2 bg-surface-card rounded-lg hover:bg-blue-soft hover:text-primary transition-colors text-text-secondary font-body-sm text-body-sm" data-path="root-portal-switch" href="#"><span class="flex items-center gap-space-2"><span class="material-symbols-outlined text-[16px]">logout</span>Return to Portal</span><span class="material-symbols-outlined text-[14px]">arrow_forward</span></a></div></aside><div class="pl-[260px]"><header class="fixed top-0 left-[260px] right-0 h-16 bg-surface-card/95 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-6"><div class="flex items-center gap-space-4 min-w-0"><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-text-primary tracking-tight">RESQNET v2.4</span><span class="font-label-telemetry text-label-telemetry text-text-secondary tracking-wider uppercase">Simulation Engine &amp; Disaster Timeline Emulator</span></div><div class="h-5 w-px bg-border-default mx-space-2 hidden lg:block"></div><div class="hidden xl:flex items-center gap-space-2"><div class="flex items-center gap-space-1 bg-surface-subtle px-space-2 py-1 rounded"><span class="font-label-telemetry text-label-telemetry text-text-muted">ENV:</span><span class="font-data-mono-md text-data-mono-md text-text-primary">STAGING SANDBOX</span></div><div class="flex items-center gap-space-1 bg-surface-subtle px-space-2 py-1 rounded"><span class="font-label-telemetry text-label-telemetry text-text-muted">CLK:</span><span class="font-data-mono-md text-data-mono-md text-text-primary">SYNCHRONIZED</span></div><div class="flex items-center gap-space-1 bg-surface-subtle px-space-2 py-1 rounded"><span class="font-label-telemetry text-label-telemetry text-text-muted">TGT:</span><span class="font-data-mono-md text-data-mono-md text-text-primary">LOCAL APIS (8080)</span></div><div class="flex items-center gap-space-1 bg-surface-subtle px-space-2 py-1 rounded"><span class="font-label-telemetry text-label-telemetry text-text-muted">CALL:</span><span class="font-data-mono-md text-data-mono-md text-text-primary">SIM-OPERATOR-ROOT</span></div></div></div><div class="flex items-center gap-space-4 shrink-0"><div class="flex items-center gap-space-2 bg-success-bg border border-success-border px-space-3 py-1 rounded-full"><span class="w-2 h-2 rounded-full bg-success-text"></span><span class="font-label-badge text-label-badge text-success-text uppercase tracking-wide">Engine: Active / Ready</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 bg-surface-base min-h-screen w-full px-space-8 py-space-6"><div class="flex flex-col w-full">
+<!-- Dynamic Notification Bar (Hidden by default) -->
+<div class="hidden fixed bottom-6 right-8 z-50 flex items-center gap-space-3 bg-surface-card px-space-4 py-space-3 rounded-xl shadow-xl transition-all duration-300 transform translate-y-2" id="toast-banner">
+<div class="w-8 h-8 rounded-full bg-blue-soft flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[20px]">bolt</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-text-primary" id="toast-title">Engine Executing</span>
+<span class="font-body-sm text-body-sm text-text-secondary" id="toast-desc">Scenario payload queued for staging sandbox.</span>
+</div>
+<button class="ml-space-4 text-text-muted hover:text-text-primary" onclick="dismissToast()">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<!-- Hero / Header Strip with Swiss Grid discipline -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-5 pb-space-8">
+<div class="flex flex-col max-w-2xl">
+<div class="flex items-center gap-space-2 mb-space-2">
+<span class="font-label-telemetry text-label-telemetry text-primary tracking-wider uppercase">RESQNET TELEMETRY MATRIX</span>
+<span class="w-1 h-1 rounded-full bg-text-muted"></span>
+<span class="font-label-telemetry text-label-telemetry text-text-secondary uppercase">CATALOG REF: SCEN-LIB-2025-V2</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-text-primary tracking-tight">SCENARIO LIBRARY</h1>
+<p class="font-body-lg text-body-lg text-text-secondary mt-space-1">
+        Configuration-driven disaster timeline emulators for high-volume API stress, civil defense verification, and incident workflow orchestration.
+      </p>
+</div>
+<!-- Actions Dock -->
+<div class="flex flex-wrap sm:flex-nowrap items-center gap-space-3 shrink-0">
+<!-- Search Field -->
+<div class="relative w-full sm:w-72">
+<span class="material-symbols-outlined absolute left-space-3 top-1/2 -translate-y-1/2 text-text-muted text-[18px]">search</span>
+<input class="w-full h-10 pl-9 pr-space-3 bg-surface-card rounded-lg font-body-sm text-body-sm text-text-primary placeholder:text-text-muted focus:outline-none shadow-sm transition-shadow" id="scenario-search" onkeyup="filterScenarios()" placeholder="Filter schemas, scopes, hazard types..." type="text"/>
+</div>
+<!-- Action Button -->
+<button class="h-10 px-space-4 bg-surface-card hover:bg-surface-subtle text-text-primary font-headline-sm text-headline-sm rounded-lg flex items-center gap-space-2 shadow-sm transition-all shrink-0" onclick="openImportModal()">
+<span class="material-symbols-outlined text-primary text-[18px]">file_upload</span>
+        Import JSON Scenario Spec
+      </button>
+</div>
+</div>
+<!-- Live Simulation Metric Chips -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-4 mb-space-8">
+<div class="bg-surface-card p-space-4 rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-text-muted mb-space-2">
+<span class="font-label-badge text-label-badge uppercase tracking-wider">Indexed Blueprints</span>
+<span class="material-symbols-outlined text-[18px]">schema</span>
+</div>
+<div class="flex items-baseline gap-space-2">
+<span class="font-display-hud-mobile text-display-hud-mobile text-text-primary">03</span>
+<span class="font-label-telemetry text-label-telemetry text-success-text uppercase">ACTIVE STACK</span>
+</div>
+</div>
+<div class="bg-surface-card p-space-4 rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-text-muted mb-space-2">
+<span class="font-label-badge text-label-badge uppercase tracking-wider">T-Relative Schema</span>
+<span class="material-symbols-outlined text-[18px]">schedule</span>
+</div>
+<div class="flex items-baseline gap-space-2">
+<span class="font-data-mono-lg text-data-mono-lg text-text-primary">100%</span>
+<span class="font-label-telemetry text-label-telemetry text-text-secondary uppercase">ZERO HARDCODED DATES</span>
+</div>
+</div>
+<div class="bg-surface-card p-space-4 rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-text-muted mb-space-2">
+<span class="font-label-badge text-label-badge uppercase tracking-wider">Sandboxed Targets</span>
+<span class="material-symbols-outlined text-[18px]">alt_route</span>
+</div>
+<div class="flex items-baseline gap-space-2">
+<span class="font-data-mono-lg text-data-mono-lg text-text-primary">MOCK_GW_8080</span>
+<span class="w-2 h-2 rounded-full bg-success-text"></span>
+</div>
+</div>
+<div class="bg-surface-card p-space-4 rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-text-muted mb-space-2">
+<span class="font-label-badge text-label-badge uppercase tracking-wider">Max Concurrency</span>
+<span class="material-symbols-outlined text-[18px]">speed</span>
+</div>
+<div class="flex items-baseline gap-space-2">
+<span class="font-data-mono-lg text-data-mono-lg text-text-primary">2,500/min</span>
+<span class="font-label-telemetry text-label-telemetry text-primary uppercase">BURST CAPABLE</span>
+</div>
+</div>
+</div>
+<!-- Scenario Cards Grid (3 Primary Scenarios) -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-6 scenario-grid mb-space-12">
+<!-- CARD 1: FLOOD_DEMO_01 -->
+<div class="scenario-card flex flex-col bg-surface-card rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden group">
+<!-- Media Header / Location Snapshot -->
+<div class="relative h-44 w-full bg-surface-subtle overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-location="Chandigarh Sector 17, India" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBWLEpKkTIffDDgmAWIA4VqGeSAN50RUDFQX-LXOG-r0fvrcSSSlTk2GryLyWL5fDosgIUlkB36r1hOLMmcGVAl9CMz6VJjCdyC19mzW75k1mgFR9JzVcftnmkalCI6jAG1A40_q1XRPbbeup5nis2C8qY_rKadRwSV0yooe2zK6oqazicaOLYJj_a9Zd1h4AOHkHzozwrljP-73_raMYxhEgR9GCIFTWj56MumengvXoXTTxGLG52KeA')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-card via-surface-card/20 to-transparent"></div>
+<!-- Badge Overlay -->
+<div class="absolute top-space-3 left-space-3 flex items-center gap-space-2">
+<div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-blue-soft text-primary font-label-badge text-label-badge">
+<span class="material-symbols-outlined text-[12px]">water</span>
+            RIVERINE FLOOD
+          </div>
+<div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-success-bg text-success-text font-label-badge text-label-badge">
+<span class="material-symbols-outlined text-[12px]">verified</span>
+            CERTIFIED
+          </div>
+</div>
+<div class="absolute bottom-space-2 right-space-3 font-data-mono-md text-data-mono-md text-text-secondary bg-surface-card/90 px-2 py-0.5 rounded shadow-sm">
+          ID: FLD-01-CHD
+        </div>
+</div>
+<!-- Card Core -->
+<div class="p-space-5 flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-1">
+<span class="font-data-mono-md text-data-mono-md text-primary font-semibold">FLOOD_DEMO_01</span>
+<span class="font-label-telemetry text-label-telemetry text-text-muted">REV.4.1</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-text-primary tracking-tight mb-space-2">
+            Monsoon Riverine Inundation &amp; Multi-Sector Evacuation
+          </h2>
+<p class="font-body-md text-body-md text-text-secondary line-clamp-3 mb-space-4">
+            Comprehensive monsoon deluge testing hydrological sensor warnings, citizen distress surges, road waterlogging closures, and SDRF quick-response unit deployment.
+          </p>
+<!-- Telemetry Specs List -->
+<div class="bg-surface-subtle p-space-3 rounded-lg flex flex-col gap-space-2 mb-space-4">
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<span class="text-text-secondary flex items-center gap-space-2">
+<span class="material-symbols-outlined text-[16px] text-text-muted">timelapse</span>
+                Duration:
+              </span>
+<span class="font-data-mono-md text-data-mono-md text-text-primary font-semibold">60 Minutes</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<span class="text-text-secondary flex items-center gap-space-2">
+<span class="material-symbols-outlined text-[16px] text-text-muted">dynamic_feed</span>
+                Event Pipeline:
+              </span>
+<span class="font-data-mono-md text-data-mono-md text-text-primary font-semibold">7 Sequential Triggers</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<span class="text-text-secondary flex items-center gap-space-2">
+<span class="material-symbols-outlined text-[16px] text-text-muted">pin_drop</span>
+                Geographic Scope:
+              </span>
+<span class="font-body-sm text-body-sm text-text-primary truncate max-w-[170px]" title="Chandigarh Tricity (Sectors 16, 17, 22, Jan Marg)">Chandigarh Tricity (Sectors 16, 17, 22, Jan Marg)</span>
+</div>
+</div>
+<!-- Relative Step Spark Visual (SVG) -->
+<div class="mb-space-5">
+<div class="flex items-center justify-between text-text-muted font-label-telemetry text-label-telemetry mb-space-1 uppercase">
+<span>Timeline Curve (T+00 to T+60)</span>
+<span>Distress Crest: T+38m</span>
+</div>
+<div class="h-8 w-full bg-surface-subtle rounded flex items-center px-2">
+<svg class="w-full h-5 text-primary" fill="none" preserveaspectratio="none" viewbox="0 0 100 20">
+<path d="M0,18 L15,16 L30,12 L50,4 L65,7 L85,15 L100,18" stroke="currentColor" stroke-linecap="round" stroke-width="2" vector-effect="non-scaling-stroke"></path>
+<circle cx="50" cy="4" fill="currentColor" r="2.5"></circle>
+</svg>
+</div>
+</div>
+</div>
+<!-- Action Matrix -->
+<div class="flex items-center gap-space-3 pt-space-2">
+<button class="flex-1 h-10 bg-blue-soft text-primary hover:bg-blue-light font-headline-sm text-headline-sm rounded-lg flex items-center justify-center gap-space-1 transition-colors" onclick="viewDetails('FLOOD_DEMO_01')">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+            Inspect Spec
+          </button>
+<button class="flex-1 h-10 bg-primary-container text-on-primary hover:bg-primary font-headline-sm text-headline-sm rounded-lg flex items-center justify-center gap-space-1 shadow-sm transition-all" onclick="triggerRun('FLOOD_DEMO_01', 'Riverine Flood Emulation')">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+            START RUN
+          </button>
+</div>
+</div>
+</div>
+<!-- CARD 2: EARTHQUAKE_DEMO_01 -->
+<div class="scenario-card flex flex-col bg-surface-card rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden group">
+<!-- Media Header / Location Snapshot -->
+<div class="relative h-44 w-full bg-surface-subtle overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-location="Guwahati Kamrup Metro, Assam, India" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAICJqJWk9txTl-nizya98NP--InP8jGlUO9wvY35xDCh7X27Go8-7ocRZP9KNyOK_LwPs_18uzdv3amKH6BAazUa5BdcZx7EnfZsgLkM_a8SAAxkl6Beraw9xM_qIEnb6y4Qek36LIA-7fQ_Z-PFq-1oLHFCot7qE7KB8_BF5RqmM415N9sTOxK3KIv49NdOwvEgtTTFjFMkxHtptdz1JSqOXn9EWXdI9kJvaHm07WtcfVjCS0T3Qtkw')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-card via-surface-card/20 to-transparent"></div>
+<!-- Badge Overlay -->
+<div class="absolute top-space-3 left-space-3 flex items-center gap-space-2">
+<div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-critical-bg text-critical-text font-label-badge text-label-badge">
+<span class="material-symbols-outlined text-[12px]">vibration</span>
+            SEISMIC COLLAPSE
+          </div>
+<div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-blue-soft text-primary font-label-badge text-label-badge">
+<span class="material-symbols-outlined text-[12px]">check_circle</span>
+            READY
+          </div>
+</div>
+<div class="absolute bottom-space-2 right-space-3 font-data-mono-md text-data-mono-md text-text-secondary bg-surface-card/90 px-2 py-0.5 rounded shadow-sm">
+          ID: EQ-01-GHY
+        </div>
+</div>
+<!-- Card Core -->
+<div class="p-space-5 flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-1">
+<span class="font-data-mono-md text-data-mono-md text-primary font-semibold">EARTHQUAKE_DEMO_01</span>
+<span class="font-label-telemetry text-label-telemetry text-text-muted">REV.5.0</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-text-primary tracking-tight mb-space-2">
+            Rapid Structural Collapse &amp; USAR Triage Shock
+          </h2>
+<p class="font-body-md text-body-md text-text-secondary line-clamp-3 mb-space-4">
+            Magnitude 6.4 seismic pulse triggering widespread building structural shear, power grid isolation, secondary gas hazards, and mass casualty triage protocol activation.
+          </p>
+<!-- Telemetry Specs List -->
+<div class="bg-surface-subtle p-space-3 rounded-lg flex flex-col gap-space-2 mb-space-4">
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<span class="text-text-secondary flex items-center gap-space-2">
+<span class="material-symbols-outlined text-[16px] text-text-muted">timelapse</span>
+                Duration:
+              </span>
+<span class="font-data-mono-md text-data-mono-md text-text-primary font-semibold">90 Minutes</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<span class="text-text-secondary flex items-center gap-space-2">
+<span class="material-symbols-outlined text-[16px] text-text-muted">dynamic_feed</span>
+                Event Pipeline:
+              </span>
+<span class="font-data-mono-md text-data-mono-md text-text-primary font-semibold">11 Sequential Triggers</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<span class="text-text-secondary flex items-center gap-space-2">
+<span class="material-symbols-outlined text-[16px] text-text-muted">pin_drop</span>
+                Geographic Scope:
+              </span>
+<span class="font-body-sm text-body-sm text-text-primary truncate max-w-[170px]" title="Kamrup Metro / Guwahati Zone 1">Kamrup Metro / Guwahati Zone 1</span>
+</div>
+</div>
+<!-- Relative Step Spark Visual (SVG) -->
+<div class="mb-space-5">
+<div class="flex items-center justify-between text-text-muted font-label-telemetry text-label-telemetry mb-space-1 uppercase">
+<span>Timeline Curve (T+00 to T+90)</span>
+<span>PGA Shock: T+02m</span>
+</div>
+<div class="h-8 w-full bg-surface-subtle rounded flex items-center px-2">
+<svg class="w-full h-5 text-critical-text" fill="none" preserveaspectratio="none" viewbox="0 0 100 20">
+<path d="M0,18 L5,2 L12,17 L20,9 L35,14 L60,11 L80,16 L100,18" stroke="currentColor" stroke-linecap="round" stroke-width="2" vector-effect="non-scaling-stroke"></path>
+<circle cx="5" cy="2" fill="currentColor" r="2.5"></circle>
+</svg>
+</div>
+</div>
+</div>
+<!-- Action Matrix -->
+<div class="flex items-center gap-space-3 pt-space-2">
+<button class="flex-1 h-10 bg-blue-soft text-primary hover:bg-blue-light font-headline-sm text-headline-sm rounded-lg flex items-center justify-center gap-space-1 transition-colors" onclick="viewDetails('EARTHQUAKE_DEMO_01')">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+            Inspect Spec
+          </button>
+<button class="flex-1 h-10 bg-primary-container text-on-primary hover:bg-primary font-headline-sm text-headline-sm rounded-lg flex items-center justify-center gap-space-1 shadow-sm transition-all" onclick="triggerRun('EARTHQUAKE_DEMO_01', 'Seismic Shock Emulation')">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+            START RUN
+          </button>
+</div>
+</div>
+</div>
+<!-- CARD 3: LANDSLIDE_DEMO_01 -->
+<div class="scenario-card flex flex-col bg-surface-card rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden group">
+<!-- Media Header / Location Snapshot -->
+<div class="relative h-44 w-full bg-surface-subtle overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-location="Shimla NH 205, Himachal Pradesh, India" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDX6nOPy1nwmk3BDOTWEOsXZ7UBjjGa_xHlGmFa9312JiPO3f4jBbblmr2_clgEmoftqVJRGEE_4wY96o1eQVN05-3ccw5CwoJL15LsPzZAyDhVoxnH_mnKGytox8PGiuu69ZnPhZpKnEQF9exniPaqWoPieDOzGVTEBpi0lTs8eETBzSnSKzIVfFhvUS1b8z1herJWP7CCukNbBBrV1463JQ1q9l1eDThfuzSvwXdrJ-oAbyAouoBdgg')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-card via-surface-card/20 to-transparent"></div>
+<!-- Badge Overlay -->
+<div class="absolute top-space-3 left-space-3 flex items-center gap-space-2">
+<div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-warning-bg text-warning-text font-label-badge text-label-badge">
+<span class="material-symbols-outlined text-[12px]">landslide</span>
+            DEBRIS FLOW
+          </div>
+<div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-blue-soft text-primary font-label-badge text-label-badge">
+<span class="material-symbols-outlined text-[12px]">check_circle</span>
+            READY
+          </div>
+</div>
+<div class="absolute bottom-space-2 right-space-3 font-data-mono-md text-data-mono-md text-text-secondary bg-surface-card/90 px-2 py-0.5 rounded shadow-sm">
+          ID: LS-01-NH205
+        </div>
+</div>
+<!-- Card Core -->
+<div class="p-space-5 flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-1">
+<span class="font-data-mono-md text-data-mono-md text-primary font-semibold">LANDSLIDE_DEMO_01</span>
+<span class="font-label-telemetry text-label-telemetry text-text-muted">REV.3.2</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-text-primary tracking-tight mb-space-2">
+            Arterial Transit Impasse &amp; Isolated Village Relief
+          </h2>
+<p class="font-body-md text-body-md text-text-secondary line-clamp-3 mb-space-4">
+            Heavy monsoon soil saturation causing highway blockage along NH-205, trapping civil transit and cutting off supplies, requiring immediate heavy earthmover requisition and drone survey.
+          </p>
+<!-- Telemetry Specs List -->
+<div class="bg-surface-subtle p-space-3 rounded-lg flex flex-col gap-space-2 mb-space-4">
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<span class="text-text-secondary flex items-center gap-space-2">
+<span class="material-symbols-outlined text-[16px] text-text-muted">timelapse</span>
+                Duration:
+              </span>
+<span class="font-data-mono-md text-data-mono-md text-text-primary font-semibold">45 Minutes</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<span class="text-text-secondary flex items-center gap-space-2">
+<span class="material-symbols-outlined text-[16px] text-text-muted">dynamic_feed</span>
+                Event Pipeline:
+              </span>
+<span class="font-data-mono-md text-data-mono-md text-text-primary font-semibold">6 Sequential Triggers</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<span class="text-text-secondary flex items-center gap-space-2">
+<span class="material-symbols-outlined text-[16px] text-text-muted">pin_drop</span>
+                Geographic Scope:
+              </span>
+<span class="font-body-sm text-body-sm text-text-primary truncate max-w-[170px]" title="Himalayan Foothills Transit Corridors">Himalayan Foothills Transit Corridors</span>
+</div>
+</div>
+<!-- Relative Step Spark Visual (SVG) -->
+<div class="mb-space-5">
+<div class="flex items-center justify-between text-text-muted font-label-telemetry text-label-telemetry mb-space-1 uppercase">
+<span>Timeline Curve (T+00 to T+45)</span>
+<span>Transit Severance: T+15m</span>
+</div>
+<div class="h-8 w-full bg-surface-subtle rounded flex items-center px-2">
+<svg class="w-full h-5 text-warning-text" fill="none" preserveaspectratio="none" viewbox="0 0 100 20">
+<path d="M0,18 L20,17 L35,6 L45,5 L60,11 L80,14 L100,16" stroke="currentColor" stroke-linecap="round" stroke-width="2" vector-effect="non-scaling-stroke"></path>
+<circle cx="35" cy="6" fill="currentColor" r="2.5"></circle>
+</svg>
+</div>
+</div>
+</div>
+<!-- Action Matrix -->
+<div class="flex items-center gap-space-3 pt-space-2">
+<button class="flex-1 h-10 bg-blue-soft text-primary hover:bg-blue-light font-headline-sm text-headline-sm rounded-lg flex items-center justify-center gap-space-1 transition-colors" onclick="viewDetails('LANDSLIDE_DEMO_01')">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+            Inspect Spec
+          </button>
+<button class="flex-1 h-10 bg-primary-container text-on-primary hover:bg-primary font-headline-sm text-headline-sm rounded-lg flex items-center justify-center gap-space-1 shadow-sm transition-all" onclick="triggerRun('LANDSLIDE_DEMO_01', 'Landslide Blockage Emulation')">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+            START RUN
+          </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Operational Architecture / Provenance Section -->
+<div class="bg-surface-card rounded-xl p-space-6 shadow-sm mb-space-6">
+<div class="flex flex-col lg:flex-row gap-space-6">
+<!-- Left Anchor: Provenance & Safety Declarations -->
+<div class="lg:w-7/12 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-space-2 mb-space-3">
+<span class="material-symbols-outlined text-primary text-[22px]">verified_user</span>
+<h3 class="font-headline-md text-headline-md text-text-primary tracking-tight">
+              Simulation Engine Standards &amp; Safety Isolation
+            </h3>
+</div>
+<p class="font-body-md text-body-md text-text-secondary mb-space-4">
+            The RESQNET Timeline Emulator generates non-destructive, reproducible disaster trajectories for API ingestion verification and dispatch SLA stress-testing. 
+            All injected payloads are tagged with an immutable <code class="font-data-mono-md text-data-mono-md bg-surface-subtle px-1.5 py-0.5 rounded text-primary">[SIMULATOR]</code> marker in CAP headers, blocking erroneous routing to live civil defense emergency notification channels.
+          </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-3">
+<div class="p-space-3 rounded-lg bg-surface-subtle flex flex-col gap-1">
+<span class="font-label-badge text-label-badge text-text-muted uppercase">Data Set Fidelity</span>
+<span class="font-headline-sm text-headline-sm text-text-primary">Fictionalized Indian GIS</span>
+<span class="font-body-sm text-body-sm text-text-secondary">Realistic wards, real transit nodes, synthetic citizen calls.</span>
+</div>
+<div class="p-space-3 rounded-lg bg-surface-subtle flex flex-col gap-1">
+<span class="font-label-badge text-label-badge text-text-muted uppercase">Timeline Relativism</span>
+<span class="font-headline-sm text-headline-sm text-text-primary">Epoch-Agnostic Triggers</span>
+<span class="font-body-sm text-body-sm text-text-secondary">Calculated via <span class="font-data-mono-md text-data-mono-md">T+00</span> relative offset, eliminating hardcoded timestamp debt.</span>
+</div>
+</div>
+</div>
+<div class="mt-space-5 pt-space-4 flex flex-wrap items-center gap-space-4 text-text-secondary font-body-sm text-body-sm">
+<div class="flex items-center gap-space-2">
+<span class="w-2 h-2 rounded-full bg-success-text"></span>
+<span>CAP v1.2 Protocol Verified</span>
+</div>
+<div class="flex items-center gap-space-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span>Deterministic Replay Enabled</span>
+</div>
+<div class="flex items-center gap-space-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span>Zero Mutation on Live Registry</span>
+</div>
+</div>
+</div>
+<!-- Right Visual: Architectural Telemetry Pipe Diagram -->
+<div class="lg:w-5/12 bg-surface-subtle p-space-5 rounded-xl flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-3">
+<span class="font-label-badge text-label-badge text-text-muted uppercase tracking-wider">Payload Injection Channel</span>
+<span class="font-data-mono-md text-data-mono-md text-primary font-semibold">PORT: 8080/v2/ingest</span>
+</div>
+<!-- Inline Visual Pipe Architecture -->
+<div class="flex flex-col gap-space-3 my-space-2 font-data-mono-md text-data-mono-md">
+<div class="flex items-center justify-between bg-surface-card p-space-3 rounded-lg shadow-sm">
+<div class="flex items-center gap-space-2">
+<span class="material-symbols-outlined text-primary text-[18px]">terminal</span>
+<span class="text-text-primary">Scenario JSON Spec</span>
+</div>
+<span class="font-label-telemetry text-label-telemetry bg-surface-subtle px-2 py-0.5 rounded text-text-secondary">INPUT</span>
+</div>
+<div class="flex items-center justify-center">
+<span class="material-symbols-outlined text-text-muted text-[18px]">arrow_downward</span>
+</div>
+<div class="flex items-center justify-between bg-surface-card p-space-3 rounded-lg shadow-sm">
+<div class="flex items-center gap-space-2">
+<span class="material-symbols-outlined text-primary text-[18px]">precision_manufacturing</span>
+<span class="text-text-primary">Clock Sequencer (T+0 to T+N)</span>
+</div>
+<span class="font-label-telemetry text-label-telemetry bg-blue-soft text-primary px-2 py-0.5 rounded">PACER</span>
+</div>
+<div class="flex items-center justify-center">
+<span class="material-symbols-outlined text-text-muted text-[18px]">arrow_downward</span>
+</div>
+<div class="flex items-center justify-between bg-surface-card p-space-3 rounded-lg shadow-sm">
+<div class="flex items-center gap-space-2">
+<span class="material-symbols-outlined text-success-text text-[18px]">shield</span>
+<span class="text-text-primary">Target Sandbox Endpoint</span>
+</div>
+<span class="font-label-telemetry text-label-telemetry bg-success-bg text-success-text px-2 py-0.5 rounded">ISOLATED</span>
+</div>
+</div>
+<div class="mt-space-3 flex items-center justify-between font-label-telemetry text-label-telemetry text-text-muted uppercase">
+<span>Payload Signature: SHA-256</span>
+<span>Buffer: Zero-Loss FIFO</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Detail Modal / Spec Drawer (Hidden by default) -->
+<div class="hidden fixed inset-0 z-50 flex items-center justify-center p-space-4 bg-text-primary/60 backdrop-blur-sm" id="spec-modal">
+<div class="bg-surface-card w-full max-w-3xl rounded-xl shadow-xl overflow-hidden flex flex-col max-h-[870px]">
+<!-- Modal Header -->
+<div class="px-space-6 py-space-4 bg-surface-subtle flex items-center justify-between">
+<div class="flex items-center gap-space-3">
+<div class="w-8 h-8 rounded-lg bg-blue-soft flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[20px]">code</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-text-primary" id="modal-spec-title">Scenario Specification</h4>
+<span class="font-label-telemetry text-label-telemetry text-text-secondary tracking-wider uppercase">SCHEMA: RESQNET-TIMELINE-2.4</span>
+</div>
+</div>
+<button class="text-text-muted hover:text-text-primary" onclick="closeModal('spec-modal')">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Modal Body -->
+<div class="p-space-6 overflow-y-auto flex flex-col gap-space-4">
+<div class="flex items-center justify-between bg-blue-soft p-space-3 rounded-lg text-primary font-body-sm text-body-sm">
+<div class="flex items-center gap-space-2">
+<span class="material-symbols-outlined text-[18px]">info</span>
+<span>All event timestamps are relative to start invocation (<code class="font-data-mono-md">T+00:00:00</code>)</span>
+</div>
+<span class="font-data-mono-md text-data-mono-md">MOCK_SANDBOX_V2</span>
+</div>
+<div class="flex flex-col gap-space-2">
+<span class="font-label-badge text-label-badge text-text-muted uppercase">JSON Payload Spec Preview</span>
+<pre class="bg-surface-subtle p-space-4 rounded-xl font-data-mono-md text-data-mono-md text-text-primary overflow-x-auto text-xs leading-relaxed max-h-96" id="modal-json-content"></pre>
+</div>
+</div>
+<!-- Modal Footer -->
+<div class="px-space-6 py-space-4 bg-surface-card flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-text-secondary">Ready to deploy into active run console.</span>
+<div class="flex items-center gap-space-3">
+<button class="px-space-4 py-2 bg-surface-subtle hover:bg-surface-card text-text-secondary font-headline-sm text-headline-sm rounded-lg transition-colors" onclick="closeModal('spec-modal')">
+            Close
+          </button>
+<button class="px-space-5 py-2 bg-primary-container hover:bg-primary text-on-primary font-headline-sm text-headline-sm rounded-lg shadow-sm flex items-center gap-space-2 transition-all" id="modal-start-btn" onclick="">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+            Start Run With This Spec
+          </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Import Spec Modal (Hidden by default) -->
+<div class="hidden fixed inset-0 z-50 flex items-center justify-center p-space-4 bg-text-primary/60 backdrop-blur-sm" id="import-modal">
+<div class="bg-surface-card w-full max-w-xl rounded-xl shadow-xl overflow-hidden flex flex-col">
+<div class="px-space-6 py-space-4 bg-surface-subtle flex items-center justify-between">
+<div class="flex items-center gap-space-3">
+<span class="material-symbols-outlined text-primary text-[22px]">upload_file</span>
+<h4 class="font-headline-sm text-headline-sm text-text-primary">Import Scenario Specification</h4>
+</div>
+<button class="text-text-muted hover:text-text-primary" onclick="closeModal('import-modal')">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="p-space-6 flex flex-col gap-space-4">
+<p class="font-body-md text-body-md text-text-secondary">
+          Upload or paste a compliant RESQNET scenario schema. Validates relative time markers, geographic polygons, and synthetic payload keys before staging.
+        </p>
+<div class="flex flex-col gap-space-1">
+<label class="font-label-badge text-label-badge text-text-muted uppercase">Scenario JSON String</label>
+<textarea class="w-full p-space-3 bg-surface-subtle font-data-mono-md text-data-mono-md text-text-primary placeholder:text-text-muted rounded-lg focus:outline-none focus:bg-surface-card transition-colors resize-none" id="import-json-area" placeholder='{ "scenario_id": "STORM_DEMO_02", "duration_minutes": 50, "relative_events": [...] }' rows="6"></textarea>
+</div>
+</div>
+<div class="px-space-6 py-space-4 bg-surface-card flex items-center justify-end gap-space-3">
+<button class="px-space-4 py-2 bg-surface-subtle text-text-secondary font-headline-sm text-headline-sm rounded-lg hover:bg-surface-base" onclick="closeModal('import-modal')">
+          Cancel
+        </button>
+<button class="px-space-5 py-2 bg-primary-container text-on-primary font-headline-sm text-headline-sm rounded-lg shadow-sm hover:bg-primary flex items-center gap-space-2" onclick="handleImportSubmit()">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+          Validate &amp; Ingest Spec
+        </button>
+</div>
+</div>
+</div>
+<!-- Client-side Logic Script for Realistic Interactivity -->
+<script>
+    const scenarioSpecs = {
+      'FLOOD_DEMO_01': {
+        scenario_id: 'FLOOD_DEMO_01',
+        name: 'Monsoon Riverine Inundation & Multi-Sector Evacuation',
+        disaster_type: 'RIVERINE_FLOOD',
+        target_zone: 'Chandigarh Tricity (Sectors 16, 17, 22, Jan Marg)',
+        duration_minutes: 60,
+        timeline_mode: 'RELATIVE_EPOCH',
+        events: [
+          { t_offset: 'T+00:00:00', type: 'SENSOR_ALERT', level: 'ADVISORY', payload: 'Sukhna Lake Gauge reaches 1162.4 ft. Auto-alert to Flood Control Cell.' },
+          { t_offset: 'T+00:08:30', type: 'CITIZEN_SURGE', level: 'ELEVATED', payload: 'Jan Marg Sector 16/17 underpass 3ft waterlogged. 14 distress tickets registered.' },
+          { t_offset: 'T+00:15:00', type: 'INFRA_FAILURE', level: 'HIGH', payload: 'Sector 22 Transformer Substation 4 submersed. Power trip isolated.' },
+          { t_offset: 'T+00:24:10', type: 'DISPATCH_ORDER', level: 'TACTICAL', payload: 'SDRF Boat Unit 02 deployed to Sector 17 commercial basement sector.' },
+          { t_offset: 'T+00:38:00', type: 'PEAK_INUNDATION', level: 'CRITICAL', payload: 'Overtopping at Jan Marg canal junction. Traffic police diversions enforced.' },
+          { t_offset: 'T+00:47:30', type: 'EVAC_SHELTER', level: 'LOGISTIC', payload: 'Sector 19 Government College established as dry relief distribution camp.' },
+          { t_offset: 'T+00:58:00', type: 'STAND_DOWN', level: 'RECOVERY', payload: 'Hydrological levels receding below danger mark. Pumps active at 80% flow.' }
+        ]
+      },
+      'EARTHQUAKE_DEMO_01': {
+        scenario_id: 'EARTHQUAKE_DEMO_01',
+        name: 'Rapid Structural Collapse & USAR Triage Shock',
+        disaster_type: 'SEISMIC_COLLAPSE',
+        target_zone: 'Kamrup Metro / Guwahati Zone 1',
+        duration_minutes: 90,
+        timeline_mode: 'RELATIVE_EPOCH',
+        events: [
+          { t_offset: 'T+00:00:00', type: 'SEISMIC_TRIGGER', level: 'CRITICAL', payload: 'M6.4 Depth 12km Epicenter 26.18N 91.74E. Peak Ground Acceleration 0.38g.' },
+          { t_offset: 'T+00:02:15', type: 'TELECOM_SHOCK', level: 'CRITICAL', payload: 'Cellular tower clustering in Pan Bazar drops by 72% within 90 seconds.' },
+          { t_offset: 'T+00:07:00', type: 'COLLAPSE_REPORT', level: 'HIGH', payload: 'G+4 commercial masonry failure near Fancy Bazar. Multiple trapped civilians reported.' },
+          { t_offset: 'T+00:12:45', type: 'GAS_LEAK', level: 'SEVERE', payload: 'City Gas distribution pipe breach in Zone 1. Pressure shutoff valve tripped.' },
+          { t_offset: 'T+00:20:00', type: 'TRIAGE_ACTIVE', level: 'TACTICAL', payload: 'Guwahati Medical College activates Mass Casualty Incident (MCI) Code Black.' },
+          { t_offset: 'T+00:32:00', type: 'USAR_DEPLOYMENT', level: 'TACTICAL', payload: 'NDRF 1st Battalion acoustic listening gear deployed to sector collapsed structures.' },
+          { t_offset: 'T+00:45:00', type: 'AFTERSHOCK', level: 'WARNING', payload: 'M4.8 Aftershock registered. Ground teams pull back 50m safe boundary.' },
+          { t_offset: 'T+00:58:00', type: 'AIR_SURVEY', level: 'RECON', payload: 'UAV thermal sweep identifies 4 viable survival pockets under roof slab rubble.' },
+          { t_offset: 'T+01:10:00', type: 'EXTRICATION', level: 'TACTICAL', payload: 'First 6 survivors extracted from basement parking void via hydraulic spreaders.' },
+          { t_offset: 'T+01:22:00', type: 'GRID_RESTORE', level: 'RECOVERY', payload: 'Emergency diesel generators synchronized for Guwahati Railway Station zone.' },
+          { t_offset: 'T+01:30:00', type: 'SITREP_FINAL', level: 'STABLE', payload: 'Incident command transfer to district magistrate. Phase 1 USAR concluded.' }
+        ]
+      },
+      'LANDSLIDE_DEMO_01': {
+        scenario_id: 'LANDSLIDE_DEMO_01',
+        name: 'Arterial Transit Impasse & Isolated Village Relief',
+        disaster_type: 'DEBRIS_FLOW',
+        target_zone: 'Himalayan Foothills Transit Corridors (NH-205)',
+        duration_minutes: 45,
+        timeline_mode: 'RELATIVE_EPOCH',
+        events: [
+          { t_offset: 'T+00:00:00', type: 'GEOTECH_TRIP', level: 'WARNING', payload: 'Inclinometer #04 detects 34mm slope creep on NH-205 km-marker 42.' },
+          { t_offset: 'T+00:06:20', type: 'ROAD_SEVERANCE', level: 'CRITICAL', payload: '1,200 cubic meters mud and boulder slip blocks both highway carriage lanes.' },
+          { t_offset: 'T+00:14:00', type: 'STRANDED_CONVOY', level: 'HIGH', payload: '2 inter-state buses and 18 private passenger cars trapped between dual slip zones.' },
+          { t_offset: 'T+00:23:45', type: 'HEAVY_MACHINERY', level: 'TACTICAL', payload: 'BRO Wheel Loaders & JCB requisitioned from Bilaspur auxiliary yard.' },
+          { t_offset: 'T+00:35:00', type: 'SUPPLY_DROP', level: 'LOGISTIC', payload: 'Micro-drone delivery of water rations and satellite phone to stranded passengers.' },
+          { t_offset: 'T+00:44:00', type: 'SINGLE_LANE_OPEN', level: 'RECOVERY', payload: 'One-way controlled clearance authorized for high-clearance emergency escorts.' }
+        ]
+      }
+    };
+
+    function viewDetails(scenarioId) {
+      const spec = scenarioSpecs[scenarioId];
+      if (!spec) return;
+
+      document.getElementById('modal-spec-title').textContent = `${spec.scenario_id} - ${spec.name}`;
+      document.getElementById('modal-json-content').textContent = JSON.stringify(spec, null, 2);
+      
+      const startBtn = document.getElementById('modal-start-btn');
+      startBtn.onclick = function() {
+        closeModal('spec-modal');
+        triggerRun(spec.scenario_id, spec.name);
+      };
+
+      document.getElementById('spec-modal').classList.remove('hidden');
+    }
+
+    function triggerRun(id, name) {
+      const toast = document.getElementById('toast-banner');
+      const title = document.getElementById('toast-title');
+      const desc = document.getElementById('toast-desc');
+
+      title.textContent = `Queued: ${id}`;
+      desc.textContent = `Synchronizing T+00 clock to staging API sandbox...`;
+
+      toast.classList.remove('hidden');
+      toast.classList.remove('translate-y-2');
+      toast.classList.add('translate-y-0');
+
+      setTimeout(() => {
+        desc.textContent = `Injecting first sequential payload [SIMULATOR] into target port 8080.`;
+      }, 1500);
+
+      setTimeout(() => {
+        dismissToast();
+      }, 5000);
+    }
+
+    function dismissToast() {
+      const toast = document.getElementById('toast-banner');
+      toast.classList.add('translate-y-2');
+      setTimeout(() => toast.classList.add('hidden'), 250);
+    }
+
+    function openImportModal() {
+      document.getElementById('import-modal').classList.remove('hidden');
+    }
+
+    function closeModal(id) {
+      document.getElementById(id).classList.add('hidden');
+    }
+
+    function handleImportSubmit() {
+      const text = document.getElementById('import-json-area').value.trim();
+      if (!text) {
+        alert('Please paste a JSON scenario specification or schema.');
+        return;
+      }
+      try {
+        const parsed = JSON.parse(text);
+        closeModal('import-modal');
+        const toast = document.getElementById('toast-banner');
+        const title = document.getElementById('toast-title');
+        const desc = document.getElementById('toast-desc');
+        title.textContent = `Spec Imported: ${parsed.scenario_id || 'CUSTOM_SPEC'}`;
+        desc.textContent = `Valid schema verified with ${parsed.events ? parsed.events.length : 'N'} timeline milestones.`;
+        toast.classList.remove('hidden');
+        document.getElementById('import-json-area').value = '';
+      } catch (err) {
+        alert('Invalid JSON syntax: ' + err.message);
+      }
+    }
+
+    function filterScenarios() {
+      const query = document.getElementById('scenario-search').value.toLowerCase();
+      const cards = document.querySelectorAll('.scenario-card');
+
+      cards.forEach(card => {
+        const text = card.textContent.toLowerCase();
+        if (text.includes(query)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</div></main></div></body></html>

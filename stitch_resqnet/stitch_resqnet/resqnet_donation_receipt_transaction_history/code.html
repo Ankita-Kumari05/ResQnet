@@ -1,0 +1,540 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-container-low":"#eff4ff","on-error-container":"#93000a","on-surface-variant":"#45464d","on-secondary-fixed-variant":"#004b73","inverse-on-surface":"#eaf1ff","tertiary-container":"#410002","on-primary-fixed":"#131b2e","error-container":"#ffdad6","surface-container":"#e5eeff","on-tertiary-container":"#f63a35","secondary-container":"#5bb8fe","on-surface":"#0b1c30","on-secondary-fixed":"#001d31","on-primary-fixed-variant":"#3f465c","on-primary-container":"#7c839b","on-tertiary-fixed":"#410002","on-tertiary-fixed-variant":"#93000b","surface-container-high":"#dce9ff","primary-container":"#131b2e","secondary-fixed":"#cce5ff","inverse-primary":"#bec6e0","surface":"#f8f9ff","outline":"#76777d","tertiary-fixed-dim":"#ffb4ab","secondary-fixed-dim":"#93ccff","error":"#ba1a1a","primary":"#000000","on-primary":"#ffffff","background":"#f8f9ff","tertiary":"#000000","on-secondary-container":"#00476e","tertiary-fixed":"#ffdad6","on-error":"#ffffff","on-tertiary":"#ffffff","surface-variant":"#d3e4fe","outline-variant":"#c6c6cd","surface-container-highest":"#d3e4fe","surface-container-lowest":"#ffffff","inverse-surface":"#213145","surface-tint":"#565e74","surface-bright":"#f8f9ff","primary-fixed-dim":"#bec6e0","surface-dim":"#cbdbf5","on-secondary":"#ffffff","secondary":"#006398","primary-fixed":"#dae2fd","on-background":"#0b1c30"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"gutter-standard":"16px","margin-desktop":"32px","margin-mobile":"16px","space-10":"40px","space-8":"32px","space-5":"20px","gutter-expanded":"24px","space-2":"8px","space-6":"24px","space-3":"12px","space-4":"16px","space-0":"0px","space-12":"48px","gutter-dense":"8px","space-16":"64px","margin-tablet":"24px","space-1":"4px"},"fontFamily":{"data-mono-md":["JetBrains Mono"],"body-sm":["Public Sans"],"body-md":["Public Sans"],"display-hud-mobile":["JetBrains Mono"],"display-hud":["JetBrains Mono"],"headline-xl":["Public Sans"],"headline-lg":["Public Sans"],"headline-xl-mobile":["Public Sans"],"label-badge":["Public Sans"],"headline-md":["Public Sans"],"label-telemetry":["JetBrains Mono"],"body-lg":["Public Sans"],"headline-sm":["Public Sans"],"data-mono-lg":["JetBrains Mono"]},"fontSize":{"data-mono-md":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"500"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"400"}],"body-md":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"display-hud-mobile":["32px",{"lineHeight":"36px","letterSpacing":"-0.03em","fontWeight":"700"}],"display-hud":["48px",{"lineHeight":"52px","letterSpacing":"-0.04em","fontWeight":"700"}],"headline-xl":["36px",{"lineHeight":"44px","letterSpacing":"-0.025em","fontWeight":"700"}],"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-xl-mobile":["26px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-badge":["11px",{"lineHeight":"14px","letterSpacing":"0.06em","fontWeight":"700"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"label-telemetry":["10px",{"lineHeight":"12px","letterSpacing":"0.08em","fontWeight":"500"}],"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"headline-sm":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"600"}],"data-mono-lg":["18px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 w-full z-50 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 max-w-7xl mx-auto px-gutter-expanded flex items-center justify-between gap-space-4"><div class="flex items-center gap-space-3"><div class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[20px]">emergency_share</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface leading-tight">ResQnet</span><span class="font-label-telemetry text-label-telemetry text-on-surface-variant uppercase tracking-wider">Citizen Network</span></div></div><div class="hidden md:flex flex-1 max-w-md mx-space-4"><div class="w-full flex items-center gap-space-2 px-space-3 py-space-2 rounded-lg bg-surface-container-low text-on-surface-variant"><span class="material-symbols-outlined text-[18px]">search</span><span class="font-body-sm text-body-sm flex-1 text-outline">Search emergency contacts, shelters, resources...</span><kbd class="font-data-mono-md text-label-telemetry bg-surface-container px-space-1 rounded text-on-surface-variant">⌘K</kbd></div></div><div class="flex items-center gap-space-4"><div class="hidden sm:flex items-center gap-space-2 bg-surface-container-low px-space-3 py-space-1 rounded-full"><span class="font-label-badge text-label-badge uppercase text-secondary font-bold flex items-center gap-space-1"><span class="material-symbols-outlined text-[14px]">call</span>112</span><span class="text-outline text-[12px]">|</span><span class="font-label-badge text-label-badge uppercase text-secondary font-bold">NDRF 1078</span></div><div class="flex items-center gap-space-2 pl-space-2"><div class="hidden lg:flex flex-col text-right"><span class="font-headline-sm text-body-sm text-on-surface font-semibold leading-tight">Simran Kaur</span><span class="font-label-telemetry text-label-telemetry text-secondary font-medium">Verified Citizen</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="w-full pt-16 pb-28 bg-surface"><div class="flex flex-col w-full">
+<div class="max-w-7xl mx-auto w-full px-gutter-standard md:px-gutter-expanded py-space-6 flex flex-col gap-space-8">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-4 pb-space-2">
+<div class="flex flex-col gap-space-1">
+<div class="flex items-center gap-space-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-telemetry text-label-telemetry text-on-surface-variant uppercase tracking-wider">Disaster Escrow Protocol • Section 80G Certified</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">Donation Result, Official Receipt &amp; Transaction History</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">Verified citizen relief funding dispatch. Every contribution is escrowed through State Disaster Management Authority (SDMA) verified logistics hubs.</p>
+</div>
+<div class="flex items-center gap-space-3 self-start md:self-auto">
+<div class="flex flex-col text-left md:text-right bg-surface-container-low px-space-4 py-space-2 rounded-xl">
+<span class="font-label-telemetry text-label-telemetry text-on-surface-variant uppercase">Citizen Account</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Simran Kaur <span class="text-secondary font-data-mono-md text-body-sm">(#CHD-88194)</span></span>
+</div>
+</div>
+</div>
+<!-- View 1 & View 2 Grid Split -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-8 items-start">
+<!-- View 1: Main Receipt Column (8 Cols) -->
+<div class="lg:col-span-8 flex flex-col gap-space-6">
+<!-- CAP/SDMA Soft Green Confirmation Banner -->
+<div class="w-full bg-surface-container-low rounded-xl p-space-4 shadow-sm flex items-start sm:items-center justify-between gap-space-4">
+<div class="flex items-center gap-space-3 min-w-0">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary text-[24px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-2">
+<span class="font-headline-sm text-headline-sm text-on-surface">Donation Successful &amp; Reconciled</span>
+<span class="font-label-telemetry text-label-telemetry bg-surface-container-high text-secondary px-space-2 py-0.5 rounded uppercase">SDMA-ACK-OK</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Thank you for supporting verified frontline relief efforts. Funds are actively deployed to Sector 17 Hub.</p>
+</div>
+</div>
+<div class="hidden sm:flex flex-col items-end shrink-0">
+<span class="font-label-telemetry text-label-telemetry text-on-surface-variant">LEDGER TX</span>
+<span class="font-data-mono-md text-data-mono-md text-secondary">0x8F9C...4821</span>
+</div>
+</div>
+<!-- Official Digital Receipt Document Card -->
+<div class="w-full bg-surface-container-lowest rounded-xl shadow-md overflow-hidden relative">
+<!-- Document Watermark Accent -->
+<div class="absolute right-0 top-0 translate-x-12 -translate-y-12 w-64 h-64 rounded-full bg-surface-container-low/40 pointer-events-none blur-2xl"></div>
+<!-- Document Header -->
+<div class="p-space-6 sm:p-space-8 bg-surface-container-low/50 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-4">
+<div class="flex items-center gap-space-3">
+<div class="w-12 h-12 rounded-lg bg-primary flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-on-primary text-[26px]">verified_user</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-telemetry text-label-telemetry text-secondary uppercase font-bold tracking-wider">Government of India • SDMA Partner Network</span>
+<span class="font-headline-md text-headline-md text-on-surface leading-tight">ResQnet Emergency Response Network</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Official Citizen Contribution Tax Receipt (u/s 80G of IT Act)</span>
+</div>
+</div>
+<div class="flex flex-col sm:items-end">
+<span class="font-label-badge text-label-badge bg-surface-container-high text-on-surface px-space-3 py-space-1 rounded-full uppercase tracking-wider font-semibold">Verified Electronic Copy</span>
+<span class="font-label-telemetry text-label-telemetry text-on-surface-variant mt-space-1">ORIGINAL FOR DONOR</span>
+</div>
+</div>
+<!-- Document Body -->
+<div class="p-space-6 sm:p-space-8 flex flex-col gap-space-6">
+<!-- Receipt Meta Bar -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-4 bg-surface-container-low p-space-4 rounded-lg">
+<div class="flex flex-col">
+<span class="font-label-telemetry text-label-telemetry text-on-surface-variant uppercase">Receipt Number</span>
+<span class="font-data-mono-md text-data-mono-md text-on-surface font-semibold">RQ-REC-2026-004821</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-telemetry text-label-telemetry text-on-surface-variant uppercase">Issuance Timestamp</span>
+<span class="font-data-mono-md text-data-mono-md text-on-surface">08 Sep 2026, 12:48 PM IST</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-telemetry text-label-telemetry text-on-surface-variant uppercase">Payment Settlement</span>
+<span class="font-label-badge text-label-badge inline-flex items-center gap-space-1 text-secondary font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  SUCCESSFUL / SETTLED
+                </span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-telemetry text-label-telemetry text-on-surface-variant uppercase">SDMA Escrow Clearance</span>
+<span class="font-data-mono-md text-data-mono-md text-on-surface">CLR-PUNJAB-9921</span>
+</div>
+</div>
+<!-- Granular Information Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-6 pt-space-2">
+<!-- Donor Information Block -->
+<div class="flex flex-col gap-space-4 bg-surface-container-low/40 p-space-4 rounded-lg">
+<div class="flex items-center gap-space-2 text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-secondary">person</span>
+<span class="font-headline-sm text-headline-sm">Donor Profile</span>
+</div>
+<div class="flex flex-col gap-space-3 font-body-md text-body-md">
+<div class="flex justify-between items-center py-space-1">
+<span class="text-on-surface-variant">Full Legal Name:</span>
+<span class="font-semibold text-on-surface">Simran Kaur</span>
+</div>
+<div class="flex justify-between items-center py-space-1">
+<span class="text-on-surface-variant">Citizen ID:</span>
+<span class="font-data-mono-md text-data-mono-md text-on-surface">#CHD-88194</span>
+</div>
+<div class="flex justify-between items-center py-space-1">
+<span class="text-on-surface-variant">PAN Card Reference:</span>
+<span class="font-data-mono-md text-data-mono-md text-on-surface">XXXXXX419K</span>
+</div>
+<div class="flex justify-between items-center py-space-1">
+<span class="text-on-surface-variant">Jurisdiction:</span>
+<span class="text-on-surface">Chandigarh (UT), India</span>
+</div>
+</div>
+</div>
+<!-- Beneficiary & Logistics Block -->
+<div class="flex flex-col gap-space-4 bg-surface-container-low/40 p-space-4 rounded-lg">
+<div class="flex items-center gap-space-2 text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-secondary">domain</span>
+<span class="font-headline-sm text-headline-sm">Logistics Allocation</span>
+</div>
+<div class="flex flex-col gap-space-3 font-body-md text-body-md">
+<div class="flex justify-between items-center py-space-1">
+<span class="text-on-surface-variant">Relief Campaign:</span>
+<span class="font-semibold text-on-surface">Emergency Medical Supplies</span>
+</div>
+<div class="flex justify-between items-center py-space-1">
+<span class="text-on-surface-variant">Recipient Body:</span>
+<span class="text-on-surface font-medium">North India Relief Foundation</span>
+</div>
+<div class="flex justify-between items-center py-space-1">
+<span class="text-on-surface-variant">Registration:</span>
+<span class="font-data-mono-md text-body-sm text-on-surface">NGO/GOV/PB-0418-A</span>
+</div>
+<div class="flex justify-between items-center py-space-1">
+<span class="text-on-surface-variant">Designated Hub:</span>
+<span class="text-on-surface text-right truncate max-w-[210px]">Sector 17 Community Centre, CHD</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Settlement Breakdown Card -->
+<div class="bg-surface-container-high/60 rounded-xl p-space-6 flex flex-col md:flex-row items-center justify-between gap-space-6">
+<div class="flex flex-col gap-space-1 text-center md:text-left">
+<span class="font-label-telemetry text-label-telemetry text-on-surface-variant uppercase">Payment Channel &amp; Gateway Reference</span>
+<div class="flex flex-wrap items-center justify-center md:justify-start gap-space-2">
+<span class="font-headline-sm text-headline-sm text-on-surface">Unified Payments Interface (UPI)</span>
+<span class="font-data-mono-md text-data-mono-md bg-surface-container-lowest px-space-2 py-0.5 rounded text-secondary font-semibold">Ref: 429810294812</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Zero platform transaction commission deducted under National Calamity Fund Protocol.</span>
+</div>
+<div class="flex flex-col items-center md:items-end shrink-0">
+<span class="font-label-telemetry text-label-telemetry text-on-surface-variant uppercase">Total Contribution</span>
+<span class="font-display-hud text-display-hud text-on-surface leading-none py-space-1">₹1,000<span class="text-headline-lg font-normal text-on-surface-variant">.00</span></span>
+<span class="font-label-telemetry text-label-telemetry text-secondary uppercase font-semibold">INR • One Thousand Rupees Only</span>
+</div>
+</div>
+<!-- Verification Footer with SDMA Seal & Embedded SVG QR -->
+<div class="pt-space-4 flex flex-col sm:flex-row items-center justify-between gap-space-6">
+<div class="flex items-center gap-space-4">
+<!-- Programmatic Stylized High-Density QR Verification Badge -->
+<div class="w-20 h-20 bg-surface-container-lowest p-1.5 rounded-lg shadow-sm shrink-0 flex items-center justify-center">
+<svg class="w-full h-full text-on-surface" fill="currentColor" viewBox="0 0 100 100">
+<!-- Position Detection Patterns -->
+<rect height="28" rx="2" width="28" x="0" y="0"></rect>
+<rect fill="#ffffff" height="20" rx="1" width="20" x="4" y="4"></rect>
+<rect height="12" width="12" x="8" y="8"></rect>
+<rect height="28" rx="2" width="28" x="72" y="0"></rect>
+<rect fill="#ffffff" height="20" rx="1" width="20" x="76" y="4"></rect>
+<rect height="12" width="12" x="80" y="8"></rect>
+<rect height="28" rx="2" width="28" x="0" y="72"></rect>
+<rect fill="#ffffff" height="20" rx="1" width="20" x="4" y="76"></rect>
+<rect height="12" width="12" x="8" y="80"></rect>
+<!-- Data Blocks -->
+<rect height="8" width="8" x="36" y="8"></rect>
+<rect height="8" width="8" x="48" y="4"></rect>
+<rect height="6" width="6" x="60" y="12"></rect>
+<rect height="8" width="6" x="36" y="24"></rect>
+<rect height="8" width="8" x="52" y="20"></rect>
+<rect height="6" width="8" x="8" y="36"></rect>
+<rect height="8" width="6" x="20" y="44"></rect>
+<rect height="8" width="8" x="36" y="40"></rect>
+<rect height="8" width="8" x="48" y="36"></rect>
+<rect height="8" width="8" x="64" y="40"></rect>
+<rect height="8" width="8" x="80" y="36"></rect>
+<rect height="8" width="8" x="88" y="48"></rect>
+<rect height="8" width="8" x="8" y="56"></rect>
+<rect height="8" width="8" x="20" y="60"></rect>
+<rect height="8" width="8" x="36" y="56"></rect>
+<rect height="8" width="8" x="52" y="52"></rect>
+<rect height="8" width="8" x="68" y="60"></rect>
+<rect height="8" width="8" x="80" y="56"></rect>
+<rect height="8" width="8" x="36" y="72"></rect>
+<rect height="8" width="8" x="48" y="80"></rect>
+<rect height="8" width="8" x="60" y="72"></rect>
+<rect height="8" width="8" x="76" y="76"></rect>
+<rect height="8" width="8" x="88" y="84"></rect>
+<rect height="6" width="8" x="44" y="64"></rect>
+</svg>
+</div>
+<div class="flex flex-col">
+<span class="font-label-telemetry text-label-telemetry text-on-surface-variant uppercase">Cryptographic Audit Token</span>
+<span class="font-data-mono-md text-data-mono-md text-on-surface font-semibold truncate max-w-[200px] sm:max-w-[260px]">SHA256:7B88A0499C04E1F3...</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Scan to verify cryptographic timestamp on SDMA disaster public ledger.</span>
+</div>
+</div>
+<!-- SDMA Digital Seal Indicator -->
+<div class="flex items-center gap-space-3 bg-surface-container-low px-space-4 py-space-2 rounded-xl">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary text-[22px]">approval_delegation</span>
+</div>
+<div class="flex flex-col text-left">
+<span class="font-label-badge text-label-badge text-on-surface uppercase">Digital Certificate</span>
+<span class="font-label-telemetry text-label-telemetry text-secondary">SDMA Verified Auth #4019</span>
+</div>
+</div>
+</div>
+<!-- Receipt Actions Row -->
+<div class="flex flex-wrap items-center justify-between gap-space-4 pt-space-4 bg-surface-container-low/30 p-space-4 rounded-xl">
+<div class="flex flex-wrap items-center gap-space-3">
+<button class="bg-secondary text-on-secondary px-space-5 py-space-3 rounded-xl font-label-badge uppercase tracking-wider flex items-center gap-space-2 hover:opacity-90 transition-opacity shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+                  Download PDF Receipt
+                </button>
+<button class="bg-surface-container-lowest text-on-surface px-space-4 py-space-3 rounded-xl font-label-badge uppercase tracking-wider flex items-center gap-space-2 hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">explore</span>
+                  View on Safety Map
+                </button>
+</div>
+<button class="bg-transparent text-on-surface-variant hover:text-on-surface px-space-3 py-space-2 rounded-lg font-label-badge uppercase tracking-wider flex items-center gap-space-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+                Back to Relief Efforts
+              </button>
+</div>
+</div>
+</div>
+<!-- Deployment Live Feed Tracker Card -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-6 shadow-sm flex flex-col md:flex-row items-center justify-between gap-space-6">
+<div class="flex items-center gap-space-4">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary text-[24px]">local_shipping</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-2">
+<span class="font-headline-sm text-headline-sm text-on-surface">Supply Dispatch In Progress</span>
+<span class="font-label-telemetry text-label-telemetry bg-surface-container-high text-secondary px-space-2 py-0.5 rounded font-semibold">STAGE 2/4</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Consignment MED-CHD-881 designated for Sector 17 Trauma Unit packed &amp; cleared for convoy escort.</p>
+</div>
+</div>
+<div class="w-full md:w-48 bg-surface-container rounded-full h-2 overflow-hidden shrink-0">
+<div class="bg-secondary h-full rounded-full w-2/4"></div>
+</div>
+</div>
+</div>
+<!-- View 2: Interactive Contextual States Sidebar (4 Cols) -->
+<div class="lg:col-span-4 flex flex-col gap-space-6">
+<!-- Sidebar Header with Telemetry -->
+<div class="flex items-center justify-between pb-space-2">
+<div class="flex flex-col">
+<span class="font-label-telemetry text-label-telemetry text-secondary uppercase font-bold tracking-wider">Exception Protocols</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Payment States &amp; Retries</h2>
+</div>
+<span class="font-label-badge text-label-badge text-on-surface-variant bg-surface-container-low px-space-2 py-1 rounded">2 Handlers</span>
+</div>
+<!-- Context State 1: Payment Pending (Amber Card) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-5 shadow-sm flex flex-col gap-space-4 relative overflow-hidden">
+<div class="absolute top-0 left-0 bottom-0 w-1.5 bg-secondary-container"></div>
+<div class="flex items-start justify-between gap-space-3 pl-space-2">
+<div class="flex items-center gap-space-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">hourglass_top</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Payment Pending</span>
+</div>
+<span class="font-label-badge text-label-badge bg-surface-container-high text-on-surface px-space-2 py-0.5 rounded uppercase">Bank Clearance</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant pl-space-2">
+            Transaction <span class="font-data-mono-md text-body-sm text-on-surface font-medium">#RQ-DON-2026-004822</span> is currently undergoing inter-bank clearinghouse settlement. Please do not re-attempt payment to prevent duplicate debits.
+          </p>
+<div class="bg-surface-container-low rounded-lg p-space-3 pl-space-4 flex flex-col gap-space-1">
+<div class="flex justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Escrow Target:</span>
+<span class="text-on-surface font-medium">Water Filtration units</span>
+</div>
+<div class="flex justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Expected Resolution:</span>
+<span class="font-data-mono-md text-data-mono-md text-on-surface">~ 7 mins</span>
+</div>
+</div>
+<div class="flex items-center justify-between gap-space-2 pt-space-1 pl-space-2">
+<button class="bg-surface-container-high text-on-surface px-space-4 py-space-2 rounded-lg font-label-badge uppercase tracking-wider flex items-center gap-space-2 hover:bg-surface-variant transition-colors text-body-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">sync</span>
+              Check Status
+            </button>
+<span class="font-label-telemetry text-label-telemetry text-on-surface-variant">AUTO-POLLING (30s)</span>
+</div>
+</div>
+<!-- Context State 2: Payment Failed / Cancelled (Neutral Destructive Card) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-5 shadow-sm flex flex-col gap-space-4 relative overflow-hidden">
+<div class="absolute top-0 left-0 bottom-0 w-1.5 bg-outline"></div>
+<div class="flex items-start justify-between gap-space-3 pl-space-2">
+<div class="flex items-center gap-space-2">
+<span class="material-symbols-outlined text-outline text-[20px]">cancel</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Payment Failed</span>
+</div>
+<span class="font-label-badge text-label-badge bg-surface-container text-on-surface-variant px-space-2 py-0.5 rounded uppercase">Declined</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant pl-space-2">
+            Transaction <span class="font-data-mono-md text-body-sm text-on-surface font-medium">#RQ-DON-2026-004819</span> was declined by the issuing bank (NPCI error: <span class="font-data-mono-md text-body-sm">U19-AUTH-TIMEOUT</span>). No citizen funds were debited.
+          </p>
+<div class="bg-surface-container-low rounded-lg p-space-3 pl-space-4 flex flex-col gap-space-1">
+<div class="flex justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Intent Target:</span>
+<span class="text-on-surface font-medium">Sector 17 Food Packets</span>
+</div>
+<div class="flex justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Debit Status:</span>
+<span class="text-on-surface font-semibold">Zero ₹ Debited</span>
+</div>
+</div>
+<div class="flex items-center justify-between gap-space-2 pt-space-1 pl-space-2">
+<button class="bg-primary text-on-primary px-space-4 py-space-2 rounded-lg font-label-badge uppercase tracking-wider flex items-center gap-space-2 hover:opacity-90 transition-opacity text-body-sm shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">refresh</span>
+              Retry Payment
+            </button>
+<a class="font-body-sm text-body-sm text-secondary hover:underline" href="#">Change UPI App</a>
+</div>
+</div>
+<!-- Relief Escrow Compliance Micro-Widget -->
+<div class="bg-surface-container-low rounded-xl p-space-5 flex flex-col gap-space-3">
+<div class="flex items-center gap-space-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">shield</span>
+<span class="font-headline-sm text-body-lg text-on-surface font-semibold">100% Tax Deductible (80G)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            All donations on ResQnet are directed straight into designated escrow governed by the Disaster Management Act of 2005. Form 10BE certificates are auto-generated at fiscal year-end.
+          </p>
+<div class="flex items-center justify-between pt-space-1">
+<span class="font-data-mono-md text-label-telemetry text-on-surface-variant">CERT NO: CIT-EXMPT/2026/80G</span>
+<span class="material-symbols-outlined text-outline text-[18px]">policy</span>
+</div>
+</div>
+</div>
+</div>
+<!-- View 3: Citizen Donation History Table (Lower Section) -->
+<div class="flex flex-col gap-space-4 pt-space-4">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-4">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-2">
+<span class="font-label-telemetry text-label-telemetry text-secondary uppercase font-bold tracking-wider">Citizen Transparency Log</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">My Relief Contributions</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Archived personal history of humanitarian disbursements and SDMA receipt references for Simran Kaur.</p>
+</div>
+<div class="flex items-center gap-space-3">
+<div class="flex items-center gap-space-2 bg-surface-container-low px-space-3 py-space-2 rounded-lg text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">filter_list</span>
+<span class="font-body-sm text-body-sm">All Campaigns</span>
+</div>
+<button class="bg-surface-container-low text-on-surface px-space-3 py-space-2 rounded-lg font-label-badge uppercase tracking-wider flex items-center gap-space-1 hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">ios_share</span>
+            Export CSV
+          </button>
+</div>
+</div>
+<!-- History Data Table Container -->
+<div class="w-full bg-surface-container-lowest rounded-xl shadow-sm overflow-x-auto">
+<table class="w-full text-left border-collapse min-w-[850px]">
+<thead>
+<tr class="bg-surface-container-low text-on-surface font-label-badge text-label-badge uppercase tracking-wider">
+<th class="py-space-3 px-space-4">Date &amp; Time</th>
+<th class="py-space-3 px-space-4">Campaign &amp; Organization</th>
+<th class="py-space-3 px-space-4">Designated Location</th>
+<th class="py-space-3 px-space-4 text-right">Amount</th>
+<th class="py-space-3 px-space-4">Status</th>
+<th class="py-space-3 px-space-4">Reference ID</th>
+<th class="py-space-3 px-space-4 text-center">Action</th>
+</tr>
+</thead>
+<tbody class="font-body-md text-body-md divide-y divide-surface-container">
+<!-- History Row 1 (Current Active Settlement) -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-space-4 px-space-4 whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">08 Sep 2026</span>
+<span class="font-data-mono-md text-label-telemetry text-on-surface-variant">12:48 PM IST</span>
+</div>
+</td>
+<td class="py-space-4 px-space-4">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Emergency Medical Supplies</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">North India Relief Foundation</span>
+</div>
+</td>
+<td class="py-space-4 px-space-4">
+<div class="flex items-center gap-space-1 text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-secondary">location_on</span>
+<span class="truncate max-w-[180px]">Sector 17 Safety Hub</span>
+</div>
+</td>
+<td class="py-space-4 px-space-4 text-right whitespace-nowrap">
+<span class="font-data-mono-lg text-data-mono-lg text-on-surface font-bold">₹1,000</span>
+</td>
+<td class="py-space-4 px-space-4 whitespace-nowrap">
+<span class="inline-flex items-center gap-space-1 bg-surface-container-low text-secondary px-space-2.5 py-space-1 rounded-full font-label-badge text-label-badge uppercase font-bold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+                  Successful
+                </span>
+</td>
+<td class="py-space-4 px-space-4 whitespace-nowrap">
+<span class="font-data-mono-md text-data-mono-md text-on-surface">RQ-DON-2026-004821</span>
+</td>
+<td class="py-space-4 px-space-4 text-center whitespace-nowrap">
+<button class="bg-surface-container-low hover:bg-surface-container-high text-on-surface px-space-3 py-space-1.5 rounded-lg font-label-badge uppercase tracking-wider inline-flex items-center gap-space-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">receipt_long</span>
+                  Receipt
+                </button>
+</td>
+</tr>
+<!-- History Row 2 (Previous Contribution) -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-space-4 px-space-4 whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">04 Sep 2026</span>
+<span class="font-data-mono-md text-label-telemetry text-on-surface-variant">09:15 AM IST</span>
+</div>
+</td>
+<td class="py-space-4 px-space-4">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Clean Drinking Water Tankers</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Punjab Community Response</span>
+</div>
+</td>
+<td class="py-space-4 px-space-4">
+<div class="flex items-center gap-space-1 text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-secondary">location_on</span>
+<span class="truncate max-w-[180px]">Mohali Phase 7</span>
+</div>
+</td>
+<td class="py-space-4 px-space-4 text-right whitespace-nowrap">
+<span class="font-data-mono-lg text-data-mono-lg text-on-surface font-bold">₹500</span>
+</td>
+<td class="py-space-4 px-space-4 whitespace-nowrap">
+<span class="inline-flex items-center gap-space-1 bg-surface-container-low text-secondary px-space-2.5 py-space-1 rounded-full font-label-badge text-label-badge uppercase font-bold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+                  Successful
+                </span>
+</td>
+<td class="py-space-4 px-space-4 whitespace-nowrap">
+<span class="font-data-mono-md text-data-mono-md text-on-surface">RQ-DON-2026-003910</span>
+</td>
+<td class="py-space-4 px-space-4 text-center whitespace-nowrap">
+<button class="bg-surface-container-low hover:bg-surface-container-high text-on-surface px-space-3 py-space-1.5 rounded-lg font-label-badge uppercase tracking-wider inline-flex items-center gap-space-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">receipt_long</span>
+                  Receipt
+                </button>
+</td>
+</tr>
+<!-- History Row 3 (Archived Monsoon Support) -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-space-4 px-space-4 whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">22 Aug 2026</span>
+<span class="font-data-mono-md text-label-telemetry text-on-surface-variant">04:30 PM IST</span>
+</div>
+</td>
+<td class="py-space-4 px-space-4">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Immediate Flood Boat Evacuation Fuel</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Sutlej River Rescue Unit</span>
+</div>
+</td>
+<td class="py-space-4 px-space-4">
+<div class="flex items-center gap-space-1 text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-secondary">location_on</span>
+<span class="truncate max-w-[180px]">Ropar Sector Pier 3</span>
+</div>
+</td>
+<td class="py-space-4 px-space-4 text-right whitespace-nowrap">
+<span class="font-data-mono-lg text-data-mono-lg text-on-surface font-bold">₹2,500</span>
+</td>
+<td class="py-space-4 px-space-4 whitespace-nowrap">
+<span class="inline-flex items-center gap-space-1 bg-surface-container-low text-secondary px-space-2.5 py-space-1 rounded-full font-label-badge text-label-badge uppercase font-bold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+                  Successful
+                </span>
+</td>
+<td class="py-space-4 px-space-4 whitespace-nowrap">
+<span class="font-data-mono-md text-data-mono-md text-on-surface">RQ-DON-2026-002184</span>
+</td>
+<td class="py-space-4 px-space-4 text-center whitespace-nowrap">
+<button class="bg-surface-container-low hover:bg-surface-container-high text-on-surface px-space-3 py-space-1.5 rounded-lg font-label-badge uppercase tracking-wider inline-flex items-center gap-space-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">receipt_long</span>
+                  Receipt
+                </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- History Table Pagination / Verification Summary Footer -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-4 py-space-2 text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-space-2">
+<span>Showing 3 verified contributions</span>
+<span class="text-outline">•</span>
+<span class="font-semibold text-on-surface">Total Contributed: ₹4,000.00</span>
+</div>
+<div class="flex items-center gap-space-2">
+<span class="font-label-telemetry text-label-telemetry">PAGE 1 OF 1</span>
+<div class="flex gap-space-1">
+<button class="w-8 h-8 rounded bg-surface-container-low flex items-center justify-center text-outline cursor-not-allowed" disabled="">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<button class="w-8 h-8 rounded bg-surface-container-low flex items-center justify-center text-outline cursor-not-allowed" disabled="">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+    // Micro-interaction handlers for receipt generation and contextual status
+    document.addEventListener('DOMContentLoaded', () => {
+      const downloadBtn = document.querySelector('button:has(.material-symbols-outlined:contains("download"))') || document.querySelector('button');
+      if (downloadBtn) {
+        downloadBtn.addEventListener('click', (e) => {
+          const originalText = downloadBtn.innerHTML;
+          downloadBtn.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">progress_activity</span> Compiling PDF...';
+          downloadBtn.style.pointerEvents = 'none';
+          setTimeout(() => {
+            downloadBtn.innerHTML = '<span class="material-symbols-outlined text-[18px]">check</span> Receipt Downloaded';
+            setTimeout(() => {
+              downloadBtn.innerHTML = originalText;
+              downloadBtn.style.pointerEvents = 'auto';
+            }, 2500);
+          }, 1200);
+        });
+      }
+    });
+  </script>
+</div></main><div class="fixed bottom-space-4 left-0 right-0 z-50 flex justify-center px-space-4 pointer-events-none"><nav class="pointer-events-auto bg-surface-container-lowest/95 backdrop-blur-xl shadow-[0_4px_20px_rgba(0,0,0,0.08)] rounded-full px-space-3 py-space-2 flex items-center gap-space-1" data-active-classes="bg-primary text-on-primary rounded-xl font-semibold"><a class="flex items-center gap-space-2 px-space-4 py-space-2 text-on-surface-variant hover:text-on-surface rounded-xl transition-colors" data-path="home" href="#"><span class="material-symbols-outlined text-[20px]">home</span><span class="font-body-sm text-body-sm hidden sm:inline">Home</span></a><a class="flex items-center gap-space-2 px-space-4 py-space-2 text-on-surface-variant hover:text-on-surface rounded-xl transition-colors" data-path="report" href="#"><span class="material-symbols-outlined text-[20px]">add_alert</span><span class="font-body-sm text-body-sm hidden sm:inline">Report</span></a><a class="flex items-center gap-space-2 px-space-4 py-space-2 text-on-surface-variant hover:text-on-surface rounded-xl transition-colors" data-path="map" href="#"><span class="material-symbols-outlined text-[20px]">map</span><span class="font-body-sm text-body-sm hidden sm:inline">Map</span></a><a class="flex items-center gap-space-2 px-space-4 py-space-2 text-on-surface-variant hover:text-on-surface rounded-xl transition-colors" data-path="alerts" href="#"><span class="material-symbols-outlined text-[20px]">notifications_active</span><span class="font-body-sm text-body-sm hidden sm:inline">Alerts</span></a><a aria-current="page" class="flex items-center gap-space-2 px-space-4 py-space-2 transition-colors bg-primary text-on-primary rounded-xl font-semibold" data-path="more-donations" href="#"><span class="material-symbols-outlined text-[20px]">volunteer_activism</span><span class="font-body-sm text-body-sm hidden sm:inline">More</span></a></nav></div><footer class="w-full bg-surface-container-low py-space-8 mb-16"><div class="max-w-7xl mx-auto px-gutter-expanded flex flex-col md:flex-row items-center justify-between gap-space-4 text-on-surface-variant font-body-sm text-body-sm"><div>ResQnet Citizen Portal © 2025. Official Disaster Response Framework.</div><div class="flex items-center gap-space-6"><span class="font-label-badge text-label-badge uppercase text-outline">National Disaster Response Network</span><span class="font-data-mono-md text-label-telemetry text-outline">ENCRYPTED-CAP-V1.2</span></div></div></footer></body></html>

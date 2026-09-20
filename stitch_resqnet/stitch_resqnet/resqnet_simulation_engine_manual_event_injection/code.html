@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700&amp;family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"secondary":"#455f87","primary":"#004ac6","border-default":"#E2E8F0","secondary-fixed":"#d5e3ff","error-container":"#ffdad6","on-error-container":"#93000a","success-text":"#16A34A","info-border":"#BFDBFE","critical-bg":"#FEF2F2","on-secondary-container":"#3e5980","on-secondary":"#ffffff","tertiary-fixed-dim":"#bec6e0","surface-bright":"#f8f9ff","surface":"#f8f9ff","on-surface":"#0b1c30","secondary-container":"#b5d0fd","surface-container-highest":"#d3e4fe","warning-bg":"#FFFBEB","text-muted":"#94A3B8","on-error":"#ffffff","blue-soft":"#EFF6FF","success-border":"#BBF7D0","inverse-on-surface":"#eaf1ff","secondary-fixed-dim":"#adc8f5","error":"#ba1a1a","on-secondary-fixed":"#001c3b","surface-container-high":"#dce9ff","warning-border":"#FDE68A","on-primary-container":"#eeefff","on-background":"#0b1c30","on-tertiary-fixed":"#131b2e","background":"#f8f9ff","surface-tint":"#0053db","primary-fixed-dim":"#b4c5ff","surface-container-lowest":"#ffffff","inverse-primary":"#b4c5ff","surface-card":"#FFFFFF","blue-light":"#DBEAFE","warning-text":"#D97706","surface-base":"#F8FAFC","on-tertiary-container":"#eef0ff","surface-container-low":"#eff4ff","on-primary-fixed-variant":"#003ea8","tertiary-container":"#656d84","outline-variant":"#c3c6d7","surface-subtle":"#F1F5F9","tertiary":"#4d556b","inverse-surface":"#213145","critical-border":"#FECACA","tertiary-fixed":"#dae2fd","critical-text":"#DC2626","surface-dim":"#cbdbf5","on-primary-fixed":"#00174b","surface-variant":"#d3e4fe","surface-container":"#e5eeff","success-bg":"#F0FDF4","on-surface-variant":"#434655","primary-fixed":"#dbe1ff","text-secondary":"#64748B","outline":"#737686","primary-container":"#2563eb","on-primary":"#ffffff","on-tertiary":"#ffffff","on-secondary-fixed-variant":"#2d486d","on-tertiary-fixed-variant":"#3f465c","text-primary":"#1E293B"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"space-2":"8px","space-12":"48px","space-5":"20px","gutter-standard":"16px","space-10":"40px","space-3":"12px","space-4":"16px","margin-desktop":"32px","gutter-expanded":"24px","space-0":"0px","gutter-dense":"8px","space-1":"4px","margin-mobile":"16px","space-8":"32px","space-16":"64px","space-6":"24px","margin-tablet":"24px"},fontFamily:{"data-mono-lg":["JetBrains Mono"],"body-md":["Public Sans"],"headline-xl":["Public Sans"],"display-hud-mobile":["JetBrains Mono"],"body-lg":["Public Sans"],"headline-sm":["Public Sans"],"label-telemetry":["JetBrains Mono"],"headline-lg":["Public Sans"],"display-hud":["JetBrains Mono"],"headline-xl-mobile":["Public Sans"],"label-badge":["Public Sans"],"headline-md":["Public Sans"],"data-mono-md":["JetBrains Mono"],"body-sm":["Public Sans"]},fontSize:{"data-mono-lg":["18px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"headline-xl":["36px",{"lineHeight":"44px","letterSpacing":"-0.025em","fontWeight":"700"}],"display-hud-mobile":["32px",{"lineHeight":"36px","letterSpacing":"-0.03em","fontWeight":"700"}],"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"headline-sm":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"600"}],"label-telemetry":["10px",{"lineHeight":"12px","letterSpacing":"0.08em","fontWeight":"500"}],"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"700"}],"display-hud":["48px",{"lineHeight":"52px","letterSpacing":"-0.04em","fontWeight":"700"}],"headline-xl-mobile":["26px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-badge":["11px",{"lineHeight":"14px","letterSpacing":"0.06em","fontWeight":"700"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"data-mono-md":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"500"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"400"}]}}}};</script></head><body class="bg-surface-base font-body-md text-text-primary antialiased"><aside class="fixed left-0 top-0 h-full w-[260px] bg-surface-card z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-space-5 flex items-center gap-space-3 bg-surface-subtle"><div class="w-8 h-8 rounded-xl bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[20px]">hub</span></div><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm text-text-primary tracking-tight leading-none">RESQNET</span><span class="font-label-telemetry text-label-telemetry text-text-secondary tracking-wider mt-space-1 uppercase">Engine Core v2.4</span></div></div><div class="px-space-4 py-space-4 flex flex-col gap-space-6"><div class="flex flex-col"><span class="px-space-3 mb-space-2 font-label-badge text-label-badge text-text-muted uppercase tracking-wider">Simulation Workspaces</span><nav class="flex flex-col gap-space-1" data-active-classes="bg-primary-container text-on-primary font-headline-sm rounded-xl"><a class="flex items-center px-space-3 py-space-2 rounded-xl font-body-md text-body-md text-on-surface-variant hover:bg-surface-subtle hover:text-on-surface transition-colors" data-path="scenario-library" href="#"><span class="material-symbols-outlined text-[18px] mr-space-3">schema</span>Scenario Library</a><a class="flex items-center justify-between px-space-3 py-space-2 rounded-xl font-body-md text-body-md text-on-surface-variant hover:bg-surface-subtle hover:text-on-surface transition-colors" data-path="run-console" href="#"><div class="flex items-center"><span class="material-symbols-outlined text-[18px] mr-space-3">terminal</span>Run Console</div><span class="flex h-2 w-2 relative"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-success-text opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-success-text"></span></span></a><a class="flex items-center px-space-3 py-space-2 rounded-xl font-body-md text-body-md text-on-surface-variant hover:bg-surface-subtle hover:text-on-surface transition-colors" data-path="run-history" href="#"><span class="material-symbols-outlined text-[18px] mr-space-3">history</span>Run History</a></nav></div><div class="flex flex-col"><span class="px-space-3 mb-space-2 font-label-badge text-label-badge text-text-muted uppercase tracking-wider">Active Run Inspection</span><nav class="flex flex-col gap-space-1" data-active-classes="bg-primary-container text-on-primary font-headline-sm rounded-xl"><a class="flex items-center px-space-3 py-space-2 rounded-xl font-body-md text-body-md text-on-surface-variant hover:bg-surface-subtle hover:text-on-surface transition-colors" data-path="event-inspector" href="#"><span class="material-symbols-outlined text-[18px] mr-space-3">manage_search</span>Event Inspector</a><a aria-current="page" class="flex items-center px-space-3 py-space-2 transition-colors bg-primary-container text-on-primary font-headline-sm rounded-xl" data-path="manual-event-injection" href="#"><span class="material-symbols-outlined text-[18px] mr-space-3">send_time_extension</span>Manual Event Injection</a><a class="flex items-center px-space-3 py-space-2 rounded-xl font-body-md text-body-md text-on-surface-variant hover:bg-surface-subtle hover:text-on-surface transition-colors" data-path="run-results" href="#"><span class="material-symbols-outlined text-[18px] mr-space-3">insights</span>Run Results</a></nav></div></div></div><div class="p-space-4 bg-surface-subtle flex flex-col gap-space-3"><div class="flex flex-col gap-space-1"><div class="flex items-center gap-space-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span><span class="font-label-telemetry text-label-telemetry text-text-secondary uppercase">Runtime: Deterministic HTTP</span></div><div class="flex items-center gap-space-2"><span class="w-1.5 h-1.5 rounded-full bg-success-text"></span><span class="font-label-telemetry text-label-telemetry text-text-secondary uppercase">API Link: 100% Healthy</span></div></div><a class="flex items-center justify-between px-space-3 py-space-2 bg-surface-card rounded-lg hover:bg-blue-soft hover:text-primary transition-colors text-text-secondary font-body-sm text-body-sm" data-path="root-portal-switch" href="#"><span class="flex items-center gap-space-2"><span class="material-symbols-outlined text-[16px]">logout</span>Return to Portal</span><span class="material-symbols-outlined text-[14px]">arrow_forward</span></a></div></aside><div class="pl-[260px]"><header class="fixed top-0 left-[260px] right-0 h-16 bg-surface-card/95 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-6"><div class="flex items-center gap-space-4 min-w-0"><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-text-primary tracking-tight">RESQNET v2.4</span><span class="font-label-telemetry text-label-telemetry text-text-secondary tracking-wider uppercase">Simulation Engine &amp; Disaster Timeline Emulator</span></div><div class="h-5 w-px bg-border-default mx-space-2 hidden lg:block"></div><div class="hidden xl:flex items-center gap-space-2"><div class="flex items-center gap-space-1 bg-surface-subtle px-space-2 py-1 rounded"><span class="font-label-telemetry text-label-telemetry text-text-muted">ENV:</span><span class="font-data-mono-md text-data-mono-md text-text-primary">STAGING SANDBOX</span></div><div class="flex items-center gap-space-1 bg-surface-subtle px-space-2 py-1 rounded"><span class="font-label-telemetry text-label-telemetry text-text-muted">CLK:</span><span class="font-data-mono-md text-data-mono-md text-text-primary">SYNCHRONIZED</span></div><div class="flex items-center gap-space-1 bg-surface-subtle px-space-2 py-1 rounded"><span class="font-label-telemetry text-label-telemetry text-text-muted">TGT:</span><span class="font-data-mono-md text-data-mono-md text-text-primary">LOCAL APIS (8080)</span></div><div class="flex items-center gap-space-1 bg-surface-subtle px-space-2 py-1 rounded"><span class="font-label-telemetry text-label-telemetry text-text-muted">CALL:</span><span class="font-data-mono-md text-data-mono-md text-text-primary">SIM-OPERATOR-ROOT</span></div></div></div><div class="flex items-center gap-space-4 shrink-0"><div class="flex items-center gap-space-2 bg-success-bg border border-success-border px-space-3 py-1 rounded-full"><span class="w-2 h-2 rounded-full bg-success-text"></span><span class="font-label-badge text-label-badge text-success-text uppercase tracking-wide">Engine: Active / Ready</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 bg-surface-base min-h-screen w-full px-space-8 py-space-6"><div class="flex flex-col w-full">
+<!-- Status & Security Telemetry Ribbon -->
+<div class="flex flex-col xl:flex-row items-start xl:items-center justify-between gap-space-4 mb-space-6 bg-surface-card p-space-4 rounded-xl shadow-sm">
+<div class="flex flex-wrap items-center gap-space-3">
+<div class="flex items-center gap-space-2 px-space-3 py-1 bg-surface-container rounded-lg">
+<span class="material-symbols-outlined text-[16px] text-primary">target</span>
+<span class="font-label-telemetry text-label-telemetry text-text-secondary uppercase">Active Pipeline Target</span>
+<span class="font-data-mono-md text-data-mono-md text-text-primary">#RUN-2025-0892</span>
+</div>
+<div class="flex items-center gap-space-2 px-space-3 py-1 bg-blue-soft rounded-lg">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-data-mono-md text-data-mono-md text-primary">FLOOD_DEMO_01 (RUNNING)</span>
+</div>
+<div class="flex items-center gap-space-2 px-space-3 py-1 bg-surface-subtle rounded-lg">
+<span class="font-label-telemetry text-label-telemetry text-text-secondary uppercase">Mesh Latency</span>
+<span class="font-data-mono-md text-data-mono-md text-success-text">14.2ms</span>
+</div>
+</div>
+<div class="flex items-center gap-space-2">
+<span class="material-symbols-outlined text-[18px] text-primary">verified_user</span>
+<span class="font-label-badge text-label-badge text-text-secondary uppercase">Strict OpenAPI Schema Enforcement Active</span>
+</div>
+</div>
+<!-- Hero / Header Title Section -->
+<div class="flex flex-col mb-space-6">
+<div class="flex items-center gap-space-2 mb-space-1">
+<span class="font-label-badge text-label-badge text-primary uppercase tracking-widest bg-blue-soft px-space-2 py-0.5 rounded">Operator Ingestion Gate</span>
+<span class="font-data-mono-md text-data-mono-md text-text-muted">SESSION_ID: MAN-AUTH-7719</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-text-primary tracking-tight">MANUAL EVENT INJECTION</h1>
+<p class="font-body-md text-body-md text-text-secondary mt-space-1 max-w-3xl">
+      Authorize and inject individual pre-validated simulated events into the active ResQnet staging pipeline to stress-test real-time dispatch routing, incident clustering, and citizen telemetry.
+    </p>
+</div>
+<!-- Security Compliance Banner (CAP Tier 1 Style) -->
+<div class="flex items-start gap-space-4 bg-warning-bg p-space-4 rounded-xl mb-space-8 shadow-sm relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-warning-text"></div>
+<div class="w-8 h-8 rounded-lg bg-surface-card flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-warning-text text-[20px]">shield</span>
+</div>
+<div class="flex flex-col min-w-0 pr-space-4">
+<div class="flex items-center gap-space-2">
+<span class="font-headline-sm text-headline-sm text-text-primary">Controlled Ingestion Mode Active</span>
+<span class="font-label-badge text-label-badge bg-surface-card text-warning-text px-space-2 py-0.5 rounded shadow-sm uppercase">Schema Strict</span>
+</div>
+<p class="font-body-md text-body-md text-text-primary mt-space-1">
+        Unrestricted HTTP query consoles are strictly disabled. All payloads are pre-validated against ResQnet OpenAPI schemas and tagged permanently as <span class="font-data-mono-md text-data-mono-md font-bold text-text-primary">MANUAL + SIMULATED</span>. Downstream dispatch nodes will process these as synthetic exercises.
+      </p>
+</div>
+</div>
+<!-- Main Two-Column Tactical Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-6 items-start">
+<!-- LEFT COLUMN: Parameter Configuration (7 Cols) -->
+<div class="lg:col-span-7 flex flex-col gap-space-6">
+<!-- Panel 1: Event Selector & Bound Enclave -->
+<div class="bg-surface-card p-space-6 rounded-xl shadow-sm flex flex-col gap-space-5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-3">
+<div class="w-7 h-7 rounded bg-surface-subtle flex items-center justify-center font-data-mono-md text-data-mono-md text-primary">01</div>
+<h2 class="font-headline-sm text-headline-sm text-text-primary">Event Definition &amp; Target Route</h2>
+</div>
+<span class="font-label-telemetry text-label-telemetry text-success-text uppercase bg-success-bg px-space-2 py-1 rounded">Pre-Validated</span>
+</div>
+<!-- Event Type Dropdown -->
+<div class="flex flex-col gap-space-2">
+<label class="font-label-badge text-label-badge text-text-secondary uppercase" for="eventTypeSelect">Select Supported Event Type</label>
+<div class="relative">
+<select class="w-full h-11 bg-surface-subtle text-text-primary font-body-md text-body-md px-space-3 rounded-lg appearance-none focus:outline-none focus:bg-surface-card focus:shadow-sm cursor-pointer" id="eventTypeSelect">
+<option selected="" value="ROAD_BLOCKED">ROAD_BLOCKED — Traffic Impasse / Hazard Inundation</option>
+<option value="CITIZEN_REPORT">CITIZEN_REPORT — Distress Intake (SOS Priority Intake)</option>
+<option value="WATER_LEVEL_HIGH">WATER_LEVEL_HIGH — Hydrological Sensor Surpass Alert</option>
+<option value="SHELTER_CAPACITY">SHELTER_CAPACITY — Relief Hub Surge Telemetry</option>
+<option value="RESPONDER_DISPATCH">RESPONDER_DISPATCH — Tactical Mission Assignment</option>
+<option value="SITUATION_UPDATE">SITUATION_UPDATE — Official EOC Operational SITREP</option>
+</select>
+<span class="material-symbols-outlined absolute right-space-3 top-3 pointer-events-none text-text-secondary text-[20px]">unfold_more</span>
+</div>
+</div>
+<!-- Readonly Verified API Bindings -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-3 bg-surface-subtle p-space-4 rounded-lg">
+<div class="flex flex-col gap-space-1">
+<span class="font-label-telemetry text-label-telemetry text-text-muted uppercase">Target Ingestion Endpoint</span>
+<div class="flex items-center gap-space-2">
+<span class="font-label-badge text-label-badge bg-primary text-on-primary px-1.5 py-0.5 rounded">POST</span>
+<span class="font-data-mono-md text-data-mono-md text-text-primary">/api/v1/roads/hazards</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-1">
+<span class="font-label-telemetry text-label-telemetry text-text-muted uppercase">Authorized Role Token</span>
+<div class="flex items-center gap-space-2">
+<span class="material-symbols-outlined text-[16px] text-success-text">lock</span>
+<span class="font-data-mono-md text-data-mono-md text-text-primary">ROLE_SIMULATOR (svc_sim_root)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Panel 2: Required Parameter Fields -->
+<div class="bg-surface-card p-space-6 rounded-xl shadow-sm flex flex-col gap-space-5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-3">
+<div class="w-7 h-7 rounded bg-surface-subtle flex items-center justify-center font-data-mono-md text-data-mono-md text-primary">02</div>
+<h2 class="font-headline-sm text-headline-sm text-text-primary">Payload Parameter Matrix</h2>
+</div>
+<span class="font-label-telemetry text-label-telemetry text-text-secondary uppercase">Road Inundation v1.3</span>
+</div>
+<form class="flex flex-col gap-space-4" id="injectionForm" onsubmit="return false;">
+<!-- Road Corridor -->
+<div class="flex flex-col gap-space-1">
+<div class="flex justify-between items-center">
+<label class="font-label-badge text-label-badge text-text-secondary uppercase">Target Road Corridor</label>
+<span class="font-label-telemetry text-label-telemetry text-primary uppercase">GIS Node: #882-NORTH</span>
+</div>
+<select class="h-10 bg-surface-subtle text-text-primary font-body-md text-body-md px-space-3 rounded-lg focus:outline-none focus:bg-surface-card" id="fieldCorridor">
+<option selected="" value="COR-NORTH-04">COR-NORTH-04 — Madhya Marg Underpass (Sector 11-15)</option>
+<option value="COR-SOUTH-02">COR-SOUTH-02 — Dakshin Marg Elevated Bypass</option>
+<option value="COR-EAST-09">COR-EAST-09 — Purv Marg Industrial Canal Bridge</option>
+<option value="COR-WEST-01">COR-WEST-01 — Jan Marg High-Density Corridor</option>
+</select>
+</div>
+<!-- Condition Status Radio Pill Group -->
+<div class="flex flex-col gap-space-2">
+<label class="font-label-badge text-label-badge text-text-secondary uppercase">Hazard Impasse Severity Status</label>
+<div class="grid grid-cols-2 sm:grid-cols-5 gap-space-2">
+<label class="flex flex-col items-center justify-center p-space-2 rounded-lg bg-surface-subtle cursor-pointer hover:bg-surface-container transition-colors text-center">
+<input class="sr-only" name="conditionStatus" type="radio" value="OPEN"/>
+<span class="font-data-mono-md text-data-mono-md text-text-primary">Open</span>
+<span class="w-1.5 h-1.5 rounded-full bg-success-text mt-1"></span>
+</label>
+<label class="flex flex-col items-center justify-center p-space-2 rounded-lg bg-surface-subtle cursor-pointer hover:bg-surface-container transition-colors text-center">
+<input class="sr-only" name="conditionStatus" type="radio" value="CONGESTED"/>
+<span class="font-data-mono-md text-data-mono-md text-text-primary">Congested</span>
+<span class="w-1.5 h-1.5 rounded-full bg-warning-text mt-1"></span>
+</label>
+<label class="flex flex-col items-center justify-center p-space-2 rounded-lg bg-primary-container text-on-primary cursor-pointer shadow-sm text-center">
+<input checked="" class="sr-only" name="conditionStatus" type="radio" value="PARTIALLY_BLOCKED"/>
+<span class="font-data-mono-md text-data-mono-md font-bold">Part. Blocked</span>
+<span class="w-1.5 h-1.5 rounded-full bg-surface-card mt-1"></span>
+</label>
+<label class="flex flex-col items-center justify-center p-space-2 rounded-lg bg-surface-subtle cursor-pointer hover:bg-surface-container transition-colors text-center">
+<input class="sr-only" name="conditionStatus" type="radio" value="BLOCKED"/>
+<span class="font-data-mono-md text-data-mono-md text-text-primary">Blocked</span>
+<span class="w-1.5 h-1.5 rounded-full bg-critical-text mt-1"></span>
+</label>
+<label class="flex flex-col items-center justify-center p-space-2 rounded-lg bg-surface-subtle cursor-pointer hover:bg-surface-container transition-colors text-center">
+<input class="sr-only" name="conditionStatus" type="radio" value="REOPENED"/>
+<span class="font-data-mono-md text-data-mono-md text-text-primary">Reopened</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary mt-1"></span>
+</label>
+</div>
+</div>
+<!-- Water Depth & Coordinates Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-4">
+<div class="flex flex-col gap-space-1">
+<label class="font-label-badge text-label-badge text-text-secondary uppercase">Waterlogging Depth (Meters)</label>
+<div class="relative flex items-center">
+<input class="w-full h-10 bg-surface-subtle text-text-primary font-data-mono-md text-data-mono-md px-space-3 rounded-lg focus:outline-none focus:bg-surface-card" id="fieldDepth" step="0.05" type="number" value="1.45"/>
+<span class="absolute right-3 font-data-mono-md text-data-mono-md text-text-muted">m</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-1">
+<label class="font-label-badge text-label-badge text-text-secondary uppercase">GPS Latitude / Longitude</label>
+<div class="relative flex items-center">
+<input class="w-full h-10 bg-surface-subtle text-text-primary font-data-mono-md text-data-mono-md px-space-3 rounded-lg focus:outline-none focus:bg-surface-card" id="fieldGps" type="text" value="30.7412° N, 76.7845° E"/>
+<span class="material-symbols-outlined absolute right-3 text-[18px] text-text-muted">pin_drop</span>
+</div>
+</div>
+</div>
+<!-- Detour Suggestion -->
+<div class="flex flex-col gap-space-1">
+<label class="font-label-badge text-label-badge text-text-secondary uppercase">Detour Vector Suggestion</label>
+<input class="w-full h-10 bg-surface-subtle text-text-primary font-body-md text-body-md px-space-3 rounded-lg focus:outline-none focus:bg-surface-card" id="fieldDetour" type="text" value="Himalaya Marg South (Arterial 2A Bypass)"/>
+</div>
+<!-- Provenance Flag Checkbox (Locked Mandatory) -->
+<div class="p-space-3 bg-blue-soft rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-space-3">
+<input checked="" class="w-4 h-4 text-primary rounded bg-surface-card focus:ring-0 cursor-not-allowed" disabled="" id="simFlag" type="checkbox"/>
+<div class="flex flex-col">
+<label class="font-headline-sm text-headline-sm text-primary text-sm cursor-not-allowed" for="simFlag">Mark as SIMULATED Payload</label>
+<span class="font-body-sm text-body-sm text-text-secondary">Mandatory safety tag. Prevents live city emergency dispatch sirens.</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary text-[20px]">lock</span>
+</div>
+<!-- Manual Operator Annotation -->
+<div class="flex flex-col gap-space-1">
+<label class="font-label-badge text-label-badge text-text-secondary uppercase">Operator Audit Annotation</label>
+<textarea class="w-full p-space-3 bg-surface-subtle text-text-primary font-body-md text-body-md rounded-lg focus:outline-none focus:bg-surface-card resize-none" id="fieldAnnotation" placeholder="Provide reason for manual event injection..." rows="2">Operator testing real-time evacuation route diversion around flooded underpass</textarea>
+</div>
+</form>
+</div>
+<!-- Tactical Visual Context / Location Map Card -->
+<div class="bg-surface-card p-space-5 rounded-xl shadow-sm flex flex-col gap-space-3">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-label-badge text-text-secondary uppercase">Spatial Verification Geofence</span>
+<span class="font-data-mono-md text-data-mono-md text-success-text">POLYGON: TRI-CITY-CORE</span>
+</div>
+<div class="w-full h-44 rounded-lg bg-cover bg-center relative overflow-hidden flex items-end p-space-3 shadow-inner" data-location="Madhya Marg, Chandigarh" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCXTyXD8KFYX0hBtJTEuk1--geeGLjWkIcKHNp_X08j-MxJzpoDATzlGT_kDD7kMZ_HR4ZUyWAh8cZgu2IM-QB6tjhMLrDeW7yOQElfRrDuVY0j8t2pnBwFImjCpgaEWFIXjeDrefyA8ZWj02AaaVWkZE-k97hoqjc9123lgDhfRWS-rU1N_t58l6aF_WPsB4iQHhqAF8TP6xM_R33DWg5GFz54uNg9pOhEcFxUos3gkcxJP7fjv8491A')">
+<div class="bg-surface-card/90 backdrop-blur-sm p-space-2 rounded flex items-center gap-space-2 text-text-primary shadow-sm">
+<span class="material-symbols-outlined text-critical-text text-[16px]">flood</span>
+<span class="font-data-mono-md text-data-mono-md">COR-NORTH-04 Hazard Zone [Radial 120m]</span>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Schema Validation, Live Preview & Actions (5 Cols) -->
+<div class="lg:col-span-5 flex flex-col gap-space-6">
+<!-- Live Schema Validation Matrix -->
+<div class="bg-surface-card p-space-6 rounded-xl shadow-sm flex flex-col gap-space-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-2">
+<span class="material-symbols-outlined text-success-text text-[20px]">fact_check</span>
+<h3 class="font-headline-sm text-headline-sm text-text-primary">Schema Ingestion Guard</h3>
+</div>
+<span class="font-label-badge text-label-badge bg-success-bg text-success-text px-space-2 py-0.5 rounded uppercase">4 / 4 Checks Passed</span>
+</div>
+<div class="flex flex-col gap-space-2">
+<!-- Check 1 -->
+<div class="flex items-center justify-between p-space-2 bg-surface-subtle rounded-lg">
+<div class="flex items-center gap-space-2">
+<span class="material-symbols-outlined text-[16px] text-success-text">check_circle</span>
+<span class="font-body-sm text-body-sm text-text-primary">Corridor ID Binding</span>
+</div>
+<span class="font-data-mono-md text-data-mono-md text-success-text">MATCHED (GIS #882)</span>
+</div>
+<!-- Check 2 -->
+<div class="flex items-center justify-between p-space-2 bg-surface-subtle rounded-lg">
+<div class="flex items-center gap-space-2">
+<span class="material-symbols-outlined text-[16px] text-success-text">check_circle</span>
+<span class="font-body-sm text-body-sm text-text-primary">Condition Status Enum</span>
+</div>
+<span class="font-data-mono-md text-data-mono-md text-success-text">VALID [PARTIALLY_BLOCKED]</span>
+</div>
+<!-- Check 3 -->
+<div class="flex items-center justify-between p-space-2 bg-surface-subtle rounded-lg">
+<div class="flex items-center gap-space-2">
+<span class="material-symbols-outlined text-[16px] text-success-text">check_circle</span>
+<span class="font-body-sm text-body-sm text-text-primary">Bounding Box Geofence</span>
+</div>
+<span class="font-data-mono-md text-data-mono-md text-success-text">INSIDE (30.74, 76.78)</span>
+</div>
+<!-- Check 4 -->
+<div class="flex items-center justify-between p-space-2 bg-surface-subtle rounded-lg">
+<div class="flex items-center gap-space-2">
+<span class="material-symbols-outlined text-[16px] text-success-text">check_circle</span>
+<span class="font-body-sm text-body-sm text-text-primary">Security Sanitization</span>
+</div>
+<span class="font-data-mono-md text-data-mono-md text-success-text">CLEAN (NO_SCRIPT_VEC)</span>
+</div>
+</div>
+</div>
+<!-- Computed JSON Preview Display -->
+<div class="bg-surface-card p-space-6 rounded-xl shadow-sm flex flex-col gap-space-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-2">
+<span class="material-symbols-outlined text-primary text-[20px]">code</span>
+<h3 class="font-headline-sm text-headline-sm text-text-primary">Computed Ingestion Wire Payload</h3>
+</div>
+<button class="flex items-center gap-space-1 text-primary hover:text-on-surface-variant font-label-badge text-label-badge uppercase" id="copyJsonBtn">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+            Copy
+          </button>
+</div>
+<div class="relative bg-surface-subtle rounded-lg p-space-4 font-data-mono-md text-data-mono-md text-text-primary overflow-x-auto">
+<pre class="leading-relaxed whitespace-pre-wrap" id="jsonPreviewCode"><span class="text-text-muted">{</span>
+  <span class="text-primary">"event_id"</span>: <span class="text-text-secondary">"MAN-EVT-904"</span>,
+  <span class="text-primary">"event_type"</span>: <span class="text-text-secondary">"ROAD_BLOCKED"</span>,
+  <span class="text-primary">"source"</span>: <span class="text-text-secondary">"MANUAL_SIMULATOR"</span>,
+  <span class="text-primary">"corridor_id"</span>: <span class="text-text-secondary">"COR-NORTH-04"</span>,
+  <span class="text-primary">"status"</span>: <span class="text-text-secondary">"PARTIALLY_BLOCKED"</span>,
+  <span class="text-primary">"depth_meters"</span>: <span class="text-success-text">1.45</span>,
+  <span class="text-primary">"coordinates"</span>: [<span class="text-success-text">30.7412</span>, <span class="text-success-text">76.7845</span>],
+  <span class="text-primary">"detour"</span>: <span class="text-text-secondary">"Himalaya Marg South"</span>,
+  <span class="text-primary">"simulated"</span>: <span class="text-critical-text">true</span>,
+  <span class="text-primary">"annotation"</span>: <span class="text-text-secondary">"Operator route test"</span>,
+  <span class="text-primary">"injected_at"</span>: <span class="text-text-secondary">"2025-05-19T14:32:01.402Z"</span>
+<span class="text-text-muted">}</span></pre>
+</div>
+<!-- Ingestion Status Alert Slot -->
+<div class="hidden p-space-3 bg-success-bg rounded-lg flex items-center justify-between" id="injectionFeedback">
+<div class="flex items-center gap-space-2">
+<span class="material-symbols-outlined text-success-text text-[18px]">cloud_done</span>
+<span class="font-body-md text-body-md text-success-text font-bold">Event Dispatched: HTTP 201 Created</span>
+</div>
+<span class="font-data-mono-md text-data-mono-md text-success-text">ACK_ID: 904-TX</span>
+</div>
+<!-- Action Docks -->
+<div class="flex flex-col gap-space-2 pt-space-2">
+<button class="w-full h-12 bg-primary hover:bg-primary-container text-on-primary font-headline-sm text-headline-sm rounded-lg flex items-center justify-center gap-space-2 shadow-sm transition-all active:scale-[0.99]" id="btnInject">
+<span class="material-symbols-outlined text-[20px]">send_time_extension</span>
+            INJECT SIMULATED EVENT (SEND HTTP)
+          </button>
+<div class="flex items-center gap-space-2">
+<button class="w-1/2 h-10 bg-surface-subtle hover:bg-surface-container text-text-secondary font-body-md text-body-md rounded-lg flex items-center justify-center gap-space-1 transition-colors" id="btnClear">
+<span class="material-symbols-outlined text-[16px]">restart_alt</span>
+              Reset Defaults
+            </button>
+<button class="w-1/2 h-10 bg-surface-subtle hover:bg-surface-container text-text-secondary font-body-md text-body-md rounded-lg flex items-center justify-center gap-space-1 transition-colors">
+<span class="material-symbols-outlined text-[16px]">download</span>
+              Export Payload
+            </button>
+</div>
+</div>
+</div>
+<!-- Quick Metrics Strip -->
+<div class="grid grid-cols-2 gap-space-4">
+<div class="bg-surface-card p-space-4 rounded-xl shadow-sm flex flex-col">
+<span class="font-label-telemetry text-label-telemetry text-text-secondary uppercase">Today's Manual Injections</span>
+<span class="font-display-hud-mobile text-display-hud-mobile text-text-primary mt-1">28</span>
+<span class="font-body-sm text-body-sm text-success-text mt-1">100% Schema Compliant</span>
+</div>
+<div class="bg-surface-card p-space-4 rounded-xl shadow-sm flex flex-col">
+<span class="font-label-telemetry text-label-telemetry text-text-secondary uppercase">Avg Pipeline Propagation</span>
+<span class="font-display-hud-mobile text-display-hud-mobile text-primary mt-1">18ms</span>
+<span class="font-body-sm text-body-sm text-text-muted mt-1">Zero ingestion drops</span>
+</div>
+</div>
+</div>
+</div>
+<!-- BOTTOM SECTION: Recent Manual Injections Stream (Audit Table) -->
+<div class="mt-space-8 bg-surface-card rounded-xl shadow-sm p-space-6 flex flex-col gap-space-4">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-2">
+<div class="flex items-center gap-space-3">
+<div class="w-7 h-7 rounded bg-surface-subtle flex items-center justify-center font-data-mono-md text-data-mono-md text-primary">03</div>
+<div class="flex flex-col">
+<h3 class="font-headline-sm text-headline-sm text-text-primary">Recent Manual Injections Stream</h3>
+<span class="font-body-sm text-body-sm text-text-secondary">Audit log of all manual triggers injected into RUN #RUN-2025-0892</span>
+</div>
+</div>
+<div class="flex items-center gap-space-2">
+<div class="flex items-center gap-space-1 bg-surface-subtle px-space-3 py-1 rounded-lg">
+<span class="w-2 h-2 rounded-full bg-success-text animate-ping"></span>
+<span class="font-data-mono-md text-data-mono-md text-text-primary">STREAM: CONNECTED</span>
+</div>
+</div>
+</div>
+<!-- Telemetry Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-surface-subtle text-text-muted font-label-badge text-label-badge uppercase">
+<th class="py-space-3 px-space-4 rounded-l-lg">Event ID</th>
+<th class="py-space-3 px-space-4">Timestamp</th>
+<th class="py-space-3 px-space-4">Type</th>
+<th class="py-space-3 px-space-4">Target Path</th>
+<th class="py-space-3 px-space-4">Operator Tag</th>
+<th class="py-space-3 px-space-4">Pipeline Status</th>
+<th class="py-space-3 px-space-4 text-right rounded-r-lg">Latency</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-text-primary font-body-md text-body-md">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-subtle transition-colors">
+<td class="py-space-3 px-space-4 font-data-mono-md text-data-mono-md text-primary">MAN-EVT-903</td>
+<td class="py-space-3 px-space-4 font-data-mono-md text-data-mono-md text-text-secondary">14:28:44.112</td>
+<td class="py-space-3 px-space-4">
+<span class="font-label-badge text-label-badge bg-blue-soft text-primary px-space-2 py-0.5 rounded">WATER_LEVEL_HIGH</span>
+</td>
+<td class="py-space-3 px-space-4 font-data-mono-md text-data-mono-md text-text-secondary">/api/v1/sensors/hydro</td>
+<td class="py-space-3 px-space-4 text-text-secondary">Sukhna Lake Gauge #2</td>
+<td class="py-space-3 px-space-4">
+<span class="inline-flex items-center gap-1 text-success-text font-label-badge text-label-badge uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-success-text"></span>
+                201 Ingested
+              </span>
+</td>
+<td class="py-space-3 px-space-4 text-right font-data-mono-md text-data-mono-md text-text-secondary">16.4ms</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-subtle transition-colors">
+<td class="py-space-3 px-space-4 font-data-mono-md text-data-mono-md text-primary">MAN-EVT-902</td>
+<td class="py-space-3 px-space-4 font-data-mono-md text-data-mono-md text-text-secondary">14:19:12.809</td>
+<td class="py-space-3 px-space-4">
+<span class="font-label-badge text-label-badge bg-warning-bg text-warning-text px-space-2 py-0.5 rounded">SHELTER_CAPACITY</span>
+</td>
+<td class="py-space-3 px-space-4 font-data-mono-md text-data-mono-md text-text-secondary">/api/v1/shelters/surge</td>
+<td class="py-space-3 px-space-4 text-text-secondary">Community Center Sector 18</td>
+<td class="py-space-3 px-space-4">
+<span class="inline-flex items-center gap-1 text-success-text font-label-badge text-label-badge uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-success-text"></span>
+                201 Ingested
+              </span>
+</td>
+<td class="py-space-3 px-space-4 text-right font-data-mono-md text-data-mono-md text-text-secondary">12.1ms</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-subtle transition-colors">
+<td class="py-space-3 px-space-4 font-data-mono-md text-data-mono-md text-primary">MAN-EVT-901</td>
+<td class="py-space-3 px-space-4 font-data-mono-md text-data-mono-md text-text-secondary">14:02:00.045</td>
+<td class="py-space-3 px-space-4">
+<span class="font-label-badge text-label-badge bg-critical-bg text-critical-text px-space-2 py-0.5 rounded">CITIZEN_REPORT</span>
+</td>
+<td class="py-space-3 px-space-4 font-data-mono-md text-data-mono-md text-text-secondary">/api/v1/sos/intake</td>
+<td class="py-space-3 px-space-4 text-text-secondary">Synthetic Trapped Citizen cluster</td>
+<td class="py-space-3 px-space-4">
+<span class="inline-flex items-center gap-1 text-success-text font-label-badge text-label-badge uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-success-text"></span>
+                201 Ingested
+              </span>
+</td>
+<td class="py-space-3 px-space-4 text-right font-data-mono-md text-data-mono-md text-text-secondary">22.8ms</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-subtle transition-colors">
+<td class="py-space-3 px-space-4 font-data-mono-md text-data-mono-md text-primary">MAN-EVT-900</td>
+<td class="py-space-3 px-space-4 font-data-mono-md text-data-mono-md text-text-secondary">13:45:18.990</td>
+<td class="py-space-3 px-space-4">
+<span class="font-label-badge text-label-badge bg-surface-subtle text-text-secondary px-space-2 py-0.5 rounded">SITUATION_UPDATE</span>
+</td>
+<td class="py-space-3 px-space-4 font-data-mono-md text-data-mono-md text-text-secondary">/api/v1/eoc/sitrep</td>
+<td class="py-space-3 px-space-4 text-text-secondary">EOC Shift Transition Baseline</td>
+<td class="py-space-3 px-space-4">
+<span class="inline-flex items-center gap-1 text-success-text font-label-badge text-label-badge uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-success-text"></span>
+                200 Ingested
+              </span>
+</td>
+<td class="py-space-3 px-space-4 text-right font-data-mono-md text-data-mono-md text-text-secondary">14.9ms</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<!-- Micro-Interaction Handler Script -->
+<script>
+  (function() {
+    const btnInject = document.getElementById('btnInject');
+    const feedback = document.getElementById('injectionFeedback');
+    const copyBtn = document.getElementById('copyJsonBtn');
+    const depthInput = document.getElementById('fieldDepth');
+    const corridorSelect = document.getElementById('fieldCorridor');
+    const preview = document.getElementById('jsonPreviewCode');
+
+    function updatePreview() {
+      const dVal = parseFloat(depthInput.value) || 1.45;
+      const cVal = corridorSelect.value;
+      const nowIso = new Date().toISOString();
+      
+      preview.innerHTML = `<span class="text-text-muted">{</span>
+  <span class="text-primary">"event_id"</span>: <span class="text-text-secondary">"MAN-EVT-904"</span>,
+  <span class="text-primary">"event_type"</span>: <span class="text-text-secondary">"ROAD_BLOCKED"</span>,
+  <span class="text-primary">"source"</span>: <span class="text-text-secondary">"MANUAL_SIMULATOR"</span>,
+  <span class="text-primary">"corridor_id"</span>: <span class="text-text-secondary">"${cVal}"</span>,
+  <span class="text-primary">"status"</span>: <span class="text-text-secondary">"PARTIALLY_BLOCKED"</span>,
+  <span class="text-primary">"depth_meters"</span>: <span class="text-success-text">${dVal.toFixed(2)}</span>,
+  <span class="text-primary">"coordinates"</span>: [<span class="text-success-text">30.7412</span>, <span class="text-success-text">76.7845</span>],
+  <span class="text-primary">"detour"</span>: <span class="text-text-secondary">"Himalaya Marg South"</span>,
+  <span class="text-primary">"simulated"</span>: <span class="text-critical-text">true</span>,
+  <span class="text-primary">"annotation"</span>: <span class="text-text-secondary">"Operator route test"</span>,
+  <span class="text-primary">"injected_at"</span>: <span class="text-text-secondary">"${nowIso}"</span>
+<span class="text-text-muted">}</span>`;
+    }
+
+    if (depthInput) depthInput.addEventListener('input', updatePreview);
+    if (corridorSelect) corridorSelect.addEventListener('change', updatePreview);
+
+    if (btnInject) {
+      btnInject.addEventListener('click', function() {
+        btnInject.disabled = true;
+        btnInject.classList.add('opacity-75');
+        btnInject.innerHTML = `<span class="material-symbols-outlined animate-spin text-[20px]">sync</span> TRANSMITTING PAYLOAD...`;
+
+        setTimeout(function() {
+          btnInject.disabled = false;
+          btnInject.classList.remove('opacity-75');
+          btnInject.innerHTML = `<span class="material-symbols-outlined text-[20px]">send_time_extension</span> INJECT SIMULATED EVENT (SEND HTTP)`;
+          if (feedback) {
+            feedback.classList.remove('hidden');
+            setTimeout(() => {
+              feedback.classList.add('hidden');
+            }, 4500);
+          }
+        }, 650);
+      });
+    }
+
+    if (copyBtn) {
+      copyBtn.addEventListener('click', function() {
+        copyBtn.innerText = 'COPIED!';
+        setTimeout(function() {
+          copyBtn.innerHTML = `<span class="material-symbols-outlined text-[14px]">content_copy</span> Copy`;
+        }, 1500);
+      });
+    }
+  })();
+</script></main></div></body></html>

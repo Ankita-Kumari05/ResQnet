@@ -1,0 +1,372 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "surface": "#f8f9ff",
+          "tertiary": "#000000",
+          "secondary": "#006398",
+          "on-tertiary-container": "#f63a35",
+          "on-surface-variant": "#45464d",
+          "inverse-on-surface": "#eaf1ff",
+          "primary-fixed-dim": "#bec6e0",
+          "inverse-surface": "#213145",
+          "background": "#f8f9ff",
+          "error-container": "#ffdad6",
+          "surface-tint": "#565e74",
+          "on-primary-container": "#7c839b",
+          "inverse-primary": "#bec6e0",
+          "surface-container": "#e5eeff",
+          "tertiary-container": "#410002",
+          "primary": "#000000",
+          "tertiary-fixed-dim": "#ffb4ab",
+          "on-tertiary-fixed": "#410002",
+          "surface-dim": "#cbdbf5",
+          "on-secondary-container": "#00476e",
+          "on-error-container": "#93000a",
+          "primary-container": "#131b2e",
+          "on-primary-fixed": "#131b2e",
+          "secondary-fixed-dim": "#93ccff",
+          "tertiary-fixed": "#ffdad6",
+          "on-error": "#ffffff",
+          "on-background": "#0b1c30",
+          "on-primary": "#ffffff",
+          "primary-fixed": "#dae2fd",
+          "on-secondary-fixed-variant": "#004b73",
+          "on-surface": "#0b1c30",
+          "on-secondary": "#ffffff",
+          "on-tertiary": "#ffffff",
+          "on-tertiary-fixed-variant": "#93000b",
+          "surface-container-lowest": "#ffffff",
+          "surface-container-high": "#dce9ff",
+          "surface-bright": "#f8f9ff",
+          "surface-variant": "#d3e4fe",
+          "outline-variant": "#c6c6cd",
+          "surface-container-highest": "#d3e4fe",
+          "on-secondary-fixed": "#001d31",
+          "surface-container-low": "#eff4ff",
+          "error": "#ba1a1a",
+          "secondary-container": "#5bb8fe",
+          "outline": "#76777d",
+          "on-primary-fixed-variant": "#3f465c",
+          "secondary-fixed": "#cce5ff"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "space-8": "32px",
+          "space-12": "48px",
+          "space-3": "12px",
+          "space-2": "8px",
+          "space-16": "64px",
+          "gutter-dense": "8px",
+          "margin-mobile": "16px",
+          "space-10": "40px",
+          "space-1": "4px",
+          "space-4": "16px",
+          "margin-desktop": "32px",
+          "margin-tablet": "24px",
+          "space-5": "20px",
+          "gutter-standard": "16px",
+          "gutter-expanded": "24px",
+          "space-6": "24px",
+          "space-0": "0px"
+        },
+        "fontFamily": {
+          "body-lg": [
+            "Public Sans"
+          ],
+          "display-hud": [
+            "JetBrains Mono"
+          ],
+          "display-hud-mobile": [
+            "JetBrains Mono"
+          ],
+          "data-mono-md": [
+            "JetBrains Mono"
+          ],
+          "label-telemetry": [
+            "JetBrains Mono"
+          ],
+          "body-md": [
+            "Public Sans"
+          ],
+          "body-sm": [
+            "Public Sans"
+          ],
+          "headline-md": [
+            "Public Sans"
+          ],
+          "headline-xl": [
+            "Public Sans"
+          ],
+          "headline-lg": [
+            "Public Sans"
+          ],
+          "headline-xl-mobile": [
+            "Public Sans"
+          ],
+          "headline-sm": [
+            "Public Sans"
+          ],
+          "data-mono-lg": [
+            "JetBrains Mono"
+          ],
+          "label-badge": [
+            "Public Sans"
+          ]
+        },
+        "fontSize": {
+          "body-lg": [
+            "16px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "display-hud": [
+            "48px",
+            {
+              "lineHeight": "52px",
+              "letterSpacing": "-0.04em",
+              "fontWeight": "700"
+            }
+          ],
+          "display-hud-mobile": [
+            "32px",
+            {
+              "lineHeight": "36px",
+              "letterSpacing": "-0.03em",
+              "fontWeight": "700"
+            }
+          ],
+          "data-mono-md": [
+            "13px",
+            {
+              "lineHeight": "18px",
+              "letterSpacing": "0em",
+              "fontWeight": "500"
+            }
+          ],
+          "label-telemetry": [
+            "10px",
+            {
+              "lineHeight": "12px",
+              "letterSpacing": "0.08em",
+              "fontWeight": "500"
+            }
+          ],
+          "body-md": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "body-sm": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-md": [
+            "20px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-xl": [
+            "36px",
+            {
+              "lineHeight": "44px",
+              "letterSpacing": "-0.025em",
+              "fontWeight": "700"
+            }
+          ],
+          "headline-lg": [
+            "28px",
+            {
+              "lineHeight": "36px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "700"
+            }
+          ],
+          "headline-xl-mobile": [
+            "26px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "700"
+            }
+          ],
+          "headline-sm": [
+            "16px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "0em",
+              "fontWeight": "600"
+            }
+          ],
+          "data-mono-lg": [
+            "18px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-badge": [
+            "11px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.06em",
+              "fontWeight": "700"
+            }
+          ]
+        }
+      },
+    },
+  }</script></head><body class="bg-surface font-body-md text-body-md text-on-surface min-h-screen flex flex-col"><header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 w-full px-space-8 flex items-center justify-between gap-space-4"><div class="flex items-center gap-space-4"><img alt="Modern, clean, minimalist brand logo for ResQnet - disaster management and emergency response network. Featuring a protective shield icon interwoven with a tactical pulse/network node symbol in dependable deep navy (#0f172a) and calm primary blue (#2563eb).. Brand logo. - Primary color: #0f172a
+- Font: publicSans
+- Mode: light
+- Roundness: rounded-sm
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VsV9gXTDOnr-Yeh2GepA-NCV-WAWdtb13-PgkjkzewZFtXFguX04w3UircQbz6DNih-kzVSvLBqRcsdTQr6ioXPxQJWE5h0Va08zzcBbdOkaG7GjnNxioNY0NkNeyRaa7L6gCWu5xSADkhe-2j4Qu4jMRJEPWb8NwsNGElwyPueuNFVCLIMGyPg-gl57h-xE2WJ5Z4jGiUSm-imSfyUrhYwqKegEvQ1DXBbMWxnOeyUWffkgIACji02wYM"><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface font-bold">ResQnet</span><span class="hidden xl:inline text-on-surface-variant font-body-sm text-body-sm">Connecting people, responders and communities when help matters most</span></div></div><div class="flex items-center gap-space-4"><div class="hidden md:flex items-center gap-space-2 px-space-3 py-space-1 bg-surface-container rounded"><span class="material-symbols-outlined text-secondary text-[16px]">emergency</span><span class="font-label-telemetry text-label-telemetry text-on-surface font-medium uppercase tracking-wider">Emergency: 112 | Disaster: 1078</span></div><div class="hidden lg:flex items-center gap-space-1 px-space-3 py-space-1 bg-surface-container-low rounded"><span class="material-symbols-outlined text-secondary text-[15px]">verified_user</span><span class="font-label-badge text-label-badge text-on-surface-variant font-bold uppercase tracking-wider">256-Bit Encrypted</span></div><div class="flex items-center bg-surface-container-low rounded p-space-1"><button class="px-space-2 py-space-1 rounded font-label-badge text-label-badge bg-surface-container-lowest text-on-surface font-semibold shadow-[0_1px_4px_rgba(0,0,0,0.04)]" type="button">English</button><button class="px-space-2 py-space-1 rounded font-label-badge text-label-badge text-on-surface-variant hover:text-on-surface" type="button">हिन्दी</button></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 flex-1 flex flex-col justify-center"><div class="flex flex-col w-full items-center justify-center py-space-10 px-margin-mobile md:px-margin-desktop">
+<div class="w-full max-w-[460px] flex flex-col items-center">
+<!-- System Telemetry Micro-Indicator -->
+<div class="flex items-center gap-space-2 mb-space-4 bg-surface-container px-space-3 py-space-1 rounded-full">
+<span class="inline-block w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-telemetry text-label-telemetry text-secondary uppercase font-semibold tracking-wider">SECURE NODE // RELIEF-NET GATEWAY 04</span>
+</div>
+<!-- Main Authentication Container -->
+<div class="w-full bg-surface-container-lowest rounded-xl shadow-md p-space-6 sm:p-space-8 flex flex-col gap-space-5">
+<!-- Header Stack -->
+<div class="flex flex-col gap-space-1">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Welcome back</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Sign in to continue to ResQnet disaster management network.</p>
+</div>
+<!-- Muted Panic-Resilient Error Banner -->
+<div aria-live="assertive" class="w-full bg-error-container/40 rounded-lg p-space-4 flex gap-space-3 items-start shadow-sm" role="alert">
+<div class="w-8 h-8 rounded-full bg-error-container flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-error text-[20px]" style="font-variation-settings: 'FILL' 1;">error</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between gap-space-2 mb-space-1">
+<span class="font-headline-sm text-headline-sm text-error font-bold leading-none">Unable to sign in</span>
+<span class="font-label-badge text-label-badge px-space-2 py-0.5 rounded bg-error-container text-on-error-container font-semibold uppercase tracking-wider">Auth Fault</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-space-2">
+            The email/mobile number or password you entered is incorrect. Please check your credentials and try again.
+          </p>
+<div class="flex items-center gap-space-2 pt-space-2 bg-error-container/30 px-space-2 py-space-1 rounded">
+<span class="material-symbols-outlined text-error text-[15px]">lock_clock</span>
+<span class="font-data-mono-md text-data-mono-md text-error font-medium">Attempts remaining: 4 before security lock</span>
+</div>
+</div>
+</div>
+<!-- Credentials Form -->
+<form class="flex flex-col gap-space-4" onsubmit="event.preventDefault();">
+<!-- Field: Identifier -->
+<div class="flex flex-col gap-space-1">
+<div class="flex items-center justify-between">
+<label class="font-label-badge text-label-badge text-on-surface uppercase font-bold tracking-wider" for="identity-input">
+              Email or Mobile Number
+            </label>
+<span class="font-label-telemetry text-label-telemetry text-error uppercase font-semibold flex items-center gap-space-1">
+<span class="material-symbols-outlined text-[13px]">cancel</span> Verify Value
+            </span>
+</div>
+<div class="relative flex items-center">
+<div class="absolute left-space-3 text-error pointer-events-none flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">badge</span>
+</div>
+<input aria-invalid="true" class="w-full pl-space-10 pr-space-4 py-space-3 bg-error-container/20 text-on-surface font-body-md text-body-md rounded-lg focus:outline-none shadow-[0_0_0_2px_#ba1a1a]" id="identity-input" type="text" value="aarav.sharma@northrelief.org">
+</div>
+</div>
+<!-- Field: Secret Passphrase -->
+<div class="flex flex-col gap-space-1">
+<div class="flex items-center justify-between">
+<label class="font-label-badge text-label-badge text-on-surface uppercase font-bold tracking-wider" for="password-input">
+              Secure Password
+            </label>
+<span class="font-label-telemetry text-label-telemetry text-error uppercase font-semibold flex items-center gap-space-1">
+<span class="material-symbols-outlined text-[13px]">lock_reset</span> Mismatched
+            </span>
+</div>
+<div class="relative flex items-center">
+<div class="absolute left-space-3 text-error pointer-events-none flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">key</span>
+</div>
+<input aria-invalid="true" class="w-full pl-space-10 pr-space-10 py-space-3 bg-error-container/20 text-on-surface font-data-mono-md text-data-mono-md rounded-lg focus:outline-none shadow-[0_0_0_2px_#ba1a1a]" id="password-input" type="password" value="ValidSecret109!">
+<button aria-label="Toggle password visibility" class="absolute right-space-3 text-on-surface-variant hover:text-on-surface p-space-1 rounded flex items-center justify-center transition-colors" id="toggle-pwd" onclick="const p = document.getElementById('password-input'); const i = this.querySelector('span'); if(p.type === 'password'){ p.type = 'text'; i.innerText = 'visibility_off'; } else { p.type = 'password'; i.innerText = 'visibility'; }" type="button">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+</div>
+</div>
+<!-- Utilities Row -->
+<div class="flex items-center justify-between pt-space-1">
+<label class="flex items-center gap-space-2 cursor-pointer select-none">
+<input checked="" class="w-4 h-4 rounded bg-surface-container text-secondary focus:ring-0 focus:outline-none cursor-pointer" type="checkbox">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Remember terminal</span>
+</label>
+<a class="font-body-sm text-body-sm text-secondary hover:text-on-secondary-container font-semibold transition-colors" href="#">
+            Forgot password?
+          </a>
+</div>
+<!-- Action Stack -->
+<div class="flex flex-col gap-space-2 pt-space-2">
+<button class="w-full h-12 bg-primary text-on-primary hover:bg-primary-container font-headline-sm text-headline-sm rounded-lg shadow-sm flex items-center justify-center gap-space-2 active:scale-[0.99] transition-all" type="submit">
+<span>Sign In</span>
+<span class="material-symbols-outlined text-[20px]">login</span>
+</button>
+<button class="w-full h-11 bg-surface-container text-on-surface hover:bg-surface-container-high font-body-md text-body-md font-semibold rounded-lg flex items-center justify-center gap-space-2 transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">sms</span>
+<span>Reset Password with OTP</span>
+</button>
+</div>
+<!-- Help Desk Telemetry Direct Link -->
+<div class="mt-space-2 p-space-3 bg-surface-container-low rounded-lg flex items-center justify-between gap-space-3">
+<div class="flex items-center gap-space-2 min-w-0">
+<span class="material-symbols-outlined text-secondary text-[18px] flex-shrink-0">support_agent</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">
+              Need assistance? Call helpline <strong class="text-on-surface font-bold">1078</strong> or district EOC.
+            </p>
+</div>
+<a class="font-label-badge text-label-badge text-secondary hover:text-on-secondary-container uppercase font-bold flex-shrink-0" href="#">
+            Contact
+          </a>
+</div>
+</form>
+</div>
+<!-- Account Onboarding Navigation -->
+<div class="mt-space-6 flex items-center gap-space-2">
+<span class="font-body-md text-body-md text-on-surface-variant">Don't have an account?</span>
+<a class="font-body-md text-body-md text-secondary hover:text-on-secondary-container font-bold flex items-center gap-space-1 transition-colors" href="#">
+<span>Create one</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<!-- District Network Security Status Banner -->
+<div class="mt-space-8 flex items-center justify-center gap-space-4 text-on-surface-variant font-label-telemetry text-label-telemetry uppercase tracking-wider">
+<div class="flex items-center gap-space-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">verified_user</span>
+<span>NDMA Level 3 Protocols</span>
+</div>
+<span class="text-outline-variant">•</span>
+<div class="flex items-center gap-space-1">
+<span class="material-symbols-outlined text-[14px]">cell_tower</span>
+<span>Mesh Fallback Active</span>
+</div>
+</div>
+</div>
+</div></main><footer class="w-full bg-surface-container-low py-space-6 shadow-[0_-1px_8px_rgba(0,0,0,0.02)]"><div class="w-full px-space-8 flex flex-col md:flex-row items-center justify-between gap-space-4"><div class="flex items-center gap-space-2 text-on-surface-variant font-body-sm text-body-sm"><span class="material-symbols-outlined text-secondary text-[18px]">shield</span><span>© 2026 ResQnet. Centralized Disaster Management &amp; Emergency Response Network</span></div><nav class="flex items-center gap-space-6" data-active-classes="text-on-surface font-semibold"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="disaster-guidelines" href="#">Disaster Guidelines</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="terms-of-service" href="#">Terms of Service</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="support-desk" href="#">Support Desk</a></nav></div></footer></body></html>

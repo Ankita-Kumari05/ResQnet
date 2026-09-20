@@ -1,0 +1,187 @@
+{
+  "scenario_id": "LANDSLIDE_DEMO_01",
+  "name": "Northern Hill Slope Failure — SIH Demo Scenario",
+  "description": "Simulated landslide event affecting the virtual city's Northern Ridge corridor. Demonstrates ResQnet multi-disaster response workflow: geological warnings, unverified citizen debris reports, road blockage on North Market Road, dynamic Dijkstra route recalculation, responder survey dispatch, and Hub Beta shelter capacity adaptation.",
+  "version": "1.0",
+  "historical_context": {
+    "note": "HISTORICAL CONTEXT ONLY — NOT A LIVE PREDICTION",
+    "historical_landslide_incidents": 2,
+    "previously_affected_roads": ["North Market Road (ID 1)", "North Diagonal (ID 2)"],
+    "historical_recurrence": "Monsoon rainfall saturation and steep gradient correlation",
+    "disclaimer": "Historical geological data is provided as scenario background only. This engine does not claim predictive accuracy."
+  },
+  "resqnet_context": {
+    "coordinator_email": "coordinator@resqnet.in",
+    "citizen_email": "citizen1@resqnet.in",
+    "responder_id": 1,
+    "hub_id": 2,
+    "hub_name": "Hub Beta — Government School",
+    "hazard_zone_id": 2,
+    "hazard_zone_name": "Northern Landslide Zone",
+    "road_id": 1,
+    "road_name": "North Market Road (N-W)",
+    "incident_lat": 20.558,
+    "incident_lng": 85.819
+  },
+  "events": [
+    {
+      "event_id": "LANDSLIDE_DEMO_01_E001",
+      "offset_seconds": 0,
+      "event_type": "LANDSLIDE_WARNING",
+      "source_type": "SIMULATED_OFFICIAL",
+      "source_label": "SIMULATED GEOLOGICAL WARNING",
+      "severity": "CRITICAL",
+      "confidence": 0.95,
+      "lat": 20.558,
+      "lng": 85.819,
+      "title": "T+00 | Event 1/7",
+      "description": "[SIM | SIMULATED GEOLOGICAL WARNING] GEOLOGICAL WARNING — Northern Ridge slope instability. Debris flow imminent along North Market corridor. Divert via East Bridge to Hub Beta.",
+      "api_target": "POST /api/v1/alerts",
+      "api_role": "coordinator",
+      "api_payload": {
+        "title": "[SIM] GEOLOGICAL WARNING — Northern Ridge Slope Instability",
+        "message": "[SIMULATED GEOLOGICAL WARNING] Geological monitoring alert: Heavy rainfall saturation detected on Northern Ridge slope. High risk of debris flow. Traffic on North Market Road advised to divert via Central Spine. Evacuate to Hub Beta (Government School). This is a simulated demonstration event.",
+        "severity": "EMERGENCY",
+        "alert_type": "landslide_warning"
+      },
+      "chain_notes": "Calls real alerts service → creates EmergencyAlert → recorded in AuditLog → visible on dashboard via /api/v1/alerts/active"
+    },
+    {
+      "event_id": "LANDSLIDE_DEMO_01_E002",
+      "offset_seconds": 10,
+      "event_type": "SLOPE_FAILURE",
+      "source_type": "SIMULATED_SENSOR",
+      "source_label": "SIMULATED SLOPE SENSOR",
+      "severity": "HIGH",
+      "confidence": 0.85,
+      "lat": 20.558,
+      "lng": 85.819,
+      "title": "T+10 | Event 2/7",
+      "description": "[SIM | SIMULATED SENSOR] Inclinometer sensor network detects significant soil displacement along Northern Ridge slope.",
+      "api_target": "POST /api/simulation/events/flood",
+      "api_role": "coordinator",
+      "api_payload": {
+        "zone_id": 2,
+        "severity": 4
+      },
+      "chain_notes": "Activates HazardZone ID 2 (Northern Landslide Zone). is_active=True, severity=HIGH. Demonstrates hazard perimeter activation using existing ResQnet hazard zone logic. Routing cache is invalidated.",
+      "chain_warning": "IMPORTANT: This activates a hazard zone as an observation signal. The routing graph is lazily rebuilt on next /routing/calculate call via the dirty-cache mechanism."
+    },
+    {
+      "event_id": "LANDSLIDE_DEMO_01_E003",
+      "offset_seconds": 20,
+      "event_type": "CITIZEN_REPORT",
+      "source_type": "SIMULATED_CITIZEN",
+      "source_label": "SIMULATED CITIZEN REPORT",
+      "severity": "MEDIUM",
+      "confidence": 0.60,
+      "lat": 20.558,
+      "lng": 85.819,
+      "title": "T+20 | Event 3/7",
+      "description": "[SIM | SIMULATED CITIZEN] Citizen reports mud, boulders, and debris sliding across North Market Road.",
+      "api_target": "POST /api/simulation/events/reports/generate",
+      "api_role": "coordinator",
+      "api_payload": {
+        "lat": 20.558,
+        "lng": 85.819,
+        "category": "landslide",
+        "description": "[SIM | SIMULATED CITIZEN] Mud, boulders, and debris sliding across North Market Road. Vehicles unable to pass toward Hub Alpha. Immediate assistance needed.",
+        "count": 3
+      },
+      "chain_notes": "Calls find_or_create_cluster() then creates IncidentReport objects with status=UNVERIFIED. Reports enter cluster pipeline at Tier-1 (unverified). They do NOT become verified ground truth.",
+      "chain_warning": "Reports are created with status=UNVERIFIED. Simulation does not skip ground-truth verification. The cluster becomes visible to coordinators for dispatch decision."
+    },
+    {
+      "event_id": "LANDSLIDE_DEMO_01_E004",
+      "offset_seconds": 30,
+      "event_type": "ROAD_BLOCKED",
+      "source_type": "SIMULATED_RESPONDER",
+      "source_label": "SIMULATED OPERATIONAL SIGNAL",
+      "severity": "HIGH",
+      "confidence": 0.90,
+      "lat": 20.558,
+      "lng": 85.819,
+      "title": "T+30 | Event 4/7",
+      "description": "[SIM | SIMULATED OPERATIONAL SIGNAL] Operational report: North Market Road (ID 1) confirmed completely blocked by rockfall and mud.",
+      "api_target": "POST /api/simulation/events/road/block",
+      "api_role": "coordinator",
+      "api_payload": {
+        "road_id": 1,
+        "block": true
+      },
+      "chain_notes": "Sets road.is_blocked=True, road.status=BLOCKED on Road ID 1 (North Market Road). Authoritative operational update. Dijkstra routing engine excludes Road 1 from graph edges on next calculation. Evacuation routes from West Crossroads to Hub Alpha recalculate via Central Spine West + North Diagonal (1.6 km detour) or toward Hub Beta. Routing cache invalidated.",
+      "chain_warning": "This bypasses the field-survey ground-truth flow. Documented as an operational simulation injection representing a verified responder radio report."
+    },
+    {
+      "event_id": "LANDSLIDE_DEMO_01_E005",
+      "offset_seconds": 40,
+      "event_type": "RESPONDER_DISPATCH",
+      "source_type": "SIMULATED_RESPONDER",
+      "source_label": "SIMULATED COORDINATOR DISPATCH",
+      "severity": "HIGH",
+      "confidence": 1.0,
+      "lat": 20.558,
+      "lng": 85.819,
+      "title": "T+40 | Event 5/7",
+      "description": "[SIM | SIMULATED COORDINATOR] Coordinator dispatches Team Alpha to survey landslide blockage on Road #1 and coordinate clearing machinery.",
+      "api_target": "POST /api/v1/missions",
+      "api_role": "coordinator",
+      "api_payload_template": {
+        "mission_type": "survey_road",
+        "title": "[SIM] Survey Landslide Debris on Road #1 — LANDSLIDE_DEMO_01",
+        "description": "[SIMULATED COORDINATOR DISPATCH] Team Alpha dispatched to survey landslide blockage on North Market Road, check for trapped vehicles, and assess slope stability.",
+        "responder_id": "__RESOLVED_FROM_STATE__",
+        "cluster_id": "__RESOLVED_FROM_STATE__",
+        "road_id": 1,
+        "target_lat": 20.558,
+        "target_lng": 85.819,
+        "notes": "Simulation scenario LANDSLIDE_DEMO_01 — T+40 dispatch event"
+      },
+      "chain_notes": "Calls /api/v1/missions which invokes create_mission_service(). Validates cluster and road, creates exactly ONE Mission in ASSIGNED state, updates cluster status, emits AuditLog.",
+      "chain_warning": "Responder_id resolved dynamically from /api/v1/missions/responders before dispatch. Cluster_id resolved from simulation state after E003."
+    },
+    {
+      "event_id": "LANDSLIDE_DEMO_01_E006",
+      "offset_seconds": 50,
+      "event_type": "SHELTER_CAPACITY_CHANGED",
+      "source_type": "SIMULATED_SENSOR",
+      "source_label": "SIMULATED SHELTER SENSOR",
+      "severity": "MEDIUM",
+      "confidence": 0.85,
+      "lat": 20.558,
+      "lng": 85.835,
+      "title": "T+50 | Event 6/7",
+      "description": "[SIM | SIMULATED SHELTER SENSOR] Hub Beta (Government School) reports increased occupancy as evacuees reroute from northern corridor.",
+      "api_target": "PATCH /api/v1/hubs/{hub_id}/occupancy",
+      "api_role": "coordinator",
+      "api_payload": {
+        "hub_id": 2,
+        "delta": 140
+      },
+      "chain_notes": "Calls /api/v1/hubs/2/occupancy. Hub Beta (capacity 300) starts at 80 occupancy. After delta=+140, occupancy=220, ratio=0.73 (status: OPEN). Full business logic path with row locking and audit logging.",
+      "chain_warning": "NONE — goes through full business logic including row locking, status derivation, and audit logging."
+    },
+    {
+      "event_id": "LANDSLIDE_DEMO_01_E007",
+      "offset_seconds": 60,
+      "event_type": "SITUATION_UPDATE",
+      "source_type": "SIMULATION_ENGINE",
+      "source_label": "SIMULATED SITUATION REPORT",
+      "severity": "MEDIUM",
+      "confidence": 1.0,
+      "lat": 20.558,
+      "lng": 85.819,
+      "title": "T+60 | Event 7/7",
+      "description": "[SIM | SIMULATION ENGINE] Situation update: Landslide scenario propagated. North Market Road blocked, Dijkstra rerouting active, evacuees sheltered at Hub Beta, survey mission assigned. Review operational status.",
+      "api_target": "POST /api/v1/alerts",
+      "api_role": "coordinator",
+      "api_payload": {
+        "title": "[SIM] SITUATION & ROUTE UPDATE — Northern Landslide Corridor T+60",
+        "message": "[SIMULATED SITUATION REPORT] Landslide response update: Northern Landslide Zone activated, North Market Road confirmed blocked by debris. Traffic diverted via Central Spine West to Hub Alpha or East Bridge to Hub Beta (73% capacity). Survey and clearing crew dispatched. All events are part of LANDSLIDE_DEMO_01 simulation.",
+        "severity": "WARNING",
+        "alert_type": "situation_update"
+      },
+      "chain_notes": "Creates second EmergencyAlert via real alerts service. Coordinator can see both the original LANDSLIDE_WARNING and the SITUATION_UPDATE on dashboard. Both recorded in AuditLog."
+    }
+  ]
+}

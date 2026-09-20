@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"primary":"#004ac6","on-tertiary-fixed-variant":"#3f465c","on-secondary-container":"#3e5980","surface-dim":"#cbdbf5","surface-container":"#e5eeff","surface-container-lowest":"#ffffff","on-tertiary-fixed":"#131b2e","surface-card":"#FFFFFF","critical-bg":"#FEF2F2","surface-variant":"#d3e4fe","on-surface-variant":"#434655","on-secondary":"#ffffff","warning-border":"#FDE68A","on-secondary-fixed-variant":"#2d486d","on-tertiary-container":"#eef0ff","success-text":"#16A34A","success-border":"#BBF7D0","surface-tint":"#0053db","on-primary-fixed":"#00174b","inverse-on-surface":"#eaf1ff","on-primary-fixed-variant":"#003ea8","blue-soft":"#EFF6FF","blue-light":"#DBEAFE","background":"#f8f9ff","surface-container-high":"#dce9ff","on-background":"#0b1c30","warning-bg":"#FFFBEB","primary-fixed-dim":"#b4c5ff","critical-border":"#FECACA","outline-variant":"#c3c6d7","inverse-surface":"#213145","on-tertiary":"#ffffff","tertiary-fixed":"#dae2fd","error":"#ba1a1a","critical-text":"#DC2626","surface-container-low":"#eff4ff","secondary-fixed-dim":"#adc8f5","on-error-container":"#93000a","primary-container":"#2563eb","warning-text":"#D97706","secondary":"#455f87","secondary-fixed":"#d5e3ff","surface":"#f8f9ff","on-error":"#ffffff","info-border":"#BFDBFE","surface-container-highest":"#d3e4fe","surface-bright":"#f8f9ff","on-primary-container":"#eeefff","surface-subtle":"#F1F5F9","tertiary-fixed-dim":"#bec6e0","error-container":"#ffdad6","secondary-container":"#b5d0fd","tertiary-container":"#656d84","success-bg":"#F0FDF4","text-primary":"#1E293B","on-primary":"#ffffff","border-default":"#E2E8F0","primary-fixed":"#dbe1ff","on-surface":"#0b1c30","outline":"#737686","tertiary":"#4d556b","text-muted":"#94A3B8","inverse-primary":"#b4c5ff","on-secondary-fixed":"#001c3b","text-secondary":"#64748B","surface-base":"#F8FAFC"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-4":"16px","space-10":"40px","margin-tablet":"24px","space-1":"4px","margin-desktop":"32px","space-3":"12px","space-8":"32px","gutter-expanded":"24px","space-0":"0px","gutter-standard":"16px","gutter-dense":"8px","space-2":"8px","margin-mobile":"16px","space-12":"48px","space-16":"64px","space-5":"20px","space-6":"24px"},"fontFamily":{"headline-lg":["Public Sans"],"data-mono-md":["JetBrains Mono"],"label-badge":["Public Sans"],"headline-sm":["Public Sans"],"display-hud-mobile":["JetBrains Mono"],"display-hud":["JetBrains Mono"],"headline-xl":["Public Sans"],"data-mono-lg":["JetBrains Mono"],"body-sm":["Public Sans"],"label-telemetry":["JetBrains Mono"],"body-md":["Public Sans"],"body-lg":["Public Sans"],"headline-xl-mobile":["Public Sans"],"headline-md":["Public Sans"]},"fontSize":{"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"700"}],"data-mono-md":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"500"}],"label-badge":["11px",{"lineHeight":"14px","letterSpacing":"0.06em","fontWeight":"700"}],"headline-sm":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"600"}],"display-hud-mobile":["32px",{"lineHeight":"36px","letterSpacing":"-0.03em","fontWeight":"700"}],"display-hud":["48px",{"lineHeight":"52px","letterSpacing":"-0.04em","fontWeight":"700"}],"headline-xl":["36px",{"lineHeight":"44px","letterSpacing":"-0.025em","fontWeight":"700"}],"data-mono-lg":["18px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"400"}],"label-telemetry":["10px",{"lineHeight":"12px","letterSpacing":"0.08em","fontWeight":"500"}],"body-md":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"headline-xl-mobile":["26px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}]}}}};</script></head><body class="bg-surface-base font-body-md text-text-primary antialiased min-h-screen"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-card shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between select-none"><div class="flex flex-col flex-1 min-h-0"><div class="h-16 px-space-6 flex items-center gap-space-3 bg-surface-card"><div class="w-8 h-8 rounded-lg bg-primary-container flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[20px]">shield</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none">RESQNET</span><span class="font-label-telemetry text-label-telemetry text-text-secondary tracking-wider mt-1">GOV ROOT v2.4</span></div></div><div class="px-space-6 pt-space-4 pb-space-2"><span class="font-label-badge text-label-badge uppercase tracking-wider text-text-muted">ADMINISTRATION &amp; AUDIT</span></div><nav class="flex-1 px-space-4 space-y-1 overflow-y-auto" data-active-classes="bg-primary-container text-on-primary-container font-headline-sm rounded-lg"><a class="flex items-center justify-between px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-subtle hover:text-text-primary transition-colors" data-path="dashboard" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">dashboard</span><span class="font-body-md text-body-md">Dashboard</span></div></a><a class="flex items-center justify-between px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-subtle hover:text-text-primary transition-colors" data-path="users" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">group</span><span class="font-body-md text-body-md">Users</span></div></a><a class="flex items-center justify-between px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-subtle hover:text-text-primary transition-colors" data-path="roles-and-permissions" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">admin_panel_settings</span><span class="font-body-md text-body-md">Roles &amp; Permissions</span></div></a><a class="flex items-center justify-between px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-subtle hover:text-text-primary transition-colors" data-path="coordinators" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">person_pin</span><span class="font-body-md text-body-md">Coordinators</span></div></a><a class="flex items-center justify-between px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-subtle hover:text-text-primary transition-colors" data-path="responders-and-orgs" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">corporate_fare</span><span class="font-body-md text-body-md">Responders / Orgs</span></div></a><a class="flex items-center justify-between px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-subtle hover:text-text-primary transition-colors" data-path="verification" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">verified_user</span><span class="font-body-md text-body-md">Verification</span></div><span class="font-label-badge text-label-badge px-2 py-0.5 rounded-lg bg-warning-bg text-warning-text">5</span></a><a aria-current="page" class="flex items-center justify-between px-space-3 py-space-2 transition-colors bg-primary-container text-on-primary-container font-headline-sm rounded-lg" data-path="monitoring" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">monitor_heart</span><span class="font-body-md text-body-md">Monitoring</span></div></a><a class="flex items-center justify-between px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-subtle hover:text-text-primary transition-colors" data-path="analytics" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">insights</span><span class="font-body-md text-body-md">Analytics</span></div></a><a class="flex items-center justify-between px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-subtle hover:text-text-primary transition-colors" data-path="announcements" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">campaign</span><span class="font-body-md text-body-md">Announcements</span></div></a><a class="flex items-center justify-between px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-subtle hover:text-text-primary transition-colors" data-path="audit-logs" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">receipt_long</span><span class="font-body-md text-body-md">Audit Logs</span></div></a><a class="flex items-center justify-between px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-subtle hover:text-text-primary transition-colors" data-path="configuration" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">tune</span><span class="font-body-md text-body-md">Configuration</span></div></a></nav></div><div class="p-space-4 bg-surface-card flex flex-col gap-space-2"><div class="flex flex-col gap-1"><a class="flex items-center justify-between px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-subtle hover:text-text-primary transition-colors" data-path="notifications" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">notifications</span><span class="font-body-md text-body-md">Notifications</span></div><span class="font-label-badge text-label-badge px-2 py-0.5 rounded-lg bg-blue-soft text-primary">3</span></a><a class="flex items-center justify-between px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-subtle hover:text-text-primary transition-colors" data-path="profile-and-security" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">security</span><span class="font-body-md text-body-md">Profile &amp; Security</span></div></a></div><div class="p-space-3 rounded-lg bg-surface-subtle flex flex-col gap-1"><div class="flex items-center gap-space-2"><span class="w-2 h-2 rounded-full bg-success-text inline-block"></span><span class="font-label-telemetry text-label-telemetry text-text-secondary uppercase tracking-wider">SECURE NODE CLUSTER</span></div><span class="font-data-mono-md text-data-mono-md text-on-surface font-semibold truncate">GOV-DC-CHANDIGARH-01</span><span class="font-label-telemetry text-label-telemetry text-text-muted">TLS 1.3 ENCRYPTED</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-card/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-8"><div class="flex items-center gap-space-4 min-w-0"><div class="flex items-center gap-space-2 shrink-0"><span class="font-headline-sm text-headline-sm text-text-primary tracking-tight font-bold whitespace-nowrap">RESQNET v2.4</span><span class="font-label-telemetry text-label-telemetry text-text-muted uppercase hidden 2xl:inline">(ADMINISTRATION &amp; GOVERNANCE CONSOLE)</span></div><div class="h-4 w-px bg-surface-subtle hidden xl:block"></div><div class="flex items-center gap-space-2 overflow-x-auto py-1"><div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-blue-soft text-primary shrink-0"><span class="material-symbols-outlined text-[14px]">verified</span><span class="font-label-badge text-label-badge uppercase tracking-wider">SECURE ROOT • ZERO TRUST</span></div><div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-success-bg text-success-text shrink-0"><span class="material-symbols-outlined text-[14px]">check_circle</span><span class="font-label-badge text-label-badge uppercase tracking-wider">HEALTHY • 99.98%</span></div><div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-warning-bg text-warning-text shrink-0"><span class="material-symbols-outlined text-[14px]">tsunami</span><span class="font-label-badge text-label-badge uppercase tracking-wider">MONSOON L2</span></div><div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-surface-subtle text-text-secondary shrink-0 hidden lg:inline-flex"><span class="material-symbols-outlined text-[14px]">emergency</span><span class="font-data-mono-md text-data-mono-md uppercase">112 / 1078</span></div></div></div><div class="flex items-center gap-space-4 shrink-0"><div class="flex flex-col text-right hidden sm:flex"><span class="font-headline-sm text-body-md text-text-primary font-semibold leading-tight">Dr. Ananya Roy</span><span class="font-label-telemetry text-label-telemetry text-text-secondary">SEC-LEVEL 4 MASTER</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="w-full pt-16 px-space-8 py-space-6 bg-surface-base min-h-screen"><div class="flex flex-col w-full gap-space-6 pb-space-12">
+<!-- Page Header & Tactical Actions -->
+<div class="flex flex-col xl:flex-row xl:items-end justify-between gap-space-4 pb-space-4 border-b border-border-default">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-space-2 text-text-secondary">
+<span class="font-label-telemetry text-label-telemetry uppercase tracking-wider text-text-muted">INFRASTRUCTURE TELEMETRY</span>
+<span class="text-border-default">/</span>
+<span class="font-label-telemetry text-label-telemetry uppercase tracking-wider text-primary font-semibold">SEC-OPS OBSERVABILITY</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-text-primary tracking-tight font-bold">SYSTEM MONITORING</h1>
+<p class="font-body-md text-body-md text-text-secondary max-w-3xl">
+        Platform-wide telemetry, microservice health, CAP alert broadcast pipeline throughput, and cryptographic audit stream observability.
+      </p>
+</div>
+<!-- Header Action Toolbar -->
+<div class="flex items-center gap-space-3 shrink-0">
+<button class="inline-flex items-center gap-2 px-space-4 py-2.5 rounded-lg bg-surface-card border border-border-default text-text-primary hover:bg-surface-subtle transition-colors shadow-sm focus:outline-none focus:ring-2 focus:ring-primary/20" id="report-btn">
+<span class="material-symbols-outlined text-[18px] text-text-secondary">summarize</span>
+<span class="font-headline-sm text-headline-sm">System Health Report</span>
+</button>
+<button class="inline-flex items-center gap-2 px-space-4 py-2.5 rounded-lg bg-primary-container text-on-primary-container hover:bg-primary transition-all shadow-sm focus:outline-none focus:ring-2 focus:ring-primary/30" id="ping-btn">
+<span class="material-symbols-outlined text-[18px]">satellite_alt</span>
+<span class="font-headline-sm text-headline-sm">Trigger Mesh Gateway Ping</span>
+</button>
+</div>
+</div>
+<!-- Primary Metric Telemetry Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-4">
+<!-- Card 1: Platform Health -->
+<div class="p-space-5 rounded-xl bg-surface-card border border-border-default shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute top-0 left-0 w-1.5 h-full bg-success-text"></div>
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-badge text-label-badge uppercase tracking-wider text-text-secondary">SYSTEM HEALTH CLUSTER</span>
+<span class="font-display-hud text-display-hud text-text-primary leading-none mt-2 font-bold tracking-tight">99.98%</span>
+</div>
+<span class="p-2 rounded-lg bg-success-bg text-success-text border border-success-border">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+</span>
+</div>
+<div class="mt-4 pt-3 border-t border-border-default flex items-center justify-between text-body-sm">
+<span class="font-label-telemetry text-label-telemetry text-text-muted uppercase">MEAN LATENCY</span>
+<span class="font-data-mono-md text-data-mono-md text-text-primary font-semibold">14ms [ALL NODES]</span>
+</div>
+</div>
+<!-- Card 2: Active Users -->
+<div class="p-space-5 rounded-xl bg-surface-card border border-border-default shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute top-0 left-0 w-1.5 h-full bg-primary"></div>
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-badge text-label-badge uppercase tracking-wider text-text-secondary">AUTHENTICATED CONCURRENCY</span>
+<span class="font-display-hud text-display-hud text-text-primary leading-none mt-2 font-bold tracking-tight">14,820</span>
+</div>
+<span class="p-2 rounded-lg bg-blue-soft text-primary border border-info-border">
+<span class="material-symbols-outlined text-[20px]">group</span>
+</span>
+</div>
+<div class="mt-4 pt-3 border-t border-border-default flex items-center justify-between">
+<span class="font-label-telemetry text-label-telemetry text-text-muted uppercase">CITIZENS / FIRSTLINE</span>
+<span class="font-data-mono-md text-data-mono-md text-text-primary font-semibold">14.2k / 610 TAC</span>
+</div>
+</div>
+<!-- Card 3: Verification Queue -->
+<div class="p-space-5 rounded-xl bg-surface-card border border-border-default shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute top-0 left-0 w-1.5 h-full bg-warning-text"></div>
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-badge text-label-badge uppercase tracking-wider text-text-secondary">VERIFICATION BACKLOG</span>
+<span class="font-display-hud text-display-hud text-warning-text leading-none mt-2 font-bold tracking-tight">05</span>
+</div>
+<span class="p-2 rounded-lg bg-warning-bg text-warning-text border border-warning-border">
+<span class="material-symbols-outlined text-[20px]">pending_actions</span>
+</span>
+</div>
+<div class="mt-4 pt-3 border-t border-border-default flex items-center justify-between">
+<span class="font-label-telemetry text-label-telemetry text-text-muted uppercase">AVG MTTR / SLA</span>
+<span class="font-data-mono-md text-data-mono-md text-text-primary font-semibold">4.2h / 12h SLA</span>
+</div>
+</div>
+<!-- Card 4: Active Alert Broadcasts -->
+<div class="p-space-5 rounded-xl bg-surface-card border border-border-default shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute top-0 left-0 w-1.5 h-full bg-critical-text"></div>
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-badge text-label-badge uppercase tracking-wider text-text-secondary">ACTIVE GEO-FENCE ALERTS</span>
+<span class="font-display-hud text-display-hud text-critical-text leading-none mt-2 font-bold tracking-tight">03</span>
+</div>
+<span class="p-2 rounded-lg bg-critical-bg text-critical-text border border-critical-border">
+<span class="material-symbols-outlined text-[20px]">cell_tower</span>
+</span>
+</div>
+<div class="mt-4 pt-3 border-t border-border-default flex items-center justify-between">
+<span class="font-label-telemetry text-label-telemetry text-text-muted uppercase">CAP CELL BROADCAST</span>
+<span class="font-data-mono-md text-data-mono-md text-critical-text font-semibold">LIVE TRANSMITTING</span>
+</div>
+</div>
+</div>
+<!-- Live Map / Mesh Routing Status Strip -->
+<div class="w-full rounded-xl bg-surface-card border border-border-default p-space-5 shadow-sm">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-4 mb-space-4">
+<div class="flex items-center gap-space-3">
+<div class="w-3 h-3 rounded-full bg-success-text animate-pulse"></div>
+<div>
+<h2 class="font-headline-md text-headline-md text-text-primary font-bold">Resilient Tactical Mesh &amp; Carrier Relay Overview</h2>
+<span class="font-label-telemetry text-label-telemetry text-text-muted">CHANDIGARH SEC-17 COMMAND NODE • SUB-GHZ LORAWAN INTEROP</span>
+</div>
+</div>
+<div class="flex items-center gap-space-2 text-text-secondary">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-surface-subtle font-data-mono-md text-data-mono-md text-text-primary font-medium">
+<span class="material-symbols-outlined text-[14px] text-primary">router</span> 18 Relays Synced
+        </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-surface-subtle font-data-mono-md text-data-mono-md text-text-primary font-medium">
+<span class="material-symbols-outlined text-[14px] text-success-text">hub</span> Packet Loss: 0.003%
+        </span>
+</div>
+</div>
+<div class="relative w-full h-44 rounded-lg overflow-hidden border border-border-default" data-location="Chandigarh, Sector 17, India" style="">
+<div class="absolute inset-0 bg-gradient-to-t from-text-primary/70 via-text-primary/20 to-transparent pointer-events-none"></div>
+<div class="absolute bottom-3 left-4 right-4 flex flex-wrap items-center justify-between gap-2 text-on-primary">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-warning-text text-[18px]">emergency</span>
+<span class="font-headline-sm text-headline-sm tracking-tight font-semibold">Tri-State Command Geographic Nexus</span>
+<span class="font-label-telemetry text-label-telemetry px-2 py-0.5 rounded bg-on-secondary-fixed-variant/80 uppercase">30.7333° N, 76.7794° E</span>
+</div>
+<div class="flex items-center gap-4 text-xs font-data-mono-md">
+<span>CAP-IN CARRIER SYNC: <strong class="text-success-text">ONLINE</strong></span>
+<span>EMERGENCY FREQ: <strong class="text-primary-fixed">865-867 MHz</strong></span>
+</div>
+</div>
+</div>
+</div>
+<!-- Primary Diagnostic Split Columns -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-6">
+<!-- Left Column: Microservice Diagnostics & Telemetry Pipes (7 Cols) -->
+<div class="xl:col-span-7 flex flex-col gap-space-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-2">
+<span class="material-symbols-outlined text-primary text-[20px]">dns</span>
+<h2 class="font-headline-md text-headline-md text-text-primary font-bold">Microservice Telemetry &amp; Ingestion Ingress</h2>
+</div>
+<span class="font-label-badge text-label-badge px-2 py-0.5 rounded bg-blue-soft text-primary border border-info-border">
+          6 SERVICES HEALTHY
+        </span>
+</div>
+<!-- Service Card 1 -->
+<div class="p-space-4 rounded-xl bg-surface-card border border-border-default shadow-sm hover:border-primary/40 transition-colors">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div class="flex items-start gap-space-3">
+<div class="w-9 h-9 rounded-lg bg-blue-soft text-primary flex items-center justify-center shrink-0 border border-info-border">
+<span class="material-symbols-outlined text-[20px]">security</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-text-primary font-semibold">Authentication &amp; RBAC Service</span>
+<span class="font-label-badge text-label-badge px-2 py-0.5 rounded bg-success-bg text-success-text border border-success-border">OPERATIONAL</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary mt-0.5">OIDC Zero Trust identity fabric with mutual TLS (mTLS) enforcement.</p>
+</div>
+</div>
+<div class="text-right sm:shrink-0 flex sm:flex-col items-center sm:items-end justify-between gap-1">
+<span class="font-data-mono-md text-data-mono-md text-text-primary font-bold">12ms LATENCY</span>
+<span class="font-label-telemetry text-label-telemetry text-text-muted">UPTIME 99.99%</span>
+</div>
+</div>
+<div class="mt-3 w-full bg-surface-subtle h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 98%;"></div>
+</div>
+</div>
+<!-- Service Card 2 -->
+<div class="p-space-4 rounded-xl bg-surface-card border border-border-default shadow-sm hover:border-primary/40 transition-colors">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div class="flex items-start gap-space-3">
+<div class="w-9 h-9 rounded-lg bg-blue-soft text-primary flex items-center justify-center shrink-0 border border-info-border">
+<span class="material-symbols-outlined text-[20px]">cell_tower</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-text-primary font-semibold">Common Alerting Protocol (CAP) Gateway</span>
+<span class="font-label-badge text-label-badge px-2 py-0.5 rounded bg-success-bg text-success-text border border-success-border">NOMINAL</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary mt-0.5">4 Telecom carrier pipelines active: Airtel, Jio, BSNL, Vi cell-broadcast networks.</p>
+</div>
+</div>
+<div class="text-right sm:shrink-0 flex sm:flex-col items-center sm:items-end justify-between gap-1">
+<span class="font-data-mono-md text-data-mono-md text-primary font-bold">14,200 SMS/s</span>
+<span class="font-label-telemetry text-label-telemetry text-text-muted">4/4 CARRIER PIPES</span>
+</div>
+</div>
+<div class="mt-3 w-full bg-surface-subtle h-1.5 rounded-full overflow-hidden">
+<div class="bg-success-text h-full rounded-full" style="width: 94%;"></div>
+</div>
+</div>
+<!-- Service Card 3 -->
+<div class="p-space-4 rounded-xl bg-surface-card border border-border-default shadow-sm hover:border-primary/40 transition-colors">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div class="flex items-start gap-space-3">
+<div class="w-9 h-9 rounded-lg bg-blue-soft text-primary flex items-center justify-center shrink-0 border border-info-border">
+<span class="material-symbols-outlined text-[20px]">map</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-text-primary font-semibold">MapLibre GIS Tactical Vector Tile Engine</span>
+<span class="font-label-badge text-label-badge px-2 py-0.5 rounded bg-success-bg text-success-text border border-success-border">NOMINAL</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary mt-0.5">Spatial clustering node for disaster perimeter overlays and asset geolocation.</p>
+</div>
+</div>
+<div class="text-right sm:shrink-0 flex sm:flex-col items-center sm:items-end justify-between gap-1">
+<span class="font-data-mono-md text-data-mono-md text-text-primary font-bold">0.8s RENDER</span>
+<span class="font-label-telemetry text-label-telemetry text-text-muted">TILE FPS 60.0</span>
+</div>
+</div>
+<div class="mt-3 w-full bg-surface-subtle h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 92%;"></div>
+</div>
+</div>
+<!-- Service Card 4 -->
+<div class="p-space-4 rounded-xl bg-surface-card border border-border-default shadow-sm hover:border-primary/40 transition-colors">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div class="flex items-start gap-space-3">
+<div class="w-9 h-9 rounded-lg bg-blue-soft text-primary flex items-center justify-center shrink-0 border border-info-border">
+<span class="material-symbols-outlined text-[20px]">lan</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-text-primary font-semibold">LoRaWAN Resilient Mesh Relays</span>
+<span class="font-label-badge text-label-badge px-2 py-0.5 rounded bg-success-bg text-success-text border border-success-border">100% OPERATIONAL</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary mt-0.5">Sub-GHz resilient mesh network for cellular-dark emergency relief teams.</p>
+</div>
+</div>
+<div class="text-right sm:shrink-0 flex sm:flex-col items-center sm:items-end justify-between gap-1">
+<span class="font-data-mono-md text-data-mono-md text-success-text font-bold">18/18 SYNCED</span>
+<span class="font-label-telemetry text-label-telemetry text-text-muted">0.01% PACKET DROP</span>
+</div>
+</div>
+<div class="mt-3 w-full bg-surface-subtle h-1.5 rounded-full overflow-hidden">
+<div class="bg-success-text h-full rounded-full" style="width: 100%;"></div>
+</div>
+</div>
+<!-- Service Card 5 & 6 Compact Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-4">
+<div class="p-space-4 rounded-xl bg-surface-card border border-border-default shadow-sm">
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 rounded-lg bg-blue-soft text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">database</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<span class="font-headline-sm text-headline-sm text-text-primary truncate font-semibold">PostgreSQL HA Replicas</span>
+<span class="font-label-telemetry text-label-telemetry text-text-secondary">3/3 REPLICAS • LAG &lt;1.2ms</span>
+<div class="mt-2 flex items-center justify-between">
+<span class="font-label-badge text-label-badge text-success-text uppercase">IN-SYNC</span>
+<span class="font-data-mono-md text-data-mono-md text-text-muted">SYNC-IO</span>
+</div>
+</div>
+</div>
+</div>
+<div class="p-space-4 rounded-xl bg-surface-card border border-border-default shadow-sm">
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 rounded-lg bg-blue-soft text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<span class="font-headline-sm text-headline-sm text-text-primary truncate font-semibold">Digilocker Sealed Verifier</span>
+<span class="font-label-telemetry text-label-telemetry text-text-secondary">SHA-256 e-Sealed • 0 Pending</span>
+<div class="mt-2 flex items-center justify-between">
+<span class="font-label-badge text-label-badge text-success-text uppercase">ONLINE</span>
+<span class="font-data-mono-md text-data-mono-md text-text-muted">100% PASS</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Verification Backlog & Event Log Stream (5 Cols) -->
+<div class="xl:col-span-5 flex flex-col gap-space-6">
+<!-- Priority Verification Backlog Snapshot -->
+<div class="p-space-5 rounded-xl bg-surface-card border border-border-default shadow-sm flex flex-col gap-space-3">
+<div class="flex items-center justify-between pb-space-2 border-b border-border-default">
+<div class="flex items-center gap-space-2">
+<span class="material-symbols-outlined text-warning-text text-[20px]">assignment_turned_in</span>
+<h2 class="font-headline-md text-headline-md text-text-primary font-bold">Verification Backlog</h2>
+</div>
+<span class="font-data-mono-md text-data-mono-md px-2 py-0.5 rounded bg-warning-bg text-warning-text font-bold">05 Active</span>
+</div>
+<div class="flex flex-col gap-space-2">
+<!-- Docket 1 -->
+<div class="p-space-3 rounded-lg bg-surface-subtle/70 border border-border-default flex flex-col gap-1 hover:bg-surface-subtle transition-colors">
+<div class="flex items-center justify-between">
+<span class="font-data-mono-md text-data-mono-md text-primary font-bold">#VRF-2025-084</span>
+<span class="font-label-badge text-label-badge px-1.5 py-0.5 rounded bg-critical-bg text-critical-text">SUPER-ADMIN REQ</span>
+</div>
+<span class="font-headline-sm text-body-md text-text-primary font-semibold">ActionAid NGO Accreditation</span>
+<span class="font-body-sm text-body-sm text-text-secondary">FCRA audit documentation pending manual Gov security signoff.</span>
+</div>
+<!-- Docket 2 -->
+<div class="p-space-3 rounded-lg bg-surface-subtle/70 border border-border-default flex flex-col gap-1 hover:bg-surface-subtle transition-colors">
+<div class="flex items-center justify-between">
+<span class="font-data-mono-md text-data-mono-md text-primary font-bold">#VRF-2025-085</span>
+<span class="font-label-badge text-label-badge px-1.5 py-0.5 rounded bg-warning-bg text-warning-text">ELEVATION CHECK</span>
+</div>
+<span class="font-headline-sm text-body-md text-text-primary font-semibold">Vikram Malhotra Zone 1 Elevation</span>
+<span class="font-body-sm text-body-sm text-text-secondary">Promotion from Responder to Regional Command Coordinator.</span>
+</div>
+<!-- Docket 3 -->
+<div class="p-space-3 rounded-lg bg-surface-subtle/70 border border-border-default flex flex-col gap-1 hover:bg-surface-subtle transition-colors">
+<div class="flex items-center justify-between">
+<span class="font-data-mono-md text-data-mono-md text-primary font-bold">#VRF-2025-086</span>
+<span class="font-label-badge text-label-badge px-1.5 py-0.5 rounded bg-blue-soft text-primary">ASSET FLEET</span>
+</div>
+<span class="font-headline-sm text-body-md text-text-primary font-semibold">North India Relief Volunteer Unit</span>
+<span class="font-body-sm text-body-sm text-text-secondary">8 all-terrain emergency response vehicles attached with GPS trackers.</span>
+</div>
+</div>
+<a class="mt-1 inline-flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg bg-surface-subtle text-primary hover:bg-blue-soft transition-colors font-headline-sm text-body-md font-semibold" href="#">
+<span>Review Backlog in Verification Desk</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<!-- Live Audit Stream -->
+<div class="p-space-5 rounded-xl bg-surface-card border border-border-default shadow-sm flex flex-col gap-space-3 flex-1">
+<div class="flex items-center justify-between pb-space-2 border-b border-border-default">
+<div class="flex items-center gap-space-2">
+<span class="material-symbols-outlined text-primary text-[20px]">receipt_long</span>
+<h2 class="font-headline-md text-headline-md text-text-primary font-bold">Cryptographic Audit Stream</h2>
+</div>
+<span class="flex items-center gap-1 font-label-telemetry text-label-telemetry text-success-text">
+<span class="w-1.5 h-1.5 rounded-full bg-success-text inline-block"></span> STREAMING
+          </span>
+</div>
+<div class="flex flex-col space-y-3 font-body-sm">
+<!-- Item 1 -->
+<div class="flex items-start gap-space-3 text-body-sm">
+<span class="font-data-mono-md text-data-mono-md text-text-muted shrink-0 pt-0.5">11:22 AM</span>
+<div class="flex flex-col">
+<span class="text-text-primary leading-tight font-medium">CAP Gateway geo-fence broadcasted to <span class="font-semibold text-primary">84,200 recipients</span> in Brahmaputra Basin.</span>
+<span class="font-label-telemetry text-label-telemetry text-text-muted mt-0.5">SHA: c98f...d301 • CELL TOWER ID #AS-982</span>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex items-start gap-space-3 text-body-sm">
+<span class="font-data-mono-md text-data-mono-md text-text-muted shrink-0 pt-0.5">11:14 AM</span>
+<div class="flex flex-col">
+<span class="text-text-primary leading-tight font-medium">LoRaWAN mesh relay <span class="font-semibold">#CHD-419</span> packet drop 0.01% (Within nominal tolerance).</span>
+<span class="font-label-telemetry text-label-telemetry text-text-muted mt-0.5">METRIC TELEMETRY ENGINE SYNC</span>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="flex items-start gap-space-3 text-body-sm">
+<span class="font-data-mono-md text-data-mono-md text-text-muted shrink-0 pt-0.5">10:48 AM</span>
+<div class="flex flex-col">
+<span class="text-text-primary leading-tight font-medium">Security credential elevation approved for <span class="font-semibold">Coordinator Vikram Malhotra</span>.</span>
+<span class="font-label-telemetry text-label-telemetry text-text-muted mt-0.5">SIGNER: DR. ANANYA ROY (SEC-4)</span>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="flex items-start gap-space-3 text-body-sm">
+<span class="font-data-mono-md text-data-mono-md text-text-muted shrink-0 pt-0.5">10:15 AM</span>
+<div class="flex flex-col">
+<span class="text-text-primary leading-tight font-medium">Escrow bank settlement validation completed for State Relief Trust.</span>
+<span class="font-label-telemetry text-label-telemetry text-text-muted mt-0.5">TX ID: SBI-DISASTER-RELIEF-00912</span>
+</div>
+</div>
+<!-- Item 5 -->
+<div class="flex items-start gap-space-3 text-body-sm">
+<span class="font-data-mono-md text-data-mono-md text-text-muted shrink-0 pt-0.5">09:30 AM</span>
+<div class="flex flex-col">
+<span class="text-text-primary leading-tight font-medium">Automated cryptographic block integrity check passed (<span class="text-success-text font-semibold">Zero anomalies</span>).</span>
+<span class="font-label-telemetry text-label-telemetry text-text-muted mt-0.5">LEDGER BLOCK #1,849,201 CHECKED</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Operational Boundary Callout / Role Clarification Bar -->
+<div class="w-full p-space-4 rounded-xl bg-blue-soft border border-info-border flex items-start gap-space-3">
+<span class="material-symbols-outlined text-primary text-[22px] shrink-0 mt-0.5">info</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-body-md text-primary font-bold">OPERATIONAL DIVISION OF ROLES &amp; PROTOCOL BOUNDARIES</span>
+<p class="font-body-sm text-body-sm text-text-secondary mt-0.5">
+        Platform Administrator credentials authorize infrastructure observability, carrier mesh monitoring, verification docket signoffs, and security policy governance. Real-time tactical rescue incident creation, unit mobilization, and on-ground field team dispatches are executed strictly via the <strong>Tactical Coordinator Dashboard</strong>.
+      </p>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    const pingBtn = document.getElementById('ping-btn');
+    const reportBtn = document.getElementById('report-btn');
+
+    if (pingBtn) {
+      pingBtn.addEventListener('click', function() {
+        const originalHtml = this.innerHTML;
+        this.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">refresh</span><span class="font-headline-sm text-headline-sm">Pinging 18 LoRa Relays...</span>';
+        this.classList.add('opacity-90');
+        
+        setTimeout(() => {
+          this.innerHTML = '<span class="material-symbols-outlined text-[18px] text-success-border">check</span><span class="font-headline-sm text-headline-sm">All 18 Nodes Responsive</span>';
+          setTimeout(() => {
+            this.innerHTML = originalHtml;
+            this.classList.remove('opacity-90');
+          }, 2400);
+        }, 1100);
+      });
+    }
+
+    if (reportBtn) {
+      reportBtn.addEventListener('click', function() {
+        const originalHtml = this.innerHTML;
+        this.innerHTML = '<span class="material-symbols-outlined text-[18px] text-primary">download_done</span><span class="font-headline-sm text-headline-sm">Digest Compiled (PDF)</span>';
+        setTimeout(() => {
+          this.innerHTML = originalHtml;
+        }, 2200);
+      });
+    }
+  })();
+</script></main></div></body></html>

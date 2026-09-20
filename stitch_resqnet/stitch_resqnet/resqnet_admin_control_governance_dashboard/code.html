@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"on-surface-variant":"#434655","on-primary-container":"#eeefff","surface-variant":"#d3e4fe","on-primary":"#ffffff","background":"#f8f9ff","surface-container-lowest":"#ffffff","on-tertiary-container":"#eef0ff","on-secondary-fixed-variant":"#2d486d","surface-subtle":"#F1F5F9","on-primary-fixed-variant":"#003ea8","text-secondary":"#64748B","blue-light":"#DBEAFE","secondary-container":"#b5d0fd","surface-container-high":"#dce9ff","primary-fixed":"#dbe1ff","tertiary":"#4d556b","warning-text":"#D97706","surface-dim":"#cbdbf5","secondary":"#455f87","blue-soft":"#EFF6FF","surface-container-low":"#eff4ff","secondary-fixed-dim":"#adc8f5","on-error":"#ffffff","warning-border":"#FDE68A","surface-card":"#FFFFFF","text-primary":"#1E293B","info-border":"#BFDBFE","on-primary-fixed":"#00174b","on-error-container":"#93000a","surface-container-highest":"#d3e4fe","inverse-on-surface":"#eaf1ff","outline":"#737686","on-tertiary-fixed-variant":"#3f465c","success-text":"#16A34A","inverse-primary":"#b4c5ff","on-surface":"#0b1c30","secondary-fixed":"#d5e3ff","success-border":"#BBF7D0","on-tertiary":"#ffffff","text-muted":"#94A3B8","inverse-surface":"#213145","surface-base":"#F8FAFC","warning-bg":"#FFFBEB","surface":"#f8f9ff","tertiary-fixed":"#dae2fd","critical-bg":"#FEF2F2","tertiary-container":"#656d84","border-default":"#E2E8F0","surface-tint":"#0053db","on-secondary":"#ffffff","on-tertiary-fixed":"#131b2e","primary-container":"#2563eb","surface-bright":"#f8f9ff","critical-text":"#DC2626","outline-variant":"#c3c6d7","error-container":"#ffdad6","critical-border":"#FECACA","tertiary-fixed-dim":"#bec6e0","on-secondary-container":"#3e5980","on-secondary-fixed":"#001c3b","primary":"#004ac6","surface-container":"#e5eeff","on-background":"#0b1c30","error":"#ba1a1a","primary-fixed-dim":"#b4c5ff","success-bg":"#F0FDF4"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-3":"12px","space-6":"24px","space-16":"64px","space-2":"8px","gutter-expanded":"24px","margin-tablet":"24px","margin-mobile":"16px","space-8":"32px","space-1":"4px","gutter-standard":"16px","gutter-dense":"8px","space-5":"20px","space-10":"40px","space-0":"0px","margin-desktop":"32px","space-4":"16px","space-12":"48px"},"fontFamily":{"headline-sm":["Public Sans"],"headline-xl":["Public Sans"],"display-hud-mobile":["JetBrains Mono"],"body-sm":["Public Sans"],"body-md":["Public Sans"],"headline-md":["Public Sans"],"headline-lg":["Public Sans"],"headline-xl-mobile":["Public Sans"],"data-mono-md":["JetBrains Mono"],"body-lg":["Public Sans"],"label-badge":["Public Sans"],"display-hud":["JetBrains Mono"],"label-telemetry":["JetBrains Mono"],"data-mono-lg":["JetBrains Mono"]},"fontSize":{"headline-sm":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"600"}],"headline-xl":["36px",{"lineHeight":"44px","letterSpacing":"-0.025em","fontWeight":"700"}],"display-hud-mobile":["32px",{"lineHeight":"36px","letterSpacing":"-0.03em","fontWeight":"700"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"400"}],"body-md":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"label-badge":["11px",{"lineHeight":"14px","letterSpacing":"0.06em","fontWeight":"700"}],"display-hud":["48px",{"lineHeight":"52px","letterSpacing":"-0.04em","fontWeight":"700"}],"label-telemetry":["10px",{"lineHeight":"12px","letterSpacing":"0.08em","fontWeight":"500"}],"data-mono-lg":["18px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"data-mono-md":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"500"}],"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-xl-mobile":["26px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"700"}]}}}}</script><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..900&family=Public+Sans:wght@100..900&display=swap" rel="stylesheet"/></head><body class="bg-surface-base font-body-md text-text-primary antialiased"><header class="fixed top-0 left-0 right-0 z-40 bg-surface-card border-b border-border-default h-16"><div class="h-16 w-full px-space-6 flex items-center justify-between gap-space-4"><div class="flex items-center gap-space-4"><div class="flex items-center gap-space-3"><img alt="ResQnet Admin Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UZbdxVe9zHhHzM9vo2OQSWK2Q_bht0WwW6RI8t03wEZzkIuV1AaepFB5ybGDl6J_zPVxotaiJUuUSOjEHbwRkkatzk-_NIWrS9p2mqlHILAEd1jk-VFuE7ZUuZSBGzPtgbbUnBFF7nZSVRrnhgw6TOgjgnKK07Rxsw47PItBZRM95qoxqrwjUW_mgSZP8x4JcsHxpTeE997ICMMUDA3HqRMivqR_51zVsnG1UpH15gNX5cNH3zgcPtu5Ap"/><div class="flex flex-col"><div class="flex items-center gap-space-2"><span class="font-headline-sm text-headline-sm font-bold tracking-tight text-text-primary uppercase">RESQNET</span><span class="px-space-1 py-0.5 rounded bg-surface-subtle border border-border-default font-label-telemetry text-label-telemetry font-bold text-text-secondary">v2.4</span></div><span class="font-label-telemetry text-label-telemetry uppercase tracking-wider text-text-secondary">ADMINISTRATION & GOVERNANCE CONSOLE</span></div></div><div class="hidden xl:flex items-center gap-space-2 px-space-3 py-1 rounded bg-surface-subtle border border-border-default"><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span><span class="font-label-telemetry text-label-telemetry uppercase font-bold text-text-secondary">SECURE ROOT CONSOLE • ZERO TRUST ACTIVE</span></div></div><div class="hidden lg:flex items-center gap-space-3"><div class="flex items-center gap-space-2 px-space-3 py-1 rounded bg-success-bg border border-success-border"><span class="w-2 h-2 rounded-full bg-success-text"></span><span class="font-label-telemetry text-label-telemetry font-bold text-success-text uppercase">INFRASTRUCTURE HEALTHY • 99.98% UPTIME</span></div><div class="flex items-center gap-space-2 px-space-3 py-1 rounded bg-warning-bg border border-warning-border"><span class="material-symbols-outlined text-warning-text text-[14px]">warning</span><span class="font-label-telemetry text-label-telemetry font-bold text-warning-text uppercase">MONSOON PROTOCOL LEVEL 2</span></div></div><div class="flex items-center gap-space-4"><div class="hidden md:flex items-center gap-space-2 px-space-3 py-1 rounded bg-critical-bg border border-critical-border"><span class="material-symbols-outlined text-critical-text text-[14px]">phone_in_talk</span><span class="font-data-mono-md text-data-mono-md font-bold text-critical-text">112 / 1078 NATIONAL DISPATCH</span></div><div class="flex items-center gap-space-2 px-space-2 py-1 rounded bg-blue-soft border border-info-border"><span class="material-symbols-outlined text-primary text-[14px]">verified_user</span><span class="font-label-badge text-label-badge text-primary uppercase font-bold">SEC-LEVEL 4 MASTER</span></div><div class="flex items-center gap-space-3 pl-space-2 border-l border-border-default"><div class="hidden 2xl:flex flex-col text-right"><span class="font-label-badge text-label-badge font-bold text-text-primary">DR. ANANYA ROY</span><span class="font-label-telemetry text-label-telemetry text-text-secondary uppercase">NDRA LEAD GOVERNANCE REGISTRAR</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><aside class="fixed left-0 top-16 bottom-0 w-64 bg-surface-card border-r border-border-default z-30 flex flex-col justify-between overflow-y-auto"><div class="flex flex-col pt-space-4"><div class="px-space-4 pb-space-2"><span class="font-label-telemetry text-label-telemetry uppercase tracking-wider font-bold text-text-muted">ADMINISTRATION & AUDIT</span></div><nav class="flex flex-col gap-0.5 px-space-2" data-active-classes="bg-blue-soft text-primary font-bold border-r-2 border-primary"><a aria-current="page" class="flex items-center justify-between px-space-3 py-2 rounded transition-colors bg-blue-soft text-primary font-bold border-r-2 border-primary" data-path="dashboard" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">dashboard</span><span>Dashboard</span></div></a><a class="flex items-center justify-between px-space-3 py-2 rounded text-on-surface-variant hover:bg-surface-subtle hover:text-on-surface transition-colors font-body-md text-body-md" data-path="users" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">group</span><span>Users</span></div></a><a class="flex items-center justify-between px-space-3 py-2 rounded text-on-surface-variant hover:bg-surface-subtle hover:text-on-surface transition-colors font-body-md text-body-md" data-path="roles-permissions" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">admin_panel_settings</span><span>Roles & Permissions</span></div></a><a class="flex items-center justify-between px-space-3 py-2 rounded text-on-surface-variant hover:bg-surface-subtle hover:text-on-surface transition-colors font-body-md text-body-md" data-path="coordinators" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">badge</span><span>Coordinators</span></div></a><a class="flex items-center justify-between px-space-3 py-2 rounded text-on-surface-variant hover:bg-surface-subtle hover:text-on-surface transition-colors font-body-md text-body-md" data-path="responders-organizations" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">corporate_fare</span><span>Responders / Orgs</span></div></a><a class="flex items-center justify-between px-space-3 py-2 rounded text-on-surface-variant hover:bg-surface-subtle hover:text-on-surface transition-colors font-body-md text-body-md" data-path="verification" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">how_to_reg</span><span>Verification</span></div><span class="px-space-2 py-0.5 rounded-full bg-warning-bg border border-warning-border font-label-badge text-label-badge text-warning-text font-bold">5</span></a><a class="flex items-center justify-between px-space-3 py-2 rounded text-on-surface-variant hover:bg-surface-subtle hover:text-on-surface transition-colors font-body-md text-body-md" data-path="monitoring" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">monitor_heart</span><span>Monitoring</span></div></a><a class="flex items-center justify-between px-space-3 py-2 rounded text-on-surface-variant hover:bg-surface-subtle hover:text-on-surface transition-colors font-body-md text-body-md" data-path="analytics" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">analytics</span><span>Analytics</span></div></a><a class="flex items-center justify-between px-space-3 py-2 rounded text-on-surface-variant hover:bg-surface-subtle hover:text-on-surface transition-colors font-body-md text-body-md" data-path="announcements" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">campaign</span><span>Announcements</span></div></a><a class="flex items-center justify-between px-space-3 py-2 rounded text-on-surface-variant hover:bg-surface-subtle hover:text-on-surface transition-colors font-body-md text-body-md" data-path="audit-logs" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">history</span><span>Audit Logs</span></div></a><a class="flex items-center justify-between px-space-3 py-2 rounded text-on-surface-variant hover:bg-surface-subtle hover:text-on-surface transition-colors font-body-md text-body-md" data-path="configuration" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">settings</span><span>Configuration</span></div></a></nav></div><div class="p-space-3 border-t border-border-default flex flex-col gap-space-2 bg-surface-card"><div class="flex flex-col gap-0.5"><a class="flex items-center justify-between px-space-3 py-1.5 rounded text-on-surface-variant hover:bg-surface-subtle hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="notifications" href="#"><div class="flex items-center gap-space-2"><span class="material-symbols-outlined text-[18px]">notifications</span><span>Notifications</span></div><span class="px-1.5 py-0.5 rounded bg-primary text-on-primary font-label-telemetry text-label-telemetry font-bold">3</span></a><a class="flex items-center gap-space-2 px-space-3 py-1.5 rounded text-on-surface-variant hover:bg-surface-subtle hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="profile-security" href="#"><span class="material-symbols-outlined text-[18px]">shield</span><span>Profile & Security</span></a></div><div class="p-space-2 rounded bg-surface-subtle border border-border-default flex flex-col gap-0.5"><span class="font-label-telemetry text-label-telemetry text-text-muted uppercase font-bold">SECURE NODE CLUSTER</span><span class="font-data-mono-md text-data-mono-md text-text-secondary text-[11px] truncate">GOV-DC-CHANDIGARH-01</span><span class="font-label-telemetry text-label-telemetry text-success-text flex items-center gap-1 font-bold"><span class="w-1.5 h-1.5 rounded-full bg-success-text inline-block"></span>TLS 1.3 ENCRYPTED</span></div></div></aside><div class="pl-64"><main class="w-full min-h-screen pt-16 bg-surface-base px-gutter-expanded py-space-6"><div class="flex flex-col w-full">
+<!-- Top Command & Action Bar -->
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-4 pb-space-6">
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-space-2">
+<span class="px-space-2 py-0.5 rounded bg-blue-soft text-primary font-label-telemetry text-label-telemetry font-bold tracking-wider uppercase">ROOT DIRECTORY CONTROL</span>
+<span class="text-text-muted font-label-telemetry text-label-telemetry">•</span>
+<span class="font-label-telemetry text-label-telemetry text-text-secondary">SYS-TIME: 11:24:08 IST</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-text-primary uppercase tracking-tight">ADMINISTRATION DASHBOARD</h1>
+<p class="font-body-md text-body-md text-text-secondary">System health, credential verification queue, operational user directory, and cryptographic audit overview</p>
+</div>
+<div class="flex flex-wrap items-center gap-space-3">
+<button class="flex items-center gap-space-2 px-space-4 py-space-2 rounded bg-surface-card hover:bg-surface-subtle transition-colors shadow-sm text-text-primary font-headline-sm text-headline-sm text-[13px]" id="btn-audit-report" type="button">
+<span class="material-symbols-outlined text-[18px] text-text-secondary">download</span>
+<span>Download Audit Report</span>
+</button>
+<a class="flex items-center gap-space-2 px-space-4 py-space-2 rounded bg-primary-container hover:bg-primary text-on-primary transition-colors shadow-sm font-headline-sm text-headline-sm text-[13px]" data-path="announcements" href="#">
+<span class="material-symbols-outlined text-[18px]">campaign</span>
+<span>Manage Announcements</span>
+</a>
+</div>
+</div>
+<!-- Telemetry Metric Cards (4 Compact Bento Modules) -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-4 pb-space-6">
+<!-- Metric 1: Total Registered Users -->
+<div class="bg-surface-card rounded-xl p-space-4 shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-telemetry text-label-telemetry uppercase tracking-wider text-text-muted font-bold">TOTAL REGISTERED USERS</span>
+<div class="flex items-baseline gap-space-2 mt-space-1">
+<span class="font-display-hud-mobile text-display-hud-mobile text-text-primary">14,820</span>
+<span class="font-data-mono-md text-data-mono-md text-success-text flex items-center font-bold">
+<span class="material-symbols-outlined text-[14px]">trending_up</span>+28
+            </span>
+</div>
+</div>
+<div class="w-9 h-9 rounded-lg bg-blue-soft flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">groups</span>
+</div>
+</div>
+<div class="pt-space-3 mt-space-3 bg-surface-subtle -mx-space-4 -mb-space-4 px-space-4 py-space-2 flex items-center justify-between text-text-secondary font-label-telemetry text-label-telemetry">
+<span>14,210 Citizens</span>
+<span>184 Coord</span>
+<span>412 Resp</span>
+<span>14 Admin</span>
+</div>
+</div>
+<!-- Metric 2: Pending Verifications -->
+<div class="bg-surface-card rounded-xl p-space-4 shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-telemetry text-label-telemetry uppercase tracking-wider text-critical-text font-bold">VERIFICATION QUEUE</span>
+<div class="flex items-baseline gap-space-2 mt-space-1">
+<span class="font-display-hud-mobile text-display-hud-mobile text-critical-text">05</span>
+<span class="px-space-2 py-0.5 rounded bg-critical-bg text-critical-text font-label-badge text-label-badge font-bold">URGENT</span>
+</div>
+</div>
+<div class="w-9 h-9 rounded-lg bg-critical-bg flex items-center justify-center text-critical-text">
+<span class="material-symbols-outlined text-[20px]">how_to_reg</span>
+</div>
+</div>
+<div class="pt-space-3 mt-space-3 bg-surface-subtle -mx-space-4 -mb-space-4 px-space-4 py-space-2 flex items-center justify-between text-text-secondary font-label-telemetry text-label-telemetry">
+<span class="text-critical-text font-bold">2 Coordinators</span>
+<span class="text-warning-text font-bold">3 NGO / Responders</span>
+<span class="text-text-muted">SLA < 2h</span>
+</div>
+</div>
+<!-- Metric 3: Active Coordinators -->
+<div class="bg-surface-card rounded-xl p-space-4 shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-telemetry text-label-telemetry uppercase tracking-wider text-text-muted font-bold">ACTIVE COORDINATORS</span>
+<div class="flex items-baseline gap-space-2 mt-space-1">
+<span class="font-display-hud-mobile text-display-hud-mobile text-text-primary">184</span>
+<span class="font-label-badge text-label-badge px-1.5 py-0.5 rounded bg-success-bg text-success-text font-bold">100% ONLINE</span>
+</div>
+</div>
+<div class="w-9 h-9 rounded-lg bg-blue-soft flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">badge</span>
+</div>
+</div>
+<div class="pt-space-3 mt-space-3 bg-surface-subtle -mx-space-4 -mb-space-4 px-space-4 py-space-2 flex items-center justify-between text-text-secondary font-label-telemetry text-label-telemetry">
+<span>22 District EOC Hubs</span>
+<span class="text-success-text font-bold">Zero Session Drift</span>
+</div>
+</div>
+<!-- Metric 4: Accredited Responders & NGOs -->
+<div class="bg-surface-card rounded-xl p-space-4 shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-telemetry text-label-telemetry uppercase tracking-wider text-text-muted font-bold">ACCREDITED UNITS & NGOS</span>
+<div class="flex items-baseline gap-space-2 mt-space-1">
+<span class="font-display-hud-mobile text-display-hud-mobile text-text-primary">412</span>
+<span class="font-body-sm text-body-sm text-text-secondary">Formations</span>
+</div>
+</div>
+<div class="w-9 h-9 rounded-lg bg-blue-soft flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">corporate_fare</span>
+</div>
+</div>
+<div class="pt-space-3 mt-space-3 bg-surface-subtle -mx-space-4 -mb-space-4 px-space-4 py-space-2 flex items-center justify-between text-text-secondary font-label-telemetry text-label-telemetry">
+<span>38 Relief NGOs</span>
+<span class="font-data-mono-md text-[11px] text-text-primary font-bold">374 Civil Def / NDRF</span>
+</div>
+</div>
+</div>
+<!-- Operational Core Split: 65% Primary Console | 35% System Telemetry & Health -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-6 items-start">
+<!-- LEFT PANEL (Col 1-8 / approx 65%) -->
+<div class="lg:col-span-8 flex flex-col gap-space-6 min-w-0">
+<!-- Critical Verification Priority Queue -->
+<section class="bg-surface-card rounded-xl shadow-sm p-space-5 flex flex-col gap-space-4">
+<div class="flex items-center justify-between flex-wrap gap-space-2">
+<div class="flex items-center gap-space-3">
+<div class="w-8 h-8 rounded bg-critical-bg flex items-center justify-center text-critical-text">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-2">
+<h2 class="font-headline-md text-headline-md text-text-primary">Verification Priority Queue</h2>
+<span class="px-space-2 py-0.5 rounded-full bg-critical-bg text-critical-text font-label-badge text-label-badge">5 PENDING ACTION</span>
+</div>
+<span class="font-body-sm text-body-sm text-text-secondary">Cryptographic credentials requiring NDRA registrar elevation signoff</span>
+</div>
+</div>
+<span class="font-label-telemetry text-label-telemetry text-text-muted">SLA THRESHOLD: 240 MIN</span>
+</div>
+<!-- Queue Cards List -->
+<div class="flex flex-col gap-space-3">
+<!-- Queue Item 1 -->
+<div class="bg-surface-base hover:bg-surface-subtle transition-all rounded-lg p-space-4 flex flex-col sm:flex-row sm:items-center justify-between gap-space-3">
+<div class="flex items-start gap-space-3 min-w-0">
+<div class="w-10 h-10 rounded-full bg-blue-soft flex items-center justify-center text-primary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">badge</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-2 flex-wrap">
+<span class="font-headline-sm text-headline-sm text-text-primary truncate">Vikram Malhotra</span>
+<span class="px-space-2 py-0.5 rounded bg-blue-soft text-primary font-label-badge text-label-badge">EOC COORDINATOR INTAKE</span>
+<span class="px-space-2 py-0.5 rounded bg-success-bg text-success-text font-label-telemetry text-label-telemetry font-bold">GOV-ID VALID</span>
+</div>
+<div class="flex items-center gap-space-3 text-text-secondary font-body-sm text-body-sm mt-0.5 flex-wrap">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">pin_drop</span>Kamrup District SDMA (Assam)</span>
+<span>•</span>
+<span class="font-data-mono-md text-[12px]">EMP: #SDMA-KM-8911</span>
+<span>•</span>
+<span class="text-critical-text font-label-telemetry text-label-telemetry font-bold">Awaiting Super-Admin Signoff</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-2 shrink-0 self-end sm:self-center">
+<button class="px-space-3 py-1.5 rounded bg-primary-container hover:bg-primary text-on-primary font-headline-sm text-headline-sm text-[12px] transition-colors flex items-center gap-1 shadow-sm" type="button">
+<span>Review Credential</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Queue Item 2 -->
+<div class="bg-surface-base hover:bg-surface-subtle transition-all rounded-lg p-space-4 flex flex-col sm:flex-row sm:items-center justify-between gap-space-3">
+<div class="flex items-start gap-space-3 min-w-0">
+<div class="w-10 h-10 rounded-full bg-warning-bg flex items-center justify-center text-warning-text shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">corporate_fare</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-2 flex-wrap">
+<span class="font-headline-sm text-headline-sm text-text-primary truncate">ActionAid / Red Cross Relief Charter</span>
+<span class="px-space-2 py-0.5 rounded bg-warning-bg text-warning-text font-label-badge text-label-badge">NGO ACCREDITATION</span>
+<span class="px-space-2 py-0.5 rounded bg-success-bg text-success-text font-label-telemetry text-label-telemetry font-bold">FCRA 80G COMPLIANT</span>
+</div>
+<div class="flex items-center gap-space-3 text-text-secondary font-body-sm text-body-sm mt-0.5 flex-wrap">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">directions_car</span>8 Ambulances Declared</span>
+<span>•</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">assignment_turned_in</span>Requisition Capability Staged</span>
+<span>•</span>
+<span class="font-data-mono-md text-[12px]">REG: #DL-NGO-2023-401</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-2 shrink-0 self-end sm:self-center">
+<button class="px-space-3 py-1.5 rounded bg-surface-card hover:bg-blue-soft text-primary font-headline-sm text-headline-sm text-[12px] transition-colors flex items-center gap-1 shadow-sm" type="button">
+<span>Review Filing</span>
+<span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</button>
+</div>
+</div>
+<!-- Queue Item 3 -->
+<div class="bg-surface-base hover:bg-surface-subtle transition-all rounded-lg p-space-4 flex flex-col sm:flex-row sm:items-center justify-between gap-space-3">
+<div class="flex items-start gap-space-3 min-w-0">
+<div class="w-10 h-10 rounded-full bg-blue-soft flex items-center justify-center text-primary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">shield_with_heart</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-2 flex-wrap">
+<span class="font-headline-sm text-headline-sm text-text-primary truncate">SDRF Quick Response Unit 4</span>
+<span class="px-space-2 py-0.5 rounded bg-blue-soft text-primary font-label-badge text-label-badge">TACTICAL RESPONDER FLEET</span>
+</div>
+<div class="flex items-center gap-space-3 text-text-secondary font-body-sm text-body-sm mt-0.5 flex-wrap">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">groups</span>18 Personnel Roster</span>
+<span>•</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">home_repair_service</span>USAR Level 1</span>
+<span>•</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">sailing</span>2 Motorized Dinghies</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-2 shrink-0 self-end sm:self-center">
+<button class="px-space-3 py-1.5 rounded bg-surface-card hover:bg-blue-soft text-primary font-headline-sm text-headline-sm text-[12px] transition-colors flex items-center gap-1 shadow-sm" type="button">
+<span>Review Roster</span>
+<span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</button>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-2">
+<span class="font-label-telemetry text-label-telemetry text-text-muted uppercase">Displaying 3 of 5 actionable dossiers</span>
+<a class="text-primary hover:text-on-primary-fixed-variant font-headline-sm text-headline-sm text-[13px] flex items-center gap-1 transition-colors" data-path="verification" href="#">
+<span>View all 5 pending verification records</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</section>
+<!-- System Activity & Cryptographic Audit Log Stream -->
+<section class="bg-surface-card rounded-xl shadow-sm p-space-5 flex flex-col gap-space-4">
+<div class="flex items-center justify-between flex-wrap gap-space-2">
+<div class="flex items-center gap-space-3">
+<div class="w-8 h-8 rounded bg-blue-soft flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+</div>
+<div class="flex flex-col">
+<h2 class="font-headline-md text-headline-md text-text-primary">Immutable Audit Stream</h2>
+<span class="font-body-sm text-body-sm text-text-secondary">Chronological ledger of administrative approvals & system dispatches</span>
+</div>
+</div>
+<div class="flex items-center gap-space-2">
+<span class="w-2 h-2 rounded-full bg-success-text animate-pulse"></span>
+<span class="font-label-telemetry text-label-telemetry text-success-text font-bold uppercase">LIVE FEED</span>
+</div>
+</div>
+<!-- Chronological Feed Rows -->
+<div class="flex flex-col gap-space-2">
+<!-- Event 1 -->
+<div class="flex items-start gap-space-3 p-space-3 rounded-lg bg-surface-base hover:bg-surface-subtle transition-colors">
+<div class="px-space-2 py-1 rounded bg-surface-card font-data-mono-md text-[11px] text-text-secondary font-bold shrink-0">
+              10:48 AM
+            </div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center gap-space-2 flex-wrap">
+<span class="font-label-badge text-label-badge text-primary uppercase font-bold">CREDENTIAL ELEVATION</span>
+<span class="text-text-muted">•</span>
+<span class="font-body-sm text-body-sm text-text-primary">Admin <strong class="font-bold">Dr. Ananya Roy</strong> approved security certificate elevation for Coordinator Vikram Malhotra.</span>
+</div>
+<span class="font-label-telemetry text-label-telemetry text-text-muted mt-0.5 truncate">HASH: 8f92cb71a39d09c12de4459f • TARGET: EOC-KM-01</span>
+</div>
+<span class="material-symbols-outlined text-success-text text-[18px] shrink-0">check_circle</span>
+</div>
+<!-- Event 2 -->
+<div class="flex items-start gap-space-3 p-space-3 rounded-lg bg-surface-base hover:bg-surface-subtle transition-colors">
+<div class="px-space-2 py-1 rounded bg-surface-card font-data-mono-md text-[11px] text-text-secondary font-bold shrink-0">
+              10:15 AM
+            </div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center gap-space-2 flex-wrap">
+<span class="font-label-badge text-label-badge text-warning-text uppercase font-bold">AUTHORIZATION REQ</span>
+<span class="text-text-muted">•</span>
+<span class="font-body-sm text-body-sm text-text-primary">NGO Charter <strong class="font-bold">CH-2021-994</strong> submitted Level-2 Disaster Campaign deployment request.</span>
+</div>
+<span class="font-label-telemetry text-label-telemetry text-text-muted mt-0.5 truncate">HASH: 33a218fbd0291eec • SCOPE: Urban Flood Rel-Zone 4</span>
+</div>
+<span class="material-symbols-outlined text-warning-text text-[18px] shrink-0">pending</span>
+</div>
+<!-- Event 3 -->
+<div class="flex items-start gap-space-3 p-space-3 rounded-lg bg-surface-base hover:bg-surface-subtle transition-colors">
+<div class="px-space-2 py-1 rounded bg-surface-card font-data-mono-md text-[11px] text-text-secondary font-bold shrink-0">
+              09:30 AM
+            </div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center gap-space-2 flex-wrap">
+<span class="font-label-badge text-label-badge text-primary uppercase font-bold">CAP BROADCAST</span>
+<span class="text-text-muted">•</span>
+<span class="font-body-sm text-body-sm text-text-primary">Broadcast Gateway synced geo-fenced monsoon flash flood advisory for <strong class="font-bold">Zone 1 (Brahmaputra Basin)</strong>.</span>
+</div>
+<span class="font-label-telemetry text-label-telemetry text-text-muted mt-0.5 truncate">CARRIERS: AIRTEL / JIO / BSNL CELL-BROADCAST • AUDIENCE: 84,200</span>
+</div>
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0">cell_tower</span>
+</div>
+<!-- Event 4 -->
+<div class="flex items-start gap-space-3 p-space-3 rounded-lg bg-surface-base hover:bg-surface-subtle transition-colors">
+<div class="px-space-2 py-1 rounded bg-surface-card font-data-mono-md text-[11px] text-text-secondary font-bold shrink-0">
+              08:00 AM
+            </div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center gap-space-2 flex-wrap">
+<span class="font-label-badge text-label-badge text-success-text uppercase font-bold">INTEGRITY SNAPSHOT</span>
+<span class="text-text-muted">•</span>
+<span class="font-body-sm text-body-sm text-text-primary">Daily automated database cryptographic block snapshot verified. Zero anomalies detected.</span>
+</div>
+<span class="font-label-telemetry text-label-telemetry text-text-muted mt-0.5 truncate">SHA-256: 0e7fa419b88301c2ab4401e912440b8a1c4df82173</span>
+</div>
+<span class="material-symbols-outlined text-success-text text-[18px] shrink-0">verified_user</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-2">
+<span class="font-label-telemetry text-label-telemetry text-text-muted">RETENTION: 365 DAYS IMMUTABLE WORM REPOSITORY</span>
+<a class="text-primary hover:text-on-primary-fixed-variant font-headline-sm text-headline-sm text-[13px] flex items-center gap-1 transition-colors" data-path="audit-logs" href="#">
+<span>Explore full audit log ledger</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</section>
+<!-- Tactical Geographic EOC Operations Snapshot -->
+<section class="bg-surface-card rounded-xl shadow-sm p-space-5 flex flex-col gap-space-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-3">
+<div class="w-8 h-8 rounded bg-blue-soft flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">map</span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-text-primary">Active Command EOC Hubs & Coverage</h2>
+<p class="font-body-sm text-body-sm text-text-secondary">High-readiness civil defense dispatch zones under current administration</p>
+</div>
+</div>
+<span class="px-space-2 py-1 rounded bg-surface-subtle font-label-telemetry text-label-telemetry text-text-secondary font-bold">22 HUBS ACTIVE</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-3">
+<div class="p-space-3 rounded-lg bg-surface-base flex flex-col justify-between gap-space-2">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-headline-sm text-headline-sm text-text-primary">Chandigarh Head EOC</span>
+<p class="font-label-telemetry text-label-telemetry text-text-secondary uppercase">SECTOR 17 HUB</p>
+</div>
+<span class="w-2 h-2 rounded-full bg-success-text"></span>
+</div>
+<div class="flex items-center justify-between font-label-telemetry text-label-telemetry pt-space-1">
+<span class="text-text-muted">LOAD: 14%</span>
+<span class="font-data-mono-md text-[11px] text-text-primary font-bold">48 RESPONDERS</span>
+</div>
+</div>
+<div class="p-space-3 rounded-lg bg-surface-base flex flex-col justify-between gap-space-2">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-headline-sm text-headline-sm text-text-primary">Kamrup SDMA Center</span>
+<p class="font-label-telemetry text-label-telemetry text-warning-text uppercase">MONSOON DEFENSE</p>
+</div>
+<span class="w-2 h-2 rounded-full bg-warning-text animate-ping"></span>
+</div>
+<div class="flex items-center justify-between font-label-telemetry text-label-telemetry pt-space-1">
+<span class="text-warning-text font-bold">LOAD: 72%</span>
+<span class="font-data-mono-md text-[11px] text-text-primary font-bold">112 RESPONDERS</span>
+</div>
+</div>
+<div class="p-space-3 rounded-lg bg-surface-base flex flex-col justify-between gap-space-2">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-headline-sm text-headline-sm text-text-primary">Ernakulam Coastal EOC</span>
+<p class="font-label-telemetry text-label-telemetry text-text-secondary uppercase">HIGH TIDE MONITOR</p>
+</div>
+<span class="w-2 h-2 rounded-full bg-success-text"></span>
+</div>
+<div class="flex items-center justify-between font-label-telemetry text-label-telemetry pt-space-1">
+<span class="text-text-muted">LOAD: 31%</span>
+<span class="font-data-mono-md text-[11px] text-text-primary font-bold">64 RESPONDERS</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- RIGHT PANEL (Col 9-12 / approx 35%) -->
+<div class="lg:col-span-4 flex flex-col gap-space-6 min-w-0">
+<!-- Critical Directive Alert Box (CAP-Aligned) -->
+<div class="bg-warning-bg rounded-xl p-space-4 shadow-sm flex flex-col gap-space-2 relative overflow-hidden">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-2">
+<span class="material-symbols-outlined text-warning-text text-[20px]">crisis_alert</span>
+<span class="font-headline-sm text-headline-sm text-warning-text uppercase">MONSOON PROTOCOL L2</span>
+</div>
+<span class="px-space-2 py-0.5 rounded bg-surface-card text-warning-text font-label-telemetry text-label-telemetry font-bold">ACTIVE</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-primary">
+          Disaster management alert gateway is armed under National Monsoon Protocol Level 2. All emergency CAP mass announcements enforce mandatory <strong>dual-operator verification</strong>.
+        </p>
+<div class="flex items-center justify-between pt-space-2 font-label-telemetry text-label-telemetry text-text-secondary">
+<span>OPERATOR: SDMA-APEX-01</span>
+<span class="text-text-primary font-bold">CHANDIGARH NODE</span>
+</div>
+</div>
+<!-- Platform Health & Service Status Subsystem -->
+<section class="bg-surface-card rounded-xl shadow-sm p-space-5 flex flex-col gap-space-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-2">
+<span class="material-symbols-outlined text-primary text-[20px]">monitor_heart</span>
+<h2 class="font-headline-md text-headline-md text-text-primary">Platform Status</h2>
+</div>
+<span class="px-space-2 py-0.5 rounded bg-success-bg text-success-text font-label-telemetry text-label-telemetry font-bold">ALL SYSTEMS HEALTHY</span>
+</div>
+<!-- Service Item List -->
+<div class="flex flex-col gap-space-3">
+<div class="flex items-center justify-between p-space-2 rounded bg-surface-base">
+<div class="flex items-center gap-space-2">
+<span class="w-2 h-2 rounded-full bg-success-text"></span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-[13px] text-text-primary">Authentication Service</span>
+<span class="font-label-telemetry text-label-telemetry text-text-muted">OIDC Zero Trust • mTLS Active</span>
+</div>
+</div>
+<div class="flex flex-col text-right">
+<span class="font-data-mono-md text-[12px] text-success-text font-bold">ONLINE</span>
+<span class="font-label-telemetry text-label-telemetry text-text-secondary">12ms • 99.99%</span>
+</div>
+</div>
+<div class="flex items-center justify-between p-space-2 rounded bg-surface-base">
+<div class="flex items-center gap-space-2">
+<span class="w-2 h-2 rounded-full bg-success-text"></span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-[13px] text-text-primary">CAP Broadcast Gateway</span>
+<span class="font-label-telemetry text-label-telemetry text-text-muted">SMS / Cell-Broadcast Interface</span>
+</div>
+</div>
+<div class="flex flex-col text-right">
+<span class="font-data-mono-md text-[12px] text-success-text font-bold">ACTIVE</span>
+<span class="font-label-telemetry text-label-telemetry text-text-secondary">4 Carrier Pipes</span>
+</div>
+</div>
+<div class="flex items-center justify-between p-space-2 rounded bg-surface-base">
+<div class="flex items-center gap-space-2">
+<span class="w-2 h-2 rounded-full bg-success-text"></span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-[13px] text-text-primary">GIS Tactical Map Tiles</span>
+<span class="font-label-telemetry text-label-telemetry text-text-muted">Vector Geo-Cluster Engine</span>
+</div>
+</div>
+<div class="flex flex-col text-right">
+<span class="font-data-mono-md text-[12px] text-success-text font-bold">NOMINAL</span>
+<span class="font-label-telemetry text-label-telemetry text-text-secondary">0.8s Render Latency</span>
+</div>
+</div>
+<div class="flex items-center justify-between p-space-2 rounded bg-surface-base">
+<div class="flex items-center gap-space-2">
+<span class="w-2 h-2 rounded-full bg-success-text"></span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-[13px] text-text-primary">Mesh Gateway Relays</span>
+<span class="font-label-telemetry text-label-telemetry text-text-muted">LoRaWAN Fallback Uplinks</span>
+</div>
+</div>
+<div class="flex flex-col text-right">
+<span class="font-data-mono-md text-[12px] text-text-primary font-bold">18 SYNCED</span>
+<span class="font-label-telemetry text-label-telemetry text-text-secondary">Sec 17 / Mohali Hub</span>
+</div>
+</div>
+<div class="flex items-center justify-between p-space-2 rounded bg-surface-base">
+<div class="flex items-center gap-space-2">
+<span class="w-2 h-2 rounded-full bg-success-text"></span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-[13px] text-text-primary">PostgreSQL Read Replicas</span>
+<span class="font-label-telemetry text-label-telemetry text-text-muted">High Availability Geo-Pair</span>
+</div>
+</div>
+<div class="flex flex-col text-right">
+<span class="font-data-mono-md text-[12px] text-success-text font-bold">3 / 3 OK</span>
+<span class="font-label-telemetry text-label-telemetry text-text-secondary">Lag: <1.2ms</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Operational Role Distribution Summary Card -->
+<section class="bg-surface-card rounded-xl shadow-sm p-space-5 flex flex-col gap-space-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-2">
+<span class="material-symbols-outlined text-primary text-[20px]">pie_chart</span>
+<h2 class="font-headline-md text-headline-md text-text-primary">Role Distribution</h2>
+</div>
+<span class="font-data-mono-md text-data-mono-md text-text-secondary">14,820 Total</span>
+</div>
+<!-- Visual Segmented Bar -->
+<div class="w-full flex h-3 rounded-full overflow-hidden bg-surface-subtle">
+<div class="bg-primary hover:opacity-90 transition-opacity" style="width: 95.8%" title="Citizens: 95.8%"></div>
+<div class="bg-primary-container hover:opacity-90 transition-opacity" style="width: 2.8%" title="Responders: 2.8%"></div>
+<div class="bg-secondary hover:opacity-90 transition-opacity" style="width: 1.2%" title="Coordinators: 1.2%"></div>
+<div class="bg-critical-text hover:opacity-90 transition-opacity" style="width: 0.2%" title="Admins: 0.1%"></div>
+</div>
+<!-- Legend breakdown -->
+<div class="grid grid-cols-2 gap-space-3 pt-space-1">
+<div class="flex items-center gap-space-2">
+<span class="w-3 h-3 rounded-sm bg-primary shrink-0"></span>
+<div class="flex flex-col min-w-0">
+<span class="font-body-sm text-body-sm text-text-secondary">Citizens</span>
+<span class="font-data-mono-md text-data-mono-md text-text-primary font-bold">14,210 (95.8%)</span>
+</div>
+</div>
+<div class="flex items-center gap-space-2">
+<span class="w-3 h-3 rounded-sm bg-primary-container shrink-0"></span>
+<div class="flex flex-col min-w-0">
+<span class="font-body-sm text-body-sm text-text-secondary">Responders</span>
+<span class="font-data-mono-md text-data-mono-md text-text-primary font-bold">412 (2.8%)</span>
+</div>
+</div>
+<div class="flex items-center gap-space-2">
+<span class="w-3 h-3 rounded-sm bg-secondary shrink-0"></span>
+<div class="flex flex-col min-w-0">
+<span class="font-body-sm text-body-sm text-text-secondary">Coordinators</span>
+<span class="font-data-mono-md text-data-mono-md text-text-primary font-bold">184 (1.2%)</span>
+</div>
+</div>
+<div class="flex items-center gap-space-2">
+<span class="w-3 h-3 rounded-sm bg-critical-text shrink-0"></span>
+<div class="flex flex-col min-w-0">
+<span class="font-body-sm text-body-sm text-text-secondary">Admins</span>
+<span class="font-data-mono-md text-data-mono-md text-text-primary font-bold">14 (0.1%)</span>
+</div>
+</div>
+</div>
+<div class="p-space-3 rounded-lg bg-surface-base flex items-center justify-between text-text-secondary">
+<span class="font-body-sm text-body-sm">Zero-Trust Directory Sync</span>
+<span class="font-label-telemetry text-label-telemetry text-success-text font-bold">SYNCHRONIZED</span>
+</div>
+</section>
+<!-- Quick Action Utilities Box -->
+<div class="p-space-4 rounded-xl bg-blue-soft flex flex-col gap-space-3">
+<div class="flex items-center gap-space-2">
+<span class="material-symbols-outlined text-primary text-[20px]">admin_panel_settings</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">Governance Direct Access</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary">
+          Execute fast key rotations, access privilege audits, or bulk verify civic volunteer batches.
+        </p>
+<div class="grid grid-cols-2 gap-space-2">
+<a class="flex items-center justify-center gap-1 py-2 px-space-2 rounded bg-surface-card hover:bg-surface-subtle text-text-primary font-headline-sm text-headline-sm text-[12px] shadow-sm transition-colors text-center" data-path="roles-permissions" href="#">
+<span class="material-symbols-outlined text-[16px]">lock_reset</span>
+<span>Role Matrix</span>
+</a>
+<a class="flex items-center justify-center gap-1 py-2 px-space-2 rounded bg-surface-card hover:bg-surface-subtle text-text-primary font-headline-sm text-headline-sm text-[12px] shadow-sm transition-colors text-center" data-path="configuration" href="#">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+<span>Sys Config</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Micro-interaction for Audit Report Button -->
+<script>
+    document.getElementById('btn-audit-report')?.addEventListener('click', function() {
+      const originalText = this.innerHTML;
+      this.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">refresh</span><span>Compiling SHA-256 Ledger...</span>';
+      this.classList.add('opacity-75');
+      setTimeout(() => {
+        this.innerHTML = '<span class="material-symbols-outlined text-[18px] text-success-text">check_circle</span><span>Report Ready (PDF)</span>';
+        setTimeout(() => {
+          this.innerHTML = originalText;
+          this.classList.remove('opacity-75');
+        }, 2500);
+      }, 1000);
+    });
+  </script>
+</div></main></div></body></html>

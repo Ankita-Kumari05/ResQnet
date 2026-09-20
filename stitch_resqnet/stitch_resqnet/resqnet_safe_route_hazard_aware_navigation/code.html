@@ -1,0 +1,566 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { 'colors': { 'surface-variant': '#d3e4fe', 'surface-dim': '#cbdbf5', 'primary-fixed-dim': '#bec6e0', 'on-primary-fixed-variant': '#3f465c', 'surface-container-highest': '#d3e4fe', 'on-tertiary-container': '#f63a35', 'inverse-on-surface': '#eaf1ff', 'secondary': '#006398', 'error': '#ba1a1a', 'on-primary': '#ffffff', 'background': '#f8f9ff', 'secondary-fixed-dim': '#93ccff', 'on-surface': '#0b1c30', 'secondary-container': '#5bb8fe', 'tertiary': '#000000', 'on-primary-container': '#7c839b', 'on-tertiary-fixed': '#410002', 'inverse-primary': '#bec6e0', 'error-container': '#ffdad6', 'primary-container': '#131b2e', 'tertiary-fixed-dim': '#ffb4ab', 'surface-tint': '#565e74', 'on-surface-variant': '#45464d', 'tertiary-container': '#410002', 'on-tertiary': '#ffffff', 'on-secondary-fixed-variant': '#004b73', 'on-error': '#ffffff', 'surface': '#f8f9ff', 'surface-container-high': '#dce9ff', 'on-background': '#0b1c30', 'primary': '#000000', 'tertiary-fixed': '#ffdad6', 'on-tertiary-fixed-variant': '#93000b', 'on-error-container': '#93000a', 'on-primary-fixed': '#131b2e', 'outline-variant': '#c6c6cd', 'on-secondary-container': '#00476e', 'outline': '#76777d', 'on-secondary-fixed': '#001d31', 'surface-container-low': '#eff4ff', 'on-secondary': '#ffffff', 'secondary-fixed': '#cce5ff', 'surface-container-lowest': '#ffffff', 'primary-fixed': '#dae2fd', 'surface-container': '#e5eeff', 'inverse-surface': '#213145', 'surface-bright': '#f8f9ff' }, 'borderRadius': { 'DEFAULT': '0.125rem', 'lg': '0.25rem', 'xl': '0.5rem', 'full': '0.75rem' }, 'spacing': { 'gutter-dense': '8px', 'margin-mobile': '16px', 'space-6': '24px', 'space-3': '12px', 'space-16': '64px', 'space-10': '40px', 'space-2': '8px', 'space-0': '0px', 'gutter-expanded': '24px', 'space-12': '48px', 'space-5': '20px', 'gutter-standard': '16px', 'margin-desktop': '32px', 'space-1': '4px', 'space-8': '32px', 'margin-tablet': '24px', 'space-4': '16px' }, 'fontFamily': { 'headline-xl': ['Public Sans'], 'label-telemetry': ['JetBrains Mono'], 'headline-lg': ['Public Sans'], 'body-lg': ['Public Sans'], 'label-badge': ['Public Sans'], 'headline-md': ['Public Sans'], 'display-hud': ['JetBrains Mono'], 'data-mono-lg': ['JetBrains Mono'], 'data-mono-md': ['JetBrains Mono'], 'body-sm': ['Public Sans'], 'headline-xl-mobile': ['Public Sans'], 'headline-sm': ['Public Sans'], 'display-hud-mobile': ['JetBrains Mono'], 'body-md': ['Public Sans'] }, 'fontSize': { 'headline-xl': ['36px', { 'lineHeight': '44px', 'letterSpacing': '-0.025em', 'fontWeight': '700' }], 'label-telemetry': ['10px', { 'lineHeight': '12px', 'letterSpacing': '0.08em', 'fontWeight': '500' }], 'headline-lg': ['28px', { 'lineHeight': '36px', 'letterSpacing': '-0.02em', 'fontWeight': '700' }], 'body-lg': ['16px', { 'lineHeight': '24px', 'letterSpacing': '0em', 'fontWeight': '400' }], 'label-badge': ['11px', { 'lineHeight': '14px', 'letterSpacing': '0.06em', 'fontWeight': '700' }], 'headline-md': ['20px', { 'lineHeight': '28px', 'letterSpacing': '-0.01em', 'fontWeight': '600' }], 'display-hud': ['48px', { 'lineHeight': '52px', 'letterSpacing': '-0.04em', 'fontWeight': '700' }], 'data-mono-lg': ['18px', { 'lineHeight': '24px', 'letterSpacing': '-0.01em', 'fontWeight': '600' }], 'data-mono-md': ['13px', { 'lineHeight': '18px', 'letterSpacing': '0em', 'fontWeight': '500' }], 'body-sm': ['12px', { 'lineHeight': '16px', 'letterSpacing': '0.01em', 'fontWeight': '400' }], 'headline-xl-mobile': ['26px', { 'lineHeight': '32px', 'letterSpacing': '-0.02em', 'fontWeight': '700' }], 'headline-sm': ['16px', { 'lineHeight': '24px', 'letterSpacing': '0em', 'fontWeight': '600' }], 'display-hud-mobile': ['32px', { 'lineHeight': '36px', 'letterSpacing': '-0.03em', 'fontWeight': '700' }], 'body-md': ['14px', { 'lineHeight': '20px', 'letterSpacing': '0em', 'fontWeight': '400' }] } } } };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface min-h-screen"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest border-b border-surface-container"><div class="h-16 w-full px-gutter-expanded flex items-center justify-between gap-space-4"><div class="flex items-center gap-space-3"><a class="flex items-center justify-center p-space-2 rounded bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="citizen-dashboard" href="#" title="Back to Dashboard"><span class="material-symbols-outlined text-[20px]">arrow_back</span></a><div class="flex items-center gap-space-2"><div class="w-8 h-8 rounded bg-secondary flex items-center justify-center text-on-secondary shadow-sm"><span class="material-symbols-outlined text-[20px]">crisis_alert</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm font-bold tracking-tight text-on-surface leading-none">ResQnet</span><span class="font-label-telemetry text-label-telemetry uppercase text-secondary tracking-widest">Citizen Portal</span></div></div></div><div class="hidden md:flex flex-1 max-w-md mx-space-4"><div class="relative w-full flex items-center"><span class="material-symbols-outlined absolute left-space-3 text-outline text-[18px]">search</span><input class="w-full bg-surface-container-low pl-space-10 pr-space-4 py-space-2 text-on-surface placeholder:text-outline rounded border border-surface-container focus:outline-none focus:border-secondary font-body-sm text-body-sm transition-colors" placeholder="Search emergency shelters, warnings, SOS..." type="text"></div></div><div class="flex items-center gap-space-4"><div class="hidden sm:flex items-center gap-space-2 bg-error-container text-on-error-container px-space-3 py-space-1 rounded border border-tertiary-fixed-dim"><span class="material-symbols-outlined text-[16px] text-error">emergency</span><span class="font-label-telemetry text-label-telemetry font-bold">112 / 1078</span><span class="font-body-sm text-body-sm text-on-error-container hidden lg:inline">HELPLINE</span></div><div class="flex items-center gap-space-2 bg-surface-container-low px-space-3 py-space-1 rounded border border-surface-container"><span class="material-symbols-outlined text-secondary text-[16px]">verified</span><div class="flex flex-col text-left"><span class="font-headline-sm text-[12px] font-semibold text-on-surface leading-tight">Simran Kaur</span><span class="font-label-telemetry text-label-telemetry text-on-surface-variant">VERIFIED CITIZEN</span></div></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 pb-space-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Operational Telemetry Bar -->
+<aside aria-label="System operational status" class="w-full bg-surface-container-low px-gutter-expanded py-space-2 flex flex-wrap items-center justify-between gap-space-2">
+<div class="flex items-center gap-space-3">
+<span class="inline-flex items-center gap-space-1 px-space-2 py-0.5 rounded-full bg-secondary text-on-secondary font-label-telemetry text-label-telemetry uppercase tracking-wider">
+<span class="w-1.5 h-1.5 rounded-full bg-on-secondary animate-ping"></span>
+        Live Grid Sync
+      </span>
+<p class="font-body-sm text-body-sm text-on-surface">
+        Operational Sync: Route computed via Chandigarh SDMA flood gauges and SDRF sector patrols.
+      </p>
+</div>
+<div class="flex items-center gap-space-4 font-label-telemetry text-label-telemetry text-on-surface-variant">
+<span>REFRESH: T-04s</span>
+<span class="text-error font-semibold flex items-center gap-space-1">
+<span class="material-symbols-outlined text-[14px]">block</span> MADHYA MARG UNDERPASS CLOSED
+      </span>
+</div>
+</aside>
+<!-- Interactive Map Canvas + Floating Overlay Split Frame -->
+<section class="relative w-full h-[calc(100vh-8rem)] min-h-[640px] overflow-hidden bg-surface-container">
+<!-- Vector Map Layer (Tactical Chandigarh Sector Layout) -->
+<div class="absolute inset-0 w-full h-full select-none" id="vector-map-viewport">
+<svg class="w-full h-full object-cover" preserveAspectRatio="xMidYMid slice" viewBox="0 0 1440 900" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="48" id="urbanGrid" patternUnits="userSpaceOnUse" width="48">
+<path d="M 48 0 L 0 0 0 48" fill="none" stroke="#d3e4fe" stroke-opacity="0.45" stroke-width="0.75"></path>
+</pattern>
+<filter height="140%" id="routeGlow" width="140%" x="-20%" y="-20%">
+<feDropShadow dx="0" dy="2" flood-color="#006398" flood-opacity="0.25" stdDeviation="4"></feDropShadow>
+</filter>
+<filter height="140%" id="dangerGlow" width="140%" x="-20%" y="-20%">
+<feDropShadow dx="0" dy="1" flood-color="#ba1a1a" flood-opacity="0.2" stdDeviation="3"></feDropShadow>
+</filter>
+</defs>
+<!-- Base Canvas & Sector Land Plots -->
+<rect fill="#f0f4fd" height="900" width="1440"></rect>
+<rect fill="url(#urbanGrid)" height="900" width="1440"></rect>
+<!-- Sector Zones Chandigarh Grid -->
+<g fill="#ffffff" id="sector-blocks" stroke="#dce9ff" stroke-width="1.5">
+<!-- Sector 12 (PGIMER Area) -->
+<rect class="transition-colors hover:fill-surface-container-lowest" height="150" rx="8" width="280" x="740" y="80"></rect>
+<!-- Sector 11 -->
+<rect height="150" rx="8" width="280" x="1050" y="80"></rect>
+<!-- Sector 16 -->
+<rect height="170" rx="8" width="280" x="740" y="270"></rect>
+<!-- Sector 15 -->
+<rect height="170" rx="8" width="280" x="1050" y="270"></rect>
+<!-- Sector 17 (City Centre - Origin Area) -->
+<rect fill="#eff4ff" height="180" rx="8" width="280" x="740" y="480"></rect>
+<!-- Sector 22 (Incident Area) -->
+<rect height="180" rx="8" width="280" x="420" y="480"></rect>
+<!-- Sector 23 -->
+<rect height="170" rx="8" width="280" x="420" y="270"></rect>
+<!-- Sector 10 (Museum & Parklands) -->
+<rect height="150" rx="8" width="280" x="420" y="80"></rect>
+</g>
+<!-- Waterbody / Leisure Valley Green Strip -->
+<path d="M 380 0 C 370 200, 400 450, 370 700 C 350 850, 390 900, 390 900 L 330 900 C 330 900, 300 750, 320 500 C 340 300, 310 100, 320 0 Z" fill="#d3e4fe" fill-opacity="0.5"></path>
+<!-- Street Network / Arterial Corridors -->
+<!-- Jan Marg (Vertical East of Sec 16/17) -->
+<line stroke="#d3e4fe" stroke-width="26" x1="720" x2="720" y1="0" y2="900"></line>
+<line stroke="#ffffff" stroke-width="18" x1="720" x2="720" y1="0" y2="900"></line>
+<!-- Himalaya Marg (Vertical East of Sec 17) -->
+<line stroke="#d3e4fe" stroke-width="24" x1="1035" x2="1035" y1="0" y2="900"></line>
+<line stroke="#ffffff" stroke-width="16" x1="1035" x2="1035" y1="0" y2="900"></line>
+<!-- Madhya Marg (Horizontal Main Arterial - Pass through underpass) -->
+<line stroke="#d3e4fe" stroke-width="28" x1="200" x2="1400" y1="250" y2="250"></line>
+<line stroke="#ffffff" stroke-width="20" x1="200" x2="1400" y1="250" y2="250"></line>
+<!-- Udyog Path (Horizontal separating Sec 17 & 22) -->
+<line stroke="#d3e4fe" stroke-width="22" x1="200" x2="1400" y1="460" y2="460"></line>
+<line stroke="#ffffff" stroke-width="14" x1="200" x2="1400" y1="460" y2="460"></line>
+<!-- Sector Street Subgrid Labels -->
+<g class="font-label-telemetry text-label-telemetry fill-on-surface-variant font-bold opacity-75">
+<text tracking-wider="" x="760" y="115">SECTOR 12 · HOSPITAL COMPLEX</text>
+<text x="1070" y="115">SECTOR 11 · PANJAB UNIV EAST</text>
+<text x="760" y="305">SECTOR 16 · GENERAL HOSP</text>
+<text x="1070" y="305">SECTOR 15 · RESIDENTIAL</text>
+<text x="760" y="515">SECTOR 17 · PLAZA / CIVIC CTR</text>
+<text x="440" y="515">SECTOR 22 · COMMERCIAL BAZAAR</text>
+<text x="440" y="305">SECTOR 23 · RESIDENTIAL WEST</text>
+<text fill="#006398" transform="rotate(-90 735 445)" x="735" y="445">JAN MARG</text>
+<text transform="rotate(-90 1050 445)" x="1050" y="445">HIMALAYA MARG</text>
+<text x="560" y="244">MADHYA MARG (ARTERIAL)</text>
+</g>
+<!-- HAZARD ZONE: Sector 22 Structural & Fire Perimeter -->
+<g id="hazard-zone-sector-22">
+<polygon fill="#ba1a1a" fill-opacity="0.14" points="430,490 680,490 690,650 435,640" stroke="#ba1a1a" stroke-dasharray="6,4" stroke-width="2"></polygon>
+<circle class="animate-pulse" cx="560" cy="570" fill="#ba1a1a" fill-opacity="0.1" r="48"></circle>
+<g transform="translate(535, 545)">
+<rect fill="#ffdad6" height="26" rx="4" stroke="#ba1a1a" stroke-width="1" width="140"></rect>
+<text class="font-label-telemetry text-label-telemetry fill-on-error-container font-bold" x="8" y="17">HAZARD: FIRE BUFFER</text>
+</g>
+</g>
+<!-- HAZARD CORDON: Madhya Marg Flooded Underpass (Waterlogging 1.2m) -->
+<g id="road-closure-madhya-marg">
+<line stroke="#ba1a1a" stroke-linecap="round" stroke-width="14" x1="680" x2="800" y1="250" y2="250"></line>
+<line stroke="#ffffff" stroke-dasharray="8,6" stroke-width="4" x1="685" x2="795" y1="250" y2="250"></line>
+<!-- SDRF Barrier Sign -->
+<g transform="translate(710, 215)">
+<rect fill="#ba1a1a" filter="url(#dangerGlow)" height="24" rx="3" width="112"></rect>
+<text class="font-label-telemetry text-label-telemetry fill-on-error font-bold tracking-tight" x="8" y="16">BLOCKED: 1.2m FLOOD</text>
+</g>
+</g>
+<!-- ROUTE 2: BLOCKED / UNSAFE SHORTEST ROUTE (Via Madhya Marg) -->
+<g id="route-2-blocked" opacity="0.6">
+<path d="M 860 560 L 720 560 L 720 250 L 820 250 L 820 180" fill="none" stroke="#76777d" stroke-dasharray="10,8" stroke-width="6"></path>
+<!-- Failure Cross Marker -->
+<circle cx="720" cy="250" fill="#ba1a1a" r="14"></circle>
+<path d="M 714 244 L 726 256 M 726 244 L 714 256" stroke="#ffffff" stroke-linecap="round" stroke-width="2.5"></path>
+</g>
+<!-- ROUTE 3: SUB-OPTIMAL ALTERNATIVE ROUTE (Via Sector 23 - Close to hazard) -->
+<g class="cursor-pointer" id="route-3-alternative" opacity="0.75">
+<path d="M 860 560 L 860 620 L 410 620 L 410 180 L 780 180" fill="none" stroke="#00476e" stroke-dasharray="6,6" stroke-width="5"></path>
+<g transform="translate(420, 630)">
+<rect fill="#ffffff" height="20" rx="3" stroke="#c6c6cd" stroke-width="1" width="150"></rect>
+<text class="font-label-telemetry text-label-telemetry fill-on-surface-variant" x="6" y="14">ALT B · 10.1 km · HEAVY CONGESTION</text>
+</g>
+</g>
+<!-- ROUTE 1: RECOMMENDED SAFE ROUTE (Jan Marg / Himalaya Marg Divergence bypass) -->
+<g filter="url(#routeGlow)" id="route-1-recommended">
+<!-- Outer Blue Halo -->
+<path d="M 860 560 L 860 460 L 1035 460 L 1035 180 L 860 180 L 860 145" fill="none" opacity="0.45" stroke="#5bb8fe" stroke-linecap="round" stroke-linejoin="round" stroke-width="14"></path>
+<!-- Active Tactical Stroke -->
+<path d="M 860 560 L 860 460 L 1035 460 L 1035 180 L 860 180 L 860 145" fill="none" stroke="#006398" stroke-linecap="round" stroke-linejoin="round" stroke-width="7"></path>
+<!-- Directional Pulse Flow Marks -->
+<circle cx="860" cy="500" fill="#ffffff" r="3.5"></circle>
+<circle cx="940" cy="460" fill="#ffffff" r="3.5"></circle>
+<circle cx="1035" cy="320" fill="#ffffff" r="3.5"></circle>
+<circle cx="950" cy="180" fill="#ffffff" r="3.5"></circle>
+<!-- Corridor Safety Clearance Badges -->
+<g transform="translate(1045, 360)">
+<rect fill="#ffffff" height="22" rx="3" stroke="#006398" stroke-width="1" width="128"></rect>
+<text class="font-label-telemetry text-label-telemetry fill-secondary font-bold" x="6" y="15">100% CLEAR · PATROLLED</text>
+</g>
+</g>
+<!-- ORIGIN PIN: Sector 17 Community Centre (Point A) -->
+<g id="origin-marker" transform="translate(860, 560)">
+<circle class="animate-ping" cx="0" cy="0" fill="#006398" fill-opacity="0.2" r="22"></circle>
+<circle cx="0" cy="0" fill="#006398" r="12" stroke="#ffffff" stroke-width="3"></circle>
+<circle cx="0" cy="0" fill="#ffffff" r="4"></circle>
+<!-- Popover Badge -->
+<g transform="translate(16, -18)">
+<rect fill="#001d31" filter="url(#routeGlow)" height="32" rx="4" width="138"></rect>
+<text class="font-label-telemetry text-[9px] fill-secondary-fixed font-bold tracking-wider uppercase" x="8" y="14">POINT A · START</text>
+<text class="font-headline-sm text-[11px] fill-on-secondary font-semibold" x="8" y="26">Sector 17 Plaza</text>
+</g>
+</g>
+<!-- DESTINATION PIN: PGIMER Emergency Wing, Sector 12 (Point B) -->
+<g id="destination-marker" transform="translate(860, 140)">
+<circle cx="0" cy="0" fill="#006398" r="16" stroke="#ffffff" stroke-width="3"></circle>
+<path d="M-6 -2 L6 -2 M0 -8 L0 4" stroke="#ffffff" stroke-linecap="round" stroke-width="2.5"></path>
+<!-- Popover Badge -->
+<g transform="translate(22, -18)">
+<rect fill="#006398" filter="url(#routeGlow)" height="34" rx="4" width="168"></rect>
+<text class="font-label-telemetry text-[9px] fill-secondary-fixed font-bold tracking-wider uppercase" x="8" y="14">DESTINATION · POINT B</text>
+<text class="font-headline-sm text-[12px] fill-on-secondary font-bold" x="8" y="27">PGIMER Emergency Wing</text>
+</g>
+</g>
+</svg>
+</div>
+<!-- Floating Top-Left Origin / Destination Routing HUD -->
+<section aria-label="Route Planning Configuration" class="absolute top-space-4 left-space-4 z-20 w-full max-w-sm md:max-w-md bg-surface-container-lowest/95 backdrop-blur-md rounded-xl shadow-xl p-space-4 flex flex-col gap-space-3">
+<!-- Panel Header & Operational Subhead -->
+<div class="flex items-center justify-between gap-space-2 pb-space-2">
+<div class="flex items-center gap-space-2">
+<a class="p-space-1 rounded hover:bg-surface-container-low transition-colors text-on-surface-variant flex items-center justify-center" data-path="citizen-dashboard" href="#" title="Back to Citizen Dashboard">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+</a>
+<div>
+<h1 class="font-headline-md text-headline-md text-on-surface leading-tight">Safe Route</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Real-time hazard-aware citizen guidance</p>
+</div>
+</div>
+<span class="px-space-2 py-space-1 rounded bg-secondary-fixed text-on-secondary-fixed font-label-telemetry text-label-telemetry uppercase tracking-wider font-bold">
+          LIVE AUDIT
+        </span>
+</div>
+<!-- Point A & Point B Input Box -->
+<div class="relative flex flex-col gap-space-2 bg-surface-container-low p-space-3 rounded-lg">
+<!-- Connecting Visual Guide Line -->
+<div class="absolute left-6 top-8 bottom-8 w-0.5 bg-surface-variant"></div>
+<!-- Point A (Origin) -->
+<div class="relative flex items-center gap-space-2">
+<div class="w-6 h-6 rounded-full bg-secondary text-on-secondary flex items-center justify-center shrink-0 z-10 text-[11px] font-bold font-display-hud">
+            A
+          </div>
+<div class="flex-1 bg-surface-container-lowest rounded px-space-3 py-space-2 flex items-center justify-between gap-space-2 shadow-sm">
+<div class="flex flex-col min-w-0">
+<span class="font-label-telemetry text-label-telemetry uppercase text-secondary font-bold tracking-wider">Origin Location</span>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface truncate">Sector 17 Community Centre, Chandigarh</span>
+</div>
+<span class="material-symbols-outlined text-secondary text-[18px]" title="GPS Fix verified">my_location</span>
+</div>
+</div>
+<!-- Quick Swap Origin/Destination Action Button -->
+<div class="flex justify-end pr-space-6 -my-space-2 z-10">
+<button class="w-7 h-7 rounded-full bg-surface-container-lowest text-on-surface-variant hover:text-on-surface flex items-center justify-center shadow-md transition-transform active:rotate-180" id="swap-endpoints-btn" title="Swap Origin and Destination" type="button">
+<span class="material-symbols-outlined text-[16px]">swap_vert</span>
+</button>
+</div>
+<!-- Point B (Destination) -->
+<div class="relative flex items-center gap-space-2">
+<div class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center shrink-0 z-10 text-[11px] font-bold font-display-hud">
+            B
+          </div>
+<div class="flex-1 bg-surface-container-lowest rounded px-space-3 py-space-2 flex items-center justify-between gap-space-2 shadow-sm">
+<div class="flex flex-col min-w-0">
+<span class="font-label-telemetry text-label-telemetry uppercase text-on-surface-variant font-bold tracking-wider">Destination</span>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface truncate">PGIMER Emergency Wing, Sector 12</span>
+</div>
+<span class="material-symbols-outlined text-error text-[18px]">local_hospital</span>
+</div>
+</div>
+</div>
+<!-- Quick Location Safe Hub Chips -->
+<div class="flex items-center gap-space-2 overflow-x-auto pb-space-1 text-label-badge text-label-badge scrollbar-none">
+<span class="font-label-telemetry text-label-telemetry uppercase text-on-surface-variant shrink-0">Preset:</span>
+<button class="px-space-2 py-1 rounded bg-surface-container-low hover:bg-surface-container text-on-surface shrink-0 transition-colors flex items-center gap-1 font-semibold" type="button">
+<span class="material-symbols-outlined text-[13px] text-secondary">local_hospital</span> PGIMER Trauma
+        </button>
+<button class="px-space-2 py-1 rounded bg-surface-container-low hover:bg-surface-container text-on-surface shrink-0 transition-colors flex items-center gap-1 font-semibold" type="button">
+<span class="material-symbols-outlined text-[13px] text-secondary">night_shelter</span> Sector 16 Shelter
+        </button>
+<button class="px-space-2 py-1 rounded bg-surface-container-low hover:bg-surface-container text-on-surface shrink-0 transition-colors flex items-center gap-1 font-semibold" type="button">
+<span class="material-symbols-outlined text-[13px] text-on-surface-variant">place</span> Pin on Map
+        </button>
+</div>
+<!-- Primary Action CTA -->
+<button class="w-full bg-secondary hover:bg-on-secondary-container text-on-secondary font-headline-sm text-headline-sm font-semibold py-space-3 px-space-4 rounded flex items-center justify-center gap-space-2 shadow-md transition-all active:scale-[0.99]" id="recalc-route-btn" type="button">
+<span class="material-symbols-outlined text-[20px]">alt_route</span>
+        Evaluate Safe Corridors
+      </button>
+</section>
+<!-- Floating GIS Utility Controls (Top Right) -->
+<nav aria-label="Map tools and views" class="absolute top-space-4 right-space-4 z-20 flex flex-col gap-space-2">
+<div class="bg-surface-container-lowest/95 backdrop-blur-md rounded-lg shadow-lg flex flex-col p-space-1">
+<button class="w-10 h-10 flex items-center justify-center text-on-surface hover:bg-surface-container-low rounded transition-colors" title="Zoom In" type="button">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+<div class="w-full h-px bg-surface-container my-0.5"></div>
+<button class="w-10 h-10 flex items-center justify-center text-on-surface hover:bg-surface-container-low rounded transition-colors" title="Zoom Out" type="button">
+<span class="material-symbols-outlined text-[20px]">remove</span>
+</button>
+</div>
+<button class="w-10 h-10 bg-surface-container-lowest/95 backdrop-blur-md text-on-surface hover:bg-surface-container-low rounded-lg shadow-lg flex items-center justify-center transition-colors" title="Reset North / Orientation" type="button">
+<span class="material-symbols-outlined text-[20px] text-secondary">explore</span>
+</button>
+<button class="w-10 h-10 bg-surface-container-lowest/95 backdrop-blur-md text-on-surface hover:bg-surface-container-low rounded-lg shadow-lg flex items-center justify-center transition-colors" title="Recenter to GPS Location" type="button">
+<span class="material-symbols-outlined text-[20px]">gps_fixed</span>
+</button>
+<!-- Active Layer Toggle Pill -->
+<div class="hidden sm:flex flex-col bg-surface-container-lowest/95 backdrop-blur-md rounded-lg shadow-lg p-space-2 gap-space-1">
+<span class="font-label-telemetry text-[9px] uppercase tracking-wider text-on-surface-variant font-bold px-1">Layers</span>
+<label class="flex items-center gap-space-2 text-[11px] font-semibold text-on-surface cursor-pointer px-1 py-0.5 rounded hover:bg-surface-container-low">
+<input checked="" class="accent-secondary rounded" type="checkbox"> Hazards
+        </label>
+<label class="flex items-center gap-space-2 text-[11px] font-semibold text-on-surface cursor-pointer px-1 py-0.5 rounded hover:bg-surface-container-low">
+<input checked="" class="accent-secondary rounded" type="checkbox"> SDRF Patrol
+        </label>
+<label class="flex items-center gap-space-2 text-[11px] font-semibold text-on-surface cursor-pointer px-1 py-0.5 rounded hover:bg-surface-container-low">
+<input class="accent-secondary rounded" type="checkbox"> Shelters
+        </label>
+</div>
+</nav>
+<!-- Hazard Legend Strip (Bottom Left of Canvas) -->
+<div class="absolute bottom- space-2 left-space-4 z-20 hidden lg:flex items-center gap-space-4 bg-surface-container-lowest/90 backdrop-blur-md px-space-3 py-space-2 rounded-lg shadow-md mb-2">
+<div class="flex items-center gap-space-2">
+<span class="w-3.5 h-1.5 rounded-full bg-secondary inline-block"></span>
+<span class="font-label-telemetry text-label-telemetry text-on-surface font-semibold">RECOMMENDED SAFE (OPEN)</span>
+</div>
+<div class="flex items-center gap-space-2">
+<span class="w-3.5 h-1.5 rounded-full bg-error inline-block"></span>
+<span class="font-label-telemetry text-label-telemetry text-error font-semibold">BLOCKED ROAD / SDRF CORDON</span>
+</div>
+<div class="flex items-center gap-space-2">
+<span class="w-3 h-3 rounded bg-error/20 inline-block"></span>
+<span class="font-label-telemetry text-label-telemetry text-on-surface-variant">FIRE RISK BUFFER ZONE</span>
+</div>
+</div>
+</section>
+<!-- Route Comparison & Navigation Selection Stack (Tactical Decision Hub) -->
+<section class="w-full bg-surface px-gutter-expanded py-space-6 flex flex-col gap-space-6 -mt-2 z-30">
+<!-- Section Title & Tactical Rationale -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-2">
+<div>
+<div class="flex items-center gap-space-2 mb-1">
+<span class="font-label-telemetry text-label-telemetry uppercase text-secondary font-bold tracking-widest">Autonomous Route Assessment</span>
+<span class="px-space-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-telemetry text-[10px]">3 CORRIDORS FOUND</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg font-bold text-on-surface tracking-tight">Available Corridors &amp; Hazard Comparison</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-xl">
+        ResQnet evaluates environmental risk factors before shortest transit times. Corridors with active flood cordons or proximate fire risks are downgraded or blocked automatically.
+      </p>
+</div>
+<!-- Comparison Grid: Recommended (Dominant) vs Alternatives -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-6 items-start">
+<!-- PRIMARY RECOMMENDED SAFE ROUTE (Dominant Card - 7 Columns) -->
+<article class="lg:col-span-7 bg-surface-container-lowest rounded-xl shadow-md p-space-6 flex flex-col justify-between gap-space-6">
+<!-- Header Strip -->
+<div class="flex items-start justify-between gap-space-4">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-space-2">
+<span class="inline-flex items-center gap-1 px-space-2 py-0.5 rounded bg-secondary text-on-secondary font-label-badge text-label-badge uppercase font-bold">
+<span class="material-symbols-outlined text-[13px]">verified</span> Recommended Safe Route
+              </span>
+<span class="font-label-telemetry text-label-telemetry uppercase text-on-surface-variant font-semibold">VIA HIMALAYA &amp; JAN MARG</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold">Corridor 1: Eastern Diversion Bypass</h3>
+</div>
+<!-- Clearance Status Pill -->
+<div class="text-right shrink-0">
+<span class="inline-flex items-center gap-1 font-label-telemetry text-label-telemetry font-bold text-secondary bg-surface-container px-space-2 py-1 rounded">
+<span class="w-2 h-2 rounded-full bg-secondary"></span> 100% PAVED &amp; OPEN
+            </span>
+</div>
+</div>
+<!-- Dominant Metric Callouts -->
+<div class="grid grid-cols-3 gap-space-4 p-space-4 bg-surface-container-low rounded-lg">
+<div class="flex flex-col">
+<span class="font-label-telemetry text-label-telemetry uppercase text-on-surface-variant font-semibold">Transit Duration</span>
+<span class="font-display-hud-mobile md:font-display-hud text-display-hud-mobile md:text-display-hud text-on-surface font-bold leading-none mt-1">15<span class="font-headline-sm text-headline-sm font-normal text-on-surface-variant ml-1">min</span></span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-telemetry text-label-telemetry uppercase text-on-surface-variant font-semibold">Total Distance</span>
+<span class="font-display-hud-mobile md:font-display-hud text-display-hud-mobile md:text-display-hud text-secondary font-bold leading-none mt-1">8.2<span class="font-headline-sm text-headline-sm font-normal text-on-surface-variant ml-1">km</span></span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-telemetry text-label-telemetry uppercase text-on-surface-variant font-semibold">Hazard Risk</span>
+<div class="flex items-center gap-1 mt-1">
+<span class="font-headline-lg text-headline-lg text-secondary font-bold">ZERO</span>
+<span class="material-symbols-outlined text-secondary text-[22px]">shield</span>
+</div>
+</div>
+</div>
+<!-- Why this route? Tactical Breakdown Checklist -->
+<div class="flex flex-col gap-space-3">
+<h4 class="font-label-badge text-label-badge uppercase tracking-wider text-on-surface font-bold flex items-center gap-space-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">fact_check</span> Why ResQnet Recommends This Route
+          </h4>
+<ul class="space-y-2 font-body-sm text-body-sm text-on-surface">
+<li class="flex items-start gap-space-2">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span><strong>Completely avoids Madhya Marg flood barrier:</strong> Eliminates danger of vehicle submersion at Sector 16/17 underpass.</span>
+</li>
+<li class="flex items-start gap-space-2">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span><strong>Bypasses Sector 22 fire emergency buffer:</strong> Maintains an 800-meter safety clearance from active civil defense operations.</span>
+</li>
+<li class="flex items-start gap-space-2">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span><strong>Verified clear by SDRF ground unit:</strong> Patrol Unit Bravo logged zero obstacles or high waters 4 minutes ago.</span>
+</li>
+</ul>
+</div>
+<!-- Route Status Indicators & Primary Action Trigger -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-4 pt-space-2">
+<div class="flex items-center gap-space-4 font-label-telemetry text-label-telemetry text-on-surface-variant">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-secondary">volume_up</span> Voice Assist Ready
+            </span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-secondary">cloud_done</span> Offline Tile Cached
+            </span>
+</div>
+<button class="w-full sm:w-auto px-space-8 py-space-3 bg-secondary hover:bg-on-secondary-container text-on-secondary font-headline-sm text-headline-sm font-bold rounded shadow-lg flex items-center justify-center gap-space-2 transition-all" id="start-navigation-btn" type="button">
+<span class="material-symbols-outlined text-[20px]">navigation</span>
+            Start Safe Navigation
+          </button>
+</div>
+</article>
+<!-- ALTERNATIVE ROUTES COMPARISON (5 Columns Stack) -->
+<div class="lg:col-span-5 flex flex-col gap-space-4">
+<!-- ALTERNATIVE A: SHORTEST BUT STRICTLY BLOCKED -->
+<article class="bg-surface-container-lowest rounded-xl shadow-sm p-space-5 flex flex-col gap-space-3">
+<div class="flex items-center justify-between gap-space-2">
+<div class="flex items-center gap-space-2">
+<span class="inline-flex items-center gap-1 px-space-2 py-0.5 rounded bg-error-container text-on-error-container font-label-badge text-label-badge uppercase font-bold">
+<span class="material-symbols-outlined text-[13px] text-error">block</span> Blocked Road
+              </span>
+<span class="font-label-telemetry text-label-telemetry text-on-surface-variant font-semibold">ROUTE 2 (VIA MADHYA MARG)</span>
+</div>
+<span class="font-data-mono-md text-data-mono-md text-error font-bold">IMPASSABLE</span>
+</div>
+<div class="flex items-baseline justify-between">
+<div class="flex items-center gap-space-3 font-label-telemetry text-label-telemetry text-on-surface-variant">
+<span>6.5 km</span>
+<span>·</span>
+<span>12 min (Standard)</span>
+<span>·</span>
+<span class="text-error font-semibold">Severe Hazard</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Shortest physical line to PGIMER, but Madhya Marg underpass is submerged under <strong class="text-error">1.2 meters of flash flood water</strong>. Police cordon is actively turning all non-amphibious vehicles away.
+          </p>
+<div class="pt-space-2 flex items-center justify-between">
+<span class="font-label-telemetry text-label-telemetry text-error flex items-center gap-1 font-bold">
+<span class="material-symbols-outlined text-[15px]">dangerous</span> ROUTE ACCESS LOCKED
+            </span>
+<button class="px-space-3 py-1 bg-surface-container-low text-outline font-label-badge text-label-badge rounded cursor-not-allowed" disabled="" type="button">
+              Cannot Select
+            </button>
+</div>
+</article>
+<!-- ALTERNATIVE C: LONGER SUB-OPTIMAL ROUTE -->
+<article class="bg-surface-container-lowest rounded-xl shadow-sm p-space-5 flex flex-col gap-space-3">
+<div class="flex items-center justify-between gap-space-2">
+<div class="flex items-center gap-space-2">
+<span class="inline-flex items-center gap-1 px-space-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-badge text-label-badge uppercase font-bold">
+<span class="material-symbols-outlined text-[13px]">warning</span> Moderate Risk
+              </span>
+<span class="font-label-telemetry text-label-telemetry text-on-surface-variant font-semibold">ROUTE 3 (VIA SECTOR 23)</span>
+</div>
+<span class="font-data-mono-md text-data-mono-md text-on-surface font-semibold">SUB-OPTIMAL</span>
+</div>
+<div class="flex items-baseline justify-between">
+<div class="flex items-center gap-space-3 font-label-telemetry text-label-telemetry text-on-surface-variant">
+<span>10.1 km</span>
+<span>·</span>
+<span>19 min (+4 min)</span>
+<span>·</span>
+<span class="text-on-surface-variant font-semibold">Congested</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Diverts far West through Sector 23. Passable but passes within 200m of the Sector 22 commercial fire smoke plume. Frequent emergency vehicle sirens causing intermittent choke points.
+          </p>
+<div class="pt-space-2 flex items-center justify-between">
+<span class="font-label-telemetry text-label-telemetry text-on-surface-variant">
+              Alternative Backup Route
+            </span>
+<button class="px-space-4 py-space-1 bg-surface-container-low hover:bg-surface-container text-on-surface font-label-badge text-label-badge font-bold rounded transition-colors" id="select-alt-btn" type="button">
+              Select This Route
+            </button>
+</div>
+</article>
+<!-- Dynamic SDMA Ground Advisory Banner -->
+<div class="p-space-4 rounded-xl bg-surface-container-low flex items-start gap-space-3">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">info</span>
+<div class="flex flex-col gap-0.5">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">Auto-Recalculation Guarantee</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              ResQnet continuously monitors your active coordinate against live SDRF sitreps. If high water or police blocks emerge along your path, route recalculation fires within 3 seconds.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Turn-By-Turn Preview Flyout (Hidden initially, expandable via navigation trigger) -->
+<dialog class="p-0 rounded-xl bg-surface-container-lowest shadow-2xl max-w-lg w-full backdrop:bg-primary-container/40" id="turn-by-turn-modal">
+<div class="p-space-6 flex flex-col gap-space-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-2">
+<span class="material-symbols-outlined text-secondary text-[24px]">directions</span>
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface">Active Safe Steps</h3>
+</div>
+<button class="p-1 rounded text-on-surface-variant hover:bg-surface-container" id="close-modal-btn" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-space-3 font-body-sm text-body-sm">
+<div class="flex items-start gap-space-3 p-space-3 rounded bg-surface-container-low">
+<span class="w-6 h-6 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-bold text-[12px] shrink-0">1</span>
+<div>
+<p class="font-semibold text-on-surface">Depart Sector 17 Community Centre north toward Jan Marg</p>
+<p class="text-on-surface-variant text-body-sm">450 m · Paved and verified dry</p>
+</div>
+</div>
+<div class="flex items-start gap-space-3 p-space-3 rounded bg-surface-container-low">
+<span class="w-6 h-6 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-bold text-[12px] shrink-0">2</span>
+<div>
+<p class="font-semibold text-on-surface">Turn right onto Udyog Path away from Sector 22 cordon</p>
+<p class="text-on-surface-variant text-body-sm">1.8 km · Clean air buffer</p>
+</div>
+</div>
+<div class="flex items-start gap-space-3 p-space-3 rounded bg-surface-container-low">
+<span class="w-6 h-6 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-bold text-[12px] shrink-0">3</span>
+<div>
+<p class="font-semibold text-on-surface">Proceed North along Himalaya Marg crossing around flooded underpass</p>
+<p class="text-on-surface-variant text-body-sm">4.2 km · Clear corridor with active SDRF checkpoint</p>
+</div>
+</div>
+<div class="flex items-start gap-space-3 p-space-3 rounded bg-surface-container-low">
+<span class="w-6 h-6 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-bold text-[12px] shrink-0">4</span>
+<div>
+<p class="font-semibold text-on-surface">Arrive at PGIMER Emergency Wing triage gate</p>
+<p class="text-on-surface-variant text-body-sm">1.7 km · Dedicated green channel open</p>
+</div>
+</div>
+</div>
+<div class="flex justify-end gap-space-3 pt-space-2">
+<button class="w-full bg-secondary text-on-secondary font-headline-sm text-headline-sm font-semibold py-space-2 px-space-4 rounded" id="confirm-nav-btn" type="button">
+          Begin Live Guidance
+        </button>
+</div>
+</div>
+</dialog>
+<!-- Interactive Logic for Route Preview, Swapping, and Simulation-free navigation triggers -->
+<script>
+    (function initSafeRouteEngine() {
+      const swapBtn = document.getElementById('swap-endpoints-btn');
+      const recalcBtn = document.getElementById('recalc-route-btn');
+      const startNavBtn = document.getElementById('start-navigation-btn');
+      const altBtn = document.getElementById('select-alt-btn');
+      const modal = document.getElementById('turn-by-turn-modal');
+      const closeModalBtn = document.getElementById('close-modal-btn');
+      const confirmNavBtn = document.getElementById('confirm-nav-btn');
+
+      if (swapBtn) {
+        swapBtn.addEventListener('click', () => {
+          // Visual micro-interaction indicator
+          swapBtn.classList.add('rotate-180');
+          setTimeout(() => swapBtn.classList.remove('rotate-180'), 300);
+        });
+      }
+
+      if (recalcBtn) {
+        recalcBtn.addEventListener('click', () => {
+          const originalText = recalcBtn.innerHTML;
+          recalcBtn.innerHTML = `<span class="material-symbols-outlined text-[20px] animate-spin">sync</span> Evaluating Sensors...`;
+          setTimeout(() => {
+            recalcBtn.innerHTML = `<span class="material-symbols-outlined text-[20px]">check</span> Safest Corridor Locked`;
+            setTimeout(() => {
+              recalcBtn.innerHTML = originalText;
+            }, 1800);
+          }, 800);
+        });
+      }
+
+      if (startNavBtn && modal) {
+        startNavBtn.addEventListener('click', () => {
+          if (typeof modal.showModal === 'function') {
+            modal.showModal();
+          }
+        });
+      }
+
+      if (closeModalBtn && modal) {
+        closeModalBtn.addEventListener('click', () => {
+          modal.close();
+        });
+      }
+
+      if (confirmNavBtn && modal) {
+        confirmNavBtn.addEventListener('click', () => {
+          confirmNavBtn.innerText = "Connecting GPS Compass...";
+          setTimeout(() => {
+            modal.close();
+            confirmNavBtn.innerText = "Begin Live Guidance";
+            alert("Safe Navigation Mode Active. Voice alerts enabled for any emerging road cordons.");
+          }, 600);
+        });
+      }
+
+      if (altBtn) {
+        altBtn.addEventListener('click', () => {
+          alert("Alternative Route 3 (Via Sector 23) selected. Note: Heavy traffic near Sector 22 perimeter.");
+        });
+      }
+    })();
+  </script>
+</div></main><div class="fixed bottom-space-4 left-0 right-0 z-40 flex justify-center px-space-4 pointer-events-none"><nav class="pointer-events-auto bg-surface-container-lowest/95 backdrop-blur-md px-space-2 py-space-2 rounded-full border border-surface-container shadow-lg flex items-center gap-space-1" data-active-classes="bg-secondary text-on-secondary font-semibold shadow-md"><a class="px-space-4 py-space-2 rounded-full font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-all" data-path="citizen-dashboard" href="#">Dashboard</a><a class="px-space-4 py-space-2 rounded-full font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-all" data-path="active-alerts" href="#">Alerts</a><a aria-current="page" class="px-space-5 py-space-2 rounded-full transition-all bg-secondary text-on-secondary font-semibold shadow-md" data-path="report-incident" href="#">Report</a><a class="px-space-4 py-space-2 rounded-full font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-all" data-path="shelters-resources" href="#">Shelters</a><a class="px-space-4 py-space-2 rounded-full font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-all" data-path="sos-request" href="#">SOS</a></nav></div><footer class="w-full bg-surface-container-lowest border-t border-surface-container py-space-6 mb-space-12"><div class="w-full px-gutter-expanded flex flex-col sm:flex-row items-center justify-between gap-space-3 font-body-sm text-body-sm text-on-surface-variant"><div class="flex items-center gap-space-2"><span class="font-headline-sm text-headline-sm font-semibold text-on-surface">ResQnet</span><span>© National Disaster Response &amp; Citizen Safety Network</span></div><div class="flex items-center gap-space-4 font-label-telemetry text-label-telemetry"><span class="text-error flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-error inline-block animate-pulse"></span> EMERGENCY: 112 / 1078</span><span>NDRF DISPATCH: 1070</span></div></div></footer></body></html>

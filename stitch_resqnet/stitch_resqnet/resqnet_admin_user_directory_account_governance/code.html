@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"on-surface-variant":"#434655","on-primary-container":"#eeefff","surface-variant":"#d3e4fe","on-primary":"#ffffff","background":"#f8f9ff","surface-container-lowest":"#ffffff","on-tertiary-container":"#eef0ff","on-secondary-fixed-variant":"#2d486d","surface-subtle":"#F1F5F9","on-primary-fixed-variant":"#003ea8","text-secondary":"#64748B","blue-light":"#DBEAFE","secondary-container":"#b5d0fd","surface-container-high":"#dce9ff","primary-fixed":"#dbe1ff","tertiary":"#4d556b","warning-text":"#D97706","surface-dim":"#cbdbf5","secondary":"#455f87","blue-soft":"#EFF6FF","surface-container-low":"#eff4ff","secondary-fixed-dim":"#adc8f5","on-error":"#ffffff","warning-border":"#FDE68A","surface-card":"#FFFFFF","text-primary":"#1E293B","info-border":"#BFDBFE","on-primary-fixed":"#00174b","on-error-container":"#93000a","surface-container-highest":"#d3e4fe","inverse-on-surface":"#eaf1ff","outline":"#737686","on-tertiary-fixed-variant":"#3f465c","success-text":"#16A34A","inverse-primary":"#b4c5ff","on-surface":"#0b1c30","secondary-fixed":"#d5e3ff","success-border":"#BBF7D0","on-tertiary":"#ffffff","text-muted":"#94A3B8","inverse-surface":"#213145","surface-base":"#F8FAFC","warning-bg":"#FFFBEB","surface":"#f8f9ff","tertiary-fixed":"#dae2fd","critical-bg":"#FEF2F2","tertiary-container":"#656d84","border-default":"#E2E8F0","surface-tint":"#0053db","on-secondary":"#ffffff","on-tertiary-fixed":"#131b2e","primary-container":"#2563eb","surface-bright":"#f8f9ff","critical-text":"#DC2626","outline-variant":"#c3c6d7","error-container":"#ffdad6","critical-border":"#FECACA","tertiary-fixed-dim":"#bec6e0","on-secondary-container":"#3e5980","on-secondary-fixed":"#001c3b","primary":"#004ac6","surface-container":"#e5eeff","on-background":"#0b1c30","error":"#ba1a1a","primary-fixed-dim":"#b4c5ff","success-bg":"#F0FDF4"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-3":"12px","space-6":"24px","space-16":"64px","space-2":"8px","gutter-expanded":"24px","margin-tablet":"24px","margin-mobile":"16px","space-8":"32px","space-1":"4px","gutter-standard":"16px","gutter-dense":"8px","space-5":"20px","space-10":"40px","space-0":"0px","margin-desktop":"32px","space-4":"16px","space-12":"48px"},"fontFamily":{"headline-sm":["Public Sans"],"headline-xl":["Public Sans"],"display-hud-mobile":["JetBrains Mono"],"body-sm":["Public Sans"],"body-md":["Public Sans"],"headline-md":["Public Sans"],"headline-lg":["Public Sans"],"headline-xl-mobile":["Public Sans"],"data-mono-md":["JetBrains Mono"],"body-lg":["Public Sans"],"label-badge":["Public Sans"],"display-hud":["JetBrains Mono"],"label-telemetry":["JetBrains Mono"],"data-mono-lg":["JetBrains Mono"]},"fontSize":{"headline-sm":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"600"}],"headline-xl":["36px",{"lineHeight":"44px","letterSpacing":"-0.025em","fontWeight":"700"}],"display-hud-mobile":["32px",{"lineHeight":"36px","letterSpacing":"-0.03em","fontWeight":"700"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"400"}],"body-md":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"label-badge":["11px",{"lineHeight":"14px","letterSpacing":"0.06em","fontWeight":"700"}],"display-hud":["48px",{"lineHeight":"52px","letterSpacing":"-0.04em","fontWeight":"700"}],"label-telemetry":["10px",{"lineHeight":"12px","letterSpacing":"0.08em","fontWeight":"500"}],"data-mono-lg":["18px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"data-mono-md":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"500"}],"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-xl-mobile":["26px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"700"}]}}}}</script><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..900&family=Public+Sans:wght@100..900&display=swap" rel="stylesheet"/></head><body class="bg-surface-base font-body-md text-text-primary antialiased"><header class="fixed top-0 left-0 right-0 z-40 bg-surface-card border-b border-border-default h-16"><div class="h-16 w-full px-space-6 flex items-center justify-between gap-space-4"><div class="flex items-center gap-space-4"><div class="flex items-center gap-space-3"><img alt="ResQnet Admin Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UZbdxVe9zHhHzM9vo2OQSWK2Q_bht0WwW6RI8t03wEZzkIuV1AaepFB5ybGDl6J_zPVxotaiJUuUSOjEHbwRkkatzk-_NIWrS9p2mqlHILAEd1jk-VFuE7ZUuZSBGzPtgbbUnBFF7nZSVRrnhgw6TOgjgnKK07Rxsw47PItBZRM95qoxqrwjUW_mgSZP8x4JcsHxpTeE997ICMMUDA3HqRMivqR_51zVsnG1UpH15gNX5cNH3zgcPtu5Ap"/><div class="flex flex-col"><div class="flex items-center gap-space-2"><span class="font-headline-sm text-headline-sm font-bold tracking-tight text-text-primary uppercase">RESQNET</span><span class="px-space-1 py-0.5 rounded bg-surface-subtle border border-border-default font-label-telemetry text-label-telemetry font-bold text-text-secondary">v2.4</span></div><span class="font-label-telemetry text-label-telemetry uppercase tracking-wider text-text-secondary">ADMINISTRATION & GOVERNANCE CONSOLE</span></div></div><div class="hidden xl:flex items-center gap-space-2 px-space-3 py-1 rounded bg-surface-subtle border border-border-default"><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span><span class="font-label-telemetry text-label-telemetry uppercase font-bold text-text-secondary">SECURE ROOT CONSOLE • ZERO TRUST ACTIVE</span></div></div><div class="hidden lg:flex items-center gap-space-3"><div class="flex items-center gap-space-2 px-space-3 py-1 rounded bg-success-bg border border-success-border"><span class="w-2 h-2 rounded-full bg-success-text"></span><span class="font-label-telemetry text-label-telemetry font-bold text-success-text uppercase">INFRASTRUCTURE HEALTHY • 99.98% UPTIME</span></div><div class="flex items-center gap-space-2 px-space-3 py-1 rounded bg-warning-bg border border-warning-border"><span class="material-symbols-outlined text-warning-text text-[14px]">warning</span><span class="font-label-telemetry text-label-telemetry font-bold text-warning-text uppercase">MONSOON PROTOCOL LEVEL 2</span></div></div><div class="flex items-center gap-space-4"><div class="hidden md:flex items-center gap-space-2 px-space-3 py-1 rounded bg-critical-bg border border-critical-border"><span class="material-symbols-outlined text-critical-text text-[14px]">phone_in_talk</span><span class="font-data-mono-md text-data-mono-md font-bold text-critical-text">112 / 1078 NATIONAL DISPATCH</span></div><div class="flex items-center gap-space-2 px-space-2 py-1 rounded bg-blue-soft border border-info-border"><span class="material-symbols-outlined text-primary text-[14px]">verified_user</span><span class="font-label-badge text-label-badge text-primary uppercase font-bold">SEC-LEVEL 4 MASTER</span></div><div class="flex items-center gap-space-3 pl-space-2 border-l border-border-default"><div class="hidden 2xl:flex flex-col text-right"><span class="font-label-badge text-label-badge font-bold text-text-primary">DR. ANANYA ROY</span><span class="font-label-telemetry text-label-telemetry text-text-secondary uppercase">NDRA LEAD GOVERNANCE REGISTRAR</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><aside class="fixed left-0 top-16 bottom-0 w-64 bg-surface-card border-r border-border-default z-30 flex flex-col justify-between overflow-y-auto"><div class="flex flex-col pt-space-4"><div class="px-space-4 pb-space-2"><span class="font-label-telemetry text-label-telemetry uppercase tracking-wider font-bold text-text-muted">ADMINISTRATION & AUDIT</span></div><nav class="flex flex-col gap-0.5 px-space-2" data-active-classes="bg-blue-soft text-primary font-bold border-r-2 border-primary"><a class="flex items-center justify-between px-space-3 py-2 rounded text-on-surface-variant hover:bg-surface-subtle hover:text-on-surface transition-colors font-body-md text-body-md" data-path="dashboard" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">dashboard</span><span>Dashboard</span></div></a><a aria-current="page" class="flex items-center justify-between px-space-3 py-2 rounded transition-colors bg-blue-soft text-primary font-bold border-r-2 border-primary" data-path="users" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">group</span><span>Users</span></div></a><a class="flex items-center justify-between px-space-3 py-2 rounded text-on-surface-variant hover:bg-surface-subtle hover:text-on-surface transition-colors font-body-md text-body-md" data-path="roles-permissions" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">admin_panel_settings</span><span>Roles & Permissions</span></div></a><a class="flex items-center justify-between px-space-3 py-2 rounded text-on-surface-variant hover:bg-surface-subtle hover:text-on-surface transition-colors font-body-md text-body-md" data-path="coordinators" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">badge</span><span>Coordinators</span></div></a><a class="flex items-center justify-between px-space-3 py-2 rounded text-on-surface-variant hover:bg-surface-subtle hover:text-on-surface transition-colors font-body-md text-body-md" data-path="responders-organizations" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">corporate_fare</span><span>Responders / Orgs</span></div></a><a class="flex items-center justify-between px-space-3 py-2 rounded text-on-surface-variant hover:bg-surface-subtle hover:text-on-surface transition-colors font-body-md text-body-md" data-path="verification" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">how_to_reg</span><span>Verification</span></div><span class="px-space-2 py-0.5 rounded-full bg-warning-bg border border-warning-border font-label-badge text-label-badge text-warning-text font-bold">5</span></a><a class="flex items-center justify-between px-space-3 py-2 rounded text-on-surface-variant hover:bg-surface-subtle hover:text-on-surface transition-colors font-body-md text-body-md" data-path="monitoring" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">monitor_heart</span><span>Monitoring</span></div></a><a class="flex items-center justify-between px-space-3 py-2 rounded text-on-surface-variant hover:bg-surface-subtle hover:text-on-surface transition-colors font-body-md text-body-md" data-path="analytics" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">analytics</span><span>Analytics</span></div></a><a class="flex items-center justify-between px-space-3 py-2 rounded text-on-surface-variant hover:bg-surface-subtle hover:text-on-surface transition-colors font-body-md text-body-md" data-path="announcements" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">campaign</span><span>Announcements</span></div></a><a class="flex items-center justify-between px-space-3 py-2 rounded text-on-surface-variant hover:bg-surface-subtle hover:text-on-surface transition-colors font-body-md text-body-md" data-path="audit-logs" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">history</span><span>Audit Logs</span></div></a><a class="flex items-center justify-between px-space-3 py-2 rounded text-on-surface-variant hover:bg-surface-subtle hover:text-on-surface transition-colors font-body-md text-body-md" data-path="configuration" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">settings</span><span>Configuration</span></div></a></nav></div><div class="p-space-3 border-t border-border-default flex flex-col gap-space-2 bg-surface-card"><div class="flex flex-col gap-0.5"><a class="flex items-center justify-between px-space-3 py-1.5 rounded text-on-surface-variant hover:bg-surface-subtle hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="notifications" href="#"><div class="flex items-center gap-space-2"><span class="material-symbols-outlined text-[18px]">notifications</span><span>Notifications</span></div><span class="px-1.5 py-0.5 rounded bg-primary text-on-primary font-label-telemetry text-label-telemetry font-bold">3</span></a><a class="flex items-center gap-space-2 px-space-3 py-1.5 rounded text-on-surface-variant hover:bg-surface-subtle hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="profile-security" href="#"><span class="material-symbols-outlined text-[18px]">shield</span><span>Profile & Security</span></a></div><div class="p-space-2 rounded bg-surface-subtle border border-border-default flex flex-col gap-0.5"><span class="font-label-telemetry text-label-telemetry text-text-muted uppercase font-bold">SECURE NODE CLUSTER</span><span class="font-data-mono-md text-data-mono-md text-text-secondary text-[11px] truncate">GOV-DC-CHANDIGARH-01</span><span class="font-label-telemetry text-label-telemetry text-success-text flex items-center gap-1 font-bold"><span class="w-1.5 h-1.5 rounded-full bg-success-text inline-block"></span>TLS 1.3 ENCRYPTED</span></div></div></aside><div class="pl-64"><main class="w-full min-h-screen pt-16 bg-surface-base px-gutter-expanded py-space-6"><div class="flex flex-col w-full">
+<div class="flex flex-col gap-space-6">
+<!-- Top Action & Title Header -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-4 bg-surface-card p-space-6 rounded-xl border border-border-default shadow-sm">
+<div class="flex flex-col gap-space-1">
+<div class="flex items-center gap-space-2">
+<span class="px-space-2 py-0.5 rounded bg-blue-soft border border-info-border text-primary font-label-telemetry text-label-telemetry uppercase tracking-wider font-bold">DIRECTORY GOVERNANCE</span>
+<span class="text-text-muted text-body-sm">•</span>
+<span class="text-text-secondary font-label-telemetry text-label-telemetry">ZONE 1 (CHANDIGARH TRICITY)</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-text-primary tracking-tight">USER MANAGEMENT DIRECTORY</h1>
+<p class="font-body-md text-body-md text-text-secondary">Centralized governance of authenticated citizens, coordinators, responders, and administrative credentials</p>
+</div>
+<div class="flex flex-wrap items-center gap-space-3">
+<button class="flex items-center gap-space-2 px-space-4 py-space-2 rounded bg-surface-card border border-border-default hover:bg-surface-subtle transition-colors text-text-primary font-headline-sm text-headline-sm text-sm" id="btnExportCsv">
+<span class="material-symbols-outlined text-[18px] text-text-secondary">sim_card_download</span>
+<span>Export User Audit CSV</span>
+</button>
+<button class="flex items-center gap-space-2 px-space-4 py-space-2 rounded bg-primary text-on-primary hover:bg-primary-container transition-colors font-headline-sm text-headline-sm text-sm shadow-sm" id="btnAddUser">
+<span class="material-symbols-outlined text-[18px]">person_add</span>
+<span>Add System User / Official</span>
+</button>
+</div>
+</div>
+<!-- Summary Metrics Strip -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 gap-space-4">
+<div class="bg-surface-card p-space-4 rounded-xl border border-border-default shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-text-secondary">
+<span class="font-label-telemetry text-label-telemetry uppercase font-bold tracking-wider">TOTAL DIRECTORY USERS</span>
+<span class="material-symbols-outlined text-[18px] text-primary">groups</span>
+</div>
+<div class="flex items-baseline gap-space-2 mt-space-3">
+<span class="font-data-mono-lg text-[26px] font-bold text-text-primary">14,820</span>
+<span class="font-label-telemetry text-label-telemetry text-text-muted">ENTRIES</span>
+</div>
+<div class="mt-space-2 flex items-center gap-1.5 text-text-secondary font-label-telemetry text-label-telemetry">
+<span class="material-symbols-outlined text-[14px] text-success-text">trending_up</span>
+<span class="text-success-text font-bold">+182</span> past 24h intake
+        </div>
+</div>
+<div class="bg-surface-card p-space-4 rounded-xl border border-border-default shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-text-secondary">
+<span class="font-label-telemetry text-label-telemetry uppercase font-bold tracking-wider">VERIFIED IDENTITIES</span>
+<span class="material-symbols-outlined text-[18px] text-success-text">verified</span>
+</div>
+<div class="flex items-baseline gap-space-2 mt-space-3">
+<span class="font-data-mono-lg text-[26px] font-bold text-text-primary">14,310</span>
+<span class="font-label-badge text-label-badge text-success-text bg-success-bg px-space-2 py-0.5 rounded border border-success-border">96.5%</span>
+</div>
+<div class="mt-space-2 flex items-center gap-1.5 text-text-secondary font-label-telemetry text-label-telemetry">
+<span class="w-2 h-2 rounded-full bg-success-text"></span> Aadhaar & DigiLocker matched
+        </div>
+</div>
+<div class="bg-surface-card p-space-4 rounded-xl border border-border-default shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-text-secondary">
+<span class="font-label-telemetry text-label-telemetry uppercase font-bold tracking-wider">COORDINATORS ACTIVE</span>
+<span class="material-symbols-outlined text-[18px] text-primary">hub</span>
+</div>
+<div class="flex items-baseline gap-space-2 mt-space-3">
+<span class="font-data-mono-lg text-[26px] font-bold text-text-primary">184</span>
+<span class="font-label-telemetry text-label-telemetry text-text-muted">EOC CADRE</span>
+</div>
+<div class="mt-space-2 flex items-center gap-1.5 text-text-secondary font-label-telemetry text-label-telemetry">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span> 18 Tri-City EOC shifts
+        </div>
+</div>
+<div class="bg-surface-card p-space-4 rounded-xl border border-border-default shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-text-secondary">
+<span class="font-label-telemetry text-label-telemetry uppercase font-bold tracking-wider">RESPONDERS ACTIVE</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">emergency</span>
+</div>
+<div class="flex items-baseline gap-space-2 mt-space-3">
+<span class="font-data-mono-lg text-[26px] font-bold text-text-primary">412</span>
+<span class="font-label-telemetry text-label-telemetry text-text-muted">FIELD UNITS</span>
+</div>
+<div class="mt-space-2 flex items-center gap-1.5 text-text-secondary font-label-telemetry text-label-telemetry">
+<span class="w-2 h-2 rounded-full bg-primary"></span> 89% GPS Telemetry active
+        </div>
+</div>
+<div class="bg-surface-card p-space-4 rounded-xl border border-border-default shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-text-secondary">
+<span class="font-label-telemetry text-label-telemetry uppercase font-bold tracking-wider">FLAGGED / SUSPENDED</span>
+<span class="material-symbols-outlined text-[18px] text-critical-text">gavel</span>
+</div>
+<div class="flex items-baseline gap-space-2 mt-space-3">
+<span class="font-data-mono-lg text-[26px] font-bold text-critical-text">03</span>
+<span class="font-label-badge text-label-badge text-critical-text bg-critical-bg px-space-2 py-0.5 rounded border border-critical-border">AUDIT LOCK</span>
+</div>
+<div class="mt-space-2 flex items-center gap-1.5 text-critical-text font-label-telemetry text-label-telemetry font-bold">
+<span class="material-symbols-outlined text-[14px]">flip_camera_ios</span> Manual review required
+        </div>
+</div>
+</div>
+<!-- Filter & Search Panel -->
+<div class="bg-surface-card p-space-4 rounded-xl border border-border-default shadow-sm flex flex-col gap-space-3">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-3">
+<!-- Search Input -->
+<div class="md:col-span-5 relative">
+<span class="material-symbols-outlined absolute left-space-3 top-2.5 text-text-muted text-[18px]">search</span>
+<input class="w-full h-10 pl-10 pr-space-4 bg-surface-card border border-border-default rounded text-body-md text-text-primary placeholder:text-text-muted focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" id="tableSearch" placeholder="Search by full name, phone number, email, or government employee ID..." type="text"/>
+</div>
+<!-- Role Filter -->
+<div class="md:col-span-2 relative">
+<select class="w-full h-10 px-space-3 pr-8 bg-surface-card border border-border-default rounded text-body-md text-text-primary appearance-none focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary cursor-pointer" id="roleFilter">
+<option value="ALL">All Roles</option>
+<option value="Admin">Admin</option>
+<option value="Coordinator">Coordinator</option>
+<option value="Responder">Responder</option>
+<option value="Citizen">Citizen</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 text-text-muted pointer-events-none text-[18px]">expand_more</span>
+</div>
+<!-- Account Status Filter -->
+<div class="md:col-span-2 relative">
+<select class="w-full h-10 px-space-3 pr-8 bg-surface-card border border-border-default rounded text-body-md text-text-primary appearance-none focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary cursor-pointer" id="statusFilter">
+<option value="ALL">All Statuses</option>
+<option value="Active">Active</option>
+<option value="Under Review">Pending Review</option>
+<option value="Suspended">Suspended / Lock</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 text-text-muted pointer-events-none text-[18px]">expand_more</span>
+</div>
+<!-- Verification State Filter -->
+<div class="md:col-span-2 relative">
+<select class="w-full h-10 px-space-3 pr-8 bg-surface-card border border-border-default rounded text-body-md text-text-primary appearance-none focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary cursor-pointer" id="verificationFilter">
+<option value="ALL">All Verifications</option>
+<option value="Aadhaar Verified">Aadhaar & DigiLocker</option>
+<option value="Official Badge">Gov Official Badge</option>
+<option value="Unverified">Unverified / Phone</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 text-text-muted pointer-events-none text-[18px]">expand_more</span>
+</div>
+<!-- Clear Filters -->
+<div class="md:col-span-1 flex items-center justify-end">
+<button class="w-full h-10 flex items-center justify-center gap-1 rounded border border-border-default hover:bg-surface-subtle text-text-secondary hover:text-text-primary transition-colors text-label-telemetry font-bold" id="btnClearFilters">
+<span class="material-symbols-outlined text-[16px]">clear_all</span>
+<span>RESET</span>
+</button>
+</div>
+</div>
+<!-- Quick status tags row -->
+<div class="flex flex-wrap items-center justify-between pt-space-2 border-t border-border-default">
+<div class="flex items-center gap-space-2 flex-wrap">
+<span class="font-label-telemetry text-label-telemetry uppercase text-text-muted font-bold">QUICK TOGGLES:</span>
+<button class="px-space-2 py-0.5 rounded-full text-label-badge bg-blue-soft border border-info-border text-primary font-bold hover:bg-blue-light transition-colors">Only Field Units</button>
+<button class="px-space-2 py-0.5 rounded-full text-label-badge bg-surface-subtle border border-border-default text-text-secondary font-bold hover:bg-border-default transition-colors">Needs Biometric Audit (14)</button>
+<button class="px-space-2 py-0.5 rounded-full text-label-badge bg-warning-bg border border-warning-border text-warning-text font-bold hover:bg-amber-100 transition-colors">Pending Officer Review (5)</button>
+</div>
+<div class="text-text-secondary font-label-telemetry text-label-telemetry">
+          SHOWING <span class="font-bold text-text-primary" id="recordCount">8</span> OF 14,820 RECORDS
+        </div>
+</div>
+</div>
+<!-- High-Density Structured User Table -->
+<div class="bg-surface-card rounded-xl border border-border-default shadow-sm overflow-hidden flex flex-col">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-subtle border-b border-border-default">
+<th class="py-space-3 px-space-4 font-label-badge text-label-badge text-text-secondary uppercase tracking-wider font-bold">USER & IDENTIFIER</th>
+<th class="py-space-3 px-space-4 font-label-badge text-label-badge text-text-secondary uppercase tracking-wider font-bold">ASSIGNED ROLE</th>
+<th class="py-space-3 px-space-4 font-label-badge text-label-badge text-text-secondary uppercase tracking-wider font-bold">ORGANIZATION / DEPT</th>
+<th class="py-space-3 px-space-4 font-label-badge text-label-badge text-text-secondary uppercase tracking-wider font-bold">VERIFICATION TIER</th>
+<th class="py-space-3 px-space-4 font-label-badge text-label-badge text-text-secondary uppercase tracking-wider font-bold">ACCOUNT STATUS</th>
+<th class="py-space-3 px-space-4 font-label-badge text-label-badge text-text-secondary uppercase tracking-wider font-bold">REGISTERED</th>
+<th class="py-space-3 px-space-4 font-label-badge text-label-badge text-text-secondary uppercase tracking-wider font-bold">LAST ACTIVE SESSION</th>
+<th class="py-space-3 px-space-4 font-label-badge text-label-badge text-text-secondary uppercase tracking-wider font-bold text-right">GOVERNANCE</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-border-default font-body-md text-text-primary" id="userTableBody">
+<!-- Record 1: Dr. Ananya Roy -->
+<tr class="hover:bg-surface-subtle/70 transition-colors">
+<td class="py-space-3 px-space-4">
+<div class="flex items-center gap-space-3">
+<div class="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold font-data-mono-md text-[13px] border border-info-border">
+                    AR
+                  </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-2">
+<span class="font-headline-sm text-headline-sm text-text-primary font-bold">Dr. Ananya Roy</span>
+<span class="material-symbols-outlined text-[14px] text-primary" title="Master Root Access">verified_user</span>
+</div>
+<div class="flex items-center gap-space-2 text-text-secondary font-label-telemetry text-label-telemetry">
+<span class="font-data-mono-md">#USR-IND-0001</span>
+<span>•</span>
+<span>+91 94170-00192</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-space-3 px-space-4">
+<span class="px-space-2 py-0.5 rounded font-label-badge text-label-badge font-bold bg-purple-50 text-purple-700 border border-purple-200 inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">security</span>
+                  Admin
+                </span>
+</td>
+<td class="py-space-3 px-space-4">
+<div class="flex flex-col">
+<span class="font-body-md text-text-primary font-semibold">Central NDMA Governance</span>
+<span class="font-label-telemetry text-label-telemetry text-text-secondary">National Registrar Cadre</span>
+</div>
+</td>
+<td class="py-space-3 px-space-4">
+<span class="px-space-2 py-0.5 rounded font-label-badge text-label-badge font-bold bg-blue-soft text-primary border border-info-border inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">verified</span>
+                  Gov Official Badge
+                </span>
+</td>
+<td class="py-space-3 px-space-4">
+<span class="px-space-2 py-0.5 rounded-full font-label-badge text-label-badge font-bold bg-success-bg text-success-text border border-success-border inline-flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-success-text"></span>
+                  Active
+                </span>
+</td>
+<td class="py-space-3 px-space-4 font-data-mono-md text-data-mono-md text-text-secondary">
+                12 Aug 2022
+              </td>
+<td class="py-space-3 px-space-4">
+<div class="flex flex-col">
+<span class="font-body-sm text-text-primary font-medium">Just now</span>
+<span class="font-label-telemetry text-label-telemetry text-text-secondary">Gov-DC-Console • 10.0.4.1</span>
+</div>
+</td>
+<td class="py-space-3 px-space-4 text-right">
+<div class="inline-flex items-center gap-1">
+<button class="p-1 rounded hover:bg-surface-subtle text-text-secondary hover:text-primary transition-colors" title="Inspect Profile">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-subtle text-text-secondary hover:text-primary transition-colors" title="Edit Permissions">
+<span class="material-symbols-outlined text-[18px]">edit_note</span>
+</button>
+<button class="p-1 rounded text-text-muted opacity-40 cursor-not-allowed" disabled="" title="System Root (Protected)">
+<span class="material-symbols-outlined text-[18px]">lock</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Record 2: Vikram Malhotra -->
+<tr class="hover:bg-surface-subtle/70 transition-colors">
+<td class="py-space-3 px-space-4">
+<div class="flex items-center gap-space-3">
+<div class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant font-bold font-data-mono-md text-[13px] border border-border-default">
+                    VM
+                  </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-2">
+<span class="font-headline-sm text-headline-sm text-text-primary font-bold">Vikram Malhotra</span>
+</div>
+<div class="flex items-center gap-space-2 text-text-secondary font-label-telemetry text-label-telemetry">
+<span class="font-data-mono-md">#USR-IND-1048</span>
+<span>•</span>
+<span>+91 98141-89021</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-space-3 px-space-4">
+<span class="px-space-2 py-0.5 rounded font-label-badge text-label-badge font-bold bg-blue-900 text-white border border-blue-950 inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">hub</span>
+                  Coordinator (EOC)
+                </span>
+</td>
+<td class="py-space-3 px-space-4">
+<div class="flex flex-col">
+<span class="font-body-md text-text-primary font-semibold">Chandigarh Tricity EOC</span>
+<span class="font-label-telemetry text-label-telemetry text-text-secondary">Incident Command Sector 9</span>
+</div>
+</td>
+<td class="py-space-3 px-space-4">
+<span class="px-space-2 py-0.5 rounded font-label-badge text-label-badge font-bold bg-success-bg text-success-text border border-success-border inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">check_circle</span>
+                  Aadhaar Verified
+                </span>
+</td>
+<td class="py-space-3 px-space-4">
+<span class="px-space-2 py-0.5 rounded-full font-label-badge text-label-badge font-bold bg-success-bg text-success-text border border-success-border inline-flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-success-text"></span>
+                  Active
+                </span>
+</td>
+<td class="py-space-3 px-space-4 font-data-mono-md text-data-mono-md text-text-secondary">
+                19 Jan 2023
+              </td>
+<td class="py-space-3 px-space-4">
+<div class="flex flex-col">
+<span class="font-body-sm text-text-primary font-medium">8 mins ago</span>
+<span class="font-label-telemetry text-label-telemetry text-text-secondary">Mesh Relay 12A • Tactical Grid</span>
+</div>
+</td>
+<td class="py-space-3 px-space-4 text-right">
+<div class="inline-flex items-center gap-1">
+<button class="p-1 rounded hover:bg-surface-subtle text-text-secondary hover:text-primary transition-colors" title="Inspect Profile">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-subtle text-text-secondary hover:text-primary transition-colors" title="Edit Permissions">
+<span class="material-symbols-outlined text-[18px]">edit_note</span>
+</button>
+<button class="p-1 rounded hover:bg-critical-bg text-text-secondary hover:text-critical-text transition-colors" title="Deactivate Account">
+<span class="material-symbols-outlined text-[18px]">block</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Record 3: Arjun Mehta -->
+<tr class="hover:bg-surface-subtle/70 transition-colors">
+<td class="py-space-3 px-space-4">
+<div class="flex items-center gap-space-3">
+<div class="w-9 h-9 rounded-full bg-blue-soft flex items-center justify-center text-primary font-bold font-data-mono-md text-[13px] border border-info-border">
+                    AM
+                  </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-2">
+<span class="font-headline-sm text-headline-sm text-text-primary font-bold">Arjun Mehta</span>
+</div>
+<div class="flex items-center gap-space-2 text-text-secondary font-label-telemetry text-label-telemetry">
+<span class="font-data-mono-md">#USR-IND-8820</span>
+<span>•</span>
+<span>+91 98725-44310</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-space-3 px-space-4">
+<span class="px-space-2 py-0.5 rounded font-label-badge text-label-badge font-bold bg-cyan-50 text-cyan-800 border border-cyan-200 inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">local_shipping</span>
+                  Responder (Field)
+                </span>
+</td>
+<td class="py-space-3 px-space-4">
+<div class="flex flex-col">
+<span class="font-body-md text-text-primary font-semibold">Chandigarh Emergency Volunteers</span>
+<span class="font-label-telemetry text-label-telemetry text-text-secondary">Quick Response Unit 4</span>
+</div>
+</td>
+<td class="py-space-3 px-space-4">
+<span class="px-space-2 py-0.5 rounded font-label-badge text-label-badge font-bold bg-success-bg text-success-text border border-success-border inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">check_circle</span>
+                  Aadhaar & DigiLocker
+                </span>
+</td>
+<td class="py-space-3 px-space-4">
+<span class="px-space-2 py-0.5 rounded-full font-label-badge text-label-badge font-bold bg-success-bg text-success-text border border-success-border inline-flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-success-text"></span>
+                  Active
+                </span>
+</td>
+<td class="py-space-3 px-space-4 font-data-mono-md text-data-mono-md text-text-secondary">
+                14 Oct 2023
+              </td>
+<td class="py-space-3 px-space-4">
+<div class="flex flex-col">
+<span class="font-body-sm text-text-primary font-medium">12 mins ago</span>
+<span class="font-label-telemetry text-label-telemetry text-text-secondary">Mesh Node 419 • Sector 22</span>
+</div>
+</td>
+<td class="py-space-3 px-space-4 text-right">
+<div class="inline-flex items-center gap-1">
+<button class="p-1 rounded hover:bg-surface-subtle text-text-secondary hover:text-primary transition-colors" title="Inspect Profile">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-subtle text-text-secondary hover:text-primary transition-colors" title="Edit Permissions">
+<span class="material-symbols-outlined text-[18px]">edit_note</span>
+</button>
+<button class="p-1 rounded hover:bg-critical-bg text-text-secondary hover:text-critical-text transition-colors" title="Deactivate Account">
+<span class="material-symbols-outlined text-[18px]">block</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Record 4: Simran Kaur -->
+<tr class="hover:bg-surface-subtle/70 transition-colors">
+<td class="py-space-3 px-space-4">
+<div class="flex items-center gap-space-3">
+<div class="w-9 h-9 rounded-full bg-surface-subtle flex items-center justify-center text-text-secondary font-bold font-data-mono-md text-[13px] border border-border-default">
+                    SK
+                  </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-2">
+<span class="font-headline-sm text-headline-sm text-text-primary font-bold">Simran Kaur</span>
+</div>
+<div class="flex items-center gap-space-2 text-text-secondary font-label-telemetry text-label-telemetry">
+<span class="font-data-mono-md">#USR-IND-5412</span>
+<span>•</span>
+<span>+91 99882-77189</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-space-3 px-space-4">
+<span class="px-space-2 py-0.5 rounded font-label-badge text-label-badge font-bold bg-slate-100 text-slate-700 border border-slate-300 inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">person</span>
+                  Citizen
+                </span>
+</td>
+<td class="py-space-3 px-space-4">
+<div class="flex flex-col">
+<span class="font-body-md text-text-primary font-semibold">Citizen / Self-Registered</span>
+<span class="font-label-telemetry text-label-telemetry text-text-secondary">Sector 17 Commercial Arcade</span>
+</div>
+</td>
+<td class="py-space-3 px-space-4">
+<span class="px-space-2 py-0.5 rounded font-label-badge text-label-badge font-bold bg-success-bg text-success-text border border-success-border inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">verified</span>
+                  DigiLocker Seeded
+                </span>
+</td>
+<td class="py-space-3 px-space-4">
+<span class="px-space-2 py-0.5 rounded-full font-label-badge text-label-badge font-bold bg-success-bg text-success-text border border-success-border inline-flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-success-text"></span>
+                  Active
+                </span>
+</td>
+<td class="py-space-3 px-space-4 font-data-mono-md text-data-mono-md text-text-secondary">
+                02 Nov 2023
+              </td>
+<td class="py-space-3 px-space-4">
+<div class="flex flex-col">
+<span class="font-body-sm text-text-primary font-medium">35 mins ago</span>
+<span class="font-label-telemetry text-label-telemetry text-text-secondary">Mobile Citizen App • SOS-IDLE</span>
+</div>
+</td>
+<td class="py-space-3 px-space-4 text-right">
+<div class="inline-flex items-center gap-1">
+<button class="p-1 rounded hover:bg-surface-subtle text-text-secondary hover:text-primary transition-colors" title="Inspect Profile">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-subtle text-text-secondary hover:text-primary transition-colors" title="Edit Permissions">
+<span class="material-symbols-outlined text-[18px]">edit_note</span>
+</button>
+<button class="p-1 rounded hover:bg-critical-bg text-text-secondary hover:text-critical-text transition-colors" title="Deactivate Account">
+<span class="material-symbols-outlined text-[18px]">block</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Record 5: Rajesh Verma -->
+<tr class="hover:bg-surface-subtle/70 transition-colors">
+<td class="py-space-3 px-space-4">
+<div class="flex items-center gap-space-3">
+<div class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant font-bold font-data-mono-md text-[13px] border border-border-default">
+                    RV
+                  </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-2">
+<span class="font-headline-sm text-headline-sm text-text-primary font-bold">Rajesh Verma</span>
+</div>
+<div class="flex items-center gap-space-2 text-text-secondary font-label-telemetry text-label-telemetry">
+<span class="font-data-mono-md">#USR-IND-2294</span>
+<span>•</span>
+<span>+91 94178-55219</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-space-3 px-space-4">
+<span class="px-space-2 py-0.5 rounded font-label-badge text-label-badge font-bold bg-blue-900 text-white border border-blue-950 inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">hub</span>
+                  Coordinator (EOC)
+                </span>
+</td>
+<td class="py-space-3 px-space-4">
+<div class="flex flex-col">
+<span class="font-body-md text-text-primary font-semibold">Mohali District Control Room</span>
+<span class="font-label-telemetry text-label-telemetry text-text-secondary">Punjab SDMA Liaison</span>
+</div>
+</td>
+<td class="py-space-3 px-space-4">
+<span class="px-space-2 py-0.5 rounded font-label-badge text-label-badge font-bold bg-blue-soft text-primary border border-info-border inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">verified</span>
+                  Gov Official Badge
+                </span>
+</td>
+<td class="py-space-3 px-space-4">
+<span class="px-space-2 py-0.5 rounded-full font-label-badge text-label-badge font-bold bg-success-bg text-success-text border border-success-border inline-flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-success-text"></span>
+                  Active
+                </span>
+</td>
+<td class="py-space-3 px-space-4 font-data-mono-md text-data-mono-md text-text-secondary">
+                15 Feb 2023
+              </td>
+<td class="py-space-3 px-space-4">
+<div class="flex flex-col">
+<span class="font-body-sm text-text-primary font-medium">1 hour ago</span>
+<span class="font-label-telemetry text-label-telemetry text-text-secondary">Punjab SDMA Fiber Trunk</span>
+</div>
+</td>
+<td class="py-space-3 px-space-4 text-right">
+<div class="inline-flex items-center gap-1">
+<button class="p-1 rounded hover:bg-surface-subtle text-text-secondary hover:text-primary transition-colors" title="Inspect Profile">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-subtle text-text-secondary hover:text-primary transition-colors" title="Edit Permissions">
+<span class="material-symbols-outlined text-[18px]">edit_note</span>
+</button>
+<button class="p-1 rounded hover:bg-critical-bg text-text-secondary hover:text-critical-text transition-colors" title="Deactivate Account">
+<span class="material-symbols-outlined text-[18px]">block</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Record 6: Sunita Sharma -->
+<tr class="hover:bg-surface-subtle/70 transition-colors">
+<td class="py-space-3 px-space-4">
+<div class="flex items-center gap-space-3">
+<div class="w-9 h-9 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 font-bold font-data-mono-md text-[13px] border border-amber-200">
+                    SS
+                  </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-2">
+<span class="font-headline-sm text-headline-sm text-text-primary font-bold">Sunita Sharma</span>
+</div>
+<div class="flex items-center gap-space-2 text-text-secondary font-label-telemetry text-label-telemetry">
+<span class="font-data-mono-md">#USR-IND-7391</span>
+<span>•</span>
+<span>+91 97800-11234</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-space-3 px-space-4">
+<span class="px-space-2 py-0.5 rounded font-label-badge text-label-badge font-bold bg-amber-50 text-amber-800 border border-amber-200 inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">volunteer_activism</span>
+                  Coordinator (NGO)
+                </span>
+</td>
+<td class="py-space-3 px-space-4">
+<div class="flex flex-col">
+<span class="font-body-md text-text-primary font-semibold">ActionAid Relief Charter</span>
+<span class="font-label-telemetry text-label-telemetry text-text-secondary">Community Ration & Triage Unit</span>
+</div>
+</td>
+<td class="py-space-3 px-space-4">
+<span class="px-space-2 py-0.5 rounded font-label-badge text-label-badge font-bold bg-success-bg text-success-text border border-success-border inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">check_circle</span>
+                  Aadhaar Verified
+                </span>
+</td>
+<td class="py-space-3 px-space-4">
+<span class="px-space-2 py-0.5 rounded-full font-label-badge text-label-badge font-bold bg-warning-bg text-warning-text border border-warning-border inline-flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-warning-text"></span>
+                  Under Review
+                </span>
+</td>
+<td class="py-space-3 px-space-4 font-data-mono-md text-data-mono-md text-text-secondary">
+                28 Dec 2023
+              </td>
+<td class="py-space-3 px-space-4">
+<div class="flex flex-col">
+<span class="font-body-sm text-text-primary font-medium">3 hours ago</span>
+<span class="font-label-telemetry text-label-telemetry text-text-secondary">Web Portal • Session Expired</span>
+</div>
+</td>
+<td class="py-space-3 px-space-4 text-right">
+<div class="inline-flex items-center gap-1">
+<button class="p-1 rounded hover:bg-surface-subtle text-text-secondary hover:text-primary transition-colors" title="Inspect Profile">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-subtle text-text-secondary hover:text-primary transition-colors" title="Edit Permissions">
+<span class="material-symbols-outlined text-[18px]">edit_note</span>
+</button>
+<button class="p-1 rounded hover:bg-critical-bg text-text-secondary hover:text-critical-text transition-colors" title="Deactivate Account">
+<span class="material-symbols-outlined text-[18px]">block</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Record 7: Amitav Ghosh -->
+<tr class="hover:bg-surface-subtle/70 transition-colors">
+<td class="py-space-3 px-space-4">
+<div class="flex items-center gap-space-3">
+<div class="w-9 h-9 rounded-full bg-critical-bg flex items-center justify-center text-critical-text font-bold font-data-mono-md text-[13px] border border-critical-border">
+                    AG
+                  </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-2">
+<span class="font-headline-sm text-headline-sm text-text-primary font-bold">Amitav Ghosh</span>
+<span class="material-symbols-outlined text-[14px] text-critical-text" title="Suspended for Anomalous Location spoofing">warning</span>
+</div>
+<div class="flex items-center gap-space-2 text-text-secondary font-label-telemetry text-label-telemetry">
+<span class="font-data-mono-md">#USR-IND-9031</span>
+<span>•</span>
+<span>+91 98150-67890</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-space-3 px-space-4">
+<span class="px-space-2 py-0.5 rounded font-label-badge text-label-badge font-bold bg-slate-100 text-slate-700 border border-slate-300 inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">person</span>
+                  Citizen
+                </span>
+</td>
+<td class="py-space-3 px-space-4">
+<div class="flex flex-col">
+<span class="font-body-md text-text-primary font-semibold">Citizen / Self-Registered</span>
+<span class="font-label-telemetry text-label-telemetry text-text-secondary">Jan Marg South, Sector 34</span>
+</div>
+</td>
+<td class="py-space-3 px-space-4">
+<span class="px-space-2 py-0.5 rounded font-label-badge text-label-badge font-bold bg-warning-bg text-warning-text border border-warning-border inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">help_center</span>
+                  Unverified / Phone Only
+                </span>
+</td>
+<td class="py-space-3 px-space-4">
+<span class="px-space-2 py-0.5 rounded-full font-label-badge text-label-badge font-bold bg-critical-bg text-critical-text border border-critical-border inline-flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-critical-text"></span>
+                  Suspended
+                </span>
+</td>
+<td class="py-space-3 px-space-4 font-data-mono-md text-data-mono-md text-text-secondary">
+                11 Jan 2024
+              </td>
+<td class="py-space-3 px-space-4">
+<div class="flex flex-col">
+<span class="font-body-sm text-critical-text font-medium">Session Revoked</span>
+<span class="font-label-telemetry text-label-telemetry text-text-secondary">Admin Quarantined • Rule #403</span>
+</div>
+</td>
+<td class="py-space-3 px-space-4 text-right">
+<div class="inline-flex items-center gap-1">
+<button class="p-1 rounded hover:bg-surface-subtle text-critical-text transition-colors" title="Inspect Profile & Audit Trail">
+<span class="material-symbols-outlined text-[18px]">policy</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-subtle text-text-secondary hover:text-success-text transition-colors" title="Lift Suspension">
+<span class="material-symbols-outlined text-[18px]">lock_open</span>
+</button>
+<button class="p-1 rounded hover:bg-critical-bg text-text-secondary hover:text-critical-text transition-colors" title="Permanently Purge">
+<span class="material-symbols-outlined text-[18px]">delete_forever</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Record 8: Manpreet Singh -->
+<tr class="hover:bg-surface-subtle/70 transition-colors">
+<td class="py-space-3 px-space-4">
+<div class="flex items-center gap-space-3">
+<div class="w-9 h-9 rounded-full bg-blue-soft flex items-center justify-center text-primary font-bold font-data-mono-md text-[13px] border border-info-border">
+                    MS
+                  </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-2">
+<span class="font-headline-sm text-headline-sm text-text-primary font-bold">Manpreet Singh</span>
+</div>
+<div class="flex items-center gap-space-2 text-text-secondary font-label-telemetry text-label-telemetry">
+<span class="font-data-mono-md">#USR-IND-3901</span>
+<span>•</span>
+<span>+91 98881-23091</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-space-3 px-space-4">
+<span class="px-space-2 py-0.5 rounded font-label-badge text-label-badge font-bold bg-cyan-50 text-cyan-800 border border-cyan-200 inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">emergency</span>
+                  Responder (SDRF)
+                </span>
+</td>
+<td class="py-space-3 px-space-4">
+<div class="flex flex-col">
+<span class="font-body-md text-text-primary font-semibold">SDRF Quick Response Unit</span>
+<span class="font-label-telemetry text-label-telemetry text-text-secondary">Urban Water Extraction Battalion</span>
+</div>
+</td>
+<td class="py-space-3 px-space-4">
+<span class="px-space-2 py-0.5 rounded font-label-badge text-label-badge font-bold bg-blue-soft text-primary border border-info-border inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">verified</span>
+                  Gov Official Badge
+                </span>
+</td>
+<td class="py-space-3 px-space-4">
+<span class="px-space-2 py-0.5 rounded-full font-label-badge text-label-badge font-bold bg-success-bg text-success-text border border-success-border inline-flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-success-text"></span>
+                  Active
+                </span>
+</td>
+<td class="py-space-3 px-space-4 font-data-mono-md text-data-mono-md text-text-secondary">
+                04 Sep 2023
+              </td>
+<td class="py-space-3 px-space-4">
+<div class="flex flex-col">
+<span class="font-body-sm text-text-primary font-medium">4 mins ago</span>
+<span class="font-label-telemetry text-label-telemetry text-text-secondary">SDRF-VHF-DATA • Sukhna Lake</span>
+</div>
+</td>
+<td class="py-space-3 px-space-4 text-right">
+<div class="inline-flex items-center gap-1">
+<button class="p-1 rounded hover:bg-surface-subtle text-text-secondary hover:text-primary transition-colors" title="Inspect Profile">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-subtle text-text-secondary hover:text-primary transition-colors" title="Edit Permissions">
+<span class="material-symbols-outlined text-[18px]">edit_note</span>
+</button>
+<button class="p-1 rounded hover:bg-critical-bg text-text-secondary hover:text-critical-text transition-colors" title="Deactivate Account">
+<span class="material-symbols-outlined text-[18px]">block</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination & Table Control Strip -->
+<div class="p-space-4 border-t border-border-default flex flex-col sm:flex-row items-center justify-between gap-space-4 bg-surface-card">
+<div class="flex items-center gap-space-2 font-label-telemetry text-label-telemetry text-text-secondary">
+<span>SHOWING</span>
+<span class="font-bold text-text-primary">1 - 8</span>
+<span>OF</span>
+<span class="font-bold text-text-primary">14,820</span>
+<span>RECORDS</span>
+</div>
+<!-- Page Controls -->
+<div class="flex items-center gap-1">
+<button class="w-8 h-8 rounded border border-border-default flex items-center justify-center text-text-secondary hover:bg-surface-subtle transition-colors disabled:opacity-40" disabled="">
+<span class="material-symbols-outlined text-[16px]">chevron_left</span>
+</button>
+<button class="w-8 h-8 rounded bg-primary text-on-primary font-bold font-data-mono-md text-data-mono-md flex items-center justify-center shadow-sm">
+            1
+          </button>
+<button class="w-8 h-8 rounded border border-border-default font-data-mono-md text-data-mono-md text-text-primary hover:bg-surface-subtle flex items-center justify-center transition-colors">
+            2
+          </button>
+<button class="w-8 h-8 rounded border border-border-default font-data-mono-md text-data-mono-md text-text-primary hover:bg-surface-subtle flex items-center justify-center transition-colors">
+            3
+          </button>
+<span class="w-8 h-8 flex items-center justify-center text-text-muted font-data-mono-md">...</span>
+<button class="w-10 h-8 rounded border border-border-default font-data-mono-md text-data-mono-md text-text-primary hover:bg-surface-subtle flex items-center justify-center transition-colors">
+            1852
+          </button>
+<button class="w-8 h-8 rounded border border-border-default flex items-center justify-center text-text-secondary hover:bg-surface-subtle transition-colors">
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Security & Immutable Audit Notice (CAP Styled Container) -->
+<div class="bg-blue-soft p-space-4 rounded-xl border-l-4 border-primary border-t border-r border-b border-info-border flex flex-col md:flex-row items-start md:items-center justify-between gap-space-4">
+<div class="flex items-start gap-space-3">
+<span class="material-symbols-outlined text-primary text-[22px] mt-0.5">verified_user</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-text-primary font-bold">Audit Policy & Governance Protocol (NDRA-SEC-92)</span>
+<p class="font-body-md text-body-md text-text-secondary">Administrative modifications to user roles, credentials, and access levels are cryptographically signed via HSM keys and logged permanently into the immutable audit registry.</p>
+</div>
+</div>
+<div class="flex items-center gap-space-2 shrink-0">
+<a class="px-space-3 py-1.5 rounded bg-surface-card border border-info-border text-primary font-label-telemetry text-label-telemetry uppercase font-bold hover:bg-blue-light transition-colors flex items-center gap-1.5" data-path="audit-logs" href="#">
+<span class="material-symbols-outlined text-[14px]">history_edu</span>
+<span>View Cryptographic Audit Stream</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Client-side Interactive Filter Hook Script -->
+<script>
+    (function() {
+      const searchInput = document.getElementById('tableSearch');
+      const roleFilter = document.getElementById('roleFilter');
+      const statusFilter = document.getElementById('statusFilter');
+      const btnClear = document.getElementById('btnClearFilters');
+      const tbody = document.getElementById('userTableBody');
+      const recordCount = document.getElementById('recordCount');
+
+      if (!tbody) return;
+
+      function applyFilters() {
+        const query = (searchInput?.value || '').toLowerCase().trim();
+        const roleVal = roleFilter?.value || 'ALL';
+        const statusVal = statusFilter?.value || 'ALL';
+
+        const rows = tbody.querySelectorAll('tr');
+        let visibleCount = 0;
+
+        rows.forEach(row => {
+          const rowText = row.innerText.toLowerCase();
+          const matchesQuery = !query || rowText.includes(query);
+          const matchesRole = (roleVal === 'ALL') || rowText.includes(roleVal.toLowerCase());
+          const matchesStatus = (statusVal === 'ALL') || rowText.includes(statusVal.toLowerCase());
+
+          if (matchesQuery && matchesRole && matchesStatus) {
+            row.style.display = '';
+            visibleCount++;
+          } else {
+            row.style.display = 'none';
+          }
+        });
+
+        if (recordCount) {
+          recordCount.textContent = visibleCount;
+        }
+      }
+
+      searchInput?.addEventListener('input', applyFilters);
+      roleFilter?.addEventListener('change', applyFilters);
+      statusFilter?.addEventListener('change', applyFilters);
+
+      btnClear?.addEventListener('click', () => {
+        if (searchInput) searchInput.value = '';
+        if (roleFilter) roleFilter.value = 'ALL';
+        if (statusFilter) statusFilter.value = 'ALL';
+        const verFilter = document.getElementById('verificationFilter');
+        if (verFilter) verFilter.value = 'ALL';
+        applyFilters();
+      });
+    })();
+  </script>
+</div></main></div></body></html>

@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700&amp;family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "inverse-on-surface": "#eaf1ff", "on-primary-fixed-variant": "#003ea8", "inverse-surface": "#213145", "on-primary": "#ffffff", "on-secondary-fixed": "#001c3b", "blue-soft": "#EFF6FF", "surface-container-low": "#eff4ff", "secondary-fixed": "#d5e3ff", "text-primary": "#1E293B", "blue-light": "#DBEAFE", "surface": "#f8f9ff", "tertiary": "#4d556b", "on-tertiary": "#ffffff", "secondary": "#455f87", "info-border": "#BFDBFE", "secondary-container": "#b5d0fd", "surface-container-highest": "#d3e4fe", "secondary-fixed-dim": "#adc8f5", "surface-container": "#e5eeff", "critical-border": "#FECACA", "critical-text": "#DC2626", "background": "#f8f9ff", "on-secondary-fixed-variant": "#2d486d", "surface-subtle": "#F1F5F9", "surface-variant": "#d3e4fe", "success-text": "#16A34A", "tertiary-fixed": "#dae2fd", "text-secondary": "#64748B", "inverse-primary": "#b4c5ff", "on-tertiary-fixed": "#131b2e", "primary-container": "#2563eb", "on-secondary": "#ffffff", "on-error": "#ffffff", "success-border": "#BBF7D0", "warning-text": "#D97706", "warning-border": "#FDE68A", "surface-bright": "#f8f9ff", "success-bg": "#F0FDF4", "primary-fixed-dim": "#b4c5ff", "tertiary-container": "#656d84", "on-surface": "#0b1c30", "tertiary-fixed-dim": "#bec6e0", "border-default": "#E2E8F0", "on-primary-container": "#eeefff", "warning-bg": "#FFFBEB", "on-background": "#0b1c30", "error-container": "#ffdad6", "surface-tint": "#0053db", "critical-bg": "#FEF2F2", "primary": "#004ac6", "surface-card": "#FFFFFF", "on-surface-variant": "#434655", "on-error-container": "#93000a", "outline": "#737686", "on-tertiary-container": "#eef0ff", "text-muted": "#94A3B8", "error": "#ba1a1a", "surface-dim": "#cbdbf5", "on-secondary-container": "#3e5980", "surface-container-lowest": "#ffffff", "surface-container-high": "#dce9ff", "outline-variant": "#c3c6d7", "on-primary-fixed": "#00174b", "surface-base": "#F8FAFC", "primary-fixed": "#dbe1ff", "on-tertiary-fixed-variant": "#3f465c" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "gutter-standard": "16px", "space-10": "40px", "margin-tablet": "24px", "space-16": "64px", "space-0": "0px", "space-5": "20px", "margin-mobile": "16px", "gutter-expanded": "24px", "space-3": "12px", "margin-desktop": "32px", "space-12": "48px", "space-1": "4px", "space-2": "8px", "space-4": "16px", "gutter-dense": "8px", "space-6": "24px", "space-8": "32px" }, "fontFamily": { "headline-md": ["Public Sans"], "body-md": ["Public Sans"], "headline-xl-mobile": ["Public Sans"], "data-mono-lg": ["JetBrains Mono"], "display-hud": ["JetBrains Mono"], "headline-lg": ["Public Sans"], "headline-sm": ["Public Sans"], "body-sm": ["Public Sans"], "headline-xl": ["Public Sans"], "display-hud-mobile": ["JetBrains Mono"], "label-badge": ["Public Sans"], "data-mono-md": ["JetBrains Mono"], "body-lg": ["Public Sans"], "label-telemetry": ["JetBrains Mono"] }, "fontSize": { "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-xl-mobile": ["26px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "data-mono-lg": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "display-hud": ["48px", { "lineHeight": "52px", "letterSpacing": "-0.04em", "fontWeight": "700" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-sm": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "400" }], "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.025em", "fontWeight": "700" }], "display-hud-mobile": ["32px", { "lineHeight": "36px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "label-badge": ["11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "700" }], "data-mono-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "500" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "label-telemetry": ["10px", { "lineHeight": "12px", "letterSpacing": "0.08em", "fontWeight": "500" }] } } } };</script></head><body class="bg-surface font-body-md text-text-primary min-h-screen antialiased"><aside class="fixed left-0 top-0 bottom-0 w-72 bg-surface-card border-r border-border-default z-50 flex flex-col justify-between select-none"><div class="flex flex-col flex-1 min-h-0"><div class="h-16 px-space-6 flex items-center gap-space-3 border-b border-border-default shrink-0"><img alt="ResQnet Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UZbdxVe9zHhHzM9vo2OQSWK2Q_bht0WwW6RI8t03wEZzkIuV1AaepFB5ybGDl6J_zPVxotaiJUuUSOjEHbwRkkatzk-_NIWrS9p2mqlHILAEd1jk-VFuE7ZUuZSBGzPtgbbUnBFF7nZSVRrnhgw6TOgjgnKK07Rxsw47PItBZRM95qoxqrwjUW_mgSZP8x4JcsHxpTeE997ICMMUDA3HqRMivqR_51zVsnG1UpH15gNX5cNH3zgcPtu5Ap"/><div class="flex flex-col"><div class="flex items-center gap-space-2"><span class="font-headline-sm text-headline-sm font-bold tracking-tight text-on-surface uppercase">ResQnet</span><span class="font-label-telemetry text-label-telemetry px-space-1 bg-surface-subtle text-text-secondary rounded border border-border-default font-semibold">v2.4</span></div><span class="font-label-telemetry text-label-telemetry uppercase tracking-wider text-primary font-semibold">Field Response Console</span></div></div><div class="px-space-6 py-space-3 bg-surface-base border-b border-border-default flex items-center justify-between"><span class="font-label-telemetry text-label-telemetry uppercase text-text-secondary font-semibold">Response Unit Scope</span><span class="font-data-mono-md text-data-mono-md text-text-primary text-[11px]">SECTOR-04/NDRF</span></div><nav class="flex-1 overflow-y-auto px-space-3 py-space-4 space-y-space-1" data-active-classes="bg-primary-container text-on-primary font-semibold shadow-none rounded"><a aria-current="page" class="flex items-center justify-between px-space-3 py-space-2 transition-colors bg-primary-container text-on-primary font-semibold shadow-none rounded" data-path="dashboard" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-body-md text-body-md">Dashboard</span></div></a><a class="flex items-center justify-between px-space-3 py-space-2 rounded text-text-secondary hover:bg-surface-subtle hover:text-text-primary transition-colors" data-path="missions" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[20px]">target</span><span class="font-body-md text-body-md">Missions</span></div><span class="font-data-mono-md text-data-mono-md text-[11px] px-space-2 py-0.5 rounded bg-blue-soft text-primary font-semibold border border-info-border">3 ACT</span></a><a class="flex items-center justify-between px-space-3 py-space-2 rounded text-text-secondary hover:bg-surface-subtle hover:text-text-primary transition-colors" data-path="field-surveys" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[20px]">assignment_late</span><span class="font-body-md text-body-md">Field Surveys</span></div></a><a class="flex items-center justify-between px-space-3 py-space-2 rounded text-text-secondary hover:bg-surface-subtle hover:text-text-primary transition-colors" data-path="verification" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[20px]">verified</span><span class="font-body-md text-body-md">Verification</span></div></a><a class="flex items-center justify-between px-space-3 py-space-2 rounded text-text-secondary hover:bg-surface-subtle hover:text-text-primary transition-colors" data-path="operations-map" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[20px]">map</span><span class="font-body-md text-body-md">Operations Map</span></div><span class="font-label-telemetry text-label-telemetry px-space-1 bg-surface-subtle text-text-secondary rounded border border-border-default uppercase">GIS LIVE</span></a><a class="flex items-center justify-between px-space-3 py-space-2 rounded text-text-secondary hover:bg-surface-subtle hover:text-text-primary transition-colors" data-path="resource-requirements" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[20px]">inventory_2</span><span class="font-body-md text-body-md">Resource Requirements</span></div></a><a class="flex items-center justify-between px-space-3 py-space-2 rounded text-text-secondary hover:bg-surface-subtle hover:text-text-primary transition-colors" data-path="organization" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[20px]">corporate_fare</span><span class="font-body-md text-body-md">Organization</span></div></a><a class="flex items-center justify-between px-space-3 py-space-2 rounded text-text-secondary hover:bg-surface-subtle hover:text-text-primary transition-colors" data-path="campaigns" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[20px]">volunteer_activism</span><span class="font-body-md text-body-md">Campaigns</span></div><span class="font-label-telemetry text-label-telemetry px-space-2 py-0.5 rounded bg-surface-subtle border border-border-default text-text-secondary uppercase tracking-tight">NGO Auth</span></a><div class="pt-space-3 mt-space-2 border-t border-border-default"><a class="flex items-center justify-between px-space-3 py-space-2 rounded text-text-secondary hover:bg-surface-subtle hover:text-text-primary transition-colors" data-path="notifications" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="font-body-md text-body-md">Notifications</span></div><span class="h-2 w-2 rounded-full bg-critical-text"></span></a><a class="flex items-center justify-between px-space-3 py-space-2 rounded text-text-secondary hover:bg-surface-subtle hover:text-text-primary transition-colors" data-path="profile" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[20px]">badge</span><span class="font-body-md text-body-md">Profile</span></div></a></div></nav></div><div class="p-space-4 border-t border-border-default bg-surface-base space-y-space-3 shrink-0"><div class="p-space-3 bg-surface-card border border-border-default rounded flex flex-col gap-space-2"><div class="flex items-center justify-between"><span class="font-label-telemetry text-label-telemetry text-text-secondary uppercase tracking-wider">Telemetry Link</span><div class="flex items-center gap-1.5"><span class="h-2 w-2 rounded-full bg-success-text"></span><span class="font-label-telemetry text-label-telemetry text-success-text font-bold uppercase">Online</span></div></div><div class="font-data-mono-md text-data-mono-md text-[11px] text-text-primary leading-tight font-medium">MESH MIGRATION STABLE / ONLINE</div><div class="flex items-center justify-between pt-1 border-t border-border-default font-label-telemetry text-label-telemetry text-text-muted"><span>SYNC INTERVAL</span><span class="font-data-mono-md text-data-mono-md text-[10px] text-text-secondary">1.2s LATENCY</span></div></div><div class="flex items-center justify-between px-space-3 py-space-2 bg-success-bg border border-success-border rounded"><div class="flex items-center gap-space-2"><span class="material-symbols-outlined text-success-text text-[16px]">task_alt</span><span class="font-label-badge text-label-badge text-success-text uppercase tracking-wide">Responder Ready</span></div><span class="font-data-mono-md text-data-mono-md text-[11px] text-success-text font-semibold">LVL-1</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-card border-b border-border-default z-40 flex items-center justify-between px-space-8"><div class="flex items-center gap-space-4"><div class="flex items-center gap-space-3"><span class="font-headline-sm text-headline-sm font-bold text-on-surface tracking-tight uppercase">Field Response Console</span><div class="hidden md:flex items-center gap-1.5 px-space-2 py-0.5 rounded bg-success-bg border border-success-border"><span class="h-1.5 w-1.5 rounded-full bg-success-text animate-pulse"></span><span class="font-label-badge text-label-badge text-success-text uppercase tracking-wider">Response Network Active</span></div></div></div><div class="flex items-center gap-space-6"><div class="hidden xl:flex items-center gap-space-2 px-space-3 py-1 bg-surface-subtle border border-border-default rounded"><span class="material-symbols-outlined text-critical-text text-[16px]">emergency</span><span class="font-label-telemetry text-label-telemetry text-text-secondary uppercase font-semibold">National Dispatch:</span><span class="font-data-mono-md text-data-mono-md text-[12px] text-critical-text font-bold tracking-tight">112 / 1078</span></div><div class="flex items-center gap-space-2 px-space-3 py-1 rounded bg-success-bg border border-success-border"><span class="material-symbols-outlined text-success-text text-[16px]">radio_button_checked</span><span class="font-label-badge text-label-badge text-success-text uppercase">Status: Available</span></div><div class="h-8 w-px bg-border-default hidden sm:block"></div><div class="flex items-center gap-space-3"><div class="flex flex-col text-right hidden lg:flex"><div class="flex items-center justify-end gap-space-1"><span class="font-headline-sm text-headline-sm font-bold text-text-primary text-[13px] leading-snug uppercase tracking-tight">Arjun Mehta</span><span class="font-label-telemetry text-label-telemetry text-text-muted">|</span><span class="font-label-telemetry text-label-telemetry text-primary font-bold uppercase">Field Responder</span></div><span class="font-body-sm text-body-sm text-[11px] text-text-secondary leading-none">Chandigarh Emergency Response Unit</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface"><div class="flex flex-col w-full">
+<div class="p-space-6 space-y-space-6 max-w-[1600px] mx-auto w-full">
+<!-- 1. TOP OPERATIONAL BAR & DUTY STATE -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-4 bg-surface-card p-space-4 rounded shadow-sm">
+<div class="flex items-center gap-space-4">
+<div class="w-10 h-10 rounded bg-blue-soft flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[24px]">explore</span>
+</div>
+<div>
+<div class="flex items-center gap-space-2">
+<span class="font-headline-sm text-headline-sm text-text-primary tracking-tight">Field Dispatch Desk</span>
+<span class="font-label-telemetry text-label-telemetry px-space-2 py-0.5 bg-surface-subtle text-text-secondary rounded">ZONE-N1</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary mt-0.5">
+            Assigned Unit: <span class="font-data-mono-md text-data-mono-md font-semibold text-text-primary">ERU-Sector 17 Quick Response</span> • Lead: Arjun Mehta (ERU-DELTA-2)
+          </p>
+</div>
+</div>
+<!-- Duty State Card with Switcher -->
+<div class="flex flex-wrap items-center gap-space-3 bg-surface-base p-space-2 rounded">
+<div class="flex items-center gap-space-2 px-space-3 py-1 bg-surface-card rounded shadow-sm">
+<span class="h-2.5 w-2.5 rounded-full bg-success-text" id="statusIndicator"></span>
+<div class="flex flex-col">
+<span class="font-label-telemetry text-label-telemetry uppercase text-text-secondary leading-none">Duty State</span>
+<span class="font-data-mono-md text-data-mono-md text-[12px] font-bold text-text-primary leading-tight mt-0.5" id="statusLabel">ON FIELD (AVAILABLE)</span>
+</div>
+</div>
+<div class="flex items-center gap-1 p-0.5 bg-surface-subtle rounded text-text-secondary">
+<button class="px-space-3 py-1 rounded text-xs font-semibold uppercase tracking-wide bg-primary-container text-on-primary shadow-sm transition-colors" id="btnAvailable" onclick="setDuty('available')" type="button">
+            Available
+          </button>
+<button class="px-space-3 py-1 rounded text-xs font-semibold uppercase tracking-wide hover:bg-surface-card text-text-secondary transition-colors" id="btnEnRoute" onclick="setDuty('enroute')" type="button">
+            En Route / Busy
+          </button>
+<button class="px-space-3 py-1 rounded text-xs font-semibold uppercase tracking-wide hover:bg-surface-card text-text-secondary transition-colors" id="btnOffDuty" onclick="setDuty('offduty')" type="button">
+            Off Duty
+          </button>
+</div>
+</div>
+</div>
+<!-- 2. DOMINANT SECTION: CURRENT ACTIVE MISSION CARD (Hero Position) -->
+<div class="bg-surface-card rounded shadow-sm overflow-hidden">
+<!-- Status Indicator Bar -->
+<div class="h-1.5 w-full bg-critical-text"></div>
+<div class="p-space-6 space-y-space-6">
+<!-- Card Header -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-4">
+<div class="space-y-1">
+<div class="flex flex-wrap items-center gap-space-2">
+<span class="font-label-telemetry text-label-telemetry uppercase tracking-wider text-text-secondary">Current Active Mission</span>
+<span class="font-data-mono-md text-data-mono-md text-xs px-space-2 py-0.5 rounded bg-surface-subtle font-bold text-text-primary">MISSION-2048</span>
+<span class="px-space-2 py-0.5 rounded bg-critical-bg text-critical-text font-label-badge text-label-badge uppercase flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">warning</span>
+                CRITICAL SEVERITY
+              </span>
+<span class="px-space-2 py-0.5 rounded bg-critical-bg text-critical-text font-label-badge text-label-badge uppercase">
+                PRIORITY 1 URGENT
+              </span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-text-primary tracking-tight">
+              Structural Damage Assessment &amp; Pillar Stabilization
+            </h1>
+<div class="flex flex-wrap items-center gap-x-space-4 gap-y-1 text-text-secondary font-body-sm text-body-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-critical-text">near_me</span>
+<span class="font-medium text-text-primary">Sector 17 Plaza, Block C (Commercial Arcade), Chandigarh</span>
+</span>
+<span>•</span>
+<span class="flex items-center gap-1 font-data-mono-md text-data-mono-md text-xs">
+<span class="material-symbols-outlined text-[16px]">timer</span>
+                Assigned 10:48 AM IST (14 mins ago)
+              </span>
+</div>
+</div>
+<!-- Quick Contact Actions -->
+<div class="flex items-center gap-space-2 shrink-0">
+<button class="h-10 px-space-3 bg-surface-subtle hover:bg-surface-variant text-text-primary rounded font-headline-sm text-headline-sm text-xs font-semibold flex items-center gap-space-2 transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">cell_tower</span>
+<span>VHF CH 02 (EOC)</span>
+</button>
+<button class="h-10 px-space-3 bg-surface-subtle hover:bg-surface-variant text-text-primary rounded font-headline-sm text-headline-sm text-xs font-semibold flex items-center gap-space-2 transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">phone_in_talk</span>
+<span>Call Coordinator</span>
+</button>
+</div>
+</div>
+<!-- Mission Lifecycle Progression -->
+<div class="bg-surface-base p-space-4 rounded">
+<span class="font-label-telemetry text-label-telemetry uppercase text-text-secondary tracking-wider block mb-space-3">Mission Operational Lifecycle</span>
+<div class="grid grid-cols-1 sm:grid-cols-5 gap-space-2">
+<!-- Step 1 -->
+<div class="flex flex-col p-space-2 rounded bg-surface-card shadow-sm">
+<div class="flex items-center justify-between text-success-text">
+<span class="font-label-badge text-label-badge uppercase">1. Accepted</span>
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+</div>
+<span class="font-data-mono-md text-data-mono-md text-[11px] text-text-secondary mt-1">10:49 AM</span>
+</div>
+<!-- Step 2 (ACTIVE) -->
+<div class="flex flex-col p-space-2 rounded bg-primary-container text-on-primary shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-label-badge uppercase font-bold">2. En Route</span>
+<span class="material-symbols-outlined text-[16px]">directions_run</span>
+</div>
+<span class="font-data-mono-md text-data-mono-md text-[11px] text-blue-soft mt-1">ACTIVE (ETA 3m)</span>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col p-space-2 rounded bg-surface-card opacity-60">
+<div class="flex items-center justify-between text-text-secondary">
+<span class="font-label-badge text-label-badge uppercase">3. Arrived Scene</span>
+<span class="material-symbols-outlined text-[16px]">pin_drop</span>
+</div>
+<span class="font-data-mono-md text-data-mono-md text-[11px] text-text-muted mt-1">Pending</span>
+</div>
+<!-- Step 4 -->
+<div class="flex flex-col p-space-2 rounded bg-surface-card opacity-60">
+<div class="flex items-center justify-between text-text-secondary">
+<span class="font-label-badge text-label-badge uppercase">4. Surveying</span>
+<span class="material-symbols-outlined text-[16px]">assignment</span>
+</div>
+<span class="font-data-mono-md text-data-mono-md text-[11px] text-text-muted mt-1">Checklist 0/3</span>
+</div>
+<!-- Step 5 -->
+<div class="flex flex-col p-space-2 rounded bg-surface-card opacity-60">
+<div class="flex items-center justify-between text-text-secondary">
+<span class="font-label-badge text-label-badge uppercase">5. Completed</span>
+<span class="material-symbols-outlined text-[16px]">task_alt</span>
+</div>
+<span class="font-data-mono-md text-data-mono-md text-[11px] text-text-muted mt-1">Debrief &amp; Signoff</span>
+</div>
+</div>
+</div>
+<!-- Field Instructions Alert Box -->
+<div class="p-space-4 rounded bg-warning-bg flex flex-col md:flex-row gap-space-3 items-start">
+<div class="w-8 h-8 rounded bg-warning-text text-on-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">assignment_turned_in</span>
+</div>
+<div class="space-y-1 flex-1">
+<div class="flex items-center gap-space-2">
+<span class="font-headline-sm text-headline-sm text-xs font-bold uppercase tracking-wide text-warning-text">Instructions from EOC Coordinator Vikram Malhotra</span>
+<span class="font-label-telemetry text-label-telemetry text-text-secondary">COMM-LOG-781</span>
+</div>
+<p class="font-body-md text-body-md text-text-primary">
+              Primary load-bearing horizontal pillar on Block C shopping colonnade exhibiting 4cm shear gap. Secure 50m pedestrian perimeter immediately. Confirm ground-floor evacuation before acoustic crack probe deployment. Liaison with Police Post 16 on site.
+            </p>
+</div>
+</div>
+<!-- Major Action Buttons -->
+<div class="flex flex-wrap items-center gap-space-3 pt-space-2">
+<button class="h-12 px-space-6 bg-primary-container hover:bg-primary text-on-primary rounded font-headline-sm text-headline-sm flex items-center gap-space-3 shadow-sm transition-colors" id="btnArrive" onclick="handleArrive()" type="button">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+<span>MARK ARRIVED ON SCENE</span>
+</button>
+<button class="h-12 px-space-5 bg-blue-soft hover:bg-blue-light text-primary rounded font-headline-sm text-headline-sm flex items-center gap-space-2 transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">fact_check</span>
+<span>START FIELD SURVEY</span>
+</button>
+<button class="h-12 px-space-5 bg-surface-subtle hover:bg-surface-variant text-text-primary rounded font-headline-sm text-headline-sm flex items-center gap-space-2 transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">phone</span>
+<span>CALL COORDINATOR DESK</span>
+</button>
+</div>
+</div>
+</div>
+<!-- 3. FIELD NAVIGATION & TACTICAL MAP PANEL -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-6">
+<div class="lg:col-span-8 bg-surface-card rounded shadow-sm flex flex-col">
+<!-- Map Header & Telemetry -->
+<div class="p-space-4 flex flex-col sm:flex-row sm:items-center justify-between gap-space-3 bg-surface-base">
+<div class="flex items-center gap-space-3">
+<span class="material-symbols-outlined text-primary text-[22px]">navigation</span>
+<div>
+<div class="flex items-center gap-space-2">
+<span class="font-headline-sm text-headline-sm text-sm text-text-primary font-bold uppercase">Field GIS Transit Routing</span>
+<span class="font-data-mono-md text-data-mono-md text-[11px] px-space-2 py-0.5 rounded bg-success-bg text-success-text font-semibold">ONLINE GNSS</span>
+</div>
+<span class="font-body-sm text-body-sm text-text-secondary">Target: Sector 17 Plaza Block C • Current: Jan Marg East</span>
+</div>
+</div>
+<div class="flex items-center gap-space-2">
+<span class="font-data-mono-md text-data-mono-md text-xs px-space-2 py-1 bg-surface-card rounded text-text-primary font-semibold">
+              HDOP: 0.82 (11 Sats)
+            </span>
+</div>
+</div>
+<!-- Simulated Tactical Map Viewport -->
+<div class="relative w-full h-[380px] bg-surface-container overflow-hidden flex items-center justify-center">
+<!-- Synthetic Vector GIS Grid -->
+<svg class="absolute inset-0 w-full h-full text-border-default/60" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="40" id="grid" patternunits="userSpaceOnUse" width="40">
+<path d="M 40 0 L 0 0 0 40" fill="none" stroke="currentColor" stroke-width="1"></path>
+</pattern>
+</defs>
+<rect fill="url(#grid)" height="100%" width="100%"></rect>
+<!-- Major Arterials (Vector Paths) -->
+<path d="M 40 320 Q 220 280 400 240 T 780 180 T 1100 120" fill="none" stroke="#CBD5E1" stroke-linecap="round" stroke-width="14"></path>
+<path d="M 180 400 L 260 40" fill="none" stroke="#CBD5E1" stroke-linecap="round" stroke-width="10"></path>
+<path d="M 640 400 L 580 40" fill="none" stroke="#CBD5E1" stroke-linecap="round" stroke-width="12"></path>
+<!-- Active Navigation Route: Clear Passage Green Overlay -->
+<path d="M 190 310 L 380 250 L 590 190 L 710 110" fill="none" stroke="#16A34A" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"></path>
+<path d="M 190 310 L 380 250 L 590 190 L 710 110" fill="none" stroke="#BBF7D0" stroke-dasharray="6,4" stroke-width="2"></path>
+</svg>
+<!-- Current Location Marker (Radar Pulse) -->
+<div class="absolute left-[180px] top-[300px] flex items-center gap-space-2 z-10">
+<div class="relative flex items-center justify-center">
+<span class="animate-ping absolute inline-flex h-8 w-8 rounded-full bg-primary-container opacity-40"></span>
+<div class="w-7 h-7 rounded-full bg-primary flex items-center justify-center shadow-md text-on-primary">
+<span class="material-symbols-outlined text-[16px]">navigation</span>
+</div>
+</div>
+<div class="bg-surface-card px-space-2 py-1 rounded shadow-sm font-label-telemetry text-label-telemetry font-bold text-text-primary whitespace-nowrap">
+              You (Jan Marg East • 420m away)
+            </div>
+</div>
+<!-- Blocked Underpass Road Hazard Pin -->
+<div class="absolute left-[360px] top-[140px] flex items-center gap-space-1 z-10">
+<div class="w-6 h-6 rounded-full bg-critical-bg text-critical-text flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[14px]">block</span>
+</div>
+<div class="bg-critical-bg text-critical-text px-space-2 py-0.5 rounded font-label-badge text-label-badge whitespace-nowrap">
+              Madhya Marg: BLOCKED (Waterlogging 1.2m)
+            </div>
+</div>
+<!-- Partial Closure Road Hazard Pin -->
+<div class="absolute left-[130px] top-[180px] flex items-center gap-space-1 z-10">
+<div class="w-6 h-6 rounded-full bg-warning-bg text-warning-text flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[14px]">warning</span>
+</div>
+<div class="bg-warning-bg text-warning-text px-space-2 py-0.5 rounded font-label-badge text-label-badge whitespace-nowrap">
+              Jan Marg Gate 3: PARTIAL (Debris)
+            </div>
+</div>
+<!-- Nearby Safety Hub Pin -->
+<div class="absolute right-[140px] bottom-[40px] flex items-center gap-space-2 z-10">
+<div class="w-6 h-6 rounded-full bg-blue-soft text-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[14px]">shield</span>
+</div>
+<div class="bg-surface-card px-space-2 py-1 rounded shadow-sm text-text-secondary font-label-telemetry text-label-telemetry">
+              Safety Hub: Sector 16 Sports Complex (62% Occ • 800m)
+            </div>
+</div>
+<!-- Target Mission Marker -->
+<div class="absolute right-[220px] top-[80px] flex items-center gap-space-2 z-10">
+<div class="w-9 h-9 rounded-full bg-critical-text text-on-primary flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-[20px]">crisis_alert</span>
+</div>
+<div class="bg-surface-card p-space-2 rounded shadow-md">
+<span class="font-label-badge text-label-badge text-critical-text uppercase block font-bold">TARGET INCIDENT</span>
+<span class="font-headline-sm text-headline-sm text-xs text-text-primary block">Sector 17 Block C Arcade</span>
+<span class="font-data-mono-md text-data-mono-md text-[10px] text-text-secondary">30.7398° N, 76.7827° E</span>
+</div>
+</div>
+<!-- Map Scale & Layer Overlay Controls -->
+<div class="absolute bottom-3 left-3 bg-surface-card/95 p-1.5 rounded shadow-sm flex items-center gap-space-2 font-data-mono-md text-data-mono-md text-[11px] text-text-secondary">
+<span>SCALE: 1:5,000</span>
+<span>•</span>
+<span class="text-success-text font-bold">ROUTE: VIA HIMALAYA MARG S</span>
+</div>
+</div>
+<!-- Turn-by-Turn Telemetry Bar -->
+<div class="p-space-4 bg-surface-subtle flex flex-col sm:flex-row sm:items-center justify-between gap-space-3">
+<div class="flex items-center gap-space-3">
+<div class="w-9 h-9 rounded bg-primary-container text-on-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">turn_right</span>
+</div>
+<div>
+<div class="font-headline-sm text-headline-sm text-sm text-text-primary">
+                In 180 meters, turn right onto Himalaya Marg South
+              </div>
+<div class="font-body-sm text-body-sm text-text-secondary flex items-center gap-space-2">
+<span class="font-semibold text-primary">ETA: 3 mins (0.4 km)</span>
+<span>•</span>
+<span class="text-success-text font-bold">Corridor: CLEAR PASSAGE</span>
+</div>
+</div>
+</div>
+<button class="h-10 px-space-4 bg-primary-container hover:bg-primary text-on-primary rounded font-headline-sm text-headline-sm text-xs font-semibold flex items-center justify-center gap-space-2 shadow-sm transition-colors whitespace-nowrap" type="button">
+<span class="material-symbols-outlined text-[18px]">assistant_navigation</span>
+<span>NAVIGATE TO TARGET (TURN-BY-TURN)</span>
+</button>
+</div>
+</div>
+<!-- Quick Field Survey Checklist Widget & Recent Updates -->
+<div class="lg:col-span-4 space-y-space-6">
+<!-- Field Survey Checklist -->
+<div class="bg-surface-card p-space-5 rounded shadow-sm space-y-space-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-2">
+<span class="material-symbols-outlined text-primary text-[20px]">inventory</span>
+<span class="font-headline-sm text-headline-sm text-sm text-text-primary uppercase font-bold">Pre-Scene Survey Checklist</span>
+</div>
+<span class="font-data-mono-md text-data-mono-md text-xs text-text-secondary font-bold">0/3 Ready</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary">
+            Mandatory rapid collection points for structural crack incident:
+          </p>
+<div class="space-y-space-2 font-body-sm text-body-sm">
+<label class="flex items-center gap-space-3 p-space-2 rounded bg-surface-base hover:bg-surface-subtle cursor-pointer transition-colors">
+<input class="w-4 h-4 rounded text-primary border-border-default focus:ring-0" type="checkbox"/>
+<span class="text-text-primary">Visual photo evidence of shear gap (0/3 captured)</span>
+</label>
+<label class="flex items-center gap-space-3 p-space-2 rounded bg-surface-base hover:bg-surface-subtle cursor-pointer transition-colors">
+<input class="w-4 h-4 rounded text-primary border-border-default focus:ring-0" type="checkbox"/>
+<span class="text-text-primary">Hazard perimeter measurement (50m cordon)</span>
+</label>
+<label class="flex items-center gap-space-3 p-space-2 rounded bg-surface-base hover:bg-surface-subtle cursor-pointer transition-colors">
+<input class="w-4 h-4 rounded text-primary border-border-default focus:ring-0" type="checkbox"/>
+<span class="text-text-primary">Structural vibration acoustic reading probe</span>
+</label>
+</div>
+<button class="w-full h-10 bg-surface-subtle hover:bg-surface-variant text-text-primary rounded font-headline-sm text-headline-sm text-xs font-semibold flex items-center justify-center gap-space-2 transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">edit_document</span>
+<span>Open Field Survey Form</span>
+</button>
+</div>
+<!-- Recent Operational Updates (Feed) -->
+<div class="bg-surface-card p-space-5 rounded shadow-sm space-y-space-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-2">
+<span class="material-symbols-outlined text-text-secondary text-[20px]">history</span>
+<span class="font-headline-sm text-headline-sm text-sm text-text-primary uppercase font-bold">Recent Updates</span>
+</div>
+<span class="font-label-telemetry text-label-telemetry text-text-secondary">LOG-DISPATCH</span>
+</div>
+<div class="space-y-space-3">
+<div class="flex items-start gap-space-2 text-xs">
+<span class="font-data-mono-md text-data-mono-md font-bold text-text-secondary shrink-0 pt-0.5">10:52 AM</span>
+<div class="flex-1 text-text-primary">
+                Transit corridor clearance verified by <span class="font-semibold">Traffic Police Post 16</span> via Himalaya Marg.
+              </div>
+</div>
+<div class="flex items-start gap-space-2 text-xs">
+<span class="font-data-mono-md text-data-mono-md font-bold text-primary shrink-0 pt-0.5">10:49 AM</span>
+<div class="flex-1 text-text-primary">
+                Mission-2048 status updated to <span class="font-semibold text-primary">"EN ROUTE"</span> by Arjun Mehta.
+              </div>
+</div>
+<div class="flex items-start gap-space-2 text-xs">
+<span class="font-data-mono-md text-data-mono-md font-bold text-critical-text shrink-0 pt-0.5">10:48 AM</span>
+<div class="flex-1 text-text-primary">
+                Mission-2048 assigned by <span class="font-semibold">EOC Coordinator Vikram Malhotra</span>.
+              </div>
+</div>
+<div class="flex items-start gap-space-2 text-xs">
+<span class="font-data-mono-md text-data-mono-md font-bold text-text-secondary shrink-0 pt-0.5">10:15 AM</span>
+<div class="flex-1 text-text-primary">
+                Daily equipment calibration verified: Laser rangefinder, VHF Channel transceiver.
+              </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 4. ASSIGNED MISSIONS QUEUE (Secondary List) -->
+<div class="bg-surface-card rounded shadow-sm p-space-6 space-y-space-4">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-2">
+<div>
+<h2 class="font-headline-md text-headline-md text-text-primary tracking-tight">Assigned Missions Queue</h2>
+<p class="font-body-sm text-body-sm text-text-secondary">3 operational tasks assigned to ERU-Sector 17 Quick Response unit</p>
+</div>
+<span class="font-data-mono-md text-data-mono-md text-xs px-space-3 py-1 bg-surface-base rounded text-text-secondary">
+          SYNCED TO EOC QUEUE
+        </span>
+</div>
+<!-- Missions Table / List -->
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-surface-base text-text-secondary font-label-badge text-label-badge uppercase">
+<th class="py-space-3 px-space-4">Mission ID</th>
+<th class="py-space-3 px-space-4">Task / Title</th>
+<th class="py-space-3 px-space-4">Severity</th>
+<th class="py-space-3 px-space-4">Target Location</th>
+<th class="py-space-3 px-space-4">Lifecycle Status</th>
+<th class="py-space-3 px-space-4 text-right">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-border-default/50 font-body-sm text-body-sm">
+<!-- Row 1: Active Mission -->
+<tr class="hover:bg-surface-base/60 bg-blue-soft/30 transition-colors">
+<td class="py-space-3 px-space-4 font-data-mono-md text-data-mono-md font-bold text-primary">
+                MISSION-2048
+              </td>
+<td class="py-space-3 px-space-4 font-medium text-text-primary">
+                Structural Damage Assessment &amp; Stabilization
+              </td>
+<td class="py-space-3 px-space-4">
+<span class="px-space-2 py-0.5 rounded bg-critical-bg text-critical-text font-label-badge text-label-badge uppercase font-bold">
+                  CRITICAL
+                </span>
+</td>
+<td class="py-space-3 px-space-4 text-text-secondary">
+                Sector 17 Plaza, Block C
+              </td>
+<td class="py-space-3 px-space-4">
+<span class="px-space-2 py-0.5 rounded bg-primary-container text-on-primary font-label-badge text-label-badge uppercase font-bold">
+                  EN ROUTE (Active)
+                </span>
+</td>
+<td class="py-space-3 px-space-4 text-right">
+<button class="px-space-3 py-1 bg-primary-container text-on-primary rounded font-label-badge text-label-badge uppercase hover:bg-primary transition-colors" type="button">
+                  Primary Task
+                </button>
+</td>
+</tr>
+<!-- Row 2: Queue 2 -->
+<tr class="hover:bg-surface-base/60 transition-colors">
+<td class="py-space-3 px-space-4 font-data-mono-md text-data-mono-md font-semibold text-text-primary">
+                MISSION-2039
+              </td>
+<td class="py-space-3 px-space-4 font-medium text-text-primary">
+                Medical Evacuation Support (Trauma Staging)
+              </td>
+<td class="py-space-3 px-space-4">
+<span class="px-space-2 py-0.5 rounded bg-warning-bg text-warning-text font-label-badge text-label-badge uppercase font-bold">
+                  HIGH
+                </span>
+</td>
+<td class="py-space-3 px-space-4 text-text-secondary">
+                Sector 16 General Hospital Gate 2
+              </td>
+<td class="py-space-3 px-space-4">
+<span class="px-space-2 py-0.5 rounded bg-surface-subtle text-text-secondary font-label-badge text-label-badge uppercase">
+                  ASSIGNED (Queue #2)
+                </span>
+</td>
+<td class="py-space-3 px-space-4 text-right">
+<button class="px-space-3 py-1 bg-surface-subtle hover:bg-surface-variant text-text-primary rounded font-label-badge text-label-badge uppercase transition-colors" type="button">
+                  View Details
+                </button>
+</td>
+</tr>
+<!-- Row 3: Queue 3 -->
+<tr class="hover:bg-surface-base/60 transition-colors">
+<td class="py-space-3 px-space-4 font-data-mono-md text-data-mono-md font-semibold text-text-primary">
+                MISSION-2027
+              </td>
+<td class="py-space-3 px-space-4 font-medium text-text-primary">
+                Road Obstruction &amp; Debris Survey
+              </td>
+<td class="py-space-3 px-space-4">
+<span class="px-space-2 py-0.5 rounded bg-blue-soft text-primary font-label-badge text-label-badge uppercase font-bold">
+                  MEDIUM
+                </span>
+</td>
+<td class="py-space-3 px-space-4 text-text-secondary">
+                Jan Marg Gate 3 (Corridor Route)
+              </td>
+<td class="py-space-3 px-space-4">
+<span class="px-space-2 py-0.5 rounded bg-surface-subtle text-text-secondary font-label-badge text-label-badge uppercase">
+                  STANDBY (Queue #3)
+                </span>
+</td>
+<td class="py-space-3 px-space-4 text-right">
+<button class="px-space-3 py-1 bg-surface-subtle hover:bg-surface-variant text-text-primary rounded font-label-badge text-label-badge uppercase transition-colors" type="button">
+                  View Details
+                </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- 6. NGO AUTHORIZATION CALLOUT & LEGAL STATUS CHIP -->
+<div class="bg-surface-base p-space-4 rounded flex flex-col md:flex-row items-start md:items-center justify-between gap-space-3 text-text-secondary">
+<div class="flex items-center gap-space-3">
+<div class="w-8 h-8 rounded bg-surface-card flex items-center justify-center text-primary shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[20px]">verified_user</span>
+</div>
+<div>
+<span class="font-headline-sm text-headline-sm text-xs text-text-primary uppercase font-bold">Campaign &amp; Field Operations Accreditation</span>
+<p class="font-body-sm text-body-sm text-xs text-text-secondary mt-0.5">
+            Authorized under ActionAid / Red Cross Relief Charter (NGO Reg: <span class="font-data-mono-md text-data-mono-md text-text-primary font-semibold">CH-2021-994</span>). Verified by State Disaster Response Authority.
+          </p>
+</div>
+</div>
+<div class="shrink-0">
+<span class="font-label-telemetry text-label-telemetry px-space-3 py-1 bg-success-bg text-success-text rounded font-bold uppercase tracking-wider">
+          Accredited NGO Responder Unit
+        </span>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function setDuty(mode) {
+    const ind = document.getElementById('statusIndicator');
+    const lbl = document.getElementById('statusLabel');
+    const bAvail = document.getElementById('btnAvailable');
+    const bEnRoute = document.getElementById('btnEnRoute');
+    const bOff = document.getElementById('btnOffDuty');
+
+    // Reset styles
+    [bAvail, bEnRoute, bOff].forEach(b => {
+      b.className = "px-space-3 py-1 rounded text-xs font-semibold uppercase tracking-wide hover:bg-surface-card text-text-secondary transition-colors";
+    });
+
+    if (mode === 'available') {
+      ind.className = "h-2.5 w-2.5 rounded-full bg-success-text";
+      lbl.innerText = "ON FIELD (AVAILABLE)";
+      bAvail.className = "px-space-3 py-1 rounded text-xs font-semibold uppercase tracking-wide bg-primary-container text-on-primary shadow-sm transition-colors";
+    } else if (mode === 'enroute') {
+      ind.className = "h-2.5 w-2.5 rounded-full bg-warning-text";
+      lbl.innerText = "BUSY (EN ROUTE)";
+      bEnRoute.className = "px-space-3 py-1 rounded text-xs font-semibold uppercase tracking-wide bg-primary-container text-on-primary shadow-sm transition-colors";
+    } else {
+      ind.className = "h-2.5 w-2.5 rounded-full bg-text-muted";
+      lbl.innerText = "STANDBY (OFF DUTY)";
+      bOff.className = "px-space-3 py-1 rounded text-xs font-semibold uppercase tracking-wide bg-primary-container text-on-primary shadow-sm transition-colors";
+    }
+  }
+
+  function handleArrive() {
+    const btn = document.getElementById('btnArrive');
+    btn.innerHTML = '<span class="material-symbols-outlined text-[20px]">check</span><span>ARRIVED ON SCENE (CONFIRMED)</span>';
+    btn.className = "h-12 px-space-6 bg-success-bg text-success-text rounded font-headline-sm text-headline-sm flex items-center gap-space-3 shadow-sm transition-colors";
+  }
+</script></main></div></body></html>

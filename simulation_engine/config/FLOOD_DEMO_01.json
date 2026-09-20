@@ -1,0 +1,186 @@
+{
+  "scenario_id": "FLOOD_DEMO_01",
+  "name": "North Canal Flood — SIH Demo Scenario",
+  "description": "Simulated flood event affecting the virtual city's North Canal region. Demonstrates ResQnet end-to-end response workflow from initial warning through responder dispatch and hub capacity management.",
+  "version": "1.0",
+  "historical_context": {
+    "note": "HISTORICAL CONTEXT ONLY — NOT A LIVE PREDICTION",
+    "historical_flood_incidents": 3,
+    "previously_affected_roads": ["Flood-Prone River Road (ID 12)", "North Market Road (ID 1)"],
+    "historical_recurrence": "Observed — monsoon season correlation",
+    "disclaimer": "Historical data is provided as scenario background only. This engine does not claim predictive accuracy."
+  },
+  "resqnet_context": {
+    "coordinator_email": "coordinator@resqnet.in",
+    "citizen_email": "citizen1@resqnet.in",
+    "responder_id": 1,
+    "hub_id": 1,
+    "hub_name": "Hub Alpha — Community Center",
+    "hazard_zone_id": 1,
+    "hazard_zone_name": "River Basin Flood Zone",
+    "road_id": 12,
+    "road_name": "Flood-Prone River Road",
+    "incident_lat": 20.554,
+    "incident_lng": 85.824
+  },
+  "events": [
+    {
+      "event_id": "FLOOD_DEMO_01_E001",
+      "offset_seconds": 0,
+      "event_type": "FLOOD_WARNING",
+      "source_type": "SIMULATED_OFFICIAL",
+      "source_label": "SIMULATED OFFICIAL ALERT",
+      "severity": "HIGH",
+      "confidence": 0.95,
+      "lat": 20.556,
+      "lng": 85.825,
+      "title": "T+00 | Event 1/7",
+      "description": "[SIM | SIMULATED OFFICIAL] FLOOD WARNING — North Canal region. Residents in North Market area should prepare for evacuation. Proceed to Hub Alpha or Hub Beta.",
+      "api_target": "POST /api/v1/alerts",
+      "api_role": "coordinator",
+      "api_payload": {
+        "title": "[SIM] FLOOD WARNING — North Canal Region",
+        "message": "[SIMULATED OFFICIAL ALERT] Rising water levels detected in North Canal region. Residents are advised to evacuate to Hub Alpha (Community Center) or Hub Beta (Government School). This is a simulated demonstration event.",
+        "severity": "EMERGENCY",
+        "alert_type": "flood_warning"
+      },
+      "chain_notes": "Calls real alerts service → creates EmergencyAlert → recorded in AuditLog → visible on dashboard via /api/v1/alerts/active"
+    },
+    {
+      "event_id": "FLOOD_DEMO_01_E002",
+      "offset_seconds": 10,
+      "event_type": "WATER_LEVEL_HIGH",
+      "source_type": "SIMULATED_SENSOR",
+      "source_label": "SIMULATED SENSOR READING",
+      "severity": "HIGH",
+      "confidence": 0.80,
+      "lat": 20.554,
+      "lng": 85.824,
+      "title": "T+10 | Event 2/7",
+      "description": "[SIM | SIMULATED SENSOR] Water level sensor reports danger threshold reached at River Basin.",
+      "api_target": "POST /api/simulation/events/flood",
+      "api_role": "coordinator",
+      "api_payload": {
+        "zone_id": 1,
+        "severity": 4
+      },
+      "chain_notes": "Activates HazardZone ID 1 (River Basin Flood Zone). is_active=True, severity=HIGH. The routing engine reads active hazard zones via PostGIS ST_Intersects on next route calculation — roads intersecting this zone will get spatial penalties. This is a hazard activation observation, NOT a claim that a sensor directly triggers verified ground truth.",
+      "chain_warning": "IMPORTANT: This activates a hazard zone as an observation signal. The routing graph is lazily rebuilt on next /routing/calculate call via the dirty-cache mechanism. No routing result is fabricated."
+    },
+    {
+      "event_id": "FLOOD_DEMO_01_E003",
+      "offset_seconds": 20,
+      "event_type": "CITIZEN_REPORT",
+      "source_type": "SIMULATED_CITIZEN",
+      "source_label": "SIMULATED CITIZEN REPORT",
+      "severity": "MEDIUM",
+      "confidence": 0.60,
+      "lat": 20.554,
+      "lng": 85.824,
+      "title": "T+20 | Event 3/7",
+      "description": "[SIM | SIMULATED CITIZEN] Citizen reports flooding and road obstruction near Central West intersection.",
+      "api_target": "POST /api/simulation/events/reports/generate",
+      "api_role": "coordinator",
+      "api_payload": {
+        "lat": 20.554,
+        "lng": 85.824,
+        "category": "flood",
+        "description": "[SIM | SIMULATED CITIZEN] Flooding and road obstruction near Central West. Water is knee-deep. Residents need assistance.",
+        "count": 3
+      },
+      "chain_notes": "Calls find_or_create_cluster() then creates IncidentReport objects with status=UNVERIFIED. Reports enter the cluster pipeline at Tier-1 (unverified). They do NOT become verified ground truth — they are citizen signals pending responder verification. Clustering and mission dispatch must occur through the normal coordination workflow.",
+      "chain_warning": "Reports are created with status=UNVERIFIED. Simulation does not skip ground-truth verification. The cluster will become visible to coordinators for dispatch decision."
+    },
+    {
+      "event_id": "FLOOD_DEMO_01_E004",
+      "offset_seconds": 30,
+      "event_type": "ROAD_BLOCKED",
+      "source_type": "SIMULATED_RESPONDER",
+      "source_label": "SIMULATED RESPONDER OBSERVATION",
+      "severity": "HIGH",
+      "confidence": 0.90,
+      "lat": 20.554,
+      "lng": 85.824,
+      "title": "T+30 | Event 4/7",
+      "description": "[SIM | SIMULATED RESPONDER] Responder reports Flood-Prone River Road (ID 12) is blocked by floodwater.",
+      "api_target": "POST /api/simulation/events/road/block",
+      "api_role": "coordinator",
+      "api_payload": {
+        "road_id": 12,
+        "block": true
+      },
+      "chain_notes": "Sets road.is_blocked=True, road.status=BLOCKED on Road ID 12 (Flood-Prone River Road). This represents an authoritative operational update (coordinator acting on responder observation). The routing engine excludes blocked roads from graph edges on next calculation — this is REAL routing behavior, not a UI animation. The routing cache is invalidated automatically.",
+      "chain_warning": "This bypasses the field-survey ground-truth flow (FieldSurvey + verification_outcome). This is documented as a simulation shortcut: the coordinator is directly applying the observation. In production, a responder would submit a FieldSurvey. This gap is explicitly noted in the event log."
+    },
+    {
+      "event_id": "FLOOD_DEMO_01_E005",
+      "offset_seconds": 40,
+      "event_type": "RESPONDER_DISPATCH",
+      "source_type": "SIMULATED_RESPONDER",
+      "source_label": "SIMULATED COORDINATOR DISPATCH",
+      "severity": "HIGH",
+      "confidence": 1.0,
+      "lat": 20.554,
+      "lng": 85.824,
+      "title": "T+40 | Event 5/7",
+      "description": "[SIM | SIMULATED COORDINATOR] Coordinator dispatches Responder 1 (Team Alpha) to verify cluster and assist affected residents.",
+      "api_target": "POST /api/v1/missions",
+      "api_role": "coordinator",
+      "api_payload_template": {
+        "mission_type": "verify_incident",
+        "title": "[SIM] Verify North Canal Flood Cluster — FLOOD_DEMO_01",
+        "description": "[SIMULATED COORDINATOR DISPATCH] Team Alpha dispatched to verify citizen flood reports near Central West. Assess road conditions and assist evacuation.",
+        "responder_id": "__RESOLVED_FROM_STATE__",
+        "cluster_id": "__RESOLVED_FROM_STATE__",
+        "target_lat": 20.554,
+        "target_lng": 85.824,
+        "notes": "Simulation scenario FLOOD_DEMO_01 — T+40 dispatch event"
+      },
+      "chain_notes": "Calls /api/v1/missions which invokes create_mission_service(). This: (1) validates cluster exists, (2) validates responder eligibility (available, not offline), (3) creates Mission in ASSIGNED state, (4) updates cluster.status to mission_assigned, (5) emits MISSION_CREATED AuditLog. Exactly ONE mission is created — /api/simulation/events/dispatch is NOT also called (would duplicate). The responder must still accept/start through their own flow for full lifecycle.",
+      "chain_warning": "Responder_id resolved dynamically from /api/v1/missions/responders before dispatch. Cluster_id resolved from simulation state after E003. If responder is already on_mission from a previous run, reset is required first."
+    },
+    {
+      "event_id": "FLOOD_DEMO_01_E006",
+      "offset_seconds": 50,
+      "event_type": "SHELTER_CAPACITY_CHANGED",
+      "source_type": "SIMULATED_SENSOR",
+      "source_label": "SIMULATED SHELTER SENSOR",
+      "severity": "MEDIUM",
+      "confidence": 0.85,
+      "lat": 20.560,
+      "lng": 85.820,
+      "title": "T+50 | Event 6/7",
+      "description": "[SIM | SIMULATED SHELTER SENSOR] Hub Alpha reports significant occupancy increase as evacuees arrive.",
+      "api_target": "PATCH /api/v1/hubs/{hub_id}/occupancy",
+      "api_role": "coordinator",
+      "api_payload": {
+        "hub_id": 1,
+        "delta": 180
+      },
+      "chain_notes": "Calls /api/v1/hubs/{id}/occupancy which invokes update_occupancy_service(). This: (1) acquires SELECT FOR UPDATE row lock, (2) validates new occupancy does not exceed max_capacity, (3) calls derive_hub_status() to derive new status from occupancy ratio vs capacity_critical_threshold (0.85), (4) emits SAFETY_HUB_OCCUPANCY_UPDATED AuditLog, (5) commits. Hub Alpha starts at 120 occupancy (max 400). After delta=+180, occupancy=300, ratio=0.75 — status remains OPEN (below 0.85 threshold). Dashboard reflects real hub state.",
+      "chain_warning": "NONE — this goes through full business logic including row locking, status derivation, and audit logging."
+    },
+    {
+      "event_id": "FLOOD_DEMO_01_E007",
+      "offset_seconds": 60,
+      "event_type": "SITUATION_UPDATE",
+      "source_type": "SIMULATION_ENGINE",
+      "source_label": "SIMULATED SITUATION REPORT",
+      "severity": "MEDIUM",
+      "confidence": 1.0,
+      "lat": 20.556,
+      "lng": 85.825,
+      "title": "T+60 | Event 7/7",
+      "description": "[SIM | SIMULATION ENGINE] Situation update: Flood scenario has fully propagated. Road 12 blocked, Hub Alpha at increased occupancy, responder dispatched. Review operational state.",
+      "api_target": "POST /api/v1/alerts",
+      "api_role": "coordinator",
+      "api_payload": {
+        "title": "[SIM] SITUATION UPDATE — North Canal Flood T+60",
+        "message": "[SIMULATED SITUATION REPORT] Flood scenario update: River Basin Hazard Zone activated, Flood-Prone River Road blocked, evacuation in progress to Hub Alpha (occupancy elevated), NGO Team Alpha dispatched for verification. All events are part of FLOOD_DEMO_01 simulation.",
+        "severity": "WARNING",
+        "alert_type": "situation_update"
+      },
+      "chain_notes": "Creates second EmergencyAlert via real alerts service. Coordinator can see both the original FLOOD_WARNING and the SITUATION_UPDATE on the dashboard. Both recorded in AuditLog."
+    }
+  ]
+}

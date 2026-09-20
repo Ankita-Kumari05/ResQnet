@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"warning-bg":"#FFFBEB","on-background":"#0b1c30","surface-tint":"#0053db","surface-base":"#F8FAFC","on-tertiary-fixed":"#131b2e","surface-container":"#e5eeff","secondary-container":"#b5d0fd","error":"#ba1a1a","primary-fixed":"#dbe1ff","background":"#f8f9ff","tertiary-fixed-dim":"#bec6e0","inverse-primary":"#b4c5ff","error-container":"#ffdad6","critical-border":"#FECACA","surface-dim":"#cbdbf5","tertiary":"#4d556b","on-primary":"#ffffff","on-error":"#ffffff","tertiary-container":"#656d84","on-primary-fixed":"#00174b","on-tertiary":"#ffffff","on-secondary-container":"#3e5980","warning-text":"#D97706","on-secondary-fixed":"#001c3b","on-secondary-fixed-variant":"#2d486d","tertiary-fixed":"#dae2fd","success-text":"#16A34A","warning-border":"#FDE68A","surface":"#f8f9ff","inverse-surface":"#213145","surface-variant":"#d3e4fe","secondary-fixed":"#d5e3ff","primary-container":"#2563eb","critical-bg":"#FEF2F2","secondary-fixed-dim":"#adc8f5","surface-card":"#FFFFFF","surface-container-highest":"#d3e4fe","text-muted":"#94A3B8","on-tertiary-container":"#eef0ff","secondary":"#455f87","surface-container-lowest":"#ffffff","surface-subtle":"#F1F5F9","primary-fixed-dim":"#b4c5ff","border-default":"#E2E8F0","outline":"#737686","on-primary-container":"#eeefff","critical-text":"#DC2626","success-bg":"#F0FDF4","text-primary":"#1E293B","on-surface-variant":"#434655","success-border":"#BBF7D0","blue-soft":"#EFF6FF","on-surface":"#0b1c30","on-primary-fixed-variant":"#003ea8","on-error-container":"#93000a","surface-container-low":"#eff4ff","blue-light":"#DBEAFE","surface-container-high":"#dce9ff","on-tertiary-fixed-variant":"#3f465c","primary":"#004ac6","info-border":"#BFDBFE","text-secondary":"#64748B","surface-bright":"#f8f9ff","on-secondary":"#ffffff","outline-variant":"#c3c6d7","inverse-on-surface":"#eaf1ff"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-6":"24px","space-0":"0px","space-3":"12px","space-5":"20px","space-10":"40px","space-16":"64px","space-12":"48px","space-8":"32px","margin-mobile":"16px","gutter-expanded":"24px","margin-tablet":"24px","space-1":"4px","gutter-standard":"16px","margin-desktop":"32px","space-4":"16px","space-2":"8px","gutter-dense":"8px"},"fontFamily":{"label-telemetry":["JetBrains Mono"],"headline-xl":["Public Sans"],"body-sm":["Public Sans"],"headline-lg":["Public Sans"],"display-hud-mobile":["JetBrains Mono"],"body-md":["Public Sans"],"headline-md":["Public Sans"],"data-mono-md":["JetBrains Mono"],"headline-xl-mobile":["Public Sans"],"headline-sm":["Public Sans"],"data-mono-lg":["JetBrains Mono"],"body-lg":["Public Sans"],"display-hud":["JetBrains Mono"],"label-badge":["Public Sans"]},"fontSize":{"label-telemetry":["10px",{"lineHeight":"12px","letterSpacing":"0.08em","fontWeight":"500"}],"headline-xl":["36px",{"lineHeight":"44px","letterSpacing":"-0.025em","fontWeight":"700"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"400"}],"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"700"}],"display-hud-mobile":["32px",{"lineHeight":"36px","letterSpacing":"-0.03em","fontWeight":"700"}],"body-md":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"data-mono-md":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"500"}],"headline-xl-mobile":["26px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-sm":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"600"}],"data-mono-lg":["18px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"display-hud":["48px",{"lineHeight":"52px","letterSpacing":"-0.04em","fontWeight":"700"}],"label-badge":["11px",{"lineHeight":"14px","letterSpacing":"0.06em","fontWeight":"700"}]}}}};</script><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..900&family=Public+Sans:wght@100..900&display=swap" rel="stylesheet"/></head><body class="bg-surface-base font-body-md text-text-primary min-h-screen"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-card border-r border-border-default z-50 flex flex-col justify-between"><div class="flex flex-col flex-1 overflow-y-auto"><div class="h-16 px-space-4 border-b border-border-default flex items-center bg-surface-base"><div class="flex items-center gap-space-2"><span class="material-symbols-outlined text-primary text-[18px]">radar</span><span class="font-label-telemetry text-label-telemetry uppercase text-text-secondary tracking-wider">SCOPE: SECTOR-17/NDRF</span></div></div><div class="px-space-3 pt-space-3 pb-space-2"><span class="font-label-badge text-label-badge uppercase tracking-wider text-text-muted px-space-2">Operations Navigation</span></div><nav class="flex flex-col px-space-2 gap-space-1" data-active-classes="bg-blue-soft text-primary-container border-l-2 border-primary-container font-semibold"><a class="flex items-center justify-between px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-subtle hover:text-text-primary transition-colors" data-path="responder-dashboard" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">dashboard</span><span class="font-body-md text-body-md">Dashboard</span></div></a><a class="flex items-center justify-between px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-subtle hover:text-text-primary transition-colors" data-path="responder-missions" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">assignment_late</span><span class="font-body-md text-body-md">Missions</span></div><span class="inline-flex items-center px-space-1 py-0.5 rounded text-[10px] font-label-badge uppercase tracking-wide bg-critical-bg text-critical-text border border-critical-border font-bold">3 ACT</span></a><a aria-current="page" class="flex items-center justify-between px-space-3 py-space-2 rounded-lg transition-colors bg-blue-soft text-primary-container border-l-2 border-primary-container font-semibold" data-path="responder-surveys-new" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">rate_review</span><span class="font-body-md text-body-md">Field Surveys</span></div></a><a class="flex items-center justify-between px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-subtle hover:text-text-primary transition-colors" data-path="responder-verification" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">verified</span><span class="font-body-md text-body-md">Verification</span></div></a><a class="flex items-center justify-between px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-subtle hover:text-text-primary transition-colors" data-path="responder-map" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">map</span><span class="font-body-md text-body-md">Operations Map</span></div><span class="inline-flex items-center px-space-1 py-0.5 rounded text-[10px] font-label-badge uppercase tracking-wide bg-blue-soft text-primary-container border border-info-border font-bold">GIS LIVE</span></a><a class="flex items-center justify-between px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-subtle hover:text-text-primary transition-colors" data-path="responder-resources" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">inventory_2</span><span class="font-body-md text-body-md">Resource Req.</span></div></a><a class="flex items-center justify-between px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-subtle hover:text-text-primary transition-colors" data-path="responder-organization" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">corporate_fare</span><span class="font-body-md text-body-md">Organization</span></div></a><a class="flex items-center justify-between px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-subtle hover:text-text-primary transition-colors" data-path="responder-campaigns" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">campaign</span><span class="font-body-md text-body-md">Campaigns</span></div><span class="inline-flex items-center px-space-1 py-0.5 rounded text-[10px] font-label-badge uppercase tracking-wide bg-warning-bg text-warning-text border border-warning-border font-bold">NGO AUTH</span></a></nav></div><div class="p-space-3 border-t border-border-default bg-surface-card flex flex-col gap-space-3"><div class="flex flex-col gap-space-1"><a class="flex items-center justify-between px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-subtle hover:text-text-primary transition-colors" data-path="responder-notifications" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">notifications</span><span class="font-body-md text-body-md">Notifications</span></div><span class="h-2 w-2 rounded-full bg-critical-text"></span></a><a class="flex items-center gap-space-3 px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-subtle hover:text-text-primary transition-colors" data-path="responder-profile" href="#"><span class="material-symbols-outlined text-[18px]">account_circle</span><span class="font-body-md text-body-md">Profile</span></a></div><div class="p-space-2 bg-surface-subtle border border-border-default rounded flex flex-col gap-space-1"><div class="flex items-center justify-between"><span class="font-label-telemetry text-[10px] text-text-muted uppercase">Telemetry Link</span><span class="inline-flex items-center px-1 rounded text-[9px] font-label-badge uppercase bg-success-bg text-success-text border border-success-border">ONLINE</span></div><p class="font-label-telemetry text-[10px] text-text-primary leading-none font-semibold">MESH MIGRATION STABLE</p><div class="flex items-center justify-between pt-space-1 border-t border-border-default/60"><span class="font-data-mono-md text-[10px] text-text-secondary">SYNC: 1.2s LAT</span><span class="font-label-badge text-[9px] uppercase tracking-wider text-text-muted">LVL-1 READY</span></div></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-card border-b border-border-default z-40 px-space-4 flex items-center justify-between"><div class="flex items-center gap-space-4"><div class="flex items-center gap-space-2"><img alt="ResQnet Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UZbdxVe9zHhHzM9vo2OQSWK2Q_bht0WwW6RI8t03wEZzkIuV1AaepFB5ybGDl6J_zPVxotaiJUuUSOjEHbwRkkatzk-_NIWrS9p2mqlHILAEd1jk-VFuE7ZUuZSBGzPtgbbUnBFF7nZSVRrnhgw6TOgjgnKK07Rxsw47PItBZRM95qoxqrwjUW_mgSZP8x4JcsHxpTeE997ICMMUDA3HqRMivqR_51zVsnG1UpH15gNX5cNH3zgcPtu5Ap"/><div class="flex flex-col"><span class="font-headline-sm text-[13px] font-bold tracking-tight text-text-primary leading-tight">RESQNET v2.4</span><span class="font-label-telemetry text-[10px] text-text-secondary uppercase tracking-wider">FIELD RESPONSE CONSOLE</span></div></div><div class="hidden md:inline-flex items-center gap-space-2 px-space-2 py-1 rounded bg-success-bg border border-success-border"><span class="h-2 w-2 rounded-full bg-success-text animate-pulse"></span><span class="font-label-telemetry text-label-telemetry uppercase text-success-text font-semibold">RESPONSE NETWORK ACTIVE</span></div></div><div class="hidden lg:flex items-center gap-space-4"><div class="inline-flex items-center gap-space-2 px-space-3 py-1 rounded bg-critical-bg border border-critical-border"><span class="material-symbols-outlined text-critical-text text-[16px]">emergency</span><span class="font-label-badge text-label-badge uppercase tracking-wide text-critical-text">NATIONAL DISPATCH: 112 / 1078</span></div><div class="inline-flex items-center gap-space-2 px-space-2 py-1 rounded bg-surface-subtle border border-border-default"><span class="h-2 w-2 rounded-full bg-success-text"></span><span class="font-label-telemetry text-label-telemetry uppercase text-text-secondary font-medium">STATUS: AVAILABLE</span></div></div><div class="flex items-center gap-space-3"><div class="hidden sm:flex flex-col text-right"><span class="font-headline-sm text-body-md font-bold text-text-primary leading-tight">ARJUN MEHTA</span><span class="font-label-telemetry text-[11px] text-text-secondary leading-tight">FIELD RESPONDER • Chandigarh ERU</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 bg-surface-base w-full min-h-screen px-space-6 py-space-6"><div class="flex flex-col w-full">
+<div class="flex flex-col gap-space-6 max-w-6xl mx-auto w-full pb-space-12">
+<!-- Top Page Header -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-4 pb-space-4 border-b border-border-default">
+<div class="flex flex-col gap-space-1">
+<div class="flex items-center gap-space-2">
+<span class="font-label-telemetry text-label-telemetry uppercase tracking-wider text-primary font-semibold">FORM RESQ-FSR-2048</span>
+<span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-label-badge uppercase tracking-wider bg-surface-subtle text-text-secondary border border-border-default">FIELD VERIFICATION PROTOCOL</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-text-primary tracking-tight">FIELD SURVEY</h1>
+<p class="font-body-md text-text-secondary">Record and submit verified field observations for Mission-2048</p>
+</div>
+<!-- Right Metadata Chips -->
+<div class="flex flex-wrap items-center gap-space-2">
+<!-- Mission chip -->
+<div class="inline-flex items-center gap-1.5 px-space-3 py-1.5 rounded-lg bg-surface-card border border-border-default shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-text-secondary">assignment</span>
+<span class="font-label-badge text-label-badge uppercase text-text-primary">MISSION: MISSION-2048</span>
+</div>
+<!-- Target chip -->
+<div class="inline-flex items-center gap-1.5 px-space-3 py-1.5 rounded-lg bg-surface-card border border-border-default shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-primary-container">location_on</span>
+<span class="font-label-badge text-label-badge uppercase text-text-primary">TARGET: Sector 17 Plaza, Block C</span>
+</div>
+<!-- Timestamp chip -->
+<div class="inline-flex items-center gap-2 px-space-3 py-1.5 rounded-lg bg-success-bg border border-success-border">
+<span class="h-2 w-2 rounded-full bg-success-text animate-pulse"></span>
+<span class="font-label-telemetry text-label-telemetry uppercase text-success-text font-semibold">TIMESTAMP: 10:58 AM IST (Auto-sync)</span>
+</div>
+</div>
+</div>
+<!-- Survey Form Main Card -->
+<form class="flex flex-col bg-surface-card border border-border-default rounded-xl shadow-sm divide-y divide-border-default" id="surveyForm" onsubmit="event.preventDefault();">
+<!-- Section 1: OBSERVED PHYSICAL CONDITION -->
+<div class="p-space-6 flex flex-col gap-space-5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-2">
+<span class="w-6 h-6 rounded bg-blue-soft text-primary-container font-label-telemetry text-[11px] font-bold flex items-center justify-center border border-info-border">01</span>
+<h2 class="font-headline-sm text-headline-sm text-text-primary">OBSERVED PHYSICAL CONDITION</h2>
+</div>
+<span class="font-label-telemetry text-label-telemetry text-critical-text uppercase tracking-wider font-semibold">• MANDATORY TELEMETRY</span>
+</div>
+<!-- Textarea defect description -->
+<div class="flex flex-col gap-space-2">
+<label class="font-label-badge text-label-badge uppercase text-text-secondary tracking-wider" for="defect-description">
+            Observed Structural Condition / Defect Description
+          </label>
+<div class="relative">
+<textarea class="w-full bg-surface-base border border-border-default rounded-lg p-space-3 font-body-md text-text-primary focus:outline-none focus:border-primary-container focus:bg-surface-card transition-colors placeholder:text-text-muted resize-y" id="defect-description" placeholder="e.g. 4.2cm shear fracture observed on lower third of concrete colonnade pillar. Reinforcement rebar exposed with spalling concrete dust." rows="4">4.2cm shear fracture observed on lower third of concrete colonnade pillar. Reinforcement rebar exposed with spalling concrete dust. Lateral stability degraded; acoustic displacement sensors recommended.</textarea>
+</div>
+</div>
+<!-- Quick condition selector chips -->
+<div class="flex flex-col gap-space-2">
+<span class="font-label-badge text-label-badge uppercase text-text-secondary tracking-wider">Quick Condition Triage Tag</span>
+<div class="flex flex-wrap gap-space-2" id="conditionChips">
+<button class="condition-chip inline-flex items-center gap-1.5 px-space-3 py-1.5 rounded-lg border border-critical-border bg-critical-bg text-critical-text font-label-badge text-label-badge uppercase tracking-wide transition-colors" type="button">
+<span class="material-symbols-outlined text-[15px]">report_problem</span>
+              Severe Structural Shear
+            </button>
+<button class="condition-chip inline-flex items-center gap-1.5 px-space-3 py-1.5 rounded-lg border border-border-default bg-surface-base text-text-secondary hover:text-text-primary font-label-badge text-label-badge uppercase tracking-wide transition-colors" type="button">
+<span class="material-symbols-outlined text-[15px]">broken_image</span>
+              Concrete Spalling
+            </button>
+<button class="condition-chip inline-flex items-center gap-1.5 px-space-3 py-1.5 rounded-lg border border-border-default bg-surface-base text-text-secondary hover:text-text-primary font-label-badge text-label-badge uppercase tracking-wide transition-colors" type="button">
+<span class="material-symbols-outlined text-[15px]">grain</span>
+              Superficial Cracking
+            </button>
+<button class="condition-chip inline-flex items-center gap-1.5 px-space-3 py-1.5 rounded-lg border border-border-default bg-surface-base text-text-secondary hover:text-text-primary font-label-badge text-label-badge uppercase tracking-wide transition-colors" type="button">
+<span class="material-symbols-outlined text-[15px]">check_circle</span>
+              Sound / No Major Damage
+            </button>
+</div>
+</div>
+<!-- GNSS Lock read-only coordinates -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-3 p-space-3 bg-surface-subtle border border-border-default rounded-lg">
+<div class="flex items-center gap-space-3">
+<span class="material-symbols-outlined text-text-secondary text-[20px]">explore</span>
+<div class="flex flex-col">
+<span class="font-label-telemetry text-label-telemetry uppercase text-text-secondary">Exact Field GNSS Coordinates (Read-Only)</span>
+<span class="font-data-mono-md text-data-mono-md text-text-primary font-semibold">30.7398° N, 76.7827° E • Sector 17 Plaza Block C, Arcades</span>
+</div>
+</div>
+<div class="inline-flex items-center gap-1.5 px-space-2 py-1 rounded bg-success-bg border border-success-border self-start sm:self-center">
+<span class="h-1.5 w-1.5 rounded-full bg-success-text"></span>
+<span class="font-label-telemetry text-label-telemetry uppercase text-success-text font-bold tracking-wider">GNSS LOCK (±0.8m)</span>
+</div>
+</div>
+</div>
+<!-- Section 2: EVIDENCE & PHOTO TELEMETRY -->
+<div class="p-space-6 flex flex-col gap-space-5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-2">
+<span class="w-6 h-6 rounded bg-blue-soft text-primary-container font-label-telemetry text-[11px] font-bold flex items-center justify-center border border-info-border">02</span>
+<h2 class="font-headline-sm text-headline-sm text-text-primary">EVIDENCE & PHOTO TELEMETRY</h2>
+</div>
+<span class="font-label-telemetry text-label-telemetry text-text-secondary uppercase tracking-wider">2/5 ATTACHED • 4K MESH SYNC</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-4">
+<!-- Thumbnail 1 -->
+<div class="flex flex-col bg-surface-base border border-border-default rounded-lg overflow-hidden group">
+<div class="relative h-44 w-full bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200" data-alt="A forensic emergency field photo taken in daylight showing a close-up macro view of a fractured architectural concrete support pillar with exposed steel rebar, dusty fissure lines, and a metric calibration ruler held adjacent to the 4.2cm gap for damage assessment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAN0Z03K79ATmYjMDRtTt9s75bscpASwajMdzoaCQ45n2kXJsvKMdZJSAD9VUY8W7zvHrFptICEixq8jDVxnB3iZT3nq_iWWz_UISC-02hkShr3l1adBLqvR1n-p_4hryIXDlgNPllWjJEEqw1jo8E0Uy1q0sdMKNWA6tisc6dpXiq61cyuO7yH8GugTW7YqBAl5qSaQb680wGf3CiY7s6wEUqVEkhQ46nUUpzCh4OtDE52R3HkYwJaDg"/>
+<div class="absolute top-2 right-2 bg-text-primary/80 backdrop-blur-sm text-white px-2 py-0.5 rounded font-label-telemetry text-[10px]">
+                CAM-01
+              </div>
+</div>
+<div class="p-space-3 flex flex-col gap-1 bg-surface-card">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-label-badge uppercase text-text-primary font-bold">Colonnade P-4 Fracture</span>
+<span class="material-symbols-outlined text-success-text text-[16px]">verified</span>
+</div>
+<div class="inline-flex items-center gap-1.5 text-text-secondary font-label-telemetry text-[10px]">
+<span class="material-symbols-outlined text-[12px]">schedule</span>
+<span>EXIF: 10:56 AM • Geo-Tagged • 4.2cm ruler scale</span>
+</div>
+</div>
+</div>
+<!-- Thumbnail 2 -->
+<div class="flex flex-col bg-surface-base border border-border-default rounded-lg overflow-hidden group">
+<div class="relative h-44 w-full bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200" data-alt="Wide angled emergency responder photograph of the Sector 17 Plaza perimeter, featuring bright yellow hazard police caution tape stretched across concrete arcades with disaster response personnel staged in the background under daylight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBamtKVdqiGb0J4Bi3rRzUI8fQLNSf27Wh0xY9UmVbgwHHsU1PLz2VfxzRZLE2OQiGxVloP-oB8qunD1W9cEJCPMmaZTcMX15nEHTVVjYZUEROKs5oOyTcV1pFSyJ__2eWhB00oacfdS0Zf4Ct3mWFg0vPLq2sKVMPFNXn7q_OFbh-f3Bx0CU0VyEUsoin8mFzg1F9eI-pkgfmlGcGlcK78_1xk9I6n6afRx4odBeKSv5enXqpOhbB3Og"/>
+<div class="absolute top-2 right-2 bg-text-primary/80 backdrop-blur-sm text-white px-2 py-0.5 rounded font-label-telemetry text-[10px]">
+                CAM-02
+              </div>
+</div>
+<div class="p-space-3 flex flex-col gap-1 bg-surface-card">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-label-badge uppercase text-text-primary font-bold">Cordon Perimeter 50m</span>
+<span class="material-symbols-outlined text-success-text text-[16px]">verified</span>
+</div>
+<div class="inline-flex items-center gap-1.5 text-text-secondary font-label-telemetry text-[10px]">
+<span class="material-symbols-outlined text-[12px]">schedule</span>
+<span>EXIF: 10:57 AM • Geo-Tagged • North-East angle</span>
+</div>
+</div>
+</div>
+<!-- Upload Drop Box -->
+<div class="flex flex-col items-center justify-center p-space-4 border-2 border-dashed border-border-default rounded-lg bg-surface-base hover:bg-surface-subtle transition-colors cursor-pointer text-center group min-h-[176px]">
+<div class="w-10 h-10 rounded-full bg-blue-soft text-primary-container flex items-center justify-center mb-space-2 group-hover:bg-blue-light transition-colors">
+<span class="material-symbols-outlined text-[22px]">add_a_photo</span>
+</div>
+<span class="font-body-md text-body-md font-semibold text-text-primary">Tap to capture or upload photographic evidence</span>
+<span class="font-label-telemetry text-[10px] text-text-muted mt-1 uppercase tracking-wider">Supports GeoTIFF, RAW, JPEG • Max 25MB</span>
+<button class="mt-space-3 inline-flex items-center gap-1.5 px-space-3 py-1.5 rounded-lg border border-border-default bg-surface-card text-primary-container font-label-badge text-label-badge uppercase tracking-wider hover:bg-surface-subtle shadow-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[14px]">add</span>
+              + Add Additional Evidence
+            </button>
+</div>
+</div>
+</div>
+<!-- Section 3: ROAD & ACCESS CORRIDOR CONDITION -->
+<div class="p-space-6 flex flex-col gap-space-5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-2">
+<span class="w-6 h-6 rounded bg-blue-soft text-primary-container font-label-telemetry text-[11px] font-bold flex items-center justify-center border border-info-border">03</span>
+<h2 class="font-headline-sm text-headline-sm text-text-primary">ROAD & ACCESS CORRIDOR CONDITION (Field verification)</h2>
+</div>
+<span class="font-label-telemetry text-label-telemetry text-text-secondary uppercase tracking-wider">INGRESS ROUTE STATUS</span>
+</div>
+<div class="flex flex-col gap-space-3">
+<div class="flex items-center justify-between bg-surface-base p-space-3 rounded-lg border border-border-default">
+<div class="flex items-center gap-space-3">
+<span class="material-symbols-outlined text-primary-container text-[20px]">alt_route</span>
+<div class="flex flex-col">
+<span class="font-label-telemetry text-label-telemetry uppercase text-text-secondary">Monitored Corridor Segment</span>
+<span class="font-body-md text-body-md font-bold text-text-primary">Jan Marg to Sector 17 Plaza Ingress Corridor</span>
+</div>
+</div>
+<span class="font-label-telemetry text-label-telemetry uppercase px-space-2 py-1 bg-surface-subtle text-text-secondary rounded border border-border-default">SECTOR ARTERY-04</span>
+</div>
+<!-- Selectable status buttons (Strict 6 states) -->
+<div class="flex flex-col gap-space-2">
+<span class="font-label-badge text-label-badge uppercase text-text-secondary tracking-wider">Field Assessed Status</span>
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-space-2" id="corridorStatusButtons">
+<!-- Open -->
+<button class="corridor-btn flex flex-col items-center justify-center p-space-2 rounded-lg border border-border-default bg-surface-base text-text-secondary hover:bg-surface-subtle transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px] mb-1">done_all</span>
+<span class="font-label-badge text-label-badge uppercase">Open</span>
+</button>
+<!-- Congested -->
+<button class="corridor-btn flex flex-col items-center justify-center p-space-2 rounded-lg border border-border-default bg-surface-base text-text-secondary hover:bg-surface-subtle transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px] mb-1">traffic</span>
+<span class="font-label-badge text-label-badge uppercase">Congested</span>
+</button>
+<!-- Partially Blocked (Selected - amber) -->
+<button class="corridor-btn active-state flex flex-col items-center justify-center p-space-2 rounded-lg border-2 border-warning-border bg-warning-bg text-warning-text font-bold shadow-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px] mb-1">warning</span>
+<span class="font-label-badge text-label-badge uppercase">Partially Blocked</span>
+</button>
+<!-- Blocked -->
+<button class="corridor-btn flex flex-col items-center justify-center p-space-2 rounded-lg border border-border-default bg-surface-base text-text-secondary hover:bg-surface-subtle transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px] mb-1">block</span>
+<span class="font-label-badge text-label-badge uppercase">Blocked</span>
+</button>
+<!-- Restricted -->
+<button class="corridor-btn flex flex-col items-center justify-center p-space-2 rounded-lg border border-border-default bg-surface-base text-text-secondary hover:bg-surface-subtle transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px] mb-1">shield</span>
+<span class="font-label-badge text-label-badge uppercase">Restricted</span>
+</button>
+<!-- Reopened -->
+<button class="corridor-btn flex flex-col items-center justify-center p-space-2 rounded-lg border border-border-default bg-surface-base text-text-secondary hover:bg-surface-subtle transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px] mb-1">published_with_changes</span>
+<span class="font-label-badge text-label-badge uppercase">Reopened</span>
+</button>
+</div>
+</div>
+<!-- Field Note -->
+<div class="flex flex-col gap-space-1">
+<label class="font-label-badge text-label-badge uppercase text-text-secondary tracking-wider" for="corridor-note">Access Corridor Field Observations</label>
+<input class="w-full bg-surface-base border border-border-default rounded-lg px-space-3 py-2.5 font-body-md text-text-primary focus:outline-none focus:border-primary-container focus:bg-surface-card transition-colors" id="corridor-note" type="text" value="Single-lane restricted due to light masonry debris on pedestrian curb. Emergency vehicle passage clearance maintained at 3.8 meters."/>
+</div>
+</div>
+</div>
+<!-- Section 4: HAZARD ASSESSMENT & PERIMETER -->
+<div class="p-space-6 flex flex-col gap-space-5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-2">
+<span class="w-6 h-6 rounded bg-blue-soft text-primary-container font-label-telemetry text-[11px] font-bold flex items-center justify-center border border-info-border">04</span>
+<h2 class="font-headline-sm text-headline-sm text-text-primary">HAZARD ASSESSMENT & PERIMETER</h2>
+</div>
+<span class="font-label-telemetry text-label-telemetry text-text-secondary uppercase tracking-wider">CIVIL DEFENSE LEVEL 2</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-4">
+<!-- Observed Hazard Type -->
+<div class="flex flex-col gap-space-1 p-space-3 bg-surface-base border border-border-default rounded-lg">
+<span class="font-label-telemetry text-label-telemetry uppercase text-text-secondary">Observed Hazard Classification</span>
+<div class="flex items-center gap-space-2 mt-1">
+<span class="material-symbols-outlined text-critical-text text-[20px]">crisis_alert</span>
+<span class="font-body-md text-body-md font-bold text-text-primary">Structural Failure / Collapse Risk</span>
+</div>
+<span class="font-body-sm text-body-sm text-text-secondary mt-1">Primary trigger: Post-seismic lateral tension on bearing joints.</span>
+</div>
+<!-- Hazard Cordon Radius -->
+<div class="flex flex-col gap-space-1 p-space-3 bg-surface-base border border-border-default rounded-lg">
+<span class="font-label-telemetry text-label-telemetry uppercase text-text-secondary">Enforced Hazard Cordon Radius</span>
+<div class="flex items-center gap-space-2 mt-1">
+<span class="material-symbols-outlined text-warning-text text-[20px]">straighten</span>
+<span class="font-body-md text-body-md font-bold text-text-primary">50 Meters (Established with Traffic Police Post 16)</span>
+</div>
+<span class="font-body-sm text-body-sm text-text-secondary mt-1">Perimeter tapes anchored to pylons A1 through D4.</span>
+</div>
+</div>
+<!-- Civilian Evacuation Status -->
+<div class="flex flex-col gap-space-2">
+<span class="font-label-badge text-label-badge uppercase text-text-secondary tracking-wider">Civilian Evacuation Verification</span>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-3" id="evacuationButtons">
+<!-- Fully Evacuated -->
+<button class="evac-btn active-evac flex items-center gap-space-3 p-space-3 rounded-lg border-2 border-success-border bg-success-bg text-text-primary transition-colors text-left shadow-sm" type="button">
+<span class="material-symbols-outlined text-success-text text-[22px]">check_circle</span>
+<div class="flex flex-col">
+<span class="font-label-badge text-label-badge uppercase font-bold text-success-text">Fully Evacuated</span>
+<span class="font-body-sm text-body-sm text-text-secondary">Ground Level cleared</span>
+</div>
+</button>
+<!-- In Progress -->
+<button class="evac-btn flex items-center gap-space-3 p-space-3 rounded-lg border border-border-default bg-surface-base text-text-secondary hover:bg-surface-subtle transition-colors text-left" type="button">
+<span class="material-symbols-outlined text-warning-text text-[22px]">sync</span>
+<div class="flex flex-col">
+<span class="font-label-badge text-label-badge uppercase font-bold text-text-primary">In Progress</span>
+<span class="font-body-sm text-body-sm text-text-secondary">Upper arcade sweep</span>
+</div>
+</button>
+<!-- Evacuation Needed -->
+<button class="evac-btn flex items-center gap-space-3 p-space-3 rounded-lg border border-border-default bg-surface-base text-text-secondary hover:bg-surface-subtle transition-colors text-left" type="button">
+<span class="material-symbols-outlined text-critical-text text-[22px]">emergency</span>
+<div class="flex flex-col">
+<span class="font-label-badge text-label-badge uppercase font-bold text-text-primary">Evacuation Needed</span>
+<span class="font-body-sm text-body-sm text-text-secondary">Trapped/unconfirmed</span>
+</div>
+</button>
+</div>
+</div>
+</div>
+<!-- Section 5: VERIFICATION OUTCOME -->
+<div class="p-space-6 flex flex-col gap-space-5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-2">
+<span class="w-6 h-6 rounded bg-blue-soft text-primary-container font-label-telemetry text-[11px] font-bold flex items-center justify-center border border-info-border">05</span>
+<h2 class="font-headline-sm text-headline-sm text-text-primary">VERIFICATION OUTCOME</h2>
+</div>
+<span class="font-label-telemetry text-label-telemetry text-text-secondary uppercase tracking-wider">COMMAND SITREP ACTION</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-4" id="outcomeCards">
+<!-- Card 1 (Selected): VERIFIED -->
+<div class="outcome-card cursor-pointer flex flex-col gap-space-2 p-space-4 rounded-lg border-2 border-success-border bg-success-bg transition-all shadow-sm" data-outcome="verified">
+<div class="flex items-center justify-between">
+<div class="inline-flex items-center gap-1.5 px-space-2 py-0.5 rounded bg-surface-card border border-success-border">
+<span class="material-symbols-outlined text-success-text text-[16px]">check_circle</span>
+<span class="font-label-badge text-label-badge uppercase text-success-text font-bold">VERIFIED</span>
+</div>
+<span class="material-symbols-outlined text-success-text text-[20px]">radio_button_checked</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-primary pt-space-1 leading-relaxed">
+              Observed conditions match or confirm report severity. Triggers authorized operational escalation.
+            </p>
+</div>
+<!-- Card 2: NOT VERIFIED -->
+<div class="outcome-card cursor-pointer flex flex-col gap-space-2 p-space-4 rounded-lg border border-border-default bg-surface-base hover:bg-surface-subtle transition-all" data-outcome="not-verified">
+<div class="flex items-center justify-between">
+<div class="inline-flex items-center gap-1.5 px-space-2 py-0.5 rounded bg-surface-card border border-border-default">
+<span class="material-symbols-outlined text-text-secondary text-[16px]">cancel</span>
+<span class="font-label-badge text-label-badge uppercase text-text-secondary font-bold">NOT VERIFIED</span>
+</div>
+<span class="material-symbols-outlined text-text-muted text-[20px]">radio_button_unchecked</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary pt-space-1 leading-relaxed">
+              Reported conditions are absent or minor. Recommend de-escalation.
+            </p>
+</div>
+<!-- Card 3: REQUIRES FURTHER REVIEW -->
+<div class="outcome-card cursor-pointer flex flex-col gap-space-2 p-space-4 rounded-lg border border-border-default bg-surface-base hover:bg-surface-subtle transition-all" data-outcome="review">
+<div class="flex items-center justify-between">
+<div class="inline-flex items-center gap-1.5 px-space-2 py-0.5 rounded bg-surface-card border border-border-default">
+<span class="material-symbols-outlined text-warning-text text-[16px]">help</span>
+<span class="font-label-badge text-label-badge uppercase text-warning-text font-bold">REQUIRES REVIEW</span>
+</div>
+<span class="material-symbols-outlined text-text-muted text-[20px]">radio_button_unchecked</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary pt-space-1 leading-relaxed">
+              Uncertain or hazardous conditions requiring specialized assessment team.
+            </p>
+</div>
+</div>
+</div>
+<!-- Section 6: Operational Notice & Confirmation -->
+<div class="p-space-6 bg-surface-base">
+<div class="flex items-start gap-space-3 p-space-4 rounded-lg bg-blue-soft border border-info-border">
+<span class="material-symbols-outlined text-primary-container text-[20px] shrink-0 mt-0.5">info</span>
+<div class="flex flex-col gap-1">
+<span class="font-label-badge text-label-badge uppercase text-primary-container tracking-wider font-bold">Operational Routing Confirmation</span>
+<p class="font-body-md text-body-md text-text-primary">
+              Submitting this survey propagates evidence to EOC Coordinator Vikram Malhotra and authorized operational units. This does not trigger an unverified global broadcast.
+            </p>
+</div>
+</div>
+</div>
+<!-- Section 7: Primary Action Controls -->
+<div class="p-space-6 bg-surface-card flex flex-col sm:flex-row items-center justify-between gap-space-4">
+<div class="flex items-center gap-space-2 text-text-secondary">
+<span class="material-symbols-outlined text-[16px] text-success-text">wifi_protected_setup</span>
+<span class="font-label-telemetry text-[11px] uppercase">MESH RELAY PACKET READY • CRC-32 VALID</span>
+</div>
+<div class="flex flex-col-reverse sm:flex-row items-center gap-space-3 w-full sm:w-auto">
+<!-- Secondary Action -->
+<button class="w-full sm:w-auto px-space-4 py-2.5 rounded-lg border border-border-default bg-surface-card hover:bg-surface-subtle text-text-primary font-body-md text-body-md font-semibold transition-colors flex items-center justify-center gap-2" id="btnSaveDraft" type="button">
+<span class="material-symbols-outlined text-[18px] text-text-secondary">save</span>
+            Save Draft Offline (Mesh Cached)
+          </button>
+<!-- Primary Action -->
+<button class="w-full sm:w-auto bg-primary-container hover:bg-primary text-on-primary font-headline-sm text-headline-sm px-8 py-3 rounded-lg shadow-sm transition-all flex items-center justify-center gap-2" id="btnSubmitSurvey" type="submit">
+<span class="material-symbols-outlined text-[20px]">send</span>
+            SUBMIT FIELD SURVEY
+          </button>
+</div>
+</div>
+</form>
+</div>
+</div>
+<script>
+  // Quick Condition Chips interactive toggle
+  const conditionChips = document.querySelectorAll('#conditionChips .condition-chip');
+  conditionChips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      conditionChips.forEach(c => {
+        c.className = 'condition-chip inline-flex items-center gap-1.5 px-space-3 py-1.5 rounded-lg border border-border-default bg-surface-base text-text-secondary hover:text-text-primary font-label-badge text-label-badge uppercase tracking-wide transition-colors';
+      });
+      chip.className = 'condition-chip inline-flex items-center gap-1.5 px-space-3 py-1.5 rounded-lg border border-critical-border bg-critical-bg text-critical-text font-label-badge text-label-badge uppercase tracking-wide transition-colors font-bold';
+    });
+  });
+
+  // Road Corridor Status toggle (6 allowed states)
+  const corridorButtons = document.querySelectorAll('#corridorStatusButtons .corridor-btn');
+  corridorButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      corridorButtons.forEach(b => {
+        b.className = 'corridor-btn flex flex-col items-center justify-center p-space-2 rounded-lg border border-border-default bg-surface-base text-text-secondary hover:bg-surface-subtle transition-colors';
+      });
+      btn.className = 'corridor-btn active-state flex flex-col items-center justify-center p-space-2 rounded-lg border-2 border-warning-border bg-warning-bg text-warning-text font-bold shadow-sm transition-colors';
+    });
+  });
+
+  // Civilian Evacuation Status toggle
+  const evacButtons = document.querySelectorAll('#evacuationButtons .evac-btn');
+  evacButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      evacButtons.forEach(b => {
+        b.className = 'evac-btn flex items-center gap-space-3 p-space-3 rounded-lg border border-border-default bg-surface-base text-text-secondary hover:bg-surface-subtle transition-colors text-left';
+        const icon = b.querySelector('.material-symbols-outlined');
+        if (icon) icon.className = 'material-symbols-outlined text-text-secondary text-[22px]';
+      });
+      btn.className = 'evac-btn active-evac flex items-center gap-space-3 p-space-3 rounded-lg border-2 border-success-border bg-success-bg text-text-primary transition-colors text-left shadow-sm';
+      const activeIcon = btn.querySelector('.material-symbols-outlined');
+      if (activeIcon) activeIcon.className = 'material-symbols-outlined text-success-text text-[22px]';
+    });
+  });
+
+  // Verification Outcome 3 Large Cards toggle
+  const outcomeCards = document.querySelectorAll('#outcomeCards .outcome-card');
+  outcomeCards.forEach(card => {
+    card.addEventListener('click', () => {
+      outcomeCards.forEach(c => {
+        c.className = 'outcome-card cursor-pointer flex flex-col gap-space-2 p-space-4 rounded-lg border border-border-default bg-surface-base hover:bg-surface-subtle transition-all';
+        const radioIcon = c.querySelectorAll('.material-symbols-outlined')[1];
+        if (radioIcon) {
+          radioIcon.textContent = 'radio_button_unchecked';
+          radioIcon.className = 'material-symbols-outlined text-text-muted text-[20px]';
+        }
+      });
+
+      const outcomeType = card.getAttribute('data-outcome');
+      if (outcomeType === 'verified') {
+        card.className = 'outcome-card cursor-pointer flex flex-col gap-space-2 p-space-4 rounded-lg border-2 border-success-border bg-success-bg transition-all shadow-sm';
+      } else if (outcomeType === 'review') {
+        card.className = 'outcome-card cursor-pointer flex flex-col gap-space-2 p-space-4 rounded-lg border-2 border-warning-border bg-warning-bg transition-all shadow-sm';
+      } else {
+        card.className = 'outcome-card cursor-pointer flex flex-col gap-space-2 p-space-4 rounded-lg border-2 border-secondary-container bg-surface-container-low transition-all shadow-sm';
+      }
+
+      const activeRadio = card.querySelectorAll('.material-symbols-outlined')[1];
+      if (activeRadio) {
+        activeRadio.textContent = 'radio_button_checked';
+        activeRadio.className = outcomeType === 'verified' 
+          ? 'material-symbols-outlined text-success-text text-[20px]' 
+          : (outcomeType === 'review' ? 'material-symbols-outlined text-warning-text text-[20px]' : 'material-symbols-outlined text-primary-container text-[20px]');
+      }
+    });
+  });
+
+  // Submit confirmation handler
+  const btnSubmit = document.getElementById('btnSubmitSurvey');
+  const btnDraft = document.getElementById('btnSaveDraft');
+  if (btnSubmit) {
+    btnSubmit.addEventListener('click', () => {
+      const originalHTML = btnSubmit.innerHTML;
+      btnSubmit.innerHTML = '<span class="material-symbols-outlined text-[20px] animate-spin">refresh</span> TRANSMITTING TO EOC...';
+      btnSubmit.disabled = true;
+      setTimeout(() => {
+        btnSubmit.innerHTML = '<span class="material-symbols-outlined text-[20px]">check</span> TELEMETRY TRANSMITTED';
+        btnSubmit.classList.remove('bg-primary-container', 'hover:bg-primary');
+        btnSubmit.classList.add('bg-success-text');
+        setTimeout(() => {
+          btnSubmit.innerHTML = originalHTML;
+          btnSubmit.classList.add('bg-primary-container', 'hover:bg-primary');
+          btnSubmit.classList.remove('bg-success-text');
+          btnSubmit.disabled = false;
+        }, 3000);
+      }, 1200);
+    });
+  }
+
+  if (btnDraft) {
+    btnDraft.addEventListener('click', () => {
+      const originalText = btnDraft.innerHTML;
+      btnDraft.innerHTML = '<span class="material-symbols-outlined text-[18px] text-success-text">done</span> Cached to Flash Storage';
+      setTimeout(() => {
+        btnDraft.innerHTML = originalText;
+      }, 2000);
+    });
+  }
+</script></main></div></body></html>

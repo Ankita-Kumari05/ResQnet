@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700&amp;family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"secondary":"#455f87","primary":"#004ac6","border-default":"#E2E8F0","secondary-fixed":"#d5e3ff","error-container":"#ffdad6","on-error-container":"#93000a","success-text":"#16A34A","info-border":"#BFDBFE","critical-bg":"#FEF2F2","on-secondary-container":"#3e5980","on-secondary":"#ffffff","tertiary-fixed-dim":"#bec6e0","surface-bright":"#f8f9ff","surface":"#f8f9ff","on-surface":"#0b1c30","secondary-container":"#b5d0fd","surface-container-highest":"#d3e4fe","warning-bg":"#FFFBEB","text-muted":"#94A3B8","on-error":"#ffffff","blue-soft":"#EFF6FF","success-border":"#BBF7D0","inverse-on-surface":"#eaf1ff","secondary-fixed-dim":"#adc8f5","error":"#ba1a1a","on-secondary-fixed":"#001c3b","surface-container-high":"#dce9ff","warning-border":"#FDE68A","on-primary-container":"#eeefff","on-background":"#0b1c30","on-tertiary-fixed":"#131b2e","background":"#f8f9ff","surface-tint":"#0053db","primary-fixed-dim":"#b4c5ff","surface-container-lowest":"#ffffff","inverse-primary":"#b4c5ff","surface-card":"#FFFFFF","blue-light":"#DBEAFE","warning-text":"#D97706","surface-base":"#F8FAFC","on-tertiary-container":"#eef0ff","surface-container-low":"#eff4ff","on-primary-fixed-variant":"#003ea8","tertiary-container":"#656d84","outline-variant":"#c3c6d7","surface-subtle":"#F1F5F9","tertiary":"#4d556b","inverse-surface":"#213145","critical-border":"#FECACA","tertiary-fixed":"#dae2fd","critical-text":"#DC2626","surface-dim":"#cbdbf5","on-primary-fixed":"#00174b","surface-variant":"#d3e4fe","surface-container":"#e5eeff","success-bg":"#F0FDF4","on-surface-variant":"#434655","primary-fixed":"#dbe1ff","text-secondary":"#64748B","outline":"#737686","primary-container":"#2563eb","on-primary":"#ffffff","on-tertiary":"#ffffff","on-secondary-fixed-variant":"#2d486d","on-tertiary-fixed-variant":"#3f465c","text-primary":"#1E293B"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"space-2":"8px","space-12":"48px","space-5":"20px","gutter-standard":"16px","space-10":"40px","space-3":"12px","space-4":"16px","margin-desktop":"32px","gutter-expanded":"24px","space-0":"0px","gutter-dense":"8px","space-1":"4px","margin-mobile":"16px","space-8":"32px","space-16":"64px","space-6":"24px","margin-tablet":"24px"},fontFamily:{"data-mono-lg":["JetBrains Mono"],"body-md":["Public Sans"],"headline-xl":["Public Sans"],"display-hud-mobile":["JetBrains Mono"],"body-lg":["Public Sans"],"headline-sm":["Public Sans"],"label-telemetry":["JetBrains Mono"],"headline-lg":["Public Sans"],"display-hud":["JetBrains Mono"],"headline-xl-mobile":["Public Sans"],"label-badge":["Public Sans"],"headline-md":["Public Sans"],"data-mono-md":["JetBrains Mono"],"body-sm":["Public Sans"]},fontSize:{"data-mono-lg":["18px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"headline-xl":["36px",{"lineHeight":"44px","letterSpacing":"-0.025em","fontWeight":"700"}],"display-hud-mobile":["32px",{"lineHeight":"36px","letterSpacing":"-0.03em","fontWeight":"700"}],"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"headline-sm":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"600"}],"label-telemetry":["10px",{"lineHeight":"12px","letterSpacing":"0.08em","fontWeight":"500"}],"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"700"}],"display-hud":["48px",{"lineHeight":"52px","letterSpacing":"-0.04em","fontWeight":"700"}],"headline-xl-mobile":["26px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-badge":["11px",{"lineHeight":"14px","letterSpacing":"0.06em","fontWeight":"700"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"data-mono-md":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"500"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"400"}]}}}};</script></head><body class="bg-surface-base font-body-md text-text-primary antialiased"><aside class="fixed left-0 top-0 h-full w-[260px] bg-surface-card z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-space-5 flex items-center gap-space-3 bg-surface-subtle"><div class="w-8 h-8 rounded-xl bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[20px]">hub</span></div><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm text-text-primary tracking-tight leading-none">RESQNET</span><span class="font-label-telemetry text-label-telemetry text-text-secondary tracking-wider mt-space-1 uppercase">Engine Core v2.4</span></div></div><div class="px-space-4 py-space-4 flex flex-col gap-space-6"><div class="flex flex-col"><span class="px-space-3 mb-space-2 font-label-badge text-label-badge text-text-muted uppercase tracking-wider">Simulation Workspaces</span><nav class="flex flex-col gap-space-1" data-active-classes="bg-primary-container text-on-primary font-headline-sm rounded-xl"><a class="flex items-center px-space-3 py-space-2 rounded-xl font-body-md text-body-md text-on-surface-variant hover:bg-surface-subtle hover:text-on-surface transition-colors" data-path="scenario-library" href="#"><span class="material-symbols-outlined text-[18px] mr-space-3">schema</span>Scenario Library</a><a class="flex items-center justify-between px-space-3 py-space-2 rounded-xl font-body-md text-body-md text-on-surface-variant hover:bg-surface-subtle hover:text-on-surface transition-colors" data-path="run-console" href="#"><div class="flex items-center"><span class="material-symbols-outlined text-[18px] mr-space-3">terminal</span>Run Console</div><span class="flex h-2 w-2 relative"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-success-text opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-success-text"></span></span></a><a aria-current="page" class="flex items-center px-space-3 py-space-2 transition-colors bg-primary-container text-on-primary font-headline-sm rounded-xl" data-path="run-history" href="#"><span class="material-symbols-outlined text-[18px] mr-space-3">history</span>Run History</a></nav></div><div class="flex flex-col"><span class="px-space-3 mb-space-2 font-label-badge text-label-badge text-text-muted uppercase tracking-wider">Active Run Inspection</span><nav class="flex flex-col gap-space-1" data-active-classes="bg-primary-container text-on-primary font-headline-sm rounded-xl"><a class="flex items-center px-space-3 py-space-2 rounded-xl font-body-md text-body-md text-on-surface-variant hover:bg-surface-subtle hover:text-on-surface transition-colors" data-path="event-inspector" href="#"><span class="material-symbols-outlined text-[18px] mr-space-3">manage_search</span>Event Inspector</a><a class="flex items-center px-space-3 py-space-2 rounded-xl font-body-md text-body-md text-on-surface-variant hover:bg-surface-subtle hover:text-on-surface transition-colors" data-path="manual-event-injection" href="#"><span class="material-symbols-outlined text-[18px] mr-space-3">send_time_extension</span>Manual Event Injection</a><a class="flex items-center px-space-3 py-space-2 rounded-xl font-body-md text-body-md text-on-surface-variant hover:bg-surface-subtle hover:text-on-surface transition-colors" data-path="run-results" href="#"><span class="material-symbols-outlined text-[18px] mr-space-3">insights</span>Run Results</a></nav></div></div></div><div class="p-space-4 bg-surface-subtle flex flex-col gap-space-3"><div class="flex flex-col gap-space-1"><div class="flex items-center gap-space-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span><span class="font-label-telemetry text-label-telemetry text-text-secondary uppercase">Runtime: Deterministic HTTP</span></div><div class="flex items-center gap-space-2"><span class="w-1.5 h-1.5 rounded-full bg-success-text"></span><span class="font-label-telemetry text-label-telemetry text-text-secondary uppercase">API Link: 100% Healthy</span></div></div><a class="flex items-center justify-between px-space-3 py-space-2 bg-surface-card rounded-lg hover:bg-blue-soft hover:text-primary transition-colors text-text-secondary font-body-sm text-body-sm" data-path="root-portal-switch" href="#"><span class="flex items-center gap-space-2"><span class="material-symbols-outlined text-[16px]">logout</span>Return to Portal</span><span class="material-symbols-outlined text-[14px]">arrow_forward</span></a></div></aside><div class="pl-[260px]"><header class="fixed top-0 left-[260px] right-0 h-16 bg-surface-card/95 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-6"><div class="flex items-center gap-space-4 min-w-0"><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-text-primary tracking-tight">RESQNET v2.4</span><span class="font-label-telemetry text-label-telemetry text-text-secondary tracking-wider uppercase">Simulation Engine &amp; Disaster Timeline Emulator</span></div><div class="h-5 w-px bg-border-default mx-space-2 hidden lg:block"></div><div class="hidden xl:flex items-center gap-space-2"><div class="flex items-center gap-space-1 bg-surface-subtle px-space-2 py-1 rounded"><span class="font-label-telemetry text-label-telemetry text-text-muted">ENV:</span><span class="font-data-mono-md text-data-mono-md text-text-primary">STAGING SANDBOX</span></div><div class="flex items-center gap-space-1 bg-surface-subtle px-space-2 py-1 rounded"><span class="font-label-telemetry text-label-telemetry text-text-muted">CLK:</span><span class="font-data-mono-md text-data-mono-md text-text-primary">SYNCHRONIZED</span></div><div class="flex items-center gap-space-1 bg-surface-subtle px-space-2 py-1 rounded"><span class="font-label-telemetry text-label-telemetry text-text-muted">TGT:</span><span class="font-data-mono-md text-data-mono-md text-text-primary">LOCAL APIS (8080)</span></div><div class="flex items-center gap-space-1 bg-surface-subtle px-space-2 py-1 rounded"><span class="font-label-telemetry text-label-telemetry text-text-muted">CALL:</span><span class="font-data-mono-md text-data-mono-md text-text-primary">SIM-OPERATOR-ROOT</span></div></div></div><div class="flex items-center gap-space-4 shrink-0"><div class="flex items-center gap-space-2 bg-success-bg border border-success-border px-space-3 py-1 rounded-full"><span class="w-2 h-2 rounded-full bg-success-text"></span><span class="font-label-badge text-label-badge text-success-text uppercase tracking-wide">Engine: Active / Ready</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 bg-surface-base min-h-screen w-full px-space-8 py-space-6"><div class="flex flex-col w-full gap-space-6">
+<!-- Page Header & Filter Deck -->
+<div class="flex flex-col gap-space-4">
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-4">
+<div class="flex flex-col gap-space-1">
+<div class="flex items-center gap-space-2">
+<span class="px-space-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed-variant font-label-badge text-label-badge uppercase tracking-wider">Telemetry Archive</span>
+<span class="font-data-mono-md text-data-mono-md text-text-muted">LEDGER://SIM-RUNS.LOG</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-text-primary tracking-tight">SIMULATION RUN HISTORY</h1>
+<p class="font-body-md text-body-md text-text-secondary max-w-3xl">Complete auditable registry of past disaster simulation executions, timeline performance, and integration reliability.</p>
+</div>
+<!-- Quick Export / Ledger Sync -->
+<div class="flex items-center gap-space-2 self-start lg:self-end">
+<button class="flex items-center gap-space-2 px-space-3 py-space-2 rounded-xl bg-surface-card hover:bg-surface-subtle text-text-primary font-headline-sm text-headline-sm shadow-sm transition-colors">
+<span class="material-symbols-outlined text-[18px] text-text-secondary">file_download</span>
+<span>Export SHA-256 Digest</span>
+</button>
+<button class="flex items-center gap-space-2 px-space-3 py-space-2 rounded-xl bg-primary-container hover:bg-primary text-on-primary font-headline-sm text-headline-sm shadow-sm transition-colors">
+<span class="material-symbols-outlined text-[18px]">cached</span>
+<span>Re-verify Ledger</span>
+</button>
+</div>
+</div>
+<!-- Telemetry Summary KPI Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-4">
+<!-- KPI 1 -->
+<div class="relative overflow-hidden bg-surface-card rounded-xl p-space-5 shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-3">
+<span class="font-label-badge text-label-badge text-text-muted uppercase tracking-wider">Total Executed Runs</span>
+<div class="w-8 h-8 rounded-lg bg-surface-subtle flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">terminal</span>
+</div>
+</div>
+<div class="flex items-baseline gap-space-2">
+<span class="font-display-hud text-display-hud text-text-primary tracking-tight">24</span>
+<span class="font-label-badge text-label-badge text-text-secondary">RUNS</span>
+</div>
+<div class="mt-space-3 flex items-center gap-space-2 text-text-secondary font-body-sm text-body-sm">
+<span class="flex h-1.5 w-1.5 rounded-full bg-primary"></span>
+<span>Archived across 4 quarters</span>
+</div>
+</div>
+<!-- KPI 2 -->
+<div class="relative overflow-hidden bg-surface-card rounded-xl p-space-5 shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-3">
+<span class="font-label-badge text-label-badge text-text-muted uppercase tracking-wider">Completion Rate</span>
+<div class="w-8 h-8 rounded-lg bg-success-bg flex items-center justify-center text-success-text">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+</div>
+</div>
+<div class="flex items-baseline gap-space-2">
+<span class="font-display-hud text-display-hud text-success-text tracking-tight">95.8%</span>
+<span class="font-label-badge text-label-badge text-success-text">PASS</span>
+</div>
+<div class="mt-space-3 flex items-center justify-between text-text-secondary font-data-mono-md text-data-mono-md">
+<span class="text-text-primary">23 Completed</span>
+<span class="text-warning-text">1 Stopped</span>
+</div>
+</div>
+<!-- KPI 3 -->
+<div class="relative overflow-hidden bg-surface-card rounded-xl p-space-5 shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-3">
+<span class="font-label-badge text-label-badge text-text-muted uppercase tracking-wider">Simulated Events</span>
+<div class="w-8 h-8 rounded-lg bg-blue-soft flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">dynamic_feed</span>
+</div>
+</div>
+<div class="flex items-baseline gap-space-2">
+<span class="font-display-hud text-display-hud text-text-primary tracking-tight">188</span>
+<span class="font-label-badge text-label-badge text-text-secondary">INGESTED</span>
+</div>
+<div class="mt-space-3 flex items-center gap-space-2">
+<div class="w-full bg-surface-subtle h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 88%"></div>
+</div>
+<span class="font-label-telemetry text-label-telemetry text-text-muted">100% DISPATCH</span>
+</div>
+</div>
+<!-- KPI 4 -->
+<div class="relative overflow-hidden bg-surface-card rounded-xl p-space-5 shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-3">
+<span class="font-label-badge text-label-badge text-text-muted uppercase tracking-wider">Mean Latency</span>
+<div class="w-8 h-8 rounded-lg bg-surface-subtle flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">speed</span>
+</div>
+</div>
+<div class="flex items-baseline gap-space-2">
+<span class="font-display-hud text-display-hud text-text-primary tracking-tight">15.2</span>
+<span class="font-data-mono-lg text-data-mono-lg text-text-secondary">ms</span>
+</div>
+<div class="mt-space-3 flex items-center gap-space-2 text-success-text font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[14px]">arrow_downward</span>
+<span>-3.4ms vs engine target threshold</span>
+</div>
+</div>
+</div>
+<!-- Filter Console Dock -->
+<div class="bg-surface-card rounded-xl p-space-4 shadow-sm flex flex-col xl:flex-row items-stretch xl:items-center gap-space-3">
+<!-- Search Input -->
+<div class="relative flex-1 min-w-[280px]">
+<span class="material-symbols-outlined absolute left-space-3 top-1/2 -translate-y-1/2 text-text-muted text-[18px]">search</span>
+<input class="w-full h-10 pl-10 pr-space-4 rounded-lg bg-surface-subtle text-text-primary placeholder:text-text-muted font-body-md text-body-md focus:outline-none focus:bg-surface-card focus:shadow-[0_0_0_2px_#2563eb] transition-all" id="search-input" placeholder="Filter by Run ID (e.g. #RUN-2025-0892) or Scenario..." type="text"/>
+</div>
+<!-- Select Filters -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-2 xl:w-auto">
+<!-- Disaster Filter -->
+<div class="relative">
+<select class="w-full xl:w-44 h-10 px-space-3 appearance-none rounded-lg bg-surface-subtle text-text-primary font-body-sm text-body-sm focus:outline-none focus:bg-surface-card cursor-pointer" id="filter-type">
+<option value="ALL">Disaster: All Types</option>
+<option value="Riverine Flood">Riverine Flood</option>
+<option value="Seismic Collapse">Seismic Collapse</option>
+<option value="Debris Flow">Debris Flow / Landslide</option>
+</select>
+<span class="material-symbols-outlined pointer-events-none absolute right-2.5 top-1/2 -translate-y-1/2 text-text-muted text-[16px]">expand_more</span>
+</div>
+<!-- Status Filter -->
+<div class="relative">
+<select class="w-full xl:w-40 h-10 px-space-3 appearance-none rounded-lg bg-surface-subtle text-text-primary font-body-sm text-body-sm focus:outline-none focus:bg-surface-card cursor-pointer" id="filter-status">
+<option value="ALL">Status: All</option>
+<option value="RUNNING">Running</option>
+<option value="COMPLETED">Completed</option>
+<option value="STOPPED">Stopped</option>
+<option value="FAILED">Failed</option>
+</select>
+<span class="material-symbols-outlined pointer-events-none absolute right-2.5 top-1/2 -translate-y-1/2 text-text-muted text-[16px]">expand_more</span>
+</div>
+<!-- Date Range Filter -->
+<div class="relative">
+<select class="w-full xl:w-44 h-10 px-space-3 appearance-none rounded-lg bg-surface-subtle text-text-primary font-body-sm text-body-sm focus:outline-none focus:bg-surface-card cursor-pointer" id="filter-date">
+<option value="ALL">Date: All History</option>
+<option value="TODAY">Today (IST)</option>
+<option value="YESTERDAY">Yesterday</option>
+<option value="LAST_7_DAYS">Last 7 Days</option>
+<option value="OCT_2025">October 2025</option>
+</select>
+<span class="material-symbols-outlined pointer-events-none absolute right-2.5 top-1/2 -translate-y-1/2 text-text-muted text-[16px]">calendar_today</span>
+</div>
+</div>
+<!-- Reset Filter Button -->
+<button class="h-10 px-space-3 rounded-lg bg-surface-subtle hover:bg-surface-variant text-text-secondary hover:text-text-primary font-body-sm text-body-sm flex items-center justify-center gap-space-1 transition-colors" id="reset-filters">
+<span class="material-symbols-outlined text-[16px]">restart_alt</span>
+<span class="hidden sm:inline">Reset</span>
+</button>
+</div>
+</div>
+<!-- Historical Runs Table Card Container -->
+<div class="bg-surface-card rounded-xl shadow-sm overflow-hidden flex flex-col">
+<!-- Table Header Info Bar -->
+<div class="px-space-5 py-space-3 bg-surface-subtle flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-2">
+<div class="flex items-center gap-space-3">
+<span class="font-headline-sm text-headline-sm text-text-primary">Recorded Telemetry Streams</span>
+<span class="px-space-2 py-0.5 rounded bg-surface-card text-text-secondary font-data-mono-md text-data-mono-md shadow-sm">Index: ISO_8601_DESC</span>
+</div>
+<div class="flex items-center gap-space-4 font-label-telemetry text-label-telemetry text-text-muted uppercase">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span>Live Sockets Attached</span>
+</div>
+<span class="hidden md:inline">|</span>
+<span class="hidden md:inline">Storage Engine: RocksDB Immutable Ledger</span>
+</div>
+</div>
+<!-- Dense Data Table Container -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse min-w-[1040px]">
+<thead>
+<tr class="bg-surface-base text-text-muted font-label-badge text-label-badge uppercase tracking-wider">
+<th class="py-space-3 px-space-4">Run Identifier</th>
+<th class="py-space-3 px-space-4">Scenario Context</th>
+<th class="py-space-3 px-space-4">Disaster Type</th>
+<th class="py-space-3 px-space-4">Execution (IST)</th>
+<th class="py-space-3 px-space-4">Sim Duration</th>
+<th class="py-space-3 px-space-4">Final Status</th>
+<th class="py-space-3 px-space-4">Delivered / Total</th>
+<th class="py-space-3 px-space-4">Integrity Logs</th>
+<th class="py-space-3 px-space-4">Operator</th>
+<th class="py-space-3 px-space-4 text-right">Console Action</th>
+</tr>
+</thead>
+<tbody class="text-text-primary font-body-md text-body-md" id="runs-tbody">
+<!-- Row 1: Running -->
+<tr class="hover:bg-blue-soft/50 transition-colors group bg-blue-soft/20">
+<td class="py-space-3 px-space-4">
+<div class="flex items-center gap-space-2">
+<span class="flex h-2 w-2 relative shrink-0">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+<span class="font-data-mono-md text-data-mono-md font-semibold text-primary">#RUN-2025-0892</span>
+</div>
+</td>
+<td class="py-space-3 px-space-4">
+<span class="font-data-mono-md text-data-mono-md text-text-secondary">FLOOD_DEMO_01</span>
+</td>
+<td class="py-space-3 px-space-4">
+<div class="flex items-center gap-space-2">
+<span class="material-symbols-outlined text-[16px] text-primary">water_drop</span>
+<span class="font-body-md text-body-md">Riverine Flood</span>
+</div>
+</td>
+<td class="py-space-3 px-space-4">
+<div class="flex flex-col">
+<span class="font-data-mono-md text-data-mono-md">Today, 11:00</span>
+<span class="font-label-telemetry text-label-telemetry text-text-muted">ZONE +05:30</span>
+</div>
+</td>
+<td class="py-space-3 px-space-4">
+<div class="flex items-center gap-1.5 font-data-mono-md text-data-mono-md text-primary">
+<span class="material-symbols-outlined text-[16px] animate-spin text-primary">sync</span>
+<span>34m (Running)</span>
+</div>
+</td>
+<td class="py-space-3 px-space-4">
+<span class="inline-flex items-center gap-1 px-space-2 py-0.5 rounded bg-blue-soft text-primary font-label-badge text-label-badge uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
+                RUNNING
+              </span>
+</td>
+<td class="py-space-3 px-space-4">
+<div class="flex flex-col gap-1 w-28">
+<div class="flex items-center justify-between font-data-mono-md text-data-mono-md">
+<span class="font-semibold text-primary">4 / 7</span>
+<span class="font-label-telemetry text-label-telemetry text-text-muted">57%</span>
+</div>
+<div class="w-full bg-surface-subtle h-1 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 57%"></div>
+</div>
+</div>
+</td>
+<td class="py-space-3 px-space-4">
+<span class="inline-flex items-center gap-1 text-success-text font-data-mono-md text-data-mono-md">
+<span class="material-symbols-outlined text-[14px]">format_image_left</span>
+                0 Failures
+              </span>
+</td>
+<td class="py-space-3 px-space-4">
+<span class="font-label-telemetry text-label-telemetry px-space-2 py-1 rounded bg-surface-subtle text-text-secondary">
+                SIM-OPERATOR-ROOT
+              </span>
+</td>
+<td class="py-space-3 px-space-4 text-right">
+<a class="inline-flex items-center gap-1 px-space-3 py-1.5 rounded-lg bg-primary text-on-primary hover:bg-primary-container font-headline-sm text-headline-sm transition-all shadow-sm" data-path="run-console" href="#">
+<span>Open Run Console</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</td>
+</tr>
+<!-- Row 2: Completed -->
+<tr class="hover:bg-surface-subtle transition-colors">
+<td class="py-space-3 px-space-4">
+<span class="font-data-mono-md text-data-mono-md font-semibold text-text-primary">#RUN-2025-0891</span>
+</td>
+<td class="py-space-3 px-space-4">
+<span class="font-data-mono-md text-data-mono-md text-text-secondary">FLOOD_DEMO_01</span>
+</td>
+<td class="py-space-3 px-space-4">
+<div class="flex items-center gap-space-2">
+<span class="material-symbols-outlined text-[16px] text-primary">water_drop</span>
+<span class="font-body-md text-body-md">Riverine Flood</span>
+</div>
+</td>
+<td class="py-space-3 px-space-4">
+<div class="flex flex-col">
+<span class="font-data-mono-md text-data-mono-md">Today, 09:00</span>
+<span class="font-label-telemetry text-label-telemetry text-text-muted">ZONE +05:30</span>
+</div>
+</td>
+<td class="py-space-3 px-space-4">
+<span class="font-data-mono-md text-data-mono-md text-text-secondary">60m 14s</span>
+</td>
+<td class="py-space-3 px-space-4">
+<span class="inline-flex items-center gap-1 px-space-2 py-0.5 rounded bg-success-bg text-success-text font-label-badge text-label-badge uppercase">
+<span class="material-symbols-outlined text-[12px]">done_all</span>
+                COMPLETED
+              </span>
+</td>
+<td class="py-space-3 px-space-4">
+<div class="flex flex-col gap-1 w-28">
+<div class="flex items-center justify-between font-data-mono-md text-data-mono-md">
+<span class="font-semibold text-text-primary">7 / 7</span>
+<span class="font-label-telemetry text-label-telemetry text-success-text">100%</span>
+</div>
+<div class="w-full bg-surface-subtle h-1 rounded-full overflow-hidden">
+<div class="bg-success-text h-full rounded-full" style="width: 100%"></div>
+</div>
+</div>
+</td>
+<td class="py-space-3 px-space-4">
+<span class="inline-flex items-center gap-1 text-warning-text font-data-mono-md text-data-mono-md">
+<span class="material-symbols-outlined text-[14px]">replay</span>
+                1 Retry (0 Fail)
+              </span>
+</td>
+<td class="py-space-3 px-space-4">
+<span class="font-label-telemetry text-label-telemetry px-space-2 py-1 rounded bg-surface-subtle text-text-secondary">
+                SIM-OPERATOR-ROOT
+              </span>
+</td>
+<td class="py-space-3 px-space-4 text-right">
+<a class="inline-flex items-center gap-1 px-space-3 py-1.5 rounded-lg bg-surface-subtle hover:bg-surface-variant text-text-primary font-headline-sm text-headline-sm transition-colors" data-path="run-results" href="#">
+<span>View Results</span>
+<span class="material-symbols-outlined text-[16px] text-text-secondary">arrow_forward</span>
+</a>
+</td>
+</tr>
+<!-- Row 3: Earthquake Completed -->
+<tr class="hover:bg-surface-subtle transition-colors">
+<td class="py-space-3 px-space-4">
+<span class="font-data-mono-md text-data-mono-md font-semibold text-text-primary">#RUN-2025-0889</span>
+</td>
+<td class="py-space-3 px-space-4">
+<span class="font-data-mono-md text-data-mono-md text-text-secondary">EARTHQUAKE_DEMO_01</span>
+</td>
+<td class="py-space-3 px-space-4">
+<div class="flex items-center gap-space-2">
+<span class="material-symbols-outlined text-[16px] text-warning-text">earthquake</span>
+<span class="font-body-md text-body-md">Seismic Collapse</span>
+</div>
+</td>
+<td class="py-space-3 px-space-4">
+<div class="flex flex-col">
+<span class="font-data-mono-md text-data-mono-md">Yesterday, 16:30</span>
+<span class="font-label-telemetry text-label-telemetry text-text-muted">ZONE +05:30</span>
+</div>
+</td>
+<td class="py-space-3 px-space-4">
+<span class="font-data-mono-md text-data-mono-md text-text-secondary">90m 00s</span>
+</td>
+<td class="py-space-3 px-space-4">
+<span class="inline-flex items-center gap-1 px-space-2 py-0.5 rounded bg-success-bg text-success-text font-label-badge text-label-badge uppercase">
+<span class="material-symbols-outlined text-[12px]">done_all</span>
+                COMPLETED
+              </span>
+</td>
+<td class="py-space-3 px-space-4">
+<div class="flex flex-col gap-1 w-28">
+<div class="flex items-center justify-between font-data-mono-md text-data-mono-md">
+<span class="font-semibold text-text-primary">11 / 11</span>
+<span class="font-label-telemetry text-label-telemetry text-success-text">100%</span>
+</div>
+<div class="w-full bg-surface-subtle h-1 rounded-full overflow-hidden">
+<div class="bg-success-text h-full rounded-full" style="width: 100%"></div>
+</div>
+</div>
+</td>
+<td class="py-space-3 px-space-4">
+<span class="inline-flex items-center gap-1 text-success-text font-data-mono-md text-data-mono-md">
+<span class="material-symbols-outlined text-[14px]">format_image_left</span>
+                0 Failures
+              </span>
+</td>
+<td class="py-space-3 px-space-4">
+<span class="font-label-telemetry text-label-telemetry px-space-2 py-1 rounded bg-surface-subtle text-text-secondary">
+                SIM-OPERATOR-02
+              </span>
+</td>
+<td class="py-space-3 px-space-4 text-right">
+<a class="inline-flex items-center gap-1 px-space-3 py-1.5 rounded-lg bg-surface-subtle hover:bg-surface-variant text-text-primary font-headline-sm text-headline-sm transition-colors" data-path="run-results" href="#">
+<span>View Results</span>
+<span class="material-symbols-outlined text-[16px] text-text-secondary">arrow_forward</span>
+</a>
+</td>
+</tr>
+<!-- Row 4: Landslide Completed -->
+<tr class="hover:bg-surface-subtle transition-colors">
+<td class="py-space-3 px-space-4">
+<span class="font-data-mono-md text-data-mono-md font-semibold text-text-primary">#RUN-2025-0884</span>
+</td>
+<td class="py-space-3 px-space-4">
+<span class="font-data-mono-md text-data-mono-md text-text-secondary">LANDSLIDE_DEMO_01</span>
+</td>
+<td class="py-space-3 px-space-4">
+<div class="flex items-center gap-space-2">
+<span class="material-symbols-outlined text-[16px] text-critical-text">landslide</span>
+<span class="font-body-md text-body-md">Debris Flow</span>
+</div>
+</td>
+<td class="py-space-3 px-space-4">
+<div class="flex flex-col">
+<span class="font-data-mono-md text-data-mono-md">12 Oct 2025, 14:15</span>
+<span class="font-label-telemetry text-label-telemetry text-text-muted">ZONE +05:30</span>
+</div>
+</td>
+<td class="py-space-3 px-space-4">
+<span class="font-data-mono-md text-data-mono-md text-text-secondary">45m 10s</span>
+</td>
+<td class="py-space-3 px-space-4">
+<span class="inline-flex items-center gap-1 px-space-2 py-0.5 rounded bg-success-bg text-success-text font-label-badge text-label-badge uppercase">
+<span class="material-symbols-outlined text-[12px]">done_all</span>
+                COMPLETED
+              </span>
+</td>
+<td class="py-space-3 px-space-4">
+<div class="flex flex-col gap-1 w-28">
+<div class="flex items-center justify-between font-data-mono-md text-data-mono-md">
+<span class="font-semibold text-text-primary">6 / 6</span>
+<span class="font-label-telemetry text-label-telemetry text-success-text">100%</span>
+</div>
+<div class="w-full bg-surface-subtle h-1 rounded-full overflow-hidden">
+<div class="bg-success-text h-full rounded-full" style="width: 100%"></div>
+</div>
+</div>
+</td>
+<td class="py-space-3 px-space-4">
+<span class="inline-flex items-center gap-1 text-success-text font-data-mono-md text-data-mono-md">
+<span class="material-symbols-outlined text-[14px]">format_image_left</span>
+                0 Failures
+              </span>
+</td>
+<td class="py-space-3 px-space-4">
+<span class="font-label-telemetry text-label-telemetry px-space-2 py-1 rounded bg-surface-subtle text-text-secondary">
+                SIM-OPERATOR-ROOT
+              </span>
+</td>
+<td class="py-space-3 px-space-4 text-right">
+<a class="inline-flex items-center gap-1 px-space-3 py-1.5 rounded-lg bg-surface-subtle hover:bg-surface-variant text-text-primary font-headline-sm text-headline-sm transition-colors" data-path="run-results" href="#">
+<span>View Results</span>
+<span class="material-symbols-outlined text-[16px] text-text-secondary">arrow_forward</span>
+</a>
+</td>
+</tr>
+<!-- Row 5: Stopped by Operator -->
+<tr class="hover:bg-surface-subtle transition-colors">
+<td class="py-space-3 px-space-4">
+<span class="font-data-mono-md text-data-mono-md font-semibold text-text-primary">#RUN-2025-0879</span>
+</td>
+<td class="py-space-3 px-space-4">
+<span class="font-data-mono-md text-data-mono-md text-text-secondary">FLOOD_DEMO_01</span>
+</td>
+<td class="py-space-3 px-space-4">
+<div class="flex items-center gap-space-2">
+<span class="material-symbols-outlined text-[16px] text-primary">water_drop</span>
+<span class="font-body-md text-body-md">Riverine Flood</span>
+</div>
+</td>
+<td class="py-space-3 px-space-4">
+<div class="flex flex-col">
+<span class="font-data-mono-md text-data-mono-md">11 Oct 2025, 10:00</span>
+<span class="font-label-telemetry text-label-telemetry text-text-muted">ZONE +05:30</span>
+</div>
+</td>
+<td class="py-space-3 px-space-4">
+<span class="font-data-mono-md text-data-mono-md text-text-secondary">28m 40s</span>
+</td>
+<td class="py-space-3 px-space-4">
+<span class="inline-flex items-center gap-1 px-space-2 py-0.5 rounded bg-warning-bg text-warning-text font-label-badge text-label-badge uppercase">
+<span class="material-symbols-outlined text-[12px]">front_hand</span>
+                STOPPED
+              </span>
+</td>
+<td class="py-space-3 px-space-4">
+<div class="flex flex-col gap-1 w-28">
+<div class="flex items-center justify-between font-data-mono-md text-data-mono-md">
+<span class="font-semibold text-warning-text">3 / 7</span>
+<span class="font-label-telemetry text-label-telemetry text-text-muted">42%</span>
+</div>
+<div class="w-full bg-surface-subtle h-1 rounded-full overflow-hidden">
+<div class="bg-warning-text h-full rounded-full" style="width: 42%"></div>
+</div>
+</div>
+</td>
+<td class="py-space-3 px-space-4">
+<span class="inline-flex items-center gap-1 text-warning-text font-data-mono-md text-data-mono-md">
+<span class="material-symbols-outlined text-[14px]">warning</span>
+                Operator Abort
+              </span>
+</td>
+<td class="py-space-3 px-space-4">
+<span class="font-label-telemetry text-label-telemetry px-space-2 py-1 rounded bg-surface-subtle text-text-secondary">
+                SIM-OPERATOR-03
+              </span>
+</td>
+<td class="py-space-3 px-space-4 text-right">
+<a class="inline-flex items-center gap-1 px-space-3 py-1.5 rounded-lg bg-surface-subtle hover:bg-surface-variant text-text-primary font-headline-sm text-headline-sm transition-colors" data-path="run-results" href="#">
+<span>View Results</span>
+<span class="material-symbols-outlined text-[16px] text-text-secondary">arrow_forward</span>
+</a>
+</td>
+</tr>
+<!-- Row 6: Completed with Retries -->
+<tr class="hover:bg-surface-subtle transition-colors">
+<td class="py-space-3 px-space-4">
+<span class="font-data-mono-md text-data-mono-md font-semibold text-text-primary">#RUN-2025-0872</span>
+</td>
+<td class="py-space-3 px-space-4">
+<span class="font-data-mono-md text-data-mono-md text-text-secondary">EARTHQUAKE_DEMO_01</span>
+</td>
+<td class="py-space-3 px-space-4">
+<div class="flex items-center gap-space-2">
+<span class="material-symbols-outlined text-[16px] text-warning-text">earthquake</span>
+<span class="font-body-md text-body-md">Seismic Collapse</span>
+</div>
+</td>
+<td class="py-space-3 px-space-4">
+<div class="flex flex-col">
+<span class="font-data-mono-md text-data-mono-md">09 Oct 2025, 11:30</span>
+<span class="font-label-telemetry text-label-telemetry text-text-muted">ZONE +05:30</span>
+</div>
+</td>
+<td class="py-space-3 px-space-4">
+<span class="font-data-mono-md text-data-mono-md text-text-secondary">90m 18s</span>
+</td>
+<td class="py-space-3 px-space-4">
+<span class="inline-flex items-center gap-1 px-space-2 py-0.5 rounded bg-success-bg text-success-text font-label-badge text-label-badge uppercase">
+<span class="material-symbols-outlined text-[12px]">done_all</span>
+                COMPLETED
+              </span>
+</td>
+<td class="py-space-3 px-space-4">
+<div class="flex flex-col gap-1 w-28">
+<div class="flex items-center justify-between font-data-mono-md text-data-mono-md">
+<span class="font-semibold text-text-primary">11 / 11</span>
+<span class="font-label-telemetry text-label-telemetry text-success-text">100%</span>
+</div>
+<div class="w-full bg-surface-subtle h-1 rounded-full overflow-hidden">
+<div class="bg-success-text h-full rounded-full" style="width: 100%"></div>
+</div>
+</div>
+</td>
+<td class="py-space-3 px-space-4">
+<span class="inline-flex items-center gap-1 text-warning-text font-data-mono-md text-data-mono-md">
+<span class="material-symbols-outlined text-[14px]">replay</span>
+                2 Retries (0 Fail)
+              </span>
+</td>
+<td class="py-space-3 px-space-4">
+<span class="font-label-telemetry text-label-telemetry px-space-2 py-1 rounded bg-surface-subtle text-text-secondary">
+                SIM-OPERATOR-ROOT
+              </span>
+</td>
+<td class="py-space-3 px-space-4 text-right">
+<a class="inline-flex items-center gap-1 px-space-3 py-1.5 rounded-lg bg-surface-subtle hover:bg-surface-variant text-text-primary font-headline-sm text-headline-sm transition-colors" data-path="run-results" href="#">
+<span>View Results</span>
+<span class="material-symbols-outlined text-[16px] text-text-secondary">arrow_forward</span>
+</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Pagination & Footer -->
+<div class="px-space-5 py-space-4 bg-surface-subtle flex flex-col sm:flex-row items-center justify-between gap-space-3">
+<div class="flex items-center gap-space-3 font-body-sm text-body-sm text-text-secondary">
+<span>Showing <strong class="text-text-primary font-semibold">1-6</strong> of <strong class="text-text-primary font-semibold">24</strong> Historical Simulation Records</span>
+<span class="hidden sm:inline text-text-muted">•</span>
+<span class="hidden sm:inline font-data-mono-md text-data-mono-md">Page 1 of 4</span>
+</div>
+<div class="flex items-center gap-space-2">
+<button class="px-space-3 py-1.5 rounded-lg bg-surface-card text-text-muted font-body-sm text-body-sm opacity-50 cursor-not-allowed flex items-center gap-1" disabled="">
+<span class="material-symbols-outlined text-[16px]">chevron_left</span>
+<span>Previous</span>
+</button>
+<button class="px-space-3 py-1.5 rounded-lg bg-primary text-on-primary font-data-mono-md text-data-mono-md shadow-sm">1</button>
+<button class="px-space-3 py-1.5 rounded-lg bg-surface-card hover:bg-surface-variant text-text-primary font-data-mono-md text-data-mono-md transition-colors">2</button>
+<button class="px-space-3 py-1.5 rounded-lg bg-surface-card hover:bg-surface-variant text-text-primary font-data-mono-md text-data-mono-md transition-colors">3</button>
+<button class="px-space-3 py-1.5 rounded-lg bg-surface-card hover:bg-surface-variant text-text-primary font-data-mono-md text-data-mono-md transition-colors">4</button>
+<button class="px-space-3 py-1.5 rounded-lg bg-surface-card hover:bg-surface-variant text-text-primary font-body-sm text-body-sm flex items-center gap-1 transition-colors">
+<span>Next</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Audit Integrity & Regulatory Notice Banner -->
+<div class="rounded-xl bg-blue-soft p-space-4 flex items-start gap-space-3 relative overflow-hidden">
+<div class="w-1.5 absolute left-0 top-0 bottom-0 bg-primary"></div>
+<span class="material-symbols-outlined text-primary text-[22px] shrink-0 mt-0.5">verified_user</span>
+<div class="flex flex-col gap-1 min-w-0">
+<div class="flex items-center gap-space-2">
+<span class="font-headline-sm text-headline-sm text-text-primary">Deterministic Simulation Ledger Integrity</span>
+<span class="font-label-telemetry text-label-telemetry px-space-2 py-0.5 rounded bg-surface-card text-primary uppercase">Merkle Verified</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary leading-relaxed">
+        All historical simulation telemetry is cryptographically hashed and isolated from live government NDMA/SDMA disaster registries. Ingested scenario payloads remain restricted to sandbox environments to safeguard regional communication integrity during active drills.
+      </p>
+</div>
+</div>
+</div>
+<script>
+  // Simple interactive client-side filtering demo
+  (function() {
+    const searchInput = document.getElementById('search-input');
+    const typeFilter = document.getElementById('filter-type');
+    const statusFilter = document.getElementById('filter-status');
+    const resetBtn = document.getElementById('reset-filters');
+    const tbody = document.getElementById('runs-tbody');
+
+    if (!tbody || !searchInput) return;
+
+    const rows = Array.from(tbody.querySelectorAll('tr'));
+
+    function applyFilters() {
+      const q = (searchInput.value || '').toLowerCase().trim();
+      const typeVal = typeFilter.value;
+      const statusVal = statusFilter.value;
+
+      rows.forEach(row => {
+        const text = row.innerText.toLowerCase();
+        const matchesQuery = !q || text.includes(q);
+        const matchesType = typeVal === 'ALL' || text.includes(typeVal.toLowerCase());
+        const matchesStatus = statusVal === 'ALL' || text.includes(statusVal.toLowerCase());
+
+        if (matchesQuery && matchesType && matchesStatus) {
+          row.style.display = '';
+        } else {
+          row.style.display = 'none';
+        }
+      });
+    }
+
+    searchInput.addEventListener('input', applyFilters);
+    typeFilter.addEventListener('change', applyFilters);
+    statusFilter.addEventListener('change', applyFilters);
+
+    if (resetBtn) {
+      resetBtn.addEventListener('click', () => {
+        searchInput.value = '';
+        typeFilter.value = 'ALL';
+        statusFilter.value = 'ALL';
+        applyFilters();
+      });
+    }
+  })();
+</script></main></div></body></html>

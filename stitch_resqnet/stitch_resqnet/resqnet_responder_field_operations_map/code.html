@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"warning-bg":"#FFFBEB","on-background":"#0b1c30","surface-tint":"#0053db","surface-base":"#F8FAFC","on-tertiary-fixed":"#131b2e","surface-container":"#e5eeff","secondary-container":"#b5d0fd","error":"#ba1a1a","primary-fixed":"#dbe1ff","background":"#f8f9ff","tertiary-fixed-dim":"#bec6e0","inverse-primary":"#b4c5ff","error-container":"#ffdad6","critical-border":"#FECACA","surface-dim":"#cbdbf5","tertiary":"#4d556b","on-primary":"#ffffff","on-error":"#ffffff","tertiary-container":"#656d84","on-primary-fixed":"#00174b","on-tertiary":"#ffffff","on-secondary-container":"#3e5980","warning-text":"#D97706","on-secondary-fixed":"#001c3b","on-secondary-fixed-variant":"#2d486d","tertiary-fixed":"#dae2fd","success-text":"#16A34A","warning-border":"#FDE68A","surface":"#f8f9ff","inverse-surface":"#213145","surface-variant":"#d3e4fe","secondary-fixed":"#d5e3ff","primary-container":"#2563eb","critical-bg":"#FEF2F2","secondary-fixed-dim":"#adc8f5","surface-card":"#FFFFFF","surface-container-highest":"#d3e4fe","text-muted":"#94A3B8","on-tertiary-container":"#eef0ff","secondary":"#455f87","surface-container-lowest":"#ffffff","surface-subtle":"#F1F5F9","primary-fixed-dim":"#b4c5ff","border-default":"#E2E8F0","outline":"#737686","on-primary-container":"#eeefff","critical-text":"#DC2626","success-bg":"#F0FDF4","text-primary":"#1E293B","on-surface-variant":"#434655","success-border":"#BBF7D0","blue-soft":"#EFF6FF","on-surface":"#0b1c30","on-primary-fixed-variant":"#003ea8","on-error-container":"#93000a","surface-container-low":"#eff4ff","blue-light":"#DBEAFE","surface-container-high":"#dce9ff","on-tertiary-fixed-variant":"#3f465c","primary":"#004ac6","info-border":"#BFDBFE","text-secondary":"#64748B","surface-bright":"#f8f9ff","on-secondary":"#ffffff","outline-variant":"#c3c6d7","inverse-on-surface":"#eaf1ff"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-6":"24px","space-0":"0px","space-3":"12px","space-5":"20px","space-10":"40px","space-16":"64px","space-12":"48px","space-8":"32px","margin-mobile":"16px","gutter-expanded":"24px","margin-tablet":"24px","space-1":"4px","gutter-standard":"16px","margin-desktop":"32px","space-4":"16px","space-2":"8px","gutter-dense":"8px"},"fontFamily":{"label-telemetry":["JetBrains Mono"],"headline-xl":["Public Sans"],"body-sm":["Public Sans"],"headline-lg":["Public Sans"],"display-hud-mobile":["JetBrains Mono"],"body-md":["Public Sans"],"headline-md":["Public Sans"],"data-mono-md":["JetBrains Mono"],"headline-xl-mobile":["Public Sans"],"headline-sm":["Public Sans"],"data-mono-lg":["JetBrains Mono"],"body-lg":["Public Sans"],"display-hud":["JetBrains Mono"],"label-badge":["Public Sans"]},"fontSize":{"label-telemetry":["10px",{"lineHeight":"12px","letterSpacing":"0.08em","fontWeight":"500"}],"headline-xl":["36px",{"lineHeight":"44px","letterSpacing":"-0.025em","fontWeight":"700"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"400"}],"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"700"}],"display-hud-mobile":["32px",{"lineHeight":"36px","letterSpacing":"-0.03em","fontWeight":"700"}],"body-md":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"data-mono-md":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"500"}],"headline-xl-mobile":["26px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-sm":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"600"}],"data-mono-lg":["18px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"display-hud":["48px",{"lineHeight":"52px","letterSpacing":"-0.04em","fontWeight":"700"}],"label-badge":["11px",{"lineHeight":"14px","letterSpacing":"0.06em","fontWeight":"700"}]}}}};</script><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..900&family=Public+Sans:wght@100..900&display=swap" rel="stylesheet"/></head><body class="bg-surface-base font-body-md text-text-primary min-h-screen"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-card border-r border-border-default z-50 flex flex-col justify-between"><div class="flex flex-col flex-1 overflow-y-auto"><div class="h-16 px-space-4 border-b border-border-default flex items-center bg-surface-base"><div class="flex items-center gap-space-2"><span class="material-symbols-outlined text-primary text-[18px]">radar</span><span class="font-label-telemetry text-label-telemetry uppercase text-text-secondary tracking-wider">SCOPE: SECTOR-17/NDRF</span></div></div><div class="px-space-3 pt-space-3 pb-space-2"><span class="font-label-badge text-label-badge uppercase tracking-wider text-text-muted px-space-2">Operations Navigation</span></div><nav class="flex flex-col px-space-2 gap-space-1" data-active-classes="bg-blue-soft text-primary-container border-l-2 border-primary-container font-semibold"><a class="flex items-center justify-between px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-subtle hover:text-text-primary transition-colors" data-path="responder-dashboard" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">dashboard</span><span class="font-body-md text-body-md">Dashboard</span></div></a><a class="flex items-center justify-between px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-subtle hover:text-text-primary transition-colors" data-path="responder-missions" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">assignment_late</span><span class="font-body-md text-body-md">Missions</span></div><span class="inline-flex items-center px-space-1 py-0.5 rounded text-[10px] font-label-badge uppercase tracking-wide bg-critical-bg text-critical-text border border-critical-border font-bold">3 ACT</span></a><a class="flex items-center justify-between px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-subtle hover:text-text-primary transition-colors" data-path="responder-surveys-new" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">rate_review</span><span class="font-body-md text-body-md">Field Surveys</span></div></a><a class="flex items-center justify-between px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-subtle hover:text-text-primary transition-colors" data-path="responder-verification" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">verified</span><span class="font-body-md text-body-md">Verification</span></div></a><a aria-current="page" class="flex items-center justify-between px-space-3 py-space-2 rounded-lg transition-colors bg-blue-soft text-primary-container border-l-2 border-primary-container font-semibold" data-path="responder-map" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">map</span><span class="font-body-md text-body-md">Operations Map</span></div><span class="inline-flex items-center px-space-1 py-0.5 rounded text-[10px] font-label-badge uppercase tracking-wide bg-blue-soft text-primary-container border border-info-border font-bold">GIS LIVE</span></a><a class="flex items-center justify-between px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-subtle hover:text-text-primary transition-colors" data-path="responder-resources" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">inventory_2</span><span class="font-body-md text-body-md">Resource Req.</span></div></a><a class="flex items-center justify-between px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-subtle hover:text-text-primary transition-colors" data-path="responder-organization" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">corporate_fare</span><span class="font-body-md text-body-md">Organization</span></div></a><a class="flex items-center justify-between px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-subtle hover:text-text-primary transition-colors" data-path="responder-campaigns" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">campaign</span><span class="font-body-md text-body-md">Campaigns</span></div><span class="inline-flex items-center px-space-1 py-0.5 rounded text-[10px] font-label-badge uppercase tracking-wide bg-warning-bg text-warning-text border border-warning-border font-bold">NGO AUTH</span></a></nav></div><div class="p-space-3 border-t border-border-default bg-surface-card flex flex-col gap-space-3"><div class="flex flex-col gap-space-1"><a class="flex items-center justify-between px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-subtle hover:text-text-primary transition-colors" data-path="responder-notifications" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">notifications</span><span class="font-body-md text-body-md">Notifications</span></div><span class="h-2 w-2 rounded-full bg-critical-text"></span></a><a class="flex items-center gap-space-3 px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-subtle hover:text-text-primary transition-colors" data-path="responder-profile" href="#"><span class="material-symbols-outlined text-[18px]">account_circle</span><span class="font-body-md text-body-md">Profile</span></a></div><div class="p-space-2 bg-surface-subtle border border-border-default rounded flex flex-col gap-space-1"><div class="flex items-center justify-between"><span class="font-label-telemetry text-[10px] text-text-muted uppercase">Telemetry Link</span><span class="inline-flex items-center px-1 rounded text-[9px] font-label-badge uppercase bg-success-bg text-success-text border border-success-border">ONLINE</span></div><p class="font-label-telemetry text-[10px] text-text-primary leading-none font-semibold">MESH MIGRATION STABLE</p><div class="flex items-center justify-between pt-space-1 border-t border-border-default/60"><span class="font-data-mono-md text-[10px] text-text-secondary">SYNC: 1.2s LAT</span><span class="font-label-badge text-[9px] uppercase tracking-wider text-text-muted">LVL-1 READY</span></div></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-card border-b border-border-default z-40 px-space-4 flex items-center justify-between"><div class="flex items-center gap-space-4"><div class="flex items-center gap-space-2"><img alt="ResQnet Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UZbdxVe9zHhHzM9vo2OQSWK2Q_bht0WwW6RI8t03wEZzkIuV1AaepFB5ybGDl6J_zPVxotaiJUuUSOjEHbwRkkatzk-_NIWrS9p2mqlHILAEd1jk-VFuE7ZUuZSBGzPtgbbUnBFF7nZSVRrnhgw6TOgjgnKK07Rxsw47PItBZRM95qoxqrwjUW_mgSZP8x4JcsHxpTeE997ICMMUDA3HqRMivqR_51zVsnG1UpH15gNX5cNH3zgcPtu5Ap"/><div class="flex flex-col"><span class="font-headline-sm text-[13px] font-bold tracking-tight text-text-primary leading-tight">RESQNET v2.4</span><span class="font-label-telemetry text-[10px] text-text-secondary uppercase tracking-wider">FIELD RESPONSE CONSOLE</span></div></div><div class="hidden md:inline-flex items-center gap-space-2 px-space-2 py-1 rounded bg-success-bg border border-success-border"><span class="h-2 w-2 rounded-full bg-success-text animate-pulse"></span><span class="font-label-telemetry text-label-telemetry uppercase text-success-text font-semibold">RESPONSE NETWORK ACTIVE</span></div></div><div class="hidden lg:flex items-center gap-space-4"><div class="inline-flex items-center gap-space-2 px-space-3 py-1 rounded bg-critical-bg border border-critical-border"><span class="material-symbols-outlined text-critical-text text-[16px]">emergency</span><span class="font-label-badge text-label-badge uppercase tracking-wide text-critical-text">NATIONAL DISPATCH: 112 / 1078</span></div><div class="inline-flex items-center gap-space-2 px-space-2 py-1 rounded bg-surface-subtle border border-border-default"><span class="h-2 w-2 rounded-full bg-success-text"></span><span class="font-label-telemetry text-label-telemetry uppercase text-text-secondary font-medium">STATUS: AVAILABLE</span></div></div><div class="flex items-center gap-space-3"><div class="hidden sm:flex flex-col text-right"><span class="font-headline-sm text-body-md font-bold text-text-primary leading-tight">ARJUN MEHTA</span><span class="font-label-telemetry text-[11px] text-text-secondary leading-tight">FIELD RESPONDER • Chandigarh ERU</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 bg-surface-base w-full min-h-screen px-space-6 py-space-6"><div class="flex flex-col w-full gap-space-4">
+<!-- TOP MAP HUD BAR -->
+<div class="w-full bg-surface-card rounded-xl p-space-4 shadow-sm flex flex-col xl:flex-row items-start xl:items-center justify-between gap-space-4">
+<div class="flex flex-col gap-1 min-w-0">
+<div class="flex items-center gap-space-2">
+<span class="inline-flex items-center justify-center w-6 h-6 rounded bg-blue-soft text-primary-container">
+<span class="material-symbols-outlined text-[16px]">navigation</span>
+</span>
+<h1 class="font-headline-sm text-headline-sm text-text-primary uppercase tracking-tight">FIELD OPERATIONS MAP</h1>
+<span class="inline-flex items-center px-space-2 py-0.5 rounded text-[10px] font-label-badge uppercase tracking-wide bg-blue-soft text-primary-container font-bold">GRID LOCATED</span>
+</div>
+<p class="font-label-telemetry text-label-telemetry text-text-secondary tracking-normal">Sector 17 / 16 / 22 Tactical Grid (GNSS Fixed: 30.7398° N, 76.7827° E)</p>
+</div>
+<!-- Center status pill -->
+<div class="inline-flex items-center gap-space-2 px-space-3 py-1.5 rounded-full bg-success-bg text-success-text">
+<span class="h-2 w-2 rounded-full bg-success-text animate-pulse"></span>
+<span class="font-label-telemetry text-label-telemetry uppercase tracking-wider font-semibold">TELEMETRY LINK: ONLINE (1.2s LATENCY)</span>
+</div>
+<!-- Quick Layer Toggle Chips -->
+<div class="flex items-center flex-wrap gap-space-2">
+<button class="layer-toggle-btn active inline-flex items-center gap-1.5 px-2.5 py-1 rounded text-xs font-label-badge bg-primary-container text-on-primary shadow-sm hover:opacity-95 transition-all" data-layer="missions">
+<span class="material-symbols-outlined text-[14px]">check</span>
+<span>Missions (3)</span>
+</button>
+<button class="layer-toggle-btn active inline-flex items-center gap-1.5 px-2.5 py-1 rounded text-xs font-label-badge bg-primary-container text-on-primary shadow-sm hover:opacity-95 transition-all" data-layer="incidents">
+<span class="material-symbols-outlined text-[14px]">check</span>
+<span>Incidents (4)</span>
+</button>
+<button class="layer-toggle-btn active inline-flex items-center gap-1.5 px-2.5 py-1 rounded text-xs font-label-badge bg-primary-container text-on-primary shadow-sm hover:opacity-95 transition-all" data-layer="hazards">
+<span class="material-symbols-outlined text-[14px]">check</span>
+<span>Hazards (5)</span>
+</button>
+<button class="layer-toggle-btn active inline-flex items-center gap-1.5 px-2.5 py-1 rounded text-xs font-label-badge bg-primary-container text-on-primary shadow-sm hover:opacity-95 transition-all" data-layer="roads">
+<span class="material-symbols-outlined text-[14px]">check</span>
+<span>Roads & Corridors</span>
+</button>
+<button class="layer-toggle-btn active inline-flex items-center gap-1.5 px-2.5 py-1 rounded text-xs font-label-badge bg-primary-container text-on-primary shadow-sm hover:opacity-95 transition-all" data-layer="safety">
+<span class="material-symbols-outlined text-[14px]">check</span>
+<span>Safety Hubs (2)</span>
+</button>
+<button class="layer-toggle-btn inline-flex items-center gap-1.5 px-2.5 py-1 rounded text-xs font-label-badge bg-surface-subtle text-text-secondary hover:text-text-primary transition-all" data-layer="resources">
+<span class="material-symbols-outlined text-[14px]">add</span>
+<span>Resources</span>
+</button>
+</div>
+</div>
+<!-- MAIN OPERATIONAL VIEWPORT (Map + Docked Right Inspector) -->
+<div class="relative w-full h-[760px] rounded-xl overflow-hidden shadow-sm bg-surface-card select-none">
+<!-- VECTOR TACTICAL MAP CANVAS (Sector 17 / 16 / 22 Tactical Canvas) -->
+<div class="absolute inset-0 bg-[#F1F5F9] overflow-hidden cursor-grab active:cursor-grabbing" id="tactical-map-viewport">
+<svg class="w-full h-full min-w-[1200px] min-h-[760px]" fill="none" id="vector-map-svg" viewbox="0 0 1440 820" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<!-- Grid Pattern -->
+<pattern height="60" id="tacticalGrid" patternunits="userSpaceOnUse" width="60">
+<path d="M 60 0 L 0 0 0 60" fill="none" stroke="#E2E8F0" stroke-dasharray="2 4" stroke-width="0.8"></path>
+</pattern>
+<!-- Waterlogged Cross-Hatch Hazard -->
+<pattern height="8" id="hazardHatch" patterntransform="rotate(45 0 0)" patternunits="userSpaceOnUse" width="8">
+<line stroke="#DC2626" stroke-width="2.5" x1="0" x2="0" y1="0" y2="8"></line>
+</pattern>
+<!-- Subtle sector fill -->
+<lineargradient id="sectorGradient" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#F8FAFC"></stop>
+<stop offset="100%" stop-color="#E2E8F0" stop-opacity="0.4"></stop>
+</lineargradient>
+<!-- Route Chevron Marker -->
+<marker id="routeChevron" markerheight="6" markerwidth="6" orient="auto" refx="3" refy="3">
+<path d="M 1 1 L 4 3 L 1 5" fill="none" stroke="#004AC6" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+</marker>
+</defs>
+<!-- Base Background & Tactical Grid -->
+<rect fill="#F8FAFC" height="820" width="1440"></rect>
+<rect fill="url(#tacticalGrid)" height="820" width="1440"></rect>
+<!-- Urban Sector Polygons (Sectors 16, 17, 22, 23) -->
+<g class="opacity-75" id="sector-blocks">
+<!-- Sector 16 Park & Residential -->
+<polygon fill="#EFF6FF" opacity="0.45" points="120,70 480,70 440,320 120,320"></polygon>
+<text class="font-label-telemetry text-[11px] fill-text-muted font-bold tracking-wider" x="140" y="100">SECTOR 16 (HOSPITAL & GREENS)</text>
+<!-- Sector 17 Commercial Plaza (Main Action Sector) -->
+<polygon fill="#E2E8F0" opacity="0.4" points="520,70 980,70 940,430 500,360"></polygon>
+<text class="font-label-telemetry text-[11px] fill-text-muted font-bold tracking-wider" x="540" y="100">SECTOR 17 (CIVIC & COMMERCIAL CORE)</text>
+<!-- Sector 22 Residential / Market -->
+<polygon fill="#F1F5F9" opacity="0.6" points="120,380 440,380 410,720 120,720"></polygon>
+<text class="font-label-telemetry text-[11px] fill-text-muted font-bold tracking-wider" x="140" y="415">SECTOR 22-A / SUB-DISTRICT</text>
+<!-- Sector 23 Support Area -->
+<polygon fill="#EFF6FF" opacity="0.3" points="500,430 940,460 920,730 480,730"></polygon>
+<text class="font-label-telemetry text-[11px] fill-text-muted font-bold tracking-wider" x="520" y="475">SECTOR 22-B / COMMERCE</text>
+</g>
+<!-- Major Road Network (Base Neutral Arterials) -->
+<g id="road-network-base">
+<!-- Madhya Marg (East-West Major Arterial) -->
+<path d="M 0,60 L 1440,60" stroke="#CBD5E1" stroke-linecap="square" stroke-width="26"></path>
+<path d="M 0,60 L 1440,60" stroke="#FFFFFF" stroke-linecap="square" stroke-width="22"></path>
+<text class="font-label-telemetry text-[9px] fill-text-secondary font-bold tracking-wider" x="70" y="64">MADHYA MARG ARTERIAL</text>
+<!-- Udyog Path (East-West Mid Corridor) -->
+<path d="M 0,350 L 1440,350" stroke="#CBD5E1" stroke-width="20"></path>
+<path d="M 0,350 L 1440,350" stroke="#FFFFFF" stroke-width="16"></path>
+<text class="font-label-telemetry text-[9px] fill-text-secondary font-bold tracking-wider" x="70" y="354">UDYOG PATH</text>
+<!-- Dakshin Marg (East-West South Arterial) -->
+<path d="M 0,740 L 1440,740" stroke="#CBD5E1" stroke-width="22"></path>
+<path d="M 0,740 L 1440,740" stroke="#FFFFFF" stroke-width="18"></path>
+<text class="font-label-telemetry text-[9px] fill-text-secondary font-bold tracking-wider" x="70" y="744">DAKSHIN MARG</text>
+<!-- Jan Marg (North-South Boulevard West) -->
+<path d="M 470,0 L 470,820" stroke="#CBD5E1" stroke-width="24"></path>
+<path d="M 470,0 L 470,820" stroke="#FFFFFF" stroke-width="20"></path>
+<text class="font-label-telemetry text-[9px] fill-text-secondary font-bold tracking-wider" transform="rotate(90 478 240)" x="478" y="240">JAN MARG</text>
+<!-- Himalaya Marg (North-South Arterial Center) -->
+<path d="M 960,0 L 960,820" stroke="#CBD5E1" stroke-width="24"></path>
+<path d="M 960,0 L 960,820" stroke="#FFFFFF" stroke-width="20"></path>
+<text class="font-label-telemetry text-[9px] fill-text-secondary font-bold tracking-wider" transform="rotate(90 968 240)" x="968" y="240">HIMALAYA MARG</text>
+<!-- Secondary Plaza Connectors -->
+<path d="M 470,180 L 960,180" stroke="#FFFFFF" stroke-width="12"></path>
+<path d="M 720,60 L 720,350" stroke="#FFFFFF" stroke-width="14"></path>
+<path d="M 620,180 L 620,350" stroke="#FFFFFF" stroke-width="10"></path>
+<path d="M 820,180 L 820,350" stroke="#FFFFFF" stroke-width="10"></path>
+</g>
+<!-- SPECIAL ROAD CONDITION OVERLAYS -->
+<g id="layer-road-conditions">
+<!-- 1. Madhya Marg Underpass Hazard: Red Cross-Hatch "BLOCKED (1.2m Waterlogging)" -->
+<g id="hazard-underpass">
+<rect fill="url(#hazardHatch)" height="26" rx="3" stroke="#DC2626" stroke-width="2" width="220" x="700" y="47"></rect>
+<rect class="shadow-sm" fill="#DC2626" height="22" rx="3" width="180" x="730" y="16"></rect>
+<text class="font-label-badge text-[10px] fill-white font-bold tracking-wider" text-anchor="middle" x="820" y="31">BLOCKED: 1.2M WATERLOGGED</text>
+<!-- Warning indicator line -->
+<line stroke="#DC2626" stroke-dasharray="2 2" stroke-width="2" x1="820" x2="820" y1="38" y2="47"></line>
+</g>
+<!-- 2. Jan Marg Gate 3: Amber Dashed Corridor "CAUTION / PARTIAL BLOCKED" -->
+<g id="hazard-jan-marg-gate">
+<path d="M 470,220 L 470,330" opacity="0.85" stroke="#D97706" stroke-dasharray="8 6" stroke-width="12"></path>
+<!-- Callout Tag -->
+<g transform="translate(320, 260)">
+<rect fill="#FFFBEB" height="24" rx="4" stroke="#FDE68A" stroke-width="1" width="138"></rect>
+<text class="font-label-badge text-[10px] fill-warning-text font-bold" text-anchor="middle" x="69" y="16">CAUTION: PARTIAL DEBRIS</text>
+<line stroke="#D97706" stroke-dasharray="2 2" stroke-width="1.5" x1="138" x2="162" y1="12" y2="12"></line>
+</g>
+</g>
+<!-- 3. Himalaya Marg South: Solid Green "VERIFIED CLEAR EVACUATION CORRIDOR" -->
+<g id="corridor-himalaya">
+<path d="M 960,180 L 960,680" opacity="0.35" stroke="#16A34A" stroke-width="8"></path>
+<path d="M 960,280 L 960,540" stroke="#16A34A" stroke-dasharray="14 10" stroke-width="6"></path>
+<!-- Clear Corridor Badge -->
+<g transform="translate(976, 480)">
+<rect fill="#F0FDF4" height="26" rx="4" stroke="#BBF7D0" stroke-width="1.5" width="200"></rect>
+<circle cx="14" cy="13" fill="#16A34A" r="4"></circle>
+<text class="font-label-badge text-[10px] fill-success-text font-bold" x="26" y="17">VERIFIED CLEAR EVAC CORRIDOR</text>
+</g>
+</g>
+</g>
+<!-- ACTIVE MISSION ROUTE (Bright Green/Blue Path with Chevrons) -->
+<g id="active-route-layer">
+<!-- Outer glowing corridor -->
+<path d="M 470,480 L 620,480 L 620,350 L 740,350 L 740,240 L 790,240" fill="none" opacity="0.2" stroke="#2563EB" stroke-linecap="round" stroke-linejoin="round" stroke-width="10"></path>
+<!-- Core Route Path -->
+<path d="M 470,480 L 620,480 L 620,350 L 740,350 L 740,240 L 790,240" fill="none" stroke="#2563EB" stroke-linecap="round" stroke-linejoin="round" stroke-width="4.5"></path>
+<!-- Directional animated chevrons overlay -->
+<path d="M 470,480 L 620,480 L 620,350 L 740,350 L 740,240 L 790,240" fill="none" stroke="#FFFFFF" stroke-dasharray="8 16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+<animate attributename="stroke-dashoffset" dur="1.8s" from="48" repeatcount="indefinite" to="0"></animate>
+</path>
+</g>
+<!-- SAFETY HUBS LAYER -->
+<g id="layer-safety-hubs">
+<!-- Sector 16 Sports Complex Pin -->
+<g class="cursor-pointer group" transform="translate(340, 160)">
+<circle cx="0" cy="0" fill="#F0FDF4" r="22" stroke="#BBF7D0" stroke-width="2"></circle>
+<circle cx="0" cy="0" fill="#16A34A" r="14"></circle>
+<!-- Shield Vector Icon -->
+<path d="M-5,-4 L5,-4 L5,0 C5,4 0,7 0,7 C0,7 -5,4 -5,0 Z" fill="#FFFFFF"></path>
+<!-- Pin Card Tag -->
+<g transform="translate(26, -26)">
+<rect fill="#FFFFFF" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.06))" height="48" rx="6" stroke="#BBF7D0" stroke-width="1.5" width="250"></rect>
+<text class="font-headline-sm text-[12px] fill-text-primary font-bold" x="12" y="20">Sector 16 Sports Complex</text>
+<text class="font-label-telemetry text-[10px] fill-success-text font-semibold" x="12" y="36">62% OCCUPANCY • 310/500 BEDS ACTIVE</text>
+</g>
+</g>
+<!-- Secondary Hub (Sector 22 Community Relief Center) -->
+<g class="cursor-pointer" transform="translate(280, 560)">
+<circle cx="0" cy="0" fill="#F0FDF4" r="18" stroke="#BBF7D0" stroke-width="1.5"></circle>
+<circle cx="0" cy="0" fill="#16A34A" r="10"></circle>
+<path d="M-3,-3 L3,-3 L3,0 C3,3 0,5 0,5 C0,5 -3,3 -3,0 Z" fill="#FFFFFF"></path>
+<g transform="translate(22, -18)">
+<rect fill="#FFFFFF" height="34" rx="4" stroke="#E2E8F0" stroke-width="1" width="190"></rect>
+<text class="font-headline-sm text-[11px] fill-text-primary font-bold" x="10" y="15">Sec-22 Community Clinic</text>
+<text class="font-label-telemetry text-[9px] fill-text-secondary" x="10" y="27">PRIMARY TRIAGE • STABLE</text>
+</g>
+</g>
+</g>
+<!-- NEARBY INCIDENTS LAYER -->
+<g id="layer-incidents">
+<!-- #INC-2039: General Hospital Gate 2 -->
+<g class="cursor-pointer" transform="translate(380, 100)">
+<circle cx="0" cy="0" fill="#FFFBEB" r="15" stroke="#FDE68A" stroke-width="2"></circle>
+<circle cx="0" cy="0" fill="#D97706" r="8"></circle>
+<!-- Amber Exclamation Glyph -->
+<rect fill="#FFFFFF" height="5" width="2" x="-1" y="-4"></rect>
+<circle cx="0" cy="3" fill="#FFFFFF" r="1"></circle>
+<!-- Tooltip -->
+<g transform="translate(18, -14)">
+<rect fill="#FFFFFF" height="28" rx="4" stroke="#FDE68A" stroke-width="1" width="184"></rect>
+<text class="font-headline-sm text-[10px] fill-text-primary font-bold" x="8" y="13">#INC-2039: Hospital Gate 2</text>
+<text class="font-label-telemetry text-[9px] fill-warning-text font-semibold" x="8" y="23">ACCESS OBSTRUCTION • 800M</text>
+</g>
+</g>
+<!-- #INC-2027: Jan Marg 3 (Sub-Station Water Triage) -->
+<g class="cursor-pointer" transform="translate(470, 620)">
+<circle cx="0" cy="0" fill="#FFFBEB" r="15" stroke="#FDE68A" stroke-width="2"></circle>
+<circle cx="0" cy="0" fill="#D97706" r="8"></circle>
+<rect fill="#FFFFFF" height="5" width="2" x="-1" y="-4"></rect>
+<circle cx="0" cy="3" fill="#FFFFFF" r="1"></circle>
+<!-- Tooltip -->
+<g transform="translate(18, -14)">
+<rect fill="#FFFFFF" height="28" rx="4" stroke="#FDE68A" stroke-width="1" width="176"></rect>
+<text class="font-headline-sm text-[10px] fill-text-primary font-bold" x="8" y="13">#INC-2027: Jan Marg Gate 3</text>
+<text class="font-label-telemetry text-[9px] fill-warning-text font-semibold" x="8" y="23">GRID POWER DOWN • STAGED</text>
+</g>
+</g>
+<!-- Extra Staged Incident: #INC-2041 (Sector 22 Market) -->
+<g class="cursor-pointer" transform="translate(340, 470)">
+<circle cx="0" cy="0" fill="#FFFBEB" r="13" stroke="#FDE68A" stroke-width="1.5"></circle>
+<circle cx="0" cy="0" fill="#D97706" r="6"></circle>
+<g transform="translate(-160, -10)">
+<rect fill="#FFFFFF" height="24" rx="4" stroke="#E2E8F0" stroke-width="1" width="150"></rect>
+<text class="font-label-badge text-[9px] fill-text-secondary font-bold" x="8" y="16">#INC-2041: Market Standby</text>
+</g>
+</g>
+</g>
+<!-- ACTIVE MISSION TARGET PIN: #INC-2048 (Sector 17 Plaza Block C) -->
+<g class="cursor-pointer" id="active-target-pin" transform="translate(790, 240)">
+<!-- Pulsing Rings -->
+<circle cx="0" cy="0" fill="#DC2626" opacity="0.15" r="32">
+<animate attributename="r" dur="2s" repeatcount="indefinite" values="18;34;18"></animate>
+<animate attributename="opacity" dur="2s" repeatcount="indefinite" values="0.25;0.05;0.25"></animate>
+</circle>
+<circle cx="0" cy="0" fill="#FEF2F2" r="18" stroke="#FECACA" stroke-width="2"></circle>
+<circle cx="0" cy="0" fill="#DC2626" r="10"></circle>
+<!-- Crosshair graphic -->
+<circle cx="0" cy="0" fill="#FFFFFF" r="3"></circle>
+<!-- Prominent Beacon Flag -->
+<g transform="translate(18, -48)">
+<rect fill="#FFFFFF" filter="drop-shadow(0 4px 6px rgba(220,38,38,0.15))" height="52" rx="6" stroke="#FECACA" stroke-width="2" width="260"></rect>
+<rect fill="#DC2626" height="52" rx="2" width="4" x="0" y="0"></rect>
+</g></g></svg><div class="p-2">
+<text class="font-headline-sm text-[12px] fill-critical-text font-bold" x="14" y="20">#INC-2048: Sector 17 Plaza Block C</text>
+<text class="font-label-telemetry text-[10px] fill-text-primary font-semibold" x="14" y="38">URGENT • STRUCTURAL HAZARD ASSESSMENT</text>
+</div>
+<!-- RESPONDER CURRENT LOCATION (YOU) -->
+<!-- Arjun Mehta ERU-Delta-2 on Jan Marg East -->
+<g class="cursor-pointer" id="responder-marker" transform="translate(470, 480)">
+<!-- Live pulse circle -->
+<circle cx="0" cy="0" fill="#2563EB" opacity="0.12" r="38">
+<animate attributename="r" dur="2.4s" repeatcount="indefinite" values="20;42;20"></animate>
+<animate attributename="opacity" dur="2.4s" repeatcount="indefinite" values="0.2;0.02;0.2"></animate>
+</circle>
+<circle cx="0" cy="0" fill="#EFF6FF" r="16" stroke="#BFDBFE" stroke-width="2"></circle>
+<circle cx="0" cy="0" fill="#2563EB" r="10"></circle>
+<!-- Direction heading vector pointer -->
+<polygon fill="#FFFFFF" points="0,-12 6,4 0,1 -6,4" transform="rotate(45)"></polygon>
+<!-- Label banner -->
+<g transform="translate(-180, 24)">
+<rect fill="#1E293B" filter="drop-shadow(0 4px 6px rgba(0,0,0,0.2))" height="38" rx="6" width="240"></rect>
+<circle cx="16" cy="19" fill="#22C55E" r="4"></circle>
+<text class="font-label-badge text-[11px] fill-white font-bold tracking-wide" x="28" y="17">YOU: ARJUN MEHTA (ERU-DELTA-2)</text>
+<text class="font-label-telemetry text-[9px] fill-slate-300" x="28" y="30">Jan Marg East Corridor • Heading NE (042°)</text>
+</g>
+</g>
+</div>
+<!-- FLOATING MAP CONTROLS (Bottom-Left of Map Canvas) -->
+<div class="absolute bottom-6 left-6 z-20 flex flex-col gap-space-2">
+<!-- Compass / North Needle -->
+<div class="w-10 h-10 rounded-lg bg-surface-card border border-border-default shadow-md flex items-center justify-center text-text-primary hover:bg-surface-subtle transition-colors cursor-pointer" title="North Align">
+<div class="flex flex-col items-center justify-center">
+<span class="font-label-badge text-[10px] font-bold text-critical-text leading-none">N</span>
+<span class="material-symbols-outlined text-[16px] text-critical-text leading-none">navigation</span>
+</div>
+</div>
+<!-- Zoom and Center Dock -->
+<div class="flex flex-col bg-surface-card border border-border-default rounded-lg shadow-md overflow-hidden">
+<button class="w-10 h-9 flex items-center justify-center text-text-secondary hover:text-text-primary hover:bg-surface-subtle transition-colors" id="zoom-in" title="Zoom In">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+<div class="w-full h-[1px] bg-border-default"></div>
+<button class="w-10 h-9 flex items-center justify-center text-text-secondary hover:text-text-primary hover:bg-surface-subtle transition-colors" id="zoom-out" title="Zoom Out">
+<span class="material-symbols-outlined text-[18px]">remove</span>
+</button>
+<div class="w-full h-[1px] bg-border-default"></div>
+<button class="w-10 h-9 flex items-center justify-center text-primary hover:bg-blue-soft transition-colors" id="recenter-btn" title="Center on My Position">
+<span class="material-symbols-outlined text-[18px]">my_location</span>
+</button>
+</div>
+<!-- Tactical Scale Bar -->
+<div class="px-2.5 py-1.5 rounded bg-surface-card/95 backdrop-blur border border-border-default shadow-sm flex flex-col items-start gap-0.5">
+<span class="font-label-telemetry text-[9px] text-text-muted leading-none">SCALE 1:5,000</span>
+<div class="flex items-center gap-1 w-20">
+<div class="h-1.5 w-full bg-slate-700 flex">
+<div class="w-1/2 h-full bg-slate-300"></div>
+</div>
+<span class="font-label-telemetry text-[9px] text-text-secondary font-bold">200m</span>
+</div>
+</div>
+</div>
+<!-- FLOATING TACTICAL INSPECTOR FLYOUT (Docked on Right Side, width ~360px) -->
+<aside class="absolute top-4 right-4 bottom-4 w-[360px] z-20 flex flex-col bg-surface-card rounded-xl border border-border-default shadow-xl overflow-hidden">
+<!-- Card Header -->
+<div class="p-space-4 border-b border-border-default bg-surface-base flex items-center justify-between">
+<div class="flex items-center gap-space-2">
+<span class="w-2.5 h-2.5 rounded-full bg-critical-text animate-ping"></span>
+<span class="font-label-badge text-label-badge uppercase tracking-wider text-critical-text font-bold">ACTIVE TARGET: MISSION-2048</span>
+</div>
+<span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-label-badge uppercase bg-critical-bg text-critical-text border border-critical-border font-bold">
+          PRIORITY 1
+        </span>
+</div>
+<!-- Card Body Content -->
+<div class="flex-1 overflow-y-auto p-space-4 flex flex-col gap-space-4">
+<!-- Metrics Grid: Distance & ETA -->
+<div class="grid grid-cols-2 gap-space-2">
+<div class="p-space-3 bg-surface-subtle border border-border-default rounded-lg flex flex-col">
+<span class="font-label-telemetry text-label-telemetry text-text-secondary uppercase">DISTANCE</span>
+<span class="font-data-mono-lg text-data-mono-lg font-bold text-text-primary">420 m</span>
+<span class="font-label-telemetry text-[10px] text-success-text">VIA HIMALAYA S</span>
+</div>
+<div class="p-space-3 bg-surface-subtle border border-border-default rounded-lg flex flex-col">
+<span class="font-label-telemetry text-label-telemetry text-text-secondary uppercase">EST. TIME</span>
+<span class="font-data-mono-lg text-data-mono-lg font-bold text-text-primary">03 MIN</span>
+<span class="font-label-telemetry text-[10px] text-text-secondary">FOOT / LIGHT RIG</span>
+</div>
+</div>
+<!-- Target Location Specification -->
+<div class="flex flex-col gap-1 p-space-3 bg-blue-soft border border-info-border rounded-lg">
+<div class="flex items-center gap-1.5 text-primary-container">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+<span class="font-label-badge text-[11px] uppercase tracking-wider font-bold">TARGET LOCATION</span>
+</div>
+<h2 class="font-headline-sm text-[14px] font-bold text-text-primary leading-tight">Sector 17 Plaza, Block C</h2>
+<p class="font-body-sm text-body-sm text-text-secondary">Commercial Arcade • North Colonnade Floor 1-2 • Structural crack observation needed</p>
+</div>
+<!-- Obstacle Warning Notice (CAP Aligned Left Accent) -->
+<div class="p-space-3 bg-critical-bg border-l-4 border-critical-text rounded-r-lg flex flex-col gap-1">
+<div class="flex items-center gap-1.5 text-critical-text">
+<span class="material-symbols-outlined text-[16px]">warning</span>
+<span class="font-label-badge text-[11px] uppercase tracking-wider font-bold">OBSTACLE WARNING</span>
+</div>
+<p class="font-body-sm text-body-sm text-critical-text font-medium leading-snug">
+            Madhya Marg underpass is <span class="font-bold underline">fully blocked</span> (1.2m waterlogging). Active detour routing via Udyog Path is enforced.
+          </p>
+</div>
+<!-- Safety Hub Proximity Card -->
+<div class="p-space-3 bg-success-bg border border-success-border rounded-lg flex items-start justify-between gap-space-2">
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-1 text-success-text">
+<span class="material-symbols-outlined text-[15px]">verified_user</span>
+<span class="font-label-badge text-[10px] uppercase font-bold tracking-wider">NEAREST SAFE RETREAT</span>
+</div>
+<span class="font-headline-sm text-[13px] font-bold text-text-primary">Sector 16 Sports Complex</span>
+<span class="font-label-telemetry text-[10px] text-text-secondary">800m West • Field Medical & Bedding Staged</span>
+</div>
+<span class="px-2 py-1 rounded bg-white font-label-badge text-[10px] font-bold text-success-text border border-success-border">
+            ACTIVE
+          </span>
+</div>
+<!-- Situational Notes -->
+<div class="flex flex-col gap-1 text-text-secondary border-t border-border-default pt-space-3">
+<span class="font-label-badge text-[10px] uppercase tracking-wider text-text-muted">Field Dispatch SITREP</span>
+<p class="font-body-sm text-body-sm">
+            Surveyor unit Delta-1 reported compromised masonry on parapet. Deploy sensory probes and log verification report via console upon arrival.
+          </p>
+</div>
+</div>
+<!-- Tactical Controls Dock -->
+<div class="p-space-4 border-t border-border-default bg-surface-card flex flex-col gap-space-2">
+<!-- Button 1: Solid Blue "NAVIGATE TO TARGET" -->
+<button class="w-full h-10 bg-primary-container hover:bg-primary text-on-primary rounded-lg font-headline-sm text-body-md flex items-center justify-center gap-space-2 shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-primary-container focus:ring-offset-2">
+<span class="material-symbols-outlined text-[18px]">turn_right</span>
+<span>NAVIGATE TO TARGET</span>
+</button>
+<!-- Button 2: Neutral Outlined "SWITCH TO MISSION-2039" -->
+<button class="w-full h-9 bg-surface-card hover:bg-surface-subtle text-text-primary border border-border-default rounded-lg font-headline-sm text-[13px] flex items-center justify-center gap-space-2 transition-colors">
+<span class="material-symbols-outlined text-[16px] text-text-secondary">swap_horiz</span>
+<span>SWITCH TO MISSION-2039</span>
+</button>
+<!-- Button 3: Report Road Hazard (Caution Outlined) -->
+<button class="w-full h-9 bg-surface-card hover:bg-warning-bg text-warning-text border border-warning-border rounded-lg font-headline-sm text-[13px] flex items-center justify-center gap-space-2 transition-colors">
+<span class="material-symbols-outlined text-[16px]">report_problem</span>
+<span>REPORT ROAD HAZARD</span>
+</button>
+</div>
+</aside>
+</div>
+<!-- BOTTOM TELEMETRY DOCK: Route Waypoints & Evacuation Corridor Integrity -->
+<div class="w-full grid grid-cols-1 md:grid-cols-3 gap-space-4">
+<!-- Card 1: Active Turn-by-Turn Leg -->
+<div class="bg-surface-card border border-border-default rounded-xl p-space-4 flex items-center gap-space-3">
+<div class="w-10 h-10 rounded-lg bg-blue-soft flex items-center justify-center text-primary-container shrink-0">
+<span class="material-symbols-outlined text-[20px]">u_turn_left</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-telemetry text-label-telemetry uppercase text-text-secondary">NEXT NAVIGATION ACTION</span>
+<span class="font-headline-sm text-body-md font-bold text-text-primary truncate">In 180m, Turn Right onto Udyog Path</span>
+<span class="font-label-telemetry text-[10px] text-success-text">BYPASSING WATERLOG POINT</span>
+</div>
+</div>
+<!-- Card 2: Field Sensor Environmental Status -->
+<div class="bg-surface-card border border-border-default rounded-xl p-space-4 flex items-center gap-space-3">
+<div class="w-10 h-10 rounded-lg bg-surface-subtle flex items-center justify-center text-text-secondary shrink-0">
+<span class="material-symbols-outlined text-[20px]">air</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-telemetry text-label-telemetry uppercase text-text-secondary">SECTOR-17 MICRO-CLIMATE</span>
+<span class="font-headline-sm text-body-md font-bold text-text-primary truncate">Wind: 14 km/h NE • Rain: 3.2 mm/hr</span>
+<span class="font-label-telemetry text-[10px] text-text-muted">CONDITIONS STABLE FOR DEPLOYMENT</span>
+</div>
+</div>
+<!-- Card 3: Evacuation Corridor Security State -->
+<div class="bg-surface-card border border-border-default rounded-xl p-space-4 flex items-center justify-between gap-space-3">
+<div class="flex items-center gap-space-3 min-w-0">
+<div class="w-10 h-10 rounded-lg bg-success-bg flex items-center justify-center text-success-text shrink-0">
+<span class="material-symbols-outlined text-[20px]">shield</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-telemetry text-label-telemetry uppercase text-text-secondary">EVACUATION CORRIDOR</span>
+<span class="font-headline-sm text-body-md font-bold text-text-primary truncate">Himalaya Marg South</span>
+<span class="font-label-telemetry text-[10px] text-success-text font-bold">100% CLEARWAY VERIFIED</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-text-muted text-[18px]">check_circle</span>
+</div>
+</div>
+</div>
+<!-- Micro-Interactions Script for Quick Layer Toggles and Map Controls -->
+<script>
+  (function() {
+    // Quick Layer Filter Chip Toggling
+    const layerButtons = document.querySelectorAll('.layer-toggle-btn');
+    layerButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const isCurrentlyActive = btn.classList.contains('active');
+        const layerType = btn.getAttribute('data-layer');
+        const targetElement = document.getElementById(
+          layerType === 'missions' ? 'active-target-pin' :
+          layerType === 'incidents' ? 'layer-incidents' :
+          layerType === 'hazards' ? 'layer-road-conditions' :
+          layerType === 'roads' ? 'road-network-base' :
+          layerType === 'safety' ? 'layer-safety-hubs' : null
+        );
+
+        if (isCurrentlyActive) {
+          btn.classList.remove('active', 'bg-primary-container', 'text-on-primary');
+          btn.classList.add('bg-surface-subtle', 'text-text-secondary');
+          const icon = btn.querySelector('.material-symbols-outlined');
+          if (icon) icon.textContent = 'add';
+          if (targetElement) targetElement.style.display = 'none';
+        } else {
+          btn.classList.add('active', 'bg-primary-container', 'text-on-primary');
+          btn.classList.remove('bg-surface-subtle', 'text-text-secondary');
+          const icon = btn.querySelector('.material-symbols-outlined');
+          if (icon) icon.textContent = 'check';
+          if (targetElement) targetElement.style.display = '';
+        }
+      });
+    });
+
+    // Zoom and Recenter Micro-interactions
+    const svgMap = document.getElementById('vector-map-svg');
+    const recenterBtn = document.getElementById('recenter-btn');
+    const zoomInBtn = document.getElementById('zoom-in');
+    const zoomOutBtn = document.getElementById('zoom-out');
+
+    let currentScale = 1;
+
+    if (zoomInBtn && svgMap) {
+      zoomInBtn.addEventListener('click', () => {
+        currentScale = Math.min(currentScale + 0.15, 1.8);
+        svgMap.style.transform = `scale(${currentScale})`;
+        svgMap.style.transformOrigin = '470px 480px';
+        svgMap.style.transition = 'transform 0.25s ease-out';
+      });
+    }
+
+    if (zoomOutBtn && svgMap) {
+      zoomOutBtn.addEventListener('click', () => {
+        currentScale = Math.max(currentScale - 0.15, 0.85);
+        svgMap.style.transform = `scale(${currentScale})`;
+        svgMap.style.transformOrigin = '470px 480px';
+        svgMap.style.transition = 'transform 0.25s ease-out';
+      });
+    }
+
+    if (recenterBtn && svgMap) {
+      recenterBtn.addEventListener('click', () => {
+        currentScale = 1.1;
+        svgMap.style.transform = `scale(${currentScale})`;
+        svgMap.style.transformOrigin = '470px 480px';
+        svgMap.style.transition = 'transform 0.3s cubic-bezier(0.16, 1, 0.3, 1)';
+      });
+    }
+  })();
+</script></main></div></body></html>

@@ -1,0 +1,543 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { 'colors': { 'surface-variant': '#d3e4fe', 'surface-dim': '#cbdbf5', 'primary-fixed-dim': '#bec6e0', 'on-primary-fixed-variant': '#3f465c', 'surface-container-highest': '#d3e4fe', 'on-tertiary-container': '#f63a35', 'inverse-on-surface': '#eaf1ff', 'secondary': '#006398', 'error': '#ba1a1a', 'on-primary': '#ffffff', 'background': '#f8f9ff', 'secondary-fixed-dim': '#93ccff', 'on-surface': '#0b1c30', 'secondary-container': '#5bb8fe', 'tertiary': '#000000', 'on-primary-container': '#7c839b', 'on-tertiary-fixed': '#410002', 'inverse-primary': '#bec6e0', 'error-container': '#ffdad6', 'primary-container': '#131b2e', 'tertiary-fixed-dim': '#ffb4ab', 'surface-tint': '#565e74', 'on-surface-variant': '#45464d', 'tertiary-container': '#410002', 'on-tertiary': '#ffffff', 'on-secondary-fixed-variant': '#004b73', 'on-error': '#ffffff', 'surface': '#f8f9ff', 'surface-container-high': '#dce9ff', 'on-background': '#0b1c30', 'primary': '#000000', 'tertiary-fixed': '#ffdad6', 'on-tertiary-fixed-variant': '#93000b', 'on-error-container': '#93000a', 'on-primary-fixed': '#131b2e', 'outline-variant': '#c6c6cd', 'on-secondary-container': '#00476e', 'outline': '#76777d', 'on-secondary-fixed': '#001d31', 'surface-container-low': '#eff4ff', 'on-secondary': '#ffffff', 'secondary-fixed': '#cce5ff', 'surface-container-lowest': '#ffffff', 'primary-fixed': '#dae2fd', 'surface-container': '#e5eeff', 'inverse-surface': '#213145', 'surface-bright': '#f8f9ff' }, 'borderRadius': { 'DEFAULT': '0.125rem', 'lg': '0.25rem', 'xl': '0.5rem', 'full': '0.75rem' }, 'spacing': { 'gutter-dense': '8px', 'margin-mobile': '16px', 'space-6': '24px', 'space-3': '12px', 'space-16': '64px', 'space-10': '40px', 'space-2': '8px', 'space-0': '0px', 'gutter-expanded': '24px', 'space-12': '48px', 'space-5': '20px', 'gutter-standard': '16px', 'margin-desktop': '32px', 'space-1': '4px', 'space-8': '32px', 'margin-tablet': '24px', 'space-4': '16px' }, 'fontFamily': { 'headline-xl': ['Public Sans'], 'label-telemetry': ['JetBrains Mono'], 'headline-lg': ['Public Sans'], 'body-lg': ['Public Sans'], 'label-badge': ['Public Sans'], 'headline-md': ['Public Sans'], 'display-hud': ['JetBrains Mono'], 'data-mono-lg': ['JetBrains Mono'], 'data-mono-md': ['JetBrains Mono'], 'body-sm': ['Public Sans'], 'headline-xl-mobile': ['Public Sans'], 'headline-sm': ['Public Sans'], 'display-hud-mobile': ['JetBrains Mono'], 'body-md': ['Public Sans'] }, 'fontSize': { 'headline-xl': ['36px', { 'lineHeight': '44px', 'letterSpacing': '-0.025em', 'fontWeight': '700' }], 'label-telemetry': ['10px', { 'lineHeight': '12px', 'letterSpacing': '0.08em', 'fontWeight': '500' }], 'headline-lg': ['28px', { 'lineHeight': '36px', 'letterSpacing': '-0.02em', 'fontWeight': '700' }], 'body-lg': ['16px', { 'lineHeight': '24px', 'letterSpacing': '0em', 'fontWeight': '400' }], 'label-badge': ['11px', { 'lineHeight': '14px', 'letterSpacing': '0.06em', 'fontWeight': '700' }], 'headline-md': ['20px', { 'lineHeight': '28px', 'letterSpacing': '-0.01em', 'fontWeight': '600' }], 'display-hud': ['48px', { 'lineHeight': '52px', 'letterSpacing': '-0.04em', 'fontWeight': '700' }], 'data-mono-lg': ['18px', { 'lineHeight': '24px', 'letterSpacing': '-0.01em', 'fontWeight': '600' }], 'data-mono-md': ['13px', { 'lineHeight': '18px', 'letterSpacing': '0em', 'fontWeight': '500' }], 'body-sm': ['12px', { 'lineHeight': '16px', 'letterSpacing': '0.01em', 'fontWeight': '400' }], 'headline-xl-mobile': ['26px', { 'lineHeight': '32px', 'letterSpacing': '-0.02em', 'fontWeight': '700' }], 'headline-sm': ['16px', { 'lineHeight': '24px', 'letterSpacing': '0em', 'fontWeight': '600' }], 'display-hud-mobile': ['32px', { 'lineHeight': '36px', 'letterSpacing': '-0.03em', 'fontWeight': '700' }], 'body-md': ['14px', { 'lineHeight': '20px', 'letterSpacing': '0em', 'fontWeight': '400' }] } } } };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface min-h-screen"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest border-b border-surface-container"><div class="h-16 w-full px-gutter-expanded flex items-center justify-between gap-space-4"><div class="flex items-center gap-space-3"><a class="flex items-center justify-center p-space-2 rounded bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="citizen-dashboard" href="#" title="Back to Dashboard"><span class="material-symbols-outlined text-[20px]">arrow_back</span></a><div class="flex items-center gap-space-2"><div class="w-8 h-8 rounded bg-secondary flex items-center justify-center text-on-secondary shadow-sm"><span class="material-symbols-outlined text-[20px]">crisis_alert</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm font-bold tracking-tight text-on-surface leading-none">ResQnet</span><span class="font-label-telemetry text-label-telemetry uppercase text-secondary tracking-widest">Citizen Portal</span></div></div></div><div class="hidden md:flex flex-1 max-w-md mx-space-4"><div class="relative w-full flex items-center"><span class="material-symbols-outlined absolute left-space-3 text-outline text-[18px]">search</span><input class="w-full bg-surface-container-low pl-space-10 pr-space-4 py-space-2 text-on-surface placeholder:text-outline rounded border border-surface-container focus:outline-none focus:border-secondary font-body-sm text-body-sm transition-colors" placeholder="Search emergency shelters, warnings, SOS..." type="text"></div></div><div class="flex items-center gap-space-4"><div class="hidden sm:flex items-center gap-space-2 bg-error-container text-on-error-container px-space-3 py-space-1 rounded border border-tertiary-fixed-dim"><span class="material-symbols-outlined text-[16px] text-error">emergency</span><span class="font-label-telemetry text-label-telemetry font-bold">112 / 1078</span><span class="font-body-sm text-body-sm text-on-error-container hidden lg:inline">HELPLINE</span></div><div class="flex items-center gap-space-2 bg-surface-container-low px-space-3 py-space-1 rounded border border-surface-container"><span class="material-symbols-outlined text-secondary text-[16px]">verified</span><div class="flex flex-col text-left"><span class="font-headline-sm text-[12px] font-semibold text-on-surface leading-tight">Simran Kaur</span><span class="font-label-telemetry text-label-telemetry text-on-surface-variant">VERIFIED CITIZEN</span></div></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 pb-space-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<div class="w-full max-w-5xl mx-auto px-gutter-standard md:px-gutter-expanded py-space-6 sm:py-space-8 flex flex-col gap-space-6">
+<!-- Top Navigation & Context Bar -->
+<div class="flex flex-col gap-space-4">
+<div class="flex flex-wrap items-center justify-between gap-space-3">
+<a class="inline-flex items-center gap-space-2 px-space-3 py-space-2 rounded-lg bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-body-sm transition-colors shadow-sm" data-path="citizen-dashboard" href="#">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+<span>Back to Dashboard</span>
+</a>
+<div class="flex items-center gap-space-2 px-space-3 py-space-1 rounded-full bg-error-container text-on-error-container text-body-sm">
+<span class="material-symbols-outlined text-[16px] text-error">phone_in_talk</span>
+<span class="font-label-telemetry font-bold">112</span>
+<span class="text-on-surface-variant hidden sm:inline">| For immediate life threat, call directly</span>
+</div>
+</div>
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-4 pb-space-2">
+<div class="flex flex-col gap-space-1">
+<span class="font-label-telemetry text-label-telemetry uppercase text-secondary font-semibold tracking-wider">Citizen Crisis Telemetry</span>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Report Emergency</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+            Quickly report an incident to alert nearby emergency response teams and municipal coordinators.
+          </p>
+</div>
+<!-- Step Indicator Flow -->
+<div class="flex items-center gap-space-1 bg-surface-container-lowest px-space-3 py-space-2 rounded-xl shadow-sm self-start md:self-auto">
+<div class="flex items-center gap-space-1 px-space-3 py-space-1 rounded-full bg-secondary text-on-secondary font-label-badge text-label-badge transition-all" id="step-pill-1">
+<span>1</span>
+<span class="hidden sm:inline">Details &amp; Location</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[14px]">chevron_right</span>
+<div class="flex items-center gap-space-1 px-space-3 py-space-1 rounded-full bg-surface-container text-on-surface-variant font-label-badge text-label-badge transition-all" id="step-pill-2">
+<span>2</span>
+<span class="hidden sm:inline">Review</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[14px]">chevron_right</span>
+<div class="flex items-center gap-space-1 px-space-3 py-space-1 rounded-full bg-surface-container text-on-surface-variant font-label-badge text-label-badge transition-all" id="step-pill-3">
+<span>3</span>
+<span class="hidden sm:inline">Confirmation</span>
+</div>
+</div>
+</div>
+</div>
+<!-- MAIN INTERACTIVE CONTAINER: Three Stages -->
+<div class="w-full flex justify-center">
+<!-- STAGE 1: FORM INPUTS -->
+<section class="w-full max-w-3xl flex flex-col gap-space-6" id="flow-step-1">
+<!-- Main Form Sheet -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-6 sm:p-space-8 flex flex-col gap-space-8">
+<!-- Field 1: Incident Type -->
+<div class="flex flex-col gap-space-3">
+<div class="flex items-center justify-between">
+<label class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-space-2" for="incident-category-select">
+<span class="material-symbols-outlined text-secondary text-[20px]">category</span>
+<span>1. Incident Classification</span>
+</label>
+<span class="font-label-telemetry text-label-telemetry uppercase text-secondary font-semibold">Mandatory</span>
+</div>
+<!-- Quick Pill Category Selectors -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-2">
+<button class="incident-quick-chip group flex items-center gap-space-2 p-space-3 rounded-lg bg-surface-container-low hover:bg-surface-variant text-on-surface text-left transition-all active:scale-[0.98]" onclick="selectIncidentType('Fire &amp; Smoke Hazard', this)" type="button">
+<span class="material-symbols-outlined text-error text-[20px]">local_fire_department</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-[13px] font-semibold leading-tight">Fire</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Smoke/Blaze</span>
+</div>
+</button>
+<button class="incident-quick-chip group flex items-center gap-space-2 p-space-3 rounded-lg bg-surface-container-low hover:bg-surface-variant text-on-surface text-left transition-all active:scale-[0.98]" onclick="selectIncidentType('Medical &amp; Casualty', this)" type="button">
+<span class="material-symbols-outlined text-secondary text-[20px]">medical_services</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-[13px] font-semibold leading-tight">Medical</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Casualty/Trauma</span>
+</div>
+</button>
+<button class="incident-quick-chip group flex items-center gap-space-2 p-space-3 rounded-lg bg-surface-container-low hover:bg-surface-variant text-on-surface text-left transition-all active:scale-[0.98]" onclick="selectIncidentType('Urban Inundation / Flood', this)" type="button">
+<span class="material-symbols-outlined text-secondary-container text-[20px]">flood</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-[13px] font-semibold leading-tight">Flooding</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Rapid Inflow</span>
+</div>
+</button>
+<button class="incident-quick-chip group flex items-center gap-space-2 p-space-3 rounded-lg bg-surface-container-low hover:bg-surface-variant text-on-surface text-left transition-all active:scale-[0.98]" onclick="selectIncidentType('Structural Collapse &amp; Entrapment', this)" type="button">
+<span class="material-symbols-outlined text-outline text-[20px]">domain_disabled</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-[13px] font-semibold leading-tight">Structure</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Collapse/Debris</span>
+</div>
+</button>
+</div>
+<!-- Full Dropdown Selector -->
+<div class="relative w-full">
+<select class="w-full bg-surface-container-low text-on-surface font-body-md py-space-3 px-space-4 rounded-lg focus:outline-none focus:bg-surface-container-lowest appearance-none transition-all cursor-pointer" id="incident-category-select">
+<option disabled="" selected="" value="">Or choose specific incident catalogue category...</option>
+<option value="Fire &amp; Smoke Hazard">Fire &amp; High Heat Source</option>
+<option value="Medical Emergency">Medical Emergency / Trauma Response</option>
+<option value="Road Accident">Road &amp; Transit Vehicle Collision</option>
+<option value="Urban Inundation / Flood">Flooding &amp; Rising Water Surge</option>
+<option value="Landslide &amp; Rockfall">Landslide &amp; Slope Instability</option>
+<option value="Earthquake Aftermath">Earthquake &amp; Seismic Tremor Impact</option>
+<option value="Severe Weather">Severe Cyclone / Microburst / Windstorm</option>
+<option value="Structural Damage">Structural Wall / Ceiling Cracking</option>
+<option value="Chemical Hazard">Toxic Gas Discharge / Chemical Spillage</option>
+<option value="Power Grid Failure">Substation Sparking / Live Cable Fall</option>
+<option value="Other Hazard">Other Unclassified Crisis</option>
+</select>
+<span class="material-symbols-outlined pointer-events-none absolute right-space-4 top-1/2 -translate-y-1/2 text-outline text-[20px]">expand_more</span>
+</div>
+</div>
+<!-- Field 2: Incident Location -->
+<div class="flex flex-col gap-space-3">
+<div class="flex items-center justify-between">
+<label class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-space-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">near_me</span>
+<span>2. Geo-Tagged Coordinates &amp; Location</span>
+</label>
+<button class="font-label-telemetry text-label-telemetry text-secondary hover:underline flex items-center gap-space-1" onclick="refreshGeoTelemetry()" type="button">
+<span class="material-symbols-outlined text-[14px]">my_location</span>
+<span>Calibrate GPS</span>
+</button>
+</div>
+<!-- Telemetry GPS Bar -->
+<div class="bg-surface-container-low p-space-4 rounded-lg flex flex-col sm:flex-row sm:items-center justify-between gap-space-3">
+<div class="flex items-start gap-space-3">
+<span class="relative flex h-3 w-3 mt-1">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-secondary"></span>
+</span>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-2">
+<span class="font-headline-sm text-[14px] text-on-surface font-semibold" id="loc-title">Sector 17 Market Complex, Chandigarh</span>
+<span class="bg-surface-container px-space-2 py-0.5 rounded font-label-telemetry text-[9px] text-on-surface font-bold uppercase">Locked Fix</span>
+</div>
+<span class="font-data-mono-md text-data-mono-md text-on-surface-variant" id="loc-coords">Grid: 30.7333° N, 76.7794° E • HDOP: ±2.4m</span>
+</div>
+</div>
+<button class="self-start sm:self-auto px-space-3 py-space-1.5 rounded-lg bg-surface-container-lowest text-on-surface font-label-badge text-label-badge shadow-sm hover:bg-surface-container transition-colors flex items-center gap-space-1" type="button">
+<span class="material-symbols-outlined text-[14px]">edit_location</span>
+<span>Change Pin</span>
+</button>
+</div>
+<!-- Map Surface Preview -->
+<div class="relative w-full h-44 rounded-lg overflow-hidden bg-surface-container shadow-inner">
+<div class="w-full h-full bg-cover bg-center" data-location="Sector 17, Chandigarh, India" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuALTEpZtshq8i5TLZUu_fPz_kEG785-EoA9d2_aybjGwudcephurx53BAihnfavJLfC1OI_-TxTiifTIntiOaqYvU4V8IjB-Klv8aVAlvya_Orxs2GPkV0StGdUh6mKJRiO23itQxz0pJJMCn89vrTNEQPXyN_LwrA5VSd4UTAebVUHA1gILd1DtLhUhJm6Mkgyy39yIRh6hjEtfssEkvoeE1zNuA5D5OIhjBNq-HfGywWkxLlzS1L93w')"></div>
+<!-- Telemetry Reticle Overlay -->
+<div class="absolute inset-0 pointer-events-none flex items-center justify-center">
+<div class="relative flex items-center justify-center">
+<div class="w-16 h-16 rounded-full bg-secondary/15 animate-ping"></div>
+<div class="absolute w-8 h-8 rounded-full bg-secondary/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-[24px]">crisis_alert</span>
+</div>
+</div>
+</div>
+<!-- Map Detail Chips -->
+<div class="absolute bottom-2 left-2 bg-surface-container-lowest/90 backdrop-blur-sm px-space-2 py-1 rounded text-on-surface font-label-telemetry text-[10px] flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[12px]">security</span>
+<span>UT-Chandigarh Civil Sector 4 (Active Zone)</span>
+</div>
+</div>
+</div>
+<!-- Field 3: What Happened? (Description) -->
+<div class="flex flex-col gap-space-2">
+<div class="flex items-center justify-between">
+<label class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-space-2" for="incident-description">
+<span class="material-symbols-outlined text-secondary text-[20px]">description</span>
+<span>3. Operational Situation (What do you see?)</span>
+</label>
+<span class="font-label-telemetry text-label-telemetry text-on-surface-variant" id="char-counter">0 / 500</span>
+</div>
+<textarea class="w-full bg-surface-container-low text-on-surface font-body-md p-space-4 rounded-lg focus:outline-none focus:bg-surface-container-lowest transition-all placeholder:text-outline resize-y min-h-[110px]" id="incident-description" maxlength="500" oninput="updateCharCounter(this)" placeholder="Describe what you see: trapped persons, hazards, water level, blocked exits, injuries..." rows="4"></textarea>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Be specific about floor levels, numbers of victims, visible fire or leaking fuel, and safe approach alleys.
+            </p>
+</div>
+<!-- Field 4: Severity Level -->
+<div class="flex flex-col gap-space-3">
+<div class="flex items-center justify-between">
+<label class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-space-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">speed</span>
+<span>4. Threat Severity Level</span>
+</label>
+<span class="font-label-telemetry text-label-telemetry uppercase text-secondary font-semibold">Triage Filter</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant -mt-1">
+              Select the severity based on the immediate danger to human life and safety.
+            </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-3">
+<!-- Low -->
+<label class="cursor-pointer">
+<input class="peer sr-only" name="severity-level" type="radio" value="Low">
+<div class="p-space-4 rounded-lg bg-surface-container-low peer-checked:bg-surface-container-highest transition-all flex flex-col gap-space-1">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-[14px] font-bold text-on-surface">Low Severity</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">radio_button_unchecked</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Minor disruption, isolated property obstruction, no immediate threat to life.</span>
+</div>
+</label>
+<!-- Medium -->
+<label class="cursor-pointer">
+<input class="peer sr-only" name="severity-level" type="radio" value="Medium">
+<div class="p-space-4 rounded-lg bg-surface-container-low peer-checked:bg-surface-container-highest transition-all flex flex-col gap-space-1">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-[14px] font-bold text-on-surface">Medium Severity</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">radio_button_unchecked</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Growing hazard, localized flooding, heavy property damage, vulnerable area.</span>
+</div>
+</label>
+<!-- High -->
+<label class="cursor-pointer">
+<input checked="" class="peer sr-only" name="severity-level" type="radio" value="High">
+<div class="p-space-4 rounded-lg bg-surface-container-low peer-checked:bg-surface-variant peer-checked:text-on-surface transition-all flex flex-col gap-space-1">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-[14px] font-bold text-on-surface">High Severity</span>
+<span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Potential injury, rapidly spreading blaze, active electrical sparking.</span>
+</div>
+</label>
+<!-- Critical -->
+<label class="cursor-pointer">
+<input class="peer sr-only" name="severity-level" type="radio" value="Critical">
+<div class="p-space-4 rounded-lg bg-surface-container-low peer-checked:bg-error-container peer-checked:text-on-error-container transition-all flex flex-col gap-space-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-1 text-error">
+<span class="material-symbols-outlined text-[18px]">warning</span>
+<span class="font-headline-sm text-[14px] font-bold">Critical Danger</span>
+</div>
+<span class="material-symbols-outlined text-error text-[18px]">radio_button_unchecked</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Immediate life threat, persons trapped inside, active building collapse.</span>
+</div>
+</label>
+</div>
+</div>
+<!-- Field 5: Evidence (Optional) -->
+<div class="flex flex-col gap-space-3">
+<div class="flex items-center justify-between">
+<label class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-space-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">photo_camera</span>
+<span>5. Visual Evidence (Optional)</span>
+</label>
+<span class="font-label-telemetry text-label-telemetry text-on-surface-variant">JPEG, PNG, MP4 up to 25MB</span>
+</div>
+<!-- Attached File Card Preview -->
+<div class="p-space-4 rounded-lg bg-surface-container-low flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-3">
+<div class="flex items-center gap-space-3 min-w-0">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-secondary shrink-0 overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="Close up photograph showing damaged commercial building facade with dark smoke billowing from broken lower windows, emergency lighting visible, crisp details, natural daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMJDpT2j8J1gigOjh_YecWItm3JB7atXSNHU2NNEUZ55HUvIKh4rmxIL90GTNPBUXlFmcaW1FSlwwWoUv-PAUU-c7jA5x_t8XiJRDX6wboPGoBGgvdMc6fou_TDFbH0V_-47gdB1MGydlSx-N6A1afA6RG1iPglILVUq-Hqs_ddsrwLe2lHuWjOiSvy2bS-jTvwB9T50YN6a9QJWGLGmEAQBtx6g_9jrErBBDQK9XUDp0TQkYZGkEYXg">
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-[13px] font-semibold text-on-surface truncate">incident_sector17_damage.jpg</span>
+<div class="flex items-center gap-space-2 text-on-surface-variant font-label-telemetry text-[11px]">
+<span>2.4 MB</span>
+<span>•</span>
+<span class="text-secondary font-bold">Ready to attach</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-2 self-end sm:self-auto">
+<button class="px-space-3 py-space-1 rounded bg-surface-container-lowest text-on-surface font-label-badge text-label-badge shadow-sm hover:bg-surface-container transition-colors" type="button">
+                  Replace
+                </button>
+<button class="px-space-2 py-space-1 rounded text-error hover:bg-error-container font-label-badge text-label-badge transition-colors" type="button">
+                  Remove
+                </button>
+</div>
+</div>
+<!-- Drag & Drop Zone Prompt -->
+<div class="p-space-4 rounded-lg bg-surface-container-low flex items-center justify-center gap-space-3 text-center cursor-pointer hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-outline text-[22px]">add_a_photo</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Tap to capture or attach additional ground photo</span>
+</div>
+</div>
+<!-- Form Action Footer -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-4 pt-space-4 bg-surface-container-lowest">
+<div class="flex items-center gap-space-2 text-on-surface-variant max-w-sm">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0">lock</span>
+<span class="font-body-sm text-[12px] leading-tight">
+                Data is encrypted and routed directly to State Disaster Management Authority (SDMA) triage desk.
+              </span>
+</div>
+<button class="w-full sm:w-auto px-space-8 py-space-3 rounded-lg bg-secondary text-on-secondary font-headline-sm text-headline-sm font-semibold shadow-md hover:bg-on-secondary-container active:scale-[0.99] transition-all flex items-center justify-center gap-space-2" onclick="goToReviewStep()" type="button">
+<span>Review Report</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- STAGE 2: REVIEW MODAL CARD (Default Hidden) -->
+<section class="hidden w-full max-w-2xl flex flex-col gap-space-6" id="flow-step-2">
+<div class="bg-surface-container-lowest rounded-xl shadow-md p-space-6 sm:p-space-8 flex flex-col gap-space-6">
+<div class="flex items-center justify-between pb-space-3">
+<div class="flex items-center gap-space-3">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[22px]">fact_check</span>
+</div>
+<div class="flex flex-col">
+<h2 class="font-headline-md text-headline-md text-on-surface">Review Emergency Report</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Confirm incident telemetry prior to official dispatch</span>
+</div>
+</div>
+<span class="font-label-telemetry text-label-telemetry px-space-2 py-1 rounded bg-secondary-fixed text-on-secondary-fixed font-bold uppercase">Ready</span>
+</div>
+<!-- Summary Key-Value Registry -->
+<div class="bg-surface-container-low rounded-lg p-space-5 flex flex-col gap-space-4">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-space-3 gap-space-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Incident Classification:</span>
+<span class="font-headline-sm text-[15px] font-bold text-on-surface" id="review-type">Fire Outbreak &amp; Smoke Hazard</span>
+</div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-space-3 gap-space-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Incident Location:</span>
+<div class="flex flex-col sm:items-end">
+<span class="font-headline-sm text-[14px] font-semibold text-on-surface" id="review-location">Sector 17 Market Complex, Chandigarh</span>
+<span class="font-data-mono-md text-[11px] text-on-surface-variant">Grid: 30.7333° N, 76.7794° E</span>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-space-3 gap-space-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Reported Severity:</span>
+<div class="flex items-center gap-space-2">
+<span class="inline-block w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="font-headline-sm text-[14px] font-bold text-secondary" id="review-severity">High - Urgent Hazard</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-1 pb-space-3">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Situational Summary:</span>
+<p class="font-body-md text-body-md text-on-surface bg-surface-container-lowest p-space-3 rounded-md" id="review-description">
+                Dense smoke emerging from basement commercial unit, fire alarms sounding, 20+ occupants evacuating via north stairway. No active blaze visible on exterior facade yet.
+              </p>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Attached Field Telemetry:</span>
+<div class="flex items-center gap-space-1 text-on-surface font-label-telemetry text-[12px] font-semibold">
+<span class="material-symbols-outlined text-secondary text-[16px]">attachment</span>
+<span>1 Photo Attached (incident_sector17_damage.jpg)</span>
+</div>
+</div>
+</div>
+<!-- Alert Note -->
+<div class="p-space-3 rounded-lg bg-surface-container flex items-start gap-space-2 text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">info</span>
+<span>By submitting, you affirm that this ground observation is accurate to the best of your direct sensory awareness. False distress calls impede life rescues and are logged.</span>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-col-reverse sm:flex-row items-center justify-end gap-space-3 pt-space-2">
+<button class="w-full sm:w-auto px-space-5 py-space-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-headline-sm text-headline-sm font-semibold transition-colors" onclick="goToStep1()" type="button">
+              Edit Information
+            </button>
+<button class="w-full sm:w-auto px-space-7 py-space-2.5 rounded-lg bg-secondary text-on-secondary hover:bg-on-secondary-container font-headline-sm text-headline-sm font-semibold shadow-md transition-all flex items-center justify-center gap-space-2" onclick="submitFinalReport()" type="button">
+<span class="material-symbols-outlined text-[20px]">send</span>
+<span>Submit Emergency Report</span>
+</button>
+</div>
+</div>
+</section>
+<!-- STAGE 3: CONFIRMATION STATE (Success Card) -->
+<section class="hidden w-full max-w-xl flex flex-col gap-space-6" id="flow-step-3">
+<div class="bg-surface-container-lowest rounded-xl shadow-md p-space-6 sm:p-space-10 flex flex-col items-center text-center gap-space-6">
+<!-- Shield Icon -->
+<div class="w-16 h-16 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary shadow-sm">
+<span class="material-symbols-outlined text-[36px]">shield</span>
+</div>
+<div class="flex flex-col gap-space-1">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Report Submitted Successfully</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Your emergency dispatch payload has been recorded and injected into the SDMA zonal incident stream.
+            </p>
+</div>
+<!-- Incident Payload Metadata Card -->
+<div class="w-full bg-surface-container-low rounded-lg p-space-4 flex flex-col gap-space-3 text-left">
+<div class="flex items-center justify-between pb-space-2">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Tracking Record ID:</span>
+<span class="font-data-mono-md text-data-mono-md font-bold text-on-surface">#RQ-INC-2026-0219</span>
+</div>
+<div class="flex items-center justify-between pb-space-2">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Timestamp Logged:</span>
+<span class="font-label-telemetry text-label-telemetry text-on-surface font-semibold">Today, 12:44 PM IST</span>
+</div>
+<div class="flex items-center justify-between pb-space-2">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Lifecycle Stage:</span>
+<span class="px-space-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-badge text-label-badge font-bold uppercase">
+                STATUS: UNVERIFIED
+              </span>
+</div>
+<div class="p-space-3 rounded bg-surface-container-lowest text-body-sm text-on-surface-variant flex items-start gap-space-2">
+<span class="material-symbols-outlined text-secondary text-[16px] shrink-0 mt-0.5">verified_user</span>
+<span class="text-[12px] leading-relaxed">
+                Your report has been received and will be reviewed by authorized responders before becoming part of the official operational picture.
+              </span>
+</div>
+</div>
+<!-- Navigation Actions -->
+<div class="w-full flex flex-col sm:flex-row items-center justify-center gap-space-3 pt-space-2">
+<a class="w-full sm:w-auto px-space-6 py-space-3 rounded-lg bg-secondary text-on-secondary font-headline-sm text-headline-sm font-semibold shadow-sm hover:bg-on-secondary-container transition-colors text-center" data-path="citizen-dashboard" href="#">
+              Back to Citizen Dashboard
+            </a>
+<button class="w-full sm:w-auto px-space-5 py-space-3 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-headline-sm text-headline-sm font-semibold transition-colors" onclick="resetFormToStart()" type="button">
+              Submit Another Report
+            </button>
+</div>
+</div>
+</section>
+</div>
+<!-- Quick Reference Emergency Contact Grid -->
+<div class="w-full max-w-3xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-space-3 pt-space-4">
+<div class="p-space-4 rounded-lg bg-surface-container-lowest shadow-sm flex items-center gap-space-3">
+<div class="w-10 h-10 rounded bg-error-container text-error flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">local_fire_department</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-telemetry text-[11px] text-on-surface-variant">FIRE RESCUE</span>
+<span class="font-data-mono-lg text-data-mono-lg font-bold text-on-surface">101</span>
+</div>
+</div>
+<div class="p-space-4 rounded-lg bg-surface-container-lowest shadow-sm flex items-center gap-space-3">
+<div class="w-10 h-10 rounded bg-secondary-fixed text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">ambulance</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-telemetry text-[11px] text-on-surface-variant">AMBULANCE / TRAUMA</span>
+<span class="font-data-mono-lg text-data-mono-lg font-bold text-on-surface">108</span>
+</div>
+</div>
+<div class="p-space-4 rounded-lg bg-surface-container-lowest shadow-sm flex items-center gap-space-3">
+<div class="w-10 h-10 rounded bg-surface-container text-on-surface flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">shield</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-telemetry text-[11px] text-on-surface-variant">DISASTER HELPLINE</span>
+<span class="font-data-mono-lg text-data-mono-lg font-bold text-on-surface">1078</span>
+</div>
+</div>
+</div>
+</div>
+<script>
+    function updateCharCounter(el) {
+      const counter = document.getElementById('char-counter');
+      if (counter) {
+        counter.textContent = `${el.value.length} / 500`;
+      }
+    }
+
+    function selectIncidentType(typeName, btnElement) {
+      const select = document.getElementById('incident-category-select');
+      if (select) {
+        select.value = typeName;
+      }
+      
+      const allChips = document.querySelectorAll('.incident-quick-chip');
+      allChips.forEach(chip => {
+        chip.classList.remove('bg-surface-variant', 'ring-2', 'ring-secondary');
+        chip.classList.add('bg-surface-container-low');
+      });
+
+      if (btnElement) {
+        btnElement.classList.remove('bg-surface-container-low');
+        btnElement.classList.add('bg-surface-variant');
+      }
+    }
+
+    function refreshGeoTelemetry() {
+      const coords = document.getElementById('loc-coords');
+      if (coords) {
+        coords.textContent = "Grid: 30.7334° N, 76.7791° E • HDOP: ±1.8m (Updated)";
+      }
+    }
+
+    function goToReviewStep() {
+      const descInput = document.getElementById('incident-description');
+      const selectInput = document.getElementById('incident-category-select');
+      const checkedSeverity = document.querySelector('input[name="severity-level"]:checked');
+
+      // Populate review values
+      const revType = document.getElementById('review-type');
+      const revDesc = document.getElementById('review-description');
+      const revSev = document.getElementById('review-severity');
+
+      if (selectInput && selectInput.value && revType) {
+        revType.textContent = selectInput.value;
+      }
+      if (descInput && descInput.value.trim() !== '' && revDesc) {
+        revDesc.textContent = descInput.value;
+      }
+      if (checkedSeverity && revSev) {
+        revSev.textContent = checkedSeverity.value + " Severity";
+      }
+
+      document.getElementById('flow-step-1').classList.add('hidden');
+      document.getElementById('flow-step-2').classList.remove('hidden');
+      document.getElementById('flow-step-3').classList.add('hidden');
+
+      // Update pills
+      const p1 = document.getElementById('step-pill-1');
+      const p2 = document.getElementById('step-pill-2');
+      const p3 = document.getElementById('step-pill-3');
+
+      p1.className = "flex items-center gap-space-1 px-space-3 py-space-1 rounded-full bg-surface-container text-on-surface-variant font-label-badge text-label-badge transition-all";
+      p2.className = "flex items-center gap-space-1 px-space-3 py-space-1 rounded-full bg-secondary text-on-secondary font-label-badge text-label-badge transition-all";
+      p3.className = "flex items-center gap-space-1 px-space-3 py-space-1 rounded-full bg-surface-container text-on-surface-variant font-label-badge text-label-badge transition-all";
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function goToStep1() {
+      document.getElementById('flow-step-1').classList.remove('hidden');
+      document.getElementById('flow-step-2').classList.add('hidden');
+      document.getElementById('flow-step-3').classList.add('hidden');
+
+      const p1 = document.getElementById('step-pill-1');
+      const p2 = document.getElementById('step-pill-2');
+      const p3 = document.getElementById('step-pill-3');
+
+      p1.className = "flex items-center gap-space-1 px-space-3 py-space-1 rounded-full bg-secondary text-on-secondary font-label-badge text-label-badge transition-all";
+      p2.className = "flex items-center gap-space-1 px-space-3 py-space-1 rounded-full bg-surface-container text-on-surface-variant font-label-badge text-label-badge transition-all";
+      p3.className = "flex items-center gap-space-1 px-space-3 py-space-1 rounded-full bg-surface-container text-on-surface-variant font-label-badge text-label-badge transition-all";
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function submitFinalReport() {
+      document.getElementById('flow-step-1').classList.add('hidden');
+      document.getElementById('flow-step-2').classList.add('hidden');
+      document.getElementById('flow-step-3').classList.remove('hidden');
+
+      const p1 = document.getElementById('step-pill-1');
+      const p2 = document.getElementById('step-pill-2');
+      const p3 = document.getElementById('step-pill-3');
+
+      p1.className = "flex items-center gap-space-1 px-space-3 py-space-1 rounded-full bg-surface-container text-on-surface-variant font-label-badge text-label-badge transition-all";
+      p2.className = "flex items-center gap-space-1 px-space-3 py-space-1 rounded-full bg-surface-container text-on-surface-variant font-label-badge text-label-badge transition-all";
+      p3.className = "flex items-center gap-space-1 px-space-3 py-space-1 rounded-full bg-secondary text-on-secondary font-label-badge text-label-badge transition-all";
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function resetFormToStart() {
+      goToStep1();
+      const descInput = document.getElementById('incident-description');
+      if (descInput) descInput.value = '';
+      updateCharCounter(descInput || { value: '' });
+    }
+  </script>
+</div></main><div class="fixed bottom-space-4 left-0 right-0 z-40 flex justify-center px-space-4 pointer-events-none"><nav class="pointer-events-auto bg-surface-container-lowest/95 backdrop-blur-md px-space-2 py-space-2 rounded-full border border-surface-container shadow-lg flex items-center gap-space-1" data-active-classes="bg-secondary text-on-secondary font-semibold shadow-md"><a class="px-space-4 py-space-2 rounded-full font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-all" data-path="citizen-dashboard" href="#">Dashboard</a><a class="px-space-4 py-space-2 rounded-full font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-all" data-path="active-alerts" href="#">Alerts</a><a aria-current="page" class="px-space-5 py-space-2 rounded-full transition-all bg-secondary text-on-secondary font-semibold shadow-md" data-path="report-incident" href="#">Report</a><a class="px-space-4 py-space-2 rounded-full font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-all" data-path="shelters-resources" href="#">Shelters</a><a class="px-space-4 py-space-2 rounded-full font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-all" data-path="sos-request" href="#">SOS</a></nav></div><footer class="w-full bg-surface-container-lowest border-t border-surface-container py-space-6 mb-space-12"><div class="w-full px-gutter-expanded flex flex-col sm:flex-row items-center justify-between gap-space-3 font-body-sm text-body-sm text-on-surface-variant"><div class="flex items-center gap-space-2"><span class="font-headline-sm text-headline-sm font-semibold text-on-surface">ResQnet</span><span>© National Disaster Response &amp; Citizen Safety Network</span></div><div class="flex items-center gap-space-4 font-label-telemetry text-label-telemetry"><span class="text-error flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-error inline-block animate-pulse"></span> EMERGENCY: 112 / 1078</span><span>NDRF DISPATCH: 1070</span></div></div></footer></body></html>

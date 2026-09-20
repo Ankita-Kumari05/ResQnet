@@ -1,0 +1,456 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "surface": "#f8f9ff",
+          "tertiary": "#000000",
+          "secondary": "#006398",
+          "on-tertiary-container": "#f63a35",
+          "on-surface-variant": "#45464d",
+          "inverse-on-surface": "#eaf1ff",
+          "primary-fixed-dim": "#bec6e0",
+          "inverse-surface": "#213145",
+          "background": "#f8f9ff",
+          "error-container": "#ffdad6",
+          "surface-tint": "#565e74",
+          "on-primary-container": "#7c839b",
+          "inverse-primary": "#bec6e0",
+          "surface-container": "#e5eeff",
+          "tertiary-container": "#410002",
+          "primary": "#000000",
+          "tertiary-fixed-dim": "#ffb4ab",
+          "on-tertiary-fixed": "#410002",
+          "surface-dim": "#cbdbf5",
+          "on-secondary-container": "#00476e",
+          "on-error-container": "#93000a",
+          "primary-container": "#131b2e",
+          "on-primary-fixed": "#131b2e",
+          "secondary-fixed-dim": "#93ccff",
+          "tertiary-fixed": "#ffdad6",
+          "on-error": "#ffffff",
+          "on-background": "#0b1c30",
+          "on-primary": "#ffffff",
+          "primary-fixed": "#dae2fd",
+          "on-secondary-fixed-variant": "#004b73",
+          "on-surface": "#0b1c30",
+          "on-secondary": "#ffffff",
+          "on-tertiary": "#ffffff",
+          "on-tertiary-fixed-variant": "#93000b",
+          "surface-container-lowest": "#ffffff",
+          "surface-container-high": "#dce9ff",
+          "surface-bright": "#f8f9ff",
+          "surface-variant": "#d3e4fe",
+          "outline-variant": "#c6c6cd",
+          "surface-container-highest": "#d3e4fe",
+          "on-secondary-fixed": "#001d31",
+          "surface-container-low": "#eff4ff",
+          "error": "#ba1a1a",
+          "secondary-container": "#5bb8fe",
+          "outline": "#76777d",
+          "on-primary-fixed-variant": "#3f465c",
+          "secondary-fixed": "#cce5ff"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "space-8": "32px",
+          "space-12": "48px",
+          "space-3": "12px",
+          "space-2": "8px",
+          "space-16": "64px",
+          "gutter-dense": "8px",
+          "margin-mobile": "16px",
+          "space-10": "40px",
+          "space-1": "4px",
+          "space-4": "16px",
+          "margin-desktop": "32px",
+          "margin-tablet": "24px",
+          "space-5": "20px",
+          "gutter-standard": "16px",
+          "gutter-expanded": "24px",
+          "space-6": "24px",
+          "space-0": "0px"
+        },
+        "fontFamily": {
+          "body-lg": [
+            "Public Sans"
+          ],
+          "display-hud": [
+            "JetBrains Mono"
+          ],
+          "display-hud-mobile": [
+            "JetBrains Mono"
+          ],
+          "data-mono-md": [
+            "JetBrains Mono"
+          ],
+          "label-telemetry": [
+            "JetBrains Mono"
+          ],
+          "body-md": [
+            "Public Sans"
+          ],
+          "body-sm": [
+            "Public Sans"
+          ],
+          "headline-md": [
+            "Public Sans"
+          ],
+          "headline-xl": [
+            "Public Sans"
+          ],
+          "headline-lg": [
+            "Public Sans"
+          ],
+          "headline-xl-mobile": [
+            "Public Sans"
+          ],
+          "headline-sm": [
+            "Public Sans"
+          ],
+          "data-mono-lg": [
+            "JetBrains Mono"
+          ],
+          "label-badge": [
+            "Public Sans"
+          ]
+        },
+        "fontSize": {
+          "body-lg": [
+            "16px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "display-hud": [
+            "48px",
+            {
+              "lineHeight": "52px",
+              "letterSpacing": "-0.04em",
+              "fontWeight": "700"
+            }
+          ],
+          "display-hud-mobile": [
+            "32px",
+            {
+              "lineHeight": "36px",
+              "letterSpacing": "-0.03em",
+              "fontWeight": "700"
+            }
+          ],
+          "data-mono-md": [
+            "13px",
+            {
+              "lineHeight": "18px",
+              "letterSpacing": "0em",
+              "fontWeight": "500"
+            }
+          ],
+          "label-telemetry": [
+            "10px",
+            {
+              "lineHeight": "12px",
+              "letterSpacing": "0.08em",
+              "fontWeight": "500"
+            }
+          ],
+          "body-md": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "body-sm": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-md": [
+            "20px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-xl": [
+            "36px",
+            {
+              "lineHeight": "44px",
+              "letterSpacing": "-0.025em",
+              "fontWeight": "700"
+            }
+          ],
+          "headline-lg": [
+            "28px",
+            {
+              "lineHeight": "36px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "700"
+            }
+          ],
+          "headline-xl-mobile": [
+            "26px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "700"
+            }
+          ],
+          "headline-sm": [
+            "16px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "0em",
+              "fontWeight": "600"
+            }
+          ],
+          "data-mono-lg": [
+            "18px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-badge": [
+            "11px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.06em",
+              "fontWeight": "700"
+            }
+          ]
+        }
+      },
+    },
+  }</script></head><body class="bg-surface font-body-md text-body-md text-on-surface min-h-screen flex flex-col"><header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 w-full px-space-8 flex items-center justify-between gap-space-4"><div class="flex items-center gap-space-4"><img alt="Modern, clean, minimalist brand logo for ResQnet - disaster management and emergency response network. Featuring a protective shield icon interwoven with a tactical pulse/network node symbol in dependable deep navy (#0f172a) and calm primary blue (#2563eb).. Brand logo. - Primary color: #0f172a
+- Font: publicSans
+- Mode: light
+- Roundness: rounded-sm
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VsV9gXTDOnr-Yeh2GepA-NCV-WAWdtb13-PgkjkzewZFtXFguX04w3UircQbz6DNih-kzVSvLBqRcsdTQr6ioXPxQJWE5h0Va08zzcBbdOkaG7GjnNxioNY0NkNeyRaa7L6gCWu5xSADkhe-2j4Qu4jMRJEPWb8NwsNGElwyPueuNFVCLIMGyPg-gl57h-xE2WJ5Z4jGiUSm-imSfyUrhYwqKegEvQ1DXBbMWxnOeyUWffkgIACji02wYM"><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface font-bold">ResQnet</span><span class="hidden xl:inline text-on-surface-variant font-body-sm text-body-sm">Connecting people, responders and communities when help matters most</span></div></div><div class="flex items-center gap-space-4"><div class="hidden md:flex items-center gap-space-2 px-space-3 py-space-1 bg-surface-container rounded"><span class="material-symbols-outlined text-secondary text-[16px]">emergency</span><span class="font-label-telemetry text-label-telemetry text-on-surface font-medium uppercase tracking-wider">Emergency: 112 | Disaster: 1078</span></div><div class="hidden lg:flex items-center gap-space-1 px-space-3 py-space-1 bg-surface-container-low rounded"><span class="material-symbols-outlined text-secondary text-[15px]">verified_user</span><span class="font-label-badge text-label-badge text-on-surface-variant font-bold uppercase tracking-wider">256-Bit Encrypted</span></div><div class="flex items-center bg-surface-container-low rounded p-space-1"><button class="px-space-2 py-space-1 rounded font-label-badge text-label-badge bg-surface-container-lowest text-on-surface font-semibold shadow-[0_1px_4px_rgba(0,0,0,0.04)]" type="button">English</button><button class="px-space-2 py-space-1 rounded font-label-badge text-label-badge text-on-surface-variant hover:text-on-surface" type="button">हिन्दी</button></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 flex-1 flex flex-col justify-center"><div class="flex flex-col w-full">
+<div class="relative w-full max-w-7xl mx-auto px-space-4 sm:px-space-6 lg:px-space-8 py-space-10 lg:py-space-12 flex flex-col items-center">
+<div class="w-full flex flex-col items-center text-center max-w-3xl mb-space-8">
+<div class="inline-flex items-center gap-space-2 px-space-3 py-space-1 bg-surface-container rounded-full mb-space-3 shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[16px]">how_to_reg</span>
+<span class="font-label-badge text-label-badge text-secondary uppercase tracking-widest">ResQnet Identity Provisioning</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface font-bold tracking-tight mb-space-3">
+        Create your ResQnet account
+      </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+        Choose the account type that best matches your role in the disaster management and emergency response network.
+      </p>
+<div class="w-full max-w-md mt-space-6 flex items-center justify-between text-left px-space-4 py-space-2 bg-surface-container-low rounded-xl">
+<div class="flex items-center gap-space-2">
+<span class="flex h-2.5 w-2.5 rounded-full bg-secondary"></span>
+<span class="font-label-telemetry text-label-telemetry text-on-surface-variant uppercase">Network Status: Live &amp; Ready</span>
+</div>
+<div class="flex items-center gap-space-1">
+<span class="material-symbols-outlined text-secondary text-[14px]">lock</span>
+<span class="font-label-telemetry text-label-telemetry text-on-surface font-semibold">Tier-4 Encrypted</span>
+</div>
+</div>
+</div>
+<div class="w-full grid grid-cols-1 lg:grid-cols-3 gap-space-6 lg:gap-space-6 items-stretch mb-space-10">
+<div class="flex flex-col justify-between bg-surface-container-lowest rounded-xl p-space-6 lg:p-space-8 shadow-sm hover:shadow-md transition-all duration-200 group">
+<div>
+<div class="flex items-center justify-between mb-space-5">
+<div class="w-14 h-14 rounded-xl bg-surface-container-high flex items-center justify-center text-secondary group-hover:scale-105 transition-transform duration-200">
+<span class="material-symbols-outlined text-[32px]">family_restroom</span>
+</div>
+<span class="inline-flex items-center gap-1 font-label-badge text-label-badge bg-surface-container text-on-secondary-container px-space-2 py-space-1 rounded-full uppercase tracking-wider">
+<span class="material-symbols-outlined text-[12px]">flash_on</span> Fast Track
+            </span>
+</div>
+<span class="inline-block font-label-badge text-label-badge text-secondary font-bold uppercase tracking-wider mb-space-1">
+            Public Safety &amp; Assistance
+          </span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold mb-space-3">
+            Citizen
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-6 leading-relaxed">
+            Report emergencies, receive verified alerts, find nearby relief shelters, and track your active reports.
+          </p>
+<div class="bg-surface-container-low rounded-xl p-space-4 mb-space-6">
+<div class="font-label-badge text-label-badge text-on-surface-variant uppercase tracking-wider mb-space-3">
+              Included Citizen Toolset
+            </div>
+<ul class="space-y-space-2 font-body-sm text-body-sm text-on-surface">
+<li class="flex items-center gap-space-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+<span>Instant OTP registration via Mobile</span>
+</li>
+<li class="flex items-center gap-space-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+<span>One-tap GPS SOS incident reporting</span>
+</li>
+<li class="flex items-center gap-space-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+<span>Live shelter &amp; safe evacuation navigation</span>
+</li>
+</ul>
+</div>
+</div>
+<div>
+<div class="flex items-center gap-space-2 mb-space-4 text-on-surface-variant font-body-sm text-body-sm min-h-[32px]">
+<span class="material-symbols-outlined text-[16px] text-secondary">bolt</span>
+<span>Immediate account provisioning upon OTP confirmation.</span>
+</div>
+<a class="w-full inline-flex items-center justify-center gap-space-2 bg-secondary text-on-secondary font-label-badge text-label-badge uppercase tracking-wider py-space-3 px-space-4 rounded-lg shadow-sm hover:bg-on-secondary-container transition-colors" href="#">
+<span>Register as Citizen</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="flex flex-col justify-between bg-surface-container-lowest rounded-xl p-space-6 lg:p-space-8 shadow-sm hover:shadow-md transition-all duration-200 group">
+<div>
+<div class="flex items-center justify-between mb-space-5">
+<div class="w-14 h-14 rounded-xl bg-primary-container flex items-center justify-center text-on-primary group-hover:scale-105 transition-transform duration-200">
+<span class="material-symbols-outlined text-[30px]">radar</span>
+</div>
+<span class="inline-flex items-center gap-1 font-label-badge text-label-badge bg-surface-container text-secondary font-bold px-space-2 py-space-1 rounded-full uppercase tracking-wider">
+<span class="material-symbols-outlined text-[12px]">security</span> Command Node
+            </span>
+</div>
+<span class="inline-block font-label-badge text-label-badge text-secondary font-bold uppercase tracking-wider mb-space-1">
+            EOC Operations Command
+          </span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold mb-space-3">
+            Coordinator
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-6 leading-relaxed">
+            Manage incoming incident triage, dispatch certified response teams, monitor resources, and oversee emergency operations.
+          </p>
+<div class="bg-surface-container-low rounded-xl p-space-4 mb-space-6">
+<div class="font-label-badge text-label-badge text-on-surface-variant uppercase tracking-wider mb-space-3">
+              Included Operations Hub
+            </div>
+<ul class="space-y-space-2 font-body-sm text-body-sm text-on-surface">
+<li class="flex items-center gap-space-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+<span>Multi-district EOC operational cockpit</span>
+</li>
+<li class="flex items-center gap-space-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+<span>Automated resource allocation engine</span>
+</li>
+<li class="flex items-center gap-space-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+<span>Statutory CAP alert broadcasting pipeline</span>
+</li>
+</ul>
+</div>
+</div>
+<div>
+<div class="flex items-start gap-space-2 mb-space-4 p-space-2 bg-surface-container rounded font-body-sm text-body-sm text-on-surface-variant min-h-[44px]">
+<span class="material-symbols-outlined text-[16px] text-secondary mt-0.5">verified_user</span>
+<span>Requires official government or authorized agency credential review.</span>
+</div>
+<a class="w-full inline-flex items-center justify-center gap-space-2 bg-secondary text-on-secondary font-label-badge text-label-badge uppercase tracking-wider py-space-3 px-space-4 rounded-lg shadow-sm hover:bg-on-secondary-container transition-colors" href="#">
+<span>Register as Coordinator</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="flex flex-col justify-between bg-surface-container-lowest rounded-xl p-space-6 lg:p-space-8 shadow-sm hover:shadow-md transition-all duration-200 group">
+<div>
+<div class="flex items-center justify-between mb-space-5">
+<div class="w-14 h-14 rounded-xl bg-surface-container-high flex items-center justify-center text-secondary group-hover:scale-105 transition-transform duration-200">
+<span class="material-symbols-outlined text-[32px]">volunteer_activism</span>
+</div>
+<span class="inline-flex items-center gap-1 font-label-badge text-label-badge bg-surface-container text-secondary font-bold px-space-2 py-space-1 rounded-full uppercase tracking-wider">
+<span class="material-symbols-outlined text-[12px]">handshake</span> Ground Fleet
+            </span>
+</div>
+<span class="inline-block font-label-badge text-label-badge text-secondary font-bold uppercase tracking-wider mb-space-1">
+            Field Missions &amp; Specialized Relief
+          </span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold mb-space-3">
+            NGO / Responder
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-6 leading-relaxed">
+            Join coordinated emergency response operations, manage active missions, deploy specialized field teams, and distribute resources.
+          </p>
+<div class="bg-surface-container-low rounded-xl p-space-4 mb-space-6">
+<div class="font-label-badge text-label-badge text-on-surface-variant uppercase tracking-wider mb-space-3">
+              Included Mission Toolset
+            </div>
+<ul class="space-y-space-2 font-body-sm text-body-sm text-on-surface">
+<li class="flex items-center gap-space-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+<span>Tactical field mission dispatch receiver</span>
+</li>
+<li class="flex items-center gap-space-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+<span>Specialized equipment &amp; vehicle roster</span>
+</li>
+<li class="flex items-center gap-space-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+<span>Live operational coordination stream</span>
+</li>
+</ul>
+</div>
+</div>
+<div>
+<div class="flex items-start gap-space-2 mb-space-4 p-space-2 bg-surface-container rounded font-body-sm text-body-sm text-on-surface-variant min-h-[44px]">
+<span class="material-symbols-outlined text-[16px] text-secondary mt-0.5">policy</span>
+<span>Multi-step registration with statutory NGO or charity trust validation.</span>
+</div>
+<a class="w-full inline-flex items-center justify-center gap-space-2 bg-secondary text-on-secondary font-label-badge text-label-badge uppercase tracking-wider py-space-3 px-space-4 rounded-lg shadow-sm hover:bg-on-secondary-container transition-colors" href="#">
+<span>Register as NGO / Responder</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<div class="w-full max-w-4xl bg-surface-container-low rounded-xl p-space-6 shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-space-4 mb-space-8">
+<div class="flex items-start gap-space-3">
+<div class="p-space-2 bg-surface-container rounded-lg text-secondary">
+<span class="material-symbols-outlined text-[24px]">admin_panel_settings</span>
+</div>
+<div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-semibold mb-space-1">
+            Are you a system administrator?
+          </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Administrator accounts are provisioned directly by the state command infrastructure and are not available for public registration.
+          </p>
+</div>
+</div>
+<a class="shrink-0 inline-flex items-center gap-space-1 text-secondary font-label-badge text-label-badge uppercase hover:underline" href="#">
+<span>Admin Portal</span>
+<span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</a>
+</div>
+<div class="w-full flex flex-col sm:flex-row items-center justify-between gap-space-4 text-center max-w-4xl pt-space-2">
+<div class="flex items-center gap-space-2 font-body-md text-body-md text-on-surface">
+<span class="text-on-surface-variant">Already have a ResQnet account?</span>
+<a class="text-secondary font-semibold hover:underline flex items-center gap-0.5" href="#">
+          Sign In
+          <span class="material-symbols-outlined text-[16px]">login</span>
+</a>
+</div>
+<div class="flex items-center gap-space-2 px-space-4 py-space-2 bg-surface-container rounded-lg">
+<span class="material-symbols-outlined text-secondary text-[18px]">support_agent</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+          Need role guidance? Call Support Helpline:
+          <span class="font-data-mono-md text-data-mono-md font-bold text-on-surface">1078 (Toll Free)</span>
+</span>
+</div>
+</div>
+</div>
+</div></main><footer class="w-full bg-surface-container-low py-space-6 shadow-[0_-1px_8px_rgba(0,0,0,0.02)]"><div class="w-full px-space-8 flex flex-col md:flex-row items-center justify-between gap-space-4"><div class="flex items-center gap-space-2 text-on-surface-variant font-body-sm text-body-sm"><span class="material-symbols-outlined text-secondary text-[18px]">shield</span><span>© 2026 ResQnet. Centralized Disaster Management &amp; Emergency Response Network</span></div><nav class="flex items-center gap-space-6" data-active-classes="text-on-surface font-semibold"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="disaster-guidelines" href="#">Disaster Guidelines</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="terms-of-service" href="#">Terms of Service</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="support-desk" href="#">Support Desk</a></nav></div></footer></body></html>

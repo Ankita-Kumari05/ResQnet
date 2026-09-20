@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"primary":"#004ac6","on-tertiary-fixed-variant":"#3f465c","on-secondary-container":"#3e5980","surface-dim":"#cbdbf5","surface-container":"#e5eeff","surface-container-lowest":"#ffffff","on-tertiary-fixed":"#131b2e","surface-card":"#FFFFFF","critical-bg":"#FEF2F2","surface-variant":"#d3e4fe","on-surface-variant":"#434655","on-secondary":"#ffffff","warning-border":"#FDE68A","on-secondary-fixed-variant":"#2d486d","on-tertiary-container":"#eef0ff","success-text":"#16A34A","success-border":"#BBF7D0","surface-tint":"#0053db","on-primary-fixed":"#00174b","inverse-on-surface":"#eaf1ff","on-primary-fixed-variant":"#003ea8","blue-soft":"#EFF6FF","blue-light":"#DBEAFE","background":"#f8f9ff","surface-container-high":"#dce9ff","on-background":"#0b1c30","warning-bg":"#FFFBEB","primary-fixed-dim":"#b4c5ff","critical-border":"#FECACA","outline-variant":"#c3c6d7","inverse-surface":"#213145","on-tertiary":"#ffffff","tertiary-fixed":"#dae2fd","error":"#ba1a1a","critical-text":"#DC2626","surface-container-low":"#eff4ff","secondary-fixed-dim":"#adc8f5","on-error-container":"#93000a","primary-container":"#2563eb","warning-text":"#D97706","secondary":"#455f87","secondary-fixed":"#d5e3ff","surface":"#f8f9ff","on-error":"#ffffff","info-border":"#BFDBFE","surface-container-highest":"#d3e4fe","surface-bright":"#f8f9ff","on-primary-container":"#eeefff","surface-subtle":"#F1F5F9","tertiary-fixed-dim":"#bec6e0","error-container":"#ffdad6","secondary-container":"#b5d0fd","tertiary-container":"#656d84","success-bg":"#F0FDF4","text-primary":"#1E293B","on-primary":"#ffffff","border-default":"#E2E8F0","primary-fixed":"#dbe1ff","on-surface":"#0b1c30","outline":"#737686","tertiary":"#4d556b","text-muted":"#94A3B8","inverse-primary":"#b4c5ff","on-secondary-fixed":"#001c3b","text-secondary":"#64748B","surface-base":"#F8FAFC"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-4":"16px","space-10":"40px","margin-tablet":"24px","space-1":"4px","margin-desktop":"32px","space-3":"12px","space-8":"32px","gutter-expanded":"24px","space-0":"0px","gutter-standard":"16px","gutter-dense":"8px","space-2":"8px","margin-mobile":"16px","space-12":"48px","space-16":"64px","space-5":"20px","space-6":"24px"},"fontFamily":{"headline-lg":["Public Sans"],"data-mono-md":["JetBrains Mono"],"label-badge":["Public Sans"],"headline-sm":["Public Sans"],"display-hud-mobile":["JetBrains Mono"],"display-hud":["JetBrains Mono"],"headline-xl":["Public Sans"],"data-mono-lg":["JetBrains Mono"],"body-sm":["Public Sans"],"label-telemetry":["JetBrains Mono"],"body-md":["Public Sans"],"body-lg":["Public Sans"],"headline-xl-mobile":["Public Sans"],"headline-md":["Public Sans"]},"fontSize":{"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"700"}],"data-mono-md":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"500"}],"label-badge":["11px",{"lineHeight":"14px","letterSpacing":"0.06em","fontWeight":"700"}],"headline-sm":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"600"}],"display-hud-mobile":["32px",{"lineHeight":"36px","letterSpacing":"-0.03em","fontWeight":"700"}],"display-hud":["48px",{"lineHeight":"52px","letterSpacing":"-0.04em","fontWeight":"700"}],"headline-xl":["36px",{"lineHeight":"44px","letterSpacing":"-0.025em","fontWeight":"700"}],"data-mono-lg":["18px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"400"}],"label-telemetry":["10px",{"lineHeight":"12px","letterSpacing":"0.08em","fontWeight":"500"}],"body-md":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"headline-xl-mobile":["26px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}]}}}};</script></head><body class="bg-surface-base font-body-md text-text-primary antialiased min-h-screen"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-card shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between select-none"><div class="flex flex-col flex-1 min-h-0"><div class="h-16 px-space-6 flex items-center gap-space-3 bg-surface-card"><div class="w-8 h-8 rounded-lg bg-primary-container flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[20px]">shield</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none">RESQNET</span><span class="font-label-telemetry text-label-telemetry text-text-secondary tracking-wider mt-1">GOV ROOT v2.4</span></div></div><div class="px-space-6 pt-space-4 pb-space-2"><span class="font-label-badge text-label-badge uppercase tracking-wider text-text-muted">ADMINISTRATION &amp; AUDIT</span></div><nav class="flex-1 px-space-4 space-y-1 overflow-y-auto" data-active-classes="bg-primary-container text-on-primary-container font-headline-sm rounded-lg"><a class="flex items-center justify-between px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-subtle hover:text-text-primary transition-colors" data-path="dashboard" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">dashboard</span><span class="font-body-md text-body-md">Dashboard</span></div></a><a class="flex items-center justify-between px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-subtle hover:text-text-primary transition-colors" data-path="users" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">group</span><span class="font-body-md text-body-md">Users</span></div></a><a class="flex items-center justify-between px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-subtle hover:text-text-primary transition-colors" data-path="roles-and-permissions" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">admin_panel_settings</span><span class="font-body-md text-body-md">Roles &amp; Permissions</span></div></a><a class="flex items-center justify-between px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-subtle hover:text-text-primary transition-colors" data-path="coordinators" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">person_pin</span><span class="font-body-md text-body-md">Coordinators</span></div></a><a class="flex items-center justify-between px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-subtle hover:text-text-primary transition-colors" data-path="responders-and-orgs" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">corporate_fare</span><span class="font-body-md text-body-md">Responders / Orgs</span></div></a><a class="flex items-center justify-between px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-subtle hover:text-text-primary transition-colors" data-path="verification" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">verified_user</span><span class="font-body-md text-body-md">Verification</span></div><span class="font-label-badge text-label-badge px-2 py-0.5 rounded-lg bg-warning-bg text-warning-text">5</span></a><a class="flex items-center justify-between px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-subtle hover:text-text-primary transition-colors" data-path="monitoring" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">monitor_heart</span><span class="font-body-md text-body-md">Monitoring</span></div></a><a aria-current="page" class="flex items-center justify-between px-space-3 py-space-2 transition-colors bg-primary-container text-on-primary-container font-headline-sm rounded-lg" data-path="analytics" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">insights</span><span class="font-body-md text-body-md">Analytics</span></div></a><a class="flex items-center justify-between px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-subtle hover:text-text-primary transition-colors" data-path="announcements" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">campaign</span><span class="font-body-md text-body-md">Announcements</span></div></a><a class="flex items-center justify-between px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-subtle hover:text-text-primary transition-colors" data-path="audit-logs" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">receipt_long</span><span class="font-body-md text-body-md">Audit Logs</span></div></a><a class="flex items-center justify-between px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-subtle hover:text-text-primary transition-colors" data-path="configuration" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">tune</span><span class="font-body-md text-body-md">Configuration</span></div></a></nav></div><div class="p-space-4 bg-surface-card flex flex-col gap-space-2"><div class="flex flex-col gap-1"><a class="flex items-center justify-between px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-subtle hover:text-text-primary transition-colors" data-path="notifications" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">notifications</span><span class="font-body-md text-body-md">Notifications</span></div><span class="font-label-badge text-label-badge px-2 py-0.5 rounded-lg bg-blue-soft text-primary">3</span></a><a class="flex items-center justify-between px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-subtle hover:text-text-primary transition-colors" data-path="profile-and-security" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">security</span><span class="font-body-md text-body-md">Profile &amp; Security</span></div></a></div><div class="p-space-3 rounded-lg bg-surface-subtle flex flex-col gap-1"><div class="flex items-center gap-space-2"><span class="w-2 h-2 rounded-full bg-success-text inline-block"></span><span class="font-label-telemetry text-label-telemetry text-text-secondary uppercase tracking-wider">SECURE NODE CLUSTER</span></div><span class="font-data-mono-md text-data-mono-md text-on-surface font-semibold truncate">GOV-DC-CHANDIGARH-01</span><span class="font-label-telemetry text-label-telemetry text-text-muted">TLS 1.3 ENCRYPTED</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-card/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-8"><div class="flex items-center gap-space-4 min-w-0"><div class="flex items-center gap-space-2 shrink-0"><span class="font-headline-sm text-headline-sm text-text-primary tracking-tight font-bold whitespace-nowrap">RESQNET v2.4</span><span class="font-label-telemetry text-label-telemetry text-text-muted uppercase hidden 2xl:inline">(ADMINISTRATION &amp; GOVERNANCE CONSOLE)</span></div><div class="h-4 w-px bg-surface-subtle hidden xl:block"></div><div class="flex items-center gap-space-2 overflow-x-auto py-1"><div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-blue-soft text-primary shrink-0"><span class="material-symbols-outlined text-[14px]">verified</span><span class="font-label-badge text-label-badge uppercase tracking-wider">SECURE ROOT • ZERO TRUST</span></div><div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-success-bg text-success-text shrink-0"><span class="material-symbols-outlined text-[14px]">check_circle</span><span class="font-label-badge text-label-badge uppercase tracking-wider">HEALTHY • 99.98%</span></div><div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-warning-bg text-warning-text shrink-0"><span class="material-symbols-outlined text-[14px]">tsunami</span><span class="font-label-badge text-label-badge uppercase tracking-wider">MONSOON L2</span></div><div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-surface-subtle text-text-secondary shrink-0 hidden lg:inline-flex"><span class="material-symbols-outlined text-[14px]">emergency</span><span class="font-data-mono-md text-data-mono-md uppercase">112 / 1078</span></div></div></div><div class="flex items-center gap-space-4 shrink-0"><div class="flex flex-col text-right hidden sm:flex"><span class="font-headline-sm text-body-md text-text-primary font-semibold leading-tight">Dr. Ananya Roy</span><span class="font-label-telemetry text-label-telemetry text-text-secondary">SEC-LEVEL 4 MASTER</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="w-full pt-16 px-space-8 py-space-6 bg-surface-base min-h-screen"><div class="flex flex-col w-full">
+<div class="flex flex-col gap-space-4 mb-space-6">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-4">
+<div class="flex flex-col gap-1 min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-label-telemetry text-label-telemetry text-text-secondary uppercase tracking-widest">EXECUTIVE GOVERNANCE</span>
+<span class="text-text-muted font-label-telemetry text-label-telemetry">/</span>
+<span class="font-label-telemetry text-label-telemetry text-primary font-bold uppercase tracking-widest">OPERATIONAL METRICS &amp; TRENDS</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight font-bold">PLATFORM ANALYSIS</h1>
+<p class="font-body-md text-body-md text-text-secondary max-w-4xl">
+          System-level insights, incident resolution velocities, statutory accreditation throughput, and relief fund transparency trends.
+        </p>
+</div>
+<div class="flex flex-wrap items-center gap-space-3 shrink-0">
+<div class="inline-flex items-center gap-2 px-space-3 py-2 bg-surface-card rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-primary text-[18px]">calendar_today</span>
+<span class="font-data-mono-md text-data-mono-md text-text-primary">Past 30 Days (Monsoon Phase 2)</span>
+<span class="material-symbols-outlined text-text-muted text-[16px]">expand_more</span>
+</div>
+<button class="inline-flex items-center gap-2 px-space-4 py-2 bg-primary-container text-on-primary rounded-lg font-headline-sm text-headline-sm hover:opacity-90 shadow-sm transition-opacity" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Export Statutory Audit Report</span>
+</button>
+</div>
+</div>
+<div class="w-full bg-blue-soft rounded-lg p-space-3 flex items-center justify-between gap-space-4">
+<div class="flex items-center gap-space-3 min-w-0">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0">verified</span>
+<span class="font-label-telemetry text-label-telemetry text-text-primary tracking-wide">
+          SYSTEM BENCHMARK AUDITED • ALL METRICS DERIVED FROM CRYPTOGRAPHICALLY SIGNED EOC SITREPS AND DIGILOCKER LOGS. ZERO ARTIFICIAL OR SIMULATED SCORING.
+        </span>
+</div>
+<span class="font-data-mono-md text-data-mono-md text-primary font-bold whitespace-nowrap hidden md:inline-block">SHA-256: 7f9a88c3</span>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-4 mb-space-6">
+<div class="bg-surface-card rounded-lg p-space-5 shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-badge text-label-badge uppercase tracking-wider text-text-secondary">Mean Time to Dispatch</span>
+<span class="font-label-telemetry text-label-telemetry text-text-muted">MTTD RESPONSE VELOCITY</span>
+</div>
+<div class="w-8 h-8 rounded-lg bg-blue-soft text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">bolt</span>
+</div>
+</div>
+<div class="mt-space-4 flex items-baseline gap-space-2">
+<span class="font-display-hud text-display-hud text-on-surface leading-none">3.8</span>
+<span class="font-headline-md text-headline-md text-text-secondary font-medium">Mins</span>
+</div>
+<div class="mt-space-3 pt-space-2 bg-surface-subtle -mx-space-5 -mb-space-5 px-space-5 py-space-2 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-success-text text-[16px]">trending_down</span>
+<span class="font-label-badge text-label-badge text-success-text uppercase">24% IMPROVEMENT</span>
+<span class="font-body-sm text-body-sm text-text-muted">vs previous monsoon protocol</span>
+</div>
+</div>
+<div class="bg-surface-card rounded-lg p-space-5 shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-badge text-label-badge uppercase tracking-wider text-text-secondary">Ground Verification</span>
+<span class="font-label-telemetry text-label-telemetry text-text-muted">MTTV FIELD TRIAGE</span>
+</div>
+<div class="w-8 h-8 rounded-lg bg-blue-soft text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">travel_explore</span>
+</div>
+</div>
+<div class="mt-space-4 flex items-baseline gap-space-2">
+<span class="font-display-hud text-display-hud text-on-surface leading-none">22</span>
+<span class="font-headline-md text-headline-md text-text-secondary font-medium">Mins</span>
+</div>
+<div class="mt-space-3 pt-space-2 bg-surface-subtle -mx-space-5 -mb-space-5 px-space-5 py-space-2 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[16px]">cell_tower</span>
+<span class="font-body-sm text-body-sm text-text-secondary">Submitted via encrypted mobile mesh</span>
+</div>
+</div>
+<div class="bg-surface-card rounded-lg p-space-5 shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-badge text-label-badge uppercase tracking-wider text-text-secondary">Relief Mobilized</span>
+<span class="font-label-telemetry text-label-telemetry text-text-muted">DIRECT AID DISPATCH</span>
+</div>
+<div class="w-8 h-8 rounded-lg bg-success-bg text-success-text flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">account_balance_wallet</span>
+</div>
+</div>
+<div class="mt-space-4 flex items-baseline gap-space-2">
+<span class="font-display-hud text-display-hud text-on-surface leading-none">₹14.82</span>
+<span class="font-headline-md text-headline-md text-text-secondary font-medium">Lakhs</span>
+</div>
+<div class="mt-space-3 pt-space-2 bg-surface-subtle -mx-space-5 -mb-space-5 px-space-5 py-space-2 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-success-text text-[16px]">verified</span>
+<span class="font-label-badge text-label-badge text-success-text uppercase">100% VERIFIED</span>
+<span class="font-body-sm text-body-sm text-text-muted">Statutory escrow audit</span>
+</div>
+</div>
+<div class="bg-surface-card rounded-lg p-space-5 shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-badge text-label-badge uppercase tracking-wider text-text-secondary">Statutory Vetting</span>
+<span class="font-label-telemetry text-label-telemetry text-text-muted">SLA CLEARANCE RATIO</span>
+</div>
+<div class="w-8 h-8 rounded-lg bg-blue-soft text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">verified_user</span>
+</div>
+</div>
+<div class="mt-space-4 flex items-baseline gap-space-2">
+<span class="font-display-hud text-display-hud text-on-surface leading-none">96.5%</span>
+</div>
+<div class="mt-space-3 pt-space-2 bg-surface-subtle -mx-space-5 -mb-space-5 px-space-5 py-space-2 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[16px]">timer</span>
+<span class="font-data-mono-md text-data-mono-md text-text-secondary font-semibold">4.2h avg</span>
+<span class="font-body-sm text-body-sm text-text-muted">(12h threshold)</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-6 mb-space-6">
+<div class="xl:col-span-4 bg-surface-card rounded-lg p-space-5 shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">group</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">User &amp; Role Distribution</h2>
+</div>
+<span class="font-label-telemetry text-label-telemetry px-2 py-0.5 rounded-lg bg-surface-subtle text-text-secondary">14,820 TOTAL</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary">Credentialed platform identities across live civil defense sectors.</p>
+</div>
+<div class="my-space-6 flex flex-col gap-space-4">
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-2">
+<div class="w-2.5 h-2.5 rounded-full bg-primary-container"></div>
+<span class="font-body-md text-body-md text-text-primary font-medium">Citizens &amp; Survivors</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-data-mono-md text-data-mono-md text-on-surface font-bold">14,210</span>
+<span class="font-label-telemetry text-label-telemetry text-text-muted">(95.8%)</span>
+</div>
+</div>
+<div class="w-full bg-surface-subtle rounded-full h-2 overflow-hidden">
+<div class="bg-primary-container h-2 rounded-full" style="width: 95.8%"></div>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-2">
+<div class="w-2.5 h-2.5 rounded-full bg-secondary"></div>
+<span class="font-body-md text-body-md text-text-primary font-medium">Responders &amp; Tactical Units</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-data-mono-md text-data-mono-md text-on-surface font-bold">412</span>
+<span class="font-label-telemetry text-label-telemetry text-text-muted">(2.8%)</span>
+</div>
+</div>
+<div class="w-full bg-surface-subtle rounded-full h-2 overflow-hidden">
+<div class="bg-secondary h-2 rounded-full" style="width: 2.8%"></div>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-2">
+<div class="w-2.5 h-2.5 rounded-full bg-warning-text"></div>
+<span class="font-body-md text-body-md text-text-primary font-medium">EOC Coordinators</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-data-mono-md text-data-mono-md text-on-surface font-bold">184</span>
+<span class="font-label-telemetry text-label-telemetry text-text-muted">(1.2%)</span>
+</div>
+</div>
+<div class="w-full bg-surface-subtle rounded-full h-2 overflow-hidden">
+<div class="bg-warning-text h-2 rounded-full" style="width: 1.2%"></div>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-2">
+<div class="w-2.5 h-2.5 rounded-full bg-tertiary"></div>
+<span class="font-body-md text-body-md text-text-primary font-medium">System Administrators</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-data-mono-md text-data-mono-md text-on-surface font-bold">14</span>
+<span class="font-label-telemetry text-label-telemetry text-text-muted">(0.1%)</span>
+</div>
+</div>
+<div class="w-full bg-surface-subtle rounded-full h-2 overflow-hidden">
+<div class="bg-tertiary h-2 rounded-full" style="width: 0.1%"></div>
+</div>
+</div>
+</div>
+<div class="p-space-3 bg-surface-subtle rounded-lg flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-label-badge uppercase tracking-wider text-text-secondary">24H Active Engagement</span>
+<span class="inline-flex items-center gap-1 font-label-badge text-label-badge text-success-text">
+<span class="w-1.5 h-1.5 rounded-full bg-success-text"></span> LIVE SYNC
+          </span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[16px]">person_add</span>
+<span class="font-body-sm text-body-sm text-text-primary font-medium">+182 Enrollments</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-success-text text-[16px]">assignment_turned_in</span>
+<span class="font-body-sm text-body-sm text-text-primary font-medium">100% Coordinator Shift Attendance</span>
+</div>
+</div>
+</div>
+</div>
+<div class="xl:col-span-8 bg-surface-card rounded-lg p-space-5 shadow-sm flex flex-col justify-between">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-2 mb-space-4">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">insights</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Incident Volume &amp; Resolution Velocity</h2>
+</div>
+<span class="font-label-telemetry text-label-telemetry text-text-muted">BREAKDOWN BY STRATEGIC CONTROL DISTRICT</span>
+</div>
+<div class="flex items-center gap-space-3">
+<div class="inline-flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span class="font-label-badge text-label-badge text-text-secondary uppercase">Resolved</span>
+</div>
+<div class="inline-flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-warning-text"></span>
+<span class="font-label-badge text-label-badge text-text-secondary uppercase">In Progress</span>
+</div>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-surface-subtle">
+<th class="py-2.5 px-space-4 font-label-badge text-label-badge uppercase tracking-wider text-text-secondary rounded-l-lg">District Zone</th>
+<th class="py-2.5 px-space-3 font-label-badge text-label-badge uppercase tracking-wider text-text-secondary text-right">Logged</th>
+<th class="py-2.5 px-space-3 font-label-badge text-label-badge uppercase tracking-wider text-text-secondary text-right">Verified</th>
+<th class="py-2.5 px-space-4 font-label-badge text-label-badge uppercase tracking-wider text-text-secondary">Throughput Status</th>
+<th class="py-2.5 px-space-4 font-label-badge text-label-badge uppercase tracking-wider text-text-secondary text-right rounded-r-lg">Clearance</th>
+</tr>
+</thead>
+<tbody class="divide-y-0">
+<tr class="hover:bg-surface-subtle transition-colors">
+<td class="py-3 px-space-4">
+<div class="flex flex-col">
+<span class="font-headline-sm text-body-md text-text-primary font-semibold">Chandigarh Tricity</span>
+<span class="font-label-telemetry text-label-telemetry text-text-muted">SEC-NORTH-01</span>
+</div>
+</td>
+<td class="py-3 px-space-3 font-data-mono-md text-data-mono-md text-right text-text-primary">48</td>
+<td class="py-3 px-space-3 font-data-mono-md text-data-mono-md text-right text-primary font-semibold">42</td>
+<td class="py-3 px-space-4">
+<div class="flex flex-col gap-1 w-48">
+<div class="flex justify-between font-label-telemetry text-label-telemetry text-text-muted">
+<span>38 RESOLVED</span>
+<span>04 STAGED</span>
+</div>
+<div class="w-full bg-surface-subtle rounded-full h-1.5 overflow-hidden flex">
+<div class="bg-primary-container h-1.5" style="width: 79.1%"></div>
+<div class="bg-warning-text h-1.5" style="width: 8.3%"></div>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-4 text-right">
+<span class="inline-flex items-center px-2 py-0.5 rounded-lg font-data-mono-md text-data-mono-md bg-success-bg text-success-text font-bold">88.0%</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-subtle transition-colors">
+<td class="py-3 px-space-4">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-body-md text-text-primary font-semibold">Kamrup Metro (Assam)</span>
+<span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-warning-bg text-warning-text uppercase tracking-wider">FLOOD OPS</span>
+</div>
+<span class="font-label-telemetry text-label-telemetry text-text-muted">SEC-EAST-04</span>
+</div>
+</td>
+<td class="py-3 px-space-3 font-data-mono-md text-data-mono-md text-right text-text-primary">94</td>
+<td class="py-3 px-space-3 font-data-mono-md text-data-mono-md text-right text-primary font-semibold">88</td>
+<td class="py-3 px-space-4">
+<div class="flex flex-col gap-1 w-48">
+<div class="flex justify-between font-label-telemetry text-label-telemetry text-text-muted">
+<span>17 RESOLVED</span>
+<span>71 IN PROGRESS</span>
+</div>
+<div class="w-full bg-surface-subtle rounded-full h-1.5 overflow-hidden flex">
+<div class="bg-primary-container h-1.5" style="width: 18%"></div>
+<div class="bg-warning-text h-1.5" style="width: 75.5%"></div>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-4 text-right">
+<span class="inline-flex items-center px-2 py-0.5 rounded-lg font-data-mono-md text-data-mono-md bg-warning-bg text-warning-text font-bold">Active SLA</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-subtle transition-colors">
+<td class="py-3 px-space-4">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-body-md text-text-primary font-semibold">Ernakulam Coastal (Kerala)</span>
+<span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-blue-soft text-primary uppercase tracking-wider">TIDE WATCH</span>
+</div>
+<span class="font-label-telemetry text-label-telemetry text-text-muted">SEC-SOUTH-02</span>
+</div>
+</td>
+<td class="py-3 px-space-3 font-data-mono-md text-data-mono-md text-right text-text-primary">26</td>
+<td class="py-3 px-space-3 font-data-mono-md text-data-mono-md text-right text-primary font-semibold">24</td>
+<td class="py-3 px-space-4">
+<div class="flex flex-col gap-1 w-48">
+<div class="flex justify-between font-label-telemetry text-label-telemetry text-text-muted">
+<span>22 RESOLVED</span>
+<span>02 STAGED</span>
+</div>
+<div class="w-full bg-surface-subtle rounded-full h-1.5 overflow-hidden flex">
+<div class="bg-primary-container h-1.5" style="width: 84.6%"></div>
+<div class="bg-warning-text h-1.5" style="width: 7.7%"></div>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-4 text-right">
+<span class="inline-flex items-center px-2 py-0.5 rounded-lg font-data-mono-md text-data-mono-md bg-success-bg text-success-text font-bold">84.6%</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-subtle transition-colors">
+<td class="py-3 px-space-4">
+<div class="flex flex-col">
+<span class="font-headline-sm text-body-md text-text-primary font-semibold">Mohali Industrial Corridor</span>
+<span class="font-label-telemetry text-label-telemetry text-text-muted">SEC-NORTH-02</span>
+</div>
+</td>
+<td class="py-3 px-space-3 font-data-mono-md text-data-mono-md text-right text-text-primary">18</td>
+<td class="py-3 px-space-3 font-data-mono-md text-data-mono-md text-right text-primary font-semibold">18</td>
+<td class="py-3 px-space-4">
+<div class="flex flex-col gap-1 w-48">
+<div class="flex justify-between font-label-telemetry text-label-telemetry text-text-muted">
+<span>16 RESOLVED</span>
+<span>02 STAGED</span>
+</div>
+<div class="w-full bg-surface-subtle rounded-full h-1.5 overflow-hidden flex">
+<div class="bg-primary-container h-1.5" style="width: 88.8%"></div>
+<div class="bg-warning-text h-1.5" style="width: 11.2%"></div>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-4 text-right">
+<span class="inline-flex items-center px-2 py-0.5 rounded-lg font-data-mono-md text-data-mono-md bg-success-bg text-success-text font-bold">88.8%</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="mt-space-4 pt-space-3 flex items-center justify-between bg-surface-subtle -mx-space-5 -mb-space-5 px-space-5 py-space-2 rounded-b-lg">
+<span class="font-label-telemetry text-label-telemetry text-text-muted">SURGE CAPACITY METRIC: 91.2% ALLOCATED</span>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[16px]">sync</span>
+<span class="font-data-mono-md text-data-mono-md text-text-secondary">EOC Polling Rate: 30s</span>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-6">
+<div class="xl:col-span-6 bg-surface-card rounded-lg p-space-5 shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">verified</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Statutory Accreditation &amp; Verification Throughput</h2>
+</div>
+<span class="font-label-badge text-label-badge bg-blue-soft text-primary px-2.5 py-1 rounded-lg">168 TOTAL AUDITED</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary mb-space-4">
+          Strict verification funnel for responding NGOs, tactical medical units, and vehicle fleets.
+        </p>
+<div class="grid grid-cols-3 gap-space-3 mb-space-5">
+<div class="p-space-3 rounded-lg bg-success-bg flex flex-col gap-1">
+<span class="font-label-badge text-label-badge text-success-text uppercase">Approved &amp; Chartered</span>
+<span class="font-display-hud-mobile text-display-hud-mobile text-success-text leading-none">142</span>
+<span class="font-label-telemetry text-label-telemetry text-text-secondary">84.5% of pipeline</span>
+</div>
+<div class="p-space-3 rounded-lg bg-critical-bg flex flex-col gap-1">
+<span class="font-label-badge text-label-badge text-critical-text uppercase">Rejected / Incomplete</span>
+<span class="font-display-hud-mobile text-display-hud-mobile text-critical-text leading-none">18</span>
+<span class="font-label-telemetry text-label-telemetry text-text-secondary">10.7% of pipeline</span>
+</div>
+<div class="p-space-3 rounded-lg bg-warning-bg flex flex-col gap-1">
+<span class="font-label-badge text-label-badge text-warning-text uppercase">Pending Review</span>
+<span class="font-display-hud-mobile text-display-hud-mobile text-warning-text leading-none">08</span>
+<span class="font-label-telemetry text-label-telemetry text-text-secondary">4.8% of pipeline</span>
+</div>
+</div>
+<div class="p-space-4 bg-surface-subtle rounded-lg flex flex-col gap-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-critical-text text-[18px]">error</span>
+<span class="font-headline-sm text-body-md text-text-primary font-semibold">Primary Rejection Factors (Audit Breakdown)</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary">
+            Incomplete 12A/80G statutory seal (61.1%) or lack of GPS-tagged vehicle inspection records (38.9%). All rejected applicants have been issued automated statutory rectifications via DigiLocker with a 72-hour grace window.
+          </p>
+</div>
+</div>
+<div class="mt-space-4 pt-space-2 flex items-center justify-between text-text-muted">
+<span class="font-label-telemetry text-label-telemetry">DIGILOCKER API STATUS: SYNCHRONIZED</span>
+<span class="font-data-mono-md text-data-mono-md text-primary font-medium">Audit Protocol v4.1</span>
+</div>
+</div>
+<div class="xl:col-span-6 bg-surface-card rounded-lg p-space-5 shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">account_balance</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Verified Relief Crowdfunding Transparency</h2>
+</div>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-success-bg text-success-text font-label-badge text-label-badge font-bold uppercase">
+<span class="material-symbols-outlined text-[14px]">lock</span> ESCROW AUDITED
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary mb-space-4">
+          Statutory escrow tracking for public disaster relief funds. Direct cryptographic vendor payouts only.
+        </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-4 mb-space-5">
+<div class="p-space-4 bg-surface-subtle rounded-lg flex flex-col gap-1">
+<span class="font-label-badge text-label-badge text-text-secondary uppercase tracking-wider">Total Escrow Mobilized</span>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-xl text-headline-xl text-on-surface font-bold">₹8,42,500</span>
+<span class="font-label-telemetry text-label-telemetry text-success-text font-bold">2 CAMPAIGNS</span>
+</div>
+<span class="font-body-sm text-body-sm text-text-muted mt-1">100% verified against SBI Disaster Relief Escrow</span>
+</div>
+<div class="p-space-4 bg-surface-subtle rounded-lg flex flex-col gap-1">
+<span class="font-label-badge text-label-badge text-text-secondary uppercase tracking-wider">Disbursed for Hardware</span>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-xl text-headline-xl text-on-surface font-bold">₹1,80,000</span>
+<span class="font-label-telemetry text-label-telemetry text-primary font-bold">SEALED</span>
+</div>
+<span class="font-body-sm text-body-sm text-text-muted mt-1">Industrial purification bladders procured &amp; tagged</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-2">
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-text-secondary">Disbursement Velocity &amp; Escrow Balance</span>
+<span class="font-data-mono-md text-data-mono-md text-text-primary font-semibold">₹6,62,500 Remaining (78.6%)</span>
+</div>
+<div class="w-full bg-surface-subtle rounded-full h-3 overflow-hidden flex">
+<div class="bg-primary-container h-3" style="width: 21.4%"></div>
+<div class="bg-secondary-container h-3" style="width: 78.6%"></div>
+</div>
+<div class="flex justify-between items-center font-label-telemetry text-label-telemetry text-text-muted mt-1">
+<span>21.4% EXPENDED (EQUIPMENT SEALED)</span>
+<span>ESCROW ACC: **** 9081 (SBI GOV TRICITY)</span>
+</div>
+</div>
+</div>
+<div class="mt-space-5 pt-space-3 bg-surface-subtle -mx-space-5 -mb-space-5 px-space-5 py-space-2 rounded-b-lg flex flex-wrap items-center justify-between gap-space-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-success-text text-[16px]">verified</span>
+<span class="font-label-telemetry text-label-telemetry text-text-primary font-semibold">100% MATCH WITH RBI ESCROW DISASTER CLEARANCE</span>
+</div>
+<button class="font-headline-sm text-body-sm text-primary font-bold hover:underline inline-flex items-center gap-1" type="button">
+<span>View Bank Audit Ledger</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<div class="mt-space-6 flex flex-col md:flex-row items-center justify-between gap-space-4 py-space-3 bg-surface-card rounded-lg px-space-5 shadow-sm">
+<div class="flex items-center gap-space-3">
+<div class="w-2.5 h-2.5 rounded-full bg-success-text animate-pulse"></div>
+<span class="font-data-mono-md text-data-mono-md text-text-primary">
+        Live Telemetry Ingestion Node: <span class="font-bold">GOV-DC-CHANDIGARH-01</span> • Latency: 14ms
+      </span>
+</div>
+<div class="flex items-center gap-space-4">
+<span class="font-label-telemetry text-label-telemetry text-text-muted uppercase">Data Retention: 7 Years (Statutory Civil Defense Norms)</span>
+<div class="h-3 w-px bg-surface-subtle"></div>
+<span class="font-label-telemetry text-label-telemetry text-primary font-bold uppercase">ISO 27001 / NDMA ALIGNED</span>
+</div>
+</div>
+</div></main></div></body></html>

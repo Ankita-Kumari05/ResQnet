@@ -1,0 +1,386 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary": "#000000", "surface-container-low": "#eff4ff", "on-tertiary-fixed": "#410002", "on-secondary": "#ffffff", "on-secondary-fixed": "#001d31", "inverse-primary": "#bec6e0", "on-background": "#0b1c30", "error-container": "#ffdad6", "on-error-container": "#93000a", "on-secondary-container": "#00476e", "surface-dim": "#cbdbf5", "background": "#f8f9ff", "on-primary-container": "#7c839b", "outline-variant": "#c6c6cd", "tertiary-container": "#410002", "on-primary-fixed-variant": "#3f465c", "secondary-container": "#5bb8fe", "surface-container-high": "#dce9ff", "surface-bright": "#f8f9ff", "primary": "#000000", "surface-container": "#e5eeff", "primary-fixed": "#dae2fd", "surface-container-highest": "#d3e4fe", "error": "#ba1a1a", "on-error": "#ffffff", "primary-container": "#131b2e", "on-tertiary-container": "#f63a35", "primary-fixed-dim": "#bec6e0", "on-primary-fixed": "#131b2e", "on-primary": "#ffffff", "inverse-on-surface": "#eaf1ff", "surface": "#f8f9ff", "secondary-fixed": "#cce5ff", "on-surface-variant": "#45464d", "inverse-surface": "#213145", "tertiary-fixed": "#ffdad6", "surface-variant": "#d3e4fe", "on-secondary-fixed-variant": "#004b73", "surface-container-lowest": "#ffffff", "secondary": "#006398", "secondary-fixed-dim": "#93ccff", "tertiary-fixed-dim": "#ffb4ab", "on-surface": "#0b1c30", "surface-tint": "#565e74", "on-tertiary-fixed-variant": "#93000b", "on-tertiary": "#ffffff", "outline": "#76777d" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-6": "24px", "space-2": "8px", "space-5": "20px", "gutter-expanded": "24px", "margin-desktop": "32px", "space-4": "16px", "gutter-standard": "16px", "space-3": "12px", "margin-mobile": "16px", "space-10": "40px", "space-1": "4px", "space-8": "32px", "space-12": "48px", "gutter-dense": "8px", "space-0": "0px", "margin-tablet": "24px", "space-16": "64px" }, "fontFamily": { "data-mono-lg": [ "JetBrains Mono" ], "data-mono-md": [ "JetBrains Mono" ], "label-badge": [ "Public Sans" ], "display-hud-mobile": [ "JetBrains Mono" ], "headline-md": [ "Public Sans" ], "display-hud": [ "JetBrains Mono" ], "headline-xl": [ "Public Sans" ], "body-sm": [ "Public Sans" ], "label-telemetry": [ "JetBrains Mono" ], "body-lg": [ "Public Sans" ], "headline-xl-mobile": [ "Public Sans" ], "body-md": [ "Public Sans" ], "headline-sm": [ "Public Sans" ], "headline-lg": [ "Public Sans" ] }, "fontSize": { "data-mono-lg": [ "18px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "data-mono-md": [ "13px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "500" } ], "label-badge": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "700" } ], "display-hud-mobile": [ "32px", { "lineHeight": "36px", "letterSpacing": "-0.03em", "fontWeight": "700" } ], "headline-md": [ "20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "display-hud": [ "48px", { "lineHeight": "52px", "letterSpacing": "-0.04em", "fontWeight": "700" } ], "headline-xl": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.025em", "fontWeight": "700" } ], "body-sm": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "400" } ], "label-telemetry": [ "10px", { "lineHeight": "12px", "letterSpacing": "0.08em", "fontWeight": "500" } ], "body-lg": [ "16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" } ], "headline-xl-mobile": [ "26px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "body-md": [ "14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" } ], "headline-sm": [ "16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "600" } ], "headline-lg": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" } ] } } } }</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 pointer-events-none"><div class="h-20 w-full px-space-4 md:px-space-8 flex items-center justify-between max-w-7xl mx-auto"><div class="pointer-events-auto flex items-center gap-space-3 bg-surface-container-lowest/90 backdrop-blur-md px-space-3 py-space-2 rounded-full shadow-[0_1px_8px_rgba(0,0,0,0.06)]"><img alt="Modern, clean, minimalist brand logo for ResQnet - disaster management and emergency response network. Featuring a protective shield icon interwoven with a tactical pulse/network node symbol in dependable deep navy (#0f172a) and calm primary blue (#2563eb).. Brand logo. - Primary color: #0f172a
+- Font: publicSans
+- Mode: light
+- Roundness: rounded-sm
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VsV9gXTDOnr-Yeh2GepA-NCV-WAWdtb13-PgkjkzewZFtXFguX04w3UircQbz6DNih-kzVSvLBqRcsdTQr6ioXPxQJWE5h0Va08zzcBbdOkaG7GjnNxioNY0NkNeyRaa7L6gCWu5xSADkhe-2j4Qu4jMRJEPWb8NwsNGElwyPueuNFVCLIMGyPg-gl57h-xE2WJ5Z4jGiUSm-imSfyUrhYwqKegEvQ1DXBbMWxnOeyUWffkgIACji02wYM"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight pr-space-1">ResQnet</span></div><div class="pointer-events-auto flex-1 max-w-lg mx-space-4 hidden sm:flex items-center bg-surface-container-lowest/95 backdrop-blur-md px-space-4 py-space-2 rounded-full shadow-[0_1px_8px_rgba(0,0,0,0.06)]"><span class="material-symbols-outlined text-outline mr-space-2">search</span><span class="font-body-sm text-body-sm text-outline flex-1 truncate">Search places, shelters, hospitals, roads...</span><span class="font-label-telemetry text-label-telemetry uppercase bg-surface-container px-space-2 py-space-1 rounded text-on-surface-variant">GPS Active</span></div><div class="pointer-events-auto flex items-center gap-space-3"><div class="hidden lg:flex items-center gap-space-2 bg-surface-container-lowest/90 backdrop-blur-md px-space-3 py-space-2 rounded-full shadow-[0_1px_8px_rgba(0,0,0,0.06)]"><span class="material-symbols-outlined text-secondary text-sm">emergency</span><span class="font-data-mono-md text-data-mono-md text-secondary">112 / 1078</span><span class="font-label-badge text-label-badge uppercase text-outline px-space-1">Unified SOS</span></div><div class="flex items-center gap-space-2 bg-surface-container-lowest/90 backdrop-blur-md p-space-1 pr-space-3 rounded-full shadow-[0_1px_8px_rgba(0,0,0,0.06)]"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><span class="font-headline-sm text-headline-sm text-on-surface hidden md:inline-block pr-space-1">Simran Kaur</span></div></div></div></header><main class="w-full pt-20 pb-24 min-h-screen bg-surface relative"><div class="flex flex-col w-full">
+<!-- Status Scrim & Decorative Telemetry Mesh -->
+<div class="relative w-full max-w-7xl mx-auto px-space-4 md:px-space-8 pt-space-4 pb-space-12">
+<!-- Title / Scope Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-4 mb-space-8">
+<div class="space-y-space-1">
+<div class="flex items-center gap-space-2 text-secondary">
+<span class="material-symbols-outlined text-sm">satellite_alt</span>
+<span class="font-label-telemetry text-label-telemetry uppercase tracking-wider">Citizen Transparency Node • GPS Verified</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl tracking-tight text-on-surface">My Emergency Reports</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+          Track real-time verification and response team dispatch for your submitted incidents.
+        </p>
+</div>
+<!-- Live Pipeline Health Counter -->
+<div class="flex items-center gap-space-3 bg-surface-container-lowest p-space-2 px-space-4 rounded-xl shadow-sm">
+<div class="relative flex items-center justify-center">
+<span class="w-3 h-3 rounded-full bg-secondary-container animate-ping absolute"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-badge text-label-badge uppercase text-outline">Live Telemetry Link</span>
+<span class="font-data-mono-md text-data-mono-md text-on-surface">Synchronized • 2s ago</span>
+</div>
+</div>
+</div>
+<!-- Active Incident Anchor Card (Primary Focus) -->
+<div class="w-full bg-surface-container-lowest rounded-xl shadow-md overflow-hidden mb-space-10">
+<!-- Card Top Bar: Dual Codes & Urgency Tier -->
+<div class="bg-surface-container-low px-space-6 py-space-4 flex flex-wrap items-center justify-between gap-space-4">
+<div class="flex items-center gap-space-3">
+<span class="bg-primary text-on-primary font-data-mono-md text-data-mono-md px-space-3 py-space-1 rounded-full">
+            #RQ-INC-2026-0148
+          </span>
+<span class="font-label-badge text-label-badge uppercase text-outline">Waterlogging &amp; Electrical Hazard</span>
+</div>
+<div class="flex items-center gap-space-2">
+<!-- Verification Pill -->
+<div class="flex items-center gap-space-1 px-space-3 py-space-1 rounded-full bg-surface-container-high text-on-surface">
+<span class="material-symbols-outlined text-sm text-secondary" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label-badge text-label-badge tracking-wider uppercase">VERIFIED</span>
+</div>
+<!-- Real-Time Dispatched State Pill -->
+<div class="flex items-center gap-space-1 px-space-3 py-space-1 rounded-full bg-secondary-fixed text-on-secondary-fixed">
+<span class="material-symbols-outlined text-sm">navigation</span>
+<span class="font-label-badge text-label-badge tracking-wider uppercase">Responder En Route</span>
+</div>
+</div>
+</div>
+<!-- Incident Meta & Geolocation Grid -->
+<div class="p-space-6 grid grid-cols-1 lg:grid-cols-12 gap-space-8">
+<!-- Left: Incident Overview & Reassurance Dossier (7 Cols) -->
+<div class="lg:col-span-7 flex flex-col justify-between space-y-space-6">
+<div class="space-y-space-4">
+<div>
+<div class="font-label-telemetry text-label-telemetry uppercase text-outline mb-space-1">Reported Geolocation</div>
+<div class="flex items-start gap-space-2 text-on-surface">
+<span class="material-symbols-outlined text-secondary text-xl mt-0.5">location_on</span>
+<span class="font-headline-md text-headline-md leading-tight">Sector 22-B Commercial Plaza, Chandigarh</span>
+</div>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-space-4 bg-surface-container-low p-space-4 rounded-xl">
+<div>
+<span class="font-label-telemetry text-label-telemetry uppercase text-outline block">Submitted</span>
+<span class="font-data-mono-md text-data-mono-md text-on-surface">Today, 12:32 PM</span>
+</div>
+<div>
+<span class="font-label-telemetry text-label-telemetry uppercase text-outline block">Category</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold">Urban Flooding</span>
+</div>
+<div>
+<span class="font-label-telemetry text-label-telemetry uppercase text-outline block">Risk Evaluation</span>
+<span class="font-body-md text-body-md text-error font-semibold">Priority Code 2</span>
+</div>
+</div>
+<!-- Citizen Reassurance Directive Box -->
+<div class="bg-surface-container rounded-xl p-space-5 space-y-space-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-2 text-on-surface">
+<span class="material-symbols-outlined text-secondary">shield</span>
+<span class="font-headline-sm text-headline-sm">Active Mobilization Briefing</span>
+</div>
+<span class="bg-secondary text-on-secondary px-space-2 py-space-1 rounded font-data-mono-md text-data-mono-md">ETA: 8 MIN</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                SDRF Quick Response Unit #04 dispatched from Sector 17 Sub-Station. Crew equipped with industrial de-watering pumping array and electrical circuit isolation gear. Keep clear of submerged transformers.
+              </p>
+<div class="flex flex-wrap items-center gap-x-space-6 gap-y-space-2 pt-space-2">
+<div class="flex items-center gap-space-2">
+<span class="material-symbols-outlined text-outline text-base">badge</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Lead Officer: <strong class="text-on-surface">Insp. Rajesh Kumar</strong></span>
+</div>
+<div class="flex items-center gap-space-2">
+<span class="material-symbols-outlined text-outline text-base">local_shipping</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Unit: <strong class="text-on-surface">SDRF-QRU4 (Hydra P-1)</strong></span>
+</div>
+</div>
+</div>
+</div>
+<!-- Direct Dispatch Helpline & Evidence Triggers -->
+<div class="flex flex-wrap items-center gap-space-3 pt-space-2">
+<a class="flex items-center gap-space-2 px-space-4 py-space-3 bg-primary text-on-primary rounded-lg font-headline-sm text-headline-sm hover:bg-primary-container transition-colors shadow-sm" href="tel:01722700112">
+<span class="material-symbols-outlined text-xl">call</span>
+<span>Call Dispatch Desk (0172-2700112)</span>
+</a>
+<button class="flex items-center gap-space-2 px-space-4 py-space-3 bg-surface-container hover:bg-surface-container-high text-on-surface rounded-lg font-headline-sm text-headline-sm transition-colors" id="evidence-trigger-btn">
+<span class="material-symbols-outlined text-xl">add_photo_alternate</span>
+<span>Add Supporting Evidence</span>
+</button>
+</div>
+</div>
+<!-- Right: Map Anchor & User Uploaded Gallery (5 Cols) -->
+<div class="lg:col-span-5 flex flex-col space-y-space-4">
+<!-- GIS Sector Location Snap -->
+<div class="relative w-full h-44 rounded-xl overflow-hidden bg-surface-container-high shadow-inner">
+<div class="w-full h-full bg-cover bg-center" data-location="Sector 22-B, Chandigarh, India" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDKrcKV3bAe0PACYlRPNmg25wg76tQ7nW8zZ4qOXXsVCKbRwpyqf-IGXEWBcx0YIC7KqmpgBTTrhlJvxQHqnuS9vbyqipFhn1OYhMZaz7sJ-x-hqBRUGXn4bUpNccRIOlj1zFB35cumjuRP2rhqIX05ritqr6FxxIlu3PSdpLbFaDqEWnx5Q-1NntT27Djdl1a8oaAOTtE-YwnbBkpbgvbBStg5esmITEBcLx25o7_yXIv_Lg6T84Yryw')"></div>
+<div class="absolute top-space-2 left-space-2 bg-surface-container-lowest/90 backdrop-blur-md px-space-2 py-space-1 rounded font-label-telemetry text-label-telemetry text-on-surface flex items-center gap-space-1">
+<span class="material-symbols-outlined text-xs text-error">radar</span>
+<span>SECTOR 22-B GRID 4</span>
+</div>
+<div class="absolute bottom-space-2 right-space-2 bg-primary/80 backdrop-blur-md px-space-2 py-space-1 rounded font-data-mono-md text-data-mono-md text-on-primary text-xs">
+              30.7352° N, 76.7794° E
+            </div>
+</div>
+<!-- Submitted Media Gallery -->
+<div class="space-y-space-2">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-label-badge uppercase text-outline">Citizen Submitted Media (2 Photos)</span>
+<span class="font-body-sm text-body-sm text-secondary">Verified Clean Metadata</span>
+</div>
+<div class="grid grid-cols-2 gap-space-3">
+<!-- Thumbnail 1 -->
+<div class="group relative h-28 rounded-lg overflow-hidden bg-surface-container cursor-pointer" onclick="openMediaModal('https://images.unsplash.com/photo-1547683905-f686c993aae5?auto=format&amp;fit=crop&amp;w=800&amp;q=80', 'Rising flood waters near substation generator box')">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Severe urban monsoon waterlogging inundating commercial street pavement with water up to vehicle wheel hubs next to concrete transformer foundation under dark rainy overcast sky." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAD4YsUH2-LWg2CCGCOsltW5jv7MZw1539UgNvW19ip82BpSlgtxLNmYZn7KzfUf8Hi5wBIvD0FSY1iHuxruoIMkJKOWtCZtqUzMmDrIzgmTHsvWuEHiO7oP_CBbKXyhaX97Xlc67-8LEbyFQ_L2nJPsF52ud6tQPrjgkIROw4SEitMhiP7voUVjf6QAyaTZZRpcVoCHKFafKuZ86zm0M1jm5f1dp8I9fCLc8SlqA74BcNKfa24Yo1H8A">
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent flex items-end p-space-2">
+<span class="font-label-telemetry text-label-telemetry text-on-primary flex items-center gap-space-1">
+<span class="material-symbols-outlined text-xs">zoom_in</span> Evidence #1
+                  </span>
+</div>
+</div>
+<!-- Thumbnail 2 -->
+<div class="group relative h-28 rounded-lg overflow-hidden bg-surface-container cursor-pointer" onclick="openMediaModal('https://images.unsplash.com/photo-1515694346937-94d85e41e6f0?auto=format&amp;fit=crop&amp;w=800&amp;q=80', 'Submerged power distribution unit with caution signage')">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Close inspection shot of an outdoor electrical power distribution box submerged at ground level in murky floodwater with orange high-voltage hazard warning sticker visible." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnpZfTGW8s_0uTYzstG5-TydctcIYPMen9udYIiHZyUU8noQMb4XtajI2CA0X0H-sA57KjXu3lj_4dH1pdEFqfr-XtGiu16yMID9HJfcPfyVaqIG1BoVGIHTfITw7J2wW1NxErSsWoZ3Ms8BF8WizJSFVm7TXJhAYZsb8zll_rcAA5svV7-MZrqUKadJ_aIGgx_PSy5XmpHUxCFZzgAktP0BAmzRuzjOfmw-yDbFYf5vkjmYUJtrZwLg">
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent flex items-end p-space-2">
+<span class="font-label-telemetry text-label-telemetry text-on-primary flex items-center gap-space-1">
+<span class="material-symbols-outlined text-xs">zoom_in</span> Evidence #2
+                  </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 7-Stage Full Citizen Milestone Timeline -->
+<div class="p-space-6 bg-surface-container-lowest">
+<div class="flex items-center justify-between mb-space-6">
+<div class="flex items-center gap-space-2">
+<span class="material-symbols-outlined text-secondary">timeline</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Incident Milestone Progression</h2>
+</div>
+<span class="font-label-telemetry text-label-telemetry uppercase text-outline">STAGE 5 OF 7 ACTIVE</span>
+</div>
+<!-- Desktop Horizontal / Multi-row Timeline Tracker -->
+<div class="relative w-full">
+<div class="grid grid-cols-1 md:grid-cols-7 gap-space-4 relative z-10">
+<!-- Stage 1: Submitted -->
+<div class="flex md:flex-col items-center md:items-start gap-space-3 md:gap-space-2 bg-surface-container-low md:bg-transparent p-space-3 md:p-0 rounded-lg">
+<div class="flex items-center md:w-full">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-data-mono-md text-data-mono-md shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-base">check</span>
+</div>
+<div class="hidden md:block flex-1 h-0.5 bg-primary ml-space-2"></div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="font-label-badge text-label-badge uppercase text-primary">1. Submitted</div>
+<div class="font-data-mono-md text-data-mono-md text-on-surface-variant">12:32 PM</div>
+<div class="font-body-sm text-body-sm text-outline truncate hidden md:block">Report Logged</div>
+</div>
+</div>
+<!-- Stage 2: Under Review -->
+<div class="flex md:flex-col items-center md:items-start gap-space-3 md:gap-space-2 bg-surface-container-low md:bg-transparent p-space-3 md:p-0 rounded-lg">
+<div class="flex items-center md:w-full">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-data-mono-md text-data-mono-md shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-base">check</span>
+</div>
+<div class="hidden md:block flex-1 h-0.5 bg-primary ml-space-2"></div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="font-label-badge text-label-badge uppercase text-primary">2. Under Review</div>
+<div class="font-data-mono-md text-data-mono-md text-on-surface-variant">12:35 PM</div>
+<div class="font-body-sm text-body-sm text-outline truncate hidden md:block">Desk Screening</div>
+</div>
+</div>
+<!-- Stage 3: Verified -->
+<div class="flex md:flex-col items-center md:items-start gap-space-3 md:gap-space-2 bg-surface-container-low md:bg-transparent p-space-3 md:p-0 rounded-lg">
+<div class="flex items-center md:w-full">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-data-mono-md text-data-mono-md shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-base">check</span>
+</div>
+<div class="hidden md:block flex-1 h-0.5 bg-primary ml-space-2"></div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="font-label-badge text-label-badge uppercase text-primary">3. Verified</div>
+<div class="font-data-mono-md text-data-mono-md text-on-surface-variant">12:38 PM</div>
+<div class="font-body-sm text-body-sm text-outline truncate hidden md:block">Triaged by Cell</div>
+</div>
+</div>
+<!-- Stage 4: Responder Assigned -->
+<div class="flex md:flex-col items-center md:items-start gap-space-3 md:gap-space-2 bg-surface-container-low md:bg-transparent p-space-3 md:p-0 rounded-lg">
+<div class="flex items-center md:w-full">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-data-mono-md text-data-mono-md shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-base">check</span>
+</div>
+<div class="hidden md:block flex-1 h-0.5 bg-secondary ml-space-2"></div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="font-label-badge text-label-badge uppercase text-primary">4. Assigned</div>
+<div class="font-data-mono-md text-data-mono-md text-on-surface-variant">12:41 PM</div>
+<div class="font-body-sm text-body-sm text-outline truncate hidden md:block">SDRF Unit #04</div>
+</div>
+</div>
+<!-- Stage 5: Responder En Route (ACTIVE STEP) -->
+<div class="flex md:flex-col items-center md:items-start gap-space-3 md:gap-space-2 bg-secondary-fixed/40 md:bg-transparent p-space-3 md:p-0 rounded-lg shadow-sm md:shadow-none">
+<div class="flex items-center md:w-full">
+<div class="relative w-8 h-8 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-data-mono-md text-data-mono-md shrink-0 shadow-md">
+<span class="w-10 h-10 rounded-full bg-secondary-container animate-ping absolute opacity-60"></span>
+<span class="material-symbols-outlined text-base">navigation</span>
+</div>
+<div class="hidden md:block flex-1 h-0.5 bg-surface-container-high ml-space-2"></div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="font-label-badge text-label-badge uppercase text-secondary font-bold">5. En Route</div>
+<div class="font-data-mono-md text-data-mono-md text-secondary">12:44 PM (ETA 8m)</div>
+<div class="font-body-sm text-body-sm text-on-secondary-container font-semibold truncate hidden md:block">Dispatched</div>
+</div>
+</div>
+<!-- Stage 6: Response in Progress (Pending) -->
+<div class="flex md:flex-col items-center md:items-start gap-space-3 md:gap-space-2 opacity-50 p-space-3 md:p-0">
+<div class="flex items-center md:w-full">
+<div class="w-8 h-8 rounded-full bg-surface-container text-outline flex items-center justify-center font-data-mono-md text-data-mono-md shrink-0">
+<span>6</span>
+</div>
+<div class="hidden md:block flex-1 h-0.5 bg-surface-container-high ml-space-2"></div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="font-label-badge text-label-badge uppercase text-on-surface-variant">6. In Progress</div>
+<div class="font-data-mono-md text-data-mono-md text-outline">Pending</div>
+<div class="font-body-sm text-body-sm text-outline truncate hidden md:block">On-Scene Ops</div>
+</div>
+</div>
+<!-- Stage 7: Resolved (Pending) -->
+<div class="flex md:flex-col items-center md:items-start gap-space-3 md:gap-space-2 opacity-50 p-space-3 md:p-0">
+<div class="flex items-center md:w-full">
+<div class="w-8 h-8 rounded-full bg-surface-container text-outline flex items-center justify-center font-data-mono-md text-data-mono-md shrink-0">
+<span>7</span>
+</div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="font-label-badge text-label-badge uppercase text-on-surface-variant">7. Resolved</div>
+<div class="font-data-mono-md text-data-mono-md text-outline">Pending</div>
+<div class="font-body-sm text-body-sm text-outline truncate hidden md:block">Safety All-Clear</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Prior Incident Records / Archive Stack -->
+<div class="space-y-space-4">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Resolved &amp; Historical Submissions</h3>
+<span class="font-body-sm text-body-sm text-outline">1 Previous Report</span>
+</div>
+<!-- Secondary Past Report Entry -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-5 flex flex-col md:flex-row items-start md:items-center justify-between gap-space-4 shadow-sm hover:bg-surface-bright transition-colors">
+<div class="flex items-start gap-space-4">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-xl">park</span>
+</div>
+<div class="space-y-space-1">
+<div class="flex items-center gap-space-2">
+<span class="font-data-mono-md text-data-mono-md text-on-surface font-semibold">#RQ-INC-2026-0092</span>
+<span class="font-body-sm text-body-sm text-outline">• Fallen Tree Branch near Jan Marg</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Obstruction cleared by Municipal Horticulture Rapid Taskforce. Traffic flow restored.
+            </p>
+</div>
+</div>
+<div class="flex items-center gap-space-4 self-end md:self-center">
+<div class="flex items-center gap-space-1 px-space-3 py-space-1 rounded-full bg-surface-container-high text-on-surface font-label-badge text-label-badge uppercase">
+<span class="material-symbols-outlined text-sm text-primary">task_alt</span>
+<span>Resolved (2 days ago)</span>
+</div>
+<button class="p-space-2 text-outline hover:text-on-surface rounded-full transition-colors" title="View SITREP archive">
+<span class="material-symbols-outlined text-lg">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Client Interactive Evidence Modal (Hidden by Default) -->
+<div class="fixed inset-0 z-50 bg-primary-container/60 backdrop-blur-sm hidden flex items-center justify-center p-space-4" id="evidence-modal">
+<div class="bg-surface-container-lowest rounded-xl max-w-lg w-full p-space-6 shadow-xl space-y-space-4 relative">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-2">
+<span class="material-symbols-outlined text-secondary">upload_file</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Add Supporting Evidence</h3>
+</div>
+<button class="text-outline hover:text-on-surface p-space-1 rounded-full" id="close-modal-btn">
+<span class="material-symbols-outlined text-xl">close</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Attach updated photos, water level marks, or local hazard notes for <strong>#RQ-INC-2026-0148</strong>. This directly reaches Responder Rajesh Kumar.
+      </p>
+<div class="border-2 border-dashed border-outline-variant rounded-lg p-space-6 text-center space-y-space-2 hover:bg-surface-container-low transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-3xl text-secondary">add_a_photo</span>
+<div class="font-body-md text-body-md text-on-surface">Tap to take photo or choose files</div>
+<div class="font-label-telemetry text-label-telemetry text-outline uppercase">JPG, PNG, MP4 up to 25MB • Automated Exif Stripping</div>
+</div>
+<div class="space-y-space-1">
+<label class="font-label-badge text-label-badge uppercase text-outline">Observations / Remarks</label>
+<textarea class="w-full bg-surface-container-low rounded-lg p-space-3 font-body-sm text-body-sm text-on-surface outline-none focus:bg-surface-container-lowest transition-all" placeholder="e.g., Water receded by 2 inches, but transformer sparks noted..." rows="3"></textarea>
+</div>
+<div class="flex justify-end gap-space-2 pt-space-2">
+<button class="px-space-4 py-space-2 rounded-lg font-headline-sm text-headline-sm text-on-surface hover:bg-surface-container transition-colors" id="cancel-modal-btn">Cancel</button>
+<button class="px-space-4 py-space-2 rounded-lg font-headline-sm text-headline-sm bg-secondary text-on-secondary hover:bg-secondary-container hover:text-on-secondary-container transition-colors" id="submit-evidence-btn">Submit to SDRF Unit</button>
+</div>
+</div>
+</div>
+<!-- Media Lightbox Modal (Full Photo Viewer) -->
+<div class="fixed inset-0 z-50 bg-primary/95 hidden flex flex-col items-center justify-center p-space-4" id="media-lightbox">
+<button class="absolute top-space-6 right-space-6 text-on-primary p-space-2 rounded-full hover:bg-white/10 transition-colors" id="close-lightbox-btn">
+<span class="material-symbols-outlined text-2xl">close</span>
+</button>
+<div class="max-w-3xl w-full flex flex-col items-center space-y-space-3">
+<img class="max-h-[768px] w-auto object-contain rounded-lg shadow-2xl" data-alt="Enlarged forensic incident submission photo showing ground water depth and surrounding street infrastructure" id="lightbox-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcwMay5xmLEZdclLgmVPdFz-xST17fINRwiGBs0shJZA_WuN-tpLssaAa3NfZzfiiu5hSPTb3HPZmov5KsI_asO9n9ScSAMI1D0T9UhfqGSkH72_B7zYYVBf3Jb4AvAwQlN98B2psVlEnrysB0HSsF330JKuY_80__QA1bvYV2sY915zIS55Wakb_8fmSuWRdGOqL_9-x4KR7Un7o8bpONvLNwS2Ac_61o4s11tfNIc2dc5rbDe427mg">
+<p class="font-body-md text-body-md text-on-primary/90 text-center" id="lightbox-caption"></p>
+<span class="font-label-telemetry text-label-telemetry text-on-primary/60 uppercase">Citizen Verified Forensic Attachment</span>
+</div>
+</div>
+<script>
+    // Simple Modal Handlers for Evidence and Lightbox
+    const modal = document.getElementById('evidence-modal');
+    const openBtn = document.getElementById('evidence-trigger-btn');
+    const closeBtn = document.getElementById('close-modal-btn');
+    const cancelBtn = document.getElementById('cancel-modal-btn');
+    const submitBtn = document.getElementById('submit-evidence-btn');
+
+    if(openBtn) openBtn.onclick = () => modal.classList.remove('hidden');
+    if(closeBtn) closeBtn.onclick = () => modal.classList.add('hidden');
+    if(cancelBtn) cancelBtn.onclick = () => modal.classList.add('hidden');
+    if(submitBtn) submitBtn.onclick = () => {
+      submitBtn.innerText = "Transmitting...";
+      setTimeout(() => {
+        modal.classList.add('hidden');
+        submitBtn.innerText = "Submit to SDRF Unit";
+        alert("Evidence attached directly to Dispatcher & SDRF Unit #04 dispatch console.");
+      }, 700);
+    };
+
+    const lightbox = document.getElementById('media-lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+    const closeLightbox = document.getElementById('close-lightbox-btn');
+
+    window.openMediaModal = function(src, caption) {
+      if(lightbox && lightboxImg && lightboxCaption) {
+        lightboxImg.src = src;
+        lightboxCaption.innerText = caption;
+        lightbox.classList.remove('hidden');
+      }
+    };
+
+    if(closeLightbox) {
+      closeLightbox.onclick = () => lightbox.classList.add('hidden');
+    }
+  </script>
+</div><div class="fixed inset-0 z-40 pointer-events-none flex flex-col justify-end" id="drawer-container"><div class="pointer-events-auto w-full max-w-2xl mx-auto rounded-t-xl bg-surface-container-lowest shadow-[0_10px_25px_rgba(0,0,0,0.12)] transform translate-y-full transition-transform duration-300 ease-out" id="context-drawer"><div class="w-12 h-1 bg-outline-variant mx-auto my-space-2 rounded-full"></div></div></div></main><nav class="fixed bottom-space-4 left-1/2 -translate-x-1/2 z-50 bg-surface-container-lowest/95 backdrop-blur-xl px-space-4 py-space-2 rounded-full shadow-[0_4px_20px_rgba(0,0,0,0.08)] flex items-center gap-space-2 sm:gap-space-4" data-active-classes="bg-surface-container-highest text-secondary"><a class="flex flex-col items-center justify-center px-space-3 py-space-1 rounded-full text-on-surface-variant hover:text-on-surface transition-colors" data-path="home" href="#"><span class="material-symbols-outlined text-xl">home</span><span class="font-label-badge text-label-badge mt-space-1">Home</span></a><a class="flex flex-col items-center justify-center px-space-3 py-space-1 rounded-full text-on-surface-variant hover:text-on-surface transition-colors" data-path="map" href="#"><span class="material-symbols-outlined text-xl">map</span><span class="font-label-badge text-label-badge mt-space-1">Map</span></a><a class="flex items-center gap-space-2 px-space-4 py-space-2 bg-secondary text-on-secondary rounded-full shadow-[0_2px_8px_rgba(0,99,152,0.24)] hover:bg-secondary-container hover:text-on-secondary-container transition-all mx-space-1" data-path="report" href="#"><span class="material-symbols-outlined text-xl">add_alert</span><span class="font-headline-sm text-headline-sm">Report</span></a><a class="relative flex flex-col items-center justify-center px-space-3 py-space-1 rounded-full text-on-surface-variant hover:text-on-surface transition-colors" data-path="alerts" href="#"><div class="relative"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute top-0 right-0 w-2 h-2 bg-error rounded-full ring-2 ring-surface-container-lowest"></span></div><span class="font-label-badge text-label-badge mt-space-1">Alerts</span></a><a aria-current="page" class="flex flex-col items-center justify-center px-space-3 py-space-1 rounded-full transition-colors bg-surface-container-highest text-secondary" data-path="more" href="#"><span class="material-symbols-outlined text-xl">menu</span><span class="font-label-badge text-label-badge mt-space-1">More</span></a></nav><footer class="w-full bg-surface-container-low py-space-8"><div class="max-w-7xl mx-auto px-space-6 text-center"><p class="font-label-badge text-label-badge uppercase tracking-wider text-outline mb-space-1">ResQnet National Emergency GIS &amp; Citizen Incident Core</p><p class="font-body-sm text-body-sm text-on-surface-variant">© 2024 ResQnet Dispatch Platform. Unified Civic Assistance Network.</p></div></footer></body></html>

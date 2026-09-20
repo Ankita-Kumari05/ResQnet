@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"warning-bg":"#FFFBEB","on-background":"#0b1c30","surface-tint":"#0053db","surface-base":"#F8FAFC","on-tertiary-fixed":"#131b2e","surface-container":"#e5eeff","secondary-container":"#b5d0fd","error":"#ba1a1a","primary-fixed":"#dbe1ff","background":"#f8f9ff","tertiary-fixed-dim":"#bec6e0","inverse-primary":"#b4c5ff","error-container":"#ffdad6","critical-border":"#FECACA","surface-dim":"#cbdbf5","tertiary":"#4d556b","on-primary":"#ffffff","on-error":"#ffffff","tertiary-container":"#656d84","on-primary-fixed":"#00174b","on-tertiary":"#ffffff","on-secondary-container":"#3e5980","warning-text":"#D97706","on-secondary-fixed":"#001c3b","on-secondary-fixed-variant":"#2d486d","tertiary-fixed":"#dae2fd","success-text":"#16A34A","warning-border":"#FDE68A","surface":"#f8f9ff","inverse-surface":"#213145","surface-variant":"#d3e4fe","secondary-fixed":"#d5e3ff","primary-container":"#2563eb","critical-bg":"#FEF2F2","secondary-fixed-dim":"#adc8f5","surface-card":"#FFFFFF","surface-container-highest":"#d3e4fe","text-muted":"#94A3B8","on-tertiary-container":"#eef0ff","secondary":"#455f87","surface-container-lowest":"#ffffff","surface-subtle":"#F1F5F9","primary-fixed-dim":"#b4c5ff","border-default":"#E2E8F0","outline":"#737686","on-primary-container":"#eeefff","critical-text":"#DC2626","success-bg":"#F0FDF4","text-primary":"#1E293B","on-surface-variant":"#434655","success-border":"#BBF7D0","blue-soft":"#EFF6FF","on-surface":"#0b1c30","on-primary-fixed-variant":"#003ea8","on-error-container":"#93000a","surface-container-low":"#eff4ff","blue-light":"#DBEAFE","surface-container-high":"#dce9ff","on-tertiary-fixed-variant":"#3f465c","primary":"#004ac6","info-border":"#BFDBFE","text-secondary":"#64748B","surface-bright":"#f8f9ff","on-secondary":"#ffffff","outline-variant":"#c3c6d7","inverse-on-surface":"#eaf1ff"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-6":"24px","space-0":"0px","space-3":"12px","space-5":"20px","space-10":"40px","space-16":"64px","space-12":"48px","space-8":"32px","margin-mobile":"16px","gutter-expanded":"24px","margin-tablet":"24px","space-1":"4px","gutter-standard":"16px","margin-desktop":"32px","space-4":"16px","space-2":"8px","gutter-dense":"8px"},"fontFamily":{"label-telemetry":["JetBrains Mono"],"headline-xl":["Public Sans"],"body-sm":["Public Sans"],"headline-lg":["Public Sans"],"display-hud-mobile":["JetBrains Mono"],"body-md":["Public Sans"],"headline-md":["Public Sans"],"data-mono-md":["JetBrains Mono"],"headline-xl-mobile":["Public Sans"],"headline-sm":["Public Sans"],"data-mono-lg":["JetBrains Mono"],"body-lg":["Public Sans"],"display-hud":["JetBrains Mono"],"label-badge":["Public Sans"]},"fontSize":{"label-telemetry":["10px",{"lineHeight":"12px","letterSpacing":"0.08em","fontWeight":"500"}],"headline-xl":["36px",{"lineHeight":"44px","letterSpacing":"-0.025em","fontWeight":"700"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"400"}],"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"700"}],"display-hud-mobile":["32px",{"lineHeight":"36px","letterSpacing":"-0.03em","fontWeight":"700"}],"body-md":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"data-mono-md":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"500"}],"headline-xl-mobile":["26px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-sm":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"600"}],"data-mono-lg":["18px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"display-hud":["48px",{"lineHeight":"52px","letterSpacing":"-0.04em","fontWeight":"700"}],"label-badge":["11px",{"lineHeight":"14px","letterSpacing":"0.06em","fontWeight":"700"}]}}}};</script><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..900&family=Public+Sans:wght@100..900&display=swap" rel="stylesheet"/></head><body class="bg-surface-base font-body-md text-text-primary min-h-screen"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-card border-r border-border-default z-50 flex flex-col justify-between"><div class="flex flex-col flex-1 overflow-y-auto"><div class="h-16 px-space-4 border-b border-border-default flex items-center bg-surface-base"><div class="flex items-center gap-space-2"><span class="material-symbols-outlined text-primary text-[18px]">radar</span><span class="font-label-telemetry text-label-telemetry uppercase text-text-secondary tracking-wider">SCOPE: SECTOR-17/NDRF</span></div></div><div class="px-space-3 pt-space-3 pb-space-2"><span class="font-label-badge text-label-badge uppercase tracking-wider text-text-muted px-space-2">Operations Navigation</span></div><nav class="flex flex-col px-space-2 gap-space-1" data-active-classes="bg-blue-soft text-primary-container border-l-2 border-primary-container font-semibold"><a class="flex items-center justify-between px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-subtle hover:text-text-primary transition-colors" data-path="responder-dashboard" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">dashboard</span><span class="font-body-md text-body-md">Dashboard</span></div></a><a class="flex items-center justify-between px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-subtle hover:text-text-primary transition-colors" data-path="responder-missions" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">assignment_late</span><span class="font-body-md text-body-md">Missions</span></div><span class="inline-flex items-center px-space-1 py-0.5 rounded text-[10px] font-label-badge uppercase tracking-wide bg-critical-bg text-critical-text border border-critical-border font-bold">3 ACT</span></a><a class="flex items-center justify-between px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-subtle hover:text-text-primary transition-colors" data-path="responder-surveys-new" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">rate_review</span><span class="font-body-md text-body-md">Field Surveys</span></div></a><a aria-current="page" class="flex items-center justify-between px-space-3 py-space-2 rounded-lg transition-colors bg-blue-soft text-primary-container border-l-2 border-primary-container font-semibold" data-path="responder-verification" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">verified</span><span class="font-body-md text-body-md">Verification</span></div></a><a class="flex items-center justify-between px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-subtle hover:text-text-primary transition-colors" data-path="responder-map" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">map</span><span class="font-body-md text-body-md">Operations Map</span></div><span class="inline-flex items-center px-space-1 py-0.5 rounded text-[10px] font-label-badge uppercase tracking-wide bg-blue-soft text-primary-container border border-info-border font-bold">GIS LIVE</span></a><a class="flex items-center justify-between px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-subtle hover:text-text-primary transition-colors" data-path="responder-resources" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">inventory_2</span><span class="font-body-md text-body-md">Resource Req.</span></div></a><a class="flex items-center justify-between px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-subtle hover:text-text-primary transition-colors" data-path="responder-organization" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">corporate_fare</span><span class="font-body-md text-body-md">Organization</span></div></a><a class="flex items-center justify-between px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-subtle hover:text-text-primary transition-colors" data-path="responder-campaigns" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">campaign</span><span class="font-body-md text-body-md">Campaigns</span></div><span class="inline-flex items-center px-space-1 py-0.5 rounded text-[10px] font-label-badge uppercase tracking-wide bg-warning-bg text-warning-text border border-warning-border font-bold">NGO AUTH</span></a></nav></div><div class="p-space-3 border-t border-border-default bg-surface-card flex flex-col gap-space-3"><div class="flex flex-col gap-space-1"><a class="flex items-center justify-between px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-subtle hover:text-text-primary transition-colors" data-path="responder-notifications" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">notifications</span><span class="font-body-md text-body-md">Notifications</span></div><span class="h-2 w-2 rounded-full bg-critical-text"></span></a><a class="flex items-center gap-space-3 px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-subtle hover:text-text-primary transition-colors" data-path="responder-profile" href="#"><span class="material-symbols-outlined text-[18px]">account_circle</span><span class="font-body-md text-body-md">Profile</span></a></div><div class="p-space-2 bg-surface-subtle border border-border-default rounded flex flex-col gap-space-1"><div class="flex items-center justify-between"><span class="font-label-telemetry text-[10px] text-text-muted uppercase">Telemetry Link</span><span class="inline-flex items-center px-1 rounded text-[9px] font-label-badge uppercase bg-success-bg text-success-text border border-success-border">ONLINE</span></div><p class="font-label-telemetry text-[10px] text-text-primary leading-none font-semibold">MESH MIGRATION STABLE</p><div class="flex items-center justify-between pt-space-1 border-t border-border-default/60"><span class="font-data-mono-md text-[10px] text-text-secondary">SYNC: 1.2s LAT</span><span class="font-label-badge text-[9px] uppercase tracking-wider text-text-muted">LVL-1 READY</span></div></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-card border-b border-border-default z-40 px-space-4 flex items-center justify-between"><div class="flex items-center gap-space-4"><div class="flex items-center gap-space-2"><img alt="ResQnet Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UZbdxVe9zHhHzM9vo2OQSWK2Q_bht0WwW6RI8t03wEZzkIuV1AaepFB5ybGDl6J_zPVxotaiJUuUSOjEHbwRkkatzk-_NIWrS9p2mqlHILAEd1jk-VFuE7ZUuZSBGzPtgbbUnBFF7nZSVRrnhgw6TOgjgnKK07Rxsw47PItBZRM95qoxqrwjUW_mgSZP8x4JcsHxpTeE997ICMMUDA3HqRMivqR_51zVsnG1UpH15gNX5cNH3zgcPtu5Ap"/><div class="flex flex-col"><span class="font-headline-sm text-[13px] font-bold tracking-tight text-text-primary leading-tight">RESQNET v2.4</span><span class="font-label-telemetry text-[10px] text-text-secondary uppercase tracking-wider">FIELD RESPONSE CONSOLE</span></div></div><div class="hidden md:inline-flex items-center gap-space-2 px-space-2 py-1 rounded bg-success-bg border border-success-border"><span class="h-2 w-2 rounded-full bg-success-text animate-pulse"></span><span class="font-label-telemetry text-label-telemetry uppercase text-success-text font-semibold">RESPONSE NETWORK ACTIVE</span></div></div><div class="hidden lg:flex items-center gap-space-4"><div class="inline-flex items-center gap-space-2 px-space-3 py-1 rounded bg-critical-bg border border-critical-border"><span class="material-symbols-outlined text-critical-text text-[16px]">emergency</span><span class="font-label-badge text-label-badge uppercase tracking-wide text-critical-text">NATIONAL DISPATCH: 112 / 1078</span></div><div class="inline-flex items-center gap-space-2 px-space-2 py-1 rounded bg-surface-subtle border border-border-default"><span class="h-2 w-2 rounded-full bg-success-text"></span><span class="font-label-telemetry text-label-telemetry uppercase text-text-secondary font-medium">STATUS: AVAILABLE</span></div></div><div class="flex items-center gap-space-3"><div class="hidden sm:flex flex-col text-right"><span class="font-headline-sm text-body-md font-bold text-text-primary leading-tight">ARJUN MEHTA</span><span class="font-label-telemetry text-[11px] text-text-secondary leading-tight">FIELD RESPONDER • Chandigarh ERU</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 bg-surface-base w-full min-h-screen px-space-6 py-space-6"><div class="flex flex-col w-full">
+<!-- Page Header Area -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between pb-space-5 gap-space-4">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-2 mb-space-1">
+<span class="inline-flex items-center px-space-2 py-0.5 rounded text-[11px] font-label-badge uppercase tracking-wider bg-surface-container text-primary-container font-semibold">
+          STATION AUDIT CONSOLE
+        </span>
+<span class="text-text-muted font-label-telemetry text-label-telemetry">UID: RESQ-VERIF-S17</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-text-primary tracking-tight">FIELD VERIFICATION WORKBENCH</h1>
+<p class="font-body-md text-text-secondary">Evidence reconciliation and operational ground-truth verification</p>
+</div>
+<!-- Right Stats Summary -->
+<div class="flex items-center gap-space-3 self-start lg:self-center">
+<div class="flex items-center gap-space-2 bg-surface-card px-space-4 py-space-2 rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-warning-text text-[18px]">pending_actions</span>
+<div class="flex flex-col">
+<span class="font-label-telemetry text-[10px] text-text-muted uppercase">Verification Queue</span>
+<span class="font-data-mono-md text-data-mono-md font-semibold text-text-primary">3 Items Pending</span>
+</div>
+</div>
+<div class="flex items-center gap-space-2 bg-surface-card px-space-4 py-space-2 rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-success-text text-[18px]">task_alt</span>
+<div class="flex flex-col">
+<span class="font-label-telemetry text-[10px] text-text-muted uppercase">Today's Protocol</span>
+<span class="font-data-mono-md text-data-mono-md font-semibold text-text-primary">8 Verified Closed</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Incident Selector Navigation Bar -->
+<div class="flex items-center gap-space-2 overflow-x-auto pb-space-4">
+<!-- Active Tab -->
+<button class="flex items-center gap-space-2 px-space-4 py-space-3 rounded-lg bg-surface-card shadow-sm text-left whitespace-nowrap transition-colors" type="button">
+<span class="w-2 h-2 rounded-full bg-critical-text animate-pulse"></span>
+<span class="font-headline-sm text-headline-sm text-text-primary">INC-2048: Sector 17 Structural Damage</span>
+<span class="inline-flex items-center px-space-1 py-0.5 rounded text-[10px] font-label-badge uppercase tracking-wide bg-critical-bg text-critical-text font-bold">
+        PRIORITY 1
+      </span>
+</button>
+<!-- Inactive Tab 1 -->
+<button class="flex items-center gap-space-2 px-space-4 py-space-3 rounded-lg bg-surface-subtle hover:bg-surface-card text-left text-text-secondary whitespace-nowrap transition-colors" type="button">
+<span class="w-2 h-2 rounded-full bg-warning-text"></span>
+<span class="font-body-md text-body-md font-medium text-text-secondary">INC-2042: Madhya Marg Underpass Flood</span>
+<span class="inline-flex items-center px-space-1 py-0.5 rounded text-[10px] font-label-badge uppercase tracking-wide bg-warning-bg text-warning-text font-bold">
+        STANDBY
+      </span>
+</button>
+<!-- Inactive Tab 2 -->
+<button class="flex items-center gap-space-2 px-space-4 py-space-3 rounded-lg bg-surface-subtle hover:bg-surface-card text-left text-text-secondary whitespace-nowrap transition-colors" type="button">
+<span class="w-2 h-2 rounded-full bg-text-muted"></span>
+<span class="font-body-md text-body-md font-medium text-text-secondary">INC-2035: Sector 22 Transformer Sparks</span>
+<span class="inline-flex items-center px-space-1 py-0.5 rounded text-[10px] font-label-badge uppercase tracking-wide bg-surface-container text-primary-container font-bold">
+        STAGED
+      </span>
+</button>
+</div>
+<!-- Dual-Pane Comparison Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-6 items-start mt-space-2">
+<!-- LEFT PANE: Reported Citizen Ingestion -->
+<div class="flex flex-col bg-surface-card rounded-xl shadow-sm p-space-6">
+<!-- Section Header -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-space-4 gap-space-2">
+<div class="flex items-center gap-space-2">
+<span class="material-symbols-outlined text-warning-text text-[20px]">warning</span>
+<h2 class="font-headline-md text-headline-md text-text-primary tracking-tight">REPORTED EVIDENCE</h2>
+</div>
+<span class="inline-flex items-center gap-space-1 px-space-3 py-1 rounded-full bg-warning-bg text-warning-text text-[11px] font-label-badge uppercase tracking-wider font-semibold self-start">
+<span class="material-symbols-outlined text-[14px]">history_edu</span>
+          CITIZEN INGESTION • UNVERIFIED
+        </span>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary pb-space-4">
+        Crowdsourced incident intake through mobile SOS intake portal and civic helpline 112 bridge.
+      </p>
+<!-- Ingestion Metadata Strip -->
+<div class="bg-surface-subtle rounded-lg p-space-4 mb-space-5">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-3">
+<div class="flex flex-col">
+<span class="font-label-telemetry text-label-telemetry uppercase text-text-muted">Reporter Identity</span>
+<span class="font-body-md text-body-md font-semibold text-text-primary flex items-center gap-1 mt-0.5">
+              Simran Kaur
+              <span class="material-symbols-outlined text-primary-container text-[14px]" title="DigiLocker Verified Citizen">verified_user</span>
+</span>
+<span class="font-data-mono-md text-[11px] text-text-secondary mt-0.5">+91 9872X-XXXX (Aadhaar Seeded)</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-telemetry text-label-telemetry uppercase text-text-muted">Ingestion Telemetry</span>
+<span class="font-data-mono-md text-body-md font-semibold text-text-primary mt-0.5">10:41:18 AM IST</span>
+<span class="font-label-telemetry text-[11px] text-warning-text font-medium mt-0.5">T-MINUS 22m AGO</span>
+</div>
+</div>
+</div>
+<!-- Core Incident Parameters -->
+<div class="space-y-space-4">
+<!-- Location -->
+<div class="flex flex-col">
+<span class="font-label-telemetry text-label-telemetry uppercase text-text-muted">Reported Location Address</span>
+<div class="flex items-start gap-space-2 mt-1">
+<span class="material-symbols-outlined text-text-secondary text-[18px] shrink-0 mt-0.5">pin_drop</span>
+<span class="font-body-md text-body-md font-medium text-text-primary">Sector 17 Plaza, Block C (Commercial Arcade, North Promenade)</span>
+</div>
+</div>
+<!-- Category -->
+<div class="flex flex-col">
+<span class="font-label-telemetry text-label-telemetry uppercase text-text-muted">Citizen Categorization</span>
+<div class="flex items-center gap-space-2 mt-1">
+<span class="material-symbols-outlined text-warning-text text-[18px]">home_work</span>
+<span class="font-body-md text-body-md font-semibold text-text-primary">Structural Damage / Pillar Crack</span>
+</div>
+</div>
+<!-- Narrative -->
+<div class="flex flex-col">
+<span class="font-label-telemetry text-label-telemetry uppercase text-text-muted mb-1">Citizen Statement / Audio Transcript</span>
+<div class="bg-surface-subtle p-space-4 rounded-lg font-body-md text-body-md text-text-primary leading-relaxed">
+            “Deep fracture along primary load-bearing pillar of commercial retail complex. Multiple citizens reporting grinding sound. Ground floor retail evacuated, 4 shop workers trapped on mezzanine level due to jammed structural fire doors.”
+          </div>
+</div>
+<!-- Media Attachment -->
+<div class="flex flex-col">
+<span class="font-label-telemetry text-label-telemetry uppercase text-text-muted mb-1">Citizen Capture & Cryptographic Fingerprint</span>
+<div class="relative rounded-lg overflow-hidden bg-surface-subtle">
+<img class="w-full h-56 object-cover" data-alt="Close up view of damaged concrete column inside an urban shopping arcade with noticeable vertical cracks and dust debris on polished tile floor under fluorescent daylight lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAirw7gNNVhcaJmTbAk-Xk7i_V3EV-NKyFOnPGL9jq3WARi3dULAxuu7yY0v3lMBT2MdVhvSPsswwy8Qsg8SdnPeaf72Bl_xa0R25icrdNBI68QRu-dhMB96gUn2z-mFcUE28voD8cGwayA65u47OPFW5sSoY2soXJWcBjQbKB-BPPInNPgdtcllQ0BP3onkH4rKni1Dkquv-4mXPVGGQYZz2Ll0IbCJ16SFnwsz6bJi1YLQGPUSSq4JQ"/>
+<!-- Overlay indicators -->
+<div class="absolute top-3 left-3 flex items-center gap-1.5 px-space-2 py-1 rounded bg-on-background/80 backdrop-blur-sm text-on-primary">
+<span class="material-symbols-outlined text-[14px] text-warning-text">phone_android</span>
+<span class="font-label-telemetry text-[10px] tracking-wider uppercase">Citizen Mobile Capture</span>
+</div>
+<div class="absolute bottom-3 left-3 right-3 p-space-2 rounded bg-on-background/85 backdrop-blur-sm text-on-primary flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-telemetry text-[9px] text-text-muted uppercase">EXIF TIMESTAMP</span>
+<span class="font-data-mono-md text-[11px]">2024-10-24 10:40:52 UTC+5:30</span>
+</div>
+<div class="flex flex-col text-right">
+<span class="font-label-telemetry text-[9px] text-text-muted uppercase">CELL TRIANGULATION</span>
+<span class="font-data-mono-md text-[11px]">± 45m RADIUS ACCURACY</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Severity & Transit Status Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-3 pt-space-2">
+<div class="bg-critical-bg p-space-3 rounded-lg flex flex-col">
+<span class="font-label-telemetry text-[10px] text-critical-text uppercase font-semibold">Self-Reported Severity</span>
+<div class="flex items-center gap-1.5 mt-1 text-critical-text">
+<span class="material-symbols-outlined text-[18px]">crisis_alert</span>
+<span class="font-headline-sm text-headline-sm uppercase font-bold">CRITICAL</span>
+</div>
+<span class="font-body-sm text-[11px] text-critical-text/80 mt-1">Untrained assessment</span>
+</div>
+<div class="bg-surface-subtle p-space-3 rounded-lg flex flex-col">
+<span class="font-label-telemetry text-[10px] text-text-muted uppercase">Reported Thoroughfare Impact</span>
+<div class="flex items-center gap-1.5 mt-1 text-text-primary">
+<span class="material-symbols-outlined text-warning-text text-[18px]">traffic</span>
+<span class="font-headline-sm text-body-md font-semibold">Jan Marg partially restricted</span>
+</div>
+<span class="font-body-sm text-[11px] text-text-secondary mt-1">Pedestrian panic overflow reported</span>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT PANE: Observed Field Ground Truth -->
+<div class="flex flex-col bg-surface-card rounded-xl shadow-sm p-space-6">
+<!-- Section Header -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-space-4 gap-space-2">
+<div class="flex items-center gap-space-2">
+<span class="material-symbols-outlined text-primary-container text-[20px]">verified</span>
+<h2 class="font-headline-md text-headline-md text-text-primary tracking-tight">OBSERVED GROUND-TRUTH</h2>
+</div>
+<span class="inline-flex items-center gap-space-1 px-space-3 py-1 rounded-full bg-blue-soft text-primary-container text-[11px] font-label-badge uppercase tracking-wider font-semibold self-start">
+<span class="material-symbols-outlined text-[14px]">sensor_occupied</span>
+          GROUND-TRUTH OBSERVATION • ON-SCENE
+        </span>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary pb-space-4">
+        Calibrated structural survey and live biometric rescue confirmation submitted by first responder unit.
+      </p>
+<!-- Observer Metadata Strip -->
+<div class="bg-surface-subtle rounded-lg p-space-4 mb-space-5">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-3">
+<div class="flex flex-col">
+<span class="font-label-telemetry text-label-telemetry uppercase text-text-muted">Responder Identity</span>
+<span class="font-body-md text-body-md font-semibold text-text-primary flex items-center gap-1 mt-0.5">
+              Arjun Mehta
+              <span class="material-symbols-outlined text-success-text text-[14px]" title="Field Credential Verified">military_tech</span>
+</span>
+<span class="font-data-mono-md text-[11px] text-text-secondary mt-0.5">CALLSIGN: ERU-DELTA-2 (Sector 17)</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-telemetry text-label-telemetry uppercase text-text-muted">Ground Survey Synced</span>
+<span class="font-data-mono-md text-body-md font-semibold text-text-primary mt-0.5">10:56:42 AM IST</span>
+<span class="font-label-telemetry text-[11px] text-success-text font-medium mt-0.5">GROUND INSPECTION COMPLETE</span>
+</div>
+</div>
+</div>
+<!-- Core Observed Parameters -->
+<div class="space-y-space-4">
+<!-- Location with RTK GPS -->
+<div class="flex flex-col">
+<span class="font-label-telemetry text-label-telemetry uppercase text-text-muted">Pinpoint RTK GPS Telemetry</span>
+<div class="flex items-start gap-space-2 mt-1">
+<span class="material-symbols-outlined text-primary-container text-[18px] shrink-0 mt-0.5">my_location</span>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-medium text-text-primary">Sector 17 Plaza, Block C (Colonnade Pier #4)</span>
+<span class="font-data-mono-md text-[11px] text-text-secondary">30.7333° N, 76.7794° E • RTK Fix ± 0.08m Acc</span>
+</div>
+</div>
+</div>
+<!-- Category -->
+<div class="flex flex-col">
+<span class="font-label-telemetry text-label-telemetry uppercase text-text-muted">Calibrated Hazard Classification</span>
+<div class="flex items-center gap-space-2 mt-1">
+<span class="material-symbols-outlined text-critical-text text-[18px]">domain_disabled</span>
+<span class="font-body-md text-body-md font-semibold text-text-primary">Load-Bearing Colonnade Shear Gap (4.2cm)</span>
+</div>
+</div>
+<!-- Narrative -->
+<div class="flex flex-col">
+<span class="font-label-telemetry text-label-telemetry uppercase text-text-muted mb-1">Field SITREP & Action Log</span>
+<div class="bg-surface-subtle p-space-4 rounded-lg font-body-md text-body-md text-text-primary leading-relaxed">
+            “Confirmed 4.2cm shear fracture along lower third of concrete colonnade pillar. Reinforcement rebar exposed with fresh spalling debris. Mezzanine fire door was unjammed by SDRF team and all 4 shop occupants successfully evacuated. 50m cordon established.”
+          </div>
+</div>
+<!-- Media Attachment -->
+<div class="flex flex-col">
+<span class="font-label-telemetry text-label-telemetry uppercase text-text-muted mb-1">Calibrated Gauge Capture with Cryptographic Hash</span>
+<div class="relative rounded-lg overflow-hidden bg-surface-subtle">
+<img class="w-full h-56 object-cover" data-alt="Technical macro inspection photograph of a structural engineer measuring a concrete fracture with a yellow vernier crack gauge tool outdoors near storefront pillars with emergency cordon tape in soft focus background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTQ9N-mOvyD4c0SaLQfHUCNmxDx2wKbblXcQEeLNHx8xMCyqgWOMGdL8lTuy-nN5nfGu94q8Z1MwE31fa40d4jrk9dLWRRvHv5mizHCB_AvBjWBgfh-3WEECyLNOIwhSdqwbLPQ04yluHplM9GdLv5zpTx28npwJeN4RMrmF1F3PYDoUdAgHUBo_aZEcEppBERbHDkCV6qCSKVrueaHWgrWw4OvvpbrleVqv-STdl_4fxEWTRAj1MSrw"/>
+<!-- Overlay indicators -->
+<div class="absolute top-3 left-3 flex items-center gap-1.5 px-space-2 py-1 rounded bg-on-background/80 backdrop-blur-sm text-on-primary">
+<span class="material-symbols-outlined text-[14px] text-success-text">verified</span>
+<span class="font-label-telemetry text-[10px] tracking-wider uppercase">Calibrated Optical Telemetry</span>
+</div>
+<div class="absolute bottom-3 left-3 right-3 p-space-2 rounded bg-on-background/85 backdrop-blur-sm text-on-primary flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-telemetry text-[9px] text-text-muted uppercase">SURVEY GAUGE SENSOR</span>
+<span class="font-data-mono-md text-[11px]">DISPLACEMENT: 42.18 mm</span>
+</div>
+<div class="flex flex-col text-right">
+<span class="font-label-telemetry text-[9px] text-text-muted uppercase">SHA-256 HASH SIGNED</span>
+<span class="font-data-mono-md text-[11px]">d8f4...91ba (DEVICE AUTH)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Severity & Transit Status Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-3 pt-space-2">
+<div class="bg-critical-bg p-space-3 rounded-lg flex flex-col">
+<span class="font-label-telemetry text-[10px] text-critical-text uppercase font-semibold">Assessed Hazard Level</span>
+<div class="flex items-center gap-1.5 mt-1 text-critical-text">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span class="font-headline-sm text-headline-sm uppercase font-bold">CRITICAL LIFE-SAFETY</span>
+</div>
+<span class="font-body-sm text-[11px] text-critical-text/80 mt-1">Confirmed structural instability</span>
+</div>
+<div class="bg-surface-subtle p-space-3 rounded-lg flex flex-col">
+<span class="font-label-telemetry text-[10px] text-text-muted uppercase">Verified Transit Corridor State</span>
+<div class="flex items-center gap-1.5 mt-1 text-text-primary">
+<span class="material-symbols-outlined text-primary-container text-[18px]">fmd_good</span>
+<span class="font-headline-sm text-body-md font-semibold">Jan Marg Gate 3: Partially Blocked</span>
+</div>
+<span class="font-body-sm text-[11px] text-text-secondary mt-1">3.8m emergency vehicle lane kept clear</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Operational Consequence Matrix & Final Sign-Off -->
+<div class="mt-space-6 bg-surface-card rounded-xl shadow-sm p-space-6">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between pb-space-4 gap-space-2">
+<div class="flex items-center gap-space-2">
+<span class="material-symbols-outlined text-primary-container text-[22px]">account_tree</span>
+<div>
+<h3 class="font-headline-md text-headline-md text-text-primary">OPERATIONAL CONSEQUENCE MATRIX</h3>
+<p class="font-body-sm text-body-sm text-text-secondary">Downstream tactical routing updates trigger automatically upon confirmation.</p>
+</div>
+</div>
+<div class="flex items-center gap-space-2 self-start lg:self-center">
+<span class="h-2 w-2 rounded-full bg-success-text"></span>
+<span class="font-label-telemetry text-[11px] text-text-secondary uppercase">EOC DATASTREAM READY</span>
+</div>
+</div>
+<!-- Impact Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-4 py-space-4">
+<!-- Item 1: Routing -->
+<div class="bg-surface-subtle p-space-4 rounded-lg flex flex-col gap-space-2">
+<div class="flex items-center gap-space-2 text-primary-container">
+<span class="material-symbols-outlined text-[20px]">alt_route</span>
+<span class="font-headline-sm text-headline-sm text-text-primary">Transit GIS Update</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary">
+          Jan Marg Gate 3 flagged as <strong class="text-text-primary font-semibold">PARTIALLY BLOCKED</strong> in EOC navigation grid. Heavy rescue engines rerouted to Gate 1.
+        </p>
+<span class="font-data-mono-md text-[11px] text-text-muted mt-auto pt-space-2">TARGET: GIS ROUTING LAYER</span>
+</div>
+<!-- Item 2: CAP Alert -->
+<div class="bg-surface-subtle p-space-4 rounded-lg flex flex-col gap-space-2">
+<div class="flex items-center gap-space-2 text-warning-text">
+<span class="material-symbols-outlined text-[20px]">cell_tower</span>
+<span class="font-headline-sm text-headline-sm text-text-primary">CAP Hazard Advisory</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary">
+          Hazard tagged <strong class="text-text-primary font-semibold">ACTIVE 50M CORDON</strong>. Draft CAP bulletin generated for Chandigarh Emergency Operations sign-off.
+        </p>
+<span class="font-data-mono-md text-[11px] text-text-muted mt-auto pt-space-2">TARGET: PUBLIC BROADCAST DOCK</span>
+</div>
+<!-- Item 3: Status Elevation -->
+<div class="bg-surface-subtle p-space-4 rounded-lg flex flex-col gap-space-2">
+<div class="flex items-center gap-space-2 text-success-text">
+<span class="material-symbols-outlined text-[20px]">upgrade</span>
+<span class="font-headline-sm text-headline-sm text-text-primary">Incident Pipeline</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary">
+          Status advances from <span class="font-data-mono-md text-text-secondary">Under Review</span> to <strong class="text-text-primary font-semibold">VERIFIED & STABILIZING</strong> with all 4 trapped civilians safe.
+        </p>
+<span class="font-data-mono-md text-[11px] text-text-muted mt-auto pt-space-2">TARGET: RESQ-CORE DISPATCH DB</span>
+</div>
+</div>
+<!-- Integrity Disclaimer -->
+<div class="flex items-center gap-space-2 py-space-3 my-space-2 px-space-4 rounded-lg bg-surface-subtle">
+<span class="material-symbols-outlined text-primary-container text-[18px]">lock</span>
+<p class="font-body-sm text-body-sm text-text-secondary">
+<strong class="font-semibold text-text-primary">Integrity Protocol:</strong> Zero artificial confidence scores. Ground-truth verified solely via calibrated responder field surveys and cryptographic EXIF telemetry.
+      </p>
+</div>
+<!-- Action Button Deck -->
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-end gap-space-3 pt-space-4">
+<!-- Neutral Action -->
+<button class="order-3 sm:order-1 px-space-4 py-space-2 rounded-lg bg-surface-subtle hover:bg-surface-base text-text-primary font-headline-sm text-body-md transition-colors flex items-center justify-center gap-space-2" onclick="alert('Report INC-2048 flagged as unverified citizen report. Case queued for manual audit.');" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+<span>REJECT / UNVERIFIED REPORT</span>
+</button>
+<!-- Warning Review Action -->
+<button class="order-2 sm:order-2 px-space-5 py-space-2 rounded-lg bg-warning-bg hover:bg-amber-100 text-warning-text font-headline-sm text-body-md transition-colors flex items-center justify-center gap-space-2" onclick="alert('Escalated: Dispatching Secondary Structural Assessor team for INC-2048.');" type="button">
+<span class="material-symbols-outlined text-[18px]">rule</span>
+<span>REQUIRES FURTHER REVIEW</span>
+</button>
+<!-- Primary Confirmation Action -->
+<button class="order-1 sm:order-3 px-space-6 py-space-3 rounded-lg bg-success-text hover:opacity-90 text-on-primary font-headline-sm text-body-md shadow-sm transition-opacity flex items-center justify-center gap-space-2" onclick="alert('Verification Confirmed! Incident INC-2048 updated across EOC and GIS routes updated.');" type="button">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>CONFIRM VERIFICATION</span>
+</button>
+</div>
+</div>
+</div></main></div></body></html>

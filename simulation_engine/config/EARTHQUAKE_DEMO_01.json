@@ -1,0 +1,186 @@
+{
+  "scenario_id": "EARTHQUAKE_DEMO_01",
+  "name": "Capital District Earthquake — SIH Demo Scenario",
+  "description": "Simulated earthquake event affecting the virtual city's Central East district. Demonstrates ResQnet multi-disaster response workflow: seismic alerts, unverified citizen damage reports, road blockage due to debris, responder dispatch, hub capacity surge, and route adaptation.",
+  "version": "1.0",
+  "historical_context": {
+    "note": "HISTORICAL CONTEXT ONLY — NOT A LIVE PREDICTION",
+    "historical_seismic_incidents": 2,
+    "previously_affected_zones": ["Central East District", "Central Spine Corridor"],
+    "historical_recurrence": "Regional fault line activity recorded in historical seismic catalog",
+    "disclaimer": "Historical seismic catalog data is provided as scenario background only. This engine does not claim predictive accuracy."
+  },
+  "resqnet_context": {
+    "coordinator_email": "coordinator@resqnet.in",
+    "citizen_email": "citizen1@resqnet.in",
+    "responder_id": 1,
+    "hub_id": 3,
+    "hub_name": "Hub Gamma — Sports Complex",
+    "hazard_zone_id": 1,
+    "hazard_zone_name": "River Basin Flood Zone",
+    "road_id": 6,
+    "road_name": "Central Spine East",
+    "incident_lat": 20.554,
+    "incident_lng": 85.830
+  },
+  "events": [
+    {
+      "event_id": "EARTHQUAKE_DEMO_01_E001",
+      "offset_seconds": 0,
+      "event_type": "EARTHQUAKE_WARNING",
+      "source_type": "SIMULATED_OFFICIAL",
+      "source_label": "SIMULATED OFFICIAL ALERT",
+      "severity": "CRITICAL",
+      "confidence": 0.95,
+      "lat": 20.554,
+      "lng": 85.830,
+      "title": "T+00 | Event 1/7",
+      "description": "[SIM | SIMULATED OFFICIAL] EARTHQUAKE WARNING — Capital District seismic corridor. Structural tremors felt. Evacuate compromised buildings toward open grounds at Hub Gamma.",
+      "api_target": "POST /api/v1/alerts",
+      "api_role": "coordinator",
+      "api_payload": {
+        "title": "[SIM] EARTHQUAKE WARNING — Capital District Seismic Corridor",
+        "message": "[SIMULATED OFFICIAL ALERT] Magnitude 5.8 seismic event detected along Capital fault line. Structural tremors felt across Central District. Residents should stay clear of compromised structures and proceed to designated open zones at Hub Gamma or Hub Alpha. This is a simulated demonstration event.",
+        "severity": "EMERGENCY",
+        "alert_type": "earthquake_warning"
+      },
+      "chain_notes": "Calls real alerts service → creates EmergencyAlert → recorded in AuditLog → visible on dashboard via /api/v1/alerts/active"
+    },
+    {
+      "event_id": "EARTHQUAKE_DEMO_01_E002",
+      "offset_seconds": 10,
+      "event_type": "SEISMIC_EVENT",
+      "source_type": "SIMULATED_SENSOR",
+      "source_label": "SIMULATED SEISMIC SENSOR",
+      "severity": "HIGH",
+      "confidence": 0.85,
+      "lat": 20.554,
+      "lng": 85.830,
+      "title": "T+10 | Event 2/7",
+      "description": "[SIM | SIMULATED SENSOR] Seismic sensor network detects peak ground acceleration threshold exceeded in Central district.",
+      "api_target": "POST /api/simulation/events/flood",
+      "api_role": "coordinator",
+      "api_payload": {
+        "zone_id": 1,
+        "severity": 4
+      },
+      "chain_notes": "Activates HazardZone ID 1 as an observation signal. is_active=True, severity=HIGH. Demonstrates hazard perimeter activation using existing ResQnet hazard zone logic. Routing cache is invalidated.",
+      "chain_warning": "IMPORTANT: This activates a hazard zone as an observation signal. The routing graph is lazily rebuilt on next /routing/calculate call via the dirty-cache mechanism."
+    },
+    {
+      "event_id": "EARTHQUAKE_DEMO_01_E003",
+      "offset_seconds": 20,
+      "event_type": "CITIZEN_REPORT",
+      "source_type": "SIMULATED_CITIZEN",
+      "source_label": "SIMULATED CITIZEN REPORT",
+      "severity": "MEDIUM",
+      "confidence": 0.60,
+      "lat": 20.554,
+      "lng": 85.830,
+      "title": "T+20 | Event 3/7",
+      "description": "[SIM | SIMULATED CITIZEN] Citizen reports structural damage and falling masonry near Central East junction.",
+      "api_target": "POST /api/simulation/events/reports/generate",
+      "api_role": "coordinator",
+      "api_payload": {
+        "lat": 20.554,
+        "lng": 85.830,
+        "category": "earthquake",
+        "description": "[SIM | SIMULATED CITIZEN] Wall cracks and fallen masonry near Central East junction. Roadway partially obstructed. Evacuation assistance requested.",
+        "count": 3
+      },
+      "chain_notes": "Calls find_or_create_cluster() then creates IncidentReport objects with status=UNVERIFIED. Reports enter cluster pipeline at Tier-1 (unverified). They do NOT become verified ground truth.",
+      "chain_warning": "Reports are created with status=UNVERIFIED. Simulation does not skip ground-truth verification. The cluster becomes visible to coordinators for dispatch decision."
+    },
+    {
+      "event_id": "EARTHQUAKE_DEMO_01_E004",
+      "offset_seconds": 30,
+      "event_type": "STRUCTURAL_DAMAGE",
+      "source_type": "SIMULATED_RESPONDER",
+      "source_label": "SIMULATED OPERATIONAL SIGNAL",
+      "severity": "HIGH",
+      "confidence": 0.90,
+      "lat": 20.554,
+      "lng": 85.830,
+      "title": "T+30 | Event 4/7",
+      "description": "[SIM | SIMULATED OPERATIONAL SIGNAL] Operational report: Central Spine East (ID 6) blocked by structural debris from collapsed building facade.",
+      "api_target": "POST /api/simulation/events/road/block",
+      "api_role": "coordinator",
+      "api_payload": {
+        "road_id": 6,
+        "block": true
+      },
+      "chain_notes": "Sets road.is_blocked=True, road.status=BLOCKED on Road ID 6 (Central Spine East). Authoritative operational update. The routing engine excludes Road 6 from Dijkstra graph edges on next calculation. Routing cache invalidated.",
+      "chain_warning": "This bypasses the field-survey ground-truth flow. Documented as an operational simulation injection representing a verified responder radio report."
+    },
+    {
+      "event_id": "EARTHQUAKE_DEMO_01_E005",
+      "offset_seconds": 40,
+      "event_type": "RESPONDER_DISPATCH",
+      "source_type": "SIMULATED_RESPONDER",
+      "source_label": "SIMULATED COORDINATOR DISPATCH",
+      "severity": "HIGH",
+      "confidence": 1.0,
+      "lat": 20.554,
+      "lng": 85.830,
+      "title": "T+40 | Event 5/7",
+      "description": "[SIM | SIMULATED COORDINATOR] Coordinator dispatches Team Alpha to verify earthquake damage cluster and assist trapped residents.",
+      "api_target": "POST /api/v1/missions",
+      "api_role": "coordinator",
+      "api_payload_template": {
+        "mission_type": "verify_incident",
+        "title": "[SIM] Verify Central East Earthquake Cluster — EARTHQUAKE_DEMO_01",
+        "description": "[SIMULATED COORDINATOR DISPATCH] Team Alpha dispatched to survey structural damage near Central East. Check for trapped occupants and assess road accessibility.",
+        "responder_id": "__RESOLVED_FROM_STATE__",
+        "cluster_id": "__RESOLVED_FROM_STATE__",
+        "target_lat": 20.554,
+        "target_lng": 85.830,
+        "notes": "Simulation scenario EARTHQUAKE_DEMO_01 — T+40 dispatch event"
+      },
+      "chain_notes": "Calls /api/v1/missions which invokes create_mission_service(). Validates cluster, validates responder eligibility, creates exactly ONE Mission in ASSIGNED state, updates cluster status, emits AuditLog.",
+      "chain_warning": "Responder_id resolved dynamically from /api/v1/missions/responders before dispatch. Cluster_id resolved from simulation state after E003."
+    },
+    {
+      "event_id": "EARTHQUAKE_DEMO_01_E006",
+      "offset_seconds": 50,
+      "event_type": "SHELTER_CAPACITY_CHANGED",
+      "source_type": "SIMULATED_SENSOR",
+      "source_label": "SIMULATED SHELTER SENSOR",
+      "severity": "MEDIUM",
+      "confidence": 0.85,
+      "lat": 20.545,
+      "lng": 85.827,
+      "title": "T+50 | Event 6/7",
+      "description": "[SIM | SIMULATED SHELTER SENSOR] Hub Gamma (Sports Complex) reports significant occupancy surge as evacuees seek open-ground shelter.",
+      "api_target": "PATCH /api/v1/hubs/{hub_id}/occupancy",
+      "api_role": "coordinator",
+      "api_payload": {
+        "hub_id": 3,
+        "delta": 250
+      },
+      "chain_notes": "Calls /api/v1/hubs/3/occupancy. Hub Gamma (capacity 600) starts at 50 occupancy. After delta=+250, occupancy=300, ratio=0.50 (status: OPEN). Full business logic path with row locking and audit logging.",
+      "chain_warning": "NONE — goes through full business logic including row locking, status derivation, and audit logging."
+    },
+    {
+      "event_id": "EARTHQUAKE_DEMO_01_E007",
+      "offset_seconds": 60,
+      "event_type": "SITUATION_UPDATE",
+      "source_type": "SIMULATION_ENGINE",
+      "source_label": "SIMULATED SITUATION REPORT",
+      "severity": "MEDIUM",
+      "confidence": 1.0,
+      "lat": 20.554,
+      "lng": 85.830,
+      "title": "T+60 | Event 7/7",
+      "description": "[SIM | SIMULATION ENGINE] Situation update: Earthquake scenario propagated. Central Spine East blocked, Hub Gamma active with evacuees, responder mission assigned. Review operational status.",
+      "api_target": "POST /api/v1/alerts",
+      "api_role": "coordinator",
+      "api_payload": {
+        "title": "[SIM] SITUATION UPDATE — Capital Earthquake Response T+60",
+        "message": "[SIMULATED SITUATION REPORT] Earthquake response update: Central East tremor cluster assessed, Central Spine East closed due to debris, evacuees sheltered at Hub Gamma (Sports Complex, 300 occupants), NGO Team Alpha active on survey mission. All events are part of EARTHQUAKE_DEMO_01 simulation.",
+        "severity": "WARNING",
+        "alert_type": "situation_update"
+      },
+      "chain_notes": "Creates second EmergencyAlert via real alerts service. Coordinator can see both the original EARTHQUAKE_WARNING and the SITUATION_UPDATE on dashboard. Both recorded in AuditLog."
+    }
+  ]
+}

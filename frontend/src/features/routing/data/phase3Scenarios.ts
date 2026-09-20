@@ -1,0 +1,356 @@
+import type { Phase3Scenario } from '../types/candidates';
+import type { Coordinate } from '../types/routing';
+
+// Realistic Chandigarh / Mohali / Panchkula street corridor coordinates for synthetic visualization
+const CHD_MOHALI_CORRIDOR_A: Coordinate[] = [
+  [76.7794, 30.7333], // Sector 17
+  [76.7750, 30.7100], // Sector 33 / 20
+  [76.7480, 30.7060], // Sector 43 ISBT
+  [76.7179, 30.7046], // Mohali Phase 7
+];
+
+const CHD_MOHALI_CORRIDOR_B: Coordinate[] = [
+  [76.7794, 30.7333], // Sector 17
+  [76.7600, 30.7160], // Jan Marg / Sector 36
+  [76.7350, 30.7150], // Sector 38 West
+  [76.7179, 30.7046], // Mohali Phase 7 (safe detour around hazards)
+];
+
+const PANCHKULA_CORRIDOR_A: Coordinate[] = [
+  [76.7794, 30.7333],
+  [76.8120, 30.7150],
+  [76.8606, 30.6942],
+];
+
+const PANCHKULA_CORRIDOR_B: Coordinate[] = [
+  [76.7794, 30.7333],
+  [76.7950, 30.6950],
+  [76.8390, 30.6920],
+  [76.8606, 30.6942],
+];
+
+export const PHASE3_SCENARIOS: Phase3Scenario[] = [
+  {
+    id: 'p3-scenario-1',
+    scenarioNumber: 1,
+    name: 'Scenario 1: Safe Route Beats Shorter High-Risk',
+    shortLabel: 'P3-1: SAFE > SHORT RISKY',
+    description: 'Route A is short (7.0 km) but intersects HIGH hazard. Route B is longer (8.5 km) but completely SAFE. Proves Safety First.',
+    isRealOSRM: false,
+    start: [76.7794, 30.7333],
+    destination: [76.7179, 30.7046],
+    expectedSelectedId: 'candidate-b',
+    expectedReasonCode: 'SAFE_ROUTE_SELECTED',
+    expectedSaferDespiteLonger: true,
+    candidateFixtures: [
+      {
+        id: 'candidate-a',
+        label: 'Route Candidate A (Short Direct)',
+        distanceKm: 7.0,
+        durationMinutes: 14,
+        safetyStatus: 'RISKY',
+        highestHazardSeverity: 'HIGH',
+        blockedRoad: false,
+        coordinates: CHD_MOHALI_CORRIDOR_A,
+      },
+      {
+        id: 'candidate-b',
+        label: 'Route Candidate B (Safe Detour)',
+        distanceKm: 8.5,
+        durationMinutes: 18,
+        safetyStatus: 'SAFE',
+        highestHazardSeverity: 'NONE',
+        blockedRoad: false,
+        coordinates: CHD_MOHALI_CORRIDOR_B,
+      },
+    ],
+  },
+
+  {
+    id: 'p3-scenario-2',
+    scenarioNumber: 2,
+    name: 'Scenario 2: Shorter Safe Route Wins',
+    shortLabel: 'P3-2: SHORTER SAFE WINS',
+    description: 'Both candidates are SAFE. Route A (6.5 km) is shorter than Route B (9.0 km). Distance breaks the tie when safety is equal.',
+    isRealOSRM: false,
+    start: [76.7794, 30.7333],
+    destination: [76.8606, 30.6942],
+    expectedSelectedId: 'candidate-a',
+    expectedReasonCode: 'SAFE_ROUTE_SHORTER',
+    expectedSaferDespiteLonger: false,
+    candidateFixtures: [
+      {
+        id: 'candidate-a',
+        label: 'Route Candidate A (Direct Safe)',
+        distanceKm: 6.5,
+        durationMinutes: 12,
+        safetyStatus: 'SAFE',
+        highestHazardSeverity: 'NONE',
+        blockedRoad: false,
+        coordinates: PANCHKULA_CORRIDOR_A,
+      },
+      {
+        id: 'candidate-b',
+        label: 'Route Candidate B (Extended Safe)',
+        distanceKm: 9.0,
+        durationMinutes: 18,
+        safetyStatus: 'SAFE',
+        highestHazardSeverity: 'NONE',
+        blockedRoad: false,
+        coordinates: PANCHKULA_CORRIDOR_B,
+      },
+    ],
+  },
+  {
+    id: 'p3-scenario-3',
+    scenarioNumber: 3,
+    name: 'Scenario 3: Safest Available Route (Moderate Beats High Risk)',
+    shortLabel: 'P3-3: SAFEST AVAILABLE (GREEN)',
+    description: 'No SAFE route exists. Candidate A (8.0 km, MODERATE), Candidate B (6.0 km, MODERATE), Candidate C (3.0 km, HIGH). Lowest risk tier selected; shortest moderate wins (6.0 km MODERATE). Rendered in GREEN.',
+    isRealOSRM: false,
+    start: [76.7794, 30.7333],
+    destination: [76.7179, 30.7046],
+    expectedSelectedId: 'candidate-b',
+    expectedReasonCode: 'MODERATE_RISK_ROUTE_SELECTED',
+    expectedSaferDespiteLonger: false,
+    candidateFixtures: [
+      {
+        id: 'candidate-a',
+        label: 'Route Candidate A (Extended Moderate Bypass)',
+        distanceKm: 8.0,
+        durationMinutes: 16,
+        safetyStatus: 'RISKY',
+        highestHazardSeverity: 'MODERATE',
+        blockedRoad: false,
+        coordinates: [
+          [76.7794, 30.7333],
+          [76.7650, 30.7380],
+          [76.7450, 30.7250],
+          [76.7179, 30.7046],
+        ],
+      },
+      {
+        id: 'candidate-b',
+        label: 'Route Candidate B (Shortest Moderate Corridor)',
+        distanceKm: 6.0,
+        durationMinutes: 12,
+        safetyStatus: 'RISKY',
+        highestHazardSeverity: 'MODERATE',
+        blockedRoad: false,
+        coordinates: CHD_MOHALI_CORRIDOR_B,
+      },
+      {
+        id: 'candidate-c',
+        label: 'Route Candidate C (Short High Debris Corridor)',
+        distanceKm: 3.0,
+        durationMinutes: 7,
+        safetyStatus: 'RISKY',
+        highestHazardSeverity: 'HIGH',
+        blockedRoad: false,
+        coordinates: CHD_MOHALI_CORRIDOR_A,
+      },
+    ],
+  },
+  {
+    id: 'p3-scenario-4',
+    scenarioNumber: 4,
+    name: 'Scenario 4: Unsafe Fallback (Shortest High Risk Usable Route)',
+    shortLabel: 'P3-4: UNSAFE FALLBACK (PINK)',
+    description: 'No SAFE route and no MODERATE route exists. Candidates: HIGH 8.0 km, HIGH 5.0 km, HIGH 7.0 km. Emergency fallback selects shortest usable (5.0 km HIGH). Rendered in PINK.',
+    isRealOSRM: false,
+    start: [76.7794, 30.7333],
+    destination: [76.7179, 30.7046],
+    expectedSelectedId: 'candidate-b',
+    expectedReasonCode: 'UNSAFE_FALLBACK_SELECTED',
+    expectedSaferDespiteLonger: false,
+    candidateFixtures: [
+      {
+        id: 'candidate-a',
+        label: 'Route Candidate A (Extended High Risk Corridor)',
+        distanceKm: 8.0,
+        durationMinutes: 16,
+        safetyStatus: 'RISKY',
+        highestHazardSeverity: 'HIGH',
+        blockedRoad: false,
+        coordinates: [
+          [76.7794, 30.7333],
+          [76.7650, 30.7380],
+          [76.7450, 30.7250],
+          [76.7179, 30.7046],
+        ],
+      },
+      {
+        id: 'candidate-b',
+        label: 'Route Candidate B (Shortest High Risk Fallback)',
+        distanceKm: 5.0,
+        durationMinutes: 10,
+        safetyStatus: 'RISKY',
+        highestHazardSeverity: 'HIGH',
+        blockedRoad: false,
+        coordinates: CHD_MOHALI_CORRIDOR_B,
+      },
+      {
+        id: 'candidate-c',
+        label: 'Route Candidate C (Alternative High Risk Corridor)',
+        distanceKm: 7.0,
+        durationMinutes: 14,
+        safetyStatus: 'RISKY',
+        highestHazardSeverity: 'HIGH',
+        blockedRoad: false,
+        coordinates: CHD_MOHALI_CORRIDOR_A,
+      },
+    ],
+  },
+  {
+    id: 'p3-scenario-5',
+    scenarioNumber: 5,
+    name: 'Scenario 5: Blocked Road Route Rejected',
+    shortLabel: 'P3-5: BLOCKED REJECTED',
+    description: 'Route A (1.8 km) intersects physical road closure (BLOCKED). Route B (3.0 km) is SAFE. Impassable route rejected immediately.',
+    isRealOSRM: false,
+    start: [76.7915, 30.7410],
+    destination: [76.8040, 30.7280],
+    expectedSelectedId: 'candidate-b',
+    expectedReasonCode: 'SAFE_ROUTE_SELECTED',
+    expectedSaferDespiteLonger: true,
+    candidateFixtures: [
+      {
+        id: 'candidate-a',
+        label: 'Route Candidate A (Blocked Sector 26 Madhya Marg)',
+        distanceKm: 1.8,
+        durationMinutes: 4,
+        safetyStatus: 'BLOCKED',
+        highestHazardSeverity: 'NONE',
+        blockedRoad: true,
+        coordinates: [
+          [76.7915, 30.7410],
+          [76.7950, 30.7365],
+          [76.8040, 30.7280],
+        ],
+      },
+      {
+        id: 'candidate-b',
+        label: 'Route Candidate B (Unblocked Sector 19/27 Bypass)',
+        distanceKm: 3.0,
+        durationMinutes: 7,
+        safetyStatus: 'SAFE',
+        highestHazardSeverity: 'NONE',
+        blockedRoad: false,
+        coordinates: [
+          [76.7915, 30.7410],
+          [76.7850, 30.7350],
+          [76.7950, 30.7250],
+          [76.8040, 30.7280],
+        ],
+      },
+    ],
+  },
+  {
+    id: 'p3-scenario-6',
+    scenarioNumber: 6,
+    name: 'Scenario 6: No Usable Route Available',
+    shortLabel: 'P3-6: NO USABLE ROUTE',
+    description: 'All candidates are CRITICAL evacuation zone (2.0 km) and BLOCKED road closures (1.5 km). No usable route can be verified. No route line rendered.',
+    isRealOSRM: false,
+    start: [76.7120, 30.7190],
+    destination: [76.7230, 30.6940],
+    expectedSelectedId: null,
+    expectedReasonCode: 'NO_USABLE_ROUTE',
+    expectedSaferDespiteLonger: false,
+    candidateFixtures: [
+      {
+        id: 'candidate-a',
+        label: 'Route Candidate A (Toxic Industrial Spill Zone)',
+        distanceKm: 2.0,
+        durationMinutes: 5,
+        safetyStatus: 'UNSAFE',
+        highestHazardSeverity: 'CRITICAL',
+        blockedRoad: false,
+        coordinates: [
+          [76.7120, 30.7190],
+          [76.7160, 30.7040],
+          [76.7230, 30.6940],
+        ],
+      },
+      {
+        id: 'candidate-b',
+        label: 'Route Candidate B (Physical Road Embankment Closure)',
+        distanceKm: 1.5,
+        durationMinutes: 4,
+        safetyStatus: 'BLOCKED',
+        highestHazardSeverity: 'NONE',
+        blockedRoad: true,
+        coordinates: [
+          [76.7120, 30.7190],
+          [76.6780, 30.7470],
+          [76.7230, 30.6940],
+        ],
+      },
+    ],
+  },
+  {
+    id: 'p3-scenario-7',
+    scenarioNumber: 7,
+    name: 'Scenario 7: Safe Route Beats Everything Else',
+    shortLabel: 'P3-7: SAFE BEATS ALL',
+    description: 'Candidate A (1.0 km, HIGH), Candidate B (2.0 km, MODERATE), and Candidate C (5.0 km, SAFE). Proves 5.0 km SAFE beats 1.0 km HIGH.',
+    isRealOSRM: false,
+    start: [76.7794, 30.7333],
+    destination: [76.7179, 30.7046],
+    expectedSelectedId: 'candidate-c',
+    expectedReasonCode: 'SAFE_ROUTE_SELECTED',
+    expectedSaferDespiteLonger: true,
+    candidateFixtures: [
+      {
+        id: 'candidate-a',
+        label: 'Route Candidate A (High Debris Short Cut)',
+        distanceKm: 1.0,
+        durationMinutes: 2,
+        safetyStatus: 'RISKY',
+        highestHazardSeverity: 'HIGH',
+        blockedRoad: false,
+        coordinates: CHD_MOHALI_CORRIDOR_A,
+      },
+      {
+        id: 'candidate-b',
+        label: 'Route Candidate B (Moderate Flood Corridor)',
+        distanceKm: 2.0,
+        durationMinutes: 5,
+        safetyStatus: 'RISKY',
+        highestHazardSeverity: 'MODERATE',
+        blockedRoad: false,
+        coordinates: CHD_MOHALI_CORRIDOR_B,
+      },
+      {
+        id: 'candidate-c',
+        label: 'Route Candidate C (Complete Safe Perimeter)',
+        distanceKm: 5.0,
+        durationMinutes: 12,
+        safetyStatus: 'SAFE',
+        highestHazardSeverity: 'NONE',
+        blockedRoad: false,
+        coordinates: [
+          [76.7794, 30.7333],
+          [76.7850, 30.7450],
+          [76.7650, 30.7550],
+          [76.7350, 30.7350],
+          [76.7179, 30.7046],
+        ],
+      },
+    ],
+  },
+  {
+    id: 'p3-scenario-8',
+    scenarioNumber: 8,
+    name: 'Scenario 8: Live OSRM Multi-Candidate Test',
+    shortLabel: 'P3-8: LIVE OSRM CANDIDATES',
+    description: 'Live query to OSRM engine requesting alternatives=true in Chandigarh-Mohali. Evaluates every real returned candidate through Phase 2 safety engine.',
+    isRealOSRM: true,
+    start: [76.7794, 30.7333],       // Sector 17, Chandigarh
+    destination: [76.7179, 30.7046], // Mohali Phase 7
+    expectedSelectedId: null,         // Determined dynamically from real OSRM response
+    expectedReasonCode: 'SAFE_ROUTE_SELECTED',
+    expectedSaferDespiteLonger: false,
+  },
+];
+

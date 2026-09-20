@@ -1,0 +1,503 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-container-low":"#eff4ff","on-error-container":"#93000a","on-surface-variant":"#45464d","on-secondary-fixed-variant":"#004b73","inverse-on-surface":"#eaf1ff","tertiary-container":"#410002","on-primary-fixed":"#131b2e","error-container":"#ffdad6","surface-container":"#e5eeff","on-tertiary-container":"#f63a35","secondary-container":"#5bb8fe","on-surface":"#0b1c30","on-secondary-fixed":"#001d31","on-primary-fixed-variant":"#3f465c","on-primary-container":"#7c839b","on-tertiary-fixed":"#410002","on-tertiary-fixed-variant":"#93000b","surface-container-high":"#dce9ff","primary-container":"#131b2e","secondary-fixed":"#cce5ff","inverse-primary":"#bec6e0","surface":"#f8f9ff","outline":"#76777d","tertiary-fixed-dim":"#ffb4ab","secondary-fixed-dim":"#93ccff","error":"#ba1a1a","primary":"#000000","on-primary":"#ffffff","background":"#f8f9ff","tertiary":"#000000","on-secondary-container":"#00476e","tertiary-fixed":"#ffdad6","on-error":"#ffffff","on-tertiary":"#ffffff","surface-variant":"#d3e4fe","outline-variant":"#c6c6cd","surface-container-highest":"#d3e4fe","surface-container-lowest":"#ffffff","inverse-surface":"#213145","surface-tint":"#565e74","surface-bright":"#f8f9ff","primary-fixed-dim":"#bec6e0","surface-dim":"#cbdbf5","on-secondary":"#ffffff","secondary":"#006398","primary-fixed":"#dae2fd","on-background":"#0b1c30"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"gutter-standard":"16px","margin-desktop":"32px","margin-mobile":"16px","space-10":"40px","space-8":"32px","space-5":"20px","gutter-expanded":"24px","space-2":"8px","space-6":"24px","space-3":"12px","space-4":"16px","space-0":"0px","space-12":"48px","gutter-dense":"8px","space-16":"64px","margin-tablet":"24px","space-1":"4px"},"fontFamily":{"data-mono-md":["JetBrains Mono"],"body-sm":["Public Sans"],"body-md":["Public Sans"],"display-hud-mobile":["JetBrains Mono"],"display-hud":["JetBrains Mono"],"headline-xl":["Public Sans"],"headline-lg":["Public Sans"],"headline-xl-mobile":["Public Sans"],"label-badge":["Public Sans"],"headline-md":["Public Sans"],"label-telemetry":["JetBrains Mono"],"body-lg":["Public Sans"],"headline-sm":["Public Sans"],"data-mono-lg":["JetBrains Mono"]},"fontSize":{"data-mono-md":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"500"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"400"}],"body-md":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"display-hud-mobile":["32px",{"lineHeight":"36px","letterSpacing":"-0.03em","fontWeight":"700"}],"display-hud":["48px",{"lineHeight":"52px","letterSpacing":"-0.04em","fontWeight":"700"}],"headline-xl":["36px",{"lineHeight":"44px","letterSpacing":"-0.025em","fontWeight":"700"}],"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-xl-mobile":["26px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-badge":["11px",{"lineHeight":"14px","letterSpacing":"0.06em","fontWeight":"700"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"label-telemetry":["10px",{"lineHeight":"12px","letterSpacing":"0.08em","fontWeight":"500"}],"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"headline-sm":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"600"}],"data-mono-lg":["18px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 w-full z-50 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 max-w-7xl mx-auto px-gutter-expanded flex items-center justify-between gap-space-4"><div class="flex items-center gap-space-3"><div class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[20px]">emergency_share</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface leading-tight">ResQnet</span><span class="font-label-telemetry text-label-telemetry text-on-surface-variant uppercase tracking-wider">Citizen Network</span></div></div><div class="hidden md:flex flex-1 max-w-md mx-space-4"><div class="w-full flex items-center gap-space-2 px-space-3 py-space-2 rounded-lg bg-surface-container-low text-on-surface-variant"><span class="material-symbols-outlined text-[18px]">search</span><span class="font-body-sm text-body-sm flex-1 text-outline">Search emergency contacts, shelters, resources...</span><kbd class="font-data-mono-md text-label-telemetry bg-surface-container px-space-1 rounded text-on-surface-variant">⌘K</kbd></div></div><div class="flex items-center gap-space-4"><div class="hidden sm:flex items-center gap-space-2 bg-surface-container-low px-space-3 py-space-1 rounded-full"><span class="font-label-badge text-label-badge uppercase text-secondary font-bold flex items-center gap-space-1"><span class="material-symbols-outlined text-[14px]">call</span>112</span><span class="text-outline text-[12px]">|</span><span class="font-label-badge text-label-badge uppercase text-secondary font-bold">NDRF 1078</span></div><div class="flex items-center gap-space-2 pl-space-2"><div class="hidden lg:flex flex-col text-right"><span class="font-headline-sm text-body-sm text-on-surface font-semibold leading-tight">Simran Kaur</span><span class="font-label-telemetry text-label-telemetry text-secondary font-medium">Verified Citizen</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="w-full pt-16 pb-28 bg-surface"><div class="flex flex-col w-full">
+<!-- Subtle Ambient Glow Overlay (parent contained) -->
+<div class="relative w-full max-w-7xl mx-auto px-gutter-expanded pt-space-6 pb-space-16">
+<div class="absolute top-0 right-1/4 w-96 h-96 bg-secondary-fixed-dim/20 rounded-full blur-3xl pointer-events-none -z-10"></div>
+<div class="absolute top-48 left-10 w-72 h-72 bg-surface-container-high/40 rounded-full blur-2xl pointer-events-none -z-10"></div>
+<!-- Breadcrumbs & Context Header -->
+<div class="flex flex-col gap-space-2 mb-space-8">
+<nav class="flex items-center gap-space-2 text-on-surface-variant font-label-telemetry text-label-telemetry uppercase tracking-wider">
+<a class="hover:text-secondary transition-colors" href="#">ResQnet</a>
+<span class="text-outline-variant">/</span>
+<span class="text-on-surface font-semibold">Donations &amp; Relief</span>
+</nav>
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-4 mt-space-1">
+<div class="max-w-2xl">
+<div class="inline-flex items-center gap-space-2 px-space-2 py-0.5 rounded-full bg-surface-container text-secondary font-label-telemetry text-label-telemetry uppercase font-bold tracking-wider mb-space-2">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+            NDRF Audited Framework
+          </div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight font-bold">
+            Support Verified Relief
+          </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-space-1">
+            Support verified emergency resource needs through trusted, accredited organizations.
+          </p>
+</div>
+<!-- Telemetry Summary Pill -->
+<div class="flex items-center gap-space-4 bg-surface-container-lowest p-space-3 rounded-xl shadow-sm self-start lg:self-auto">
+<div class="flex flex-col pr-space-4">
+<span class="font-label-telemetry text-label-telemetry text-on-surface-variant uppercase">Active Campaigns</span>
+<span class="font-data-mono-lg text-data-mono-lg font-bold text-on-surface">04 Manifests</span>
+</div>
+<div class="w-px h-8 bg-surface-container-high"></div>
+<div class="flex flex-col">
+<span class="font-label-telemetry text-label-telemetry text-on-surface-variant uppercase">Total Disbursed</span>
+<span class="font-data-mono-lg text-data-mono-lg font-bold text-secondary">₹1,57,500</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Reassurance Banner (Subtle soft blue tone, dual-coded, no borders) -->
+<div class="w-full bg-surface-container-low rounded-xl p-space-5 mb-space-8 shadow-sm relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-secondary"></div>
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-space-4 pl-space-2">
+<div class="flex items-start gap-space-3 max-w-4xl">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-secondary shrink-0 mt-0.5 md:mt-0">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-2">
+<span class="font-headline-sm text-headline-sm text-on-surface">Direct Impact Guarantee</span>
+<span class="font-label-badge text-label-badge bg-surface-container px-space-2 py-0.5 rounded text-secondary uppercase font-semibold">Audited Ledger</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">
+              100% of verified contributions directly support active emergency resource manifests audited by state disaster authorities. Every rupee maps directly to certified vendor supplies and ground distributions with published manifests.
+            </p>
+</div>
+</div>
+<button class="shrink-0 inline-flex items-center gap-space-2 bg-surface-container text-secondary font-label-badge text-label-badge px-space-4 py-space-2 rounded-lg hover:bg-secondary hover:text-on-secondary transition-colors font-semibold uppercase tracking-wider">
+<span>Audit Log #CH-2025</span>
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</button>
+</div>
+</div>
+<!-- Filter Bar -->
+<div class="flex items-center justify-between gap-space-4 mb-space-6 flex-wrap">
+<div class="flex items-center gap-space-2 overflow-x-auto pb-1 max-w-full">
+<button class="filter-btn active bg-primary text-on-primary font-label-badge text-label-badge uppercase tracking-wider px-space-4 py-space-2 rounded-xl transition-all font-semibold shadow-sm shrink-0">
+          All Campaigns (4)
+        </button>
+<button class="filter-btn bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-badge text-label-badge uppercase tracking-wider px-space-4 py-space-2 rounded-xl transition-all shrink-0">
+          Medical Supplies (2)
+        </button>
+<button class="filter-btn bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-badge text-label-badge uppercase tracking-wider px-space-4 py-space-2 rounded-xl transition-all shrink-0">
+          Food &amp; Water (1)
+        </button>
+<button class="filter-btn bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-badge text-label-badge uppercase tracking-wider px-space-4 py-space-2 rounded-xl transition-all shrink-0">
+          Evacuation Logistics (1)
+        </button>
+<button class="filter-btn bg-surface-container-lowest text-secondary hover:bg-surface-container font-label-badge text-label-badge uppercase tracking-wider px-space-4 py-space-2 rounded-xl transition-all shrink-0 flex items-center gap-space-1">
+<span class="material-symbols-outlined text-[14px]">near_me</span>
+          Near Sector 17 &amp; 22
+        </button>
+</div>
+<div class="hidden sm:flex items-center gap-space-2 text-on-surface-variant font-label-telemetry text-label-telemetry">
+<span class="material-symbols-outlined text-[16px]">sync</span>
+<span>TELEMETRY REFRESHED: 42s AGO</span>
+</div>
+</div>
+<!-- Primary Campaign Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-6">
+<!-- Card 1 (Featured - 8 cols) -->
+<article class="lg:col-span-8 bg-surface-container-lowest rounded-xl shadow-md p-space-6 flex flex-col justify-between relative overflow-hidden group hover:shadow-lg transition-shadow">
+<div class="absolute -right-8 -top-8 w-40 h-40 bg-secondary-container/10 rounded-full blur-2xl pointer-events-none"></div>
+<div>
+<!-- Header Area -->
+<div class="flex flex-wrap items-center justify-between gap-space-2 mb-space-4">
+<div class="flex items-center gap-space-2">
+<span class="font-label-badge text-label-badge bg-secondary-fixed text-on-secondary-fixed-variant px-space-2 py-0.5 rounded font-bold uppercase tracking-wider flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-ping"></span>
+                CAMPAIGN ACTIVE
+              </span>
+<span class="font-label-telemetry text-label-telemetry text-outline">REF: MED-SEC17-09</span>
+</div>
+<div class="flex items-center gap-space-1 text-secondary font-label-badge text-label-badge bg-surface-container px-space-2 py-0.5 rounded font-medium">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+              North India Relief Foundation
+            </div>
+</div>
+<!-- Title & Organization -->
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">
+            Emergency Medical Supplies
+          </h2>
+<div class="flex items-center gap-space-2 mt-space-1 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-secondary text-[16px]">location_on</span>
+<span>Supporting: <strong class="text-on-surface">Sector 17 Safety Hub, Chandigarh</strong></span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-3 max-w-2xl leading-relaxed">
+            Critical first-aid consumables, IV fluids, and trauma packs for active triage at Sector 17 Community Centre. Supplies dispatched in batch increments directly through authorized pharmaceutical stockists.
+          </p>
+<!-- Visual Telemetry Callout & Mini Visual -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-3 my-space-5">
+<div class="bg-surface-container-low p-space-3 rounded-lg flex items-center gap-space-3">
+<div class="w-8 h-8 rounded bg-surface-container-lowest flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">medical_services</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-telemetry text-label-telemetry text-on-surface-variant uppercase">Trauma Kits</span>
+<span class="font-data-mono-md text-data-mono-md font-semibold text-on-surface">140 / 200 Ready</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-3 rounded-lg flex items-center gap-space-3">
+<div class="w-8 h-8 rounded bg-surface-container-lowest flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">local_shipping</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-telemetry text-label-telemetry text-on-surface-variant uppercase">Transit Time</span>
+<span class="font-data-mono-md text-data-mono-md font-semibold text-on-surface">~18 mins dispatch</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-3 rounded-lg flex items-center gap-space-3">
+<div class="w-8 h-8 rounded bg-surface-container-lowest flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">group</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-telemetry text-label-telemetry text-on-surface-variant uppercase">Supporters</span>
+<span class="font-data-mono-md text-data-mono-md font-semibold text-on-surface">118 Citizens</span>
+</div>
+</div>
+</div>
+<!-- Progress Visualization -->
+<div class="bg-surface-container-low/60 p-space-4 rounded-xl mb-space-6">
+<div class="flex items-center justify-between mb-space-2">
+<div class="flex items-baseline gap-space-2">
+<span class="font-data-mono-lg text-data-mono-lg font-bold text-on-surface">₹68,500</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">raised of ₹1,00,000 target</span>
+</div>
+<span class="font-data-mono-md text-data-mono-md font-bold text-secondary">68.5%</span>
+</div>
+<!-- Progress Bar Line -->
+<div class="w-full h-2.5 bg-surface-container rounded-full overflow-hidden flex">
+<div class="h-full bg-secondary rounded-full transition-all duration-500" style="width: 68.5%"></div>
+</div>
+<div class="flex justify-between items-center mt-space-2 font-label-telemetry text-label-telemetry text-on-surface-variant uppercase">
+<span>Verified Direct Line</span>
+<span>₹31,500 remaining to manifest cap</span>
+</div>
+</div>
+</div>
+<!-- Action Row -->
+<div class="flex flex-wrap items-center gap-space-3 pt-space-2">
+<button class="bg-primary text-on-primary hover:bg-on-primary-fixed-variant transition-colors font-label-badge text-label-badge uppercase tracking-wider px-space-6 py-space-3 rounded-xl font-bold flex items-center gap-space-2 shadow-sm" onclick="document.getElementById('sector17PreviewModal').classList.remove('hidden')">
+<span>[ View Campaign ]</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+<button class="bg-surface-container hover:bg-surface-container-high text-on-surface font-label-badge text-label-badge uppercase tracking-wider px-space-5 py-space-3 rounded-xl font-semibold flex items-center gap-space-2 transition-colors">
+<span class="material-symbols-outlined text-[16px]">map</span>
+<span>[ View on Map ]</span>
+</button>
+<span class="font-data-mono-md text-label-telemetry text-on-surface-variant ml-auto hidden sm:inline">NODAL ID: CC-SEC17-A</span>
+</div>
+</article>
+<!-- Sidebar Supporting Resource Manifest (4 cols) -->
+<aside class="lg:col-span-4 flex flex-col gap-space-4">
+<!-- Live Field Manifest Snapshot -->
+<div class="bg-surface-container-lowest rounded-xl shadow-md p-space-5 flex flex-col h-full">
+<div class="flex items-center justify-between pb-space-3 mb-space-3 bg-surface-container-low -mx-space-5 -mt-space-5 p-space-4 rounded-t-xl">
+<div class="flex items-center gap-space-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">fact_check</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Triage Needs Log</span>
+</div>
+<span class="font-label-badge text-label-badge bg-surface-container px-space-2 py-0.5 rounded text-secondary font-bold">STATE LEVEL 2</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-4">
+            Items prioritized by Sector 17 Incident Commander based on patient intake within the last 3 hours.
+          </p>
+<ul class="flex flex-col gap-space-3 mb-space-6 flex-1">
+<li class="flex items-center justify-between p-space-2.5 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-space-2">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+<span class="font-body-sm text-body-sm font-medium text-on-surface">Normal Saline IV (500ml)</span>
+</div>
+<span class="font-data-mono-md text-data-mono-md text-on-surface-variant font-bold">85 left</span>
+</li>
+<li class="flex items-center justify-between p-space-2.5 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-space-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-body-sm text-body-sm font-medium text-on-surface">Sterile Burn Dressings</span>
+</div>
+<span class="font-data-mono-md text-data-mono-md text-on-surface-variant font-bold">120 units</span>
+</li>
+<li class="flex items-center justify-between p-space-2.5 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-space-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-body-sm text-body-sm font-medium text-on-surface">Pediatric ORS Sachets</span>
+</div>
+<span class="font-data-mono-md text-data-mono-md text-on-surface-variant font-bold">400 pkts</span>
+</li>
+<li class="flex items-center justify-between p-space-2.5 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-space-2">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+<span class="font-body-sm text-body-sm font-medium text-on-surface">Antiseptic Concentrate</span>
+</div>
+<span class="font-data-mono-md text-data-mono-md text-on-surface-variant font-bold">Fulfilled</span>
+</li>
+</ul>
+<div class="bg-surface-container-low/80 p-space-3 rounded-lg flex items-center gap-space-3">
+<span class="material-symbols-outlined text-secondary text-[20px]">shield</span>
+<div class="flex flex-col">
+<span class="font-label-telemetry text-label-telemetry text-on-surface-variant uppercase">Financial Custody</span>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">SBI Disaster Escrow #8821</span>
+</div>
+</div>
+</div>
+</aside>
+<!-- Card 2: Essential Food & Potable Water Tankers -->
+<article class="lg:col-span-6 bg-surface-container-lowest rounded-xl shadow-md p-space-6 flex flex-col justify-between group hover:shadow-lg transition-shadow">
+<div>
+<!-- Header Tagging -->
+<div class="flex flex-wrap items-center justify-between gap-space-2 mb-space-3">
+<div class="flex items-center gap-space-2">
+<span class="font-label-badge text-label-badge bg-secondary-fixed text-on-secondary-fixed-variant px-space-2 py-0.5 rounded font-bold uppercase tracking-wider flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-ping"></span>
+                CAMPAIGN ACTIVE
+              </span>
+<span class="font-label-telemetry text-label-telemetry text-outline">REF: H2O-MOH-04</span>
+</div>
+<div class="flex items-center gap-space-1 text-secondary font-label-badge text-label-badge bg-surface-container px-space-2 py-0.5 rounded font-medium">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+              Punjab Community Response Network
+            </div>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight">
+            Essential Food &amp; Potable Water Tankers
+          </h3>
+<div class="flex items-center gap-space-2 mt-space-1 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-secondary text-[16px]">location_on</span>
+<span>Supporting: <strong class="text-on-surface">Mohali Phase 7 Community Hall</strong></span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-3 leading-relaxed">
+            Safe bottled water distribution and ready-to-eat hot meal packets for displaced families sheltered in Mohali Phase 7 Community Hall. Provisioned via regional civil defense kitchens.
+          </p>
+<!-- Metrics bar -->
+<div class="bg-surface-container-low/70 p-space-4 rounded-xl my-space-5">
+<div class="flex items-center justify-between mb-space-2">
+<div class="flex items-baseline gap-space-2">
+<span class="font-data-mono-lg text-data-mono-lg font-bold text-on-surface">₹42,800</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">of ₹75,000 target</span>
+</div>
+<span class="font-data-mono-md text-data-mono-md font-bold text-secondary">57%</span>
+</div>
+<div class="w-full h-2 bg-surface-container rounded-full overflow-hidden flex">
+<div class="h-full bg-secondary rounded-full" style="width: 57%"></div>
+</div>
+<div class="flex justify-between items-center mt-space-2 font-label-telemetry text-label-telemetry text-on-surface-variant uppercase">
+<span>4,200 Litres Delivered</span>
+<span>₹32,200 remaining</span>
+</div>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-space-3 pt-space-2">
+<button class="bg-primary text-on-primary hover:bg-on-primary-fixed-variant transition-colors font-label-badge text-label-badge uppercase tracking-wider px-space-5 py-space-2.5 rounded-xl font-bold flex items-center gap-space-2 shadow-sm">
+<span>[ View Campaign ]</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+<button class="bg-surface-container hover:bg-surface-container-high text-on-surface font-label-badge text-label-badge uppercase tracking-wider px-space-4 py-space-2.5 rounded-xl font-semibold flex items-center gap-space-2 transition-colors">
+<span class="material-symbols-outlined text-[16px]">map</span>
+<span>[ View on Map ]</span>
+</button>
+</div>
+</article>
+<!-- Card 3: Emergency Generator Fuel & Power Banks -->
+<article class="lg:col-span-6 bg-surface-container-lowest rounded-xl shadow-md p-space-6 flex flex-col justify-between group hover:shadow-lg transition-shadow">
+<div>
+<!-- Header Tagging -->
+<div class="flex flex-wrap items-center justify-between gap-space-2 mb-space-3">
+<div class="flex items-center gap-space-2">
+<span class="font-label-badge text-label-badge bg-secondary-fixed text-on-secondary-fixed-variant px-space-2 py-0.5 rounded font-bold uppercase tracking-wider flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-ping"></span>
+                CAMPAIGN ACTIVE
+              </span>
+<span class="font-label-telemetry text-label-telemetry text-outline">REF: PWR-SEC22-02</span>
+</div>
+<div class="flex items-center gap-space-1 text-secondary font-label-badge text-label-badge bg-surface-container px-space-2 py-0.5 rounded font-medium">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+              Chandigarh Emergency Volunteers
+            </div>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight">
+            Emergency Generator Fuel &amp; Power Banks
+          </h3>
+<div class="flex items-center gap-space-2 mt-space-1 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-secondary text-[16px]">location_on</span>
+<span>Supporting: <strong class="text-on-surface">Govt Senior Secondary School, Sector 22</strong></span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-3 leading-relaxed">
+            Diesel supplies for 24x7 emergency backup power and communication recharge nodes for stranded residents and field rescue coordination radios.
+          </p>
+<!-- Metrics bar -->
+<div class="bg-surface-container-low/70 p-space-4 rounded-xl my-space-5">
+<div class="flex items-center justify-between mb-space-2">
+<div class="flex items-baseline gap-space-2">
+<span class="font-data-mono-lg text-data-mono-lg font-bold text-on-surface">₹28,000</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">of ₹50,000 target</span>
+</div>
+<span class="font-data-mono-md text-data-mono-md font-bold text-secondary">56%</span>
+</div>
+<div class="w-full h-2 bg-surface-container rounded-full overflow-hidden flex">
+<div class="h-full bg-secondary rounded-full" style="width: 56%"></div>
+</div>
+<div class="flex justify-between items-center mt-space-2 font-label-telemetry text-label-telemetry text-on-surface-variant uppercase">
+<span>GenSet Backup: 36h Remaining</span>
+<span>₹22,000 remaining</span>
+</div>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-space-3 pt-space-2">
+<button class="bg-primary text-on-primary hover:bg-on-primary-fixed-variant transition-colors font-label-badge text-label-badge uppercase tracking-wider px-space-5 py-space-2.5 rounded-xl font-bold flex items-center gap-space-2 shadow-sm">
+<span>[ View Campaign ]</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+<button class="bg-surface-container hover:bg-surface-container-high text-on-surface font-label-badge text-label-badge uppercase tracking-wider px-space-4 py-space-2.5 rounded-xl font-semibold flex items-center gap-space-2 transition-colors">
+<span class="material-symbols-outlined text-[16px]">map</span>
+<span>[ View on Map ]</span>
+</button>
+</div>
+</article>
+<!-- Card 4: High-Water Debris Removal & Ingress Clearing (Full span lower banner style) -->
+<article class="lg:col-span-12 bg-surface-container-lowest rounded-xl shadow-md p-space-6 flex flex-col lg:flex-row lg:items-center justify-between gap-space-6 hover:shadow-lg transition-shadow">
+<div class="flex-1">
+<div class="flex flex-wrap items-center gap-space-3 mb-space-2">
+<span class="font-label-badge text-label-badge bg-secondary-fixed text-on-secondary-fixed-variant px-space-2 py-0.5 rounded font-bold uppercase tracking-wider flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-ping"></span>
+              CAMPAIGN ACTIVE
+            </span>
+<span class="font-label-telemetry text-label-telemetry text-outline">REF: LOG-MAD-11</span>
+<span class="flex items-center gap-1 text-secondary font-label-badge text-label-badge bg-surface-container px-space-2 py-0.5 rounded font-medium">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+              Civil Defense Auxiliary Unit
+            </span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight">
+            High-Water Debris Removal &amp; Ingress Clearing
+          </h3>
+<div class="flex items-center gap-space-2 mt-space-1 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-secondary text-[16px]">location_on</span>
+<span>Supporting: <strong class="text-on-surface">Madhya Marg Corridor (Sectors 18 to 26)</strong></span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-2 max-w-3xl">
+            Funding commercial suction pumps, winch gear, and heavy chains to clear fallen trees and waterlogged underpasses, allowing ambulances safe passage to PGIMER &amp; GMCH-32.
+          </p>
+</div>
+<div class="w-full lg:w-80 shrink-0 bg-surface-container-low p-space-4 rounded-xl flex flex-col gap-space-3">
+<div class="flex items-center justify-between">
+<span class="font-data-mono-lg text-data-mono-lg font-bold text-on-surface">₹18,200</span>
+<span class="font-data-mono-md text-data-mono-md font-bold text-secondary">52% of ₹35k</span>
+</div>
+<div class="w-full h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 52%"></div>
+</div>
+<div class="flex items-center justify-between pt-space-1">
+<button class="bg-primary text-on-primary hover:bg-on-primary-fixed-variant transition-colors font-label-badge text-label-badge uppercase tracking-wider px-space-4 py-space-2 rounded-lg font-bold flex items-center gap-space-1 text-center w-full justify-center">
+<span>[ View Campaign ]</span>
+</button>
+</div>
+</div>
+</article>
+</div>
+<!-- Supplementary Trust Section: Transparent Manifest Assurance -->
+<div class="mt-space-12 bg-surface-container-low rounded-2xl p-space-8">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-6">
+<div class="flex flex-col gap-space-2">
+<div class="w-10 h-10 rounded-xl bg-surface-container-lowest flex items-center justify-center text-secondary shadow-sm">
+<span class="material-symbols-outlined text-[22px]">account_balance</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Treasury Escrow</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Funds do not disburse to personal citizen accounts. They unlock directly to verified vendor manifests upon GPS delivery sign-off by sector wardens.
+          </p>
+</div>
+<div class="flex flex-col gap-space-2">
+<div class="w-10 h-10 rounded-xl bg-surface-container-lowest flex items-center justify-center text-secondary shadow-sm">
+<span class="material-symbols-outlined text-[22px]">receipt_long</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Cryptographic Receipts</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Every patron receives a verifiable transaction hash linked to the state disaster audit board under Section 46 of the Disaster Management Act.
+          </p>
+</div>
+<div class="flex flex-col gap-space-2">
+<div class="w-10 h-10 rounded-xl bg-surface-container-lowest flex items-center justify-center text-secondary shadow-sm">
+<span class="material-symbols-outlined text-[22px]">hub</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Zero Commission Fee</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Payment gateway charges are underwritten by civic institutional partners. 100% of nominal amount directly funds physical supplies.
+          </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Integrated Slide-in / Modal Preview Overlay (Citizen Dashboard Docked Mode) -->
+<!-- Positioned above bottom bar, right aligned for quick review -->
+<div class="fixed bottom-24 right-4 sm:right-8 z-40 w-full max-w-md bg-surface-container-lowest rounded-2xl shadow-xl p-space-5 transition-transform duration-300" id="sector17PreviewModal">
+<div class="flex items-center justify-between pb-space-3 mb-space-3 bg-surface-container-low -mx-space-5 -mt-space-5 p-space-4 rounded-t-2xl">
+<div class="flex items-center gap-space-2">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary animate-ping"></span>
+<span class="font-label-telemetry text-label-telemetry uppercase text-secondary font-bold">Fast Relief Dock • Sector 17</span>
+</div>
+<button class="w-7 h-7 rounded-full hover:bg-surface-container flex items-center justify-center text-on-surface-variant transition-colors" onclick="document.getElementById('sector17PreviewModal').classList.add('hidden')" title="Close Preview">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-space-3">
+<div>
+<span class="font-label-badge text-label-badge bg-surface-container px-space-2 py-0.5 rounded text-secondary font-semibold uppercase">
+          Triage Center Priority #1
+        </span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-bold mt-1">
+          Sector 17 Medical Dispatch
+        </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+          Batch 04 ready for immediate pharmacy payout: 40 units pediatric trauma dressings + sterile burn gauzes.
+        </p>
+</div>
+<div class="bg-surface-container-low p-space-3 rounded-xl">
+<div class="flex justify-between items-center text-body-sm mb-1">
+<span class="font-body-sm text-on-surface-variant">Batch Goal</span>
+<span class="font-data-mono-md text-data-mono-md font-bold text-on-surface">₹12,000 / ₹15,000</span>
+</div>
+<div class="w-full h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 80%"></div>
+</div>
+<span class="font-label-telemetry text-label-telemetry text-secondary mt-1 block">80% funded • ₹3,000 needed to trigger delivery vehicle</span>
+</div>
+<div class="grid grid-cols-3 gap-space-2 pt-space-1">
+<button class="quick-amt-btn py-space-2 bg-surface-container-low hover:bg-surface-container text-on-surface font-data-mono-md text-data-mono-md rounded-lg font-bold text-center transition-colors">
+          ₹500
+        </button>
+<button class="quick-amt-btn py-space-2 bg-surface-container-low hover:bg-surface-container text-on-surface font-data-mono-md text-data-mono-md rounded-lg font-bold text-center transition-colors">
+          ₹1,000
+        </button>
+<button class="quick-amt-btn py-space-2 bg-secondary text-on-secondary font-data-mono-md text-data-mono-md rounded-lg font-bold text-center transition-colors">
+          ₹2,500
+        </button>
+</div>
+<div class="flex items-center gap-space-2 mt-space-1">
+<button class="flex-1 bg-primary text-on-primary hover:bg-on-primary-fixed-variant py-space-2.5 rounded-xl font-label-badge text-label-badge uppercase font-bold tracking-wider flex items-center justify-center gap-space-1 shadow-sm transition-colors">
+<span>Authorize Direct Escrow</span>
+<span class="material-symbols-outlined text-[16px]">lock</span>
+</button>
+</div>
+<div class="text-center">
+<span class="font-label-telemetry text-label-telemetry text-on-surface-variant">Authenticated via Simran Kaur (UIDAI Verified)</span>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Simple filter button interaction
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('.filter-btn').forEach(b => {
+        b.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm', 'font-semibold');
+        b.classList.add('bg-surface-container-lowest', 'text-on-surface-variant');
+      });
+      this.classList.remove('bg-surface-container-lowest', 'text-on-surface-variant');
+      this.classList.add('bg-primary', 'text-on-primary', 'shadow-sm', 'font-semibold');
+    });
+  });
+
+  // Quick Amount Selector highlight
+  document.querySelectorAll('.quick-amt-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('.quick-amt-btn').forEach(b => {
+        b.classList.remove('bg-secondary', 'text-on-secondary');
+        b.classList.add('bg-surface-container-low', 'text-on-surface');
+      });
+      this.classList.remove('bg-surface-container-low', 'text-on-surface');
+      this.classList.add('bg-secondary', 'text-on-secondary');
+    });
+  });
+</script></main><div class="fixed bottom-space-4 left-0 right-0 z-50 flex justify-center px-space-4 pointer-events-none"><nav class="pointer-events-auto bg-surface-container-lowest/95 backdrop-blur-xl shadow-[0_4px_20px_rgba(0,0,0,0.08)] rounded-full px-space-3 py-space-2 flex items-center gap-space-1" data-active-classes="bg-primary text-on-primary rounded-xl font-semibold"><a class="flex items-center gap-space-2 px-space-4 py-space-2 text-on-surface-variant hover:text-on-surface rounded-xl transition-colors" data-path="home" href="#"><span class="material-symbols-outlined text-[20px]">home</span><span class="font-body-sm text-body-sm hidden sm:inline">Home</span></a><a class="flex items-center gap-space-2 px-space-4 py-space-2 text-on-surface-variant hover:text-on-surface rounded-xl transition-colors" data-path="report" href="#"><span class="material-symbols-outlined text-[20px]">add_alert</span><span class="font-body-sm text-body-sm hidden sm:inline">Report</span></a><a class="flex items-center gap-space-2 px-space-4 py-space-2 text-on-surface-variant hover:text-on-surface rounded-xl transition-colors" data-path="map" href="#"><span class="material-symbols-outlined text-[20px]">map</span><span class="font-body-sm text-body-sm hidden sm:inline">Map</span></a><a class="flex items-center gap-space-2 px-space-4 py-space-2 text-on-surface-variant hover:text-on-surface rounded-xl transition-colors" data-path="alerts" href="#"><span class="material-symbols-outlined text-[20px]">notifications_active</span><span class="font-body-sm text-body-sm hidden sm:inline">Alerts</span></a><a aria-current="page" class="flex items-center gap-space-2 px-space-4 py-space-2 transition-colors bg-primary text-on-primary rounded-xl font-semibold" data-path="more-donations" href="#"><span class="material-symbols-outlined text-[20px]">volunteer_activism</span><span class="font-body-sm text-body-sm hidden sm:inline">More</span></a></nav></div><footer class="w-full bg-surface-container-low py-space-8 mb-16"><div class="max-w-7xl mx-auto px-gutter-expanded flex flex-col md:flex-row items-center justify-between gap-space-4 text-on-surface-variant font-body-sm text-body-sm"><div>ResQnet Citizen Portal © 2025. Official Disaster Response Framework.</div><div class="flex items-center gap-space-6"><span class="font-label-badge text-label-badge uppercase text-outline">National Disaster Response Network</span><span class="font-data-mono-md text-label-telemetry text-outline">ENCRYPTED-CAP-V1.2</span></div></div></footer></body></html>

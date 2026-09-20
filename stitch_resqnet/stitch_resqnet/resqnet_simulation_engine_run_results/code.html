@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700&amp;family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"secondary":"#455f87","primary":"#004ac6","border-default":"#E2E8F0","secondary-fixed":"#d5e3ff","error-container":"#ffdad6","on-error-container":"#93000a","success-text":"#16A34A","info-border":"#BFDBFE","critical-bg":"#FEF2F2","on-secondary-container":"#3e5980","on-secondary":"#ffffff","tertiary-fixed-dim":"#bec6e0","surface-bright":"#f8f9ff","surface":"#f8f9ff","on-surface":"#0b1c30","secondary-container":"#b5d0fd","surface-container-highest":"#d3e4fe","warning-bg":"#FFFBEB","text-muted":"#94A3B8","on-error":"#ffffff","blue-soft":"#EFF6FF","success-border":"#BBF7D0","inverse-on-surface":"#eaf1ff","secondary-fixed-dim":"#adc8f5","error":"#ba1a1a","on-secondary-fixed":"#001c3b","surface-container-high":"#dce9ff","warning-border":"#FDE68A","on-primary-container":"#eeefff","on-background":"#0b1c30","on-tertiary-fixed":"#131b2e","background":"#f8f9ff","surface-tint":"#0053db","primary-fixed-dim":"#b4c5ff","surface-container-lowest":"#ffffff","inverse-primary":"#b4c5ff","surface-card":"#FFFFFF","blue-light":"#DBEAFE","warning-text":"#D97706","surface-base":"#F8FAFC","on-tertiary-container":"#eef0ff","surface-container-low":"#eff4ff","on-primary-fixed-variant":"#003ea8","tertiary-container":"#656d84","outline-variant":"#c3c6d7","surface-subtle":"#F1F5F9","tertiary":"#4d556b","inverse-surface":"#213145","critical-border":"#FECACA","tertiary-fixed":"#dae2fd","critical-text":"#DC2626","surface-dim":"#cbdbf5","on-primary-fixed":"#00174b","surface-variant":"#d3e4fe","surface-container":"#e5eeff","success-bg":"#F0FDF4","on-surface-variant":"#434655","primary-fixed":"#dbe1ff","text-secondary":"#64748B","outline":"#737686","primary-container":"#2563eb","on-primary":"#ffffff","on-tertiary":"#ffffff","on-secondary-fixed-variant":"#2d486d","on-tertiary-fixed-variant":"#3f465c","text-primary":"#1E293B"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"space-2":"8px","space-12":"48px","space-5":"20px","gutter-standard":"16px","space-10":"40px","space-3":"12px","space-4":"16px","margin-desktop":"32px","gutter-expanded":"24px","space-0":"0px","gutter-dense":"8px","space-1":"4px","margin-mobile":"16px","space-8":"32px","space-16":"64px","space-6":"24px","margin-tablet":"24px"},fontFamily:{"data-mono-lg":["JetBrains Mono"],"body-md":["Public Sans"],"headline-xl":["Public Sans"],"display-hud-mobile":["JetBrains Mono"],"body-lg":["Public Sans"],"headline-sm":["Public Sans"],"label-telemetry":["JetBrains Mono"],"headline-lg":["Public Sans"],"display-hud":["JetBrains Mono"],"headline-xl-mobile":["Public Sans"],"label-badge":["Public Sans"],"headline-md":["Public Sans"],"data-mono-md":["JetBrains Mono"],"body-sm":["Public Sans"]},fontSize:{"data-mono-lg":["18px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"headline-xl":["36px",{"lineHeight":"44px","letterSpacing":"-0.025em","fontWeight":"700"}],"display-hud-mobile":["32px",{"lineHeight":"36px","letterSpacing":"-0.03em","fontWeight":"700"}],"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"headline-sm":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"600"}],"label-telemetry":["10px",{"lineHeight":"12px","letterSpacing":"0.08em","fontWeight":"500"}],"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"700"}],"display-hud":["48px",{"lineHeight":"52px","letterSpacing":"-0.04em","fontWeight":"700"}],"headline-xl-mobile":["26px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-badge":["11px",{"lineHeight":"14px","letterSpacing":"0.06em","fontWeight":"700"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"data-mono-md":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"500"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"400"}]}}}};</script></head><body class="bg-surface-base font-body-md text-text-primary antialiased"><aside class="fixed left-0 top-0 h-full w-[260px] bg-surface-card z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-space-5 flex items-center gap-space-3 bg-surface-subtle"><div class="w-8 h-8 rounded-xl bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[20px]">hub</span></div><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm text-text-primary tracking-tight leading-none">RESQNET</span><span class="font-label-telemetry text-label-telemetry text-text-secondary tracking-wider mt-space-1 uppercase">Engine Core v2.4</span></div></div><div class="px-space-4 py-space-4 flex flex-col gap-space-6"><div class="flex flex-col"><span class="px-space-3 mb-space-2 font-label-badge text-label-badge text-text-muted uppercase tracking-wider">Simulation Workspaces</span><nav class="flex flex-col gap-space-1" data-active-classes="bg-primary-container text-on-primary font-headline-sm rounded-xl"><a class="flex items-center px-space-3 py-space-2 rounded-xl font-body-md text-body-md text-on-surface-variant hover:bg-surface-subtle hover:text-on-surface transition-colors" data-path="scenario-library" href="#"><span class="material-symbols-outlined text-[18px] mr-space-3">schema</span>Scenario Library</a><a class="flex items-center justify-between px-space-3 py-space-2 rounded-xl font-body-md text-body-md text-on-surface-variant hover:bg-surface-subtle hover:text-on-surface transition-colors" data-path="run-console" href="#"><div class="flex items-center"><span class="material-symbols-outlined text-[18px] mr-space-3">terminal</span>Run Console</div><span class="flex h-2 w-2 relative"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-success-text opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-success-text"></span></span></a><a class="flex items-center px-space-3 py-space-2 rounded-xl font-body-md text-body-md text-on-surface-variant hover:bg-surface-subtle hover:text-on-surface transition-colors" data-path="run-history" href="#"><span class="material-symbols-outlined text-[18px] mr-space-3">history</span>Run History</a></nav></div><div class="flex flex-col"><span class="px-space-3 mb-space-2 font-label-badge text-label-badge text-text-muted uppercase tracking-wider">Active Run Inspection</span><nav class="flex flex-col gap-space-1" data-active-classes="bg-primary-container text-on-primary font-headline-sm rounded-xl"><a class="flex items-center px-space-3 py-space-2 rounded-xl font-body-md text-body-md text-on-surface-variant hover:bg-surface-subtle hover:text-on-surface transition-colors" data-path="event-inspector" href="#"><span class="material-symbols-outlined text-[18px] mr-space-3">manage_search</span>Event Inspector</a><a class="flex items-center px-space-3 py-space-2 rounded-xl font-body-md text-body-md text-on-surface-variant hover:bg-surface-subtle hover:text-on-surface transition-colors" data-path="manual-event-injection" href="#"><span class="material-symbols-outlined text-[18px] mr-space-3">send_time_extension</span>Manual Event Injection</a><a aria-current="page" class="flex items-center px-space-3 py-space-2 transition-colors bg-primary-container text-on-primary font-headline-sm rounded-xl" data-path="run-results" href="#"><span class="material-symbols-outlined text-[18px] mr-space-3">insights</span>Run Results</a></nav></div></div></div><div class="p-space-4 bg-surface-subtle flex flex-col gap-space-3"><div class="flex flex-col gap-space-1"><div class="flex items-center gap-space-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span><span class="font-label-telemetry text-label-telemetry text-text-secondary uppercase">Runtime: Deterministic HTTP</span></div><div class="flex items-center gap-space-2"><span class="w-1.5 h-1.5 rounded-full bg-success-text"></span><span class="font-label-telemetry text-label-telemetry text-text-secondary uppercase">API Link: 100% Healthy</span></div></div><a class="flex items-center justify-between px-space-3 py-space-2 bg-surface-card rounded-lg hover:bg-blue-soft hover:text-primary transition-colors text-text-secondary font-body-sm text-body-sm" data-path="root-portal-switch" href="#"><span class="flex items-center gap-space-2"><span class="material-symbols-outlined text-[16px]">logout</span>Return to Portal</span><span class="material-symbols-outlined text-[14px]">arrow_forward</span></a></div></aside><div class="pl-[260px]"><header class="fixed top-0 left-[260px] right-0 h-16 bg-surface-card/95 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-6"><div class="flex items-center gap-space-4 min-w-0"><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-text-primary tracking-tight">RESQNET v2.4</span><span class="font-label-telemetry text-label-telemetry text-text-secondary tracking-wider uppercase">Simulation Engine &amp; Disaster Timeline Emulator</span></div><div class="h-5 w-px bg-border-default mx-space-2 hidden lg:block"></div><div class="hidden xl:flex items-center gap-space-2"><div class="flex items-center gap-space-1 bg-surface-subtle px-space-2 py-1 rounded"><span class="font-label-telemetry text-label-telemetry text-text-muted">ENV:</span><span class="font-data-mono-md text-data-mono-md text-text-primary">STAGING SANDBOX</span></div><div class="flex items-center gap-space-1 bg-surface-subtle px-space-2 py-1 rounded"><span class="font-label-telemetry text-label-telemetry text-text-muted">CLK:</span><span class="font-data-mono-md text-data-mono-md text-text-primary">SYNCHRONIZED</span></div><div class="flex items-center gap-space-1 bg-surface-subtle px-space-2 py-1 rounded"><span class="font-label-telemetry text-label-telemetry text-text-muted">TGT:</span><span class="font-data-mono-md text-data-mono-md text-text-primary">LOCAL APIS (8080)</span></div><div class="flex items-center gap-space-1 bg-surface-subtle px-space-2 py-1 rounded"><span class="font-label-telemetry text-label-telemetry text-text-muted">CALL:</span><span class="font-data-mono-md text-data-mono-md text-text-primary">SIM-OPERATOR-ROOT</span></div></div></div><div class="flex items-center gap-space-4 shrink-0"><div class="flex items-center gap-space-2 bg-success-bg border border-success-border px-space-3 py-1 rounded-full"><span class="w-2 h-2 rounded-full bg-success-text"></span><span class="font-label-badge text-label-badge text-success-text uppercase tracking-wide">Engine: Active / Ready</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 bg-surface-base min-h-screen w-full px-space-8 py-space-6"><div class="flex flex-col w-full">
+<!-- Subtle Ambient Glow Element (Structural Canvas Integration) -->
+<div class="relative w-full overflow-hidden">
+<div class="absolute -top-24 right-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute top-1/2 -left-20 w-80 h-80 bg-success-text/5 rounded-full blur-3xl pointer-events-none"></div>
+<!-- DOSSIER HEADER / TELEMETRY DEBRIEF BAR -->
+<section class="flex flex-col gap-space-4 pb-space-6 border-b-0">
+<!-- Breadcrumb & Telemetry Badges -->
+<div class="flex flex-wrap items-center justify-between gap-space-3">
+<nav aria-label="Breadcrumb" class="flex items-center gap-space-2 font-body-sm text-text-secondary">
+<a class="hover:text-primary transition-colors flex items-center gap-space-1" data-path="run-history" href="#">
+<span class="material-symbols-outlined text-[16px]">history</span>
+<span>Run History</span>
+</a>
+<span class="text-text-muted">/</span>
+<span class="font-data-mono-md text-data-mono-md text-text-primary px-space-2 py-0.5 rounded bg-surface-subtle">RUN-2025-0891 Results</span>
+</nav>
+<div class="flex items-center gap-space-2">
+<div class="flex items-center gap-space-2 px-space-3 py-1 rounded bg-surface-subtle text-text-secondary font-label-telemetry text-label-telemetry tracking-wider uppercase">
+<span class="material-symbols-outlined text-primary text-[14px]">verified_user</span>
+<span>Cryptographic Hash: 9f8a...c32d</span>
+</div>
+<div class="flex items-center gap-space-1 px-space-3 py-1 rounded bg-success-bg text-success-text font-label-badge text-label-badge uppercase tracking-wider">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>COMPLETED - VERIFIED 100%</span>
+</div>
+</div>
+</div>
+<!-- Main Dossier Banner & Quick Controls -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-4 bg-surface-card p-space-6 rounded-xl shadow-sm">
+<div class="flex flex-col gap-space-1">
+<div class="flex items-center gap-space-3">
+<span class="px-space-2 py-0.5 bg-blue-soft text-primary font-data-mono-md text-data-mono-md rounded">SIM_ID: RUN-2025-0891</span>
+<span class="text-text-muted font-body-sm">•</span>
+<span class="text-text-secondary font-body-sm flex items-center gap-space-1">
+<span class="material-symbols-outlined text-[15px] text-text-muted">schedule</span>
+<span>Wall Clock: 60m 14s</span>
+</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-text-primary tracking-tight">
+            RUN RESULTS &amp; AUDIT DOSSIER
+          </h1>
+<p class="font-body-md text-body-md text-text-secondary">
+            Scenario Target: <span class="text-text-primary font-headline-sm">FLOOD_DEMO_01</span> (Monsoon Riverine Inundation &amp; Multi-Sector Evacuation Pipeline)
+          </p>
+</div>
+<!-- Top CTA Action Cluster -->
+<div class="flex flex-wrap items-center gap-space-3 shrink-0">
+<button class="flex items-center gap-space-2 px-space-4 h-space-10 rounded-lg bg-surface-subtle text-text-primary hover:bg-blue-soft hover:text-primary transition-all font-headline-sm text-body-md shadow-sm" id="btnExportDossier">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Export Verified Dossier (JSON/CSV)</span>
+</button>
+<button class="flex items-center gap-space-2 px-space-4 h-space-10 rounded-lg bg-blue-soft text-primary hover:bg-blue-light transition-all font-headline-sm text-body-md">
+<span class="material-symbols-outlined text-[18px]">replay</span>
+<span>Re-run Scenario</span>
+</button>
+<a class="flex items-center gap-space-2 px-space-4 h-space-10 rounded-lg bg-primary-container text-on-primary hover:bg-primary transition-all font-headline-sm text-body-md shadow-sm" href="#audit-table">
+<span class="material-symbols-outlined text-[18px]">rule</span>
+<span>View Full Audit Trace</span>
+</a>
+</div>
+</div>
+</section>
+<!-- EXECUTIVE SUMMARY KPI BENTO GRID -->
+<section class="mt-space-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-7 gap-space-4">
+<!-- Card 1: Final Run Status -->
+<div class="bg-surface-card p-space-4 rounded-xl shadow-sm flex flex-col justify-between xl:col-span-2">
+<div class="flex items-center justify-between mb-space-2">
+<span class="font-label-badge text-label-badge text-text-muted uppercase tracking-wider">Engine Verification</span>
+<span class="material-symbols-outlined text-success-text text-[20px]">task_alt</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-baseline gap-space-2">
+<span class="font-display-hud-mobile text-display-hud-mobile text-success-text">COMPLETED</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary mt-space-1">Zero unhandled exceptions logged across all dispatcher threads.</p>
+</div>
+<div class="mt-space-3 pt-space-2 flex items-center justify-between text-text-muted font-label-telemetry text-label-telemetry">
+<span>EXIT_CODE: 0 (OK)</span>
+<span class="text-success-text">DETERMINISTIC VERIFIED</span>
+</div>
+</div>
+<!-- Card 2: Execution Rate -->
+<div class="bg-surface-card p-space-4 rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-2">
+<span class="font-label-badge text-label-badge text-text-muted uppercase tracking-wider">Scheduled Events</span>
+<span class="material-symbols-outlined text-primary text-[18px]">calendar_today</span>
+</div>
+<div>
+<span class="font-display-hud-mobile text-display-hud-mobile text-text-primary">7<span class="text-text-muted font-data-mono-md">/7</span></span>
+<p class="font-body-sm text-body-sm text-success-text mt-space-1 font-headline-sm">100% Delivered</p>
+</div>
+<div class="w-full bg-surface-subtle h-1.5 rounded-full mt-space-3 overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 100%"></div>
+</div>
+</div>
+<!-- Card 3: HTTP Confirmation -->
+<div class="bg-surface-card p-space-4 rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-2">
+<span class="font-label-badge text-label-badge text-text-muted uppercase tracking-wider">HTTP 200/201</span>
+<span class="material-symbols-outlined text-success-text text-[18px]">lan</span>
+</div>
+<div>
+<span class="font-display-hud-mobile text-display-hud-mobile text-text-primary">7</span>
+<p class="font-body-sm text-body-sm text-text-secondary mt-space-1">100% Confirmed API sync</p>
+</div>
+<div class="mt-space-3 flex items-center gap-space-1 text-success-text font-label-telemetry text-label-telemetry">
+<span class="w-1.5 h-1.5 rounded-full bg-success-text"></span>
+<span>Zero rejected payloads</span>
+</div>
+</div>
+<!-- Card 4: Retries & Recovery -->
+<div class="bg-surface-card p-space-4 rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-2">
+<span class="font-label-badge text-label-badge text-text-muted uppercase tracking-wider">Auto Retries</span>
+<span class="material-symbols-outlined text-warning-text text-[18px]">refresh</span>
+</div>
+<div>
+<span class="font-display-hud-mobile text-display-hud-mobile text-warning-text">1</span>
+<p class="font-body-sm text-body-sm text-text-secondary mt-space-1">EVT-102 self-healed</p>
+</div>
+<div class="mt-space-3 flex items-center justify-between font-label-telemetry text-label-telemetry text-warning-text bg-warning-bg px-space-2 py-0.5 rounded">
+<span>TIMEOUT T+10</span>
+<span>RETRY 1 SUCCESS</span>
+</div>
+</div>
+<!-- Card 5: Injections -->
+<div class="bg-surface-card p-space-4 rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-2">
+<span class="font-label-badge text-label-badge text-text-muted uppercase tracking-wider">Manual Injections</span>
+<span class="material-symbols-outlined text-secondary text-[18px]">send_time_extension</span>
+</div>
+<div>
+<span class="font-display-hud-mobile text-display-hud-mobile text-text-primary">1</span>
+<p class="font-body-sm text-body-sm text-text-secondary mt-space-1">Live operator signal</p>
+</div>
+<div class="mt-space-3 text-text-muted font-label-telemetry text-label-telemetry truncate">
+<span>OPERATOR: SIM-ROOT</span>
+</div>
+</div>
+<!-- Card 6: Wall-Clock Window -->
+<div class="bg-surface-card p-space-4 rounded-xl shadow-sm flex flex-col justify-between xl:col-span-1">
+<div class="flex items-center justify-between mb-space-2">
+<span class="font-label-badge text-label-badge text-text-muted uppercase tracking-wider">Timeline Duration</span>
+<span class="material-symbols-outlined text-text-muted text-[18px]">timelapse</span>
+</div>
+<div>
+<span class="font-data-mono-lg text-data-mono-lg text-text-primary block">60m 14s</span>
+<span class="font-body-sm text-body-sm text-text-secondary">09:00:00 - 10:00:14 IST</span>
+</div>
+<div class="mt-space-3 text-text-secondary font-label-telemetry text-label-telemetry">
+<span>CLOCK DRIFT: +0.012ms</span>
+</div>
+</div>
+</section>
+<!-- CRITICAL INCIDENT VISUALIZATION & CAUSE-AND-EFFECT DYNAMICS -->
+<section class="mt-space-8 grid grid-cols-1 lg:grid-cols-12 gap-space-6">
+<!-- Left Column: Cause-and-Effect Narrative Timeline (7 cols) -->
+<div class="lg:col-span-7 flex flex-col bg-surface-card p-space-6 rounded-xl shadow-sm">
+<div class="flex items-center justify-between mb-space-6 pb-space-3 bg-surface-subtle/50 px-space-4 py-space-2 rounded-lg">
+<div class="flex items-center gap-space-2">
+<span class="material-symbols-outlined text-primary text-[20px]">account_tree</span>
+<h2 class="font-headline-md text-headline-md text-text-primary">Major State Transitions &amp; Causal Analysis</h2>
+</div>
+<span class="font-label-badge text-label-badge text-text-secondary uppercase">Deterministic Order</span>
+</div>
+<!-- Vertical High-Density Causal Stepper -->
+<div class="relative pl-space-6 flex flex-col gap-space-6 before:absolute before:left-3 before:top-3 before:bottom-3 before:w-0.5 before:bg-surface-container-highest">
+<!-- Transition 1 -->
+<div class="relative flex items-start gap-space-4 group">
+<div class="absolute -left-6 top-1 w-6 h-6 rounded-full bg-blue-soft flex items-center justify-center -translate-x-1/2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+</div>
+<div class="flex-1 bg-surface-base p-space-4 rounded-lg">
+<div class="flex items-center justify-between gap-space-2 mb-space-1">
+<span class="font-data-mono-md text-data-mono-md text-primary font-semibold">T+00m (09:00:00 IST)</span>
+<span class="px-space-2 py-0.5 rounded bg-blue-soft text-primary font-label-badge text-label-badge uppercase">CAP Broadcast Initiated</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-text-primary">Regional Sirens &amp; Multi-Sector Citizen Alert</h3>
+<p class="font-body-md text-body-md text-text-secondary mt-space-1">
+                Common Alerting Protocol (CAP) payload dispatched to Indian Disaster Warning Hub. Broadcast successfully delivered to 14,200 simulated public subscriber endpoints with priority push acknowledgment.
+              </p>
+</div>
+</div>
+<!-- Transition 2 -->
+<div class="relative flex items-start gap-space-4 group">
+<div class="absolute -left-6 top-1 w-6 h-6 rounded-full bg-warning-bg flex items-center justify-center -translate-x-1/2">
+<span class="w-2.5 h-2.5 rounded-full bg-warning-text"></span>
+</div>
+<div class="flex-1 bg-surface-base p-space-4 rounded-lg">
+<div class="flex items-center justify-between gap-space-2 mb-space-1">
+<span class="font-data-mono-md text-data-mono-md text-warning-text font-semibold">T+10m (09:10:01 IST)</span>
+<span class="px-space-2 py-0.5 rounded bg-warning-bg text-warning-text font-label-badge text-label-badge uppercase">Telemetry Spike</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-text-primary">Hydro Gauge Surge Sensor Warning</h3>
+<p class="font-body-md text-body-md text-text-secondary mt-space-1">
+                Periyar Basin Level Sensor #HG-802 crossed Danger Level (DL) 38.4m. Transient network drop on cluster edge required an automated retry; re-ingested within 2.1s, elevating tri-city situational threat matrix to Yellow.
+              </p>
+</div>
+</div>
+<!-- Transition 3 -->
+<div class="relative flex items-start gap-space-4 group">
+<div class="absolute -left-6 top-1 w-6 h-6 rounded-full bg-critical-bg flex items-center justify-center -translate-x-1/2">
+<span class="w-2.5 h-2.5 rounded-full bg-critical-text"></span>
+</div>
+<div class="flex-1 bg-surface-base p-space-4 rounded-lg">
+<div class="flex items-center justify-between gap-space-2 mb-space-1">
+<span class="font-data-mono-md text-data-mono-md text-critical-text font-semibold">T+20m (09:20:00 IST)</span>
+<span class="px-space-2 py-0.5 rounded bg-critical-bg text-critical-text font-label-badge text-label-badge uppercase">Triage Queue Ingestion</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-text-primary">Citizen SOS Distress Spike: Sector 17</h3>
+<p class="font-body-md text-body-md text-text-secondary mt-space-1">
+                Incoming geotagged citizen distress beacon processed. Automatically minted Incident Dossier <span class="font-data-mono-md text-data-mono-md text-primary">#INC-2048</span>. High priority life-safety tag pinned to Chandigarh Tricity command board.
+              </p>
+</div>
+</div>
+<!-- Transition 4 -->
+<div class="relative flex items-start gap-space-4 group">
+<div class="absolute -left-6 top-1 w-6 h-6 rounded-full bg-blue-soft flex items-center justify-center -translate-x-1/2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+</div>
+<div class="flex-1 bg-surface-base p-space-4 rounded-lg">
+<div class="flex items-center justify-between gap-space-2 mb-space-1">
+<span class="font-data-mono-md text-data-mono-md text-primary font-semibold">T+30m (09:30:00 IST)</span>
+<span class="px-space-2 py-0.5 rounded bg-blue-soft text-primary font-label-badge text-label-badge uppercase">Autonomous Routing</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-text-primary">Madhya Marg Underpass Inundation Closure</h3>
+<p class="font-body-md text-body-md text-text-secondary mt-space-1">
+                Telemetry confirmed 1.4m standing water along Madhya Marg. Engine invalidated primary evacuation corridor; GIS routing algorithms automatically recalculated civilian flow toward Himalaya Marg South.
+              </p>
+</div>
+</div>
+<!-- Transition 5 -->
+<div class="relative flex items-start gap-space-4 group">
+<div class="absolute -left-6 top-1 w-6 h-6 rounded-full bg-blue-soft flex items-center justify-center -translate-x-1/2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+</div>
+<div class="flex-1 bg-surface-base p-space-4 rounded-lg">
+<div class="flex items-center justify-between gap-space-2 mb-space-1">
+<span class="font-data-mono-md text-data-mono-md text-primary font-semibold">T+40m (09:40:00 IST)</span>
+<span class="px-space-2 py-0.5 rounded bg-blue-soft text-primary font-label-badge text-label-badge uppercase">Asset Mobilization</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-text-primary">Dispatch Mobilization: ERU-Delta-2</h3>
+<p class="font-body-md text-body-md text-text-secondary mt-space-1">
+                Emergency Response Unit <span class="font-data-mono-md text-data-mono-md text-text-primary font-medium">ERU-Delta-2</span> confirmed receipt of dispatched GPS navigation coordinates via mobile data terminal, changing operational status from Staged to En Route.
+              </p>
+</div>
+</div>
+<!-- Transition 6 -->
+<div class="relative flex items-start gap-space-4 group">
+<div class="absolute -left-6 top-1 w-6 h-6 rounded-full bg-blue-soft flex items-center justify-center -translate-x-1/2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+</div>
+<div class="flex-1 bg-surface-base p-space-4 rounded-lg">
+<div class="flex items-center justify-between gap-space-2 mb-space-1">
+<span class="font-data-mono-md text-data-mono-md text-primary font-semibold">T+50m (09:50:00 IST)</span>
+<span class="px-space-2 py-0.5 rounded bg-surface-container text-text-secondary font-label-badge text-label-badge uppercase">Facility Telemetry</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-text-primary">Sector 16 Sports Complex Shelter Intake</h3>
+<p class="font-body-md text-body-md text-text-secondary mt-space-1">
+                Civil defense sanctuary capacity reached 62% (310/500 cots utilized). Medical supplies manifest and triage inventory confirmed fully operational without supply bottleneck flags.
+              </p>
+</div>
+</div>
+<!-- Transition 7 -->
+<div class="relative flex items-start gap-space-4 group">
+<div class="absolute -left-6 top-1 w-6 h-6 rounded-full bg-success-bg flex items-center justify-center -translate-x-1/2">
+<span class="w-2.5 h-2.5 rounded-full bg-success-text"></span>
+</div>
+<div class="flex-1 bg-surface-base p-space-4 rounded-lg">
+<div class="flex items-center justify-between gap-space-2 mb-space-1">
+<span class="font-data-mono-md text-data-mono-md text-success-text font-semibold">T+60m (10:00:14 IST)</span>
+<span class="px-space-2 py-0.5 rounded bg-success-bg text-success-text font-label-badge text-label-badge uppercase">Simulation Climax</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-text-primary">SITREP Finalized &amp; Dossier Sealed</h3>
+<p class="font-body-md text-body-md text-text-secondary mt-space-1">
+                End-of-exercise command synthesis generated. Unified Situation Report (SITREP-FINAL) compiled, signed with deterministic simulator token, and archived for multi-agency performance compliance.
+              </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Tactical GIS Footprint & Anomaly Audit (5 cols) -->
+<div class="lg:col-span-5 flex flex-col gap-space-6">
+<!-- Live Map Representation -->
+<div class="bg-surface-card p-space-5 rounded-xl shadow-sm flex flex-col">
+<div class="flex items-center justify-between mb-space-3">
+<div class="flex items-center gap-space-2">
+<span class="material-symbols-outlined text-primary text-[18px]">map</span>
+<h3 class="font-headline-sm text-headline-sm text-text-primary">Tactical Inundation GIS Footprint</h3>
+</div>
+<span class="font-label-telemetry text-label-telemetry text-text-muted">VECTOR EPSG:4326</span>
+</div>
+<div class="w-full h-56 bg-cover bg-center rounded-lg relative overflow-hidden flex flex-col justify-between p-space-3" data-location="Sector 17, Chandigarh, India" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBWLEpKkTIffDDgmAWIA4VqGeSAN50RUDFQX-LXOG-r0fvrcSSSlTk2GryLyWL5fDosgIUlkB36r1hOLMmcGVAl9CMz6VJjCdyC19mzW75k1mgFR9JzVcftnmkalCI6jAG1A40_q1XRPbbeup5nis2C8qY_rKadRwSV0yooe2zK6oqazicaOLYJj_a9Zd1h4AOHkHzozwrljP-73_raMYxhEgR9GCIFTWj56MumengvXoXTTxGLG52KeA')">
+<div class="flex items-center justify-between">
+<span class="px-space-2 py-0.5 rounded bg-surface-card/90 text-primary font-label-badge text-label-badge">SECTOR 17 • FLOOD ZONE 1</span>
+<span class="px-space-2 py-0.5 rounded bg-critical-bg text-critical-text font-data-mono-md text-data-mono-md">EVACUATION CORRIDOR: LOCKED</span>
+</div>
+<!-- Visual Overlay Legend Box -->
+<div class="bg-surface-card/95 backdrop-blur-sm p-space-3 rounded-lg shadow-sm">
+<div class="flex items-center justify-between text-text-secondary font-label-telemetry text-label-telemetry uppercase mb-space-1">
+<span>Simulation Coverage Area</span>
+<span class="text-text-primary font-medium">14.8 KM²</span>
+</div>
+<div class="flex items-center gap-space-4 font-body-sm text-body-sm text-text-secondary">
+<div class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-critical-text"></span>
+<span>1 SOS Beacon</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-warning-text"></span>
+<span>1 Inundation Point</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span>1 ERU Dispatched</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Inline Telemetry Quick Sparkline Graphic -->
+<div class="mt-space-4 pt-space-3 bg-surface-subtle p-space-3 rounded-lg flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-telemetry text-label-telemetry text-text-muted uppercase">Latency Jitter</span>
+<span class="font-data-mono-md text-data-mono-md text-text-primary">Avg: 16.4ms • Peak: 24ms</span>
+</div>
+<!-- Lightweight Inline SVG Sparkline -->
+<svg class="w-32 h-7 text-primary" fill="none" viewbox="0 0 128 28" xmlns="http://www.w3.org/2000/svg">
+<path d="M2 18 L20 16 L40 14 L60 26 L80 12 L100 13 L126 10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<circle cx="126" cy="10" fill="currentColor" r="3"></circle>
+</svg>
+</div>
+</div>
+<!-- Anomaly & Self-Healing Audit Card -->
+<div class="bg-surface-card p-space-5 rounded-xl shadow-sm flex flex-col flex-1 justify-between">
+<div class="flex flex-col gap-space-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-2">
+<span class="material-symbols-outlined text-text-primary text-[18px]">verified</span>
+<h3 class="font-headline-sm text-headline-sm text-text-primary">Error &amp; Anomaly Summary</h3>
+</div>
+<span class="px-space-2 py-0.5 rounded bg-success-bg text-success-text font-label-badge text-label-badge uppercase">0 Critical Failures</span>
+</div>
+<!-- Single Tolerated Transient Event -->
+<div class="bg-surface-base p-space-4 rounded-lg flex flex-col gap-space-2">
+<div class="flex items-center justify-between">
+<span class="font-data-mono-md text-data-mono-md text-text-primary font-medium">EVT-102 (Hydro Gauge Ingestion)</span>
+<span class="px-space-2 py-0.5 rounded bg-warning-bg text-warning-text font-label-badge text-label-badge">HTTP 408 → 200 OK</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary">
+                Transient gateway timeout encountered at <span class="font-data-mono-md text-data-mono-md text-text-primary">09:10:01 IST</span> due to upstream endpoint backpressure.
+              </p>
+<div class="bg-surface-card p-space-2 rounded flex items-center justify-between text-body-sm text-text-secondary font-label-telemetry text-label-telemetry">
+<span>RETRY #1 TIMESTAMP: 09:10:03 IST</span>
+<span class="text-success-text">PAYLOAD COMMITTED</span>
+</div>
+</div>
+<!-- Operator Action Notice -->
+<div class="flex items-start gap-space-3 p-space-3 rounded-lg bg-blue-soft text-text-primary">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">shield</span>
+<div class="flex flex-col text-body-sm">
+<span class="font-headline-sm text-headline-sm text-primary">Operator Action: None Required</span>
+<span class="text-text-secondary mt-0.5">The autonomous backoff algorithm recovered state without data corruption. Full idempotent guarantees validated.</span>
+</div>
+</div>
+</div>
+<!-- Secondary Metric Callout Footer -->
+<div class="mt-space-4 pt-space-3 flex items-center justify-between font-label-telemetry text-label-telemetry text-text-muted">
+<span>RESILIENCE LEVEL: CLASS-A (ISO-22320)</span>
+<span>AUDIT TRAIL VERIFIED</span>
+</div>
+</div>
+</div>
+</section>
+<!-- COMPLETE CHRONOLOGICAL EVENT EXECUTION TABLE -->
+<section class="mt-space-8 bg-surface-card rounded-xl shadow-sm overflow-hidden flex flex-col" id="audit-table">
+<!-- Table Header & Filter Bar -->
+<div class="p-space-6 pb-space-4 flex flex-col sm:flex-row sm:items-center justify-between gap-space-3 bg-surface-subtle/50">
+<div>
+<h2 class="font-headline-md text-headline-md text-text-primary">Chronological Event Execution Log</h2>
+<p class="font-body-sm text-body-sm text-text-secondary">Complete 7-event execution record for Run ID RUN-2025-0891</p>
+</div>
+<div class="flex items-center gap-space-2">
+<div class="px-space-3 py-1 bg-surface-card rounded-lg text-text-secondary font-label-telemetry text-label-telemetry uppercase shadow-sm">
+            Total Transmitted: <span class="text-text-primary font-semibold">7 Payloads</span>
+</div>
+<button class="flex items-center gap-1 px-space-3 py-1 bg-surface-card rounded-lg text-primary hover:bg-blue-soft font-headline-sm text-body-sm transition-all shadow-sm" id="btnFilterStatus">
+<span class="material-symbols-outlined text-[16px]">filter_list</span>
+<span>All HTTP 200/201</span>
+</button>
+</div>
+</div>
+<!-- Tactical Dense Data Table -->
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="bg-surface-subtle text-text-secondary font-label-badge text-label-badge uppercase tracking-wider">
+<th class="py-space-3 px-space-4" scope="col">Event ID</th>
+<th class="py-space-3 px-space-4" scope="col">Sim Time</th>
+<th class="py-space-3 px-space-4" scope="col">Timestamp (IST)</th>
+<th class="py-space-3 px-space-4" scope="col">Event Type</th>
+<th class="py-space-3 px-space-4" scope="col">Target Endpoint</th>
+<th class="py-space-3 px-space-4" scope="col">HTTP Status</th>
+<th class="py-space-3 px-space-4 text-center" scope="col">Retries</th>
+<th class="py-space-3 px-space-4" scope="col">Latency</th>
+<th class="py-space-3 px-space-4 text-right" scope="col">Final Result</th>
+</tr>
+</thead>
+<tbody class="divide-none text-text-primary">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-base transition-colors">
+<td class="py-space-3 px-space-4 font-data-mono-md text-data-mono-md text-primary font-semibold">EVT-101</td>
+<td class="py-space-3 px-space-4 font-data-mono-md text-data-mono-md">T+00m</td>
+<td class="py-space-3 px-space-4 font-data-mono-md text-data-mono-md text-text-secondary">09:00:00.012</td>
+<td class="py-space-3 px-space-4">
+<span class="px-space-2 py-0.5 rounded bg-blue-soft text-primary font-label-badge text-label-badge">CAP_ALERT_DISPATCH</span>
+</td>
+<td class="py-space-3 px-space-4 font-data-mono-md text-data-mono-md text-text-secondary truncate max-w-[160px]" title="/api/v1/alert/broadcast">/api/v1/alert/broadcast</td>
+<td class="py-space-3 px-space-4">
+<span class="px-space-2 py-0.5 rounded bg-success-bg text-success-text font-data-mono-md text-data-mono-md font-semibold">201 Created</span>
+</td>
+<td class="py-space-3 px-space-4 text-center font-data-mono-md text-data-mono-md text-text-muted">0</td>
+<td class="py-space-3 px-space-4 font-data-mono-md text-data-mono-md">18ms</td>
+<td class="py-space-3 px-space-4 text-right">
+<span class="inline-flex items-center gap-1 px-space-2 py-0.5 rounded bg-success-bg text-success-text font-label-badge text-label-badge uppercase">
+<span class="material-symbols-outlined text-[12px]">check</span>CONFIRMED
+                </span>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-base transition-colors bg-surface-subtle/30">
+<td class="py-space-3 px-space-4 font-data-mono-md text-data-mono-md text-primary font-semibold">EVT-102</td>
+<td class="py-space-3 px-space-4 font-data-mono-md text-data-mono-md">T+10m</td>
+<td class="py-space-3 px-space-4 font-data-mono-md text-data-mono-md text-text-secondary">09:10:03.421</td>
+<td class="py-space-3 px-space-4">
+<span class="px-space-2 py-0.5 rounded bg-warning-bg text-warning-text font-label-badge text-label-badge">HYDRO_SENSOR_SPIKE</span>
+</td>
+<td class="py-space-3 px-space-4 font-data-mono-md text-data-mono-md text-text-secondary truncate max-w-[160px]" title="/api/v1/telemetry/gauges">/api/v1/telemetry/gauges</td>
+<td class="py-space-3 px-space-4">
+<span class="px-space-2 py-0.5 rounded bg-success-bg text-success-text font-data-mono-md text-data-mono-md font-semibold">200 OK</span>
+</td>
+<td class="py-space-3 px-space-4 text-center font-data-mono-md text-data-mono-md text-warning-text font-semibold">1 (Recovered)</td>
+<td class="py-space-3 px-space-4 font-data-mono-md text-data-mono-md">24ms</td>
+<td class="py-space-3 px-space-4 text-right">
+<span class="inline-flex items-center gap-1 px-space-2 py-0.5 rounded bg-success-bg text-success-text font-label-badge text-label-badge uppercase">
+<span class="material-symbols-outlined text-[12px]">check</span>CONFIRMED
+                </span>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-base transition-colors">
+<td class="py-space-3 px-space-4 font-data-mono-md text-data-mono-md text-primary font-semibold">EVT-103</td>
+<td class="py-space-3 px-space-4 font-data-mono-md text-data-mono-md">T+20m</td>
+<td class="py-space-3 px-space-4 font-data-mono-md text-data-mono-md text-text-secondary">09:20:00.114</td>
+<td class="py-space-3 px-space-4">
+<span class="px-space-2 py-0.5 rounded bg-critical-bg text-critical-text font-label-badge text-label-badge">CITIZEN_SOS_BEACON</span>
+</td>
+<td class="py-space-3 px-space-4 font-data-mono-md text-data-mono-md text-text-secondary truncate max-w-[160px]" title="/api/v1/incidents/ingest">/api/v1/incidents/ingest</td>
+<td class="py-space-3 px-space-4">
+<span class="px-space-2 py-0.5 rounded bg-success-bg text-success-text font-data-mono-md text-data-mono-md font-semibold">201 Created</span>
+</td>
+<td class="py-space-3 px-space-4 text-center font-data-mono-md text-data-mono-md text-text-muted">0</td>
+<td class="py-space-3 px-space-4 font-data-mono-md text-data-mono-md">14ms</td>
+<td class="py-space-3 px-space-4 text-right">
+<span class="inline-flex items-center gap-1 px-space-2 py-0.5 rounded bg-success-bg text-success-text font-label-badge text-label-badge uppercase">
+<span class="material-symbols-outlined text-[12px]">check</span>CONFIRMED
+                </span>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-base transition-colors">
+<td class="py-space-3 px-space-4 font-data-mono-md text-data-mono-md text-primary font-semibold">EVT-104</td>
+<td class="py-space-3 px-space-4 font-data-mono-md text-data-mono-md">T+30m</td>
+<td class="py-space-3 px-space-4 font-data-mono-md text-data-mono-md text-text-secondary">09:30:00.089</td>
+<td class="py-space-3 px-space-4">
+<span class="px-space-2 py-0.5 rounded bg-surface-subtle text-text-primary font-label-badge text-label-badge">ROAD_OBSTRUCTION_SET</span>
+</td>
+<td class="py-space-3 px-space-4 font-data-mono-md text-data-mono-md text-text-secondary truncate max-w-[160px]" title="/api/v1/gis/corridors/block">/api/v1/gis/corridors/block</td>
+<td class="py-space-3 px-space-4">
+<span class="px-space-2 py-0.5 rounded bg-success-bg text-success-text font-data-mono-md text-data-mono-md font-semibold">200 OK</span>
+</td>
+<td class="py-space-3 px-space-4 text-center font-data-mono-md text-data-mono-md text-text-muted">0</td>
+<td class="py-space-3 px-space-4 font-data-mono-md text-data-mono-md">12ms</td>
+<td class="py-space-3 px-space-4 text-right">
+<span class="inline-flex items-center gap-1 px-space-2 py-0.5 rounded bg-success-bg text-success-text font-label-badge text-label-badge uppercase">
+<span class="material-symbols-outlined text-[12px]">check</span>CONFIRMED
+                </span>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-surface-base transition-colors">
+<td class="py-space-3 px-space-4 font-data-mono-md text-data-mono-md text-primary font-semibold">EVT-105</td>
+<td class="py-space-3 px-space-4 font-data-mono-md text-data-mono-md">T+40m</td>
+<td class="py-space-3 px-space-4 font-data-mono-md text-data-mono-md text-text-secondary">09:40:00.045</td>
+<td class="py-space-3 px-space-4">
+<span class="px-space-2 py-0.5 rounded bg-blue-soft text-primary font-label-badge text-label-badge">RESPONDER_ASSIGNMENT</span>
+</td>
+<td class="py-space-3 px-space-4 font-data-mono-md text-data-mono-md text-text-secondary truncate max-w-[160px]" title="/api/v1/dispatch/units/assign">/api/v1/dispatch/units/assign</td>
+<td class="py-space-3 px-space-4">
+<span class="px-space-2 py-0.5 rounded bg-success-bg text-success-text font-data-mono-md text-data-mono-md font-semibold">200 OK</span>
+</td>
+<td class="py-space-3 px-space-4 text-center font-data-mono-md text-data-mono-md text-text-muted">0</td>
+<td class="py-space-3 px-space-4 font-data-mono-md text-data-mono-md">15ms</td>
+<td class="py-space-3 px-space-4 text-right">
+<span class="inline-flex items-center gap-1 px-space-2 py-0.5 rounded bg-success-bg text-success-text font-label-badge text-label-badge uppercase">
+<span class="material-symbols-outlined text-[12px]">check</span>CONFIRMED
+                </span>
+</td>
+</tr>
+<!-- Row 6 -->
+<tr class="hover:bg-surface-base transition-colors">
+<td class="py-space-3 px-space-4 font-data-mono-md text-data-mono-md text-primary font-semibold">EVT-106</td>
+<td class="py-space-3 px-space-4 font-data-mono-md text-data-mono-md">T+50m</td>
+<td class="py-space-3 px-space-4 font-data-mono-md text-data-mono-md text-text-secondary">09:50:00.019</td>
+<td class="py-space-3 px-space-4">
+<span class="px-space-2 py-0.5 rounded bg-surface-subtle text-text-primary font-label-badge text-label-badge">HUB_CAPACITY_UPDATE</span>
+</td>
+<td class="py-space-3 px-space-4 font-data-mono-md text-data-mono-md text-text-secondary truncate max-w-[160px]" title="/api/v1/shelters/telemetry">/api/v1/shelters/telemetry</td>
+<td class="py-space-3 px-space-4">
+<span class="px-space-2 py-0.5 rounded bg-success-bg text-success-text font-data-mono-md text-data-mono-md font-semibold">200 OK</span>
+</td>
+<td class="py-space-3 px-space-4 text-center font-data-mono-md text-data-mono-md text-text-muted">0</td>
+<td class="py-space-3 px-space-4 font-data-mono-md text-data-mono-md">13ms</td>
+<td class="py-space-3 px-space-4 text-right">
+<span class="inline-flex items-center gap-1 px-space-2 py-0.5 rounded bg-success-bg text-success-text font-label-badge text-label-badge uppercase">
+<span class="material-symbols-outlined text-[12px]">check</span>CONFIRMED
+                </span>
+</td>
+</tr>
+<!-- Row 7 -->
+<tr class="hover:bg-surface-base transition-colors">
+<td class="py-space-3 px-space-4 font-data-mono-md text-data-mono-md text-primary font-semibold">EVT-107</td>
+<td class="py-space-3 px-space-4 font-data-mono-md text-data-mono-md">T+60m</td>
+<td class="py-space-3 px-space-4 font-data-mono-md text-data-mono-md text-text-secondary">10:00:14.002</td>
+<td class="py-space-3 px-space-4">
+<span class="px-space-2 py-0.5 rounded bg-success-bg text-success-text font-label-badge text-label-badge">SITREP_SYNTHESIS_LOCK</span>
+</td>
+<td class="py-space-3 px-space-4 font-data-mono-md text-data-mono-md text-text-secondary truncate max-w-[160px]" title="/api/v1/reports/sitrep/seal">/api/v1/reports/sitrep/seal</td>
+<td class="py-space-3 px-space-4">
+<span class="px-space-2 py-0.5 rounded bg-success-bg text-success-text font-data-mono-md text-data-mono-md font-semibold">200 OK</span>
+</td>
+<td class="py-space-3 px-space-4 text-center font-data-mono-md text-data-mono-md text-text-muted">0</td>
+<td class="py-space-3 px-space-4 font-data-mono-md text-data-mono-md">21ms</td>
+<td class="py-space-3 px-space-4 text-right">
+<span class="inline-flex items-center gap-1 px-space-2 py-0.5 rounded bg-success-bg text-success-text font-label-badge text-label-badge uppercase">
+<span class="material-symbols-outlined text-[12px]">check</span>CONFIRMED
+                </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Dossier Sealed Footer / Bottom Control -->
+<div class="p-space-4 bg-surface-subtle flex flex-col sm:flex-row items-center justify-between gap-space-3 font-body-sm text-text-secondary">
+<div class="flex items-center gap-space-2">
+<span class="w-2 h-2 rounded-full bg-success-text"></span>
+<span>Integrity Chain validated against SHA-256 Engine Ledger. Run ID is immutable.</span>
+</div>
+<div class="flex items-center gap-space-4">
+<span class="font-data-mono-md text-data-mono-md text-text-primary">7 Records Verified</span>
+<button class="text-primary hover:underline font-headline-sm flex items-center gap-1" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+<span>Back to Top</span>
+<span class="material-symbols-outlined text-[16px]">arrow_upward</span>
+</button>
+</div>
+</div>
+</section>
+</div>
+</div>
+<script>
+  // Simple micro-interaction for Export Dossier feedback
+  const exportBtn = document.getElementById('btnExportDossier');
+  if (exportBtn) {
+    exportBtn.addEventListener('click', () => {
+      const originalText = exportBtn.innerHTML;
+      exportBtn.innerHTML = `
+        <span class="material-symbols-outlined text-[18px] animate-spin">sync</span>
+        <span>Assembling Package...</span>
+      `;
+      setTimeout(() => {
+        exportBtn.innerHTML = `
+          <span class="material-symbols-outlined text-[18px] text-success-text">download_done</span>
+          <span>Dossier Downloaded</span>
+        `;
+        setTimeout(() => {
+          exportBtn.innerHTML = originalText;
+        }, 3000);
+      }, 700);
+    });
+  }
+</script></main></div></body></html>

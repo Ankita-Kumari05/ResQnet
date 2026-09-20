@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"primary":"#004ac6","on-tertiary-fixed-variant":"#3f465c","on-secondary-container":"#3e5980","surface-dim":"#cbdbf5","surface-container":"#e5eeff","surface-container-lowest":"#ffffff","on-tertiary-fixed":"#131b2e","surface-card":"#FFFFFF","critical-bg":"#FEF2F2","surface-variant":"#d3e4fe","on-surface-variant":"#434655","on-secondary":"#ffffff","warning-border":"#FDE68A","on-secondary-fixed-variant":"#2d486d","on-tertiary-container":"#eef0ff","success-text":"#16A34A","success-border":"#BBF7D0","surface-tint":"#0053db","on-primary-fixed":"#00174b","inverse-on-surface":"#eaf1ff","on-primary-fixed-variant":"#003ea8","blue-soft":"#EFF6FF","blue-light":"#DBEAFE","background":"#f8f9ff","surface-container-high":"#dce9ff","on-background":"#0b1c30","warning-bg":"#FFFBEB","primary-fixed-dim":"#b4c5ff","critical-border":"#FECACA","outline-variant":"#c3c6d7","inverse-surface":"#213145","on-tertiary":"#ffffff","tertiary-fixed":"#dae2fd","error":"#ba1a1a","critical-text":"#DC2626","surface-container-low":"#eff4ff","secondary-fixed-dim":"#adc8f5","on-error-container":"#93000a","primary-container":"#2563eb","warning-text":"#D97706","secondary":"#455f87","secondary-fixed":"#d5e3ff","surface":"#f8f9ff","on-error":"#ffffff","info-border":"#BFDBFE","surface-container-highest":"#d3e4fe","surface-bright":"#f8f9ff","on-primary-container":"#eeefff","surface-subtle":"#F1F5F9","tertiary-fixed-dim":"#bec6e0","error-container":"#ffdad6","secondary-container":"#b5d0fd","tertiary-container":"#656d84","success-bg":"#F0FDF4","text-primary":"#1E293B","on-primary":"#ffffff","border-default":"#E2E8F0","primary-fixed":"#dbe1ff","on-surface":"#0b1c30","outline":"#737686","tertiary":"#4d556b","text-muted":"#94A3B8","inverse-primary":"#b4c5ff","on-secondary-fixed":"#001c3b","text-secondary":"#64748B","surface-base":"#F8FAFC"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-4":"16px","space-10":"40px","margin-tablet":"24px","space-1":"4px","margin-desktop":"32px","space-3":"12px","space-8":"32px","gutter-expanded":"24px","space-0":"0px","gutter-standard":"16px","gutter-dense":"8px","space-2":"8px","margin-mobile":"16px","space-12":"48px","space-16":"64px","space-5":"20px","space-6":"24px"},"fontFamily":{"headline-lg":["Public Sans"],"data-mono-md":["JetBrains Mono"],"label-badge":["Public Sans"],"headline-sm":["Public Sans"],"display-hud-mobile":["JetBrains Mono"],"display-hud":["JetBrains Mono"],"headline-xl":["Public Sans"],"data-mono-lg":["JetBrains Mono"],"body-sm":["Public Sans"],"label-telemetry":["JetBrains Mono"],"body-md":["Public Sans"],"body-lg":["Public Sans"],"headline-xl-mobile":["Public Sans"],"headline-md":["Public Sans"]},"fontSize":{"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"700"}],"data-mono-md":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"500"}],"label-badge":["11px",{"lineHeight":"14px","letterSpacing":"0.06em","fontWeight":"700"}],"headline-sm":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"600"}],"display-hud-mobile":["32px",{"lineHeight":"36px","letterSpacing":"-0.03em","fontWeight":"700"}],"display-hud":["48px",{"lineHeight":"52px","letterSpacing":"-0.04em","fontWeight":"700"}],"headline-xl":["36px",{"lineHeight":"44px","letterSpacing":"-0.025em","fontWeight":"700"}],"data-mono-lg":["18px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"400"}],"label-telemetry":["10px",{"lineHeight":"12px","letterSpacing":"0.08em","fontWeight":"500"}],"body-md":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"headline-xl-mobile":["26px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}]}}}};</script></head><body class="bg-surface-base font-body-md text-text-primary antialiased min-h-screen"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-card shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between select-none"><div class="flex flex-col flex-1 min-h-0"><div class="h-16 px-space-6 flex items-center gap-space-3 bg-surface-card"><div class="w-8 h-8 rounded-lg bg-primary-container flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[20px]">shield</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none">RESQNET</span><span class="font-label-telemetry text-label-telemetry text-text-secondary tracking-wider mt-1">GOV ROOT v2.4</span></div></div><div class="px-space-6 pt-space-4 pb-space-2"><span class="font-label-badge text-label-badge uppercase tracking-wider text-text-muted">ADMINISTRATION &amp; AUDIT</span></div><nav class="flex-1 px-space-4 space-y-1 overflow-y-auto" data-active-classes="bg-primary-container text-on-primary-container font-headline-sm rounded-lg"><a class="flex items-center justify-between px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-subtle hover:text-text-primary transition-colors" data-path="dashboard" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">dashboard</span><span class="font-body-md text-body-md">Dashboard</span></div></a><a class="flex items-center justify-between px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-subtle hover:text-text-primary transition-colors" data-path="users" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">group</span><span class="font-body-md text-body-md">Users</span></div></a><a class="flex items-center justify-between px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-subtle hover:text-text-primary transition-colors" data-path="roles-and-permissions" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">admin_panel_settings</span><span class="font-body-md text-body-md">Roles &amp; Permissions</span></div></a><a class="flex items-center justify-between px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-subtle hover:text-text-primary transition-colors" data-path="coordinators" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">person_pin</span><span class="font-body-md text-body-md">Coordinators</span></div></a><a class="flex items-center justify-between px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-subtle hover:text-text-primary transition-colors" data-path="responders-and-orgs" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">corporate_fare</span><span class="font-body-md text-body-md">Responders / Orgs</span></div></a><a class="flex items-center justify-between px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-subtle hover:text-text-primary transition-colors" data-path="verification" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">verified_user</span><span class="font-body-md text-body-md">Verification</span></div><span class="font-label-badge text-label-badge px-2 py-0.5 rounded-lg bg-warning-bg text-warning-text">5</span></a><a class="flex items-center justify-between px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-subtle hover:text-text-primary transition-colors" data-path="monitoring" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">monitor_heart</span><span class="font-body-md text-body-md">Monitoring</span></div></a><a class="flex items-center justify-between px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-subtle hover:text-text-primary transition-colors" data-path="analytics" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">insights</span><span class="font-body-md text-body-md">Analytics</span></div></a><a class="flex items-center justify-between px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-subtle hover:text-text-primary transition-colors" data-path="announcements" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">campaign</span><span class="font-body-md text-body-md">Announcements</span></div></a><a aria-current="page" class="flex items-center justify-between px-space-3 py-space-2 transition-colors bg-primary-container text-on-primary-container font-headline-sm rounded-lg" data-path="audit-logs" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">receipt_long</span><span class="font-body-md text-body-md">Audit Logs</span></div></a><a class="flex items-center justify-between px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-subtle hover:text-text-primary transition-colors" data-path="configuration" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">tune</span><span class="font-body-md text-body-md">Configuration</span></div></a></nav></div><div class="p-space-4 bg-surface-card flex flex-col gap-space-2"><div class="flex flex-col gap-1"><a class="flex items-center justify-between px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-subtle hover:text-text-primary transition-colors" data-path="notifications" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">notifications</span><span class="font-body-md text-body-md">Notifications</span></div><span class="font-label-badge text-label-badge px-2 py-0.5 rounded-lg bg-blue-soft text-primary">3</span></a><a class="flex items-center justify-between px-space-3 py-space-2 rounded-lg text-text-secondary hover:bg-surface-subtle hover:text-text-primary transition-colors" data-path="profile-and-security" href="#"><div class="flex items-center gap-space-3"><span class="material-symbols-outlined text-[18px]">security</span><span class="font-body-md text-body-md">Profile &amp; Security</span></div></a></div><div class="p-space-3 rounded-lg bg-surface-subtle flex flex-col gap-1"><div class="flex items-center gap-space-2"><span class="w-2 h-2 rounded-full bg-success-text inline-block"></span><span class="font-label-telemetry text-label-telemetry text-text-secondary uppercase tracking-wider">SECURE NODE CLUSTER</span></div><span class="font-data-mono-md text-data-mono-md text-on-surface font-semibold truncate">GOV-DC-CHANDIGARH-01</span><span class="font-label-telemetry text-label-telemetry text-text-muted">TLS 1.3 ENCRYPTED</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-card/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-8"><div class="flex items-center gap-space-4 min-w-0"><div class="flex items-center gap-space-2 shrink-0"><span class="font-headline-sm text-headline-sm text-text-primary tracking-tight font-bold whitespace-nowrap">RESQNET v2.4</span><span class="font-label-telemetry text-label-telemetry text-text-muted uppercase hidden 2xl:inline">(ADMINISTRATION &amp; GOVERNANCE CONSOLE)</span></div><div class="h-4 w-px bg-surface-subtle hidden xl:block"></div><div class="flex items-center gap-space-2 overflow-x-auto py-1"><div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-blue-soft text-primary shrink-0"><span class="material-symbols-outlined text-[14px]">verified</span><span class="font-label-badge text-label-badge uppercase tracking-wider">SECURE ROOT • ZERO TRUST</span></div><div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-success-bg text-success-text shrink-0"><span class="material-symbols-outlined text-[14px]">check_circle</span><span class="font-label-badge text-label-badge uppercase tracking-wider">HEALTHY • 99.98%</span></div><div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-warning-bg text-warning-text shrink-0"><span class="material-symbols-outlined text-[14px]">tsunami</span><span class="font-label-badge text-label-badge uppercase tracking-wider">MONSOON L2</span></div><div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-surface-subtle text-text-secondary shrink-0 hidden lg:inline-flex"><span class="material-symbols-outlined text-[14px]">emergency</span><span class="font-data-mono-md text-data-mono-md uppercase">112 / 1078</span></div></div></div><div class="flex items-center gap-space-4 shrink-0"><div class="flex flex-col text-right hidden sm:flex"><span class="font-headline-sm text-body-md text-text-primary font-semibold leading-tight">Dr. Ananya Roy</span><span class="font-label-telemetry text-label-telemetry text-text-secondary">SEC-LEVEL 4 MASTER</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="w-full pt-16 px-space-8 py-space-6 bg-surface-base min-h-screen"><div class="flex flex-col w-full">
+<div class="flex flex-col xl:flex-row xl:items-end justify-between gap-space-4 pb-space-6">
+<div class="flex flex-col gap-1 max-w-4xl">
+<div class="flex items-center gap-space-2 text-text-muted">
+<span class="font-label-telemetry text-label-telemetry uppercase tracking-wider text-text-secondary">SECURITY &amp; COMPLIANCE</span>
+<span class="material-symbols-outlined text-[12px] text-text-muted">chevron_right</span>
+<span class="font-label-telemetry text-label-telemetry uppercase tracking-wider text-primary font-semibold">ZERO TRUST GOVERNANCE</span>
+</div>
+<div class="flex items-center gap-space-3 mt-1">
+<div class="w-2.5 h-7 bg-primary rounded"></div>
+<h1 class="font-headline-xl text-headline-xl text-text-primary tracking-tight font-bold">IMMUTABLE AUDIT LOG</h1>
+<div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded bg-surface-container text-primary text-label-badge font-label-badge uppercase tracking-wider">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+<span>WORM PROTECTED</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-text-secondary mt-1">
+        Cryptographically verifiable chronological ledger of administrative authorizations, credential elevations, CAP alert broadcasts, and statutory accreditation actions.
+      </p>
+</div>
+<div class="flex items-center gap-space-3 shrink-0 self-start xl:self-end">
+<button class="inline-flex items-center gap-2 px-space-4 py-space-2 rounded bg-surface-card hover:bg-surface-subtle text-text-primary font-headline-sm text-body-md transition-colors shadow-sm" id="btn-export-csv" type="button">
+<span class="material-symbols-outlined text-[18px] text-text-secondary">download</span>
+<span>Export Verified Audit CSV</span>
+</button>
+<button class="inline-flex items-center gap-2 px-space-4 py-space-2 rounded bg-primary hover:bg-surface-tint text-on-primary font-headline-sm text-body-md transition-colors shadow-sm" id="btn-verify-merkle" type="button">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span>Verify SHA-256 Merkle Root</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-4 mb-space-6">
+<div class="bg-surface-card p-space-4 rounded shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-text-muted mb-2">
+<span class="font-label-badge text-label-badge uppercase tracking-wider text-text-secondary">ROOT MERKLE HASH</span>
+<span class="material-symbols-outlined text-[16px] text-primary">account_tree</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-data-mono-md text-data-mono-md text-text-primary font-semibold truncate select-all" title="0x9fB4e287a9b837c490ef14820dc73cA">
+            0x9fB4e...73cA
+          </span>
+<span class="inline-flex items-center gap-1 text-label-telemetry text-success-text font-label-telemetry bg-success-bg px-1.5 py-0.5 rounded">
+<span class="material-symbols-outlined text-[11px]">verified</span>
+<span>SYNCED</span>
+</span>
+</div>
+<span class="font-label-telemetry text-label-telemetry text-text-muted uppercase">SHA-256 CONTINUOUS INTEGRITY</span>
+</div>
+</div>
+<div class="bg-surface-card p-space-4 rounded shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-text-muted mb-2">
+<span class="font-label-badge text-label-badge uppercase tracking-wider text-text-secondary">RETENTION POLICY</span>
+<span class="material-symbols-outlined text-[16px] text-secondary">history_edu</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-baseline gap-2">
+<span class="font-data-mono-lg text-data-mono-lg text-text-primary font-bold">365 DAYS</span>
+<span class="font-label-badge text-label-badge text-text-secondary uppercase">WORM COMPLIANT</span>
+</div>
+<span class="font-label-telemetry text-label-telemetry text-text-muted uppercase">ZERO MUTATION PERMITTED</span>
+</div>
+</div>
+<div class="bg-surface-card p-space-4 rounded shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-text-muted mb-2">
+<span class="font-label-badge text-label-badge uppercase tracking-wider text-text-secondary">TOTAL LOGGED EVENTS</span>
+<span class="material-symbols-outlined text-[16px] text-primary">receipt_long</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-baseline gap-2">
+<span class="font-data-mono-lg text-data-mono-lg text-text-primary font-bold">24,918</span>
+<span class="font-label-badge text-label-badge text-success-text uppercase">0 TAMPER ANOMALIES</span>
+</div>
+<span class="font-label-telemetry text-label-telemetry text-text-muted uppercase">AUDITED TILL 10:48:12 IST</span>
+</div>
+</div>
+<div class="bg-surface-card p-space-4 rounded shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-text-muted mb-2">
+<span class="font-label-badge text-label-badge uppercase tracking-wider text-text-secondary">ACTIVE HSM SIGNER</span>
+<span class="material-symbols-outlined text-[16px] text-warning-text">key</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-data-mono-md text-data-mono-md text-text-primary font-semibold">HSM-SEC-LEVEL-4</span>
+<span class="w-2 h-2 rounded-full bg-success-text"></span>
+</div>
+<span class="font-label-telemetry text-label-telemetry text-text-muted truncate">DR. ANANYA ROY (ROOT MASTER)</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-card p-space-4 rounded shadow-sm mb-space-6">
+<div class="flex flex-col lg:flex-row gap-space-3 items-stretch lg:items-center justify-between">
+<div class="relative flex-1">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-[18px] text-text-muted">search</span>
+</div>
+<input class="w-full pl-10 pr-4 py-2 bg-surface-subtle rounded text-body-md font-body-md text-text-primary placeholder:text-text-muted focus:outline-none focus:bg-surface-card transition-colors" id="log-search-input" placeholder="Search by hash, operator ID, target resource ID, or action..." type="text"/>
+</div>
+<div class="flex flex-wrap items-center gap-space-2">
+<div class="flex items-center bg-surface-subtle rounded px-2 py-1">
+<span class="material-symbols-outlined text-[16px] text-text-secondary mr-1.5">calendar_today</span>
+<select class="bg-transparent text-body-sm font-body-sm text-text-primary focus:outline-none cursor-pointer pr-1" id="filter-date">
+<option value="24h">Past 24 Hours</option>
+<option value="7d">Past 7 Days</option>
+<option value="custom">Custom Range</option>
+</select>
+</div>
+<div class="flex items-center bg-surface-subtle rounded px-2 py-1">
+<span class="material-symbols-outlined text-[16px] text-text-secondary mr-1.5">badge</span>
+<select class="bg-transparent text-body-sm font-body-sm text-text-primary focus:outline-none cursor-pointer pr-1" id="filter-role">
+<option value="all">All Roles</option>
+<option value="admin">System Admin</option>
+<option value="coordinator">Coordinator</option>
+<option value="responder">Responder</option>
+<option value="daemon">System Daemon</option>
+</select>
+</div>
+<div class="flex items-center bg-surface-subtle rounded px-2 py-1">
+<span class="material-symbols-outlined text-[16px] text-text-secondary mr-1.5">bolt</span>
+<select class="bg-transparent text-body-sm font-body-sm text-text-primary focus:outline-none cursor-pointer pr-1" id="filter-action">
+<option value="all">All Actions</option>
+<option value="elevation">Credential Elevation</option>
+<option value="accreditation">Accreditation Approval</option>
+<option value="broadcast">CAP Broadcast</option>
+<option value="suspension">User Suspension</option>
+<option value="config">Config Mutation</option>
+</select>
+</div>
+<div class="flex items-center bg-surface-subtle rounded px-2 py-1">
+<span class="material-symbols-outlined text-[16px] text-text-secondary mr-1.5">filter_list</span>
+<select class="bg-transparent text-body-sm font-body-sm text-text-primary focus:outline-none cursor-pointer pr-1" id="filter-result">
+<option value="all">All Results</option>
+<option value="success">SUCCESS</option>
+<option value="denied">DENIED</option>
+<option value="recorded">RECORDED</option>
+</select>
+</div>
+<button class="inline-flex items-center gap-1 px-3 py-1.5 rounded bg-surface-container hover:bg-surface-variant text-text-secondary text-body-sm font-headline-sm transition-colors" id="btn-reset-filters" type="button">
+<span class="material-symbols-outlined text-[14px]">refresh</span>
+<span>Reset</span>
+</button>
+</div>
+</div>
+</div>
+<div class="bg-surface-card rounded shadow-sm overflow-hidden flex flex-col">
+<div class="px-space-4 py-space-3 bg-surface-subtle flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">assured_workload</span>
+<span class="font-headline-sm text-headline-sm text-text-primary">Secured Ledger Stream</span>
+<span class="text-label-telemetry font-label-telemetry px-2 py-0.5 rounded bg-surface-card text-text-secondary">BLOCK #1,842,094</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="font-label-telemetry text-label-telemetry text-text-muted uppercase">REALTIME AUDIT FEED (READ ONLY)</span>
+<div class="w-2 h-2 rounded-full bg-success-text animate-pulse"></div>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left" id="audit-table">
+<thead>
+<tr class="bg-surface-subtle text-text-secondary text-label-badge font-label-badge uppercase tracking-wider">
+<th class="py-3 px-4">TIMESTAMP (IST)</th>
+<th class="py-3 px-4">ACTOR &amp; IDENTIFIER</th>
+<th class="py-3 px-4">ROLE</th>
+<th class="py-3 px-4">ACTION PERFORMED</th>
+<th class="py-3 px-4">TARGET RESOURCE / ENTITY</th>
+<th class="py-3 px-4">HASH &amp; INTEGRITY STATUS</th>
+<th class="py-3 px-4 text-right">INSPECT</th>
+</tr>
+</thead>
+<tbody class="text-body-md font-body-md text-text-primary" id="audit-rows-container">
+<tr class="hover:bg-surface-subtle transition-colors bg-surface-card">
+<td class="py-3 px-4 whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-data-mono-md text-data-mono-md text-text-primary font-semibold">14 Oct 2025</span>
+<span class="font-label-telemetry text-label-telemetry text-text-muted">10:48:12 IST</span>
+</div>
+</td>
+<td class="py-3 px-4 whitespace-nowrap">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded bg-blue-soft text-primary flex items-center justify-center font-data-mono-md text-data-mono-md font-bold">
+                  AR
+                </div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-body-md text-text-primary font-semibold truncate">Dr. Ananya Roy</span>
+<span class="font-data-mono-md text-label-telemetry text-text-muted">#ADM-0001</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-4 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-blue-soft text-primary font-label-badge text-label-badge uppercase">
+<span class="material-symbols-outlined text-[12px]">shield_person</span>
+<span>Admin</span>
+</span>
+</td>
+<td class="py-3 px-4">
+<div class="flex flex-col">
+<span class="font-headline-sm text-body-md text-text-primary font-medium">Credential Elevation Approved</span>
+<span class="font-label-telemetry text-label-telemetry text-text-muted">Elevation to Tier-2 Crisis Dispatcher</span>
+</div>
+</td>
+<td class="py-3 px-4 whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-data-mono-md text-data-mono-md text-primary font-semibold">COORD-014</span>
+<span class="font-body-sm text-body-sm text-text-secondary">Vikram Malhotra (Kamrup SDMA)</span>
+</div>
+</td>
+<td class="py-3 px-4 whitespace-nowrap">
+<div class="flex flex-col gap-1">
+<div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-success-bg text-success-text font-label-badge text-label-badge uppercase w-fit">
+<span class="material-symbols-outlined text-[12px]">check_circle</span>
+<span>SUCCESS</span>
+</div>
+<span class="font-data-mono-md text-label-telemetry text-text-muted" title="8f92cb71a39d4e5fbc0192eab78912cd">
+                  8f92cb71a39d...
+                </span>
+</div>
+</td>
+<td class="py-3 px-4 text-right whitespace-nowrap">
+<button class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-surface-subtle hover:bg-surface-container text-text-secondary hover:text-text-primary text-body-sm font-headline-sm transition-colors" onclick="openProofModal('8f92cb71a39d4e5fbc0192eab78912cd', 'ADM-0001', 'COORD-014', 'Credential Elevation Approved', '14 Oct 2025 10:48:12 IST', 'SUCCESS')" type="button">
+<span class="material-symbols-outlined text-[14px]">history_edu</span>
+<span>Proof</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-subtle transition-colors bg-surface-card">
+<td class="py-3 px-4 whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-data-mono-md text-data-mono-md text-text-primary font-semibold">14 Oct 2025</span>
+<span class="font-label-telemetry text-label-telemetry text-text-muted">10:15:04 IST</span>
+</div>
+</td>
+<td class="py-3 px-4 whitespace-nowrap">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded bg-blue-soft text-primary flex items-center justify-center font-data-mono-md text-data-mono-md font-bold">
+                  AR
+                </div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-body-md text-text-primary font-semibold truncate">Dr. Ananya Roy</span>
+<span class="font-data-mono-md text-label-telemetry text-text-muted">#ADM-0001</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-4 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-blue-soft text-primary font-label-badge text-label-badge uppercase">
+<span class="material-symbols-outlined text-[12px]">shield_person</span>
+<span>Admin</span>
+</span>
+</td>
+<td class="py-3 px-4">
+<div class="flex flex-col">
+<span class="font-headline-sm text-body-md text-text-primary font-medium">NGO Accreditation Charter Issued</span>
+<span class="font-label-telemetry text-label-telemetry text-text-muted">Staged Disaster Relief Operation License</span>
+</div>
+</td>
+<td class="py-3 px-4 whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-data-mono-md text-data-mono-md text-primary font-semibold">ORG-038</span>
+<span class="font-body-sm text-body-sm text-text-secondary">ActionAid Red Cross India</span>
+</div>
+</td>
+<td class="py-3 px-4 whitespace-nowrap">
+<div class="flex flex-col gap-1">
+<div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-success-bg text-success-text font-label-badge text-label-badge uppercase w-fit">
+<span class="material-symbols-outlined text-[12px]">check_circle</span>
+<span>SUCCESS</span>
+</div>
+<span class="font-data-mono-md text-label-telemetry text-text-muted" title="33a218fbd0298a0029bce194092bbf1c">
+                  33a218fbd029...
+                </span>
+</div>
+</td>
+<td class="py-3 px-4 text-right whitespace-nowrap">
+<button class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-surface-subtle hover:bg-surface-container text-text-secondary hover:text-text-primary text-body-sm font-headline-sm transition-colors" onclick="openProofModal('33a218fbd0298a0029bce194092bbf1c', 'ADM-0001', 'ORG-038', 'NGO Accreditation Charter Issued', '14 Oct 2025 10:15:04 IST', 'SUCCESS')" type="button">
+<span class="material-symbols-outlined text-[14px]">history_edu</span>
+<span>Proof</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-subtle transition-colors bg-surface-card">
+<td class="py-3 px-4 whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-data-mono-md text-data-mono-md text-text-primary font-semibold">14 Oct 2025</span>
+<span class="font-label-telemetry text-label-telemetry text-text-muted">09:30:22 IST</span>
+</div>
+</td>
+<td class="py-3 px-4 whitespace-nowrap">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded bg-surface-container text-on-secondary-container flex items-center justify-center font-data-mono-md text-data-mono-md font-bold">
+                  VM
+                </div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-body-md text-text-primary font-semibold truncate">Vikram Malhotra</span>
+<span class="font-data-mono-md text-label-telemetry text-text-muted">#COORD-014</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-4 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container text-on-secondary-container font-label-badge text-label-badge uppercase">
+<span class="material-symbols-outlined text-[12px]">person_pin</span>
+<span>Coordinator</span>
+</span>
+</td>
+<td class="py-3 px-4">
+<div class="flex flex-col">
+<span class="font-headline-sm text-body-md text-text-primary font-medium">CAP Broadcast Authorized</span>
+<span class="font-label-telemetry text-label-telemetry text-warning-text font-semibold">ZONE 1 FLASH FLOOD WARNING EVACUATION</span>
+</div>
+</td>
+<td class="py-3 px-4 whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-data-mono-md text-data-mono-md text-text-primary font-semibold">CAP-BCAST-84200</span>
+<span class="font-body-sm text-body-sm text-text-secondary">NDMA-SMS-GATEWAY-09</span>
+</div>
+</td>
+<td class="py-3 px-4 whitespace-nowrap">
+<div class="flex flex-col gap-1">
+<div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-blue-soft text-primary font-label-badge text-label-badge uppercase w-fit">
+<span class="material-symbols-outlined text-[12px]">verified</span>
+<span>RECORDED</span>
+</div>
+<span class="font-data-mono-md text-label-telemetry text-text-muted" title="a41e9b271d44118cc9b2518e100f94ad">
+                  a41e9b271d44...
+                </span>
+</div>
+</td>
+<td class="py-3 px-4 text-right whitespace-nowrap">
+<button class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-surface-subtle hover:bg-surface-container text-text-secondary hover:text-text-primary text-body-sm font-headline-sm transition-colors" onclick="openProofModal('a41e9b271d44118cc9b2518e100f94ad', 'COORD-014', 'CAP-BCAST-84200', 'CAP Broadcast Authorized', '14 Oct 2025 09:30:22 IST', 'RECORDED')" type="button">
+<span class="material-symbols-outlined text-[14px]">history_edu</span>
+<span>Proof</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-subtle transition-colors bg-critical-bg/20">
+<td class="py-3 px-4 whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-data-mono-md text-data-mono-md text-text-primary font-semibold">14 Oct 2025</span>
+<span class="font-label-telemetry text-label-telemetry text-text-muted">08:42:19 IST</span>
+</div>
+</td>
+<td class="py-3 px-4 whitespace-nowrap">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded bg-surface-subtle text-text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">terminal</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-body-md text-text-primary font-semibold truncate">Kernel OPA Daemon</span>
+<span class="font-data-mono-md text-label-telemetry text-text-muted">DAEMON://SYSTEM-CORE</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-4 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-subtle text-text-secondary font-label-badge text-label-badge uppercase">
+<span class="material-symbols-outlined text-[12px]">memory</span>
+<span>System Kernel</span>
+</span>
+</td>
+<td class="py-3 px-4">
+<div class="flex flex-col">
+<span class="font-headline-sm text-body-md text-critical-text font-medium">Unauthorized Campaign Blocked</span>
+<span class="font-label-telemetry text-label-telemetry text-critical-text">SEC RULE #403: MISSING TIER-3 CLEARANCE</span>
+</div>
+</td>
+<td class="py-3 px-4 whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-data-mono-md text-data-mono-md text-text-primary font-semibold">NGO-USER-8829</span>
+<span class="font-body-sm text-body-sm text-text-secondary">Unverified Relief Worker</span>
+</div>
+</td>
+<td class="py-3 px-4 whitespace-nowrap">
+<div class="flex flex-col gap-1">
+<div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-critical-bg text-critical-text font-label-badge text-label-badge uppercase w-fit">
+<span class="material-symbols-outlined text-[12px]">gpp_bad</span>
+<span>POLICY DENIED</span>
+</div>
+<span class="font-data-mono-md text-label-telemetry text-text-muted" title="c901ea84bf21098418ab1938fe710928">
+                  c901ea84bf21...
+                </span>
+</div>
+</td>
+<td class="py-3 px-4 text-right whitespace-nowrap">
+<button class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-surface-subtle hover:bg-surface-container text-text-secondary hover:text-text-primary text-body-sm font-headline-sm transition-colors" onclick="openProofModal('c901ea84bf21098418ab1938fe710928', 'SYSTEM-CORE', 'NGO-USER-8829', 'Unauthorized Campaign Blocked', '14 Oct 2025 08:42:19 IST', 'POLICY DENIED')" type="button">
+<span class="material-symbols-outlined text-[14px]">history_edu</span>
+<span>Proof</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-subtle transition-colors bg-surface-card">
+<td class="py-3 px-4 whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-data-mono-md text-data-mono-md text-text-primary font-semibold">14 Oct 2025</span>
+<span class="font-label-telemetry text-label-telemetry text-text-muted">08:00:00 IST</span>
+</div>
+</td>
+<td class="py-3 px-4 whitespace-nowrap">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded bg-surface-subtle text-text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">storage</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-body-md text-text-primary font-semibold truncate">System Root Daemon</span>
+<span class="font-data-mono-md text-label-telemetry text-text-muted">CRON://DB-LEDGER</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-4 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-subtle text-text-secondary font-label-badge text-label-badge uppercase">
+<span class="material-symbols-outlined text-[12px]">dns</span>
+<span>System Kernel</span>
+</span>
+</td>
+<td class="py-3 px-4">
+<div class="flex flex-col">
+<span class="font-headline-sm text-body-md text-text-primary font-medium">Daily DB Cryptographic Snapshot</span>
+<span class="font-label-telemetry text-label-telemetry text-text-muted">Ledger State Checkpointed to Cold S3 Vault</span>
+</div>
+</td>
+<td class="py-3 px-4 whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-data-mono-md text-data-mono-md text-text-primary font-semibold">DB-REPLICA-CLUSTER</span>
+<span class="font-body-sm text-body-sm text-text-secondary">Node Cluster #4 (Chandigarh)</span>
+</div>
+</td>
+<td class="py-3 px-4 whitespace-nowrap">
+<div class="flex flex-col gap-1">
+<div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-success-bg text-success-text font-label-badge text-label-badge uppercase w-fit">
+<span class="material-symbols-outlined text-[12px]">check_circle</span>
+<span>SUCCESS</span>
+</div>
+<span class="font-data-mono-md text-label-telemetry text-text-muted" title="0e7fa419b88301ec719fa9912001bb90">
+                  0e7fa419b883...
+                </span>
+</div>
+</td>
+<td class="py-3 px-4 text-right whitespace-nowrap">
+<button class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-surface-subtle hover:bg-surface-container text-text-secondary hover:text-text-primary text-body-sm font-headline-sm transition-colors" onclick="openProofModal('0e7fa419b88301ec719fa9912001bb90', 'DB-LEDGER', 'DB-REPLICA-CLUSTER', 'Daily DB Cryptographic Snapshot', '14 Oct 2025 08:00:00 IST', 'SUCCESS')" type="button">
+<span class="material-symbols-outlined text-[14px]">history_edu</span>
+<span>Proof</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-subtle transition-colors bg-surface-card">
+<td class="py-3 px-4 whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-data-mono-md text-data-mono-md text-text-primary font-semibold">14 Oct 2025</span>
+<span class="font-label-telemetry text-label-telemetry text-text-muted">07:22:45 IST</span>
+</div>
+</td>
+<td class="py-3 px-4 whitespace-nowrap">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded bg-surface-container text-on-secondary-container flex items-center justify-center font-data-mono-md text-data-mono-md font-bold">
+                  AM
+                </div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-body-md text-text-primary font-semibold truncate">Arjun Mehta</span>
+<span class="font-data-mono-md text-label-telemetry text-text-muted">#RESP-8820</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-4 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container text-on-secondary-container font-label-badge text-label-badge uppercase">
+<span class="material-symbols-outlined text-[12px]">medical_services</span>
+<span>Responder</span>
+</span>
+</td>
+<td class="py-3 px-4">
+<div class="flex flex-col">
+<span class="font-headline-sm text-body-md text-text-primary font-medium">Road Blockage Verified</span>
+<span class="font-label-telemetry text-label-telemetry text-text-muted">Landslide blockage marked unpassable</span>
+</div>
+</td>
+<td class="py-3 px-4 whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-data-mono-md text-data-mono-md text-text-primary font-semibold">ROAD-COR-NORTH-04</span>
+<span class="font-body-sm text-body-sm text-text-secondary">Guwahati Bypass Km 14</span>
+</div>
+</td>
+<td class="py-3 px-4 whitespace-nowrap">
+<div class="flex flex-col gap-1">
+<div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-success-bg text-success-text font-label-badge text-label-badge uppercase w-fit">
+<span class="material-symbols-outlined text-[12px]">check_circle</span>
+<span>SUCCESS</span>
+</div>
+<span class="font-data-mono-md text-label-telemetry text-text-muted" title="55f7bc8201a4e8d891bca700140292ff">
+                  55f7bc8201a4...
+                </span>
+</div>
+</td>
+<td class="py-3 px-4 text-right whitespace-nowrap">
+<button class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-surface-subtle hover:bg-surface-container text-text-secondary hover:text-text-primary text-body-sm font-headline-sm transition-colors" onclick="openProofModal('55f7bc8201a4e8d891bca700140292ff', 'RESP-8820', 'ROAD-COR-NORTH-04', 'Road Blockage Verified', '14 Oct 2025 07:22:45 IST', 'SUCCESS')" type="button">
+<span class="material-symbols-outlined text-[14px]">history_edu</span>
+<span>Proof</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-subtle transition-colors bg-surface-card">
+<td class="py-3 px-4 whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-data-mono-md text-data-mono-md text-text-primary font-semibold">14 Oct 2025</span>
+<span class="font-label-telemetry text-label-telemetry text-text-muted">06:45:10 IST</span>
+</div>
+</td>
+<td class="py-3 px-4 whitespace-nowrap">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded bg-blue-soft text-primary flex items-center justify-center font-data-mono-md text-data-mono-md font-bold">
+                  AR
+                </div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-body-md text-text-primary font-semibold truncate">Dr. Ananya Roy</span>
+<span class="font-data-mono-md text-label-telemetry text-text-muted">#ADM-0001</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-4 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-blue-soft text-primary font-label-badge text-label-badge uppercase">
+<span class="material-symbols-outlined text-[12px]">shield_person</span>
+<span>Admin</span>
+</span>
+</td>
+<td class="py-3 px-4">
+<div class="flex flex-col">
+<span class="font-headline-sm text-body-md text-text-primary font-medium">Account Suspended [Rule #403]</span>
+<span class="font-label-telemetry text-label-telemetry text-text-muted">Repeated falsified distress signals</span>
+</div>
+</td>
+<td class="py-3 px-4 whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-data-mono-md text-data-mono-md text-text-primary font-semibold">USR-IND-9031</span>
+<span class="font-body-sm text-body-sm text-text-secondary">Amitav Ghosh (Dispur Sector)</span>
+</div>
+</td>
+<td class="py-3 px-4 whitespace-nowrap">
+<div class="flex flex-col gap-1">
+<div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-success-bg text-success-text font-label-badge text-label-badge uppercase w-fit">
+<span class="material-symbols-outlined text-[12px]">check_circle</span>
+<span>SUCCESS</span>
+</div>
+<span class="font-data-mono-md text-label-telemetry text-text-muted" title="e129ad44001c9ab48560029bca021481">
+                  e129ad44001c...
+                </span>
+</div>
+</td>
+<td class="py-3 px-4 text-right whitespace-nowrap">
+<button class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-surface-subtle hover:bg-surface-container text-text-secondary hover:text-text-primary text-body-sm font-headline-sm transition-colors" onclick="openProofModal('e129ad44001c9ab48560029bca021481', 'ADM-0001', 'USR-IND-9031', 'Account Suspended [Rule #403]', '14 Oct 2025 06:45:10 IST', 'SUCCESS')" type="button">
+<span class="material-symbols-outlined text-[14px]">history_edu</span>
+<span>Proof</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="px-space-4 py-space-3 bg-surface-card flex flex-col sm:flex-row items-center justify-between gap-space-3">
+<div class="flex items-center gap-2 text-text-secondary text-body-sm font-body-sm">
+<span>Showing 6 of 24,918 immutable ledger entries</span>
+<span class="text-text-muted">•</span>
+<span class="font-label-telemetry text-label-telemetry">PAGE 1 OF 4,153</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="px-2.5 py-1 rounded bg-surface-subtle hover:bg-surface-container text-text-secondary text-body-sm font-headline-sm disabled:opacity-40" disabled="" type="button">
+          Previous
+        </button>
+<button class="px-2.5 py-1 rounded bg-primary text-on-primary text-body-sm font-headline-sm" type="button">
+          1
+        </button>
+<button class="px-2.5 py-1 rounded bg-surface-subtle hover:bg-surface-container text-text-secondary text-body-sm font-headline-sm" type="button">
+          2
+        </button>
+<button class="px-2.5 py-1 rounded bg-surface-subtle hover:bg-surface-container text-text-secondary text-body-sm font-headline-sm" type="button">
+          3
+        </button>
+<span class="px-1 text-text-muted">...</span>
+<button class="px-2.5 py-1 rounded bg-surface-subtle hover:bg-surface-container text-text-secondary text-body-sm font-headline-sm" type="button">
+          4153
+        </button>
+<button class="px-2.5 py-1 rounded bg-surface-subtle hover:bg-surface-container text-text-secondary text-body-sm font-headline-sm" type="button">
+          Next
+        </button>
+</div>
+</div>
+</div>
+<div class="mt-space-6 bg-surface-card p-space-6 rounded shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-space-4">
+<div class="flex items-center gap-space-4">
+<div class="w-12 h-12 rounded bg-surface-subtle flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[28px]">verified</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-text-primary">Statutory Cryptographic Non-Repudiation</span>
+<p class="font-body-md text-body-md text-text-secondary mt-0.5">
+          Every audit action is recorded via an append-only HSM keystore with automated SHA-256 state rollups every 60 seconds.
+        </p>
+</div>
+</div>
+<div class="flex items-center gap-space-3 shrink-0">
+<div class="px-3 py-1.5 rounded bg-surface-subtle text-text-secondary font-label-telemetry text-label-telemetry">
+        LEDGER COMMIT LATENCY: 142ms
+      </div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-on-surface/50 backdrop-blur-sm" id="proof-modal">
+<div class="bg-surface-card w-full max-w-2xl rounded shadow-xl overflow-hidden flex flex-col animate-in fade-in zoom-in-95 duration-150">
+<div class="px-space-6 py-space-4 bg-surface-subtle flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">verified_user</span>
+<span class="font-headline-sm text-headline-sm text-text-primary">Cryptographic Proof &amp; Chain Telemetry</span>
+</div>
+<button class="w-8 h-8 rounded hover:bg-surface-container flex items-center justify-center text-text-secondary" onclick="closeProofModal()" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="p-space-6 flex flex-col gap-space-4">
+<div class="p-space-3 rounded bg-surface-subtle flex flex-col gap-1">
+<span class="font-label-telemetry text-label-telemetry uppercase text-text-muted">CANONICAL MERKLE LEAF HASH (SHA-256)</span>
+<span class="font-data-mono-md text-data-mono-md text-primary font-bold break-all select-all" id="modal-hash"></span>
+</div>
+<div class="grid grid-cols-2 gap-space-4">
+<div class="flex flex-col">
+<span class="font-label-badge text-label-badge uppercase text-text-muted">ACTOR / SIGNER</span>
+<span class="font-data-mono-md text-data-mono-md text-text-primary font-semibold mt-1" id="modal-actor"></span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-badge text-label-badge uppercase text-text-muted">TARGET ENTITY</span>
+<span class="font-data-mono-md text-data-mono-md text-text-primary font-semibold mt-1" id="modal-target"></span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-badge text-label-badge uppercase text-text-muted">TIMESTAMP (IST)</span>
+<span class="font-data-mono-md text-data-mono-md text-text-primary font-semibold mt-1" id="modal-timestamp"></span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-badge text-label-badge uppercase text-text-muted">INTEGRITY RESOLUTION</span>
+<span class="font-headline-sm text-body-md font-bold mt-1" id="modal-status"></span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-badge text-label-badge uppercase text-text-muted">ACTION SPECIFICATION</span>
+<span class="font-body-md text-body-md text-text-primary bg-surface-base p-2.5 rounded" id="modal-action"></span>
+</div>
+<div class="p-space-3 rounded bg-blue-soft text-primary flex items-start gap-2 text-body-sm font-body-sm">
+<span class="material-symbols-outlined text-[18px] shrink-0 mt-0.5">verified</span>
+<span>
+            Digital signature validated against National Disaster Authority HSM Public Key Node <span class="font-data-mono-md font-semibold">0x71AB...94F1</span>. Zero certificate revocation alerts recorded.
+          </span>
+</div>
+</div>
+<div class="px-space-6 py-space-3 bg-surface-subtle flex items-center justify-end gap-space-3">
+<button class="px-space-4 py-space-2 rounded bg-surface-card hover:bg-surface-subtle text-text-primary font-headline-sm text-body-md" onclick="closeProofModal()" type="button">
+          Dismiss
+        </button>
+<button class="inline-flex items-center gap-1.5 px-space-4 py-space-2 rounded bg-primary hover:bg-surface-tint text-on-primary font-headline-sm text-body-md" onclick="copyProofPayload()" type="button">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+<span id="copy-btn-text">Copy Raw Proof (JSON)</span>
+</button>
+</div>
+</div>
+</div>
+<div class="fixed bottom-6 right-6 z-50 hidden bg-text-primary text-surface-card px-4 py-3 rounded shadow-xl flex items-center gap-3 animate-in fade-in slide-in-from-bottom-4" id="toast-notification">
+<span class="material-symbols-outlined text-[18px] text-success-text" id="toast-icon">check_circle</span>
+<span class="font-body-md text-body-md" id="toast-message">Action executed successfully</span>
+</div>
+<script>
+    function showToast(msg, icon = 'check_circle') {
+      const toast = document.getElementById('toast-notification');
+      const toastMsg = document.getElementById('toast-message');
+      const toastIcon = document.getElementById('toast-icon');
+      if (!toast) return;
+      toastMsg.textContent = msg;
+      toastIcon.textContent = icon;
+      toast.classList.remove('hidden');
+      setTimeout(() => {
+        toast.classList.add('hidden');
+      }, 3200);
+    }
+
+    function openProofModal(hash, actor, target, action, timestamp, status) {
+      document.getElementById('modal-hash').textContent = hash;
+      document.getElementById('modal-actor').textContent = actor;
+      document.getElementById('modal-target').textContent = target;
+      document.getElementById('modal-action').textContent = action;
+      document.getElementById('modal-timestamp').textContent = timestamp;
+      
+      const statusElem = document.getElementById('modal-status');
+      statusElem.textContent = status;
+      if (status === 'SUCCESS') {
+        statusElem.className = 'font-headline-sm text-body-md font-bold mt-1 text-success-text';
+      } else if (status === 'POLICY DENIED') {
+        statusElem.className = 'font-headline-sm text-body-md font-bold mt-1 text-critical-text';
+      } else {
+        statusElem.className = 'font-headline-sm text-body-md font-bold mt-1 text-primary';
+      }
+
+      document.getElementById('proof-modal').classList.remove('hidden');
+    }
+
+    function closeProofModal() {
+      document.getElementById('proof-modal').classList.add('hidden');
+    }
+
+    function copyProofPayload() {
+      const payload = {
+        merkle_leaf_hash: document.getElementById('modal-hash').textContent,
+        actor_id: document.getElementById('modal-actor').textContent,
+        target_resource: document.getElementById('modal-target').textContent,
+        action: document.getElementById('modal-action').textContent,
+        timestamp_ist: document.getElementById('modal-timestamp').textContent,
+        resolution: document.getElementById('modal-status').textContent,
+        crypto_engine: 'SHA-256 / HSM-SEC-LEVEL-4',
+        verified: true
+      };
+      navigator.clipboard.writeText(JSON.stringify(payload, null, 2));
+      const btnText = document.getElementById('copy-btn-text');
+      btnText.textContent = 'Copied to Clipboard!';
+      setTimeout(() => {
+        btnText.textContent = 'Copy Raw Proof (JSON)';
+      }, 2000);
+      showToast('Cryptographic audit proof payload copied.');
+    }
+
+    document.getElementById('btn-export-csv')?.addEventListener('click', () => {
+      showToast('Generating verified CSV package with HSM chain signatures...');
+    });
+
+    document.getElementById('btn-verify-merkle')?.addEventListener('click', () => {
+      showToast('Continuous Chain Verified: Root hash matches all 24,918 leaves.', 'verified');
+    });
+
+    const searchInput = document.getElementById('log-search-input');
+    const tableBody = document.getElementById('audit-rows-container');
+
+    searchInput?.addEventListener('input', (e) => {
+      const query = e.target.value.toLowerCase().trim();
+      const rows = tableBody.getElementsByTagName('tr');
+      for (let row of rows) {
+        const text = row.innerText.toLowerCase();
+        if (text.includes(query)) {
+          row.style.display = '';
+        } else {
+          row.style.display = 'none';
+        }
+      }
+    });
+
+    document.getElementById('btn-reset-filters')?.addEventListener('click', () => {
+      if (searchInput) searchInput.value = '';
+      document.getElementById('filter-date').value = '24h';
+      document.getElementById('filter-role').value = 'all';
+      document.getElementById('filter-action').value = 'all';
+      document.getElementById('filter-result').value = 'all';
+      const rows = tableBody.getElementsByTagName('tr');
+      for (let row of rows) {
+        row.style.display = '';
+      }
+      showToast('Filters reset to default stream.');
+    });
+  </script>
+</div></main></div></body></html>

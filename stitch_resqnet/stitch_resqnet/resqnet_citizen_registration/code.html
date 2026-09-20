@@ -1,0 +1,646 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "surface": "#f8f9ff",
+          "tertiary": "#000000",
+          "secondary": "#006398",
+          "on-tertiary-container": "#f63a35",
+          "on-surface-variant": "#45464d",
+          "inverse-on-surface": "#eaf1ff",
+          "primary-fixed-dim": "#bec6e0",
+          "inverse-surface": "#213145",
+          "background": "#f8f9ff",
+          "error-container": "#ffdad6",
+          "surface-tint": "#565e74",
+          "on-primary-container": "#7c839b",
+          "inverse-primary": "#bec6e0",
+          "surface-container": "#e5eeff",
+          "tertiary-container": "#410002",
+          "primary": "#000000",
+          "tertiary-fixed-dim": "#ffb4ab",
+          "on-tertiary-fixed": "#410002",
+          "surface-dim": "#cbdbf5",
+          "on-secondary-container": "#00476e",
+          "on-error-container": "#93000a",
+          "primary-container": "#131b2e",
+          "on-primary-fixed": "#131b2e",
+          "secondary-fixed-dim": "#93ccff",
+          "tertiary-fixed": "#ffdad6",
+          "on-error": "#ffffff",
+          "on-background": "#0b1c30",
+          "on-primary": "#ffffff",
+          "primary-fixed": "#dae2fd",
+          "on-secondary-fixed-variant": "#004b73",
+          "on-surface": "#0b1c30",
+          "on-secondary": "#ffffff",
+          "on-tertiary": "#ffffff",
+          "on-tertiary-fixed-variant": "#93000b",
+          "surface-container-lowest": "#ffffff",
+          "surface-container-high": "#dce9ff",
+          "surface-bright": "#f8f9ff",
+          "surface-variant": "#d3e4fe",
+          "outline-variant": "#c6c6cd",
+          "surface-container-highest": "#d3e4fe",
+          "on-secondary-fixed": "#001d31",
+          "surface-container-low": "#eff4ff",
+          "error": "#ba1a1a",
+          "secondary-container": "#5bb8fe",
+          "outline": "#76777d",
+          "on-primary-fixed-variant": "#3f465c",
+          "secondary-fixed": "#cce5ff"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "space-8": "32px",
+          "space-12": "48px",
+          "space-3": "12px",
+          "space-2": "8px",
+          "space-16": "64px",
+          "gutter-dense": "8px",
+          "margin-mobile": "16px",
+          "space-10": "40px",
+          "space-1": "4px",
+          "space-4": "16px",
+          "margin-desktop": "32px",
+          "margin-tablet": "24px",
+          "space-5": "20px",
+          "gutter-standard": "16px",
+          "gutter-expanded": "24px",
+          "space-6": "24px",
+          "space-0": "0px"
+        },
+        "fontFamily": {
+          "body-lg": [
+            "Public Sans"
+          ],
+          "display-hud": [
+            "JetBrains Mono"
+          ],
+          "display-hud-mobile": [
+            "JetBrains Mono"
+          ],
+          "data-mono-md": [
+            "JetBrains Mono"
+          ],
+          "label-telemetry": [
+            "JetBrains Mono"
+          ],
+          "body-md": [
+            "Public Sans"
+          ],
+          "body-sm": [
+            "Public Sans"
+          ],
+          "headline-md": [
+            "Public Sans"
+          ],
+          "headline-xl": [
+            "Public Sans"
+          ],
+          "headline-lg": [
+            "Public Sans"
+          ],
+          "headline-xl-mobile": [
+            "Public Sans"
+          ],
+          "headline-sm": [
+            "Public Sans"
+          ],
+          "data-mono-lg": [
+            "JetBrains Mono"
+          ],
+          "label-badge": [
+            "Public Sans"
+          ]
+        },
+        "fontSize": {
+          "body-lg": [
+            "16px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "display-hud": [
+            "48px",
+            {
+              "lineHeight": "52px",
+              "letterSpacing": "-0.04em",
+              "fontWeight": "700"
+            }
+          ],
+          "display-hud-mobile": [
+            "32px",
+            {
+              "lineHeight": "36px",
+              "letterSpacing": "-0.03em",
+              "fontWeight": "700"
+            }
+          ],
+          "data-mono-md": [
+            "13px",
+            {
+              "lineHeight": "18px",
+              "letterSpacing": "0em",
+              "fontWeight": "500"
+            }
+          ],
+          "label-telemetry": [
+            "10px",
+            {
+              "lineHeight": "12px",
+              "letterSpacing": "0.08em",
+              "fontWeight": "500"
+            }
+          ],
+          "body-md": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "body-sm": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-md": [
+            "20px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-xl": [
+            "36px",
+            {
+              "lineHeight": "44px",
+              "letterSpacing": "-0.025em",
+              "fontWeight": "700"
+            }
+          ],
+          "headline-lg": [
+            "28px",
+            {
+              "lineHeight": "36px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "700"
+            }
+          ],
+          "headline-xl-mobile": [
+            "26px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "700"
+            }
+          ],
+          "headline-sm": [
+            "16px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "0em",
+              "fontWeight": "600"
+            }
+          ],
+          "data-mono-lg": [
+            "18px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-badge": [
+            "11px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.06em",
+              "fontWeight": "700"
+            }
+          ]
+        }
+      },
+    },
+  }</script></head><body class="bg-surface font-body-md text-body-md text-on-surface min-h-screen flex flex-col"><header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 w-full px-space-8 flex items-center justify-between gap-space-4"><div class="flex items-center gap-space-4"><img alt="Modern, clean, minimalist brand logo for ResQnet - disaster management and emergency response network. Featuring a protective shield icon interwoven with a tactical pulse/network node symbol in dependable deep navy (#0f172a) and calm primary blue (#2563eb).. Brand logo. - Primary color: #0f172a
+- Font: publicSans
+- Mode: light
+- Roundness: rounded-sm
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VsV9gXTDOnr-Yeh2GepA-NCV-WAWdtb13-PgkjkzewZFtXFguX04w3UircQbz6DNih-kzVSvLBqRcsdTQr6ioXPxQJWE5h0Va08zzcBbdOkaG7GjnNxioNY0NkNeyRaa7L6gCWu5xSADkhe-2j4Qu4jMRJEPWb8NwsNGElwyPueuNFVCLIMGyPg-gl57h-xE2WJ5Z4jGiUSm-imSfyUrhYwqKegEvQ1DXBbMWxnOeyUWffkgIACji02wYM"><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface font-bold">ResQnet</span><span class="hidden xl:inline text-on-surface-variant font-body-sm text-body-sm">Connecting people, responders and communities when help matters most</span></div></div><div class="flex items-center gap-space-4"><div class="hidden md:flex items-center gap-space-2 px-space-3 py-space-1 bg-surface-container rounded"><span class="material-symbols-outlined text-secondary text-[16px]">emergency</span><span class="font-label-telemetry text-label-telemetry text-on-surface font-medium uppercase tracking-wider">Emergency: 112 | Disaster: 1078</span></div><div class="hidden lg:flex items-center gap-space-1 px-space-3 py-space-1 bg-surface-container-low rounded"><span class="material-symbols-outlined text-secondary text-[15px]">verified_user</span><span class="font-label-badge text-label-badge text-on-surface-variant font-bold uppercase tracking-wider">256-Bit Encrypted</span></div><div class="flex items-center bg-surface-container-low rounded p-space-1"><button class="px-space-2 py-space-1 rounded font-label-badge text-label-badge bg-surface-container-lowest text-on-surface font-semibold shadow-[0_1px_4px_rgba(0,0,0,0.04)]" type="button">English</button><button class="px-space-2 py-space-1 rounded font-label-badge text-label-badge text-on-surface-variant hover:text-on-surface" type="button">हिन्दी</button></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 flex-1 flex flex-col justify-center"><div class="flex flex-col w-full">
+<section class="relative w-full py-space-10 px-space-4 md:px-space-8 flex flex-col items-center">
+<div class="absolute top-10 left-1/2 -translate-x-1/2 w-[720px] h-[340px] bg-secondary-container/20 rounded-full blur-3xl pointer-events-none -z-10"></div>
+<div class="absolute top-80 right-1/4 w-[420px] h-[420px] bg-surface-container-high/40 rounded-full blur-2xl pointer-events-none -z-10"></div>
+<div class="w-full max-w-4xl flex flex-col gap-space-8">
+<div class="flex flex-col md:flex-row items-start md:items-end justify-between gap-space-4 pb-space-2">
+<div class="flex flex-col gap-space-2 max-w-2xl">
+<div class="inline-flex items-center gap-space-2 px-space-3 py-space-1 rounded bg-surface-container text-secondary w-fit shadow-sm">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<span class="font-label-badge text-label-badge uppercase tracking-wider text-secondary">National Disaster Preparedness Network</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight font-bold">
+            Create your Citizen account
+          </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+            Set up your ResQnet account to report emergencies, receive local warnings, and access community safety services.
+          </p>
+</div>
+<div class="flex items-center gap-space-3 bg-surface-container-lowest px-space-4 py-space-3 rounded-xl shadow-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[22px]">cell_tower</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-telemetry text-label-telemetry text-on-surface-variant uppercase">CAP Warning Grid</span>
+<span class="font-data-mono-md text-data-mono-md text-on-surface font-semibold flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-emerald-600 animate-pulse inline-block"></span>
+              24x7 Realtime Ready
+            </span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-6 items-start">
+<form class="lg:col-span-8 flex flex-col gap-space-6" onsubmit="event.preventDefault();">
+<div class="bg-surface-container-lowest rounded-xl p-space-6 shadow-sm flex flex-col gap-space-5">
+<div class="flex items-center justify-between pb-space-2">
+<div class="flex items-center gap-space-3">
+<span class="w-7 h-7 rounded-lg bg-surface-container flex items-center justify-center text-secondary font-headline-sm text-headline-sm">1</span>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Personal Information</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Identifies you during first responder dispatch and triage</p>
+</div>
+</div>
+<span class="font-label-badge text-label-badge text-secondary uppercase bg-surface-container px-space-2 py-0.5 rounded">Primary ID</span>
+</div>
+<div class="flex flex-col gap-space-4">
+<div class="flex flex-col gap-space-1">
+<label class="font-body-sm text-body-sm text-on-surface font-medium" for="fullName">Full Name <span class="text-error">*</span></label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-space-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">badge</span>
+<input class="w-full bg-surface-container-low text-on-surface pl-10 pr-space-4 py-space-3 rounded font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:shadow-[0_0_0_2px_rgba(0,99,152,0.5)] transition-all placeholder:text-on-surface-variant/60" id="fullName" placeholder="e.g., Neha Verma" required="" type="text">
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-4">
+<div class="flex flex-col gap-space-1">
+<label class="font-body-sm text-body-sm text-on-surface font-medium" for="emailAddr">Email Address <span class="text-error">*</span></label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-space-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">mail</span>
+<input class="w-full bg-surface-container-low text-on-surface pl-10 pr-space-4 py-space-3 rounded font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:shadow-[0_0_0_2px_rgba(0,99,152,0.5)] transition-all placeholder:text-on-surface-variant/60" id="emailAddr" placeholder="e.g., neha.verma@domain.in" required="" type="email">
+</div>
+</div>
+<div class="flex flex-col gap-space-1">
+<div class="flex items-center justify-between">
+<label class="font-body-sm text-body-sm text-on-surface font-medium" for="mobileNo">Mobile Number <span class="text-error">*</span></label>
+<span class="font-label-telemetry text-label-telemetry text-secondary uppercase font-semibold">SMS OTP Verified</span>
+</div>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-space-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">call</span>
+<input class="w-full bg-surface-container-low text-on-surface pl-10 pr-space-4 py-space-3 rounded font-data-mono-md text-data-mono-md focus:bg-surface-container-lowest focus:outline-none focus:shadow-[0_0_0_2px_rgba(0,99,152,0.5)] transition-all placeholder:text-on-surface-variant/60" id="mobileNo" placeholder="+91 98765 43210" required="" type="tel">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-6 shadow-sm flex flex-col gap-space-5">
+<div class="flex items-center justify-between pb-space-2">
+<div class="flex items-center gap-space-3">
+<span class="w-7 h-7 rounded-lg bg-surface-container flex items-center justify-center text-secondary font-headline-sm text-headline-sm">2</span>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Location Details</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Calibrates geofenced sirens, flash flood alerts, and shelter mapping</p>
+</div>
+</div>
+<button class="inline-flex items-center gap-1.5 px-space-3 py-1 rounded bg-surface-container-low hover:bg-surface-container text-secondary text-label-badge font-label-badge font-semibold transition-colors" onclick="detectGPSLocation()" type="button">
+<span class="material-symbols-outlined text-[15px]">my_location</span>
+                Auto Detect
+              </button>
+</div>
+<div class="flex flex-col gap-space-4">
+<div class="flex flex-col gap-space-1">
+<label class="font-body-sm text-body-sm text-on-surface font-medium" for="streetAddr">Street Address / Landmark <span class="text-error">*</span></label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-space-3 top-3 text-on-surface-variant text-[18px]">location_on</span>
+<textarea class="w-full bg-surface-container-low text-on-surface pl-10 pr-space-4 py-space-2 rounded font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:shadow-[0_0_0_2px_rgba(0,99,152,0.5)] transition-all placeholder:text-on-surface-variant/60" id="streetAddr" placeholder="House/Flat No., Sector, Street or Mohalla" required="" rows="2"></textarea>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-4">
+<div class="flex flex-col gap-space-1">
+<label class="font-body-sm text-body-sm text-on-surface font-medium" for="cityField">City <span class="text-error">*</span></label>
+<input class="w-full bg-surface-container-low text-on-surface px-space-3 py-space-3 rounded font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:shadow-[0_0_0_2px_rgba(0,99,152,0.5)] transition-all placeholder:text-on-surface-variant/60" id="cityField" required="" type="text" value="Chandigarh">
+</div>
+<div class="flex flex-col gap-space-1">
+<label class="font-body-sm text-body-sm text-on-surface font-medium" for="stateDropdown">State / UT <span class="text-error">*</span></label>
+<div class="relative">
+<select class="w-full appearance-none bg-surface-container-low text-on-surface px-space-3 py-space-3 rounded font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:shadow-[0_0_0_2px_rgba(0,99,152,0.5)] transition-all cursor-pointer" id="stateDropdown">
+<option selected="" value="chandigarh">Chandigarh UT</option>
+<option value="punjab">Punjab</option>
+<option value="haryana">Haryana</option>
+<option value="himachal">Himachal Pradesh</option>
+<option value="delhi">NCT of Delhi</option>
+<option value="uttarakhand">Uttarakhand</option>
+<option value="other">Other State / UT</option>
+</select>
+<span class="material-symbols-outlined absolute right-space-3 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant text-[20px]">arrow_drop_down</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-1">
+<label class="font-body-sm text-body-sm text-on-surface font-medium" for="pincodeField">Pincode <span class="text-error">*</span></label>
+<input class="w-full bg-surface-container-low text-on-surface px-space-3 py-space-3 rounded font-data-mono-md text-data-mono-md focus:bg-surface-container-lowest focus:outline-none focus:shadow-[0_0_0_2px_rgba(0,99,152,0.5)] transition-all placeholder:text-on-surface-variant/60" id="pincodeField" maxlength="6" required="" type="text" value="160017">
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-6 shadow-sm flex flex-col gap-space-5">
+<div class="flex items-center justify-between pb-space-2">
+<div class="flex items-center gap-space-3">
+<span class="w-7 h-7 rounded-lg bg-surface-container flex items-center justify-center text-secondary font-headline-sm text-headline-sm">3</span>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Emergency Contact</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Vital next-of-kin line reached during SAR evacuation &amp; medical triage</p>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 font-label-badge text-label-badge text-error uppercase bg-error-container/60 px-space-2 py-0.5 rounded">
+<span class="material-symbols-outlined text-[13px]">contact_emergency</span>
+                Mandatory
+              </span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-4">
+<div class="flex flex-col gap-space-1">
+<label class="font-body-sm text-body-sm text-on-surface font-medium" for="contactName">Contact Person <span class="text-error">*</span></label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-space-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">person</span>
+<input class="w-full bg-surface-container-low text-on-surface pl-10 pr-space-4 py-space-3 rounded font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:shadow-[0_0_0_2px_rgba(0,99,152,0.5)] transition-all placeholder:text-on-surface-variant/60" id="contactName" placeholder="e.g., Rajesh Verma" required="" type="text">
+</div>
+</div>
+<div class="flex flex-col gap-space-1">
+<label class="font-body-sm text-body-sm text-on-surface font-medium" for="contactPhone">Emergency Number <span class="text-error">*</span></label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-space-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">emergency_share</span>
+<input class="w-full bg-surface-container-low text-on-surface pl-10 pr-space-4 py-space-3 rounded font-data-mono-md text-data-mono-md focus:bg-surface-container-lowest focus:outline-none focus:shadow-[0_0_0_2px_rgba(0,99,152,0.5)] transition-all placeholder:text-on-surface-variant/60" id="contactPhone" placeholder="+91 98123 45678" required="" type="tel">
+</div>
+</div>
+<div class="flex flex-col gap-space-1">
+<label class="font-body-sm text-body-sm text-on-surface font-medium" for="relationDropdown">Relationship <span class="text-error">*</span></label>
+<div class="relative">
+<select class="w-full appearance-none bg-surface-container-low text-on-surface px-space-3 py-space-3 rounded font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:shadow-[0_0_0_2px_rgba(0,99,152,0.5)] transition-all cursor-pointer" id="relationDropdown">
+<option disabled="" selected="" value="">Select relationship</option>
+<option value="parent">Parent</option>
+<option value="spouse">Spouse</option>
+<option value="sibling">Sibling</option>
+<option value="child">Son / Daughter</option>
+<option value="guardian">Legal Guardian</option>
+<option value="kin">Other Kin / Neighbor</option>
+</select>
+<span class="material-symbols-outlined absolute right-space-3 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant text-[20px]">arrow_drop_down</span>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-6 shadow-sm flex flex-col gap-space-5">
+<div class="flex items-center justify-between pb-space-2">
+<div class="flex items-center gap-space-3">
+<span class="w-7 h-7 rounded-lg bg-surface-container flex items-center justify-center text-secondary font-headline-sm text-headline-sm">4</span>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Account Security</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Protects your citizen profile, medical directives, and SOS history</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary text-[20px]">lock</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-4">
+<div class="flex flex-col gap-space-1">
+<label class="font-body-sm text-body-sm text-on-surface font-medium" for="pwdField">Create Password <span class="text-error">*</span></label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-space-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">key</span>
+<input class="w-full bg-surface-container-low text-on-surface pl-10 pr-10 py-space-3 rounded font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:shadow-[0_0_0_2px_rgba(0,99,152,0.5)] transition-all placeholder:text-on-surface-variant/60" id="pwdField" oninput="checkPasswordCriteria(this.value)" placeholder="Min. 8 characters" required="" type="password">
+<button class="absolute right-space-3 top-1/2 -translate-y-1/2 text-on-surface-variant hover:text-on-surface p-1" onclick="togglePassVisibility('pwdField', 'pwdIcon')" type="button">
+<span class="material-symbols-outlined text-[18px]" id="pwdIcon">visibility</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col gap-space-1">
+<label class="font-body-sm text-body-sm text-on-surface font-medium" for="pwdConfirmField">Confirm Password <span class="text-error">*</span></label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-space-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">lock_reset</span>
+<input class="w-full bg-surface-container-low text-on-surface pl-10 pr-10 py-space-3 rounded font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:shadow-[0_0_0_2px_rgba(0,99,152,0.5)] transition-all placeholder:text-on-surface-variant/60" id="pwdConfirmField" oninput="checkMatch()" placeholder="Re-enter password" required="" type="password">
+<button class="absolute right-space-3 top-1/2 -translate-y-1/2 text-on-surface-variant hover:text-on-surface p-1" onclick="togglePassVisibility('pwdConfirmField', 'pwdConfirmIcon')" type="button">
+<span class="material-symbols-outlined text-[18px]" id="pwdConfirmIcon">visibility</span>
+</button>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-3 rounded-lg flex flex-col gap-space-2">
+<span class="font-label-telemetry text-label-telemetry uppercase text-on-surface-variant font-semibold">Security Strength Checklist</span>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-2">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-body-sm text-body-sm" id="rule-length">
+<span class="material-symbols-outlined text-[16px]">radio_button_unchecked</span>
+<span>8+ Chars</span>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant font-body-sm text-body-sm" id="rule-upper">
+<span class="material-symbols-outlined text-[16px]">radio_button_unchecked</span>
+<span>Uppercase</span>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant font-body-sm text-body-sm" id="rule-number">
+<span class="material-symbols-outlined text-[16px]">radio_button_unchecked</span>
+<span>Number</span>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant font-body-sm text-body-sm" id="rule-match">
+<span class="material-symbols-outlined text-[16px]">radio_button_unchecked</span>
+<span>Passwords Match</span>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-5 shadow-sm flex flex-col gap-space-4">
+<label class="flex items-start gap-space-3 cursor-pointer group select-none">
+<input class="mt-1 w-4 h-4 rounded text-secondary focus:ring-0 cursor-pointer" id="consentBox" required="" type="checkbox">
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-on-surface transition-colors leading-relaxed">
+                I agree to the <a class="text-secondary font-semibold underline underline-offset-2 hover:opacity-80" href="#">ResQnet Terms of Service</a> and <a class="text-secondary font-semibold underline underline-offset-2 hover:opacity-80" href="#">Privacy Policy</a>, and consent to receive critical disaster warnings via SMS and cell broadcast.
+              </span>
+</label>
+</div>
+<div class="flex flex-col-reverse sm:flex-row items-center gap-space-3 pt-space-2">
+<a class="w-full sm:w-auto px-space-6 py-space-3 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-headline-sm text-headline-sm font-semibold flex items-center justify-center gap-space-2 transition-all" href="#">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+              Back
+            </a>
+<button class="w-full sm:flex-1 py-space-3 px-space-6 rounded-lg bg-secondary hover:bg-secondary/90 active:scale-[0.99] text-on-secondary font-headline-sm text-headline-sm font-semibold flex items-center justify-center gap-space-2 shadow-md hover:shadow-lg transition-all" type="submit">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">how_to_reg</span>
+<span>Create Citizen Account</span>
+</button>
+</div>
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-3 pt-space-3 text-center sm:text-left">
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Already registered?
+              <a class="text-secondary font-semibold hover:underline underline-offset-4 ml-1" href="#">Sign In</a>
+</p>
+<div class="inline-flex items-center gap-1.5 text-on-surface-variant font-label-telemetry text-label-telemetry uppercase tracking-wider">
+<span class="material-symbols-outlined text-secondary text-[16px]">lock</span>
+              NDMA Compliant • Encrypted In Transit
+            </div>
+</div>
+<div class="bg-surface-container-low rounded-lg p-space-4 flex items-start gap-space-3">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">policy</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-normal">
+              Your personal data is encrypted and used strictly for rescue coordination and public safety dispatch under NDMA guidelines. It is never commercialized or shared with unverified parties.
+            </p>
+</div>
+</form>
+<aside class="lg:col-span-4 flex flex-col gap-space-6">
+<div class="bg-surface-container-lowest rounded-xl p-space-6 shadow-sm flex flex-col gap-space-4">
+<div class="flex items-center gap-space-3">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">shield</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">ResQnet Protection</h3>
+<span class="font-label-telemetry text-label-telemetry text-on-surface-variant uppercase">Citizens Network</span>
+</div>
+</div>
+<div class="relative w-full h-44 rounded-lg overflow-hidden bg-surface-container-high flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="A clean modern photograph of emergency response command center dashboard displaying live map of Chandigarh region with tactical blue alerts and safe evacuation zones, subtle cinematic lighting, high-tech safety coordination" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFjdEyQEEWi47kDm-kKyUYfRrJnUv22V41xNzBUOz2D7RXyBw6ZWUbEqmbi1QMvSDdyNFncRPSyz6JWkkrjVasVoEsYRmYoguPO6XEZp7mPtDtfs0W6jE78K_rhHBQKDDKxVDAjJgicXwOQhouMnh5eFOVY6z9LOwM1E2QPldTxnLcplu30B0ic7Xbe1YiHW4Ps1Ih2kAturWo1y4pWgYVxRx0C4TaqNrQgDqvaeji5cmMa7tGtuHhgw">
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/30 to-transparent flex flex-col justify-end p-space-4 text-on-primary">
+<span class="font-label-badge text-label-badge uppercase tracking-wider text-secondary-fixed">Live Coverage</span>
+<span class="font-headline-sm text-headline-sm font-semibold">Northern Zone Response Sector</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-3 pt-space-2">
+<div class="flex items-start gap-space-3">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5" style="font-variation-settings: 'FILL' 1;">crisis_alert</span>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface font-semibold">Immediate Geo-Warnings</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Instant localized push triggers for seismic, flood, and extreme weather risks.</span>
+</div>
+</div>
+<div class="flex items-start gap-space-3">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5" style="font-variation-settings: 'FILL' 1;">e911_emergency</span>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface font-semibold">Single-Tap SOS Beacon</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Sends your exact GPS coordinate to verified SDRF and nearest volunteer squads.</span>
+</div>
+</div>
+<div class="flex items-start gap-space-3">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5" style="font-variation-settings: 'FILL' 1;">medical_services</span>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface font-semibold">Triage &amp; Shelter Finder</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Direct routing to operational shelters, food distribution, and emergency clinics.</span>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-6 shadow-sm flex flex-col gap-space-4">
+<div class="flex items-center justify-between">
+<span class="font-label-telemetry text-label-telemetry text-on-surface-variant uppercase tracking-wider font-semibold">Active Sector Status</span>
+<span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+</div>
+<div class="flex items-center justify-between bg-surface-container-low p-space-3 rounded">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Chandigarh Command</span>
+<span class="font-data-mono-md text-data-mono-md text-secondary font-semibold">ACTIVE • NORMAL</span>
+</div>
+<div class="flex items-center justify-between bg-surface-container-low p-space-3 rounded">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Verified Responders Online</span>
+<span class="font-data-mono-md text-data-mono-md text-on-surface font-bold">1,482 Units</span>
+</div>
+<div class="flex items-center justify-between bg-surface-container-low p-space-3 rounded">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Avg. Dispatch Latency</span>
+<span class="font-data-mono-md text-data-mono-md text-emerald-700 font-bold">1.4 mins</span>
+</div>
+<div class="mt-space-2 p-space-3 rounded-lg bg-surface-container text-on-surface-variant flex items-center gap-space-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">support_agent</span>
+<span class="font-body-sm text-body-sm">Need registration assistance? <a class="text-secondary font-semibold hover:underline" href="#">Contact Desk</a></span>
+</div>
+</div>
+</aside>
+</div>
+</div>
+</section>
+<script>
+    function togglePassVisibility(inputId, iconId) {
+      const input = document.getElementById(inputId);
+      const icon = document.getElementById(iconId);
+      if (input.type === 'password') {
+        input.type = 'text';
+        icon.textContent = 'visibility_off';
+      } else {
+        input.type = 'password';
+        icon.textContent = 'visibility';
+      }
+    }
+
+    function checkPasswordCriteria(val) {
+      const lenEl = document.getElementById('rule-length');
+      const upEl = document.getElementById('rule-upper');
+      const numEl = document.getElementById('rule-number');
+
+      const setValid = (el, valid) => {
+        const icon = el.querySelector('.material-symbols-outlined');
+        if (valid) {
+          icon.textContent = 'check_circle';
+          icon.classList.add('text-emerald-600');
+          icon.classList.remove('text-on-surface-variant');
+          el.classList.add('text-on-surface', 'font-medium');
+        } else {
+          icon.textContent = 'radio_button_unchecked';
+          icon.classList.remove('text-emerald-600');
+          icon.classList.add('text-on-surface-variant');
+          el.classList.remove('text-on-surface', 'font-medium');
+        }
+      };
+
+      setValid(lenEl, val.length >= 8);
+      setValid(upEl, /[A-Z]/.test(val));
+      setValid(numEl, /[0-9]/.test(val));
+
+      checkMatch();
+    }
+
+    function checkMatch() {
+      const pass = document.getElementById('pwdField').value;
+      const confirm = document.getElementById('pwdConfirmField').value;
+      const matchEl = document.getElementById('rule-match');
+      const icon = matchEl.querySelector('.material-symbols-outlined');
+
+      if (pass.length > 0 && pass === confirm) {
+        icon.textContent = 'check_circle';
+        icon.classList.add('text-emerald-600');
+        icon.classList.remove('text-on-surface-variant');
+        matchEl.classList.add('text-on-surface', 'font-medium');
+      } else {
+        icon.textContent = 'radio_button_unchecked';
+        icon.classList.remove('text-emerald-600');
+        icon.classList.add('text-on-surface-variant');
+        matchEl.classList.remove('text-on-surface', 'font-medium');
+      }
+    }
+
+    function detectGPSLocation() {
+      const btn = event.currentTarget;
+      const originalText = btn.innerHTML;
+      btn.innerHTML = `<span class="material-symbols-outlined text-[15px] animate-spin">sync</span> Locating...`;
+      
+      setTimeout(() => {
+        document.getElementById('streetAddr').value = 'Sector 17-C, Plaza Road, near Central Post';
+        document.getElementById('cityField').value = 'Chandigarh';
+        document.getElementById('stateDropdown').value = 'chandigarh';
+        document.getElementById('pincodeField').value = '160017';
+        btn.innerHTML = `<span class="material-symbols-outlined text-[15px] text-emerald-600">check</span> Located`;
+        setTimeout(() => {
+          btn.innerHTML = originalText;
+        }, 2200);
+      }, 700);
+    }
+  </script>
+</div></main><footer class="w-full bg-surface-container-low py-space-6 shadow-[0_-1px_8px_rgba(0,0,0,0.02)]"><div class="w-full px-space-8 flex flex-col md:flex-row items-center justify-between gap-space-4"><div class="flex items-center gap-space-2 text-on-surface-variant font-body-sm text-body-sm"><span class="material-symbols-outlined text-secondary text-[18px]">shield</span><span>© 2026 ResQnet. Centralized Disaster Management &amp; Emergency Response Network</span></div><nav class="flex items-center gap-space-6" data-active-classes="text-on-surface font-semibold"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="disaster-guidelines" href="#">Disaster Guidelines</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="terms-of-service" href="#">Terms of Service</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="support-desk" href="#">Support Desk</a></nav></div></footer></body></html>
