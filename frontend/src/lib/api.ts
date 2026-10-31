@@ -3,9 +3,13 @@
 
 import axios, { type AxiosInstance } from 'axios'
 
+// Support custom API URL in production (e.g. VITE_API_URL or relative /api/v1)
+const rawBaseUrl = import.meta.env.VITE_API_URL || '/api/v1'
+const normalizedBaseUrl = rawBaseUrl.endsWith('/') ? rawBaseUrl.slice(0, -1) : rawBaseUrl
+
 const api: AxiosInstance = axios.create({
-  baseURL: '/api/v1',
-  timeout: 10000,
+  baseURL: normalizedBaseUrl,
+  timeout: 15000,
 })
 
 // Attach JWT token to every request

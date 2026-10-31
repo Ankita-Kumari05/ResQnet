@@ -23,7 +23,14 @@ class Settings(BaseSettings):
 
     ENVIRONMENT: str = "development"
     FRONTEND_URL: str = "http://localhost:5173"
-    CORS_ORIGINS: List[str] = ["http://localhost:5173", "http://localhost:4173", "http://localhost:5174"]
+    CORS_ORIGINS: List[str] = [
+        "http://localhost:5173",
+        "http://localhost:4173",
+        "http://localhost:5174",
+        "http://127.0.0.1:5173",
+        "http://127.0.0.1:5174",
+    ]
+    CORS_ORIGIN_REGEX: str = r"^https?:\/\/.*\.vercel\.app$"
 
     # Spatial + Temporal Incident Clustering Configuration (Step 6.4)
     CLUSTERING_RADIUS_METERS: float = 500.0  # Search radius in meters for incident proximity

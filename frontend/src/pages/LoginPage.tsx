@@ -97,8 +97,18 @@ export default function LoginPage() {
     try {
       await login(email, password)
       navigate('/')
-    } catch {
-      setError('Invalid credentials. Use a demo profile below to quick-fill.')
+    } catch (err: any) {
+      if (!err.response) {
+        setError('Network error: Unable to reach backend server. Please check your connection or backend URL.')
+      } else if (err.response.status === 401) {
+        const serverMsg = err.response.data?.detail?.message || err.response.data?.message
+        setError(serverMsg || 'Invalid credentials. Please verify your email and password.')
+      } else if (err.response.status >= 500) {
+        setError('Backend server error. Please try again later or contact the administrator.')
+      } else {
+        const detail = err.response.data?.detail?.message || err.response.data?.message || 'Login failed.'
+        setError(detail)
+      }
     } finally {
       setLoading(false)
     }
