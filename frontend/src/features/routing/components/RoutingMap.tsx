@@ -62,6 +62,7 @@ interface RoutingMapProps {
     color?: string;
   } | null;
   onSelectSafetyHubDestination?: (hub: SafetyHub) => void;
+  onHubClick?: (hub: SafetyHub) => void;
   onSelectPotentialSafetyHub?: (potential: PotentialSafetyHub) => void;
   onOpenAddOperationalAreaForHub?: (hub: SafetyHub) => void;
   onEditOperationalArea?: (area: OperationalArea) => void;
@@ -184,6 +185,7 @@ export const RoutingMap: React.FC<RoutingMapProps> = ({
   operationalAreas = [],
   activeAreaDraft = null,
   onSelectSafetyHubDestination,
+  onHubClick,
   onSelectPotentialSafetyHub,
   onOpenAddOperationalAreaForHub,
   onEditOperationalArea,
@@ -235,6 +237,7 @@ export const RoutingMap: React.FC<RoutingMapProps> = ({
   const onUpdateSectionHandleDistanceRef = useRef(onUpdateSectionHandleDistance);
   const onSelectPotentialSafetyHubRef = useRef(onSelectPotentialSafetyHub);
   const onSelectSafetyHubDestinationRef = useRef(onSelectSafetyHubDestination);
+  const onHubClickRef = useRef(onHubClick);
   const onOpenAddOperationalAreaForHubRef = useRef(onOpenAddOperationalAreaForHub);
   const onEditOperationalAreaRef = useRef(onEditOperationalArea);
   const onSavePlacedOperationalAreaPointRef = useRef(onSavePlacedOperationalAreaPoint);
@@ -272,6 +275,7 @@ export const RoutingMap: React.FC<RoutingMapProps> = ({
     onUpdateSectionHandleDistanceRef.current = onUpdateSectionHandleDistance;
     onSelectPotentialSafetyHubRef.current = onSelectPotentialSafetyHub;
     onSelectSafetyHubDestinationRef.current = onSelectSafetyHubDestination;
+    onHubClickRef.current = onHubClick;
     onOpenAddOperationalAreaForHubRef.current = onOpenAddOperationalAreaForHub;
     onEditOperationalAreaRef.current = onEditOperationalArea;
     onSavePlacedOperationalAreaPointRef.current = onSavePlacedOperationalAreaPoint;
@@ -2321,6 +2325,11 @@ export const RoutingMap: React.FC<RoutingMapProps> = ({
         const hubId = features[0]?.properties?.id;
         const hub = safetyHubsRef.current.find((h) => h.id === hubId);
         if (!hub) return;
+
+        // Immediately notify dashboard that this safety hub was selected on the map
+        if (onHubClickRef.current) {
+          onHubClickRef.current(hub);
+        }
 
         const childAreas = operationalAreasRef.current.filter((a) => a.hubId === hub.id);
 

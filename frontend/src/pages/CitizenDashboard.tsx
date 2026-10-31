@@ -18,14 +18,16 @@ import {
 } from '../lib/db'
 import type { SafetyHub, Road, ReportCluster, RouteResponse, Intersection, EmergencyAlert, HazardZone, Campaign } from '../types'
 import toast from 'react-hot-toast'
-import { MAP_V2_URL } from '../config/mapConfig'
+import { getMapV2Url } from '../config/mapConfig'
+import { SmsFallbackModal } from '../components/SmsFallbackModal'
+import { VoiceAiModal } from '../components/VoiceAiModal'
 
 type CitizenViewMode = 'map' | 'route' | 'report' | 'hubs' | 'my-reports' | 'relief'
 
 export default function CitizenDashboard() {
   const navigate = useNavigate()
   const [searchParams] = useSearchParams()
-  const { user, logout } = useAuth()
+  const { user, token, logout } = useAuth()
   const { isOnline, setPendingOps } = useOnline()
 
   // Primary Workspace View Tab
@@ -37,6 +39,7 @@ export default function CitizenDashboard() {
   const [intersections, setIntersections] = useState<Intersection[]>([])
   const [clusters, setClusters] = useState<ReportCluster[]>([])
   const [hazardZones, setHazardZones] = useState<HazardZone[]>([])
+  const [roadClosures, setRoadClosures] = useState<any[]>([])
   const [route, setRoute] = useState<RouteResponse | null>(null)
 
   // Citizen Coordinates
@@ -62,9 +65,10 @@ export default function CitizenDashboard() {
   const [reportSeverity, setReportSeverity] = useState<'Low' | 'Medium' | 'High' | 'Critical'>('High')
   const [reportLat, setReportLat] = useState<number | null>(null)
   const [reportLng, setReportLng] = useState<number | null>(null)
-  const [reportEvidenceAttached, setReportEvidenceAttached] = useState(true)
   const [submittingReport, setSubmittingReport] = useState(false)
   const [submittedIncidentId, setSubmittedIncidentId] = useState('#RQ-INC-2026-0148')
+  const [showSmsModal, setShowSmsModal] = useState(false)
+  const [showVoiceAiModal, setShowVoiceAiModal] = useState(false)
 
   // Safe Route Planner Form State
   const [originName, setOriginName] = useState('Sector 17 Community Centre, Chandigarh')
@@ -144,13 +148,22 @@ export default function CitizenDashboard() {
     )
   }, [])
 
-  // Data Loading and Polling
+  // Data Loading and Polling (~5s and on tab focus)
   useEffect(() => {
     loadData()
     const timer = setInterval(() => {
       if (navigator.onLine) loadData()
-    }, 10_000)
-    return () => clearInterval(timer)
+    }, 5_000)
+
+    const onFocus = () => {
+      if (navigator.onLine) loadData()
+    }
+    window.addEventListener('focus', onFocus)
+
+    return () => {
+      clearInterval(timer)
+      window.removeEventListener('focus', onFocus)
+    }
   }, [isOnline]) // eslint-disable-line
 
   const loadData = async () => {
@@ -171,6 +184,7 @@ export default function CitizenDashboard() {
           api.get(alertUrl),
           api.get('/hazards'),
           api.get('/campaigns'),
+          api.get('/map/state'),
         ])
 
         if (results[0].status === 'fulfilled') {
@@ -198,6 +212,35 @@ export default function CitizenDashboard() {
         }
         if (results[5].status === 'fulfilled') setHazardZones(results[5].value.data)
         if (results[6].status === 'fulfilled') setCampaigns(results[6].value.data)
+        if (results[7].status === 'fulfilled') {
+          const mapState = results[7].value.data
+          if (mapState?.closures) {
+            setRoadClosures(mapState.closures)
+          }
+          if (Array.isArray(mapState?.hubs) && mapState.hubs.length > 0) {
+            setHubs(prevHubs => {
+              const geomMap = new Map(
+                mapState.hubs.map((mh: any) => [
+                  mh.properties?.id ?? mh.id,
+                  mh.properties ? { ...mh.properties, ...mh } : mh,
+                ])
+              )
+              return prevHubs.map(h => {
+                const mh: any = geomMap.get(h.id)
+                if (mh) {
+                  return {
+                    ...h,
+                    entrance_geom: mh.entrance_geom || (h as any).entrance_geom,
+                    area_geom: mh.area_geom || (h as any).area_geom,
+                    is_verified: mh.is_verified !== undefined ? mh.is_verified : (h as any).is_verified,
+                    capabilities: mh.capabilities || (h as any).capabilities,
+                  }
+                }
+                return h
+              })
+            })
+          }
+        }
       } catch {
         toast.error('Failed to load live data')
         await loadFromCache()
@@ -507,6 +550,7 @@ export default function CitizenDashboard() {
                 hubs={hubs}
                 clusters={clusters}
                 hazardZones={hazardZones}
+                roadClosures={roadClosures}
                 route={route}
                 myLat={myLat}
                 myLng={myLng}
@@ -774,7 +818,7 @@ export default function CitizenDashboard() {
                           Clean Water
                         </span>
                         <span className="font-['JetBrains_Mono',monospace] text-[13px] text-emerald-800 font-bold block">
-                          4,200 Litres
+                          {selectedHub.water_units ? `${selectedHub.water_units.toLocaleString()} Litres` : `${((selectedHub.max_capacity || 500) * 12).toLocaleString()} Litres`}
                         </span>
                       </div>
                     </div>
@@ -1043,15 +1087,16 @@ export default function CitizenDashboard() {
                 <div className="flex flex-col sm:flex-row sm:items-left justify-between gap-4">
                   <div>
                     <span className="font-['JetBrains_Mono',monospace] text-[10px] uppercase text-[#006398] font-bold tracking-wider">
-                      Citizen Crisis Telemetry
+                      Emergency Assistance
                     </span>
-                    <h1 className="text-[24px] font-bold text-[#0b1c30]">Report Emergency Incident</h1>
+                    <h1 className="text-[24px] font-bold text-[#0b1c30]">Send Emergency Alert</h1>
+                    <p className="text-xs text-slate-500 mt-0.5">Quickly request emergency assistance. Select the situation type and submit immediately.</p>
                   </div>
 
                   {/* 3 Steps Indicator */}
                   <div className="flex items-center gap-1 bg-white px-3 py-1.5 rounded-xl shadow-sm border border-slate-200">
                     <div className={`px-2.5 py-1 rounded-full text-xs font-bold ${reportStep === 1 ? 'bg-[#006398] text-white' : 'bg-slate-100 text-slate-600'}`}>
-                      1. Details
+                      1. Situation
                     </div>
                     <span className="material-symbols-outlined text-slate-300 text-[14px]">chevron_right</span>
                     <div className={`px-2.5 py-1 rounded-full text-xs font-bold ${reportStep === 2 ? 'bg-[#006398] text-white' : 'bg-slate-100 text-slate-600'}`}>
@@ -1059,7 +1104,7 @@ export default function CitizenDashboard() {
                     </div>
                     <span className="material-symbols-outlined text-slate-300 text-[14px]">chevron_right</span>
                     <div className={`px-2.5 py-1 rounded-full text-xs font-bold ${reportStep === 3 ? 'bg-emerald-600 text-white' : 'bg-slate-100 text-slate-600'}`}>
-                      3. Confirmation
+                      3. Dispatched
                     </div>
                   </div>
                 </div>
@@ -1068,165 +1113,180 @@ export default function CitizenDashboard() {
               {/* STAGE 1: FORM INPUTS */}
               {reportStep === 1 && (
                 <div className="bg-white rounded-xl shadow-sm border border-slate-200 p-6 flex flex-col gap-6">
-                  {/* Classification Chips */}
+                  {/* Top Emergency Action Bar for Panic Situations */}
+                  <div className="bg-gradient-to-r from-red-50 to-amber-50 border border-red-200 rounded-xl p-4 flex flex-col sm:flex-row items-center justify-between gap-3 shadow-xs">
+                    <div className="flex items-center gap-3 w-full sm:w-auto">
+                      <div className="w-10 h-10 rounded-full bg-red-600 text-white flex items-center justify-center shrink-0 shadow-sm animate-pulse">
+                        <span className="material-symbols-outlined text-[22px]">sos</span>
+                      </div>
+                      <div>
+                        <h3 className="text-sm font-bold text-red-950">In immediate danger or panic?</h3>
+                        <p className="text-xs text-red-800">Choose an option below or tap voice assistant to speak.</p>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-2 w-full sm:w-auto shrink-0">
+                      {/* Voice AI Assistant Button */}
+                      <button
+                        type="button"
+                        onClick={() => setShowVoiceAiModal(true)}
+                        className="flex-1 sm:flex-none px-3.5 py-2.5 bg-purple-700 hover:bg-purple-800 text-white rounded-lg text-xs font-bold transition-all flex items-center justify-center gap-1.5 shadow-sm"
+                        title="Speak your emergency to Voice AI"
+                      >
+                        <span className="material-symbols-outlined text-[18px]">mic</span>
+                        <span>Voice AI Assistant</span>
+                      </button>
+                      {/* Cellular SMS Fallback Button */}
+                      <button
+                        type="button"
+                        onClick={() => setShowSmsModal(true)}
+                        className="flex-1 sm:flex-none px-3.5 py-2.5 bg-amber-600 hover:bg-amber-700 text-white rounded-lg text-xs font-bold transition-all flex items-center justify-center gap-1.5 shadow-sm"
+                        title="Send this emergency alert via cellular SMS fallback"
+                      >
+                        <span className="material-symbols-outlined text-[18px]">sms</span>
+                        <span>Send via SMS</span>
+                      </button>
+                    </div>
+                  </div>
+
+                  {/* 1. Simple 1-Tap Situation Category */}
                   <div className="flex flex-col gap-2.5">
                     <label className="text-[14px] font-bold text-[#0b1c30] flex items-center justify-between">
                       <span className="flex items-center gap-2">
                         <span className="material-symbols-outlined text-[#006398] text-[18px]">category</span>
-                        1. Incident Classification
+                        1. What is the emergency?
                       </span>
-                      <span className="text-[10px] uppercase font-bold text-[#006398] font-['JetBrains_Mono',monospace]">Mandatory</span>
+                      <span className="text-[11px] text-slate-500 font-medium">Tap one below</span>
                     </label>
 
                     <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
                       {[
-                        { label: 'Fire & Smoke', sub: 'Smoke/Blaze', icon: 'local_fire_department', color: 'text-red-600' },
-                        { label: 'Medical & Casualty', sub: 'Casualty/Trauma', icon: 'medical_services', color: 'text-[#006398]' },
-                        { label: 'Urban Flood', sub: 'Rapid Inflow', icon: 'flood', color: 'text-blue-600' },
-                        { label: 'Structure Collapse', sub: 'Debris/Damage', icon: 'domain_disabled', color: 'text-amber-600' },
+                        { label: 'Fire & Smoke', sub: 'Smoke, flames, fire', icon: 'local_fire_department', color: 'text-red-600' },
+                        { label: 'Medical & Casualty', sub: 'Injuries, severe trauma', icon: 'medical_services', color: 'text-[#006398]' },
+                        { label: 'Urban Flood', sub: 'Rising water, trapped', icon: 'flood', color: 'text-blue-600' },
+                        { label: 'Structure Collapse', sub: 'Building debris, fallen tree', icon: 'domain_disabled', color: 'text-amber-600' },
                       ].map((item, i) => (
                         <button
                           key={i}
                           type="button"
                           onClick={() => setReportCategory(item.label)}
-                          className={`p-3 rounded-lg border text-left flex items-center gap-2 transition-all ${reportCategory.includes(item.label.split(' ')[0]) ? 'bg-blue-50 border-[#006398] ring-1 ring-[#006398]' : 'bg-slate-50 border-slate-200 hover:bg-slate-100'}`}
+                          className={`p-3.5 rounded-xl border text-left flex items-center gap-2.5 transition-all cursor-pointer ${reportCategory.includes(item.label.split(' ')[0]) ? 'bg-blue-50 border-[#006398] ring-2 ring-[#006398] shadow-sm' : 'bg-slate-50 border-slate-200 hover:bg-slate-100'}`}
                         >
-                          <span className={`material-symbols-outlined text-[20px] ${item.color}`}>{item.icon}</span>
+                          <span className={`material-symbols-outlined text-[24px] ${item.color}`}>{item.icon}</span>
                           <div>
-                            <p className="text-[12px] font-bold text-[#0b1c30] leading-tight">{item.label.split(' ')[0]}</p>
-                            <p className="text-[10px] text-slate-500">{item.sub}</p>
+                            <p className="text-[13px] font-bold text-[#0b1c30] leading-tight">{item.label.split(' ')[0]}</p>
+                            <p className="text-[10px] text-slate-500 mt-0.5">{item.sub}</p>
                           </div>
                         </button>
                       ))}
                     </div>
                   </div>
 
-                  {/* Location Reticle */}
-                  <div className="flex flex-col gap-2.5">
+                  {/* 2. Simplified GPS Coordinates Display */}
+                  <div className="flex flex-col gap-2">
                     <label className="text-[14px] font-bold text-[#0b1c30] flex items-center justify-between">
                       <span className="flex items-center gap-2">
                         <span className="material-symbols-outlined text-[#006398] text-[18px]">near_me</span>
-                        2. Geo-Tagged Coordinates & Location
+                        2. Your Location
                       </span>
                       <button
                         type="button"
-                        onClick={() => toast.success('Calibrated via device GNSS ±2.4m')}
-                        className="text-[10px] font-['JetBrains_Mono',monospace] font-bold text-[#006398] hover:underline"
+                        onClick={() => {
+                          navigator.geolocation?.getCurrentPosition(
+                            pos => {
+                              setReportLat(pos.coords.latitude)
+                              setReportLng(pos.coords.longitude)
+                              toast.success('Current location updated')
+                            },
+                            () => toast.error('Unable to refresh GPS')
+                          )
+                        }}
+                        className="text-[11px] font-semibold text-[#006398] hover:underline"
                       >
-                        Calibrate GPS
+                        Refresh GPS
                       </button>
                     </label>
 
-                    <div className="bg-slate-50 p-3.5 rounded-lg border border-slate-200 flex items-center justify-between gap-3">
+                    <div className="bg-slate-50 p-3 rounded-lg border border-slate-200 flex items-center justify-between gap-3">
                       <div className="flex items-center gap-2.5">
-                        <span className="w-3 h-3 rounded-full bg-[#006398] animate-ping"></span>
+                        <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
                         <div>
-                          <p className="text-[13px] font-bold text-[#0b1c30]">Sector 17 Market Complex, Chandigarh</p>
-                          <p className="font-['JetBrains_Mono',monospace] text-[11px] text-slate-500">
-                            Grid: {reportLat ? `${reportLat.toFixed(4)}° N, ${reportLng?.toFixed(4)}° E` : '30.7333° N, 76.7794° E'} • HDOP: ±2.4m
+                          <p className="text-[13px] font-bold text-[#0b1c30]">
+                            {reportLat && reportLng ? `GPS Pin: ${reportLat.toFixed(4)}° N, ${reportLng.toFixed(4)}° E` : myLat && myLng ? `Current Location: ${myLat.toFixed(4)}° N, ${myLng.toFixed(4)}° E` : 'Sector 17, Chandigarh (Default)'}
+                          </p>
+                          <p className="text-[11px] text-slate-500">
+                            Location automatically included with your alert
                           </p>
                         </div>
                       </div>
-                      <span className="bg-white border border-slate-200 px-2 py-1 rounded text-[10px] font-bold text-slate-700">
-                        Locked Fix
+                      <span className="bg-emerald-50 text-emerald-800 border border-emerald-200 px-2.5 py-1 rounded text-[11px] font-bold">
+                        GPS Locked
                       </span>
                     </div>
                   </div>
 
-                  {/* Operational Description */}
+                  {/* 3. Short Note (Optional) */}
                   <div className="flex flex-col gap-2">
-                    <label className="text-[14px] font-bold text-[#0b1c30] flex items-center gap-2">
-                      <span className="material-symbols-outlined text-[#006398] text-[18px]">description</span>
-                      3. Operational Situation (What do you see?)
+                    <label className="text-[14px] font-bold text-[#0b1c30] flex items-center justify-between">
+                      <span className="flex items-center gap-2">
+                        <span className="material-symbols-outlined text-[#006398] text-[18px]">edit_note</span>
+                        3. Description or Landmark (Optional)
+                      </span>
+                      <span className="text-[11px] text-slate-400">Keep it short</span>
                     </label>
-                    <textarea
+                    <input
+                      type="text"
                       value={reportDescription}
                       onChange={e => setReportDescription(e.target.value)}
-                      placeholder="Describe what you see: trapped persons, hazards, water level, blocked exits, injuries..."
-                      rows={3}
+                      placeholder="e.g. 2 people trapped on 1st floor, water knee deep"
                       className="w-full bg-slate-50 border border-slate-200 rounded-lg p-3 text-xs text-[#0b1c30] focus:outline-none focus:bg-white transition-all"
                     />
                   </div>
 
-                  {/* Severity Level Radios */}
-                  <div className="flex flex-col gap-2.5">
+                  {/* 4. Threat Level (Simplified) */}
+                  <div className="flex flex-col gap-2">
                     <label className="text-[14px] font-bold text-[#0b1c30] flex items-center gap-2">
-                      <span className="material-symbols-outlined text-[#006398] text-[18px]">speed</span>
-                      4. Threat Severity Level
+                      <span className="material-symbols-outlined text-[#006398] text-[18px]">warning</span>
+                      4. Urgency
                     </label>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                      {(['Low', 'Medium', 'High', 'Critical'] as const).map(sev => (
-                        <div
+                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                      {(['Critical', 'High', 'Medium', 'Low'] as const).map(sev => (
+                        <button
                           key={sev}
+                          type="button"
                           onClick={() => setReportSeverity(sev)}
-                          className={`p-3 rounded-lg border cursor-pointer flex items-center justify-between transition-all ${reportSeverity === sev ? 'bg-blue-50 border-[#006398]' : 'bg-slate-50 border-slate-200'}`}
+                          className={`p-2.5 rounded-lg border text-center transition-all cursor-pointer ${reportSeverity === sev ? sev === 'Critical' ? 'bg-red-50 border-red-500 font-bold text-red-900 ring-1 ring-red-500' : 'bg-blue-50 border-[#006398] font-bold text-[#006398] ring-1 ring-[#006398]' : 'bg-slate-50 border-slate-200 text-slate-700 hover:bg-slate-100'}`}
                         >
-                          <div>
-                            <p className="text-[13px] font-bold text-[#0b1c30]">{sev} Severity</p>
-                            <p className="text-[10px] text-slate-500">
-                              {sev === 'Critical' ? 'Immediate life threat, trapped persons' : sev === 'High' ? 'Rapidly spreading hazard or electrical sparks' : 'Localized obstruction or minor disruption'}
-                            </p>
-                          </div>
-                          <span className={`w-4 h-4 rounded-full border-2 flex items-center justify-center ${reportSeverity === sev ? 'border-[#006398] bg-[#006398]' : 'border-slate-400'}`}>
-                            {reportSeverity === sev && <span className="w-1.5 h-1.5 rounded-full bg-white"></span>}
-                          </span>
-                        </div>
+                          <span className="text-xs">{sev === 'Critical' ? '🚨 Immediate Life Threat' : sev === 'High' ? '⚠️ High Danger' : sev === 'Medium' ? 'Moderate Issue' : 'Minor'}</span>
+                        </button>
                       ))}
                     </div>
                   </div>
 
-                  {/* Visual Evidence Optional */}
-                  <div className="flex flex-col gap-2">
-                    <label className="text-[14px] font-bold text-[#0b1c30] flex items-center justify-between">
-                      <span className="flex items-center gap-2">
-                        <span className="material-symbols-outlined text-[#006398] text-[18px]">photo_camera</span>
-                        5. Visual Evidence (Optional)
-                      </span>
-                      <span className="text-[10px] text-slate-400 font-['JetBrains_Mono',monospace]">JPEG, PNG up to 25MB</span>
-                    </label>
-                    {reportEvidenceAttached ? (
-                      <div className="p-3 bg-slate-50 rounded-lg border border-slate-200 flex items-center justify-between">
-                        <div className="flex items-center gap-2.5">
-                          <span className="material-symbols-outlined text-[#006398]">image</span>
-                          <div>
-                            <p className="text-xs font-bold text-[#0b1c30]">incident_sector17_damage.jpg</p>
-                            <p className="text-[10px] text-slate-500">2.4 MB • Ready to attach</p>
-                          </div>
-                        </div>
-                        <button
-                          type="button"
-                          onClick={() => setReportEvidenceAttached(false)}
-                          className="text-xs text-red-600 font-semibold hover:underline"
-                        >
-                          Remove
-                        </button>
-                      </div>
-                    ) : (
+                  {/* Submit Actions */}
+                  <div className="pt-3 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-3">
+                    <div className="flex items-center gap-1.5 text-slate-500 text-[11px]">
+                      <span className="material-symbols-outlined text-[16px] text-emerald-600">verified_user</span>
+                      <span>Dispatched immediately to EOC Dispatchers</span>
+                    </div>
+                    <div className="flex items-center gap-2 w-full sm:w-auto justify-end">
                       <button
                         type="button"
-                        onClick={() => setReportEvidenceAttached(true)}
-                        className="p-3 border-2 border-dashed border-slate-300 rounded-lg text-xs text-slate-600 hover:bg-slate-50 flex items-center justify-center gap-2"
+                        onClick={handleFinalizeReport}
+                        disabled={submittingReport}
+                        className="flex-1 sm:flex-none px-6 py-2.5 bg-red-600 hover:bg-red-700 text-white rounded-lg text-xs font-bold transition-all flex items-center justify-center gap-2 shadow-sm"
                       >
-                        <span className="material-symbols-outlined text-[18px]">add_a_photo</span>
-                        <span>Attach ground photo</span>
+                        <span className="material-symbols-outlined text-[18px]">send</span>
+                        <span>{submittingReport ? 'Sending Alert…' : 'Send Emergency Alert'}</span>
                       </button>
-                    )}
-                  </div>
-
-                  {/* Form Step Next */}
-                  <div className="pt-3 border-t border-slate-100 flex items-center justify-between">
-                    <div className="flex items-center gap-1.5 text-slate-500 text-[11px]">
-                      <span className="material-symbols-outlined text-[16px] text-[#006398]">lock</span>
-                      <span>Encrypted and routed directly to State Disaster Authority</span>
+                      <button
+                        type="button"
+                        onClick={() => setReportStep(2)}
+                        className="px-3.5 py-2.5 bg-slate-100 text-slate-700 hover:bg-slate-200 rounded-lg text-xs font-semibold transition-colors"
+                        title="Review details before sending"
+                      >
+                        Review
+                      </button>
                     </div>
-                    <button
-                      type="button"
-                      onClick={() => setReportStep(2)}
-                      className="px-6 py-2.5 bg-[#006398] text-white rounded-lg text-xs font-bold hover:bg-[#004b73] transition-colors flex items-center gap-1.5"
-                    >
-                      <span>Review Report</span>
-                      <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
-                    </button>
                   </div>
                 </div>
               )}
@@ -1272,23 +1332,34 @@ export default function CitizenDashboard() {
                     </div>
                   </div>
 
-                  <div className="flex items-center justify-between pt-3">
+                  <div className="flex flex-col sm:flex-row items-center justify-between pt-3 gap-3">
                     <button
                       type="button"
                       onClick={() => setReportStep(1)}
-                      className="px-4 py-2 rounded-lg bg-slate-100 text-slate-700 text-xs font-semibold hover:bg-slate-200"
+                      className="px-4 py-2 rounded-lg bg-slate-100 text-slate-700 text-xs font-semibold hover:bg-slate-200 w-full sm:w-auto"
                     >
                       Back to Edit
                     </button>
-                    <button
-                      type="button"
-                      onClick={handleFinalizeReport}
-                      disabled={submittingReport}
-                      className="px-6 py-2.5 rounded-lg bg-red-600 text-white text-xs font-bold hover:bg-red-700 flex items-center gap-2 shadow-sm"
-                    >
-                      <span className="material-symbols-outlined text-[16px]">send</span>
-                      <span>{submittingReport ? 'Dispatching…' : 'Submit & Dispatch Teams'}</span>
-                    </button>
+                    <div className="flex items-center gap-2 w-full sm:w-auto justify-end">
+                      <button
+                        type="button"
+                        onClick={() => setShowSmsModal(true)}
+                        className="px-4 py-2.5 rounded-lg bg-amber-500 hover:bg-amber-600 text-white text-xs font-bold flex items-center gap-1.5 shadow-xs transition-colors"
+                        title="Send this emergency alert via cellular SMS fallback"
+                      >
+                        <span className="material-symbols-outlined text-[16px]">sms</span>
+                        <span>Send Alert via SMS</span>
+                      </button>
+                      <button
+                        type="button"
+                        onClick={handleFinalizeReport}
+                        disabled={submittingReport}
+                        className="px-6 py-2.5 rounded-lg bg-red-600 text-white text-xs font-bold hover:bg-red-700 flex items-center gap-2 shadow-sm"
+                      >
+                        <span className="material-symbols-outlined text-[16px]">send</span>
+                        <span>{submittingReport ? 'Dispatching…' : 'Submit & Dispatch Teams'}</span>
+                      </button>
+                    </div>
                   </div>
                 </div>
               )}
@@ -2536,7 +2607,7 @@ export default function CitizenDashboard() {
 
         {/* Open Map Engine V2 */}
         <a
-          href={`${MAP_V2_URL}?role=citizen`}
+          href={getMapV2Url('citizen', token)}
           target="_blank"
           rel="noopener noreferrer"
           className="flex flex-col items-center justify-center px-3 py-1 rounded-full transition-colors text-slate-600 hover:text-black"
@@ -2546,6 +2617,27 @@ export default function CitizenDashboard() {
           <span className="text-[10px] font-bold mt-0.5">Open Map</span>
         </a>
       </nav>
+
+      {/* Emergency SMS Fallback Modal */}
+      <SmsFallbackModal
+        isOpen={showSmsModal}
+        onClose={() => setShowSmsModal(false)}
+        category={reportCategory}
+        severity={reportSeverity}
+        description={reportDescription}
+        currentLat={reportLat || myLat}
+        currentLng={reportLng || myLng}
+        onSmsPrepared={alertUid => {
+          setSubmittedIncidentId(alertUid)
+        }}
+      />
+
+      {/* Voice AI Emergency Assistant Modal with Automatic Backend Activation */}
+      <VoiceAiModal
+        isOpen={showVoiceAiModal}
+        onClose={() => setShowVoiceAiModal(false)}
+        userLocation={myLat && myLng ? { lat: myLat, lng: myLng } : null}
+      />
     </div>
   )
 }

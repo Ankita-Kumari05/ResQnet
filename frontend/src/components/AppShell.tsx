@@ -1,7 +1,7 @@
 import { useNavigate, useLocation } from 'react-router-dom'
 import { useAuth } from '../contexts/AuthContext'
 import { useOnline } from '../contexts/OnlineContext'
-import { MAP_V2_URL } from '../config/mapConfig'
+import { getMapV2Url } from '../config/mapConfig'
 import type { ReactNode } from 'react'
 
 interface NavItem {
@@ -16,30 +16,6 @@ const CITIZEN_NAV: NavItem[] = [
   { icon: 'map',          label: 'Safety Map',    path: '/' },
   { icon: 'campaign',     label: 'Alerts',         path: '/alerts' },
   { icon: 'volunteer_activism', label: 'Relief',  path: '/fundraising' },
-]
-
-const COORDINATOR_NAV: NavItem[] = [
-  { icon: 'grid_view',    label: 'Dashboard',       path: '/coordinator?tab=overview' },
-  { icon: 'warning',      label: 'Incidents',        path: '/coordinator?tab=incidents' },
-  { icon: 'groups',       label: 'Response Teams',   path: '/coordinator?tab=missions' },
-  { icon: 'map',          label: 'Operations Map',   path: `${MAP_V2_URL}?role=coordinator`, badge: 'MAP V2', external: true },
-  { icon: 'inventory_2',  label: 'Resources',        path: '/coordinator?tab=resources' },
-  { icon: 'night_shelter',label: 'Safety Hubs',      path: '/coordinator?tab=hubs' },
-  { icon: 'traffic',      label: 'Hazards & Roads',  path: '/coordinator?tab=hazards-and-roads' },
-  { icon: 'campaign',     label: 'Alerts',           path: '/coordinator?tab=alerts' },
-  { icon: 'monitoring',   label: 'Analytics',        path: '/coordinator?tab=analytics' },
-  { icon: 'terminal',     label: 'Simulation Engine',path: '/coordinator?tab=simulation', badge: 'SIM LIVE' },
-]
-
-const RESPONDER_NAV: NavItem[] = [
-  { icon: 'dashboard',            label: 'Dashboard',        path: '/missions?tab=dashboard' },
-  { icon: 'task_alt',             label: 'Missions',          path: '/missions?tab=missions' },
-  { icon: 'content_paste_search', label: 'Field Surveys',     path: '/missions?tab=survey' },
-  { icon: 'verified_user',        label: 'Verification',      path: '/missions?tab=verification' },
-  { icon: 'map',                  label: 'Operations Map',    path: `${MAP_V2_URL}?role=responder`, badge: 'MAP V2', external: true },
-  { icon: 'corporate_fare',       label: 'Organization',      path: '/missions?tab=organization' },
-  { icon: 'account_circle',       label: 'Profile',           path: '/missions?tab=profile' },
-  { icon: 'campaign',             label: 'Campaigns',         path: '/missions?tab=campaigns' },
 ]
 
 const FUNDRAISER_NAV: NavItem[] = [
@@ -61,10 +37,34 @@ const ADMIN_NAV: NavItem[] = [
   { icon: 'settings',          label: 'Security Governance',   path: '/admin?tab=config' },
 ]
 
-function getRoleNav(role?: string, email?: string): NavItem[] {
+function getRoleNav(role?: string, email?: string, token?: string | null): NavItem[] {
   if (role === 'admin' || email === 'admin@resqnet.in') return ADMIN_NAV
-  if (role === 'coordinator') return COORDINATOR_NAV
-  if (role === 'responder')   return RESPONDER_NAV
+  if (role === 'coordinator') {
+    return [
+      { icon: 'grid_view',    label: 'Dashboard',       path: '/coordinator?tab=overview' },
+      { icon: 'warning',      label: 'Incidents',        path: '/coordinator?tab=incidents' },
+      { icon: 'groups',       label: 'Response Teams',   path: '/coordinator?tab=missions' },
+      { icon: 'map',          label: 'Operations Map',   path: getMapV2Url('coordinator', token), badge: 'MAP V2', external: true },
+      { icon: 'inventory_2',  label: 'Resources',        path: '/coordinator?tab=resources' },
+      { icon: 'night_shelter',label: 'Safety Hubs',      path: '/coordinator?tab=hubs' },
+      { icon: 'traffic',      label: 'Hazards & Roads',  path: '/coordinator?tab=hazards-and-roads' },
+      { icon: 'campaign',     label: 'Alerts',           path: '/coordinator?tab=alerts' },
+      { icon: 'monitoring',   label: 'Analytics',        path: '/coordinator?tab=analytics' },
+      { icon: 'terminal',     label: 'Simulation Engine',path: '/coordinator?tab=simulation', badge: 'SIM LIVE' },
+    ]
+  }
+  if (role === 'responder') {
+    return [
+      { icon: 'dashboard',            label: 'Dashboard',        path: '/missions?tab=dashboard' },
+      { icon: 'task_alt',             label: 'Missions',          path: '/missions?tab=missions' },
+      { icon: 'content_paste_search', label: 'Field Surveys',     path: '/missions?tab=survey' },
+      { icon: 'verified_user',        label: 'Verification',      path: '/missions?tab=verification' },
+      { icon: 'map',                  label: 'Operations Map',    path: getMapV2Url('responder', token), badge: 'MAP V2', external: true },
+      { icon: 'corporate_fare',       label: 'Organization',      path: '/missions?tab=organization' },
+      { icon: 'account_circle',       label: 'Profile',           path: '/missions?tab=profile' },
+      { icon: 'campaign',             label: 'Campaigns',         path: '/missions?tab=campaigns' },
+    ]
+  }
   if (role === 'fundraiser')  return FUNDRAISER_NAV
   return CITIZEN_NAV
 }
@@ -105,12 +105,12 @@ interface Props {
 }
 
 export default function AppShell({ children, pageTitle, headerExtra, showLive = true, noSidebar = false, noHeader = false }: Props) {
-  const { user, logout } = useAuth()
+  const { user, token, logout } = useAuth()
   const { isOnline, pendingOpsCount } = useOnline()
   const navigate = useNavigate()
   const location = useLocation()
 
-  const navItems = getRoleNav(user?.role, user?.email)
+  const navItems = getRoleNav(user?.role, user?.email, token)
   const roleLabel = getRoleLabel(user?.role, user?.email)
   const roleTag   = getRoleTag(user?.role, user?.email)
   const initials  = getInitials(user?.full_name)
@@ -362,7 +362,7 @@ export default function AppShell({ children, pageTitle, headerExtra, showLive = 
       {canOpenMap && user && (
         <div style={{ position: 'fixed', bottom: '1.25rem', right: '1.5rem', zIndex: 45 }}>
           <a
-            href={`${MAP_V2_URL}?role=${user.role.toLowerCase()}`}
+            href={getMapV2Url(user.role.toLowerCase(), token)}
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-primary shadow-lg"

@@ -11,6 +11,8 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from app.db.models import (
     SafetyHub,
     HubStatus,
+    HubResource,
+    ResourceType,
     User,
     UserRole,
     Responder,
@@ -229,6 +231,15 @@ async def create_hub_service(
     )
     db.add(hub)
     await db.flush()
+
+    # Automatically initialize default baseline resources for new Safety Hub
+    initial_resources = [
+        HubResource(hub_id=hub.id, resource_type=ResourceType.food, current_quantity=float(payload.max_capacity * 2), unit="kg", critical_threshold=float(payload.max_capacity * 0.4)),
+        HubResource(hub_id=hub.id, resource_type=ResourceType.water, current_quantity=float(payload.max_capacity * 10), unit="L", critical_threshold=float(payload.max_capacity * 2.0)),
+        HubResource(hub_id=hub.id, resource_type=ResourceType.medical, current_quantity=float(max(20, payload.max_capacity // 10)), unit="kits", critical_threshold=float(max(5, payload.max_capacity // 50))),
+        HubResource(hub_id=hub.id, resource_type=ResourceType.shelter_kit, current_quantity=float(max(10, payload.max_capacity // 20)), unit="tents", critical_threshold=float(max(2, payload.max_capacity // 100))),
+    ]
+    db.add_all(initial_resources)
 
     await log_hub_audit(
         db,

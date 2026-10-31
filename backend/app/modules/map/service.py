@@ -4,6 +4,8 @@ Provides the shared map-state snapshot (GET /map/state) and CRUD operations for
 coordinator-authored map features (road closures, hub geometries).
 All writes are logged to audit_logs. Existing endpoint contracts are untouched.
 """
+import hashlib
+import json
 from datetime import datetime, timezone
 from typing import Any, Dict, List, Optional
 
@@ -187,8 +189,17 @@ async def get_map_state_service(db: AsyncSession) -> MapStateResponse:
         for c in closure_rows
     ]
 
+    features = {
+        "hazards": [feature.model_dump(mode="json") for feature in hazard_features],
+        "hubs": [feature.model_dump(mode="json") for feature in hub_features],
+        "closures": [feature.model_dump(mode="json") for feature in closure_features],
+    }
+    version = hashlib.sha256(
+        json.dumps(features, sort_keys=True, separators=(",", ":")).encode("utf-8")
+    ).hexdigest()
+
     return MapStateResponse(
-        version="1",
+        version=version,
         hazards=hazard_features,
         hubs=hub_features,
         closures=closure_features,

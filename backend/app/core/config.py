@@ -29,6 +29,9 @@ class Settings(BaseSettings):
     CLUSTERING_RADIUS_METERS: float = 500.0  # Search radius in meters for incident proximity
     CLUSTERING_TEMPORAL_WINDOW_MINUTES: int = 120  # Time window in minutes for temporal correlation
 
+    # SMS Fallback Gateway Configuration
+    COORDINATOR_SMS_RECIPIENT_NUMBER: str = "+919814189021"
+
     class Config:
         env_file = ".env"
         extra = "allow"

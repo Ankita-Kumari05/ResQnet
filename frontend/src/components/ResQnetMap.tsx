@@ -56,6 +56,7 @@ export interface MapProps {
   clusters?: ReportCluster[]
   hazardZones?: HazardZone[]
   hazards?: HazardZone[]
+  roadClosures?: any[]
   missions?: Mission[]
   activeRoadId?: number | null
   activeMission?: Mission | null
@@ -106,6 +107,7 @@ export default function ResQnetMap({
   clusters: _clusters = [],
   hazardZones = [],
   hazards = [],
+  roadClosures = [],
   missions: _missions = [],
   activeRoadId: _activeRoadId = null,
   activeMission: _activeMission = null,
@@ -189,19 +191,30 @@ export default function ResQnetMap({
         const currentOccupancy = h.current_occupancy || 0
         const availableCapacity = Math.max(0, totalCapacity - currentOccupancy)
 
+        const entranceCoord: Coordinate | undefined = (h as any).entrance_geom?.coordinates
+          ? [(h as any).entrance_geom.coordinates[0], (h as any).entrance_geom.coordinates[1]]
+          : (h as any).entranceCoordinate || undefined
+
+        const polygonCoords: Coordinate[] | undefined = (h as any).area_geom?.coordinates?.[0]
+          ? (h as any).area_geom.coordinates[0].map((c: any) => [c[0], c[1]])
+          : (h as any).polygonCoordinates || undefined
+
         return {
           id: String(h.id),
           name: h.name,
           siteType: 'Community Relief Hub',
-          coordinate: [h.lng, h.lat],
-          verificationStatus: 'VERIFIED',
+          coordinate: entranceCoord || [h.lng, h.lat],
+          entranceCoordinate: entranceCoord,
+          polygonCoordinates: polygonCoords,
+          hubFormat: polygonCoords && polygonCoords.length >= 3 ? 'POLYGON' : 'POINT',
+          verificationStatus: (h as any).is_verified === false ? 'UNVERIFIED' : 'VERIFIED',
           isActive: status !== 'CLOSED',
           status,
           totalCapacity,
           currentOccupancy,
           availableCapacity,
           address: h.address || '',
-          capabilities: {
+          capabilities: (h as any).capabilities || {
             tents: { enabled: true, tentUnits: 20, peoplePerTent: 6, tentCapacity: 120 },
             foodDistribution: { enabled: (h.food_units ?? 0) > 0, mealsPerCycle: (h.food_units ?? 0) * 10 },
             drinkingWater: { enabled: (h.water_units ?? 0) > 0, availableLiters: (h.water_units ?? 0) * 50, requirementLiters: 500 },
@@ -211,8 +224,8 @@ export default function ResQnetMap({
             registrationHelpDesk: { enabled: true },
             specialNeedsSupport: { enabled: true },
           },
-          resources: [],
-          requirements: [],
+          resources: (h as any).resources || [],
+          requirements: (h as any).requirements || [],
           createdAt: h.updated_at || new Date().toISOString(),
           updatedAt: h.updated_at || new Date().toISOString(),
         }
@@ -262,7 +275,7 @@ export default function ResQnetMap({
     return result
   }, [effectiveHazards])
 
-  // Map RESQNET Road[] -> routing-lab EngineBlockedRoad[]
+  // Map RESQNET Road[] & roadClosures -> routing-lab EngineBlockedRoad[]
   const engineBlockedRoads = useMemo<EngineBlockedRoad[]>(() => {
     const intersectionMap = new Map<number, Intersection>()
     for (const i of intersections) {
@@ -297,8 +310,30 @@ export default function ResQnetMap({
       }
     }
 
+    // Merge road closures from /map/state or /road-closures
+    if (Array.isArray(roadClosures)) {
+      for (const rc of roadClosures) {
+        if (rc.is_active === false) continue
+        const geom = rc.geom || rc.geometry
+        if (geom && geom.type === 'LineString' && Array.isArray(geom.coordinates) && geom.coordinates.length >= 2) {
+          const lineGeom: LineString = {
+            type: 'LineString',
+            coordinates: geom.coordinates.map((c: any) => [c[0], c[1]]),
+          }
+          blocked.push({
+            id: `closure-${rc.id}`,
+            name: rc.name || `Road Closure #${rc.id}`,
+            status: 'BLOCKED',
+            reason: rc.reason || (rc.kind === 'section' ? 'Sectional Closure' : 'Road Closed'),
+            geometry: lineGeom,
+            isActive: true,
+          })
+        }
+      }
+    }
+
     return blocked
-  }, [roads, intersections])
+  }, [roads, intersections, roadClosures])
 
   // Keep references for async calculations
   const engineHazardsRef = useRef(engineHazards)
@@ -828,6 +863,17 @@ export default function ResQnetMap({
     }
   }, [liveLocationState?.coordinate, manualDest, effectiveDestCoord, executeSafeRouteCalculation])
 
+  // Direct Safety Hub marker click handler (without forcing routing recalculation)
+  const handleHubMarkerClick = useCallback(
+    (hub: EngineSafetyHub) => {
+      const originalHub = hubs.find(h => String(h.id) === hub.id)
+      if (originalHub && onHubClick) {
+        onHubClick(originalHub)
+      }
+    },
+    [hubs, onHubClick]
+  )
+
   // Select Safety Hub as Destination
   const handleSelectSafetyHub = useCallback(
     (hub: EngineSafetyHub) => {
@@ -929,6 +975,7 @@ export default function ResQnetMap({
         safetyHubs={engineSafetyHubs}
         operationalAreas={[]}
         liveLocationState={effectiveLiveLocationState}
+        onHubClick={handleHubMarkerClick}
         onSelectSafetyHubDestination={handleSelectSafetyHub}
         onSelectPotentialSafetyHub={onSelectPotentialSafetyHub}
         onOpenAddOperationalAreaForHub={onOpenAddOperationalAreaForHub}

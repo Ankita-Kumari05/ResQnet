@@ -82,6 +82,11 @@ async def test_road_closure_rbac():
     citizen = await get_or_create_user("citizen_rc_test@resqnet.org", "Citizen RC", UserRole.citizen)
     coord = await get_or_create_user("coord_rc_test@resqnet.org", "Coord RC", UserRole.coordinator)
 
+    async with AsyncClient(transport=ASGITransport(app=app), base_url="http://test") as client:
+        initial_state = await client.get("/api/v1/map/state", headers=auth_headers(coord))
+        assert initial_state.status_code == 200
+        initial_version = initial_state.json()["version"]
+
     payload = {
         "kind": "full",
         "name": f"Blocked Sector {uuid.uuid4().hex[:4]}",
@@ -118,6 +123,14 @@ async def test_road_closure_rbac():
 
         closure_id = props["id"]
 
+        state_after_create = await client.get("/api/v1/map/state", headers=auth_headers(coord))
+        assert state_after_create.status_code == 200
+        assert state_after_create.json()["version"] != initial_version
+        assert any(
+            feature["properties"]["id"] == closure_id
+            for feature in state_after_create.json()["closures"]
+        )
+
         # Verify audit log was recorded
         async with AsyncSessionLocal() as session:
             audit = await session.execute(
@@ -137,6 +150,13 @@ async def test_road_closure_rbac():
         )
         assert res_del.status_code == 200
         assert res_del.json()["properties"]["is_active"] is False
+        state_after_delete = await client.get("/api/v1/map/state", headers=auth_headers(coord))
+        assert state_after_delete.status_code == 200
+        assert state_after_delete.json()["version"] != state_after_create.json()["version"]
+        assert all(
+            feature["properties"]["id"] != closure_id
+            for feature in state_after_delete.json()["closures"]
+        )
 
 
 async def test_hub_map_geometry_upsert():
@@ -160,6 +180,16 @@ async def test_hub_map_geometry_upsert():
             await session.refresh(hub)
         hub_id = hub.id
 
+    async with AsyncClient(transport=ASGITransport(app=app), base_url="http://test") as client:
+        initial_state = await client.get("/api/v1/map/state", headers=auth_headers(coord))
+        assert initial_state.status_code == 200
+        initial_version = initial_state.json()["version"]
+        hub_feature = next(
+            feature for feature in initial_state.json()["hubs"]
+            if feature["properties"]["id"] == hub_id
+        )
+        new_verification_status = not hub_feature["properties"]["is_verified"]
+
     payload = {
         "entrance_geom": {
             "type": "Point",
@@ -177,7 +207,7 @@ async def test_hub_map_geometry_upsert():
                 ]
             ],
         },
-        "is_verified": True,
+        "is_verified": new_verification_status,
         "capabilities": {"medical": True, "shelter": True, "water": True},
     }
 
@@ -191,5 +221,8 @@ async def test_hub_map_geometry_upsert():
         data = res.json()
         assert data["hub_id"] == hub_id
         assert data["entrance_geom"]["coordinates"] == [76.7827, 30.7398]
-        assert data["is_verified"] is True
+        assert data["is_verified"] is new_verification_status
         assert data["capabilities"]["medical"] is True
+        state_after_update = await client.get("/api/v1/map/state", headers=auth_headers(coord))
+        assert state_after_update.status_code == 200
+        assert state_after_update.json()["version"] != initial_version

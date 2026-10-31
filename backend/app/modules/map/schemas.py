@@ -18,7 +18,7 @@ class GeoJSONFeature(BaseModel):
 # ── Map state ─────────────────────────────────────────────────────────────────
 
 class MapStateResponse(BaseModel):
-    """Snapshot of all active map features — consumed by Map Engine V2 on load."""
+    """Map feature snapshot; version is a content hash that changes with the snapshot."""
     version: str
     hazards: List[GeoJSONFeature] = []
     hubs: List[GeoJSONFeature] = []

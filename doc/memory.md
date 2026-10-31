@@ -18,9 +18,9 @@ Last updated: 2026-09-20
 |---|---|
 | 1 Foundation | Adapter / routing-lab-2v wiring — **DONE (2026-09-20)** |
 | 2 Coordinator | Backend persistence (hub_map_geometry, road_closures, /map API) — **DONE (2026-09-20)** |
-| 3 Responder | Live GPS, Navigate to Mission — NOT STARTED |
-| 4 Citizen | GPS, SOS, evacuation routing — NOT STARTED |
-| 5 Parity & removal | NOT STARTED |
+| 3 Responder | Live GPS, Navigate to Mission, deep-link token handoff — **DONE (2026-09-20)** |
+| 4 Citizen | GPS, SOS, evacuation routing, road closures layer, 5s sync — **DONE (2026-09-20)** |
+| 5 Parity & removal | In Progress |
 
 ---
 
@@ -41,6 +41,8 @@ Not yet tracked per-item. Will populate when Phase 1 frontend wiring begins.
 | 2026-09-20 | hub_map_geometry endpoint does NOT touch safety_hubs columns — only writes to the new extension table |
 | 2026-09-20 | CORS: added localhost:5174 (Map Engine V2 Vite port) — no other origins removed |
 | 2026-09-20 | Road closures use soft-delete (is_active=False), not hard DELETE |
+| 2026-09-20 | ResQnet maps fetch `/map/state` closures & hub geometries; refresh interval set to 5s + window focus |
+| 2026-09-20 | Every "Open Map" link passes token via `#token=<encoded token>` while keeping `?role=` |
 
 ---
 

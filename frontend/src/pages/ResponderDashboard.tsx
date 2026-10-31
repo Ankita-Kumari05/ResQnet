@@ -24,7 +24,7 @@ import type {
   Campaign,
 } from '../types'
 import ResQnetMap from '../components/ResQnetMap'
-import { MAP_V2_URL } from '../config/mapConfig'
+import { getMapV2Url } from '../config/mapConfig'
 import { calculateSafeRoute } from '../features/routing/services/backendRoutingService'
 import {
   CheckCircle,
@@ -78,7 +78,7 @@ interface SubmittedSurvey {
 }
 
 export default function ResponderDashboard() {
-  const { user } = useAuth()
+  const { user, token } = useAuth()
   const { isOnline, setPendingOps } = useOnline()
   const [searchParams, setSearchParams] = useSearchParams()
   const [missions, setMissions] = useState<Mission[]>([])
@@ -853,7 +853,7 @@ export default function ResponderDashboard() {
                   <span>VIEW TACTICAL MAP ROUTE</span>
                 </button>
                 <a
-                  href={`${MAP_V2_URL}?role=responder`}
+                  href={getMapV2Url('responder', token)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="h-11 px-5 bg-[#006398] hover:bg-blue-700 text-white rounded-xl text-xs font-bold flex items-center gap-2 transition-colors uppercase tracking-wide border border-[#006398] no-underline shadow-xs"
@@ -955,7 +955,7 @@ export default function ResponderDashboard() {
                   <span>OPEN TACTICAL MAP</span>
                 </button>
                 <a
-                  href={`${MAP_V2_URL}?role=responder`}
+                  href={getMapV2Url('responder', token)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="h-10 px-4 bg-[#006398] hover:bg-blue-700 text-white rounded-lg text-xs font-bold flex items-center justify-center gap-2 shadow-xs transition-colors whitespace-nowrap uppercase tracking-wide no-underline"
@@ -1202,7 +1202,7 @@ export default function ResponderDashboard() {
                   GIS LIVE CONSOLE
                 </span>
                 <a
-                  href={`${MAP_V2_URL}?role=responder`}
+                  href={getMapV2Url('responder', token)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs shadow-xs transition-colors uppercase tracking-wide no-underline ml-2"

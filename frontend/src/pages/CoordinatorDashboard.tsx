@@ -12,7 +12,7 @@ import { useAuth } from '../contexts/AuthContext'
 import ResQnetMap from '../components/ResQnetMap'
 import api from '../lib/api'
 import { calculateSafeRoute } from '../features/routing/services/backendRoutingService'
-import { MAP_V2_URL } from '../config/mapConfig'
+import { getMapV2Url } from '../config/mapConfig'
 import type {
   SafetyHub, Road, ReportCluster, Mission, MissionType,
   Intersection, HazardZone, RoadStatus, RouteResponse
@@ -68,7 +68,7 @@ interface SimLogEntry {
 }
 
 export default function CoordinatorDashboard() {
-  const { user } = useAuth()
+  const { user, token } = useAuth()
   const isAdmin = user?.role === 'admin' || user?.email === 'admin@resqnet.in'
   const [searchParams, setSearchParams] = useSearchParams()
   const initialTab = (searchParams.get('tab') as Tab) || 'overview'
@@ -93,6 +93,7 @@ export default function CoordinatorDashboard() {
   const [clusters, setClusters] = useState<ReportCluster[]>([])
   const [missions, setMissions] = useState<Mission[]>([])
   const [hazardZones, setHazardZones] = useState<HazardZone[]>([])
+  const [roadClosures, setRoadClosures] = useState<any[]>([])
   const [responders, setResponders] = useState<{ id: number; user_id: number; full_name: string; ngo_name?: string; status: string; verification_status?: string }[]>([])
   const [alerts, setAlerts] = useState<any[]>([])
 
@@ -177,49 +178,30 @@ export default function CoordinatorDashboard() {
       const res = await api.post('/hubs', payload)
       if (res.data) {
         setHubs(prev => [res.data, ...prev.filter(h => h.id !== res.data.id)])
-        toast.success(`Safety Hub "${res.data.name}" successfully registered & online!`)
+        toast.success(`Safety Hub "${res.data.name}" successfully registered & persisted in database!`)
         // Trigger live refresh from backend across GIS tables
         setTimeout(() => { loadAll(true) }, 100)
+        setNewHubForm({
+          name: '',
+          address: '',
+          lat: 30.7333,
+          lng: 76.7794,
+          max_capacity: 500,
+          current_occupancy: 0,
+          food_kits: 1200,
+          water_litres: 8000,
+          medical_staff: 2,
+          has_generator: true,
+          status: 'open',
+        })
+        setShowAddHubModal(false)
       }
-    } catch {
-      // Offline fallback: simulated immediate addition into active state
-      const fallbackHub: SafetyHub = {
-        id: Math.floor(100 + Math.random() * 900),
-        name: newHubForm.name.trim(),
-        address: newHubForm.address.trim() || 'Sector 17 Sub-Division, Chandigarh',
-        lat: Number(newHubForm.lat),
-        lng: Number(newHubForm.lng),
-        max_capacity: Number(newHubForm.max_capacity) || 500,
-        current_occupancy: Number(newHubForm.current_occupancy) || 0,
-        available_capacity: (Number(newHubForm.max_capacity) || 500) - (Number(newHubForm.current_occupancy) || 0),
-        status: newHubForm.status,
-        food_units: Number(newHubForm.food_kits) || 1200,
-        water_units: Number(newHubForm.water_litres) || 8000,
-        medical_units: Number(newHubForm.medical_staff) || 2,
-        food_critical: false,
-        water_critical: false,
-        medical_critical: false,
-        capacity_critical: false,
-        updated_at: new Date().toISOString(),
-      }
-      setHubs(prev => [fallbackHub, ...prev])
-      toast.success(`Safety Hub "${fallbackHub.name}" created (cached in local operations grid)!`)
+    } catch (err: any) {
+      console.error('Failed to create Safety Hub in backend database:', err)
+      const errorMsg = err?.response?.data?.detail || err?.response?.data?.error?.message || err?.message || 'Server error creating Safety Hub'
+      toast.error(`Database persistence error: ${errorMsg}`)
     } finally {
       setSubmittingHub(false)
-      setShowAddHubModal(false)
-      setNewHubForm({
-        name: '',
-        address: '',
-        lat: 30.7333,
-        lng: 76.7794,
-        max_capacity: 500,
-        current_occupancy: 0,
-        status: 'open',
-        water_litres: 10000,
-        food_kits: 1500,
-        medical_staff: 4,
-        has_generator: true,
-      })
     }
   }
 
@@ -258,7 +240,7 @@ export default function CoordinatorDashboard() {
 
   const [isRefreshing, setIsRefreshing] = useState(false)
   const inFlightRef = useRef(false)
-  const POLL_INTERVAL = 6000
+  const POLL_INTERVAL = 5000
 
   // ─── Data Loaders ──────────────────────────────────────────────────────────
   const fetchAlerts = useCallback(async () => {
@@ -296,7 +278,7 @@ export default function CoordinatorDashboard() {
     inFlightRef.current = true
     if (force) setIsRefreshing(true)
     try {
-      const [hRes, rRes, iRes, mRes, cRes, zRes, respRes] = await Promise.allSettled([
+      const [hRes, rRes, iRes, mRes, cRes, zRes, respRes, mapStateRes] = await Promise.allSettled([
         api.get('/hubs'),
         api.get('/roads'),
         api.get('/roads/intersections'),
@@ -304,6 +286,7 @@ export default function CoordinatorDashboard() {
         api.get('/clusters'),
         api.get('/hazards'),
         api.get('/missions/responders'),
+        api.get('/map/state'),
       ])
 
       if (hRes.status === 'fulfilled') setHubs(hRes.value.data)
@@ -341,6 +324,35 @@ export default function CoordinatorDashboard() {
       if (cRes.status === 'fulfilled') setClusters(cRes.value.data)
       if (zRes.status === 'fulfilled') setHazardZones(zRes.value.data)
       if (respRes.status === 'fulfilled') setResponders(respRes.value.data)
+      if (mapStateRes.status === 'fulfilled') {
+        const mapState = mapStateRes.value.data
+        if (mapState?.closures) {
+          setRoadClosures(mapState.closures)
+        }
+        if (Array.isArray(mapState?.hubs) && mapState.hubs.length > 0) {
+          setHubs(prevHubs => {
+            const geomMap = new Map(
+              mapState.hubs.map((mh: any) => [
+                mh.properties?.id ?? mh.id,
+                mh.properties ? { ...mh.properties, ...mh } : mh,
+              ])
+            )
+            return prevHubs.map(h => {
+              const mh: any = geomMap.get(h.id)
+              if (mh) {
+                return {
+                  ...h,
+                  entrance_geom: mh.entrance_geom || (h as any).entrance_geom,
+                  area_geom: mh.area_geom || (h as any).area_geom,
+                  is_verified: mh.is_verified !== undefined ? mh.is_verified : (h as any).is_verified,
+                  capabilities: mh.capabilities || (h as any).capabilities,
+                }
+              }
+              return h
+            })
+          })
+        }
+      }
       fetchAlerts()
       fetchSimulationTelemetry()
       if (force) {
@@ -356,8 +368,13 @@ export default function CoordinatorDashboard() {
 
   useEffect(() => {
     loadAll()
-    const interval = setInterval(loadAll, POLL_INTERVAL)
-    return () => clearInterval(interval)
+    const interval = setInterval(() => loadAll(), POLL_INTERVAL)
+    const onFocus = () => loadAll()
+    window.addEventListener('focus', onFocus)
+    return () => {
+      clearInterval(interval)
+      window.removeEventListener('focus', onFocus)
+    }
   }, [loadAll])
 
   // Wall clock ticker
@@ -1048,7 +1065,7 @@ export default function CoordinatorDashboard() {
                       <span>{isRefreshing ? 'Refreshing…' : 'Refresh'}</span>
                     </button>
                     <a
-                      href={`${MAP_V2_URL}?role=coordinator`}
+                      href={getMapV2Url('coordinator', token)}
                       target="_blank"
                       rel="noopener noreferrer"
                       style={{
@@ -1080,6 +1097,7 @@ export default function CoordinatorDashboard() {
                     clusters={layerIncidents ? clusters : []}
                     hazardZones={layerHazards ? hazardZones : []}
                     missions={layerMissions ? missions : []}
+                    roadClosures={roadClosures}
                     onHubClick={h => { setSelectedHub(h); setSelectedCluster(null); setSelectedMission(null); setSelectedRoad(null); setSelectedHazard(null) }}
                     onClusterClick={c => { setSelectedCluster(c); setSelectedHub(null); setSelectedMission(null); setSelectedRoad(null); setSelectedHazard(null) }}
                     onMissionClick={m => { setSelectedMission(m); setSelectedCluster(null); setSelectedHub(null); setSelectedRoad(null); setSelectedHazard(null) }}
@@ -1159,11 +1177,53 @@ export default function CoordinatorDashboard() {
                       )}
 
                       {selectedHub && (
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem', fontSize: '0.8125rem' }}>
-                          <div style={{ fontWeight: 700, fontSize: '0.9375rem' }}>{selectedHub.name}</div>
-                          <div>Status: <span className={`badge badge-${selectedHub.status}`}>{selectedHub.status.toUpperCase()}</span></div>
-                          <div>Occupancy: <strong>{selectedHub.current_occupancy} / {selectedHub.max_capacity}</strong> ({Math.round((selectedHub.current_occupancy / (selectedHub.max_capacity || 1)) * 100)}%)</div>
-                          <div>Available: <strong style={{ color: '#16a34a' }}>{selectedHub.available_capacity} spots</strong></div>
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.45rem', fontSize: '0.8125rem' }}>
+                          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '0.5rem' }}>
+                            <div style={{ fontWeight: 700, fontSize: '0.9375rem', color: '#0f172a' }}>{selectedHub.name}</div>
+                            <span className={`badge badge-${selectedHub.status}`}>{selectedHub.status.toUpperCase()}</span>
+                          </div>
+                          {selectedHub.address && (
+                            <div style={{ fontSize: '0.75rem', color: '#64748b' }}>
+                              <span className="material-symbols-outlined" style={{ fontSize: 13, verticalAlign: 'text-bottom', marginRight: '0.2rem' }}>location_on</span>
+                              {selectedHub.address}
+                            </div>
+                          )}
+                          <div style={{ fontSize: '0.7rem', color: '#64748b', fontFamily: "'JetBrains Mono', monospace" }}>
+                            Coordinates: [{selectedHub.lat?.toFixed(4)}° N, {selectedHub.lng?.toFixed(4)}° E]
+                          </div>
+                          <div style={{ background: '#f8fafc', padding: '0.5rem', borderRadius: 4, border: '1px solid #e2e8f0', marginTop: '0.2rem' }}>
+                            <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.25rem' }}>
+                              <span style={{ fontSize: '0.75rem', color: '#475569' }}>Occupancy:</span>
+                              <strong>{selectedHub.current_occupancy} / {selectedHub.max_capacity} ({Math.round((selectedHub.current_occupancy / (selectedHub.max_capacity || 1)) * 100)}%)</strong>
+                            </div>
+                            <div style={{ width: '100%', height: 6, background: '#e2e8f0', borderRadius: 3, overflow: 'hidden' }}>
+                              <div style={{
+                                width: `${Math.min(100, Math.round((selectedHub.current_occupancy / (selectedHub.max_capacity || 1)) * 100))}%`,
+                                height: '100%',
+                                background: (selectedHub.current_occupancy / (selectedHub.max_capacity || 1)) >= 0.85 ? '#dc2626' : (selectedHub.current_occupancy / (selectedHub.max_capacity || 1)) >= 0.70 ? '#d97706' : '#16a34a'
+                              }} />
+                            </div>
+                            <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '0.35rem', fontSize: '0.75rem' }}>
+                              <span style={{ color: '#475569' }}>Available:</span>
+                              <strong style={{ color: '#16a34a' }}>{selectedHub.available_capacity ?? Math.max(0, selectedHub.max_capacity - selectedHub.current_occupancy)} spots</strong>
+                            </div>
+                          </div>
+                          <div style={{ display: 'flex', gap: '0.35rem', marginTop: '0.2rem' }}>
+                            <button
+                              className="btn btn-secondary btn-sm"
+                              style={{ flex: 1, justifyContent: 'center', fontSize: '0.7rem', padding: '0.3rem 0.5rem' }}
+                              onClick={() => handleToggleHubStatus(selectedHub)}
+                            >
+                              {selectedHub.status === 'closed' ? 'Open Hub' : 'Close Hub'}
+                            </button>
+                            <button
+                              className="btn btn-sm"
+                              style={{ background: '#fee2e2', color: '#b91c1c', border: '1px solid #fecaca', fontSize: '0.7rem', padding: '0.3rem 0.5rem' }}
+                              onClick={() => handleDivertHubInflux(selectedHub)}
+                            >
+                              Divert
+                            </button>
+                          </div>
                         </div>
                       )}
 
@@ -1556,7 +1616,7 @@ export default function CoordinatorDashboard() {
                   LIVE VECTOR FEED
                 </span>
                 <a
-                  href={`${MAP_V2_URL}?role=coordinator`}
+                  href={getMapV2Url('coordinator', token)}
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{
@@ -1673,6 +1733,7 @@ export default function CoordinatorDashboard() {
                 clusters={layerIncidents ? clusters : []}
                 hazardZones={layerHazards ? hazardZones : []}
                 missions={layerMissions ? missions : []}
+                roadClosures={roadClosures}
                 onHubClick={h => setSelectedHub(h)}
                 onClusterClick={c => setSelectedCluster(c)}
                 onMissionClick={m => setSelectedMission(m)}
@@ -1742,10 +1803,53 @@ export default function CoordinatorDashboard() {
                   )}
 
                   {selectedHub && (
-                    <div style={{ fontSize: '0.8125rem' }}>
-                      <div style={{ fontWeight: 700 }}>{selectedHub.name}</div>
-                      <div>Occupancy: {selectedHub.current_occupancy} / {selectedHub.max_capacity}</div>
-                      <div>Status: {selectedHub.status}</div>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.45rem', fontSize: '0.8125rem' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '0.5rem' }}>
+                        <div style={{ fontWeight: 700, fontSize: '0.9375rem', color: '#0f172a' }}>{selectedHub.name}</div>
+                        <span className={`badge badge-${selectedHub.status}`}>{selectedHub.status.toUpperCase()}</span>
+                      </div>
+                      {selectedHub.address && (
+                        <div style={{ fontSize: '0.75rem', color: '#64748b' }}>
+                          <span className="material-symbols-outlined" style={{ fontSize: 13, verticalAlign: 'text-bottom', marginRight: '0.2rem' }}>location_on</span>
+                          {selectedHub.address}
+                        </div>
+                      )}
+                      <div style={{ fontSize: '0.7rem', color: '#64748b', fontFamily: "'JetBrains Mono', monospace" }}>
+                        Coordinates: [{selectedHub.lat?.toFixed(4)}° N, {selectedHub.lng?.toFixed(4)}° E]
+                      </div>
+                      <div style={{ background: '#f8fafc', padding: '0.5rem', borderRadius: 4, border: '1px solid #e2e8f0', marginTop: '0.2rem' }}>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.25rem' }}>
+                          <span style={{ fontSize: '0.75rem', color: '#475569' }}>Occupancy:</span>
+                          <strong>{selectedHub.current_occupancy} / {selectedHub.max_capacity} ({Math.round((selectedHub.current_occupancy / (selectedHub.max_capacity || 1)) * 100)}%)</strong>
+                        </div>
+                        <div style={{ width: '100%', height: 6, background: '#e2e8f0', borderRadius: 3, overflow: 'hidden' }}>
+                          <div style={{
+                            width: `${Math.min(100, Math.round((selectedHub.current_occupancy / (selectedHub.max_capacity || 1)) * 100))}%`,
+                            height: '100%',
+                            background: (selectedHub.current_occupancy / (selectedHub.max_capacity || 1)) >= 0.85 ? '#dc2626' : (selectedHub.current_occupancy / (selectedHub.max_capacity || 1)) >= 0.70 ? '#d97706' : '#16a34a'
+                          }} />
+                        </div>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '0.35rem', fontSize: '0.75rem' }}>
+                          <span style={{ color: '#475569' }}>Available:</span>
+                          <strong style={{ color: '#16a34a' }}>{selectedHub.available_capacity ?? Math.max(0, selectedHub.max_capacity - selectedHub.current_occupancy)} spots</strong>
+                        </div>
+                      </div>
+                      <div style={{ display: 'flex', gap: '0.35rem', marginTop: '0.2rem' }}>
+                        <button
+                          className="btn btn-secondary btn-sm"
+                          style={{ flex: 1, justifyContent: 'center', fontSize: '0.7rem', padding: '0.3rem 0.5rem' }}
+                          onClick={() => handleToggleHubStatus(selectedHub)}
+                        >
+                          {selectedHub.status === 'closed' ? 'Open Hub' : 'Close Hub'}
+                        </button>
+                        <button
+                          className="btn btn-sm"
+                          style={{ background: '#fee2e2', color: '#b91c1c', border: '1px solid #fecaca', fontSize: '0.7rem', padding: '0.3rem 0.5rem' }}
+                          onClick={() => handleDivertHubInflux(selectedHub)}
+                        >
+                          Divert
+                        </button>
+                      </div>
                     </div>
                   )}
 
@@ -3562,27 +3666,39 @@ export default function CoordinatorDashboard() {
                               <div style={{ fontSize: '0.625rem', color: '#64748b', textTransform: 'uppercase' }}>Water & Sanitation</div>
                               <div style={{ display: 'flex', alignItems: 'center', gap: '0.25rem', marginTop: '0.2rem' }}>
                                 <span className="material-symbols-outlined" style={{ fontSize: 14, color: '#006398' }}>water_drop</span>
-                                <strong style={{ fontSize: '0.8125rem', color: '#0f172a' }}>8,000L</strong>
+                                <strong style={{ fontSize: '0.8125rem', color: '#0f172a' }}>
+                                  {h.water_units ? `${h.water_units.toLocaleString()}L` : `${((h.max_capacity || 500) * 16).toLocaleString()}L`}
+                                </strong>
                               </div>
-                              <div style={{ fontSize: '0.625rem', color: '#64748b' }}>Bowser Connected</div>
+                              <div style={{ fontSize: '0.625rem', color: h.water_critical ? '#dc2626' : '#64748b' }}>
+                                {h.water_critical ? 'Critical Level' : 'Bowser Connected'}
+                              </div>
                             </div>
 
                             <div>
                               <div style={{ fontSize: '0.625rem', color: '#64748b', textTransform: 'uppercase' }}>Dry Food Packs</div>
                               <div style={{ display: 'flex', alignItems: 'center', gap: '0.25rem', marginTop: '0.2rem' }}>
                                 <span className="material-symbols-outlined" style={{ fontSize: 14, color: '#16a34a' }}>lunch_dining</span>
-                                <strong style={{ fontSize: '0.8125rem', color: '#0f172a' }}>1,200 Kits</strong>
+                                <strong style={{ fontSize: '0.8125rem', color: '#0f172a' }}>
+                                  {h.food_units ? `${h.food_units.toLocaleString()} Kits` : `${Math.round((h.max_capacity || 500) * 2.4).toLocaleString()} Kits`}
+                                </strong>
                               </div>
-                              <div style={{ fontSize: '0.625rem', color: '#64748b' }}>Buffer: 18 Hours</div>
+                              <div style={{ fontSize: '0.625rem', color: h.food_critical ? '#dc2626' : '#64748b' }}>
+                                {h.food_critical ? 'Needs Restock' : 'Buffer: 18+ Hours'}
+                              </div>
                             </div>
 
                             <div>
-                              <div style={{ fontSize: '0.625rem', color: '#64748b', textTransform: 'uppercase' }}>Thermal Blankets</div>
+                              <div style={{ fontSize: '0.625rem', color: '#64748b', textTransform: 'uppercase' }}>First Aid & Blankets</div>
                               <div style={{ display: 'flex', alignItems: 'center', gap: '0.25rem', marginTop: '0.2rem' }}>
                                 <span className="material-symbols-outlined" style={{ fontSize: 14, color: '#d97706' }}>bed</span>
-                                <strong style={{ fontSize: '0.8125rem', color: '#0f172a' }}>850 Units</strong>
+                                <strong style={{ fontSize: '0.8125rem', color: '#0f172a' }}>
+                                  {h.medical_units ? `${h.medical_units.toLocaleString()} Kits` : `${Math.round((h.max_capacity || 500) * 1.7).toLocaleString()} Units`}
+                                </strong>
                               </div>
-                              <div style={{ fontSize: '0.625rem', color: '#64748b' }}>Restock In-Transit</div>
+                              <div style={{ fontSize: '0.625rem', color: h.medical_critical ? '#dc2626' : '#64748b' }}>
+                                {h.medical_critical ? 'Medical Alert' : 'First Aid Staged'}
+                              </div>
                             </div>
                           </div>
 

@@ -24,6 +24,7 @@ from app.modules.sync.router import router as sync_router
 from app.modules.simulation.router import router as simulation_router
 from app.modules.admin.router import router as admin_router
 from app.modules.map.router import router as map_router
+from app.modules.ai_assistant.router import router as ai_assistant_router
 
 api_v1_router = APIRouter(prefix="/v1")
 
@@ -45,6 +46,7 @@ api_v1_router.include_router(sync_router)
 api_v1_router.include_router(simulation_router)
 api_v1_router.include_router(admin_router)
 api_v1_router.include_router(map_router)
+api_v1_router.include_router(ai_assistant_router)
 
 
 
