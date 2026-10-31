@@ -1,14 +1,33 @@
-# Environment variables
-.env
-.env.local
+# ==========================================
+# ResQnet Master .gitignore
+# ==========================================
 
-# Python
+# ── Environment & Secrets ──
+.env
+.env.*
+!.env.example
+secrets/
+*.pem
+*.key
+*.cert
+
+# ── Python & Virtual Environments ──
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
 .Python
 env/
+venv/
+.venv/
+.venv*/
+ENV/
+env.bak/
+venv.bak/
+python311/
+*.egg-info/
+.installed.cfg
+*.egg
 build/
 develop-eggs/
 dist/
@@ -21,22 +40,78 @@ parts/
 sdist/
 var/
 wheels/
-*.egg-info/
-.installed.cfg
-*.egg
+pip-wheel-metadata/
+
+# ── Testing, Coverage & Linters ──
 .pytest_cache/
 .coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+.oxlint_cache/
 
-# Node.js / Frontend
+# ── Node.js & Frontend ──
 node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+.pnpm-store/
 frontend/dist/
 frontend/dist-ssr/
+routing-lab/dist/
+dist/
+dist-ssr/
 *.local
 
-# IDE & OS
-.idea/
+# ── Databases & Local Dumps ──
+*.sqlite3
+*.db
+*.sql
+*.dump
+backup_*.sql
+
+# ── OS & Filesystem ──
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ── IDEs & Editors ──
 .vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/
 *.swp
 *.swo
-.DS_Store
-Thumbs.db
+*~
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+.kilo/
+.gemini/
+
+# ── Logs & Temporary ──
+logs/
+*.log
+scratch/
+tmp/
+temp/
+*.zip
+*.tar.gz
+*.7z
