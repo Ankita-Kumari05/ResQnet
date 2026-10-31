@@ -4,6 +4,7 @@ Centralized settings management using pydantic-settings.
 """
 from typing import List
 from functools import lru_cache
+from pydantic import field_validator
 from pydantic_settings import BaseSettings
 
 
@@ -14,6 +15,39 @@ class Settings(BaseSettings):
 
     DATABASE_URL: str = "postgresql+asyncpg://resqnet:resqnet@localhost:5432/resqnet"
     SYNC_DATABASE_URL: str = "postgresql+psycopg2://resqnet:resqnet@localhost:5432/resqnet"
+
+    @field_validator("DATABASE_URL", mode="before")
+    @classmethod
+    def assemble_async_db_url(cls, v: str) -> str:
+        """
+        Ensures the async SQLAlchemy URL uses the asyncpg driver.
+        Handles provider conventions:
+        - 'postgres://...' -> 'postgresql+asyncpg://...'
+        - 'postgresql://...' -> 'postgresql+asyncpg://...'
+        """
+        if not v:
+            return v
+        url = str(v).strip()
+        if url.startswith("postgres://"):
+            url = "postgresql+asyncpg://" + url[len("postgres://"):]
+        elif url.startswith("postgresql://") and not url.startswith("postgresql+asyncpg://"):
+            url = "postgresql+asyncpg://" + url[len("postgresql://"):]
+        return url
+
+    @field_validator("SYNC_DATABASE_URL", mode="before")
+    @classmethod
+    def assemble_sync_db_url(cls, v: str) -> str:
+        """
+        Ensures the synchronous SQLAlchemy URL uses psycopg2.
+        """
+        if not v:
+            return v
+        url = str(v).strip()
+        if url.startswith("postgres://"):
+            url = "postgresql+psycopg2://" + url[len("postgres://"):]
+        elif url.startswith("postgresql://") and not url.startswith("postgresql+psycopg2://"):
+            url = "postgresql+psycopg2://" + url[len("postgresql://"):]
+        return url
 
     SECRET_KEY: str = "resqnet-super-secret-key-change-in-production-2026"
     JWT_SECRET_KEY: str = "resqnet-super-secret-key-change-in-production-2026"
