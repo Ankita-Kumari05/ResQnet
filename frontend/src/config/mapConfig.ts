@@ -1,5 +1,6 @@
 // Central configuration for Map Engine V2
-export const MAP_V2_URL = 'http://localhost:5174';
+// In production on Vercel, this routes to the /map-v2 sub-path or custom VITE_MAP_V2_URL.
+export const MAP_V2_URL = import.meta.env.VITE_MAP_V2_URL || (typeof window !== 'undefined' && window.location.origin ? `${window.location.origin}/map-v2` : 'http://localhost:5174');
 
 /**
  * Builds a Map Engine V2 deep link with role query param and JWT token in URL fragment.

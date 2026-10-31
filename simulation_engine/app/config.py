@@ -10,8 +10,8 @@ from pydantic_settings import BaseSettings
 
 
 class SimSettings(BaseSettings):
-    # ResQnet backend connection
-    RESQNET_BASE_URL: str = "http://localhost:8000"
+    # ResQnet backend connection (injected by Vercel service binding RESQNET_BACKEND_URL or local fallback)
+    RESQNET_BASE_URL: str = os.getenv("RESQNET_BACKEND_URL", "http://localhost:8000")
 
     # Simulation user credentials — loaded from .env, with seed defaults
     SIM_COORDINATOR_EMAIL: str = "coordinator@resqnet.in"
